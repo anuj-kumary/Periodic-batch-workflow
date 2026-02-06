@@ -1,0 +1,307 @@
+name: 355ea85c823145b7cccdfc60a82e01dd
+fullyQualifiedName: hktest.355ea85c823145b7cccdfc60a82e01dd
+owners: []
+duration: 306.0
+users:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+query: "CREATE OR REPLACE PROCEDURE CURATED_LOAN_SP(TABLE_RUN_ID VARCHAR)\nRETURNS\
+  \ VARIANT\nLANGUAGE SQL\nAS\nDECLARE\n\n\tv_file_run_id       VARCHAR;\n\tv_src_sys_cd\
+  \        VARCHAR;\n\tv_sp_input          VARCHAR;\n\tv_transient_tbl_nm \tVARCHAR\
+  \ DEFAULT ?;\n\tv_curated_tbl_nm  \tVARCHAR DEFAULT ?;\n\tv_primary_ky        VARCHAR\
+  \ DEFAULT ?;\n\tv_table_ky         \tVARCHAR DEFAULT ?;\n\tv_vrsn_ky          \t\
+  VARCHAR DEFAULT ?;\n\tv_temp1_count       VARCHAR;\n\tv_transient_cnt   \tVARCHAR;\n\
+  \tv_dq_view_nm        VARCHAR;\n\tv_dq_call           VARCHAR;\n\tv_type2_call \
+  \       VARCHAR;\n\tv_dq_check          VARCHAR DEFAULT ?;\n\tv_dq_db          \
+  \   VARCHAR DEFAULT ?;\n\tv_start_dttm        VARCHAR;\n\tv_end_dttm          VARCHAR;\n\
+  \tv_stmt_id           VARCHAR;\n\tv_session_id        VARCHAR;\n\tv_sp_result  \
+  \       VARCHAR;\n\tv_query_desc        VARCHAR;\n\tv_psl_sp_call       VARCHAR;\n\
+  \tv_cont_uk\t\t\tVARCHAR;\n\tv_cobe_eti_uk\t\tVARCHAR;\n\tv_loan_uk\t\t\tVARCHAR;\n\
+  \tv_dq_recon_nm        VARCHAR;\n\n\n\tno_data_exception exception (?, ?);\n   \
+  \ OtherError exception(?,?);\n\n\nBEGIN\n\n\n\t\tSELECT DISTINCT src_sys_cd, TO_CHAR(CONVERT_TIMEZONE(?,\
+  \ CURRENT_TIMESTAMP) ,?) INTO :v_src_sys_cd, :v_start_dttm\n\t\tFROM common.admin.batch_run_id_log\n\
+  \t\tWHERE dest_run_id =:TABLE_RUN_ID;\n\n\t\tIF (v_src_sys_cd IS NULL) THEN\n\t\t\
+  \tv_query_desc := ?;\n\t\t\tRAISE no_data_exception;\n\t\tEND IF;\n\n\n\t\tSELECT\
+  \ TO_CHAR(CONVERT_TIMEZONE(?, CURRENT_TIMESTAMP) ,?)\n\t\tINTO :v_start_dttm;\n\t\
+  \tv_query_desc := ?;\n\n\t\tSELECT MAX(src_run_id) INTO :v_file_run_id\n\t\t  FROM\
+  \ common.admin.batch_run_id_log\n\t\t WHERE dest_run_id = :TABLE_RUN_ID\n\t\t  \
+  \ AND src_run_id LIKE\n\t\t\t\t\tCASE\n\t\t\t\t\t\tWHEN src_sys_cd =? THEN ?\n\t\
+  \t\t\t\t\tELSE src_run_id\n\t\t\t\t\tEND;\n\n\t\tIF (v_file_run_id IS NULL) THEN\n\
+  \t\t\tv_query_desc := ?;\n\t\t\tRAISE no_data_exception;\n\t\tEND IF;\n\n\n\n\t\t\
+  SELECT LANDING.F_UNIQUE_KEYS(?)     INTO :v_loan_uk;\n\t\tSELECT LANDING.F_UNIQUE_KEYS(?)\
+  \     INTO :v_cont_uk;\n\t\tSELECT LANDING.F_UNIQUE_KEYS(?) INTO :v_cobe_eti_uk;\n\
+  \t\tv_query_desc := ?;\n\n\n\n\n\n\n\n\n\n\n        IF (v_src_sys_cd = ?) THEN\n\
+  \            CALL LANDING.LANDING_DXC_LOAN_SP(?);\n            v_query_desc := ?;\n\
+  \        END IF;\n\n\n        v_query_desc := ?;\n\n\t\tDELETE FROM transient.loan\
+  \ \t\t\tWHERE  (src_sys_cd=:v_src_sys_cd OR src_sys_cd IS NULL);\n\n        v_query_desc\
+  \ := ?;\n\n\n\n\n\n\n\n\n\n\t\tv_query_desc := ?;\nBEGIN TRANSACTION;\n\n      \
+  \  CREATE OR REPLACE TEMPORARY TABLE LOAN_1_UNION AS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\tSELECT\n\t\t\t\t\tCOALESCE(fsa.eti_pol_no,loan.loan_contract_no)\
+  \             \t\t\t\t\t\t\tAS cntrct_no,\n\t\t\t\t\tCOALESCE(fsa.eti_company_code,loan.loan_company_code)\t\
+  \t\t\t\t\t\t\tAS cmpny_no,\n                    COALESCE(fsa.eti_co_code,loan.loan_co_code)\t\
+  \t\t\t\t\t\t\t\t\t\tAS cmpny_cd,\n\t\t\t\t\tCOALESCE(fsa.eti_co_type,loan.loan_co_type)\
+  \                \t\t\t\t\t\t\tAS cmpny_typ_cd,\n\t\t\t\t\tUPPER(TRIM(loan.src_sys_cd))\
+  \ \t\t\t\t\t\t\t\t\t\t\t\t\t\tAS src_sys_cd,\n\t\t\t\t\tUPPER(TRIM(loan.loan_sequence))\t\
+  \t\t\t\t\t\t\t\t\t\t\t\t\tAS loan_seq_no,\n\t\t\t\t\tUPPER(TRIM(loan.loan_defaulted_date))\t\
+  \t\t\t\t\t\t\t\t\t\t\tAS dflt_dt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_initiated_date))\t\
+  \t\t\t\t\t\t\t\t\t\t \tAS initiated_dt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_next_payment_date))\t\
+  \t\t\t\t\t\t\t\t\t \tAS next_due_dt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_status)) \t\
+  \t\t\t\t\t\t\t\t\t\t\t\t\tAS loan_stat_cd,\n\t\t\t\t\tref_data[Concat(?,loan.src_sys_cd,\
+  \ ?, UPPER(TRIM(loan.loan_status)))][?]::VARCHAR\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+  \t\t\t\t\t\t\t\t\t\t\tAS ent_loan_stat_nm,\n\t\t\t\t\tref_data[Concat(?,loan.src_sys_cd\
+  \ , ?, UPPER(TRIM(loan.loan_status)))][?]::VARCHAR\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+  \t\t\t\t\t\t\t\t\t\t\t\tAS conformed_loan_stat_nm ,\n\t\t\t\t\tUPPER(TRIM(loan.loan_earned_int_rate))\
+  \ \t\t\t\t\t\t\t\t\t\t\t\tAS earnd_int_rt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_interest_due))\t\
+  \t\t\t\t\t\t\t\t\t\t\t\tAS int_due_amt,\n\t\t\t\t\tUPPER(TRIM(loan.zcihloan_loan_balance))\t\
+  \t\t\t\t\t\t\t\t\t\t\tAS loan_bal_amt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_loan_non_pref_amt))\t\
+  \t\t\t\t\t\t\t\t\t\tAS loan_non_pref_amt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_loan_pref_amt))\t\
+  \t\t\t\t\t\t\t\t\t\t\tAS loan_pref_amt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_next_payment_amt))\t\
+  \t\t\t\t\t\t\t\t\t\t\tAS next_pymnt_amt,\n\t\t\t\t\tUPPER(TRIM(loan.loan_preferred_int_rate))\t\
+  \t\t\t\t\t\t\t\t\t\tAS preferred_ann_int_rt_pct,\n\t\t\t\t\tUPPER(TRIM(loan.loan_repay_ind))\t\
+  \t\t\t\t\t\t\t\t\t\t\t\tAS repay_ind,\n\t\t\t\t\tUPPER(TRIM(loan.loan_interest_rate))\t\
+  \t\t\t\t\t\t\t\t\t\t\tAS loan_ann_int_rt_pct,\n\t\t\t\t\tUPPER(TRIM(loan.loan_original_amt))\
+  \ \t\t\t\t\t\t\t\t\t\t\t\tAS orgnl_loan_amt,\n\t\t\t\t\tref_data[Concat(?,?, COALESCE(fsa.eti_company_code,loan.loan_company_code))][?]::VARCHAR\n\
+  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS ent_company_no,\n\t\t\t\t\
+  \tloan.loan_payoff_int_due                                                     \
+  \       AS loan_payoff_int_due  ,\n\t\t\t\t\tloan.ak_hash_ky\t\t\t\t\t\t\t\t\t\t\
+  \t\t\t\t\t\t\t\tAS ak_hash_ky,\n\t\t\t\t\tTO_JSON(OBJECT_CONSTRUCT(\n\t\t\t\t\t\
+  \    ?,OBJECT_CONSTRUCT_KEEP_NULL(?,loan.ak_hash_ky,        ?,loan.file_run_id,\
+  \    ?,?,?,:v_loan_uk),\n\t\t\t\t\t    ?,OBJECT_CONSTRUCT_KEEP_NULL(?,fsa.cont_ak_hash_ky,\
+  \    ?,fsa.cont_file_run_id,?,?,?,:v_cont_uk),\n\t\t\t\t\t    ?,OBJECT_CONSTRUCT_KEEP_NULL(?,fsa.eti_ak_hash_ky,\
+  \ ?,fsa.eti_file_run_id ,?,?,?,:v_cobe_eti_uk))) AS landing_details\n\t\t\t  FROM\n\
+  \t\t\t\t\t(SELECT lnvw.*,\n\t\t\t\t\t\t\tDECODE(loan_ref_lookup_prefix,?,?,?,?,loan_ref_lookup_prefix)\
+  \ AS src_sys_cd\n\t\t\t\t\t   FROM landing.loan_vw lnvw\n\t\t\t\t\t  WHERE file_run_id\
+  \ = :v_file_run_id\n\t\t\t\t\t) loan\n\n\tFULL OUTER JOIN\n\n\t\t\t\t\t(SELECT OBJECT_AGG(CONCAT(ref_typ_cd,\
+  \ ?, ref_cd)\n\t\t\t\t\t\t   ,OBJECT_CONSTRUCT_KEEP_NULL(?, ent_ref_nm ,?, confrmd_ref_nm))\
+  \     AS ref_data\n\t\t\t\t\t   FROM (SELECT CONCAT(ref_typ_cd, ?, ref_cd) ref\n\
+  \t\t\t\t\t\t\t\t\t,ref_cd\n\t\t\t\t\t\t\t\t\t,ref_typ_cd\n\t\t\t\t\t\t\t\t\t,ent_ref_nm\n\
+  \t\t\t\t\t\t\t\t\t,confrmd_ref_nm\n\t\t\t\t\t\t\t   FROM curated.ref_gnrl_vw\n\t\
+  \t\t\t\t\t\t  WHERE UPPER(ref_typ_cd) LIKE ANY (?,?)\n\t\t\t\t\t\t\t\tAND crnt_ind\
+  \ = ?\n\t\t\t\t\t\t\t)ref_gnrl\n\t\t\t\t\t)\n\n\t\tINNER JOIN (\n\t\t\t\t\t  SELECT\
+  \ cont.*,\n\t\t\t\t\t\t     eti.*\n\t\t\t\t\t\tFROM\n\t\t\t\t\t\t\t(SELECT\n\t\t\
+  \t\t\t\t\t\t\tak_hash_ky                          AS cont_ak_hash_ky,\n\t\t\t\t\t\
+  \t\t\t\tfile_run_id                         AS cont_file_run_id,\n             \
+  \                       UPPER(TRIM(cv.cont_contract_no))    AS cont_contract_no,\n\
+  \                                    UPPER(TRIM(cv.cont_co_code))        AS cont_co_code,\n\
+  \                                    UPPER(TRIM(cv.cont_co_type))        AS cont_co_type,\n\
+  \                                    UPPER(TRIM(cv.cont_company_code))   AS cont_company_code\n\
+  \t\t\t\t\t\t\t   FROM landing.cont_vw cv\n\t\t\t\t\t\t\t  WHERE file_run_id = (SELECT\
+  \ file_run_id\n\t\t\t\t\t\t\t\t\t\t\t\t\t FROM individual.landing.cont_vw\n\t\t\t\
+  \t\t\t\t\t\t\t\t\t\tWHERE DECODE(cont_ref_lookup_prefix,?,?,?,?,cont_ref_lookup_prefix)\
+  \ =  :v_src_sys_cd\n\t\t\t\t\t\t\t\t\t\t\t\t  QUALIFY ROW_NUMBER() OVER (ORDER BY\
+  \ create_dttm DESC) = ?\n\t\t\t\t\t\t\t\t\t\t\t\t   )\n\t\t\t\t\t\t\t\tAND DECODE(cont_ref_lookup_prefix,?,?,?,?,cont_ref_lookup_prefix)\
+  \ =  :v_src_sys_cd\n\t\t\t\t\t\t\t) cont\n\t\t\t FULL OUTER JOIN\n\t\t\t\t\t\t\t\
+  (SELECT\n\t\t\t\t\t\t\t\t\tUPPER(TRIM(met_contract_no))    AS eti_pol_no,\n\t\t\t\
+  \t\t\t\t\t\tUPPER(TRIM(met_co_code))        AS eti_co_code,\n\t\t\t\t\t\t\t\t\t\
+  UPPER(TRIM(met_co_type))        AS eti_co_type,\n\t\t\t\t\t\t\t\t\tUPPER(TRIM(met_company_code))\
+  \   AS eti_company_code,\n\n\t\t\t\t\t\t\t\t\tUPPER(TRIM(ak_hash_ky)) \t\tAS eti_ak_hash_ky,\n\
+  \t\t\t\t\t\t\t\t\tfile_run_id \t                AS eti_file_run_id\n\t\t\t\t\t\t\
+  \t   FROM landing.cobe_eti_vw\n\t\t\t\t\t\t\t  WHERE file_run_id = (SELECT file_run_id\n\
+  \t\t\t\t\t\t\t\t\t\t\t\t\t FROM landing.cobe_eti_vw\n\t\t\t\t\t\t\t\t\t\t\t\t  QUALIFY\
+  \ ROW_NUMBER() OVER(ORDER BY create_dttm DESC) = ?\n\t\t\t\t\t\t\t\t\t\t\t\t  )\n\
+  \t\t\t\t\t\t\t AND :v_src_sys_cd = ?\n\t\t\t\t\t\t\t) eti\n\t\t\t\t\t\t  ON cont.cont_contract_no\
+  \  = eti.eti_pol_no\n\t\t\t\t\t\t AND cont.cont_co_code      = eti.eti_co_code\n\
+  \t\t\t\t\t\t AND cont.cont_co_type      = eti.eti_co_type\n\t\t\t\t\t\t AND cont.cont_company_code\
+  \ = eti.eti_company_code\n\t\t\t\t\t\t AND :v_src_sys_cd = ?\n\t\t\t\t\t) fsa\n\t\
+  \t\t\tON  loan.loan_contract_no     = fsa.cont_contract_no\n\t\t\t\tAND loan.loan_co_code\
+  \         = fsa.cont_co_code\n\t\t\t\tAND loan.loan_co_type         = fsa.cont_co_type\n\
+  \t\t\t\tAND loan.loan_company_code    = fsa.cont_company_code  ;\n\n\t\tv_query_desc\
+  \ := ?;\n\n\n\n\n\nCOMMIT;\n\n        v_query_desc := ?;\n\n\t\tINSERT INTO transient.loan\n\
+  \t\t\t(\n\t\t\t\tloan_ky ,\n\t\t\t\tloan_vrsn_ky ,\n\t\t\t\tcntrct_ky  ,\n\t\t\t\
+  \tloan_seq_no  ,\n\t\t\t\tcntrct_no  ,\n\t\t\t\tcmpny_no  ,\n\t\t\t\tcmpny_cd  ,\n\
+  \t\t\t\tcmpny_typ_cd  ,\n\t\t\t\tcntrct_vrsn_ky  ,\n\t\t\t\textrct_dttm ,\n\t\t\t\
+  \tsrc_sys_cd  ,\n\t\t\t\tsrc_sys_nm  ,\n\t\t\t\trec_hsh_ky  ,\n\t\t\t\taction_cd\
+  \  ,\n\t\t\t\ttable_run_id  ,\n\t\t\t\tdflt_dt  ,\n\t\t\t\tinitiated_dt  ,\n\t\t\
+  \t\tnext_due_dt  ,\n\t\t\t\torgnl_loan_amt ,\n\t\t\t\tloan_ann_int_rt_pct ,\n\t\t\
+  \t\tloan_stat_cd  ,\n\t\t\t\tent_loan_stat_nm  ,\n\t\t\t\tconformed_loan_stat_nm\
+  \  ,\n\t\t\t\tearnd_int_rt ,\n\t\t\t\tint_due_amt ,\n\t\t\t\tloan_bal_amt ,\n\t\t\
+  \t\tloan_non_pref_amt ,\n\t\t\t\tloan_pref_amt ,\n\t\t\t\tnext_pymnt_amt ,\n\t\t\
+  \t\tpreferred_ann_int_rt_pct ,\n\t\t\t\trepay_ind,\n\t\t\t\tloan_payoff_int_due_amt,\n\
+  \t\t\t\tlanding_details\n\t\t\t)\n\n\t\t\tSELECT\n\t\t\t\tNVL(ccf.loan_ky,tcf.ak_hash_ky)\t\
+  \t\t\t\t\t\t\t\t    AS loan_ky,\n\t\t\t\tNVL(ccf.loan_vrsn_ky,?) \t\t\t\t\t\t\t\t\
+  \t\t\tAS loan_vrsn_ky,\n\t\t\t\tNVL(cntrct.cntrct_ky,ccf.cntrct_ky) \t\t\t\t\t\t\
+  \t\tAS cntrct_ky,\n\t\t\t\tNVL(tcf.loan_seq_no,ccf.loan_seq_no)\t\t\t\t\t\t\t\t\
+  AS loan_seq_no,\n\t\t\t\tNVL(tcf.cntrct_no,ccf.cntrct_no) \t\t\t\t\t\t  \t\t\tAS\
+  \ cntrct_no,\n\t\t\t\tNVL(tcf.cmpny_no,ccf.cmpny_no)\t\t\t\t\t\t  \t\t\t\tAS cmpny_no,\n\
+  \t\t\t\tNVL(tcf.cmpny_cd,ccf.cmpny_cd)\t\t\t\t\t  \t\t\t\t    AS cmpny_cd,\n\t\t\
+  \t\tNVL(tcf.cmpny_typ_cd,ccf.cmpny_typ_cd)\t\t\t\t\t  \t\t\tAS cmpny_typ_cd,\n\t\
+  \t\t\tNVL(cntrct.cntrct_vrsn_ky,?) \t\t\t\t\t\t\t\t\t\tAS cntrct_vrsn_ky,\n\t\t\t\
+  \t(SELECT src_dttm\n                   FROM TABLE(individual.landing.f_src_dttm(:v_src_sys_cd)))\t\
+  \tAS extrct_dttm,\n\t\t\t\tNVL(tcf.src_sys_cd, ccf.src_sys_cd) \t\t\t\t\t\t\t\t\
+  AS src_sys_cd,\n\t\t\t\tNVL(tcf.src_sys_cd, ccf.src_sys_cd)\t\t\t\t\t\t\t\t    AS\
+  \ src_sys_nm,\n\t\t\t\tHASH(\n\t\t\t\t\tNVL(cntrct.cntrct_ky,ccf.cntrct_ky),\n\t\
+  \t\t\t\tNVL(tcf.loan_seq_no,ccf.loan_seq_no),\n\t\t\t\t\tNVL(tcf.cntrct_no,ccf.cntrct_no)\
+  \ ,\n\t\t\t\t\tNVL(tcf.cmpny_no,ccf.cmpny_no),\n\t\t\t\t\tNVL(tcf.cmpny_cd ,ccf.cmpny_cd),\n\
+  \t\t\t\t\tNVL(tcf.cmpny_typ_cd,ccf.cmpny_typ_cd),\n\t\t\t\t\tNVL(cntrct.cntrct_vrsn_ky,?),\n\
+  \t\t\t\t\tNVL(tcf.src_sys_cd, ccf.src_sys_cd),\n\t\t\t\t\tNVL(tcf.src_sys_cd, ccf.src_sys_cd),\n\
+  \t\t\t\t\tindividual.landing.f_date_validation(dflt_dt,?) ,\n\t\t\t\t\tindividual.landing.f_date_validation(initiated_dt,?),\n\
+  \t\t\t\t\tindividual.landing.f_date_validation(next_due_dt,?),\n\t\t\t\t\torgnl_loan_amt,\n\
+  \t\t\t\t\tNVL(tcf.loan_ann_int_rt_pct,ccf.ccf_loan_ann_int_rt_pct),\n\t\t\t\t\t\
+  loan_stat_cd  ,\n\t\t\t\t\tent_loan_stat_nm  ,\n\t\t\t\t\tconformed_loan_stat_nm\
+  \  ,\n\t\t\t\t\tearnd_int_rt ,\n\t\t\t\t\tint_due_amt  ,\n\t\t\t\t\tNVL(tcf.loan_bal_amt,ccf.ccf_loan_bal_amt)\
+  \ ,\n\t\t\t\t\tloan_non_pref_amt  ,\n\t\t\t\t\tloan_pref_amt  ,\n\t\t\t\t\tnext_pymnt_amt\
+  \  ,\n\t\t\t\t\tpreferred_ann_int_rt_pct ,\n\t\t\t\t\tloan_payoff_int_due,\n\t\t\
+  \t\t\trepay_ind\n\t\t\t\t\t)  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS rec_hsh_ky,\n\
+  \t\t\t\tCASE\n\t\t\t\t\tWHEN ccf.loan_ky IS NULL THEN ?\n\t\t\t\t\tWHEN ccf.loan_ky\
+  \ IS NOT NULL AND tcf.cntrct_no||tcf.cmpny_no||tcf.cmpny_cd||tcf.cmpny_typ_cd||tcf.loan_seq_no\
+  \ IS NULL AND ccf.actv_ind = ?\tTHEN ?\n\t\t\t\t\tWHEN ccf.loan_ky IS NOT NULL AND\
+  \ tcf.cntrct_no||tcf.cmpny_no||tcf.cmpny_cd||tcf.cmpny_typ_cd||tcf.loan_seq_no IS\
+  \ NULL AND ccf.actv_ind = ?\tTHEN ?\n\t\t\t\t\tWHEN ccf.loan_ky IS NOT NULL AND\
+  \ tcf.cntrct_no||tcf.cmpny_no||tcf.cmpny_cd||tcf.cmpny_typ_cd||tcf.loan_seq_no IS\
+  \ NOT NULL AND ccf.actv_ind = ? THEN ?\n\t\t\t\t\tWHEN ccf.loan_ky IS NOT NULL AND\
+  \ tcf.cntrct_no||tcf.cmpny_no||tcf.cmpny_cd||tcf.cmpny_typ_cd||tcf.loan_seq_no IS\
+  \ NOT NULL AND ccf.ccf_rec_hsh_ky = rec_hsh_ky AND ccf.actv_ind = ? THEN ?\n\t\t\
+  \t\t\tWHEN ccf.loan_ky IS NOT NULL AND tcf.cntrct_no||tcf.cmpny_no||tcf.cmpny_cd||tcf.cmpny_typ_cd||tcf.loan_seq_no\
+  \ IS NOT NULL AND ccf.ccf_rec_hsh_ky <> rec_hsh_ky THEN ?\n\t\t\t\t\tELSE ?\n\t\t\
+  \t\tEND \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS action_cd ,\n\t\t\t\t:TABLE_RUN_ID\
+  \ \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS table_run_id,\n\t\t\t\tindividual.landing.f_date_validation(dflt_dt,?)\
+  \ \t\t\t\t\t\tAS dflt_dt,\n\t\t\t\tindividual.landing.f_date_validation(initiated_dt,?)\
+  \ \t\t\t\tAS initiated_dt,\n\t\t\t\tindividual.landing.f_date_validation(next_due_dt,?)\
+  \ \t\t\t\t\tAS next_due_dt,\n\t\t\t\torgnl_loan_amt\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+  AS orgnl_loan_amt,\n\t\t\t\tNVL(tcf.loan_ann_int_rt_pct,ccf.ccf_loan_ann_int_rt_pct)\t\
+  \t\t\tAS loan_ann_int_rt_pct,\n\t\t\t\tloan_stat_cd \t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+  \tAS loan_stat_cd,\n\t\t\t\tent_loan_stat_nm \t\t\t\t\t\t\t\t\t\t\t\t\t\tAS ent_loan_stat_nm,\n\
+  \t\t\t\tconformed_loan_stat_nm \t\t\t\t\t\t\t\t\t\t\t\t    AS conformed_loan_stat_nm,\n\
+  \t\t\t\tearnd_int_rt \t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS earnd_int_rt,\n\t\t\t\tint_due_amt\t\
+  \t\t\t\t\t\t\t\t\t\t\t\t\t\t    AS int_due_amt,\n\t\t\t\tNVL(tcf.loan_bal_amt,ccf.ccf_loan_bal_amt)\t\
+  \t\t\t\t\t\t\tAS loan_bal_amt,\n\t\t\t\tloan_non_pref_amt \t\t\t\t\t\t\t\t\t\t\t\
+  \t\t\tAS loan_non_pref_amt,\n\t\t\t\tloan_pref_amt\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\
+  AS loan_pref_amt,\n\t\t\t\tnext_pymnt_amt\t\t\t\t\t\t\t\t\t\t\t\t\t\t    AS next_pymnt_amt,\n\
+  \t\t\t\tpreferred_ann_int_rt_pct \t\t\t\t\t\t\t\t\t\t\t\tAS preferred_ann_int_rt_pct,\n\
+  \t\t\t\trepay_ind\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS repay_ind,\n\t\t\t\ttcf.loan_payoff_int_due\
+  \ \t\t\t\t\t\t                        AS loan_payoff_int_due_amt,\n\t\t\t\tNVL(tcf.landing_details,ccf.ccf_landing_details)\t\
+  \t\t\t\t\tAS landing_details\n\t\t\tFROM loan_1_union tcf\n\n\n\t   LEFT JOIN (SELECT\
+  \ cntrct_ky,\n\t\t\t\t\t\t cntrct_vrsn_ky,\n\t\t\t\t\t\t cntrct_no,\n\t\t\t\t\t\t\
+  \ cmpny_no,\n\t\t\t\t\t\t cmpny_cd,\n\t\t\t\t\t\t cmpny_typ_cd\n\t\t\t\t\tFROM individual.curated.cntrct_vw\n\
+  \t\t\t\t   WHERE crnt_ind = ?\n\t\t\t\t\t AND src_sys_cd = :v_src_sys_cd\n\t\t\t\
+  \t  ) cntrct\n\t\t\t  ON cntrct.cntrct_no    = tcf.cntrct_no\n\t\t\t AND cntrct.cmpny_no\
+  \     = tcf.cmpny_no\n\t\t\t AND cntrct.cmpny_cd     = tcf.cmpny_cd\n\t\t\t AND\
+  \ cntrct.cmpny_typ_cd = tcf.cmpny_typ_cd\n\n\n FULL OUTER JOIN\n\t\t\t\t (SELECT\
+  \ loan_ky \t\t\t\tAS loan_ky,\n\t\t\t\t\t\t loan_vrsn_ky\t\t\tAS loan_vrsn_ky,\n\
+  \t\t\t\t\t\t loan_seq_no\t\t\tAS loan_seq_no,\n\t\t\t\t\t\t cntrct_ky \t\t\t   \
+  \ AS cntrct_ky,\n\t\t\t\t\t\t cntrct_vrsn_ky\t\t    AS cntrct_vrsn_ky,\n\t\t\t\t\
+  \t\t cntrct_no \t\t\t    AS cntrct_no,\n\t\t\t\t\t\t cmpny_no \t\t\t\tAS cmpny_no,\n\
+  \t\t\t\t\t\t cmpny_cd \t\t\t\tAS cmpny_cd,\n\t\t\t\t\t\t cmpny_typ_cd \t\t\tAS cmpny_typ_cd,\n\
+  \t\t\t\t\t\t src_sys_cd \t\t\tAS src_sys_cd,\n\t\t\t\t\t\t actv_ind \t\t\t\tAS actv_ind,\n\
+  \t\t\t\t\t\t landing_details \t\tAS ccf_landing_details,\n\t\t\t\t\t\t loan_ann_int_rt_pct\
+  \ \tAS ccf_loan_ann_int_rt_pct,\n\t\t\t\t\t\t loan_bal_amt \t\t\tAS ccf_loan_bal_amt,\n\
+  \t\t\t\t\t\t rec_hsh_ky\t\t\t    AS ccf_rec_hsh_ky\n\t\t\t\t\tFROM individual.curated.loan_vw\n\
+  \t\t\t\t   WHERE crnt_ind = ?\n \t\t\t\t\t AND src_sys_cd = :v_src_sys_cd\n\t\t\t\
+  \t  ) ccf\n\t\t\t  ON ccf.cntrct_no    = tcf.cntrct_no\n\t\t\t AND ccf.cmpny_no\
+  \     = tcf.cmpny_no\n\t\t\t AND ccf.cmpny_cd     = tcf.cmpny_cd\n\t\t\t AND ccf.cmpny_typ_cd\
+  \ = tcf.cmpny_typ_cd\n\t\t\t AND ccf.loan_seq_no  = tcf.loan_seq_no\n\t\t\t AND\
+  \ tcf.src_sys_cd   = :v_src_sys_cd\n\n\t\t   WHERE NVL(cntrct.cntrct_ky,ccf.cntrct_ky)\
+  \ IS NOT NULL\n\t\t\t     AND NVL(tcf.src_sys_cd, ccf.src_sys_cd) = :v_src_sys_cd\n\
+  \                 AND (action_cd = ?\n                     OR(\n\t\t\t\t\t\tNVL(action_cd,?)\
+  \ <> ? AND\n\t\t\t\t\t\tNOT(tcf.cntrct_no IS NULL\n                            OR\
+  \ tcf.cmpny_no IS NULL\n                            OR tcf.cmpny_cd IS NULL\n  \
+  \                          OR tcf.cmpny_typ_cd IS NULL\n                       \
+  \     OR tcf.src_sys_cd IS NULL\n                            OR tcf.loan_seq_no\
+  \ IS NULL\n                            OR (tcf.loan_stat_cd IS NOT NULL AND tcf.ent_loan_stat_nm\
+  \ IS NULL)\n                            OR tcf.loan_ann_int_rt_pct IS NULL\n   \
+  \                         OR tcf.loan_bal_amt IS NULL\n                        \
+  \    OR individual.landing.f_date_validation(tcf.dflt_dt,?) IS NULL\n          \
+  \                  OR individual.landing.f_date_validation(tcf.initiated_dt,?) IS\
+  \ NULL\n                            OR individual.landing.f_date_validation(tcf.next_due_dt,?)\
+  \ IS NULL\n\t\t\t\t\t\t\t)\n\t\t\t\t\t   )\n\t\t\t\t     )\n\t\t QUALIFY ROW_NUMBER()\
+  \ OVER (PARTITION BY NVL(tcf.cntrct_no,ccf.cntrct_no),NVL(tcf.cmpny_no,ccf.cmpny_no),NVL(tcf.cmpny_cd,ccf.cmpny_cd\
+  \ ),NVL(tcf.cmpny_typ_cd,ccf.cmpny_typ_cd),NVL (tcf.loan_seq_no,ccf.loan_seq_no)\n\
+  \t\t\t\t\t\t\t\t\t\tORDER BY NVL(tcf.cntrct_no,ccf.cntrct_no),NVL(tcf.cmpny_no,ccf.cmpny_no),NVL(tcf.cmpny_cd,ccf.cmpny_cd\
+  \ ),NVL(tcf.cmpny_typ_cd,ccf.cmpny_typ_cd),NVL (tcf.loan_seq_no,ccf.loan_seq_no)\
+  \ DESC)= ?\n\t\t\t;\n\n\t\tv_query_desc := ?;\n\n\n\n\n\n\n\n\tSELECT \"number of\
+  \ rows inserted\" INTO :v_transient_cnt FROM TABLE(RESULT_SCAN(LAST_QUERY_ID()));\n\
+  \n\n\t\tv_query_desc := ?;\n\n\t\tSELECT\n\t\t\tCASE\n\t\t\t  WHEN :v_src_sys_cd=?\
+  \ \tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=? \tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=?\
+  \ \t\tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=? \t\tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=?\
+  \ \t\tTHEN\t?\n\t\t\tEND\n\t\t\t  INTO :v_dq_view_nm\n\t\t  FROM DUAL;\n\n\t\tv_query_desc\
+  \ := ?;\n\t\tCALL common.admin.dq_validation_sp(:v_dq_db,:v_dq_check,:v_dq_view_nm,:v_file_run_id);\n\
+  \t\tv_query_desc := ?;\n\n        SELECT LISTAGG(CONCAT(rejection_type,?,cnt),?)\
+  \ INTO :v_dq_call\n          FROM\n               (\n                SELECT rejection_type\
+  \ ,count(?) AS cnt\n                  FROM common.admin.dq_event_summary_log s,\n\
+  \                       common.admin.dq_event_detail_log d\n                 WHERE\
+  \ s.dq_smry_id = d.dq_smry_id\n                   AND s.batch_run_id = :v_file_run_id\n\
+  \              GROUP BY rejection_type\n               );\n\n\n        SELECT LAST_QUERY_ID(),CURRENT_SESSION(),TO_CHAR(CONVERT_TIMEZONE(?,\
+  \ CURRENT_TIMESTAMP) ) INTO :v_stmt_id, :v_session_id, :v_end_dttm;\n        v_query_desc\
+  \ := ?;\n\n\n\t\tLET v_return_stmt := OBJECT_CONSTRUCT(\n                      \
+  \  ?,v_stmt_id,\n                        ?,v_session_id,\n                     \
+  \   ?,v_query_desc,\n                        ?, v_start_dttm,\n                \
+  \        ?, v_end_dttm,\n                        ?,TABLE_RUN_ID,\n             \
+  \           ?,v_dq_call);\n\n        v_sp_input := OBJECT_CONSTRUCT(\n         \
+  \               ?, v_file_run_id,\n                        ?,?,\n              \
+  \          ?,v_start_dttm,\n                        ?,?,\n                     \
+  \   ?, ?,\n                        ?,v_src_sys_cd,\n                        ?,v_start_dttm,\n\
+  \                        ?,v_file_run_id,\n                        ?,?,\n      \
+  \                  ?,v_return_stmt);\n\n\n\n\n\n\t\tv_query_desc := ?;\n\n\n\n\n\
+  \n\n\n\tCALL COMMON.ADMIN.CURATED_TYPE2_SP(:v_transient_tbl_nm,:v_curated_tbl_nm,:v_primary_ky,:TABLE_RUN_ID,:v_table_ky,:v_vrsn_ky,:v_src_sys_cd);\n\
+  \n\n\tSELECT * INTO :v_type2_call FROM TABLE(RESULT_SCAN(LAST_QUERY_ID()));\n\n\t\
+  SELECT\n\t\t\tCASE\n\t\t\t  WHEN :v_src_sys_cd=? \tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=?\
+  \ \tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=? \t\tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=?\
+  \ \t\tTHEN\t?\n\t\t\t  WHEN :v_src_sys_cd=? \t\tTHEN\t?\n              WHEN :v_src_sys_cd=?\
+  \ \t\tTHEN\t?\n              WHEN :v_src_sys_cd=? \t\tTHEN\t?\n\t\t\tEND\n\t\t\t\
+  \  INTO :v_dq_recon_nm\n\t\t  FROM DUAL;\n\n\n    v_query_desc := ?;\n    call common.ADMIN.DQ_VALIDATION_SP(?,?,:v_dq_recon_nm,:v_file_run_id);\n\
+  \    v_query_desc := ?;\n\n\n    SELECT LAST_QUERY_ID(),CURRENT_SESSION(),TO_CHAR(CONVERT_TIMEZONE(?,\
+  \ CURRENT_TIMESTAMP)) INTO :v_stmt_id, :v_session_id, :v_end_dttm;\n\tv_query_desc\
+  \ := ?;\n\n    LET return_stmt:= OBJECT_CONSTRUCT(\n                        ?,v_temp1_count,\n\
+  \t\t\t\t\t\t?,v_stmt_id,\n                        ?,v_session_id,\n\t\t\t\t\t\t\
+  ?,v_query_desc,\n\t\t\t\t\t\t?, v_start_dttm,\n\t\t\t\t\t\t?, v_end_dttm,\n\t\t\t\
+  \t\t\t?,TABLE_RUN_ID,\n                        ?,v_type2_call);\n\n    v_sp_input:=\
+  \ OBJECT_CONSTRUCT(\n\t\t\t\t\t\t?, v_file_run_id,\n\t\t\t\t\t\t?,?,\n\t\t\t\t\t\
+  \t?,v_start_dttm,\n\t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?, ?,\n\t\t\t\t\t\t?,v_src_sys_cd,\n\
+  \t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,v_file_run_id,\n\t\t\t\t\t\t?,?,\n\t\t\
+  \t\t\t\t?,return_stmt);\n\n\tv_psl_sp_call :=? || ? || ? ||v_sp_input|| ? || ? ||\
+  \ ? || ? || ? || ? || ?;\n\tEXECUTE IMMEDIATE :v_psl_sp_call USING (v_sp_input);\n\
+  \n\tSELECT * INTO :v_sp_result FROM TABLE(RESULT_SCAN(LAST_QUERY_ID()));\n\n   \
+  \ RETURN v_type2_call;\n\n\n\n\n\tEXCEPTION\n\tWHEN no_data_exception THEN\n\n\t\
+  \tSELECT LAST_QUERY_ID(),CURRENT_SESSION(),CONVERT_TIMEZONE(?, CURRENT_TIMESTAMP)\
+  \ INTO :v_stmt_id, :v_session_id, :v_end_dttm;\n\n\t\treturn_stmt:= OBJECT_CONSTRUCT(\n\
+  \t\t\t\t\t\t?,v_stmt_id,\n                        ?,v_session_id,\n\t\t\t\t\t\t\
+  ?,v_query_desc,\n\t\t\t\t\t\t?, ? ,\n\t\t\t\t\t\t?, SQLCODE,\n\t\t\t\t\t\t?, SQLERRM,\n\
+  \t\t\t\t\t\t?, SQLSTATE,\n\t\t\t\t\t\t?, v_start_dttm,\n\t\t\t\t\t\t?, v_end_dttm);\n\
+  \n\t\tv_sp_input:= OBJECT_CONSTRUCT(\n\t\t\t\t\t\t?, v_file_run_id,\n\t\t\t\t\t\t\
+  ?,?,\n\t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?,SQLERRM,\n\t\t\
+  \t\t\t\t?,v_src_sys_cd,\n\t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,v_file_run_id,\n\
+  \t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?,return_stmt);\n\t\tv_psl_sp_call :=? || ? || ? ||v_sp_input||\
+  \ ? || ? || ? || ? || ? || ? || ?;\n\t\tEXECUTE IMMEDIATE :v_psl_sp_call USING (v_sp_input);\n\
+  \t\tRETURN return_stmt;\n\n\tWHEN STATEMENT_ERROR THEN\n\n\t\tSELECT LAST_QUERY_ID(),CURRENT_SESSION(),CONVERT_TIMEZONE(?,\
+  \ CURRENT_TIMESTAMP) INTO :v_stmt_id, :v_session_id, :v_end_dttm;\n\n\t\treturn_stmt:=\
+  \ OBJECT_CONSTRUCT(\n\t\t\t\t\t\t?,v_stmt_id,\n                        ?,v_session_id,\n\
+  \t\t\t\t\t\t?,v_query_desc,\n\t\t\t\t\t\t?, ?,\n\t\t\t\t\t\t?, SQLCODE,\n\t\t\t\t\
+  \t\t?, SQLERRM,\n\t\t\t\t\t\t?, SQLSTATE,\n\t\t\t\t\t\t?, v_start_dttm,\n\t\t\t\t\
+  \t\t?, v_end_dttm);\n\n\t\tv_sp_input:= OBJECT_CONSTRUCT(\n\t\t\t\t\t\t?, v_file_run_id,\n\
+  \t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?,SQLERRM,\n\
+  \t\t\t\t\t\t?,v_src_sys_cd,\n\t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,v_file_run_id,\n\
+  \t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?,return_stmt);\n\t\tv_psl_sp_call :=? || ? || ? ||v_sp_input||\
+  \ ? || ? || ? || ? || ? || ? || ?;\n\t\tEXECUTE IMMEDIATE :v_psl_sp_call USING (v_sp_input);\n\
+  \t\tRETURN return_stmt;\n\n\tWHEN OTHER THEN\n\n    SELECT LAST_QUERY_ID(),CURRENT_SESSION(),CONVERT_TIMEZONE(?,\
+  \ CURRENT_TIMESTAMP) INTO :v_stmt_id, :v_session_id, :v_end_dttm;\n\n\t\treturn_stmt:=OBJECT_CONSTRUCT(\n\
+  \t\t\t\t\t\t?,v_stmt_id,\n\t\t\t\t\t\t?,v_session_id,\n\t\t\t\t\t\t?,v_query_desc,\n\
+  \t\t\t\t\t\t?, ?,\n\t\t\t\t\t\t?, SQLCODE,\n\t\t\t\t\t\t?, SQLERRM,\n\t\t\t\t\t\t\
+  ?, SQLSTATE,\n\t\t\t\t\t\t?, v_start_dttm,\n\t\t\t\t\t\t?, v_end_dttm);\n\n\t\t\
+  v_sp_input:= OBJECT_CONSTRUCT(\n\t\t\t\t\t\t?, v_file_run_id,\n\t\t\t\t\t\t?,?,\n\
+  \t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,?,\n\t\t\t\t\t\t?,SQLERRM,\n\t\t\t\t\t\
+  \t?,v_src_sys_cd,\n\t\t\t\t\t\t?,v_start_dttm,\n\t\t\t\t\t\t?,v_file_run_id,\n\t\
+  \t\t\t\t\t?,?,\n\t\t\t\t\t\t?,return_stmt);\n\t\tv_psl_sp_call :=? || ? || ? ||v_sp_input||\
+  \ ? || ? || ? || ? || ? || ? || ?;\n\t\tEXECUTE IMMEDIATE :v_psl_sp_call USING (v_sp_input);\n\
+  \t\tRETURN return_stmt;\nEND"
+checksum: 355ea85c823145b7cccdfc60a82e01dd
+queryDate: 1747872000000
+usedBy:
+  - MAYUR
+tags: []
+queryUsedIn:
+  - id: 0b5994ca-25ef-4f35-b1f0-67ede52ac3c8
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.TRANSIENT.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

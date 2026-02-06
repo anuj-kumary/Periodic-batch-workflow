@@ -1,0 +1,34 @@
+name: 33bd04f1ec2cf5f35072cbbb70626f9e
+fullyQualifiedName: hktest.33bd04f1ec2cf5f35072cbbb70626f9e
+owners: []
+duration: 532.0
+users: []
+query: "WITH adfef0ee9e70ee3dd0bfe4071ec08e08_rnd AS \n(SELECT \"CUSTOMER_ADDRESS_1\"\
+  .\"CA_STREET_TYPE\" AS \"CA_STREET_TYPE\" \nFROM \"TPCDS_SF10TCL\".\"CUSTOMER_ADDRESS\"\
+  \ AS \"CUSTOMER_ADDRESS_1\" TABLESAMPLE ROW(? ROWS)), \nadfef0ee9e70ee3dd0bfe4071ec08e08_sample\
+  \ AS \n(SELECT adfef0ee9e70ee3dd0bfe4071ec08e08_rnd.\"CA_STREET_TYPE\" AS \"CA_STREET_TYPE\"\
+  \ \nFROM adfef0ee9e70ee3dd0bfe4071ec08e08_rnd)\n SELECT avg(LEN(\"CA_STREET_TYPE\"\
+  )) AS mean, count(\"CA_STREET_TYPE\") AS \"valuesCount\", count(DISTINCT \"CA_STREET_TYPE\"\
+  ) AS \"distinctCount\", MIN(LEN(\"CA_STREET_TYPE\")) AS min, MAX(LEN(\"CA_STREET_TYPE\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"CA_STREET_TYPE\" IS ?) THEN ? ELSE ? END),\
+  \ ?) AS \"nullCount\", STDDEV_POP(LEN(\"CA_STREET_TYPE\")) AS stddev, SUM(LEN(\"\
+  CA_STREET_TYPE\")) AS sum \nFROM adfef0ee9e70ee3dd0bfe4071ec08e08_sample\n LIMIT\
+  \ ?"
+checksum: 33bd04f1ec2cf5f35072cbbb70626f9e
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d74af634-8230-43b9-938f-a6ec3f6f3df5
+    type: table
+    name: CUSTOMER_ADDRESS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CUSTOMER_ADDRESS
+    displayName: CUSTOMER_ADDRESS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

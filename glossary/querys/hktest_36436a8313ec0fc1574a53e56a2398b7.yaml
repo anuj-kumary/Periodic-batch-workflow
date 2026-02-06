@@ -1,0 +1,35 @@
+name: 36436a8313ec0fc1574a53e56a2398b7
+fullyQualifiedName: hktest.36436a8313ec0fc1574a53e56a2398b7
+owners: []
+duration: 86.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"SCHEMA_NAME\")) AS mean, count(\"SCHEMA_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"SCHEMA_NAME\") AS \"distinctCount\", MIN(LEN(\"SCHEMA_NAME\"\
+  )) AS min, MAX(LEN(\"SCHEMA_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"SCHEMA_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"SCHEMA_NAME\"\
+  )) AS stddev, SUM(LEN(\"SCHEMA_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_SEEDS\"\n LIMIT ?"
+checksum: 36436a8313ec0fc1574a53e56a2398b7
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: dadd6b4a-93b0-4a0f-9b97-daa761a9438d
+    type: table
+    name: DBT_SEEDS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SEEDS
+    displayName: DBT_SEEDS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

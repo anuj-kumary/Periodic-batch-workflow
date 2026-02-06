@@ -1,0 +1,35 @@
+name: 34e0e735426f9696abdf82ba7c25ac22
+fullyQualifiedName: hktest.34e0e735426f9696abdf82ba7c25ac22
+owners: []
+duration: 123.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"TABLE_NAME\")) AS mean, count(\"TABLE_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"TABLE_NAME\") AS \"distinctCount\", MIN(LEN(\"TABLE_NAME\"))\
+  \ AS min, MAX(LEN(\"TABLE_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"TABLE_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"TABLE_NAME\"))\
+  \ AS stddev, SUM(LEN(\"TABLE_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"\
+  ELEMENTARY_TEST_RESULTS\"\n LIMIT ?"
+checksum: 34e0e735426f9696abdf82ba7c25ac22
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 25275c7a-6a78-413e-9b68-9105a233d254
+    type: table
+    name: ELEMENTARY_TEST_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ELEMENTARY_TEST_RESULTS
+    displayName: ELEMENTARY_TEST_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

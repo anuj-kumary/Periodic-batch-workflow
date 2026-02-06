@@ -1,0 +1,29 @@
+name: 33b771236481e4e4ec033fe9aee590da
+fullyQualifiedName: hktest.33b771236481e4e4ec033fe9aee590da
+owners: []
+duration: 144.0
+users: []
+query: "SELECT avg(LEN(\"MET_EXTRACT_DATE\")) AS mean, count(\"MET_EXTRACT_DATE\"\
+  ) AS \"valuesCount\", count(DISTINCT \"MET_EXTRACT_DATE\") AS \"distinctCount\"\
+  , MIN(LEN(\"MET_EXTRACT_DATE\")) AS min, MAX(LEN(\"MET_EXTRACT_DATE\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"MET_EXTRACT_DATE\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\", STDDEV_POP(LEN(\"MET_EXTRACT_DATE\")) AS stddev, SUM(LEN(\"MET_EXTRACT_DATE\"\
+  )) AS sum \nFROM \"LANDING\".\"COBE_ETI\"\n LIMIT ?"
+checksum: 33b771236481e4e4ec033fe9aee590da
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7177a74e-7bdc-4ef4-86d3-f41e58404c78
+    type: table
+    name: COBE_ETI
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.COBE_ETI
+    displayName: COBE_ETI
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

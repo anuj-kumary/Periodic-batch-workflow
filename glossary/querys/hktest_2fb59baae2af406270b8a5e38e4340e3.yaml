@@ -1,0 +1,41 @@
+name: 2fb59baae2af406270b8a5e38e4340e3
+fullyQualifiedName: hktest.2fb59baae2af406270b8a5e38e4340e3
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"1f508427-80b3-49cc-a1fe-0eb4dee09b71\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 86.0
+users: []
+query: "SELECT avg(\"O_SHIPPRIORITY\") AS mean, count(\"O_SHIPPRIORITY\") AS \"valuesCount\"\
+  , count(DISTINCT \"O_SHIPPRIORITY\") AS \"distinctCount\", MIN(\"O_SHIPPRIORITY\"\
+  ) AS min, MAX(\"O_SHIPPRIORITY\") AS max, coalesce(SUM(CASE WHEN (\"O_SHIPPRIORITY\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"O_SHIPPRIORITY\")\
+  \ AS stddev, SUM(\"O_SHIPPRIORITY\") AS sum \nFROM \"TPCH_SF100\".\"ORDERS\"\n LIMIT\
+  \ ?"
+checksum: 2fb59baae2af406270b8a5e38e4340e3
+queryDate: 1752105600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 1f508427-80b3-49cc-a1fe-0eb4dee09b71
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

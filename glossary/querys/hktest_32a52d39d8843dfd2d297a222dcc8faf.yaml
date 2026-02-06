@@ -1,0 +1,29 @@
+name: 32a52d39d8843dfd2d297a222dcc8faf
+fullyQualifiedName: hktest.32a52d39d8843dfd2d297a222dcc8faf
+owners: []
+duration: 65.0
+users: []
+query: "SELECT avg(LEN(\"ENT_ALT_ADD_NM\")) AS mean, count(\"ENT_ALT_ADD_NM\") AS\
+  \ \"valuesCount\", count(DISTINCT \"ENT_ALT_ADD_NM\") AS \"distinctCount\", MIN(LEN(\"\
+  ENT_ALT_ADD_NM\")) AS min, MAX(LEN(\"ENT_ALT_ADD_NM\")) AS max, coalesce(SUM(CASE\
+  \ WHEN (\"ENT_ALT_ADD_NM\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  ENT_ALT_ADD_NM\")) AS stddev, SUM(LEN(\"ENT_ALT_ADD_NM\")) AS sum \nFROM \"CURATED\"\
+  .\"CNTRCT\"\n LIMIT ?"
+checksum: 32a52d39d8843dfd2d297a222dcc8faf
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

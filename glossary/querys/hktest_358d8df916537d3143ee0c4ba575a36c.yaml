@@ -1,0 +1,35 @@
+name: 358d8df916537d3143ee0c4ba575a36c
+fullyQualifiedName: hktest.358d8df916537d3143ee0c4ba575a36c
+owners: []
+duration: 35.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"DESCRIPTION\")) AS mean, count(\"DESCRIPTION\") AS \"valuesCount\"\
+  , count(DISTINCT \"DESCRIPTION\") AS \"distinctCount\", MIN(LEN(\"DESCRIPTION\"\
+  )) AS min, MAX(LEN(\"DESCRIPTION\")) AS max, coalesce(SUM(CASE WHEN (\"DESCRIPTION\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"DESCRIPTION\"\
+  )) AS stddev, SUM(LEN(\"DESCRIPTION\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_EXPOSURES\"\n LIMIT ?"
+checksum: 358d8df916537d3143ee0c4ba575a36c
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 63c57e4c-b711-41ac-87e8-2bc0b63008df
+    type: table
+    name: DBT_EXPOSURES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES
+    displayName: DBT_EXPOSURES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

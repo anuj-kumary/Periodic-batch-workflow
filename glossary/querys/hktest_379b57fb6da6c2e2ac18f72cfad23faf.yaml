@@ -1,0 +1,37 @@
+name: 379b57fb6da6c2e2ac18f72cfad23faf
+fullyQualifiedName: hktest.379b57fb6da6c2e2ac18f72cfad23faf
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b9575673-6097-446e-9dd0-c6556d064a78\",\"type\":\"table\"\
+        ,\"name\":\"JOBS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.JOBS\"\
+        ,\"displayName\":\"JOBS\",\"deleted\":false}]"
+  previousVersion: 1.0
+  changeSummary: {}
+owners: []
+duration: 69.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"E2E_TESTJOB_TITLE\"\
+  ) ASC) AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"E2E_TESTJOB_TITLE\"\
+  ) ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"E2E_TESTJOB_TITLE\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"E2E_TEST\".\"JOBS\"\n LIMIT ?"
+checksum: 379b57fb6da6c2e2ac18f72cfad23faf
+queryDate: 1752537600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b9575673-6097-446e-9dd0-c6556d064a78
+    type: table
+    name: JOBS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.JOBS
+    displayName: JOBS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
