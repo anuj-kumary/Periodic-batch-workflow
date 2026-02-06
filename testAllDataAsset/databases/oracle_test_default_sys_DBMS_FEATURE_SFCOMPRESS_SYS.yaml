@@ -1,0 +1,89 @@
+name: DBMS_FEATURE_SFCOMPRESS_SYS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_SFCOMPRESS_SYS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    AS
+    PROCEDURE DBMS_FEATURE_SFCOMPRESS_SYS
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+       feature_count      NUMBER;
+    BEGIN
+      -- initialize
+      feature_info      := NULL;
+      feature_count     := 0;
+
+      -- skip internal usage by flashback archive
+      -- bug 21562376: XML search index $D table (with name pattern 'DR%$D')
+      --               uses compression, count it as system usage.
+      select count(*) into feature_count from (
+        select l.obj#, l.lobj#, l.lobj#, l.lobj#, 'U' fragtype
+          from tab$ t, lob$ l, obj$ o
+          where l.obj#=t.obj# and
+                decode(bitand(l.property, 2048), 0, 'NO', 'YES')='YES' and
+                decode(bitand(l.flags, 57344), 0, 'NO', 'YES')='YES' and
+                decode(bitand(t.property, 8589934592), 0, 'NO', 'YES')='NO' and
+                o.obj# = t.obj# and
+                (o.name like 'DR%$D' or
+                 o.owner# in (select user# from user$
+                              where name in ('SYS', 'SYSTEM', 'XDB')))
+        union
+        select pl.tabobj#, pl.lobj#, fragobj#, parentobj#, fragtype$
+          from lobfrag$ lf, partlob$ pl, tab$ t, obj$ o
+          where decode(bitand(lf.fragpro, 2048), 0, 'NO', 'YES')='YES' and
+                decode(bitand(lf.fragflags, 57344), 0, 'NO', 'YES')='YES' and
+                lf.parentobj#=pl.lobj# and pl.tabobj#=t.obj# and
+                decode(bitand(t.property, 8589934592), 0, 'NO', 'YES')='NO' and
+                o.obj# = t.obj# and
+                (o.name like 'DR%$D' or
+                 o.owner# in (select user# from user$
+                              where name in ('SYS', 'SYSTEM', 'XDB')))
+        union
+        select l.obj#, lc.lobj#, fragobj#, parentobj#, fragtype$
+          from lobfrag$ lf, lobcomppart$ lc, lob$ l, tab$ t, obj$ o
+          where decode(bitand(lf.fragpro, 2048), 0, 'NO', 'YES')='YES' and
+                decode(bitand(lf.fragflags, 57344), 0, 'NO', 'YES')='YES' and
+                lf.parentobj#=lc.partobj# and l.lobj#=lc.lobj# and
+                t.obj#=l.obj# and
+                decode(bitand(t.property, 8589934592), 0, 'NO', 'YES')='NO' and
+                o.obj# = t.obj# and
+                (o.name like 'DR%$D' or
+                 o.owner# in (select user# from user$
+                              where name in ('SYS', 'SYSTEM', 'XDB')))
+      );
+
+      feature_boolean := feature_count;
+      aux_count       := feature_count;
+
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: bbca1ef4ca82c489b876a2fc42cff623
+processedLineage: false
+entityStatus: Approved

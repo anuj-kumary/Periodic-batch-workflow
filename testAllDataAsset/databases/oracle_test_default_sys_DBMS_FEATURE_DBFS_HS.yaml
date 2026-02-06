@@ -1,0 +1,66 @@
+name: DBMS_FEATURE_DBFS_HS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_DBFS_HS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_dbfs_hs
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+      table_not_found        exception;
+      PRAGMA EXCEPTION_INIT(table_not_found, -942);
+      num_hierarchical_stores number;
+    BEGIN
+      -- initialize
+      feature_boolean := 0;
+      aux_count := 0;
+      num_hierarchical_stores := 0;
+
+      -- check existence of content stores of HS sub-types
+      BEGIN
+        execute immediate 'SELECT COUNT(*)  FROM sys.dbfs_hs$_fs'
+          INTO num_hierarchical_stores;
+      EXCEPTION
+        WHEN table_not_found THEN NULL;
+      END;
+
+      feature_boolean := num_hierarchical_stores;
+      IF feature_boolean <> 0
+      THEN
+        feature_info := to_clob('DBFS HS in use. ' ||
+                                  num_hierarchical_stores ||
+                                  ' DBFS hierarchical stores detected.');
+      ELSE
+        feature_info := to_clob('DBFS HS feature not in use.');
+      END IF;
+    END;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 712a7dbc813f6a143fc0269b5888756b
+processedLineage: false
+entityStatus: Approved

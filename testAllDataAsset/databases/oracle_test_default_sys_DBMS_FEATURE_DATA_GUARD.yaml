@@ -1,0 +1,344 @@
+name: DBMS_FEATURE_DATA_GUARD
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_DATA_GUARD
+storedProcedureCode:
+  language: SQL
+  code: |2-
+         feature_info     OUT  CLOB)
+    procedure DBMS_FEATURE_DATA_GUARD
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+    AS
+        feature_usage         varchar2(1000);
+        log_transport         varchar2(25);
+        num_arch              number;
+        num_casc_stby         number;
+        num_compression       number;
+        num_dgconfig          number;
+        num_far_sync          number;
+        num_fast_sync         number;
+        num_lgwr_async        number;
+        num_lgwr_sync         number;
+        num_realtime_apply    number;
+        num_redo_apply        number;
+        num_snapshot          number;
+        num_sql_apply         number;
+        num_standbys          number;
+        num_terminal_db       number;
+        num_ra                number;
+        protection_mode       varchar2(24);
+        use_broker            varchar2(5);
+        use_compression       varchar2(8);
+        use_far_sync          varchar2(5);
+        use_fast_sync         varchar2(5);
+        use_flashback         varchar2(18);
+        use_fs_failover       varchar2(22);
+        use_realtime_apply    varchar2(5);
+        use_redo_apply        varchar2(5);
+        use_snapshot          varchar2(5);
+        use_sql_apply         varchar2(5);
+        use_ra                varchar2(5);
+
+    begin
+        -- initialize
+        feature_boolean := 0;
+        aux_count := 0;
+        log_transport := NULL;
+        num_arch := 0;
+        num_casc_stby := 0;
+        num_compression := 0;
+        num_dgconfig :=0;
+        num_far_sync := 0;
+        num_fast_sync := 0;
+        num_lgwr_async := 0;
+        num_lgwr_sync := 0;
+        num_realtime_apply := 0;
+        num_redo_apply := 0;
+        num_snapshot := 0;
+        num_sql_apply := 0;
+        num_standbys := 0;
+        num_terminal_db := 0;
+        num_ra := 0;
+        use_broker := 'FALSE';
+        use_compression := 'FALSE';
+        use_far_sync := 'FALSE';
+        use_fast_sync := 'FALSE';
+        use_flashback := 'FALSE';
+        use_fs_failover := 'FALSE';
+        use_realtime_apply := 'FALSE';
+        use_redo_apply := 'FALSE';
+        use_snapshot := 'FALSE';
+        use_sql_apply := 'FALSE';
+        use_ra := 'FALSE';
+
+        -- check for Data Guard usage by counting valid standby destinations
+        -- We use v$archive_dest here and NOT v$dataguard_config because if the
+        -- dg_config is not initialized, v$dataguard_config will be empty.
+        execute immediate 'select count(*) from v$archive_dest ' ||
+            'where status = ''VALID'' and target = ''STANDBY'''
+            into num_standbys;
+
+        if (num_standbys > 0) then
+            feature_boolean := 1;
+
+            -- determine if v$dataguard_config is populated
+            execute immediate 'select count(*) from v$dataguard_config'
+                into num_dgconfig;
+
+            -- Depending on whether v$dataguard_config is populated or not, some
+            -- of the commands below will either use v$dataguard_config or
+            -- v$archive_dest.
+
+            if (num_dgconfig > 0) then
+                -- get the real number of standbys
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+
+                    'from v$dataguard_config ' ||
+                    'where (DEST_ROLE like ''% STANDBY'')'
+                    into num_standbys;
+                -- get the number of cascading standbys
+                execute immediate 'select count(unique(PARENT_DBUN)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (PARENT_DBUN not in ' ||
+                    '(select DB_UNIQUE_NAME from v$database) and ' ||
+                    'PARENT_DBUN != ''NONE'' and PARENT_DBUN != ''UNKNOWN'')'
+                    into num_casc_stby;
+
+                -- get the number of terminal databases
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (DB_UNIQUE_NAME not in ' ||
+                    '(select PARENT_DBUN from v$dataguard_config) and ' ||
+                    'PARENT_DBUN != ''UNKNOWN'')'
+                    into num_terminal_db;
+
+                -- check for Redo Apply (Physical Standby) usage
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (DEST_ROLE = ''PHYSICAL STANDBY'')'
+                    into num_redo_apply;
+                if (num_redo_apply > 0) then
+                    use_redo_apply := 'TRUE';
+                end if;
+
+                -- check for SQL Apply (Logical Standby) usage
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (DEST_ROLE = ''LOGICAL STANDBY'')'
+                    into num_sql_apply;
+                if (num_sql_apply > 0) then
+                    use_sql_apply := 'TRUE';
+                end if;
+
+                -- check for Far Sync Instance usage
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (DEST_ROLE = ''FAR SYNC INSTANCE'')'
+                    into num_far_sync;
+                if (num_far_sync > 0) then
+                    use_far_sync := 'TRUE';
+                end if;
+
+                -- check for Snapshot Standby usage
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (DEST_ROLE = ''SNAPSHOT STANDBY'')'
+                    into num_snapshot;
+                if (num_snapshot > 0) then
+                    use_snapshot := 'TRUE';
+                end if;
+
+                -- check for Recovery Appliance usage using v$dataguard_config
+                execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                    'from v$dataguard_config ' ||
+                    'where (DEST_ROLE = ''BACKUP APPLIANCE'')'
+                    into num_ra;
+                if (num_ra > 0) then
+                    use_ra := 'TRUE';
+                end if;
+
+            else
+                -- check for Redo Apply (Physical Standby) usage
+                execute immediate 'select count(*) from v$archive_dest_status ' ||
+                    'where status = ''VALID'' and type = ''PHYSICAL'''
+                    into num_redo_apply;
+                if (num_redo_apply > 0) then
+                    use_redo_apply := 'TRUE';
+                end if;
+
+                -- check for SQL Apply (Logical Standby) usage
+                execute immediate 'select count(*) from v$archive_dest_status ' ||
+                    'where status = ''VALID'' and type = ''LOGICAL'''
+                    into num_sql_apply;
+                if (num_sql_apply > 0) then
+                    use_sql_apply := 'TRUE';
+                end if;
+
+                -- check for Far Sync Instance usage
+                execute immediate 'select count(*) from v$archive_dest_status ' ||
+                    'where status = ''VALID'' and type = ''FAR SYNC'''
+                    into num_far_sync;
+                if (num_far_sync > 0) then
+                    use_far_sync := 'TRUE';
+                end if;
+
+                -- copy far sync instance count into cascading standby
+                num_casc_stby := num_far_sync;
+
+                -- check for Snapshot Standby usage
+                execute immediate 'select count(*) from v$archive_dest_status ' ||
+                    'where status = ''VALID'' and type = ''SNAPSHOT'''
+                    into num_snapshot;
+                if (num_snapshot > 0) then
+                    use_snapshot := 'TRUE';
+                end if;
+
+                -- check for Recovery Appliance usage using v$archive_dest_status
+                execute immediate 'select count(*) from v$archive_dest_status ' ||
+                    'where status = ''VALID'' and type = ''BACKUP APPLIANCE'''
+                    into num_ra;
+                if (num_ra > 0) then
+                    use_ra := 'TRUE';
+                end if;
+
+            end if;
+
+            -- check for Broker usage by selecting the init param value
+            execute immediate 'select value from v$system_parameter ' ||
+                'where name = ''dg_broker_start'''
+                into use_broker;
+
+            -- get all log transport methods
+            execute immediate 'select count(*) from v$archive_dest ' ||
+                'where status = ''VALID'' and target = ''STANDBY'' ' ||
+                'and archiver like ''ARC%'''
+                into num_arch;
+            if (num_arch > 0) then
+                log_transport := 'ARCH ';
+            end if;
+            execute immediate 'select count(*) from v$archive_dest ' ||
+                'where status = ''VALID'' and target = ''STANDBY'' ' ||
+                'and archiver = ''LGWR'' ' ||
+                'and (transmit_mode = ''SYNCHRONOUS'' or ' ||
+                '     transmit_mode = ''PARALLELSYNC'')'
+                into num_lgwr_sync;
+            if (num_lgwr_sync > 0) then
+                log_transport := log_transport || 'LGWR SYNC ';
+            end if;
+            execute immediate 'select count(*) from v$archive_dest ' ||
+                'where status = ''VALID'' and target = ''STANDBY'' ' ||
+                'and archiver = ''LGWR'' ' ||
+                'and transmit_mode = ''ASYNCHRONOUS'''
+                into num_lgwr_async;
+            if (num_lgwr_async > 0) then
+                log_transport := log_transport || 'LGWR ASYNC';
+            end if;
+
+            -- get protection mode for primary db
+            execute immediate 'select protection_mode from v$database'
+                into protection_mode;
+
+            -- check for Fast Sync usage
+            if (protection_mode = 'MAXIMUM AVAILABILITY') then
+                execute immediate 'select count(*) from v$archive_dest ' ||
+                    'where status = ''VALID'' and target = ''STANDBY'' ' ||
+                    'and archiver = ''LGWR'' ' ||
+                    'and (transmit_mode = ''SYNCHRONOUS'' or ' ||
+                    '     transmit_mode = ''PARALLELSYNC'') ' ||
+                    'and affirm = ''NO'' '
+                    into num_fast_sync;
+                if (num_fast_sync > 0) then
+                    use_fast_sync := 'TRUE';
+                end if;
+            end if;
+
+            -- check for fast-start failover usage
+            execute immediate 'select fs_failover_status from v$database'
+                into use_fs_failover;
+            if (use_fs_failover != 'DISABLED') then
+                use_fs_failover := 'TRUE';
+            else
+                use_fs_failover := 'FALSE';
+            end if;
+
+            -- check for realtime apply usage
+            -- We can only count the directly connected standbys
+            execute immediate 'select count(*) from v$archive_dest_status ' ||
+                'where status = ''VALID'' ' ||
+                'and recovery_mode like ''%REAL TIME APPLY%'''
+                into num_realtime_apply;
+            if (num_realtime_apply > 0) then
+                use_realtime_apply := 'TRUE';
+            end if;
+
+            -- check for network compression usage
+            -- We can only count the directly connected standbys
+            execute immediate 'select count(*) from v$archive_dest ' ||
+                'where status = ''VALID'' and target = ''STANDBY'' ' ||
+                'and compression = ''ENABLE'''
+                into num_compression;
+            if (num_compression > 0) then
+                use_compression := 'TRUE';
+            end if;
+
+            -- check for flashback usage
+            execute immediate 'select flashback_on from v$database'
+                into use_flashback;
+            if (use_flashback = 'YES') then
+                use_flashback := 'TRUE';
+            else
+                use_flashback := 'FALSE';
+            end if;
+
+            feature_usage :=
+                    'Number of standbys: ' || to_char(num_standbys) ||
+            ', ' || 'Number of Cascading databases: ' || to_char(num_casc_stby) ||
+            ', ' || 'Number of Terminal databases: ' || to_char(num_terminal_db) ||
+            ', ' || 'Redo Apply used: ' || upper(use_redo_apply) ||
+            ', ' || 'SQL Apply used: ' || upper(use_sql_apply) ||
+            ', ' || 'Far Sync Instance used: ' || upper(use_far_sync) ||
+            ', ' || 'Snapshot Standby used: ' || upper(use_snapshot) ||
+            ', ' || 'Broker used: ' || upper(use_broker) ||
+            ', ' || 'Protection mode: ' || upper(protection_mode) ||
+            ', ' || 'Log transports used: ' || upper(log_transport) ||
+            ', ' || 'Fast Sync used: ' || upper(use_fast_sync) ||
+            ', ' || 'Fast-Start Failover used: ' || upper(use_fs_failover) ||
+            ', ' || 'Real-Time Apply used: ' || upper(use_realtime_apply) ||
+            ', ' || 'Compression used: ' || upper(use_compression) ||
+            ', ' || 'Flashback used: ' || upper(use_flashback) ||
+            ', ' || 'Recovery Appliance used: ' || upper(use_ra)
+            ;
+            feature_info := to_clob(feature_usage);
+        else
+            feature_info := to_clob('Data Guard usage not detected');
+        end if;
+    end;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 217a7dc53603b9374d194797a95570b4
+processedLineage: false
+entityStatus: Approved

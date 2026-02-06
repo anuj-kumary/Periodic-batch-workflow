@@ -1,0 +1,93 @@
+name: DBMS_FEATURE_AUTO_SGA
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_AUTO_SGA
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_AUTO_SGA
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+      feature_usage          varchar2(1000);
+      sga_target             number;
+      sga_max_size           number;
+    begin
+
+      -- initialize
+      feature_boolean := 0;
+      aux_count := 0;
+      feature_info := to_clob('Automatic SGA Tuning usage not detected');
+      feature_usage := '';
+      sga_target := 0;
+      sga_max_size := 0;
+
+      execute immediate 'select to_number(value) from v$system_parameter where ' ||
+                        'name like ''sga_target'' and con_id = 0'
+      into sga_target;
+
+      if sga_target > 0
+      then
+
+        feature_boolean := 1;
+
+        feature_usage := feature_usage||':sga_target:'||sga_target;
+
+        -- get sga_max_size value
+        execute immediate 'select to_number(value) from v$system_parameter where ' ||
+                          'name like ''sga_max_size'' and con_id = 0'
+        into sga_max_size;
+
+        feature_usage := feature_usage||':sga_max_size:'||sga_max_size;
+
+        -- get v$memory_dynamic_components info
+        for item in (select component, current_size, min_size, max_size,
+                     user_specified_size from
+                     v$memory_dynamic_components where current_size != 0)
+        loop
+          feature_usage := feature_usage||':comp:'||item.component||
+                           ':cur:'||item.current_size||':min:'||
+                           item.min_size||':max:'||item.max_size||
+                           ':usr:'||item.user_specified_size;
+        end loop;
+
+        -- get v$system_event info for SGA events
+        for item in (select substr(event, 0, 15) evt, total_waits, time_waited
+                     from v$system_event where event like '%SGA%')
+        loop
+          feature_usage := feature_usage||':event:'||item.evt||':waits:'||
+                           item.total_waits||':time:'||item.time_waited;
+        end loop;
+        feature_info := to_clob(feature_usage);
+
+      end if;
+
+    end;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 45590265c64a2c19a330b3edd06bd8db
+processedLineage: false
+entityStatus: Approved

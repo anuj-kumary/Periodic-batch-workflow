@@ -1,0 +1,73 @@
+name: DBMS_FEATURE_ROND
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ROND
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_rond
+          (is_used OUT number, aux_count OUT number, feature_info OUT clob)
+    AS
+      is_rac_on number;
+      d_type varchar2(15);
+      q_status number;
+      ops_enabled number;
+    BEGIN
+      is_used := 0;
+      aux_count := 0;
+      feature_info := NULL;
+      d_type := NULL;
+      q_status := 0;
+      ops_enabled := 0;
+
+      select count(*) into ops_enabled from x$kjidt;
+
+      if (ops_enabled > 0) then
+        select kjidtv, kjidtqs into d_type, q_status from x$kjidt;
+        if (q_status = 0) then
+          feature_info := to_clob('Database is not in RAC');
+        elsif (q_status = 1) then
+          if (upper(d_type) = 'RACONENODE') then
+            is_used := 1;
+            feature_info := to_clob('Database is of type RACOneNode');
+          elsif (upper(d_type) = 'RAC') then
+            feature_info := to_clob('Database is of type RAC');
+          elsif (upper(d_type) = 'SINGLE') then
+            feature_info := to_clob('Database is of type SINGLE');
+          end if;
+        elsif (q_status = 2) then
+          feature_info := to_clob('Database type query failed');
+        elsif (q_status = 3) then
+          feature_info := to_clob('Database type query returned warning');
+        end if;
+      else
+        feature_info := to_clob('Database is not RAC One Node');
+      end if;
+    END;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 8a4c69f7dcc6a8254c1bef25f5351293
+processedLineage: false
+entityStatus: Approved

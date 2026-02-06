@@ -1,0 +1,98 @@
+name: DBMS_FEATURE_APEX
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_APEX
+storedProcedureCode:
+  language: SQL
+  code: |2-
+           feature_info     OUT  CLOB)
+    procedure DBMS_FEATURE_APEX
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+    AS
+        l_apex_schema   dbms_id := null;
+        l_num_apps      number := 0;
+        l_num_views     number := 0;
+        l_num_workspace number := 0;
+        l_num_users     number := 0;
+    begin
+        /* Determine current schema for Application Express
+           Note: this will only return one row              */
+        for c1 in (select schema
+                     from dba_registry
+                    where comp_id = 'APEX' ) loop
+            l_apex_schema := dbms_assert.enquote_name(c1.schema, FALSE);
+        end loop;
+
+        /* If not found, then APEX is not installed */
+        if l_apex_schema is null then
+            feature_boolean := 0;
+            aux_count := 0;
+            feature_info := to_clob('APEX usage not detected');
+            return;
+        end if;
+
+           /* Determine the number of workspaces */
+           execute immediate 'select count(*)
+      from '||l_apex_schema||'.wwv_flow_companies
+     where provisioning_company_id not in (0,10,11,12)' into l_num_workspace;
+
+        if l_num_workspace > 0 then
+
+           /* Determine the number of user-created applications */
+           execute immediate 'select count(*)
+      from '||l_apex_schema||'.wwv_flows
+     where security_group_id not in (10,11,12)' into l_num_apps;
+
+           /* Determine the number of non-internal Application Express users */
+           execute immediate 'select count(*)
+      from '||l_apex_schema||'.wwv_flow_fnd_user
+     where security_group_id not in (10,11,12)' into l_num_users;
+
+           /* Determine number of page views in the last 30 days */
+           execute immediate 'select nvl(sum(page_views),0)
+      from '||l_apex_schema||'.wwv_flow_log_history
+     where log_day > sysdate -30' into l_num_views;
+
+           feature_boolean := 1;
+           aux_count := l_num_apps;
+           feature_info := to_clob('Number of applications: '||to_char(l_num_apps)||
+           ', '||'Number of workspaces: '||to_char(l_num_workspace)||
+           ', '||'Number of users: '||to_char(l_num_users))||
+           ', '||'Page views last 30 days: '||to_char(l_num_views);
+
+        else
+           feature_boolean := 0;
+           aux_count := 0;
+           feature_info := to_clob('APEX usage not detected');
+        end if;
+
+    end DBMS_FEATURE_APEX;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 65ac5895922925e78e8976dedd2c6306
+processedLineage: false
+entityStatus: Approved

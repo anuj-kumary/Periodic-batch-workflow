@@ -1,0 +1,118 @@
+name: DBMS_FEATURE_IOT
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_IOT
+storedProcedureCode:
+  language: SQL
+  code: |2-
+        feature_info    OUT CLOB)
+    procedure DBMS_FEATURE_IOT(
+        feature_boolean OUT NUMBER,
+        aux_count       OUT NUMBER,
+    AS
+        feature_usage                 varchar2(1000);
+        num_iot                       number;
+        num_iotpart_index_segments    number;
+        num_iotpart_overflow_segments number;
+
+    BEGIN
+        feature_boolean             := 0;
+        aux_count                   := 0;
+
+        -- If the IOT or its overflow segment is stored in a tablespace other than
+        -- SYSTEM or SYSAUX, count it.
+        execute immediate
+           'select count(*) from dba_tables, dba_indexes where ' ||
+           'dba_tables.iot_type is not null and dba_indexes.table_name ' ||
+           '= dba_tables.table_name and (dba_indexes.tablespace_name ' ||
+           'not in (''SYSTEM'', ''SYSAUX'', ''TEMP'', ''SYSEXT'')' ||
+           'or dba_tables.tablespace_name ' ||
+           'not in (''SYSTEM'', ''SYSAUX'', ''TEMP'', ''SYSEXT''))'
+        into num_iot;
+
+        -- Partitioned IOT/overflow segment
+        -- for the IOT overflow segment partitions
+        -- Bug 21059266:
+        -- Query rewritten in terms of Data Dictionary base tables; the three
+        -- bitands correspond to the dba_tables.iot_type column in the original
+        -- query. That column is not null if any of the following bitands are true:
+        -- (bitand(property, 64) = 64) means IOT
+        -- (bitand(property,512) = 512) means IOT_OVERFLOW
+        -- (bitand(flags, 536870912) = 536870912) IOT_MAPPING
+        execute immediate
+           'select count(OBJ#) ' ||
+           'from tabpart$ ' ||
+           'where BO# in ' ||
+              '((select OBJ# ' ||
+                'from tab$ ' ||
+                'where (((bitand(property, 64) = 64) or ' ||
+                       '(bitand(property,512) = 512) or ' ||
+                       '(bitand(flags, 536870912) = 536870912)) and ' ||
+                       'TS# in ' ||
+                         '(select TS# ' ||
+                          'from ts$ ' ||
+                          'where NAME not in ' ||
+                             '(''SYSTEM'', ''SYSAUX'', ''TEMP'', ''SYSEXT'')))))'
+        into num_iotpart_overflow_segments;
+
+        -- for the IOT index segment partitions
+        execute immediate
+           'select count(*) ' ||
+           'from dba_tables, dba_indexes, dba_ind_partitions where ' ||
+           'dba_tables.iot_type is not null and dba_tables.table_name = ' ||
+           'dba_indexes.table_name and dba_indexes.index_name = ' ||
+           'dba_ind_partitions.index_name and ' ||
+           'dba_ind_partitions.tablespace_name ' ||
+           'not in (''SYSTEM'', ''SYSAUX'', ''TEMP'', ''SYSEXT'')'
+        into num_iotpart_index_segments;
+
+        -- Composite partitioning is not supported for IOTs
+
+        --Summary
+        feature_usage :=
+            ' Index Organized Table Feature Usage: ' ||
+                    'Index Organized Tables: ' ||
+                      to_char(num_iot) ||
+            ', ' || 'Index Organized Table Partitions ' ||
+            '(Index and Overflow Partitions) ' ||
+                      to_char(num_iotpart_index_segments +
+                              num_iotpart_overflow_segments);
+
+         if (num_iot + num_iotpart_index_segments +
+             num_iotpart_overflow_segments > 0) then
+          feature_boolean := 1;
+          feature_info := to_clob(feature_usage);
+        else
+          feature_boolean := 0;
+          feature_info := to_clob('Index Organized Tables Not Detected');
+        end if;
+
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 01f0ca88b8593b902487e1791db89348
+processedLineage: false
+entityStatus: Approved

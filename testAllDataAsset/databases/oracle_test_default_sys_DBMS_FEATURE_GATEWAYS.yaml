@@ -1,0 +1,112 @@
+name: DBMS_FEATURE_GATEWAYS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_GATEWAYS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE DBMS_FEATURE_GATEWAYS
+        ( feature_boolean OUT NUMBER,
+          aux_count        OUT NUMBER,
+          feature_info    OUT CLOB )
+    AS
+      TYPE GtwCursorRef is REF CURSOR;
+      TYPE ResultList   is TABLE of varchar(150);
+      cur GtwCursorRef;
+      res ResultList;
+      hs_sql varchar(250);
+      i number;
+    BEGIN
+     /*
+     We are using "execute immediate" to query HS tables
+     because they are not present at the moment this
+     stored procedure is created.
+     */
+
+      hs_sql := 'select count(*)  ' ||
+                '  from   HS_FDS_CLASS '        ||
+                '  where fds_class_name <> ''BITE''';
+      execute immediate hs_sql into aux_count;
+
+      feature_boolean := aux_count;
+
+      if aux_count = 0
+      then
+        feature_info := 'This feature is not used.';
+
+        return;
+      end if;
+
+      feature_info := 'Num of FDS classes:' || aux_count;
+
+                   ' from HS_FDS_CLASS where FDS_CLASS_NAME <> ''BITE''';
+      open cur for 'select ''(ID:''  || FDS_CLASS_ID || ''' ||
+                   ',NAME:'' || FDS_CLASS_NAME || '',' ||
+                   'COMMENTS:'' || substr(FDS_CLASS_COMMENTS, 1, 110) || '')''' ||
+      fetch cur bulk collect into res;
+      close cur;
+
+      for i in res.FIRST .. res.LAST loop
+        feature_info := feature_info || ',' || res(i);
+        /* make sure we don't reach the 1000 chars limit */
+        if LENGTH(feature_info) > 850
+        then
+          feature_info := feature_info || '...';
+          return;
+        end if;
+      end loop;
+
+      hs_sql := 'select count(*)  ' ||
+                '  from   HS_FDS_INST '        ||
+                '  where fds_class_name <> ''BITE''';
+      execute immediate hs_sql into i;
+
+      feature_info := feature_info || ',Num of FDS instances:' || i;
+
+      if i > 0 then
+        open cur for 'select ''(CLASS:''  || FDS_CLASS_ID || '',ID:'' || ' ||
+                     'FDS_INST_ID || '',NAME:'' || FDS_INST_NAME || ' ||
+                     ''',COMMENTS:'' || substr(FDS_INST_COMMENTS, 1, 110)' ||
+                     ' || '')'' from HS_FDS_INST where FDS_CLASS_NAME <> ''BITE''';
+        fetch cur bulk collect into res;
+        close cur;
+
+        for i in res.FIRST .. res.LAST loop
+          feature_info := feature_info || ',' || res(i);
+          /* make sure we don't reach the 1000 chars limit */
+          if LENGTH(feature_info) > 850
+          then
+            feature_info := feature_info || '...';
+            return;
+          end if;
+        end loop;
+      end if;
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: bde213ff97d7ab0e2321b49236bed212
+processedLineage: false
+entityStatus: Approved

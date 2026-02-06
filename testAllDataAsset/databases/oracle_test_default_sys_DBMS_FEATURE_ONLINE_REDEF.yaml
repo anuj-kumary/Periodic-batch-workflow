@@ -1,0 +1,138 @@
+name: DBMS_FEATURE_ONLINE_REDEF
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ONLINE_REDEF
+storedProcedureCode:
+  language: SQL
+  code: |2-
+           feature_info     OUT  CLOB)
+    PROCEDURE DBMS_FEATURE_ONLINE_REDEF
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+    AS
+     num_usage         number;
+     num_redef         number;                              -- total number of redefinition
+     num_finish      number;                       -- total number of finished redefinition
+     num_abort      number;                         -- total number of aborted redefinition
+     num_pk       number;                          -- total number of PK-based redefinition
+     num_rowid        number;                   -- total number of rowid-based redefinition
+     num_part      number;                  -- total number of partition-based redefinition
+     num_batch      number;                           -- total number of batch redefinition
+     num_auto_vpd      number;                -- total number of auto copy VPD redefinition
+     num_manual_vpd        number;          -- total number of manual copy VPD redefinition
+     last_refresh_date     date;                                  -- last redefinition date
+     feature_usage  varchar2(1000);
+
+    BEGIN
+      -- initialize
+      num_usage  := 0;
+      num_redef  := 0;
+      num_finish := 0;
+      num_abort := 0;
+      num_pk := 0;
+      num_rowid := 0;
+      num_part  := 0;
+      num_batch := 0;
+      num_auto_vpd := 0;
+      num_manual_vpd  := 0;
+      num_pk := 0;
+
+      feature_boolean := 0;
+      aux_count := 0;
+
+      /* get total number of redefinition */
+      execute immediate 'select count(*) from sys.redef$'
+      into num_usage;
+
+      if (num_usage > 0)
+      then
+       /* get number of finished redefinition */
+        execute immediate 'select redef# from sys.redef_track$'
+        into num_redef;
+
+        /* get number of finished redefinition */
+        execute immediate 'select finish_redef# from sys.redef_track$'
+        into num_finish;
+
+        /* get number of aborted redefinition */
+        execute immediate 'select abort_redef# from sys.redef_track$'
+        into num_abort;
+
+        /* get number of PK-based redefinition */
+        execute immediate 'select pk_redef# from sys.redef_track$'
+        into num_pk;
+
+        /* get number of rowid-based redefinition */
+        execute immediate 'select rowid_redef#  from sys.redef_track$'
+        into num_rowid;
+
+        /* get number of partition redefinition */
+        execute immediate 'select part_redef# from sys.redef_track$'
+        into num_part;
+
+        /* get number of batch redefinition */
+        execute immediate 'select batch_redef# from sys.redef_track$'
+        into num_batch;
+
+        /* get number of auto copy VPD  redefinition */
+        execute immediate 'select vpd_auto# from sys.redef_track$'
+        into num_auto_vpd;
+
+        /* get number of manual copy VPD redefinition */
+        execute immediate 'select vpd_manual# from sys.redef_track$'
+        into num_manual_vpd;
+
+        /* get last refresh date */
+        execute immediate 'select last_redef_time from sys.redef_track$'
+        into last_refresh_date;
+
+        feature_boolean := 1;
+
+        feature_usage := 'total number of redefinition:' || to_char(num_redef) ||
+              ',' || ' num of finished redefinition:' || to_char(num_finish) ||
+              ',' || ' num of abort redefinition:' || to_char(num_abort) ||
+              ',' || ' num of PK-based redefinition:' || to_char(num_pk) ||
+              ',' || ' num of rowid-based redefinition:' || to_char(num_rowid) ||
+              ',' || ' num of partition-based redefinition:' || to_char(num_part) ||
+              ',' || ' num of batch redefinition:' || to_char(num_batch) ||
+              ',' || ' num of automatic copy VPD redefinition:' || to_char(num_auto_vpd) ||
+              ',' || ' num of manual copy VPD redefinition:' || to_char(num_manual_vpd) ||
+              ',' || ' last redefiniton date:' ||  to_char(last_refresh_date, 'Month DD, YYYY') ||
+              '.';
+
+        feature_info := to_clob(feature_usage);
+      else
+        feature_info := to_clob('Online Redefinition usage not detected!');
+      end if;
+      exception
+        when others then
+          null;
+    end DBMS_FEATURE_ONLINE_REDEF;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 0030f6c40ee87f69b7b248391a3346c4
+processedLineage: false
+entityStatus: Approved

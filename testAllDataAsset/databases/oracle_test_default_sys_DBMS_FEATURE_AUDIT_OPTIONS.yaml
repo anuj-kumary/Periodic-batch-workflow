@@ -1,0 +1,76 @@
+name: DBMS_FEATURE_AUDIT_OPTIONS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_AUDIT_OPTIONS
+storedProcedureCode:
+  language: SQL
+  code: |2-
+           feature_info     OUT  CLOB)
+    PROCEDURE dbms_feature_audit_options
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+    AS
+       uniaud_linkon        NUMBER;
+       system_audit_options NUMBER;
+       object_audit_options NUMBER;
+       audit_trail          VARCHAR2(100);
+       feature_usage        VARCHAR2(1000);
+    BEGIN
+
+      -- Initialize
+      feature_boolean       := 0;
+      aux_count             := 0;
+      feature_info          := NULL;
+      system_audit_options  := 0;
+      object_audit_options  := 0;
+
+      -- Check if 'uniaud_on' is linked
+      select count(*) into uniaud_linkon from v$option
+        where parameter like '%Unified Auditing%' and value = 'TRUE';
+
+      -- Get the value of 'audit_trail' parameter
+      select UPPER(value) into audit_trail from v$parameter
+        where UPPER(name) = 'AUDIT_TRAIL';
+
+      -- If Unified auditing is ON, then Audit options(OLD) are always disabled
+      if ((uniaud_linkon = 0) AND (audit_trail != 'NONE')) then
+        feature_boolean := 1;
+      end if;
+
+      select count(*) into system_audit_options from audit$;
+      select count(*) into object_audit_options from dba_obj_audit_opts;
+
+      feature_usage := 'AUDIT_TRAIL=' || audit_trail || '; ' ||
+       'Number of system audit options=' || to_char(system_audit_options) || '; '||
+       'Number of object audit options=' || to_char(object_audit_options);
+      feature_info := to_clob(feature_usage);
+
+    END dbms_feature_audit_options;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 107cdc7591ededaf74c06707b5385aaf
+processedLineage: false
+entityStatus: Approved

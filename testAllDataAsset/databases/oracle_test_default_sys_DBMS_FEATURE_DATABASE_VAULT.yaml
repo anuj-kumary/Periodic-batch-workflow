@@ -1,0 +1,80 @@
+name: DBMS_FEATURE_DATABASE_VAULT
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_DATABASE_VAULT
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_database_vault
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+    AS
+       dv_linkon          NUMBER;
+       dvsys_uid          NUMBER;
+       dvowner_uid        NUMBER;
+       dvacctmgr_uid      NUMBER;
+    BEGIN
+      -- initialize
+      feature_boolean   := 0;
+      aux_count         := 0;
+      feature_info      := NULL;
+
+      -- check to see if DV is linked on
+      select count(*) into dv_linkon from v$option where
+         parameter = 'Oracle Database Vault' and
+         value = 'TRUE';
+
+      if (dv_linkon = 0) then
+        return;
+      end if;
+
+      -- get DVSYS hard coded uid
+      select count(*) into dvsys_uid from user$ where
+        name = 'DVSYS' and
+        user# = 1279990;
+
+      -- get uids for hard coded roles
+      select count(*) into dvowner_uid from user$ where
+         name = 'DV_OWNER' and
+         user# = 1279992;
+      select count(*) into dvacctmgr_uid from user$ where
+         name = 'DV_ACCTMGR' and
+         user# = 1279991;
+
+      if (dvsys_uid = 0 or
+          dvowner_uid = 0 or
+          dvacctmgr_uid = 0) then
+         return;
+      end if;
+
+      feature_boolean := 1;
+
+    END dbms_feature_database_vault;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: e2a63915caaa61020167aa3aa2a43084
+processedLineage: false
+entityStatus: Approved

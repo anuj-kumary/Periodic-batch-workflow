@@ -1,0 +1,286 @@
+name: DBMS_FEATURE_JSON
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_JSON
+storedProcedureCode:
+  language: SQL
+  code: |2-
+           feature_info     OUT  CLOB )
+    procedure DBMS_FEATURE_JSON
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+    AS
+      num_json_cols         number := 0;
+      num_clob_cols         number := 0;
+      num_blob_cols         number := 0;
+      num_varchar2_cols     number := 0;
+      num_json_view         number := 0;
+      num_jv_view           number := 0;
+      num_je_view           number := 0;
+      num_jq_view           number := 0;
+      num_jt_view           number := 0;
+      num_dg_view           number := 0;
+      num_min_rows          number := 0;
+      num_max_rows          number := 0;
+      num_avg_rows          number := 0;
+      num_jv_fidx           number := 0;
+      num_je_fidx           number := 0;
+      num_jq_fidx           number := 0;
+      num_json_cidx         number := 0;
+      num_bson_cidx         number := 0;
+      maxsize_jsoncol       number := 0;
+      avgsize_jsoncol       number := 0;
+      num_dataguides        number := 0;
+      num_collections       number := 0;
+      num_imcu_json         number := 0;
+      num_imeu_json         number := 0;
+      num_json_imc_enabled  number := 0;
+      stmt                  varchar2(1000);
+      table_not_found       EXCEPTION;
+      PRAGMA exception_init(table_not_found, -942);
+      CURSOR expr_cur IS
+        SELECT COLUMN_EXPRESSION
+        FROM DBA_IND_EXPRESSIONS;
+      expr                  expr_cur%ROWTYPE;
+      c                     clob;
+      TYPE CurTyp           IS REF CURSOR;
+      cur                   CurTyp;
+      idxname1              dbms_id;
+      uname1                dbms_id;
+      idxname2              dbms_quoted_id;
+      uname2                dbms_quoted_id;
+    BEGIN
+      -- initialize
+      feature_boolean := 0;
+      aux_count := 0;
+      feature_info := '{ "version":1, ';
+
+       -- get all json column storage type stats in one query
+      execute immediate 'select "VARCHAR2", "CLOB", "BLOB"
+                         from DBA_JSON_COLSTORAGE_STATS'
+      into num_varchar2_cols, num_blob_cols, num_clob_cols;
+
+      num_json_cols := num_varchar2_cols + num_blob_cols + num_clob_cols;
+
+      /* Write Storage stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"jsonColumns": {' ||
+                      '"total":' || to_char(num_json_cols) || ' , ' ||
+                      '"varchar2":' || to_char(num_varchar2_cols) || ' , ' ||
+                      '"clob":' || to_char(num_clob_cols) || ' , ' ||
+                      '"blob":' || to_char(num_blob_cols)  || ' }, '));
+
+                         int$dba_json_columns j where
+      /* Get the min, max and avg size of the JSON tables */
+      execute immediate 'select nvl(max(d.rowcnt),0), nvl(min(d.rowcnt), 0),
+                         nvl(avg(d.rowcnt),0) from tab$ d,
+                         d.obj# = j.object_id and
+                         j.owner not in
+                         (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_max_rows, num_min_rows, num_avg_rows;
+
+      /* Write row count stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"rowCount": {' ||
+                      '"maxCount":' || to_char(num_max_rows) || ' , ' ||
+                      '"minCount":' || to_char(num_min_rows) || ' , ' ||
+                      '"avgCount":' || to_char(num_avg_rows) || ' }, '));
+
+      /* Get size of JSON column */
+      /* Average length in bytes and max length in chars */
+      execute immediate 'select nvl(avg(avg_col_len),0), nvl(max(char_length),0)
+                         from dba_tab_columns t, dba_json_columns j
+                         where t.owner not in
+                         (select distinct username from all_users
+                          where oracle_maintained = ''Y'')
+                         and t.table_name = j.table_name
+                         and t.column_name = j.column_name'
+      into avgsize_jsoncol, maxsize_jsoncol;
+
+      /* Write row size stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"rowSize": {' ||
+                      '"avgSizeBytes":' || to_char(avgsize_jsoncol) || ' , ' ||
+                      '"maxSizeChars":' || to_char(maxsize_jsoncol) || ' }, '));
+
+      /* IMC related stats */
+      /* JSON stored in IMCUs */
+      execute immediate 'select count(1) from v$im_col_cu a, sys.col$ b,
+                                               dba_json_columns j, obj$ o
+                          where a.objd = b.obj# and
+                                b.obj# = o.obj# and
+                                a.column_number = b.segcol# and
+                                b.name = j.column_name and
+                                o.name = j.table_name'
+      into num_imcu_json;
+
+      /* OSON corresponding to JSON stored in IMEUs */
+      execute immediate 'select count(1) from v$im_imecol_cu a, sys.col$ b
+                         where a.objd = b.obj# and
+                               a.internal_column_number = b.intcol# and
+                               b.name like ''SYS_IME_OSON%'''
+      into num_imeu_json;
+
+      /* Get number of JSON cols/tables which have just been enabled for IMC */
+      execute immediate 'select count(1) from x$kdzcolcl x, dba_json_columns j
+                        where x.column_name = j.column_name and
+                              x.table_name = j.table_name and
+                              x.owner = j.owner'
+      into num_json_imc_enabled;
+
+      /* Write row size stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"IMCStats": {' ||
+                      '"IMCU#":' || to_char(num_imcu_json) || ' , ' ||
+                      '"IMEU#":' || to_char(num_imeu_json) || ' , ' ||
+                      '"JSONIMC#":' || to_char(num_json_imc_enabled) || ' }, '));
+
+      /* Get the JSON view stats */
+      execute immediate 'select count(1) from dba_views where
+                         upper(text_vc) like ''%JSON_VALUE%'' and owner
+                         not in (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_jv_view;
+
+      execute immediate 'select count(1) from dba_views where
+                         upper(text_vc) like ''%JSON_EXISTS%'' and owner
+                         not in (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_je_view;
+
+      execute immediate 'select count(1) from dba_views where
+                         upper(text_vc) like ''%JSON_QUERY%'' and owner
+                         not in (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_jq_view;
+
+      execute immediate 'select count(1) from dba_views where
+                         upper(text_vc) like ''%JSON_TABLE%'' and owner
+                         not in (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_jt_view;
+
+      execute immediate 'select count(1) from dba_views where
+                         upper(text_vc) like ''%JSON_DATAGUIDE%'' and owner
+                         not in (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_dg_view;
+
+      execute immediate 'select count(1) from dba_views where
+                         upper(text_vc) like ''%JSON_%'' and owner
+                         not in (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_json_view;
+
+      /* Write JSON view stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"views": {' ||
+                      '"total":' || to_char(num_json_view) || ' , ' ||
+                      '"jsonValue":'  || to_char(num_jv_view) || ' , ' ||
+                      '"jsonExists":' || to_char(num_je_view) || ' , ' ||
+                      '"jsonQuery":'  || to_char(num_jq_view) || ' , ' ||
+                      '"jsonTable":'  || to_char(num_jt_view) || ' , ' ||
+                      '"jsonDataGuide":'  || to_char(num_dg_view) || ' }, '));
+
+      /* Indexes */
+
+      /* Get JSON Functional Index stats */
+      OPEN expr_cur;
+      LOOP
+          FETCH expr_cur INTO expr;
+          EXIT WHEN expr_cur%NOTFOUND;
+          c := to_clob(expr.COLUMN_EXPRESSION);
+          if (upper(c) like '%JSON_VALUE%') then
+            num_jv_fidx := num_jv_fidx + 1;
+          elsif (upper(c) like '%JSON_EXISTS%') then
+            num_je_fidx := num_je_fidx + 1;
+          elsif (upper(c) like '%JSON_QUERY%') then
+            num_jq_fidx := num_jq_fidx + 1;
+          end if;
+      END LOOP;
+      CLOSE expr_cur;
+
+      /* Write JSON view stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"funcIdx": {' ||
+                      '"jsonValue":'  || to_char(num_jv_fidx) || ' , ' ||
+                      '"jsonExists":' || to_char(num_je_fidx) || ' , ' ||
+                      '"jsonQuery":'  || to_char(num_jq_fidx) || ' }, '));
+
+      /* bug 28868046: remove access to $i/sn/dg */
+      /* Get JSON text indexes stats */
+      begin
+      execute immediate 'select count(1) from ctxsys.dr$index i, sys.user$ u
+                         where i.idx_id in (select ixv_idx_id from
+                         ctxsys.dr$index_value where IXV_OAT_ID = 50817) and
+                         i.idx_owner# = u.user# and u.name not in
+                         (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_json_cidx;
+      exception
+        when OTHERS then
+           num_json_cidx := 0;
+      end;
+
+      begin
+      execute immediate 'select count(1) from ctxsys.dr$index i, sys.user$ u
+                         where i.idx_id in (select ixv_idx_id from
+                         ctxsys.dr$index_value where IXV_OAT_ID = 50819) and
+                         i.idx_owner# = u.user# and u.name not in
+                         (select distinct username from all_users
+                          where oracle_maintained = ''Y'')'
+      into num_bson_cidx;
+      exception
+        when OTHERS then
+           num_bson_cidx := 0;
+      end;
+
+      /* Write JSON Search index stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"searchIdx": {' ||
+                      '"jsonSearchIdx":' || to_char(num_json_cidx) || ' , ' ||
+                      '"bsonSearchIdx":' || to_char(num_bson_cidx)  || ' }, '));
+
+      /* Get the JSON dataguide stats*/
+      execute immediate 'select count(1) from ALL_JSON_DATAGUIDES'
+      into num_dataguides;
+
+      /* Write JSON dataguide stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"dataguideStats": {' ||
+                      '"numDataguide":' || to_char(num_dataguides) || ' }, '));
+
+      /* Get the SODA JSON stats*/
+      execute immediate 'select count(1) from XDB.JSON$COLLECTION_METADATA'
+      into num_collections;
+
+      /* Write SODA JSON stats into clob */
+      dbms_lob.append(feature_info, to_clob ('"sodaStats": {' ||
+                      '"numCollections":' || to_char(num_collections) || ' } } '));
+
+      /* set feature_boolean if reqd */
+      IF num_json_cols > 0 THEN
+        feature_boolean := 1;
+      END IF;
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 258c1b00fce27f73da04d7f4ba0e33e0
+processedLineage: false
+entityStatus: Approved

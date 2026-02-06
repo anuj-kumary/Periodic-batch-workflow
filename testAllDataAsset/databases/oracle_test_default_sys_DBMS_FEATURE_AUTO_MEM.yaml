@@ -1,0 +1,127 @@
+name: DBMS_FEATURE_AUTO_MEM
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_AUTO_MEM
+storedProcedureCode:
+  language: SQL
+  code: |2-
+         feature_info     OUT  CLOB)
+    procedure DBMS_FEATURE_AUTO_MEM
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+    AS
+      feature_usage          varchar2(1000);
+      memory_target             number;
+      sga_max_size              number;
+      memory_max_target         number;
+    begin
+
+      feature_info := to_clob('Automatic Memory Tuning usage not detected');
+      -- initialize
+      feature_boolean := 0;
+      aux_count := 0;
+      feature_usage := '';
+      memory_target := 0;
+      sga_max_size := 0;
+      memory_max_target := 0;
+
+      execute immediate 'select to_number(value) from v$system_parameter where ' ||
+                        'name like ''memory_target'''
+      into memory_target;
+
+      if memory_target > 0
+      then
+
+        feature_boolean := 1;
+
+        feature_usage := feature_usage||':memory_target:'||memory_target;
+
+        -- get sga_max_size value
+        execute immediate 'select to_number(value) from v$system_parameter where ' ||
+                          'name like ''sga_max_size'''
+        into sga_max_size;
+
+        feature_usage := feature_usage||':sga_max_size:'||sga_max_size;
+
+        -- get memory_max_target value
+        execute immediate 'select to_number(value) from v$system_parameter where ' ||
+                          'name like ''memory_max_target'''
+        into memory_max_target;
+
+        feature_usage := feature_usage||':memory_max_target:'||memory_max_target;
+
+        -- get v$memory_dynamic_components info
+        for item in (select component, current_size, min_size, max_size,
+                     user_specified_size from
+                     v$memory_dynamic_components where current_size != 0)
+        loop
+          feature_usage := feature_usage||':comp:'||item.component||
+                           ':cur:'||item.current_size||':min:'||
+                           item.min_size||':max:'||item.max_size||
+                           ':usr:'||item.user_specified_size;
+        end loop;
+
+        -- get v$pgastat info
+        for item in (select name, value from v$pgastat where
+                     name in ('tot PGA alc', 'over alc cnt',
+                              'tot PGA for auto wkar',
+                              'tot PGA for man wkar',
+                              'glob mem bnd', 'aggr PGA auto tgt',
+                              'aggr PGA tgt prm'))
+        loop
+          feature_usage := feature_usage||':'||item.name||':'||item.value;
+        end loop;
+
+        -- get v$memory_target_advice info
+        feature_usage := feature_usage||':mem tgt adv:';
+        for item in (select memory_size, memory_size_factor, estd_db_time,
+                     estd_db_time_factor from v$memory_target_advice
+                     order by memory_size)
+        loop
+          feature_usage := feature_usage||':msz:'||item.memory_size||
+                           ':sf:'||item.memory_size_factor||
+                           ':time:'||item.estd_db_time||
+                           ':tf:'||item.estd_db_time_factor;
+        end loop;
+
+        -- get v$system_event info for SGA events
+        for item in (select substr(event, 0, 15) evt, total_waits, time_waited
+                     from v$system_event where event like '%SGA%')
+        loop
+          feature_usage := feature_usage||':event:'||item.evt||':waits:'||
+                           item.total_waits||':time:'||item.time_waited;
+        end loop;
+
+        feature_info := to_clob(feature_usage);
+
+      end if;
+
+    end;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: c83e2e08a7f59cdeb1e717e73a1ed222
+processedLineage: false
+entityStatus: Approved

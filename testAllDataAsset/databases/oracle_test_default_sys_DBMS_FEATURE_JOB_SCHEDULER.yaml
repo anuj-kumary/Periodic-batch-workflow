@@ -1,0 +1,576 @@
+name: DBMS_FEATURE_JOB_SCHEDULER
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_JOB_SCHEDULER
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_job_scheduler
+          (is_used OUT number, nr_of_jobs OUT number, summary OUT clob)
+    AS
+    sum1 varchar2(4000);
+    n1 number;
+    n2 number;
+    n3 number;
+    n4 number;
+    n5 number;
+    n6 number;
+    n7 number;
+    n8 number;
+    n9 number;
+
+    BEGIN
+      select count(*) into nr_of_jobs from dba_scheduler_jobs where
+          owner not in ('SYS', 'ORACLE_OCM', 'EXFSYS' )
+           and job_name not like 'AQ$%'
+           and job_name not like 'MV_RF$J_%';
+
+
+      is_used := nr_of_jobs;
+      -- if job used
+      if is_used = 0  then return; end if;
+    select count(*) into n1 from dba_scheduler_jobs;
+        sum1  := sum1
+                  || 'JNRA:' || n1
+                  || ',JNRU:' || nr_of_jobs;
+
+    select count(*) into n1 from dba_jobs;
+        sum1  := sum1
+                  || ',DJOBS:' || n1;
+    -- Direct per job type counts, i.e of the total number of jobs how many are
+    --  program vs executable vs plsql block vs stored procedure vs chain
+
+
+      for it in  (
+    select jt t, count(*) n
+    from (select   nvl(job_type, 'PROGRAM') jt
+    from   dba_scheduler_jobs )
+    group by jt order by 1)
+      loop
+        sum1  := sum1 || ',JTD' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+
+
+    -- Indirect per job type counts.
+    -- In this case the you have to track down the program type of all
+    -- the jobs whose jobs are of type program.
+    -- So now of the the total number of jobs, how many are
+    --  executable vs plsql block vs stored procedure vs chain
+
+      for it in  (
+    select jt t, count(*) n from
+       (select program_type jt
+          from dba_scheduler_jobs j,
+             dba_scheduler_programs p
+        where
+                job_type is null
+                and p.owner = j.program_owner
+                and p.program_name = j.program_name
+        union all
+         select 'NAP'
+          from dba_scheduler_jobs j
+           where
+                j.job_type is null
+                and not exists (select 1 from
+                 dba_scheduler_programs p
+                  where
+                   p.owner = j.program_owner
+                  and p.program_name = j.program_name)
+        union all
+        select   job_type
+        from   dba_scheduler_jobs where job_type is not null)
+         group by jt order by 1)
+      loop
+        sum1  := sum1 || ',JTI' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+    -- Direct per schedule type counts, i.e. of the total
+    -- number of jobs how many are
+    -- repeat_interval is null, schedule based, event based, file watcher based,
+    -- plsql repeat interval, calendar repeat interval, window based
+
+
+
+      for it in  (
+    select schedule_type t,
+             count(*) n
+    from   dba_scheduler_jobs
+    group by schedule_type order by 1)
+      loop
+        sum1  := sum1 || ',JDS' || substr(replace(it.t, 'WINDOW_','W'),1,3) || ':' || it.n;
+      end loop;
+
+    -- Indirect per schedule type counts. In this case the schedule based jobs are
+    -- tracked down to their eventual schedule type. So now of the total number of jobs, how many are
+    --  repeat_interval is null, event based, file watcher, plsql repeat interval,
+    -- calendar repeat interval, window (group) based
+
+      for it in  (
+    select schedule_type t, count(*) n from
+       (select p.schedule_type
+          from dba_scheduler_jobs j,
+             dba_scheduler_schedules p
+        where
+                j.schedule_type = 'NAMED'
+                and p.owner = j.schedule_owner
+                and p.schedule_name = j.schedule_name
+        union all
+        select   schedule_type
+        from   dba_scheduler_jobs where schedule_type <> 'NAMED')
+         group by schedule_type order by 1)
+      loop
+        sum1  := sum1 || ',JIS' || substr(replace(it.t, 'WINDOW_','W'),1,3) || ':' || it.n;
+      end loop;
+
+
+    -- Number of jobs that have destination set to a
+    -- single destination vs destination set to a destination group
+
+     for it in (
+    select dest t, count(*) n
+       from (select decode(number_of_destinations,1, 'SD', 'MD') dest
+           from dba_scheduler_jobs where destination is not null)
+       group by dest order by 1)
+      loop
+        sum1  := sum1 || ',JD' || it.t || ':' || it.n;
+      end loop;
+
+    -- Number of external jobs (job type or program type executable) split across local without a credential,
+    -- local with credential, remote single destination, remote destination group
+     for it in (
+    select ext_type t, count(*) n from
+    (select job_name, decode(destination, null,
+         decode(credential_name, null,'JXL','JXLC'),
+         decode(dest_type,null,'JXRID','SINGLE','JXRSD','JXRGD')) ext_type from
+    (select job_name, job_type, credential_name, destination_owner, destination
+    from all_scheduler_jobs where program_name is null
+    union all
+    select job_name, program_type, credential_name, destination_owner, destination
+    from all_scheduler_jobs aj, all_scheduler_programs ap
+    where aj.program_owner = ap.owner and aj.program_name = ap.program_name) aij,
+    (select owner, group_name dest_name, 'GROUP' dest_type from all_scheduler_groups
+    where group_type = 'EXTERNAL_DEST'
+    union all
+    select 'SYS', destination_name, 'SINGLE' from all_scheduler_external_dests) ad
+    where job_type in ('EXECUTABLE','EXTERNAL_SCRIPT')  and aij.destination_owner = ad.owner(+) and
+    aij.destination = ad.dest_name(+)) group by ext_type order by 1)
+      loop
+        sum1  := sum1 || ',' || it.t || ':' || it.n;
+      end loop;
+
+
+    -- Number of remote database jobs with single destination versus number of jobs with destination group (i.e. destination is set and job type or program type is plsql block or stored procedure).
+
+     for it in (
+    select dest_type t, count(*) n from
+        (select  job_type, destination_owner, destination
+            from all_scheduler_jobs where program_name is null
+        union all
+        select  program_type, destination_owner, destination
+            from all_scheduler_jobs aj, all_scheduler_programs ap
+                where aj.program_owner = ap.owner and aj.program_name = ap.program_name) aij,
+         select owner, destination_name, 'JDBS' from all_scheduler_db_dests) ad
+        (select owner, group_name dest_name, 'JDBG' dest_type from all_scheduler_groups
+                where group_type = 'DB_DEST'
+         union all
+     where job_type in  ('STORED_PROCEDURE','PLSQL_BLOCK','SQL_SCRIPT', 'BACKUP_SCRIPT') and
+           aij.destination is not null and aij.destination_owner = ad.owner(+) and
+           aij.destination = ad.dest_name(+) group by dest_type order by 1)
+      loop
+        sum1  := sum1 || ',' || it.t || ':' || it.n;
+      end loop;
+
+    -- Number of jobs with arguments. For those jobs with arguments, avg,
+    -- median and max number of job arguments.
+
+    select count(*),
+           avg(number_of_arguments),
+           median(number_of_arguments),
+           max(number_of_arguments) into  n1, n2, n3, n4
+    from dba_scheduler_jobs where number_of_arguments > 0;
+
+        sum1  := sum1
+                  || ',JAC:' || n1
+                  || ',JAA:' || round(n2)
+                  || ',JAM:' || n3
+                  || ',JAX:' || n4;
+
+    -- Split total number of jobs across job_style, i.e. regular vs lightweight
+
+     for it in (
+    select job_style t, count(*) n from dba_scheduler_jobs
+         group by job_style order by 1)
+      loop
+        sum1  := sum1 || ',JST' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+
+
+    -- Number of jobs that have restartable set to true
+    -- How many have max_run_duration set
+    -- How many have schedule_limit set
+    -- How many have instance_id set
+    -- How many have allow_runs_in_restricted_mode set
+    -- How many have raise_events set
+    -- How many have parallel_instances set
+    select sum(decode(restartable,null, 0,1)),
+           sum(decode(max_run_duration,null, 0,1)) ,
+           sum(decode(schedule_limit,null, 0,1)) ,
+           sum(decode(instance_id,null, 0,1)) ,
+           sum(decode(allow_runs_in_restricted_mode,'FALSE', 0,1)) ,
+           sum(decode(bitand(flags, 2147483648),2147483648,1,0)),
+           sum(decode(bitand(flags, 68719476736),68719476736,1,0)),
+           sum(decode(enabled,'FALSE',1,0)),
+           sum(decode(raise_events,null, 0,1))
+                 into n1, n2, n3, n4, n5,n6, n7, n8, n9
+    from dba_scheduler_jobs;
+        sum1  := sum1
+                  || ',JRS:' || n1
+                  || ',JMRD:' || n2
+                  || ',JSL:' || n3
+                  || ',JII:' || n4
+                  || ',JAR:' || n5
+                  || ',JFLW:' || n7
+                  || ',JRE:' || n9
+                  || ',JDIS:' || n8
+                  || ',JPI:' || n6;
+
+    -- Total number of programs
+    -- Per type program numbers, i.e. the number of executable, plsql_block,
+    -- stored procedure, chain programs
+
+     for it in (
+    select program_type t, count(*) n from dba_scheduler_programs
+        group by program_type order by 1)
+      loop
+        sum1  := sum1 || ',PRT' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+
+
+    -- Number of programs with arguments
+    -- For programs with arguments, avg, mean and max number of arguments
+    select count(*) ,  round(avg(number_of_arguments)) ,
+           median(number_of_arguments) ,
+          max(number_of_arguments)
+             into n1, n2, n3, n4
+    from dba_scheduler_programs where number_of_arguments > 0;
+        sum1  := sum1
+                  || ',PAC:' || n1
+                  || ',PAA:' || n2
+                  || ',PAM:' || n3
+                  || ',PAX:' || n4;
+
+    -- Total number of schedules
+    -- Split across schedule type. How many in each category:
+    -- run once, plsql repeat interval, calendar repeat interval, event based,
+    -- file watcher, window based
+
+
+     for it in (
+    select schedule_type t, count(*) n from dba_scheduler_schedules group by
+         schedule_type order by 1)
+      loop
+        sum1  := sum1 || ',SST' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+
+
+    -- Total number of arguments
+    -- How many of them are named arguments
+
+     for it in (
+    select an t, count(*) n
+        from (select  decode(argument_name, null, 'PA_', 'PAN') an from
+        dba_scheduler_program_args) group by an order by 1)
+      loop
+        sum1  := sum1 || ',' || it.t || ':' || it.n;
+      end loop;
+
+    -- Split across count of metadata arguments, varchar based args, anydata based arguments
+     for it in (
+    select metadata_attribute t, count(*) n from dba_scheduler_program_args where
+             metadata_attribute is not null group by metadata_attribute order by 1)
+      loop
+        sum1  := sum1 || ',PM' ||
+                      substr(replace(replace(it.t,'JOB_','J'),'WINDOW_','W'),1,3)
+                        || ':' || it.n;
+      end loop;
+
+    -- Job Classes
+    -- Total number of job classes
+    -- How many have service set
+    -- How many have resource consumer group set
+    -- split across logging levels, i.e. how many no logging, failed runs, runs only, full
+
+    select count(*) , sum(decode(service, null, 0, 1)) ,
+    sum(decode(resource_consumer_group, null, 0, 1)) into n1,n2,n3
+    from dba_scheduler_job_classes;
+        sum1  := sum1
+                  || ',JCNT:' || n1
+                  || ',JCSV:' || n2
+                  || ',JCCG:' || n3 ;
+
+     for it in (
+    select logging_level t, count(*) n from dba_scheduler_job_classes
+        group by logging_level order by 1)
+      loop
+        sum1  := sum1 || ',LL' || substr(it.t,1,3)  || ':' || it.n;
+      end loop;
+
+    -- Windows
+    -- Total number of windows
+     for it in (
+    -- Number of high priority windows (low = total - high)
+    -- Number of windows without a resource plan
+    -- Number of named schedule based windows (inlined schedule = total - named schedule)
+    select window_priority t, count(*) n from dba_scheduler_windows
+        group by window_priority order by 1)
+      loop
+        sum1  := sum1 || ',WIP' || substr(it.t,1,2) || ':' || it.n;
+      end loop;
+
+    select count(*) into n1 from dba_scheduler_windows  where resource_plan is
+     null;
+        sum1  := sum1
+                  || ',WINR:' || n1;
+
+     for it in (
+    select st t, count(*) n from
+       (select schedule_type  st
+         from
+         dba_scheduler_windows)  group by st order by 1)
+      loop
+        sum1  := sum1 || ',SWT' || substr(it.t,1,2) || ':' || it.n;
+      end loop;
+
+
+    -- Chains
+    -- Total number of chains
+    -- How many have evaluation interval set
+    -- How many were created with a rule set passed in
+    -- Total number of steps
+    -- How many steps have destination set
+    -- Avg, mean and max number of steps per chain
+    -- Total number of rules
+    -- Avg, mean and max number of rules per chain
+    -- ? How many of them use simple syntax
+    -- ? Avg, mean and max number of steps per rule condition
+    -- ? Avg, mean and max number of steps per rule action
+
+    select count(*), sum(decode(evaluation_interval, null, 0, 1)) EV,
+           sum(decode(user_rule_set, 'TRUE', 1, 0)) UR,
+           sum(nvl(number_of_rules,0)) NR, sum(nvl(number_of_steps,0)) NS,
+           round(avg(number_of_steps)) VS , median(number_of_steps) MS,
+           max(number_of_steps) XS into n1, n2,n3,n4,n5,n6,n7,n8
+        from dba_scheduler_chains;
+        sum1  := sum1
+                  || ',CCNT:' || n1
+                  || ',CEVI:' || n2
+                  || ',CURS:' || n3
+                  || ',CNRR:' || n4
+                  || ',CNRS:' || n5
+                  || ',CAVS:' || n6
+                  || ',CMDS:' || n7
+                  || ',CMXS:' || n8;
+
+
+    select count(*) into n1
+        from dba_scheduler_chain_steps where destination is not null;
+        sum1  := sum1
+                  || ',CSRD:' || n1 ;
+
+    -- Direct per step type counts. Of total how many steps point to:
+    --    program vs (sub)chain vs event
+     for it in (
+    select step_type t, count(*)  n from dba_scheduler_chain_steps
+       group by step_type order by 1)
+      loop
+        sum1  := sum1 || ',CSP' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+
+    -- Indirect per step type counts. By following the program type how many are:
+    --    executable vs plsql block vs stored procedure vs (sub)chain vs event
+
+     for it in (
+    select step_type t, count(*) n from
+          (select step_type from dba_scheduler_chain_steps
+                where step_type <> 'PROGRAM'
+          union all
+           select program_type from dba_scheduler_programs p,
+                                    dba_scheduler_chain_steps s
+              where
+               s.step_type = 'PROGRAM' and
+              s.program_owner =p.owner and
+              s.program_name = p.program_name)
+       group by step_type order by 1)
+      loop
+        sum1  := sum1 || ',CHST' || substr(it.t,1,3) || ':' || it.n;
+      end loop;
+
+    -- Total number of credentials
+    -- How many have database role set
+    -- How many have windows domain set
+
+    select count(*), sum(decode(database_role, null, 0, 1)),
+           sum(decode(windows_domain, null, 0, 1))
+         into n1,n2,n3
+        from dba_scheduler_credentials;
+        sum1  := sum1
+                  || ',CRNR:' || n1
+                  || ',CRDB:' || n2
+                  || ',CSWD:' || n3 ;
+
+    -- Total number of destinations
+    -- How many database destinations (external dests = total - database dests)
+    -- Of the database destinations, how many specified connect info (non null tns_name)
+
+     for it in (
+    select dt t, count(*) n from
+       (select decode(destination_type, 'EXTERNAL', 'DSXT', 'DSDB') dt
+         from dba_scheduler_dests )
+        group by dt order by 1)
+      loop
+        sum1  := sum1 || ',' || it.t || ':' || it.n;
+      end loop;
+
+    select count(*) into n1 from dba_scheduler_db_dests
+             where connect_info is null;
+        sum1  := sum1
+                  || ',DSDN:' || n1  ;
+    -- File Watcher
+    -- Total number of file watchers
+    -- How many remote file watchers (destination is non null)
+    -- How many have minimum file size > 0
+    -- How many have steady_state_duration set to a non-null value
+    select count(*),
+           sum(decode(steady_state_duration, null, 0,1)),
+           sum(decode(destination, null, 0,1)),
+           sum(decode(nvl(min_file_size,0), 0, 0, 1))
+          into n1,n2,n3,n4
+     from dba_scheduler_file_watchers;
+        sum1  := sum1
+                  || ',FWNR:' || n1
+                  || ',FWSS:' || n2
+                  || ',FWDS:' || n3
+                  || ',FWMF' || n4  ;
+
+
+    -- Groups
+    -- Total number of groups
+    -- Per group type count, i.e. how many are db_dest vs external_dest vs window
+    -- Avg, mean and max number of members per group
+
+     for it in (
+    select group_type t, count(*) n , round(avg(number_of_members)) a ,
+                  max(number_of_members) b,
+                  median(number_of_members) c
+            from dba_scheduler_groups group by group_type order by 1)
+      loop
+        sum1  := sum1 || ',G' || substr(it.t,1,3) || 'N:' || it.n
+                            || ',G' || substr(it.t,1,3) || 'A:' || it.a
+                            || ',G' || substr(it.t,1,3) || 'X:' || it.b
+                            || ',G' ||substr( it.t,1,3) || 'M:' || it.c;
+      end loop;
+
+
+    -- Calendar Syntax
+    -- Total number of schedules
+    -- Total number of non-null repeat_intervals schedules
+    -- Of the calendar syntax ones how many:
+    -- use include, exclude, or intersect
+    -- have a user defined frequency
+    -- use offset
+
+    select count(*) into n1 from dba_scheduler_schedules;
+        sum1  := sum1
+                  || ',SCHNRA:' || n1;
+
+    select count(*) into n1 from dba_scheduler_schedules
+           where repeat_interval is not null;
+        sum1  := sum1
+                  || ',SCHNNR:' || n1;
+
+     for it in (
+    select typ t, count(*) n from
+          (select decode(instr(i,'FREQ=YEARLY'),1, 'Y',
+            decode(instr(i, 'FREQ=MONTHLY'),1,'M',
+             decode(instr(i,'FREQ=WEEKLY'),1, 'W',
+              decode(instr(i,'FREQ=DAILY'),1, 'D',
+               decode(instr(i,'FREQ=HOURLY'),1, 'H',
+               decode(instr(i,'FREQ=MINUTELY'),1, 'MI',
+               decode(instr(i,'FREQ=SECONDLY'),1, 'S',
+               decode(instr(i,'FREQ='),1, 'U','X')))))))) typ
+          from (select replace(upper(iv), ' ', '') i from (
+             select repeat_interval iv
+            from dba_scheduler_jobs
+              where schedule_type = 'CALENDAR'
+           union all select repeat_interval from dba_scheduler_schedules where
+             schedule_type = 'CALENDAR')))
+     group by typ order by 1)
+      loop
+        sum1  := sum1 || ',CAF' || it.t || ':' || it.n;
+      end loop;
+
+
+    select sum(decode(instr(i, 'OFFSET'), 0, 0, 1)) "Offset",
+           sum(decode(instr(i, 'SPAN'), 0, 0, 1)) "Span",
+           sum(decode(instr(i, 'BYSETPOS'), 0, 0, 1)) "Bysetp",
+           sum(decode(instr(i, 'INCLUDE'), 0, 0, 1)) "Inc",
+           sum(decode(instr(i, 'EXCLUDE'), 0, 0, 1)) "EXC",
+          sum(decode(instr(i, 'INTERSECT'), 0, 0, 1)) "ISEC"
+          into n1,n2,n3,n4,n5,n6
+    from (select replace(upper(iv), ' ', '') i from (
+       select repeat_interval iv
+      from dba_scheduler_jobs
+        where schedule_type = 'CALENDAR'
+     union all select repeat_interval from dba_scheduler_schedules where
+       schedule_type = 'CALENDAR'));
+        sum1  := sum1
+                  || ',CAOF:' || n1
+                  || ',CASC:' || n2
+                  || ',CABS:' || n3
+                  || ',CAIC:' || n4
+                  || ',CAEX:' || n5
+                  || ',CAIS:' || n6;
+
+
+    select count (distinct owner||job_name) into n1
+         from dba_scheduler_notifications;
+        sum1  := sum1
+                  || ',SNNR:' || n1;
+
+     for it in (
+    select event t, count(*) n
+         from dba_scheduler_notifications
+         group by event order by 1)
+      loop
+        sum1  := sum1 || ',JN'
+                   || substr(replace(it.t, 'JOB_','J'),1,5) || ':' || it.n;
+      end loop;
+      summary := to_clob(sum1);
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: a3b7427ad104a8eb995e37135ee41515
+processedLineage: false
+entityStatus: Approved

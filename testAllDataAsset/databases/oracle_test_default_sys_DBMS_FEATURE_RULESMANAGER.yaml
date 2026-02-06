@@ -1,0 +1,105 @@
+name: DBMS_FEATURE_RULESMANAGER
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_RULESMANAGER
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE DBMS_FEATURE_RULESMANAGER
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+    AS
+      num_rule_clss        number := 0;
+      num_comp_rulcls       number := 0;
+      max_pmevt_prcmp       number := 0;
+      avg_pmevt_prcmp       number := 0;
+      num_cllt_evts         number := 0;
+      num_pure_expcols      number := 0;
+      num_domain_idxs       number;
+
+      feature_usage         varchar2(1000);
+      TYPE cursor_t         IS REF CURSOR;
+      cursor_udftype        cursor_t;
+      total_count           number;
+      flag                  number;
+
+    begin
+      --initialize
+      feature_boolean := 0;
+      aux_count := 0;
+
+      /* get the number of rule classes */
+      begin
+        execute immediate 'select count(*) from exfsys.adm_rlmgr_rule_classes'
+                              into num_rule_clss;
+      exception
+        when others then
+           num_rule_clss := 0;
+      end;
+
+      if (num_rule_clss > 0) then
+        /* get the numbers on rule classes with composite events */
+        execute immediate 'select count(*), avg(prmevtprc), max(prmevtprc)
+         from (select count(*) as prmevtprc from
+               exfsys.adm_rlmgr_comprcls_properties
+               group by rule_class_owner, rule_class_name) ' into
+             num_comp_rulcls, avg_pmevt_prcmp, max_pmevt_prcmp;
+
+        /* rule class with collection events */
+        execute immediate 'select count(*) from
+                exfsys.adm_rlmgr_comprcls_properties
+                  where collection_enb = ''Y''' into num_cllt_evts;
+      end if;
+
+      /* expression columns outside the context of rule classes */
+      execute immediate 'select count(*) from exfsys.adm_expfil_expression_sets
+         where not(expr_column like ''RLM$%'')' into num_pure_expcols;
+
+      if ((num_rule_clss > 0) OR (num_comp_rulcls > 0) OR (avg_pmevt_prcmp > 0)
+          OR (max_pmevt_prcmp > 0) OR (num_pure_expcols > 0)) then
+        feature_boolean := 1;
+        feature_usage :=
+           'num of rule classes: '||to_char(num_rule_clss) ||', '||
+           'num of rule classes with composite events: '||
+                              to_char(num_comp_rulcls) ||', '||
+           'avg num of primitive events per composite: '||
+                              to_char(avg_pmevt_prcmp) ||', '||
+           'max num of primitive events for a rule class: '||
+                              to_char(max_pmevt_prcmp) ||', '||
+           'num expression columns(user): '||
+                              to_char(num_pure_expcols);
+         feature_info := to_clob(feature_usage);
+      else
+         feature_info := to_clob(
+                  'Rules Manager/Expression Filter usage not detected');
+      end if;
+
+    end;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 5f17fc591a6f778079c42c0376ac5407
+processedLineage: false
+entityStatus: Approved

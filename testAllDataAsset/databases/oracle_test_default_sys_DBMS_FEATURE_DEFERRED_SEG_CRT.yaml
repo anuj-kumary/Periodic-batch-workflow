@@ -1,0 +1,201 @@
+name: DBMS_FEATURE_DEFERRED_SEG_CRT
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_DEFERRED_SEG_CRT
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE DBMS_FEATURE_DEFERRED_SEG_CRT
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+    AS
+       feature_usage        VARCHAR2(1000);
+       table_count          NUMBER;
+       index_count          NUMBER;
+       lob_count            NUMBER;
+       tabpart_count        NUMBER;
+       indpart_count        NUMBER;
+       lobpart_count        NUMBER;
+       tabsubpart_count     NUMBER;
+       indsubpart_count     NUMBER;
+       lobsubpart_count     NUMBER;
+       total_segments       NUMBER;
+       total_def_segments   NUMBER;
+    BEGIN
+      -- initialize
+      feature_boolean    := 0;
+      aux_count          := 0;
+      feature_info       := NULL;
+      feature_usage      := NULL;
+      table_count        := 0;
+      index_count        := 0;
+      lob_count          := 0;
+      tabpart_count      := 0;
+      indpart_count      := 0;
+      lobpart_count      := 0;
+      tabsubpart_count   := 0;
+      indsubpart_count   := 0;
+      lobsubpart_count   := 0;
+      total_segments     := 0;
+      total_def_segments := 0;
+
+      -- check to see if DSC parameter is turned on
+      select count(*) into feature_boolean from v$system_parameter where
+         name = 'deferred_segment_creation' and value = 'TRUE';
+
+      -- Regardless of the value of the parameter, compute the number of
+      -- objects that do not yet have segments created
+
+      -- non-partitioned tables
+    --  select count(*) into table_count from dba_tables where
+    --      segment_created = 'NO';
+
+      select count(*) into table_count from
+      (  select decode(bitand(t.property, 17179869184), 17179869184, 'NO',
+                       decode(bitand(t.property, 32), 32, 'N/A', 'YES')) x
+         from tab$ t
+      )
+      where x = 'NO';
+
+      -- non-partitioned indexes
+    --  select count(*) into index_count from dba_indexes where
+    --      segment_created = 'NO';
+
+      select count(*) into index_count from
+      (  select  decode(bitand(i.flags, 67108864), 67108864, 'NO','?')  x
+         from ind$ i
+       )
+       where x = 'NO';
+
+      -- non-partitioned lobs
+    --  select count(*) into lob_count from dba_lobs where
+    --      segment_created = 'NO';
+
+      select count(*) into lob_count from
+      ( select decode(bitand(l.property, 4096), 4096, 'NO','?') x
+        from lob$ l
+       )
+       where x = 'NO';
+
+      -- table partitions
+    --  select count(*) into tabpart_count from dba_tab_partitions where
+    --      segment_created = 'NO';
+
+      select count(*) into tabpart_count from
+      ( select  decode(bitand(tp.flags, 65536), 65536, 'NO', 'YES') x
+        from tabpart$ tp
+      ) where x = 'NO';
+
+      -- index partitions
+    --  select count(*) into indpart_count from dba_ind_partitions where
+    --      segment_created = 'NO';
+
+      select count(*) into indpart_count from
+      ( select  decode(bitand(ip.flags, 65536), 65536, 'NO', 'YES') x
+        from indpart$ ip
+      ) where x = 'NO';
+
+      -- lob partitions
+    --  select count(*) into lobpart_count from dba_lob_partitions where
+    --      segment_created = 'NO';
+
+        select count(*) into lobpart_count from
+      ( select decode(bitand(lf.fragflags, 33554432), 33554432, 'NO', 'YES') x
+        from lobfrag$ lf where lf.fragtype$='P'
+      ) where x = 'NO';
+
+      -- table sub-partitions
+    --  select count(*) into tabsubpart_count from dba_tab_subpartitions where
+    --      segment_created = 'NO';
+
+      select count(*) into tabsubpart_count from
+      ( select  decode(bitand(tsp.flags, 65536), 65536, 'NO', 'YES') x
+        from tabsubpart$ tsp
+      ) where x = 'NO';
+
+      -- index sub-partitions
+    --  select count(*) into indsubpart_count from dba_ind_subpartitions where
+    --      segment_created = 'NO';
+
+      select count(*) into indsubpart_count from
+      ( select  decode(bitand(isp.flags, 65536), 65536, 'NO', 'YES') x
+        from indsubpart$ isp
+      ) where x = 'NO';
+
+      -- lob sub-partitions
+    --  select count(*) into lobsubpart_count from dba_lob_subpartitions where
+    --      segment_created = 'NO';
+
+      select count(*) into lobsubpart_count from
+      ( select decode(bitand(lf.fragflags, 33554432), 33554432, 'NO', 'YES') x
+        from lobfrag$ lf where lf.fragtype$='S'
+      ) where x = 'NO';
+
+      -- Total segments of objects which can have deferred segment creation
+    --  select count(*) into total_segments from dba_segments where
+    --      segment_type IN ('TABLE',
+    --                       'INDEX',
+    --                       'LOBSEGMENT',
+    --                       'LOBINDEX',
+    --                       'TABLE PARTITION',
+    --                       'INDEX PARTITION',
+    --                       'LOB PARTITION' );
+
+     select count(*) into total_segments from seg$ where type# in (5,6,8);
+
+      -- Total # of segments whose creation is deferred
+      total_def_segments := table_count + index_count + lob_count +
+                            tabpart_count + indpart_count + lobpart_count +
+                            tabsubpart_count + indsubpart_count + lobsubpart_count;
+
+      feature_usage := feature_usage || 'Deferred Segment Creation ' ||
+                       ' Parameter:' || feature_boolean ||
+                       ' Total Deferred Segments:' || total_def_segments ||
+                       ' Total Created Segments:' || total_segments   ||
+                       ' Table Segments:' || table_count   ||
+                       ' Index Segments:' || index_count   ||
+                       ' Lob Segments:'   || lob_count   ||
+                       ' Table Partition Segments:' || tabpart_count   ||
+                       ' Index Partition Segments:' || indpart_count   ||
+                       ' Lob Partition Segments:'   || lobpart_count   ||
+                       ' Table SubPartition Segments:' || tabsubpart_count   ||
+                       ' Index SubPartition Segments:' || indsubpart_count   ||
+                       ' Lob SubPartition Segments:'   || lobsubpart_count;
+
+      -- update feature_boolean if even one segment is uncreated
+      if (total_def_segments > 0) then
+        feature_boolean := feature_boolean+1;
+      end if;
+
+      feature_info    := to_clob(feature_usage);
+      aux_count       := total_def_segments;
+
+    END dbms_feature_deferred_seg_crt;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: f4f9bc574cd8a59f671c9871b2843754
+processedLineage: false
+entityStatus: Approved

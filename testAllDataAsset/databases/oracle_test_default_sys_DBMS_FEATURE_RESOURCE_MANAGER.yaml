@@ -1,0 +1,124 @@
+name: DBMS_FEATURE_RESOURCE_MANAGER
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_RESOURCE_MANAGER
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_RESOURCE_MANAGER
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+      feature_usage             varchar2(1000);
+      non_maint_sql             varchar2(2000);
+      non_maint_usage           number;
+      non_maint_cpu             number;
+      non_maint_other           number;
+    begin
+
+      -- Initialize all variables
+
+      feature_boolean := 0;
+      aux_count       := 0;
+      feature_info    := to_clob('Resource Manager usage not detected');
+
+      feature_usage   := NULL;
+      non_maint_sql   := NULL;
+      non_maint_cpu   := 0;
+      non_maint_other := 0;
+
+      -- 'feature_boolean' is set to 1 if Resource Manager was enabled, not
+      -- including for maintenance windows.
+      --
+      -- The SQL clause is saying it found a plan that is set, not internal,
+      -- not maintenance (or if it is, it has a null window or a non-maintenance
+      -- window name), not default_cdb_plan (or if it is, either no PDB plans
+      -- are set or non-maintenance PDB plans are set).
+      --
+      -- We cannot use the CDB's and PDB's sequence#s because the are not sync'd.
+      -- Therefore, we see if count(PDBs with non-maintenance plans) > 0 or
+      -- count(PDBs with plans) = 0.
+
+      non_maint_sql :=
+          'select decode(count(*), 0, 0, 1) from v$rsrc_plan_history top where ' ||
+          '(name != ''ORA$INTERNAL_CDB_PLAN'' and ' ||
+          ' name != ''INTERNAL_PLAN'' and name is not null and ' ||
+          ' (name != ''DEFAULT_MAINTENANCE_PLAN'' or ' ||
+          '   (window_name is null or ' ||
+          '    (window_name != ''MONDAY_WINDOW'' and ' ||
+          '     window_name != ''TUESDAY_WINDOW'' and ' ||
+          '     window_name != ''WEDNESDAY_WINDOW'' and ' ||
+          '     window_name != ''THURSDAY_WINDOW'' and ' ||
+          '     window_name != ''FRIDAY_WINDOW'' and ' ||
+          '     window_name != ''SATURDAY_WINDOW'' and ' ||
+          '     window_name != ''SUNDAY_WINDOW''))) and ' ||
+          ' (name != ''DEFAULT_CDB_PLAN'' or ' ||
+          '   exists(select count(*) from v$rsrc_plan_history pdb ' ||
+          '            where pdb.con_id >= 3 and ' ||
+          '              (pdb.name is null ' ||
+          '               or pdb.name != ''DEFAULT_MAINTENANCE_PLAN'') and ' ||
+          '              (top.end_time is null ' ||
+          '               or top.end_time > pdb.start_time) and ' ||
+          '              (pdb.end_time is null ' ||
+          '               or pdb.end_time > top.start_time)))) ';
+      execute immediate
+        non_maint_sql
+      into feature_boolean;
+
+      -- 'aux_count' is not being used
+
+      -- 'feature_info' is constructed of the following name-value pairs:
+      --   Non-Maintenance CPU Management:
+      --     This field is set to 1 if Resource Manager was enabled explicitly
+      --     and the Resource Plan was managing CPU.
+      --   Non-Maintenance Other Management:
+      --     This field is set to 1 if Resource Manager was enabled explicitly
+      --     and the Resource Plan was NOT managing CPU, i.e. the Resource Plan
+      --     was managing idle time, switch time, DOP, etc.
+
+      if feature_boolean > 0
+      then
+        execute immediate
+          non_maint_sql || ' and cpu_managed = ''ON'' '
+        into non_maint_cpu;
+
+        execute immediate
+          non_maint_sql || ' and cpu_managed = ''OFF'' '
+        into non_maint_other;
+
+        feature_usage :=
+          'Non-Maintenance CPU Management: ' || non_maint_cpu ||
+          ', Non-Maintenance Other Management: ' || non_maint_other;
+
+        feature_info := to_clob(feature_usage);
+      end if;
+
+    end dbms_feature_resource_manager;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 365622b1ef185ca3f02731c7157ebc61
+processedLineage: false
+entityStatus: Approved

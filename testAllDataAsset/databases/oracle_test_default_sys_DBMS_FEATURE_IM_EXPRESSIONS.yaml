@@ -1,0 +1,147 @@
+name: DBMS_FEATURE_IM_EXPRESSIONS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_IM_EXPRESSIONS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_IM_EXPRESSIONS(
+        feature_boolean OUT NUMBER,
+        aux_count       OUT NUMBER,
+        feature_info    OUT CLOB)
+    AS
+        feature_usage                    varchar2(2000);
+        num_imes_created                 number  := 0;
+        num_vcs_enabled_for_inmem        number  := 0;
+        num_osons_created                number  := 0;
+        num_exp_inmem                    number  := 0;
+        num_oson_inmem                   number  := 0;
+        inmemory_size_value              number  := 0;
+        inmemory_exp_usage_value         number  := 0;
+        inmemory_virtual_columns_value   number  := 0;
+        feature_params_enabled           boolean := FALSE;
+        feature_check_static             boolean := FALSE;
+        feature_check_dynamic            boolean := FALSE;
+    BEGIN
+        feature_boolean := 0;
+        aux_count       := 0;
+
+        -- Check total number of IMEs created regardless of memcompress level
+        -- Ignore OSON
+        execute immediate
+            'select count(*) from sys.col$ where name like ''SYS\_IME%''' ||
+            ' escape ''\'' and name not like ''SYS\_IME\_OSON\_%'' escape ''\'''
+        into num_imes_created;
+
+        -- Check total number of OSON created regardless of in-memory compression
+        execute immediate
+            'select count(*) from sys.col$ where name like ''SYS\_IME\_OSON\_%''' ||
+            ' escape ''\'''
+        into num_osons_created;
+
+        -- Check the number of VCs explicitly enabled for in-memory storage
+        -- SYS_IMEs do not show up in this view
+        execute immediate
+            'select count(*) from gv$im_column_level where segment_column_id = 0' ||
+            ' and inmemory_compression in (''DEFAULT'', ''NO MEMCOMPRESS'',' ||
+            ' ''FOR DML'', ''FOR QUERY LOW'', ''FOR QUERY HIGH'',' ||
+            ' ''FOR CAPACITY LOW'', ''FOR CAPACITY HIGH'')'
+        into num_vcs_enabled_for_inmem;
+
+        -- Check if any VC or IME (not OSON) are populated in-memory
+        execute immediate
+            'select count(*) from gv$im_imecol_cu where column_name not like' ||
+            ' ''SYS\_IME\_OSON%'' escape ''\'''
+        into num_exp_inmem;
+
+        -- Check if any OSON is populated in-memory
+        execute immediate
+            'select count(*) from gv$im_imecol_cu where column_name like' ||
+            ' ''SYS\_IME\_OSON%'' escape ''\'''
+        into num_oson_inmem;
+
+        -- Check the value of "inmemory_size" from all instances
+        execute immediate
+           'select nvl(max(value),0) from gv$parameter where ' ||
+           'name = ''inmemory_size'''
+        into inmemory_size_value;
+
+        -- Check the value of "inmemory_virtual_columns" from all instances
+        execute immediate
+           'select count(*) from gv$parameter where ' ||
+           'name = ''inmemory_virtual_columns'' and value != ''DISABLE'''
+        into inmemory_virtual_columns_value;
+
+         -- Check the value of "inmemory_expressions_usage" from all instances
+        execute immediate
+           'select count(*) from gv$parameter where ' ||
+           'name = ''inmemory_expressions_usage'' and value != ''DISABLE'''
+        into inmemory_exp_usage_value;
+
+        -- Summary
+        feature_usage :=
+                    ' In-Memory Virtual Columns enabled on: ' ||
+                    to_char(inmemory_virtual_columns_value) || ' instances' ||
+                    ', In-Memory Expressions enabled on: ' ||
+                    to_char(inmemory_exp_usage_value) || ' instances' ||
+                    ', Number of IMEs created: ' ||
+                    to_char(num_imes_created) ||
+                    ', Number of VCs explicitly enabled for in-memory: ' ||
+                    to_char(num_vcs_enabled_for_inmem) ||
+                    ', Number of OSONs created: ' ||
+                    to_char(num_osons_created) ||
+                    ', Number of VC or IME CUs in-memory: ' ||
+                    to_char(num_exp_inmem) ||
+                    ', Number of OSON CUs in-memory: ' ||
+                    to_char(num_oson_inmem);
+
+        -- Check if either parameter is ENABLEd and in-memory size is setup
+        feature_params_enabled := (
+                                   ((inmemory_exp_usage_value > 0) OR
+                                    (inmemory_virtual_columns_value > 0)) AND
+                                   (inmemory_size_value > 0)
+                                  );
+
+        -- Static feature check based on IMEs created or VCs enabled for IM
+        feature_check_static := ((num_imes_created > 0) OR
+                                 (num_vcs_enabled_for_inmem > 0));
+
+        -- Dynamic feature check based on IME/VC/OSON populated in-memory
+        -- This is necessary because of the ENABLE mode in inmemory_virtual_columns
+        feature_check_dynamic := ((num_exp_inmem > 0) OR (num_oson_inmem > 0));
+
+        -- Feature Check
+        if (feature_params_enabled) then
+          if (feature_check_static OR feature_check_dynamic) then
+            feature_boolean := 1;
+            feature_info := to_clob(feature_usage);
+          end if;
+        end if;
+    END;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 63abaa30c651ca9ae965147d80573e52
+processedLineage: false
+entityStatus: Approved

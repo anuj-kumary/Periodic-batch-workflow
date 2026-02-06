@@ -1,0 +1,114 @@
+name: DBMS_FEATURE_FGA_AUDIT
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_FGA_AUDIT
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_fga_audit
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+    AS
+       feature_usage           VARCHAR2(1000);
+       fga_policies_total      NUMBER;
+       fga_policies_enabled    NUMBER;
+       fga_policies_column     NUMBER;
+       fga_policies_condition  NUMBER;
+       fga_policies_handler    NUMBER;
+       fga_policies_DB_trail   NUMBER;
+      -- Initialize
+       fga_policies_XML_trail  NUMBER;
+    BEGIN
+
+      feature_boolean         := 0;
+      aux_count               := 0;
+      feature_info            := NULL;
+      fga_policies_total      := 0;
+      fga_policies_enabled    := 0;
+      fga_policies_column     := 0;
+      fga_policies_condition  := 0;
+      fga_policies_handler    := 0;
+      fga_policies_DB_trail   := 0;
+      fga_policies_XML_trail  := 0;
+
+      -- Get FGA policy details from the database
+      FOR item IN (SELECT enabled, policy_text, policy_column, pf_function,
+                          audit_trail FROM DBA_AUDIT_POLICIES)
+      LOOP
+        IF (item.enabled = 'YES') THEN
+          fga_policies_enabled := fga_policies_enabled + 1;
+        END IF;
+
+        IF (item.policy_text IS NOT NULL) THEN
+          fga_policies_condition := fga_policies_condition + 1;
+        END IF;
+
+        IF (item.policy_column IS NOT NULL) THEN
+          fga_policies_column := fga_policies_column + 1;
+        END IF;
+
+        IF (item.pf_function IS NOT NULL) THEN
+          fga_policies_handler := fga_policies_handler + 1;
+        END IF;
+
+        IF (item.audit_trail LIKE 'DB%') THEN
+          fga_policies_DB_trail := fga_policies_DB_trail + 1;
+        ELSE
+          fga_policies_XML_trail := fga_policies_XML_trail + 1;
+        END IF;
+
+        fga_policies_total := fga_policies_total + 1;
+      END LOOP;
+
+      -- If atleast a single FGA policy is enabled, then FGA feature is enabled
+      if (fga_policies_enabled > 0) then
+        feature_boolean := 1;
+      end if;
+
+      feature_usage := 'Number of FGA policies=' ||
+                           to_char(fga_policies_total) || '; ' ||
+                       'Number of Enabled FGA policies=' ||
+                           to_char(fga_policies_enabled) || '; ' ||
+                       'Number of FGA policies with audit_condition=' ||
+                           to_char(fga_policies_condition) || '; ' ||
+                       'Number of FGA policies with column-level audit=' ||
+                           to_char(fga_policies_column) || '; ' ||
+                       'Number of FGA policies with handler=' ||
+                           to_char(fga_policies_handler) || '; ' ||
+                       'Number of FGA policies with DB audit_trail=' ||
+                           to_char(fga_policies_DB_trail) || '; ' ||
+                       'Number of FGA policies with XML audit_trail=' ||
+                           to_char(fga_policies_XML_trail);
+
+      feature_info := to_clob(feature_usage);
+
+    END dbms_feature_fga_audit;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: f6a06818e2d452bea5df4e086f5256af
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,93 @@
+name: DBMS_FEATURE_SEG_MAIN_ONL_COMP
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_SEG_MAIN_ONL_COMP
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE DBMS_FEATURE_SEG_MAIN_ONL_COMP
+      (isAnyFragCompressed OUT  NUMBER,
+       numFragsCompressed  OUT  NUMBER,
+       fragObjNumList      OUT  CLOB)
+    AS
+      partnFragsCompressed     NUMBER;
+      subpartnFragsCompressed  NUMBER;
+      fragObjNumListStr        VARCHAR2(1000);
+
+      -- select from tabpart$
+      cursor tp_cursor is      select tp.obj# from sys.tabpart$ tp
+                               where bitand(tp.flags, 33554432) = 33554432;
+
+      -- select from tabsubpart$
+      cursor tsp_cursor is     select tsp.obj# from sys.tabsubpart$ tsp
+                               where bitand(tsp.flags, 33554432) = 33554432;
+    BEGIN
+      -- initialize
+      isAnyFragCompressed := 0;
+      numFragsCompressed  := 0;
+      fragObjNumListStr   := NULL;
+
+      -- count partitions compressed through an online PMOP
+      select count(*) into partnFragsCompressed
+      from sys.tabpart$ where bitand(flags, 33554432) = 33554432;
+
+      -- count subpartitions compressed through an online PMOP
+      select count(*) into subpartnFragsCompressed
+      from sys.tabsubpart$ where bitand(flags, 33554432) = 33554432;
+
+      -- loop through tabpart$
+      if (partnFragsCompressed > 0) then
+        isAnyFragCompressed := 1;
+        fragObjNumListStr   := fragObjNumListStr || 'Partition Obj# list: ';
+        for ri in tp_cursor
+        loop
+          fragObjNumListStr := fragObjNumListStr || ri.obj# || ':';
+        end loop;
+        fragObjNumListStr := fragObjNumListStr || chr(10);
+      end if;
+
+      -- loop through subpart$
+      if (subpartnFragsCompressed > 0) then
+        isAnyFragCompressed := 1;
+        fragObjNumListStr   := fragObjNumListStr || 'Subpartition Obj# list: ';
+        for ri in tsp_cursor
+        loop
+          fragObjNumListStr := fragObjNumListStr || ri.obj# || ':';
+        end loop;
+      end if;
+
+      -- populate the variables to be returned
+      if (partnFragsCompressed + subpartnFragsCompressed > 0) then
+        isAnyFragCompressed := 1;
+        numFragsCompressed  := partnFragsCompressed + subpartnFragsCompressed;
+        fragObjNumList      := to_clob(fragObjNumListStr);
+      end if;
+
+    END DBMS_FEATURE_SEG_MAIN_ONL_COMP;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 50c3ba8aa251aab884f67bf558fd4816
+processedLineage: false
+entityStatus: Approved

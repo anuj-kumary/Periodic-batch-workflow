@@ -1,0 +1,236 @@
+name: DBMS_FEATURE_EMX
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_EMX
+storedProcedureCode:
+  language: SQL
+  code: |-
+    AS
+    PROCEDURE dbms_feature_emx
+         ( feature_boolean  OUT NUMBER,
+           aux_count        OUT NUMBER,
+           feature_info     OUT CLOB)
+      -- total em express usage count since last feature usage collection
+      l_count_total_delta number := 0;
+
+      -- total em express usage count since the first time it's used
+      l_count_total number := 0;
+
+      -- feature_info clob
+      l_detailed_usage_clob CLOB := NULL;
+
+      -- feature_info xml
+      l_detailed_usage_xml xmltype := NULL;
+
+      -- new xml to add to feature_info xml for one report
+      l_report_usage_xml xmltype   := NULL;
+
+      -- xpath key to find out if report already has entry in feature_info xml
+      l_report_usage_key varchar2(32767);
+
+      -- report name
+      l_report_name varchar2(32767) := NULL;
+
+      -- statistics of existing entry in feature_info xml for report
+      l_old_report_count         number;
+      l_old_report_avg_time      number;
+      l_old_report_avg_cputime   number;
+
+      -- new statistics to put into feature_info xml for report
+      l_new_report_count         number:= NULL;
+      l_new_report_total_time    number:= NULL;
+      l_new_report_avg_time      number:= NULL;
+      l_new_report_total_cputime number:= NULL;
+      l_new_report_avg_cputime   number:= NULL;
+
+      -- last db feature usage sample collection time
+      l_last_collection_time date;
+
+      -- Query to select the delta since last feature usage collection
+      -- from internal fixed table X$KEXSVFU.
+      -- Note if count for the report is 0, but last request timestamp is greater
+      -- than or equal to the latest sample date of db feature usage framework,
+      -- then this report must have been used at least once, therefore decoding
+      -- count from 0 to 1.
+      -- If in CDB, returned result is for this container only
+      cursor emx_fu_cursor(p_last_collection_time date) is
+        select report,
+               sum(total_count) as total_count,
+               sum(total_elapsed_time) as total_elapsed_time,
+               sum(total_cpu_time) as total_cpu_time
+          from table(gv$(cursor(
+                 select report_kexsvfu       as report,
+                        decode(count_kexsvfu, 0, 1, count_kexsvfu) as total_count,
+                        elapsed_time_kexsvfu as total_elapsed_time,
+                    and con_id = sys_context('userenv', 'con_id'))))
+                        cpu_time_kexsvfu     as total_cpu_time
+                   from X$KEXSVFU
+                  where last_req_time_kexsvfu >= p_last_collection_time
+        group by report;
+
+    begin
+
+      -- initialize output parameters
+      feature_boolean := 0;
+      aux_count := 0;
+      feature_info := NULL;
+
+      -- get total em express usage count from aux_count column and
+      -- detailed em express usage info from feature_info column before
+      -- last usage collection
+      begin
+        select nvl(aux_count, 0), feature_info
+          into l_count_total, l_detailed_usage_clob
+          from dba_feature_usage_statistics
+         where name = 'EM Express';
+      exception
+        when NO_DATA_FOUND then
+          l_count_total := 0;
+          l_detailed_usage_clob := NULL;
+      end;
+
+      -- if no feature_info xml exists, construct a brand new one
+      if (l_detailed_usage_clob is NULL) then
+        l_detailed_usage_xml :=
+          xmltype('<emx_usage time_unit="us"></emx_usage>');
+      -- otherwise update the existing one
+      else
+        l_detailed_usage_xml := xmltype(l_detailed_usage_clob);
+      end if;
+
+      -- get last db feature usage collection time
+      select nvl(max(last_sample_date), sysdate-7)
+        into l_last_collection_time
+        from dba_feature_usage_statistics;
+
+      -- get report usage info since last feature usage collection
+      for rc in emx_fu_cursor(l_last_collection_time)
+      loop
+        l_report_name              := rc.report;
+        l_new_report_count         := rc.total_count;
+        l_new_report_total_time    := rc.total_elapsed_time;
+        l_new_report_total_cputime := rc.total_cpu_time;
+
+        -- update total count for all EM Express reports since last usage
+        -- collection, this will indicate if EM Express has been used since last
+        -- collection, and be added to aux_count column
+        l_count_total_delta := l_count_total_delta + l_new_report_count;
+
+        --
+        -- update the feature_info detail xml
+        --
+
+        -- build the xpath key to find out if the report already exists
+        -- in the xml. The key looks like:
+        --   '//report_usage[@report="<report_id>"]'
+        l_report_usage_key := '//report_usage[' ||
+                              '@report="' || l_report_name || '"' ||
+                              ']';
+
+        -- find out if an xml element for this report already exists in the xml
+        if (l_detailed_usage_xml.existsNode(l_report_usage_key) > 0) then
+
+          -- get the old count for this report
+          -- if any of the attributes is not found for this report,
+          -- reset it to 0
+          select NVL(EXTRACTVALUE(l_detailed_usage_xml,
+                                  l_report_usage_key || '//@count'), 0),
+                 NVL(EXTRACTVALUE(l_detailed_usage_xml,
+                                  l_report_usage_key || '//@avg_elapsed_time'), 0),
+                 NVL(EXTRACTVALUE(l_detailed_usage_xml,
+                                  l_report_usage_key || '//@avg_cpu_time'), 0)
+            into l_old_report_count,
+                 l_old_report_avg_time,
+                 l_old_report_avg_cputime
+            from dual;
+
+          -- update the statistics, increment count and total time with stats
+          -- since the last usage collection
+          l_new_report_count
+            := l_old_report_count + l_new_report_count;
+
+          -- recalculate average time
+          l_new_report_avg_time
+            := round((l_old_report_avg_time * l_old_report_count
+                      + l_new_report_total_time) / l_new_report_count, 1);
+
+          l_new_report_avg_cputime
+            := round((l_old_report_avg_cputime * l_old_report_count
+                     + l_new_report_total_cputime) / l_new_report_count, 1);
+
+          -- update the xml using the new stats
+          select updateXML(l_detailed_usage_xml,
+                           l_report_usage_key || '//@count',
+                           l_new_report_count,
+                           l_report_usage_key || '//@avg_elapsed_time',
+                           l_new_report_avg_time,
+                           l_report_usage_key || '//@avg_cpu_time',
+                           l_new_report_avg_cputime)
+            into l_detailed_usage_xml
+            from dual;
+
+        -- if no xml element is found for this report, construct a new one
+        else
+          -- calculate average time
+          l_new_report_avg_time
+            := round(l_new_report_total_time / l_new_report_count, 1);
+          l_new_report_avg_cputime
+            := round(l_new_report_total_cputime / l_new_report_count, 1);
+
+          -- construct new xml element for this report usage
+          select xmlelement("report_usage",
+                            xmlattributes(
+                              l_report_name              as "report",
+                              l_new_report_count         as "count",
+                              l_new_report_avg_time      as "avg_elapsed_time",
+                              l_new_report_avg_cputime   as "avg_cpu_time"))
+            into l_report_usage_xml
+            from dual;
+
+          -- append this report usage to the main emx feature usage xml
+          l_detailed_usage_xml :=
+            l_detailed_usage_xml.appendChildxml('/*', l_report_usage_xml);
+
+        end if;
+
+      end loop;
+
+      -- update feature_boolean to indicate if em express has been used or not
+      -- by setting it to the total count since last usage collection
+      feature_boolean := l_count_total_delta;
+
+      -- update total count in aux_count column
+      feature_info := l_detailed_usage_xml.getClobVal();
+      aux_count := l_count_total + l_count_total_delta;
+
+      -- update feature_info for the new collection
+
+    end dbms_feature_emx;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 2e7fca93dd8a2a170263f27338e9d5b5
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,110 @@
+name: DBMS_FEATURE_DATA_REDACTION
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_DATA_REDACTION
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_DATA_REDACTION
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+        feature_usage         varchar2(1000);
+        num_policies          number;
+        num_policies_enabled  number;
+        num_full_redaction    number;
+        num_partial_redaction number;
+        num_random_redaction  number;
+        num_regexp_redaction   number;
+
+    begin
+        -- initialize
+        feature_boolean := 0;
+        aux_count := 0;
+        num_policies := 0;
+        num_policies_enabled := 0;
+        num_full_redaction := 0;
+        num_partial_redaction := 0;
+        num_random_redaction := 0;
+        num_regexp_redaction := 0;
+
+        -- check for Data Redaction usage by counting number of policies
+        execute immediate 'select count(*) from REDACTION_POLICIES '
+            into num_policies;
+
+        if (num_policies > 0) then
+            feature_boolean := 1;
+
+            -- check for enable Data Radaction policy usage
+            execute immediate 'select count(*) from REDACTION_POLICIES ' ||
+                'where upper(ENABLE) like ''%YES%'''
+                into num_policies_enabled;
+
+            -- check for Full Data Redaction type usage
+            execute immediate 'select count(*) from REDACTION_COLUMNS ' ||
+                'where FUNCTION_TYPE = ''FULL REDACTION'''
+                into num_full_redaction;
+
+            -- check for Partial Data Redaction type usage
+            execute immediate 'select count(*) from REDACTION_COLUMNS ' ||
+                'where FUNCTION_TYPE = ''PARTIAL REDACTION'''
+                into num_partial_redaction;
+
+            -- check for Random Data Redaction type usage
+            execute immediate 'select count(*) from REDACTION_COLUMNS ' ||
+                'where FUNCTION_TYPE = ''RANDOM REDACTION'''
+                into num_random_redaction;
+
+            -- check for Regexp-based Data Redaction type usage
+            execute immediate 'select count(*) from REDACTION_COLUMNS ' ||
+                'where FUNCTION_TYPE = ''REGEXP REDACTION'''
+                into num_regexp_redaction;
+
+            feature_usage :=
+                    'Number of data redaction policies: ' ||
+                     to_char(num_policies) ||
+            ', ' || 'Number of enabled policies: ' ||
+                     to_char(num_policies_enabled) ||
+            ', ' || 'Number of policies using full redaction: ' ||
+                     to_char(num_full_redaction) ||
+            ', ' || 'Number of policies using partial redaction: ' ||
+                     to_char(num_partial_redaction) ||
+            ', ' || 'Number of policies using random redaction: ' ||
+                     to_char(num_random_redaction)  ||
+            ', ' || 'Number of policies using regexp redaction: ' ||
+                     to_char(num_regexp_redaction)
+            ;
+            feature_info := to_clob(feature_usage);
+        else
+            feature_info := to_clob('Data Redaction usage not detected');
+        end if;
+
+    end;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 8bfbefebb05bb8905f3e82690e237c44
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,86 @@
+name: DBMS_FEATURE_IMA
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_IMA
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_IMA(
+        feature_boolean OUT NUMBER,
+        aux_count       OUT NUMBER,
+        feature_info    OUT CLOB)
+    AS
+        feature_usage               varchar2(1000);
+        num_kv                      number;
+        avg_num_dim                 number;
+        max_num_dim                 number;
+        num_fact                    number;
+
+    BEGIN
+        feature_boolean             := 0;
+        aux_count                   := 0;
+
+        -- find the total number of recent key vectors
+        execute immediate 'select count(*) from gv$key_vector
+                           where state = ''FINISHED'''
+          into num_kv;
+
+        -- average number of recent key vectors per query, overall maximum and
+        -- total number of unique fact tables referenced (does not include
+        -- complex facts)
+        execute immediate 'select round(avg(key_vector_count),2),
+                                  max(key_vector_count),
+                                  count(distinct fact_name)
+                           from (select fact_name, count(*) key_vector_count
+                                 from gv$key_vector
+                                 where state = ''FINISHED''
+                                 group by sql_id, sql_exec_id, fact_name)'
+          into avg_num_dim, max_num_dim, num_fact;
+
+        --Summary
+        feature_usage :=
+            ' In-Memory Aggregation Feature Usage: ' ||
+                    'Total Number of Key Vectors: ' ||
+                      to_char(num_kv) ||
+             ', ' || 'Maximum Number of Key Vectors for a Query: ' ||
+                      to_char(max_num_dim) ||
+            ', ' || 'Average Number of Key Vectors per Query: ' ||
+                      to_char(avg_num_dim) ||
+            ', ' || 'Total Number of Unique Fact Tables: ' ||
+                      to_char(num_fact);
+
+         if (num_kv > 0) then
+          feature_boolean := 1;
+          feature_info := to_clob(feature_usage);
+        else
+          feature_boolean := 0;
+          feature_info := to_clob('In-Memory Aggregation Not Detected');
+        end if;
+    END DBMS_FEATURE_IMA;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: ebb3fb9725b996fb34a4f5bf05bfa229
+processedLineage: false
+entityStatus: Approved

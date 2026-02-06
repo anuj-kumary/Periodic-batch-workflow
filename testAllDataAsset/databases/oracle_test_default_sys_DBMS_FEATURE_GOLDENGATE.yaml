@@ -1,0 +1,170 @@
+name: DBMS_FEATURE_GOLDENGATE
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_GOLDENGATE
+storedProcedureCode:
+  language: SQL
+  code: |2-
+           feature_info     OUT  CLOB)
+    PROCEDURE dbms_feature_goldengate
+          (feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+    AS
+      -- Based on goldengate usage
+      num_capture                             NUMBER;
+      num_ds_capture                          NUMBER;
+      num_apply                               NUMBER;
+      num_trigger_suppression                 NUMBER;
+      num_transient_duplicate                 NUMBER;
+      num_dblogreader                         NUMBER;
+      num_ggsddltrigopt                       NUMBER;
+      feature_usage                           VARCHAR2(4000);
+      total_feature_usage                     NUMBER;
+      num_dbencryption                        NUMBER;
+      num_ggsession                           NUMBER;
+      num_delcascadehint                      NUMBER;
+      -- initialize
+      num_suplog                              NUMBER;
+      num_procrepl                            NUMBER;
+    BEGIN
+      feature_boolean                  := 0;
+      aux_count                        := 0;
+      feature_info                     := NULL;
+      num_capture                      := 0;
+      num_ds_capture                   := 0;
+      num_apply                        := 0;
+      num_trigger_suppression          := 0;
+      num_transient_duplicate          := 0;
+      num_dblogreader                  := 0;
+      num_ggsddltrigopt                := 0;
+      feature_usage                    := NULL;
+      total_feature_usage              := 0;
+      num_dbencryption                 := 0;
+      num_ggsession                    := 0;
+      num_delcascadehint               := 0;
+      num_suplog                       := 0;
+      num_procrepl                     := 0;
+
+      select decode (count(*), 0, 0, 1) into num_capture
+         from dba_capture where UPPER(purpose) = 'GOLDENGATE CAPTURE';
+
+      select decode (count(*), 0, 0, 1) into num_ds_capture
+         from dba_capture where UPPER(purpose) = 'GOLDENGATE CAPTURE' and
+                                UPPER(capture_type) = 'DOWNSTREAM';
+
+      select decode (count(*), 0, 0, 1) into num_apply from dba_apply
+         where UPPER(purpose) IN ('GOLDENGATE APPLY', 'GOLDENGATE CAPTURE');
+
+      select sum(count) into num_dblogreader
+         from GV$GOLDENGATE_CAPABILITIES where name like 'DBLOGREADER';
+
+      select sum(count) into num_transient_duplicate
+         from GV$GOLDENGATE_CAPABILITIES where name like 'TRANSIENTDUPLICATE';
+
+      select sum(count) into num_trigger_suppression
+         from GV$GOLDENGATE_CAPABILITIES where name like 'TRIGGERSUPPRESSION';
+
+      select sum(count) into num_ggsddltrigopt
+         from GV$GOLDENGATE_CAPABILITIES where name like 'DDLTRIGGEROPTIMIZATION';
+
+      select sum(count) into num_dbencryption
+         from GV$GOLDENGATE_CAPABILITIES where name like 'DBENCRYPTION';
+
+      select sum(count) into num_ggsession
+         from GV$GOLDENGATE_CAPABILITIES where name like 'GGSESSION';
+
+      select sum(count) into num_delcascadehint
+         from GV$GOLDENGATE_CAPABILITIES where name like 'DELETECASCADEHINT';
+
+      select sum(count) into num_suplog
+         from GV$GOLDENGATE_CAPABILITIES where name like 'SUPPLEMENTALLOG';
+
+      select sum(count) into num_procrepl
+         from GV$GOLDENGATE_CAPABILITIES where name like 'PROCREPLICATION';
+
+      total_feature_usage := num_capture + num_apply + num_dblogreader +
+         num_transient_duplicate + num_ggsddltrigopt + num_trigger_suppression +
+         num_dbencryption + num_ggsession + num_delcascadehint + num_suplog +
+         num_procrepl;
+
+      feature_usage := feature_usage ||
+            'tcap:'                  || num_capture
+          ||' dscap:'                || num_ds_capture
+          ||' app:'                  || num_apply
+          ||' dblogread:'            || num_dblogreader
+          ||' tdup:'                 || num_transient_duplicate
+          ||' suptrig:'              || num_trigger_suppression
+          ||' dtrigopt:'             || num_ggsddltrigopt
+          ||' dbenc:'                || num_dbencryption
+          ||' ggsess:'               || num_ggsession
+          ||' delhint:'              || num_delcascadehint
+          ||' suplog:'               || num_suplog
+          ||' suplog:'               || num_procrepl;
+
+      feature_info   := to_clob(feature_usage);
+      if (total_feature_usage > 0) THEN
+          feature_boolean := 1;
+      end if;
+      if(num_capture > 0 ) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_apply > 0 ) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_dblogreader > 0 ) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_transient_duplicate > 0 ) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_ggsddltrigopt > 0 ) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_trigger_suppression > 0 ) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_dbencryption > 0) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_ggsession > 0) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_delcascadehint > 0) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_suplog > 0) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+      if(num_procrepl > 0) THEN
+           aux_count      :=  aux_count+1;
+      end if;
+
+    END dbms_feature_goldengate;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: aaa5d3dd45f88dab3ad043c0d2599bce
+processedLineage: false
+entityStatus: Approved

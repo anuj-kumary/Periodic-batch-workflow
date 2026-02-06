@@ -1,0 +1,140 @@
+name: DBMS_FEATURE_AWR
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_AWR
+storedProcedureCode:
+  language: SQL
+  code: |2-
+           feature_info_OUT     OUT  CLOB)
+    procedure DBMS_FEATURE_AWR
+         ( feature_boolean_OUT  OUT  NUMBER,
+           aux_count_OUT        OUT  NUMBER,
+    AS
+      DBFUS_LAST_SAMPLE_DATE  DATE;
+
+      l_DBtime7day_secs   number;
+      l_DBcpu7day_secs    number;
+
+    WITH snap_ranges AS
+      -- cursor fetches last 7 days of AWR snapshot DB time and DB cpu
+      cursor TimeModel7day_cur
+      IS
+    (select /*+ FULL(ST) */
+            SN.dbid
+           ,SN.instance_number
+           ,SN.startup_time
+           ,ST.stat_id
+           ,ST.stat_name
+           ,MIN(SN.snap_id) as MIN_snap
+           ,MAX(SN.snap_id) as MAX_snap
+           ,MIN(CAST(begin_interval_time AS DATE)) as MIN_date
+           ,MAX(CAST(end_interval_time AS DATE)) as MAX_date
+       from
+            dba_hist_snapshot   SN
+           ,wrh$_stat_name      ST
+      where
+            SN.begin_interval_time > TRUNC(SYSDATE) - 7
+        and SN.end_interval_time   < TRUNC(SYSDATE)
+        and SN.dbid = ST.dbid
+        and ST.stat_name IN ('DB time', 'DB CPU')
+      group by
+            SN.dbid,SN.instance_number,SN.startup_time,ST.stat_id,ST.stat_name
+    )
+    ,delta_data AS
+    (select
+            SR.dbid
+           ,SR.instance_number
+           ,SR.stat_name
+           ,CASE WHEN SR.startup_time BETWEEN SR.MIN_date AND SR.MAX_date
+                   THEN TM1.value + (TM2.value - TM1.value)
+                 ELSE (TM2.value - TM1.value)
+            END
+            as delta_time
+       from
+            WRH$_SYS_TIME_MODEL   TM1
+           ,WRH$_SYS_TIME_MODEL   TM2
+           ,snap_ranges           SR
+      where
+            TM1.dbid = SR.dbid
+        and TM1.instance_number = SR.instance_number
+        and TM1.snap_id         = SR.MIN_snap
+        and TM1.stat_id         = SR.stat_id
+        and TM2.dbid = SR.dbid
+        and TM2.instance_number = SR.instance_number
+        and TM2.snap_id         = SR.MAX_snap
+        and TM2.stat_id         = SR.stat_id
+    )
+    select
+           stat_name
+          ,ROUND(SUM(delta_time/1000000),2) as secs
+      from
+           delta_data
+     group by
+           stat_name;
+
+    begin
+      --> initialize OUT parameters
+      feature_boolean_OUT := 0;
+      aux_count_OUT       := null;
+      feature_info_OUT    := null;
+
+      --> initialize last sample date
+      select nvl(max(last_sample_date), sysdate-7)
+        into DBFUS_LAST_SAMPLE_DATE
+       from wri$_dbu_usage_sample;
+
+      if DBFUS_LAST_SAMPLE_DATE IS NOT NULL
+      then
+        --> get snapshot count since last sample date
+        select count(*)
+          into feature_boolean_OUT
+          from wrm$_snapshot
+         where dbid = (select dbid from v$database)
+           and status = 0
+           and bitand(snap_flag, 1) = 1
+           and end_interval_time > DBFUS_LAST_SAMPLE_DATE;
+      end if;
+
+      --> fetch 7 day DB time and DB CPU from AWR
+      for TimeModel7day_rec in TimeModel7day_cur
+      loop
+        case TimeModel7day_rec.stat_name
+          when 'DB time' then l_DBtime7day_secs := TimeModel7day_rec.secs;
+          when 'DB CPU'  then l_DBcpu7day_secs := TimeModel7day_rec.secs;
+        end case;
+      end loop;
+
+      --> assemble feature info CLOB
+      feature_info_OUT := 'DBtime:'||TO_CHAR(l_DBtime7day_secs)||
+                          ',DBcpu:'||TO_CHAR(l_DBcpu7day_secs);
+
+
+    end;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: fb44235d92872955b365ae11ec21d6fe
+processedLineage: false
+entityStatus: Approved

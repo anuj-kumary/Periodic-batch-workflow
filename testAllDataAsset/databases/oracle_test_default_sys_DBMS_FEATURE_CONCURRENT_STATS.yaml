@@ -1,0 +1,136 @@
+name: DBMS_FEATURE_CONCURRENT_STATS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_CONCURRENT_STATS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_concurrent_stats
+      (feature_boolean    OUT  NUMBER,
+       aux_count          OUT  NUMBER,
+       feature_info       OUT  CLOB)
+    AS
+      NEW_LINE      CONSTANT  VARCHAR2(8) := '
+    ';
+      num_all_ops             NUMBER;   -- number of all stats operations
+      num_gath_ops            NUMBER;   -- number of gather operations
+      num_conc_ops            NUMBER;   -- number of concurrent stats operations
+      num_auto_ops            NUMBER;   -- number of auto stats gathering jobs
+      interval_start          VARCHAR(20); -- minimum start time in operations view
+      interval_end            VARCHAR(20); -- maximum start time in operations view
+      conc_pref               VARCHAR2(10); -- value of "concurrent" preference
+      tmp_buf                 VARCHAR2(32767);
+
+      -- cursor to get the types of stats gathering operations which were
+      -- were performed concurrently.
+      CURSOR op_type_cursor IS
+        select operation op, count(*) cnt from dba_optstat_operations
+        where  extractvalue(xmltype(notes),
+                           '/params/param[@name="concurrent"]/@val') = 'TRUE'
+        group by operation
+        order by 2 desc;
+
+    BEGIN
+      dbms_lob.createtemporary(feature_info, TRUE);
+
+      -- get the time interval reported in dba_optstat_operations
+      select to_char(min(start_time), 'MM/DD/YYYY'),
+             to_char(max(start_time), 'MM/DD/YYYY')
+             into interval_start, interval_end
+      from dba_optstat_operations;
+
+      tmp_buf := 'Time interval covered by dba_optstat_operations: '||
+                 interval_start || ' - ' || interval_end || NEW_LINE;
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      -- get the total number of rows in dba_optstat_operations
+      SELECT count(*)
+      INTO num_all_ops
+      FROM dba_optstat_operations;
+
+      tmp_buf := 'Total Number of All Stats Operations: '|| num_all_ops
+                 || NEW_LINE;
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      -- get the number of gather stats operations which is eligible to be run
+      -- concurrently
+      SELECT count(*)
+      INTO num_gath_ops
+      FROM dba_optstat_operations
+      WHERE operation like 'gather%';
+
+      tmp_buf := 'Total Number of Gather Stats Operations: '|| num_gath_ops
+                 || NEW_LINE;
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      -- get the number of concurrent stats gathering operations
+      SELECT count(*)
+      INTO num_conc_ops
+      FROM dba_optstat_operations
+      WHERE extractvalue(xmltype(notes),
+                           '/params/param[@name="concurrent"]/@val') = 'TRUE';
+
+      tmp_buf := 'Total Number of Concurrent Operations: ' || num_conc_ops || '.'
+                  || NEW_LINE ||
+                 'Types of concurrent operations with their frequencies:'
+                  || NEW_LINE;
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      -- # of concurrent operations group by the kind of operation
+      for op_type_iter in op_type_cursor
+      loop
+        tmp_buf := '  ' || op_type_iter.op ||': '||
+                          op_type_iter.cnt || NEW_LINE;
+        dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+      end loop;
+
+      -- value of "concurrent" preference
+      select dbms_stats.get_prefs('CONCURRENT')
+      into conc_pref
+      from dual;
+
+      tmp_buf := 'Current value of CONCURRENT preference: '|| conc_pref || NEW_LINE;
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      -- populate the outputs if concurrent stats gathering is enabled
+      if (num_conc_ops > 0 OR
+          upper(conc_pref) not in ('OFF', 'FALSE')) then
+        feature_boolean := 1;
+      else
+        feature_boolean := 0;
+      end if;
+
+      if (num_gath_ops > 0) then
+        aux_count := num_conc_ops/num_gath_ops;
+      else
+        aux_count := -1;
+      end if;
+
+    END dbms_feature_concurrent_stats;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: dbcb46a552f03179a26e5325d6c3c6a5
+processedLineage: false
+entityStatus: Approved

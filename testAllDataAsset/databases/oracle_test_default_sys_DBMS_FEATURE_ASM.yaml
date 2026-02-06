@@ -1,0 +1,121 @@
+name: DBMS_FEATURE_ASM
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ASM
+storedProcedureCode:
+  language: SQL
+  code: |2-
+       min_diskgroup_size number;
+    PROCEDURE dbms_feature_asm
+          (is_used OUT number, total_diskgroup_size OUT number, summary OUT clob)
+    AS
+       redundancy_type    clob;
+       max_diskgroup_size number;
+       num_disk           number;
+       num_diskgroup      number;
+       min_disk_size      number;
+       max_disk_size      number;
+       num_failgroup      number;
+       min_failgroup_size number;
+       max_failgroup_size number;
+       au_size            clob;
+       density_factor     number;
+
+    BEGIN
+      -- initialize
+      redundancy_type      := 'Redundancy';
+      max_diskgroup_size   := NULL;
+      min_diskgroup_size   := NULL;
+      total_diskgroup_size := NULL;
+      num_disk             := NULL;
+      num_diskgroup        := NULL;
+      min_disk_size        := NULL;
+      max_disk_size        := NULL;
+      num_failgroup        := NULL;
+      min_failgroup_size   := NULL;
+      max_failgroup_size   := NULL;
+      au_size              := ':au_size';
+      density_factor        := NULL;
+
+      select count(*) into is_used from v$asm_client;
+
+      -- if asm is used
+      if (is_used >= 1) then
+
+           select max(total_mb), min(total_mb), sum(total_mb), count(*)
+             into max_diskgroup_size, min_diskgroup_size,
+                  total_diskgroup_size, num_diskgroup
+             from v$asm_diskgroup_stat;
+
+           select max(total_mb), min(total_mb), count(*)
+             into max_disk_size, min_disk_size, num_disk
+             from v$asm_disk_stat;
+
+           select max(total_fg_mb), min(total_fg_mb), count(*)
+             into max_failgroup_size, min_failgroup_size, num_failgroup
+             from (select sum(total_mb) as total_fg_mb
+                     from v$asm_disk_stat
+                     group by failgroup);
+
+
+
+           for item in (select type, count(*) as rcount
+                          from v$asm_diskgroup_stat group by type)
+           loop
+             redundancy_type:=redundancy_type||':'||item.type||'='||item.rcount;
+           end loop;
+
+           for item in (select allocation_unit_size as ausz
+                          from v$asm_diskgroup_stat )
+           loop
+             au_size:=au_size||':'||item.ausz;
+           end loop;
+
+           select sys_context('SYS_CLUSTER_PROPERTIES','ASM_DENSITYFACT')
+             into density_factor
+             from dual;
+
+           summary := redundancy_type||':total_diskgroup_size:'||total_diskgroup_size
+                    ||':max_diskgroup_size:'||max_diskgroup_size
+                    ||':min_diskgroup_size:'||min_diskgroup_size
+                    ||':num_diskgroup:'||num_diskgroup
+                    ||':max_disk_size:'||max_disk_size
+                    ||':min_disk_size:'||min_disk_size
+                    ||':num_disk:'||num_disk
+                    ||':max_failgroup_size:'||max_failgroup_size
+                    ||':min_failgroup_size:'||min_failgroup_size
+                    ||':num_failgroup:'||num_failgroup
+                    ||au_size
+                    ||':density_factor:'||density_factor;
+
+      end if;
+
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: f18331149565d40f5152b1c81302f492
+processedLineage: false
+entityStatus: Approved

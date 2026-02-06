@@ -1,0 +1,115 @@
+name: DBMS_FEATURE_ADAPTIVE_PLANS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ADAPTIVE_PLANS
+storedProcedureCode:
+  language: SQL
+  code: |2-
+       feature_info       OUT  CLOB)
+    PROCEDURE dbms_feature_adaptive_plans
+      (feature_boolean    OUT  NUMBER,
+       aux_count          OUT  NUMBER,
+    AS
+      NEW_LINE      CONSTANT  VARCHAR2(8) := '
+    ';
+
+      adaptive_plan_param     VARCHAR2(10);   -- adaptive plans parameter
+      reporting_param         VARCHAR2(10);   -- reporting mode parameter
+      num_all_queries         NUMBER;         -- number of queries
+      num_adaptive_queries    NUMBER;         -- number of adaptive queries
+      reporting_param_value   VARCHAR2(10);   -- reporting mode param value
+      tmp_buf                 VARCHAR2(32767);
+
+    BEGIN
+      dbms_lob.createtemporary(feature_info, TRUE);
+
+      select ksppstvl
+      into adaptive_plan_param
+      from x$ksppi x, x$ksppcv y where (x.indx = y.indx) and
+      ksppinm = 'optimizer_adaptive_plans';
+
+      select ksppstvl
+      into reporting_param
+      from x$ksppi x, x$ksppcv y where (x.indx = y.indx) and
+      ksppinm = 'optimizer_adaptive_reporting_only';
+
+      if (reporting_param = 'FALSE' AND adaptive_plan_param = 'TRUE') then
+        feature_boolean := 1;
+      else
+        feature_boolean := 0;
+      end if;
+
+      if (reporting_param = 'FALSE') then
+        reporting_param_value := 'No';
+      else
+        reporting_param_value := 'Yes';
+      end if;
+
+
+      -- Find # of sqls in v$sql
+      select count(*)
+      into   num_all_queries
+      from   v$sql vs, v$sqlcommand vsc
+      where vs.command_type = vsc.command_type and
+      vsc.command_name in ('INSERT', 'SELECT', 'UPDATE', 'DELETE', 'UPSERT');
+
+      -- Find # of sqls which are adaptive
+      select count(*)
+      into   num_adaptive_queries
+      from   v$sql vs, v$sqlcommand vsc
+      where vs.command_type = vsc.command_type and
+      vs.is_resolved_adaptive_plan is NOT NULL and
+      vsc.command_name in ('INSERT', 'SELECT', 'UPDATE', 'DELETE', 'UPSERT');
+
+      tmp_buf := 'Total number of queries: ' || num_all_queries ||
+                 NEW_LINE ;
+
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      tmp_buf := 'Number of queries with an adaptive plan: ' ||
+                  num_adaptive_queries ||
+                 NEW_LINE ;
+
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      tmp_buf := 'Percentage of queries with an adaptive plan: ' ||
+                 100*num_adaptive_queries/num_all_queries ||
+                 NEW_LINE ;
+
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+      tmp_buf := 'Are the queries running in reporting mode ? : ' ||
+                 reporting_param_value ||
+                 NEW_LINE ;
+
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+    END dbms_feature_adaptive_plans;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: b1ce70b6cf427c8f586bc779b4683468
+processedLineage: false
+entityStatus: Approved

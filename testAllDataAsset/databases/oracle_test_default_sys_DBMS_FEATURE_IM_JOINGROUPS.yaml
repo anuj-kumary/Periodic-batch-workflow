@@ -1,0 +1,69 @@
+name: DBMS_FEATURE_IM_JOINGROUPS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_IM_JOINGROUPS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_IM_JOINGROUPS(
+        feature_boolean OUT NUMBER,
+        aux_count       OUT NUMBER,
+        feature_info    OUT CLOB)
+    AS
+        feature_usage               varchar2(1000);
+        num_jg                      number;
+        inmemory_size_value         number;
+    BEGIN
+        feature_boolean             := 0;
+        aux_count                   := 0;
+        inmemory_size_value         := 0;
+
+        execute immediate
+            'select count(distinct(domain#)) from im_joingroup$'
+        into num_jg;
+
+        -- check the value of the parameter "inmemory_size" from
+        -- all instances
+        execute immediate
+           'select nvl(max(value),0) from gv$parameter where ' ||
+           'name = ''inmemory_size'''
+        into inmemory_size_value;
+
+        --Summary
+        feature_usage :=
+            ' In-Memory Join Groups Feature Usage: ' ||
+                    ' Number of join groups created: ' ||
+                      to_char(num_jg);
+
+         if ((num_jg > 0) AND (inmemory_size_value > 0)) then
+          feature_boolean := 1;
+          feature_info := to_clob(feature_usage);
+        end if;
+    END;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 8e2bf16e64acd402f7b86b36fc0e662d
+processedLineage: false
+entityStatus: Approved

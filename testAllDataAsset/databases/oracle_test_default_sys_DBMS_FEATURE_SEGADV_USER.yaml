@@ -1,0 +1,92 @@
+name: DBMS_FEATURE_SEGADV_USER
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_SEGADV_USER
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_segadv_user
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+    AS
+      execs_since_sample    NUMBER;               -- # of execs since last sample
+      total_execs           NUMBER;               -- total # of execs
+      total_recs            NUMBER;               -- total # of recommendations
+      total_space_saving    NUMBER;               -- total potential space saving
+      tmp_buf               VARCHAR2(32767);      -- temp buffer
+    BEGIN
+      -- executions since last sample
+      SELECT  count(*)
+      INTO    execs_since_sample
+      FROM    dba_advisor_executions
+      WHERE   advisor_name = 'Segment Advisor' AND
+              task_name not like 'SYS_AUTO_SPCADV%' AND
+              execution_last_modified >= (SELECT nvl(max(last_sample_date),
+                                                    sysdate-7)
+                                         FROM   dba_feature_usage_statistics);
+
+      -- total # of executions
+      SELECT  count(*)
+      INTO    total_execs
+      FROM    dba_advisor_executions
+      WHERE   advisor_name = 'Segment Advisor' AND
+              task_name not like 'SYS_AUTO_SPCADV%';
+
+      -- total # of recommendations and total potential space saving
+      SELECT  count(task.task_id), NVL(sum(msg.p3),0)
+      INTO    total_recs, total_space_saving
+      FROM    dba_advisor_tasks task,
+              sys.wri$_adv_findings fin,
+              sys.wri$_adv_recommendations rec,
+              sys.wri$_adv_message_groups msg
+      WHERE   task.advisor_name = 'Segment Advisor' AND
+              task.task_name not like 'SYS_AUTO_SPCADV%' AND
+              task.task_id = rec.task_id AND
+              nvl(rec.annotation,0) <> 3 AND
+              fin.task_id = rec.task_id AND
+              fin.id = rec.finding_id AND
+              msg.task_id = fin.task_id AND
+              msg.id = fin.more_info_id;
+
+      -- set feature_used and aux_count
+      feature_boolean := execs_since_sample;
+      aux_count := execs_since_sample;
+
+      -- prepare feature_info
+      tmp_buf := 'Executions since last sample: ' || execs_since_sample || ', ' ||
+                 'Total Executions: ' || total_execs || ', ' ||
+                 'Total Recommendations: ' || total_recs   || ', ' ||
+                 'Projected Space saving (byte): ' || total_space_saving;
+
+      dbms_lob.createtemporary(feature_info, TRUE);
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+    END dbms_feature_segadv_user;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 3057d8e514b70291fa63a62a76ac3b7a
+processedLineage: false
+entityStatus: Approved

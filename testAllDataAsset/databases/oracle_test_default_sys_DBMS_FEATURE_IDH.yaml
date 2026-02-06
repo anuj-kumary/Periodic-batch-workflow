@@ -1,0 +1,63 @@
+name: DBMS_FEATURE_IDH
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_IDH
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_IDH
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+      feature_usage          varchar2(1000);
+      cursor c1 is select grantee,granted_role
+                          from dba_role_privs where
+                          granted_role = 'DBHADOOP' and grantee != 'SYS';
+    begin
+      -- initialize
+      aux_count := 0;
+      feature_boolean := 0;
+      feature_info := to_clob('In-Database Hadoop usage not detected');
+      feature_usage := '';
+
+      for i in c1
+      loop
+        aux_count := aux_count + 1;
+      end loop;
+
+      if aux_count > 0
+      then
+        feature_boolean := 1;
+        feature_usage := feature_usage||':DBHADOOP users:'||aux_count;
+        feature_info := to_clob(feature_usage);
+      end if;
+
+    end;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 9390c014af7da73b841486518e5022ea
+processedLineage: false
+entityStatus: Approved

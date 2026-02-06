@@ -1,0 +1,61 @@
+name: DBMS_FEATURE_BA_OWNER
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_BA_OWNER
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_ba_owner
+          (feature_boolean OUT number,
+           aux_count       OUT number,
+           info            OUT clob)
+    AS
+       owner     VARCHAR2(100);
+
+    BEGIN
+
+       EXECUTE IMMEDIATE
+       'BEGIN ' ||
+       'SELECT dbms_rai_owner INTO :owner FROM DUAL; ' ||
+       'EXCEPTION ' ||
+       '   WHEN OTHERS THEN ' ||
+       '   :owner := NULL; ' ||
+       'END;' USING OUT owner;
+
+       IF (owner IS NOT NULL) THEN
+          feature_boolean := 1;
+       ELSE
+          feature_boolean := 0;
+       END IF;
+
+       aux_count := NULL;
+       info := NULL;
+
+    END dbms_feature_ba_owner;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: b9c2660dd2774b2ff8ca68ed20f2a72a
+processedLineage: false
+entityStatus: Approved

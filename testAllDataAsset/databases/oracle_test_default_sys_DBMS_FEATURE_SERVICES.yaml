@@ -1,0 +1,183 @@
+name: DBMS_FEATURE_SERVICES
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_SERVICES
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_services
+          (is_used OUT number, hwm OUT number, feature_info OUT clob)
+    AS
+      -- Based off dba_services
+      num_clb_long                            NUMBER := 0;
+      num_clb_short                           NUMBER := 0;
+      num_aq_notifications                    NUMBER := 0;
+      num_goal_service_time                   NUMBER := 0;
+      num_goal_throughput                     NUMBER := 0;
+      num_goal_none                           NUMBER := 0;
+      num_goal_null                           NUMBER := 0;
+
+      -- Based off gv$active_services
+      num_active_svcs                         NUMBER := 0;
+      num_active_svcs_wo_distinct             NUMBER := 0;
+      avg_active_cardinality                  NUMBER := 0;
+
+      default_service_name                    varchar2(1000);
+      default_xdb_service_name                varchar2(1000);
+      db_domain                               varchar2(1000);
+
+    BEGIN
+      -- initialize
+      is_used      := 0;
+      hwm          := 0;
+      feature_info := 'Services usage not detected';
+
+      -- get default service name - db_unique_name[.db_domain]
+
+      SELECT value INTO default_service_name FROM v$parameter WHERE
+            lower(name) = 'db_unique_name';
+
+      SELECT value INTO db_domain FROM v$parameter WHERE
+            lower(name) = 'db_domain';
+
+      -- create default XDB service name
+      default_xdb_service_name := default_service_name || 'XDB';
+
+      -- append db_domain if it is set
+      IF db_domain IS NOT NULL then
+        default_service_name := default_service_name || '.' || db_domain;
+      END IF;
+
+      SELECT count(*) INTO hwm
+      FROM dba_services
+      WHERE
+          NAME NOT LIKE 'SYS$%'
+      AND NETWORK_NAME NOT LIKE 'SYS$%'
+      AND NAME <> default_xdb_service_name
+      AND NAME <> default_service_name;
+
+      IF hwm > 0 THEN
+        is_used := 1;
+      END IF;
+
+      -- if services is used
+      IF (is_used = 1) THEN
+
+        -- Get the counts for CLB_GOAL variations
+        FOR item IN (
+          SELECT clb_goal, count(*) cg_count
+          FROM dba_services
+          where
+              NAME NOT LIKE 'SYS$%'
+          AND NETWORK_NAME NOT LIKE 'SYS$%'
+          AND NAME <> default_xdb_service_name
+          AND NAME <> default_service_name
+          GROUP BY clb_goal)
+
+        LOOP
+
+          IF item.clb_goal = 'SHORT' THEN
+            num_clb_short := item.cg_count;
+          ELSIF item.clb_goal = 'LONG' THEN
+            num_clb_long  := item.cg_count;
+          END IF;
+
+        END LOOP;
+
+
+        -- Get the counts for GOAL variations
+        FOR item IN (
+          SELECT goal, count(*) g_count
+          FROM dba_services
+          where
+              NAME NOT LIKE 'SYS$%'
+          AND NETWORK_NAME NOT LIKE 'SYS$%'
+          AND NAME <> default_xdb_service_name
+          AND NAME <> default_service_name
+          GROUP BY goal)
+
+        LOOP
+
+          IF item.goal = 'SERVICE_TIME' THEN
+            num_goal_service_time := item.g_count;
+          ELSIF item.goal = 'THROUGHPUT' THEN
+            num_goal_throughput  := item.g_count;
+          ELSIF item.goal = 'NONE' THEN
+            num_goal_none := item.g_count;
+          ELSIF item.goal is NULL THEN
+            num_goal_null := item.g_count;
+          END IF;
+
+        END LOOP;
+
+        -- count goal is NULL as goal = NONE
+        num_goal_none := num_goal_none + num_goal_null;
+
+        -- Get the count for aq_ha_notifications
+        SELECT count(*) into num_aq_notifications
+        FROM dba_services
+        where
+            NAME NOT LIKE 'SYS$%'
+        AND NETWORK_NAME NOT LIKE 'SYS$%'
+        AND NAME <> default_xdb_service_name
+        AND NAME <> default_service_name
+        AND AQ_HA_NOTIFICATIONS = 'YES';
+
+
+        SELECT count(distinct name), count(*)
+          INTO num_active_svcs, num_active_svcs_wo_distinct
+        FROM gv$active_services
+        WHERE
+            NAME NOT LIKE 'SYS$%'
+        AND NETWORK_NAME NOT LIKE 'SYS$%'
+        AND NAME <> default_xdb_service_name
+        AND NAME <> default_service_name;
+
+        IF num_active_svcs > 0 THEN
+
+          avg_active_cardinality :=
+            round(num_active_svcs_wo_distinct / num_active_svcs);
+
+        END IF;
+
+        feature_info :=
+            ' num_clb_long: '          || num_clb_long
+          ||' num_clb_short: '         || num_clb_short
+          ||' num_goal_service_time: ' || num_goal_service_time
+          ||' num_goal_throughput: '   || num_goal_throughput
+          ||' num_goal_none: '         || num_goal_none
+          ||' num_aq_notifications: '  || num_aq_notifications
+          ||' num_active_services: '   || num_active_svcs
+          ||' avg_active_cardinality: '|| avg_active_cardinality;
+
+      END IF;
+
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 4064a6a8b66f02788f5f2e8ef770ae95
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,205 @@
+name: DBMS_FEATURE_ACTIVE_DATA_GUARD
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ACTIVE_DATA_GUARD
+storedProcedureCode:
+  language: SQL
+  code: |2-
+          feature_info     OUT  CLOB)
+    PROCEDURE DBMS_FEATURE_ACTIVE_DATA_GUARD
+        (feature_boolean  OUT  NUMBER,
+          aux_count        OUT  NUMBER,
+    AS
+        feature_usage         varchar2(1000);
+        num_casc_stby         number;
+        num_dgconfig          number;
+        num_far_sync          number;
+        num_realtime_query    number;
+        num_terminal_db       number;
+        num_rolling           number;
+        num_rolling_logs      number;
+        num_rolling_parts     number;
+        num_rolling_pops      number;
+        num_rolling_pots      number;
+        num_global_seq_use    number;
+        use_global_sequences  varchar2(5);
+        use_realtime_query    varchar2(5);
+        use_rolling           varchar2(5);
+    BEGIN
+        -- initialize
+        feature_boolean := 0;
+        aux_count := 0;
+        num_casc_stby := 0;
+        num_dgconfig :=0;
+        num_far_sync := 0;
+        num_realtime_query := 0;
+        num_terminal_db := 0;
+        num_rolling := 0;
+        num_rolling_logs := 0;
+        num_rolling_parts := 0;
+        num_rolling_pops := 0;
+        num_rolling_pots := 0;
+        num_global_seq_use := 0;
+        use_global_sequences := 'FALSE';
+        use_realtime_query := 'FALSE';
+        use_rolling := 'FALSE';
+
+        -- We have to first look for each Active Data Guard feature before we can
+        execute immediate 'select count(*) from v$dataguard_config'
+        -- report if they are using any of them.
+
+        -- determine if v$dataguard_config is populated
+            into num_dgconfig;
+
+        -- Depending on whether v$dataguard_config is populated or not, some
+        -- of the commands below will either use v$dataguard_config or
+        -- v$archive_dest.
+
+        if (num_dgconfig > 0) then
+            -- get number of Far Sync Instances
+            execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                'from v$dataguard_config ' ||
+                'where (DEST_ROLE = ''FAR SYNC INSTANCE'')'
+                into num_far_sync;
+            if (num_far_sync > 0) then
+                feature_boolean := 1;
+            end if;
+
+            -- get the number of cascading standbys
+            execute immediate 'select count(unique(PARENT_DBUN)) ' ||
+                'from v$dataguard_config ' ||
+                'where (DEST_ROLE != ''LOGICAL STANDBY'') ' ||
+                'and (PARENT_DBUN not in ' ||
+                '(select DB_UNIQUE_NAME from v$database) and ' ||
+                'PARENT_DBUN != ''NONE'' and PARENT_DBUN != ''UNKNOWN'')'
+                into num_casc_stby;
+            if (num_casc_stby > 0) then
+                feature_boolean := 1;
+            end if;
+
+            -- get the number of terminal databases
+            -- Note: this is not an Active Data Guard feature, but we report it.
+            execute immediate 'select count(unique(DB_UNIQUE_NAME)) ' ||
+                'from v$dataguard_config ' ||
+                'where (DB_UNIQUE_NAME not in ' ||
+                '(select PARENT_DBUN from v$dataguard_config) and ' ||
+                'PARENT_DBUN != ''UNKNOWN'')'
+                into num_terminal_db;
+
+            -- check for DBMS_ROLLING usage
+            execute immediate 'select count(status) from dba_rolling_status'
+                into num_rolling;
+            if (num_rolling > 0) then
+                feature_boolean := 1;
+                use_rolling := 'TRUE';
+
+                -- get the total number of DBMS_ROLLING participants
+                execute immediate 'select count(dbun) '                     ||
+                    'from dba_rolling_databases '                           ||
+                    'where participant=''YES'''
+                    into num_rolling_parts;
+
+                -- get the number of physicals of the original primary
+                execute immediate 'select count(scope) '                    ||
+                    'from dba_rolling_parameters where name=''PROTECTS'''   ||
+                    'and curval=''PRIMARY'' and scope in (select dbun '     ||
+                    'from dba_rolling_databases where participant=''YES'''  ||
+                    'and role=''PHYSICAL'')'
+                    into num_rolling_pops;
+
+                -- get the number of physicals of the future primary
+                execute immediate 'select count(scope) '                    ||
+                    'from dba_rolling_parameters where name=''PROTECTS'''   ||
+                    'and curval=''TRANSIENT'' and scope in (select dbun '   ||
+                    'from dba_rolling_databases where participant=''YES'' ' ||
+                    'and role=''PHYSICAL'')'
+                    into num_rolling_pots;
+
+                -- get the number of logical standbys
+                execute immediate 'select count(dbun) '                     ||
+                    'from dba_rolling_databases where participant=''YES'' ' ||
+                    'and role=''LOGICAL'' and dbun != '                     ||
+                    '(select future_primary from dba_rolling_status)'
+                    into num_rolling_logs;
+            end if;
+        else
+            -- get number of Far Sync Instances
+            execute immediate 'select count(*) from v$archive_dest_status ' ||
+                'where status = ''VALID'' and type = ''FAR SYNC'''
+                into num_far_sync;
+            if (num_far_sync > 0) then
+                feature_boolean := 1;
+            end if;
+
+            -- copy far sync instance count into cascading standby
+            num_casc_stby := num_far_sync;
+        end if;
+
+        -- check for real time query usage
+        -- We can only count the directly connected standbys
+        execute immediate 'select count(*) from v$archive_dest_status ' ||
+            'where status = ''VALID'' and ' ||
+            'recovery_mode like ''MANAGED%QUERY'' and ' ||
+            'database_mode = ''OPEN_READ-ONLY'''
+            into num_realtime_query;
+        if (num_realtime_query > 0) then
+            use_realtime_query := 'TRUE';
+            feature_boolean := 1;
+        end if;
+        -- check for global sequence usage
+        execute immediate 'select count(*) from dba_sequences ' ||
+            'where sequence_owner != ''SYS'' and session_flag = ''N'''
+            into num_global_seq_use;
+        if (num_global_seq_use > 0) then
+            use_global_sequences := 'TRUE';
+        end if;
+        if (feature_boolean = 1) then
+            feature_usage :=
+                    'Number of Far Sync Instances: ' || to_char(num_far_sync) ||
+            ', ' || 'Number of Cascading databases: ' || to_char(num_casc_stby) ||
+            ', ' || 'Number of Terminal databases: ' || to_char(num_terminal_db) ||
+            ', ' || 'Real Time Query used: ' || upper(use_realtime_query) ||
+            ', ' || 'Global Sequences used: ' || upper(use_global_sequences) ||
+            ', ' || 'DBMS_ROLLING used: ' || upper(use_rolling) ||
+            ', ' || 'Number of DBMS_ROLLING Participants: '
+                 || to_char(num_rolling_parts) ||
+            ', ' || 'Number of DBMS_ROLLING OP Physicals: '
+                 || to_char(num_rolling_pops) ||
+            ', ' || 'Number of DBMS_ROLLING FP Physicals: '
+                 || to_char(num_rolling_pots) ||
+            feature_info := to_clob(feature_usage);
+            ', ' || 'Number of DBMS_ROLLING OP Logicals: '
+                 || to_char(num_rolling_logs)
+            ;
+        else
+            feature_info := to_clob('Active Data Guard usage not detected');
+        end if;
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: e603f90b08042692111d19d5db477d3a
+processedLineage: false
+entityStatus: Approved

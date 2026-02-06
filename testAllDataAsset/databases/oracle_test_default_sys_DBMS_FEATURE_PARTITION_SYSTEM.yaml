@@ -1,0 +1,517 @@
+name: DBMS_FEATURE_PARTITION_SYSTEM
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_PARTITION_SYSTEM
+storedProcedureCode:
+  language: SQL
+  code: |2-
+      c1            SYS_REFCURSOR;
+    PROCEDURE dbms_feature_partition_system
+          (is_used OUT number, data_ratio OUT number, clob_rest OUT clob)
+    AS
+      stmt          varchar2(32767) default null;
+      inc_result    varchar2(32767) default null;
+      result        clob            default null;
+      is_sharded    char(1)         default null;
+    BEGIN
+      -- initialize
+      is_used := 0;
+      data_ratio := 0;
+      clob_rest := NULL;
+
+      -- SQL is synchronized with Partitioning user tracking to simplify development
+      -- and enhancement of code
+    stmt := q'!with bracket as (
+                 select /*+ materialize */ x.* from
+                        (select dense_rank() over (order by  decode(bo#,null,pobj#,bo#)) NUM,
+                                idx_or_tab,
+                                ptype, pcols, pcnt, rpcnt,
+                                subptype, subpcols, subpartemp, subpcnt, rsubpcnt,
+                                idx_flags, idx_type, idx_uk, orphaned_entries,
+                                def_segment_creation, partial_idx,
+                                zonemap, attrcluster
+                                -- read only
+                                , numrodeftab, numrodefpart
+                                , numropart, numrosubpart
+                                -- partitioned external tables
+                                , exttab, exttype
+                                -- sharded table
+                                , sharded
+                                -- some debug info
+                                , owner, name --, objn
+                         from
+                         ( select /*+ full(o) */ o.obj# objn, i.bo#, p.obj# pobj#,
+                           u.name owner, o.name name,
+                           decode(o.type#,1,'I',2,'T',3,'C',null) IDX_OR_TAB,
+                           is_xml ||
+                           -- tracking of JSON partitioned tables, similar to XML tracking
+                           -- e.g. prefixing the partitioning type
+                           case when bitand(p.flags,4194304)=4194304 then 'JSON-' end ||
+                           -- introducing abbreviations
+                           -- I: interval, R: range, H: hash, L: list, S: system
+                           -- RF: reference, IR: interval-ref, AL: auto list
+                           -- (P): parent of reference partitioned table
+                           decode(p.parttype, 1, case when bitand(p.flags,64)=64 then
+                                                     -- INTERVAL-REF, 12c
+                                                     case when bitand(p.flags,32)=32 then 'IR'
+                                                          else 'I' end
+                                                     else 'R' end
+                                             ,2, 'H', 3, 'S'
+                                                     -- AUTO LIST, 12.2
+                                                     ,4, case when bitand(p.flags,64)=64
+                                                              then 'AL'
+                                                              else 'L' end
+                                                    ,5, 'RF'
+                                             ,p.parttype||'-?') ||
+                          decode(bitand(p.flags,32),32,' (P)') PTYPE,
+                           -- introducing abbreviations
+                           -- I: interval, R: range, H: hash, L: list, S: system
+                           -- RF: reference, IR: interval-ref, AL: auto list
+                           -- (P): parent of reference partitioned table
+                          decode(mod(p.spare2, 256), 0, null
+                                                       , 1, case when bitand(p.flags, 32768) = 32768
+                                                                 then 'I'
+                                                                 else 'R' end
+                                                        , 2, 'H', 3,'S'
+                                                        -- AUTO LIST, 12.2
+                                                        ,4, case when bitand(p.flags,32768)=32768
+                                                                 then 'AL'
+                                                                 else 'L' end
+                                                        , 5, 'RF'
+                                                        , p.spare2||'-?') SUBPTYPE,
+                          p.partcnt PCNT,
+                          -- interval subpartitioning
+                          -- overloading default subpartitioning count with max number of
+                          -- subpartitions. default subpartition count does not really make sense
+                          -- for interval subpartition since subpartitions will be created on demand
+                          case when (mod(p.spare2, 256) = 1 and bitand(p.flags, 32768) = 32768)
+                               then 1048575
+                          else
+                               mod(trunc(p.spare2/65536), 65536)
+                          end SUBPCNT,
+                          to_char(p.partkeycols) || vc.vc_p PCOLS,
+                          to_char(case mod(trunc(p.spare2/256), 256)
+                                    case when bitand(p.flags,2) = 2 then 'LP'
+                               when 0 then null
+                               else mod(trunc(p.spare2/256), 256) end)||vc.vc_sp SUBPCOLS,
+                          case when bitand(p.flags,1) = 1 then
+                                          else 'L' end
+                               when bitand(p.flags,2) = 2 then 'GP'
+                          end IDX_FLAGS,
+                          -- introducing abbreviation
+                          -- N: normal, /R: reverse, B: bitmap, C: cluster, IT: iot - top
+                          -- IN: iot nested, S: secondary, A: ansi, L: lob, -F: function-based
+                          -- D: domain
+                          decode(i.type#, 1, 'N'||
+                                              decode(bitand(i.property, 4), 0, '', 4, '/R'),
+                                          2, 'B', 3, 'C', 4, 'IT',
+                                          5, 'IN', 6, 'S', 7, 'A', 8, 'L',
+                                          9, 'D')  ||
+                                          case when bitand(i.property,16) = 16
+                                               then '-F' end IDX_TYPE,
+                          decode(i.property, null,null,
+                                             decode(bitand(i.property, 1), 0, 'NU',
+                                                                           1, 'U', '?')) IDX_UK,
+                          -- real partition and subpartition count
+                          case when bitand(p.flags,64)=64 then op.xnumpart else p.partcnt end RPCNT,
+                          osp.numsubpart RSUBPCNT,
+                          -- deferred segments
+                          case o.type#
+                          when 1 then --index
+                            decode(ip_seg_off,null,isp_seg_off,ip_seg_off)
+                          when 2 then --table
+                            decode(tp_seg_off,null,tsp_seg_off,tp_seg_off)
+                          else null end DEF_SEGMENT_CREATION,
+                          -- partial indexing
+                          -- this is overloaded functionality, showing different values for tables
+                          -- and indexes
+                          -- tables:   ON | OFF
+                          -- indexes:  P: partial, F: full index
+                          -- in addition it is overloaded with the number of [sub]partitions
+                          -- with indexing off FOR PARTITIONED INDEXES. Null for nonpartitioned ones
+                          case o.type#
+                          when 1 then --index
+                             decode(bitand(i.flags, 8388608), 8388608, 'P', 'F')||'-'||
+                            -- overload field with count of all [sub]partitions with indexing off
+                            decode(ip_idx_off,null,isp_idx_off,ip_idx_off)
+                          when 2 then --table
+                            decode(bitand(p.flags,8192),8192,'OFF','ON')||'-'||
+                            -- overload field with count of all [sub]partitions with indexing off
+                            decode(tp_idx_off,null,tsp_idx_off,tp_idx_off)
+                          else null end PARTIAL_IDX,
+                          null ORPHANED_ENTRIES,
+                          decode(zonemap,null,'N',zonemap) ZONEMAP,
+                          decode(attrcluster,null,'N',attrcluster) ATTRCLUSTER,
+                          st_part SUBPARTEMP
+                          -- 12.2 read only partition counts
+                          , decode(bitand(p.flags, 65536), 65536, 1, 0) NUMRODEFTAB -- table default read only
+                          , numrodefpart -- partitions default read only
+                          , numropart, numrosubpart -- real counts of read only [sub]partitions
+                          , exttab
+                          , decode(exttype,'ORACLE_LOADER','LD','ORACLE_HIVE','HI',
+                                           'ORACLE_HDFS','HD','ORACLE_DATAPUMP','DP',exttype) as exttype
+                          , case o.type#
+                            when 1 then -- partitioned index can only be ignored when base table is sharded
+                                 case when bitand(i.property,2) = 2 and
+                                      (select decode(bitand(oo.flags, 1073741824), 0, 'N', 1073741824, 'Y', 'N')
+                                           from obj$ oo where obj# = i.bo#) = 'Y' then
+                                   'Y'
+                                 else 'N' end
+                            when 2 then -- identify sharded tables
+                                 decode(bitand(o.flags, 1073741824), 0, 'N', 1073741824, 'Y', 'N')
+                            when 3 then -- cluster
+                                   'N'
+                            else null end sharded
+                          from partobj$ p, obj$ o, user$ u, ind$ i,
+                               ( select distinct obj#, 'XML-' as is_xml from opqtype$ where type=1) xml,
+                               -- real subpartition count for tables and indexes
+                               ( select /* NO_MERGE FULL(tsp) FULL(tcp) */ tcp.bo#, count(*) numsubpart
+                                 -- default read only partitions (none counts as no)
+                                 , max(tcp.numrodefpart) numrodefpart
+                                 -- read only subpartition count
+                                 , sum(decode(bitand(tsp.flags, 67108864), 67108864, 1, 0)) numrosubpart
+                                 from tabsubpart$ tsp,
+                                      (select obj#, bo#, spare2,
+                                              sum(decode(bitand(spare2, 12288), 4096, 1, 0))
+                                              over (partition by bo#)  numrodefpart
+                                       from tabcompart$) tcp
+                                 where tcp.obj# = tsp.pobj#
+                                 group by tcp.bo#
+                                 union all
+                                 select /* NO_MERGE FULL(isp) FULL(icp) */ icp.bo#, count(*) numsubpart
+                                 -- dummy for read only info
+                                 , null, null
+                               -- real partition count for tables and indexes
+                                 from indsubpart$ isp, indcompart$ icp
+                                 where icp.obj# = isp.pobj#
+                                 group by icp.bo#) osp,
+                               ( select tp.bo#, count(*) xnumpart
+                                 -- read only partitions count
+                                 , sum(decode(bitand(tp.flags, 67108864), 67108864, 1, 0)) numropart
+                                 from tabpart$ tp
+                                 group by tp.bo#
+                                 union all
+                                 select ip.bo#, count(*) xnumpart
+                                 -- dummy for read only partitions
+                                 , 0
+                                 from indpart$ ip
+                                 group by ip.bo#) op,
+                               -- details table partitions: partial indexing and deferred segments
+                               ( select tp.bo#,
+                                        -- number or partitions with indexing off
+                                        sum(decode(bitand(tp.flags, 2097152), 2097152, 1, 0))  tp_idx_off,
+                                        -- number or partitions with deferred segment creation
+                                        sum(decode(bitand(tp.flags, 65536), 65536, 1, 0))  tp_seg_off
+                                 from tabpart$ tp
+                                 group by tp.bo#) pxd,
+                               -- details table subpartitions: partial indexing and deferred segments
+                               ( select tcp.bo#,
+                                        -- number or subpartitions with indexing off
+                                        sum(decode(bitand(tsp.flags, 2097152), 2097152, 1, 0))  tsp_idx_off,
+                                        -- number or subpartitions with deferred segment creation
+                                        sum(decode(bitand(tsp.flags, 65536), 65536, 1, 0))  tsp_seg_off
+                                 from tabsubpart$ tsp, tabcompart$ tcp
+                                 where tcp.obj# = tsp.pobj#
+                                 group by tcp.bo#) spxd,
+                               -- details index partitions: partial indexing and deferred segments
+                               ( select ip.bo#,
+                                        -- number or partitions with indexing off
+                                        sum(decode(bitand(ip.flags, 1), 1, 1, 0))  ip_idx_off,
+                                        -- number or partitions with deferred segment creation
+                                        sum(decode(bitand(ip.flags, 65536), 65536, 1, 0))  ip_seg_off
+                                 from indpart$ ip
+                                 group by ip.bo#) ipd,
+                               -- details index subpartitions: partial indexing and deferred segments
+                               ( select icp.bo#,
+                                        -- number or subpartitions with indexing off
+                                        sum(decode(bitand(isp.flags, 1), 1, 1, 0))  isp_idx_off,
+                                        -- number or subpartitions with deferred segment creation
+                                        sum(decode(bitand(isp.flags, 65536), 65536, 1, 0))  isp_seg_off
+                                 from indsubpart$ isp, indcompart$ icp
+                                 where icp.obj# = isp.pobj#
+                                 group by icp.bo#) ispd,
+                               -- attribute clustering
+                               ( select c.clstobj#, 'Y-'||
+                                        -- kind of attribute clustering
+                                        case when ctable is not null
+                                             then 'MT-' else 'ST-' end
+                                        ||
+                                        case when clstfunc = 1 then 'I-'     -- interleaved
+                                             else 'L-' end     -- linear
+                                        ||to_char(decode(ctable, null,0,ctable)+1)||'-'||ccol as ATTRCLUSTER
+                                 from sys.clst$ c,
+                                      -- count of tables and columns used for attribute clustering
+                                      -- no detailed breakdown of columns per row
+                                      -- table count does not include fact table for hierarchical attr. clustering
+                                      ( select clstobj#, count(intcol#) ccol
+                                        from sys.clstkey$
+                                        group by clstobj#) k,
+                                      ( select clstobj#, count(*) ctable
+                                        from sys.clstjoin$
+                                        group by clstobj#) kt
+                                 where c.clstobj# = k.clstobj#
+                                 and   c.clstobj# = kt.clstobj#(+)) attrcl,
+                                -- zone maps
+                                (select detailobj#, zonemap from
+                                    (select sd.detailobj#, flags, 'Y-'||
+                                            -- single table zonemap or hierarchical zonemap
+                                            decode(bitand(sn.flag3, 1024),
+                                                   0, 'ST', 'MT') ||
+                                                   -- number of tables and columns in zonemap (aggr, no detailed breakdown)
+                                                   -- table count does not include fact table for hierarch. zonemap
+                                                   '-'||  count(distinct sd.detailobj#) over (partition by sd.sumobj#) ||
+                                                   '-'||  sa.zmcol as ZONEMAP
+                                     from sys.sumdetail$ sd, sys.sum$ s, sys.snap$ sn,
+                                          ( select sumobj#, count(*) zmcol
+                                            from sys.sumagg$
+                                            where aggfunction = 18
+                                     and s.containernam(+) = sn.vname) v
+                                            group by sumobj#) sa
+                                     where s.obj# = sd.sumobj#
+                                     and   s.obj# = sa.sumobj#
+                                 where bitand(v.flags, 2) = 2      /* zonemap fact table */
+                               ) zm,
+                               ( select bo#, count(*) st_part
+                                 from defsubpart$
+                                 group by bo# ) spt,
+                               -- partitioned external tables
+                               ( select obj#, 'Y' exttab, type$ exttype
+                                 from external_tab$ ) xt,
+                               -- virtual column detection
+                               (select obj#, case when p_cnt is not null
+                                             then '-VC('||p_cnt||')'
+                                             else null end as vc_p,
+                                             case when sp_cnt is not null
+                                             then '-VC('||sp_cnt||')'
+                                             else null end as vc_sp
+                                             from (select pc.obj#, lvl, count(*) cnt
+                                                   from (select obj#, 'P' lvl, intcol#
+                                                         from partcol$ pc
+                                                         union all
+                                                         select obj#, 'SP' lvl, intcol#
+                                                         from subpartcol$) pc,
+                                                        (select obj#, intcol# from col$
+                                                         where bitand(property, 8) = 8) c
+                                                   where pc. obj# = c.obj# and pc.intcol# =c.intcol#
+                                                  group by pc.obj#, lvl)
+                                             pivot (max(cnt) cnt
+                                                    for lvl in ('P' as P,'SP' as SP))) vc
+                          where o.obj# = i.obj#(+)
+                          and   o.owner# = u.user#
+                          and   p.obj# = o.obj#
+                          and   p.obj# = xml.obj#(+)
+                          and   p.obj# = osp.bo#(+)
+                          and   p.obj# = op.bo#(+)
+                          and   p.obj# = pxd.bo#(+)
+                          and   p.obj# = spxd.bo#(+)
+                          and   p.obj# = ipd.bo#(+)
+                          and   p.obj# = ispd.bo#(+)
+                          and   p.obj# = spt.bo#(+)
+                          and   o.obj# = attrcl.clstobj#(+)
+                          and   o.obj# = zm.detailobj#(+)
+                          and   o.obj# = xt.obj#(+)
+                          and   o.obj# = vc.obj#(+)
+                          -- bug 14369338, exclude AUDSYS
+                          -- changed logic to exclude all oracle maintained schemas
+    --                      and   u.name not in (select distinct username from
+    --                                           dba_users where oracle_maintained = 'Y')
+    --                      and   u.name <> 'SH'
+                          -- bug 12573239
+                          -- exclude RMAN catalog usage, identified by schema
+                          -- (introduced with ZDLRA, 12.1.0.2)
+    --                      and u.name not in (select u.name
+    --                                         from sysauth$ sa join user$ u
+    --                                         on (sa.grantee# = u.user#) join user$ u2
+    --                                         on (sa.privilege# = u2.user#)
+    --                                         where u2.name = 'RECOVERY_CATALOG_OWNER')
+                          -- bug 12573239
+                          -- exclude Spatial topology tables and indexes
+                          -- SDO metadata does not have any unique identifier like obj#
+                          -- but only owner and table name. This would make a very expensive
+                          -- query joing back to obj$ and user$ to uniquely identify
+                          -- partitioned indexes through i.bo#, so we are using
+                          -- an approximation by filtering on the prefix of the
+                          -- auto-generated index names ...
+    --                      and not exists (select 1
+    --                                      from mdsys.sdo_topo_metadata_table sdo
+    --                                      where u.name = sdo.sdo_owner
+    --                                      and o.name like topology||'%')
+                          -- fix bug 3074607 - filter on obj$
+                          and o.type# in (1,2,3,19,20,25,34,35)
+                          -- exclude flashback data archive tables
+                          -- fix bug 14666795
+                          -- crystal clear identification of FBA tables deemed as too expensive
+                          -- would require a probe against tab$
+                          -- e,g. o.obj# not in (select obj# from tab$ where bitand(property,8589934592)=8589934592)
+    --                      and o.name not like 'SYS_FBA%'
+                            and bitand(o.flags, 68719476736) = 0
+                    union all
+                    -- global nonpartitioned indexes on partitioned tables
+                    select o.obj#, i.bo#, p.obj# pobj#,
+                           u.name owner, o.name name,
+                           'I' IDX_OR_TAB,
+                            null,null,null,null,
+                            to_char(case cols when 0 then null
+                                      else cols end) PCOLS,
+                            null SUBPCOLS,
+                           'GNP' IDX_FLAGS,
+                          -- introducing abbreviation
+                          -- N: normal, /R: reverse, B: bitmap, C: cluster, IT: iot - top
+                          -- IN: iot nested, S: secondary, A: ansi, L: lob, -F: function-based
+                                          2, 'B', 3, 'C', 4, 'IT',
+                          -- D: domain
+                           decode(i.type#, 1, 'N'||
+                                          decode(bitand(i.property, 4), 0, '', 4, '/R'),
+                                          5, 'IN', 6, 'S', 7, 'A', 8, 'L',
+                                          9, 'D') ||
+                           case when bitand(i.property,16) = 16 then '-F' end IDX_TYPE,
+                           decode(i.property, null,null,
+                                              decode(bitand(i.property, 1), 0, 'NU',
+                                              1, 'U', '?')) IDX_UK,
+                           null, null,
+                           null DEF_SEGMENT_CREATION,
+                           -- P: partial, F: full
+                           decode(bitand(i.flags, 8388608), 8388608, 'P', 'F') PARTIAL_IDX,
+                           decode(bitand(i.flags, 268435456), 268435456, 'YES', 'NO') ORPHANED_ENTRIES,
+                           NULL ZONEMAP, NULL ATTRCLUSTER,
+                           NULL SUBPARTEMP
+                           , NULL NUMDEFROTAB
+                           , NULL NUMDEFROPART
+                           , NULL NUMROPART
+                           , NULL NUMROSUBPART
+                           , NULL EXTTAB
+                           , NULL EXTTYPE
+                           , NULL SHARDED
+                    from partobj$ p, user$ u, obj$ o, ind$ i
+                    where p.obj# = i.bo#
+                    -- exclude flashback data archive tables
+    --                and   o.name not like 'SYS_FBA%'
+                    -- bug 12573239
+                    -- exclude global indexes on Spatial topology tables
+    --                and o.name not in (select topology||'_RELATION$'
+    --                                   from mdsys.sdo_topo_metadata_table sdo
+    --                                   where u.name = sdo.sdo_owner)
+                    and   o.owner# = u.user#
+                    and   p.obj# = o.obj#
+                    -- nonpartitioned index
+                    and   bitand(i.property, 2) <>2
+                    and   bitand(o.flags, 68719476736) = 0
+                    -- bug 14369338, exclude AUDSYS
+    --                and   u.name not in ('SYS','SYSTEM','SH','SYSMAN','AUDSYS')
+                    -- bug 12573239
+                    -- exclude RMAN catalog usage, identified by schema (introduced with ZDLRA, 12.1.0.2)
+    --                and u.name not in (select u.name
+    --                                   from sysauth$ sa join user$ u
+    --                                   on (sa.grantee# = u.user#) join user$ u2 on (sa.privilege# = u2.user#)
+    --                                   where u2.name like 'RECOVERY_CATALOG_OWNER')
+                    )
+                    ) x
+            )
+    --        ,
+    --        -- filter out partitioned table used for container map, incl. indexes
+    --        subset as
+    --        (select bracket.num
+    --           from bracket
+    --           join
+    --             (select substr(cm,1,instr(cm,'.')-1) obj_owner, substr(cm,instr(cm,'.')+1) obj_name
+    --                     from
+    --                       (select regexp_replace(value$,'"' ,'') cm
+    --                               from sys.props$ where name = 'CONTAINER_MAP'
+    --                       )
+    --             )  conmap
+    --           on bracket.name=conmap.obj_name and bracket.owner=conmap.obj_owner
+    --         )
+             select num||':'||idx_or_tab||':'||ptype||':'||subptype||':'||
+                        pcnt||':'||subpcnt||':'||pcols||':'||subpcols||':'||
+                        idx_flags||':'||idx_type||':'||idx_uk||':'||rpcnt||':'||
+                        rsubpcnt||':'|| def_segment_creation||':'||
+                        partial_idx||':'||orphaned_entries ||':'||zonemap||':'||
+                        attrcluster||':'||subpartemp
+                        -- read only partitions and subpartitions
+                        ||':'|| numrodeftab||':'||numrodefpart
+                        ||':'|| numropart||':'||numrosubpart
+                        -- partitioned external tables
+                        ||':'|| exttab ||':'||exttype
+                        -- sharded or not
+                        ||':'|| sharded
+                        -- some debug info for customer-specific analysis,
+                        -- if required. Uncommenting this line will provide the
+                        -- tracking of object owner and object name
+    --                      ||  ':'|| owner ||'.'||name
+                        || '|' my_string
+                        -- new flag to identify sharded tables
+                        -- we want to get table info for sharded tables, but without counting
+                        -- those tables as partition feature usage, so we cannot simply
+                        -- filter those tables out.
+                        , sharded is_sharded
+            from bracket
+    --      where not exists
+    --        (select 1 from subset where subset.num = bracket.num)
+            order by num, idx_or_tab desc!';
+
+
+       -- usage of spatial catalog made rewrite to dynamic sql necessary
+       open c1 for stmt;
+
+
+       loop
+            fetch c1 into inc_result, is_sharded;
+            exit when c1%notfound;
+
+         if (is_used = 0) then
+           if is_sharded  = 'N' then
+             is_used:=1;
+           end if;
+         end if;
+
+         clob_rest := clob_rest||inc_result;
+       end loop;
+
+       close c1;
+
+       if (is_used = 1) then
+         select pcnt into data_ratio
+         from
+         (
+           SELECT c1, TRUNC((ratio_to_report(sum_blocks) over())*100,2) pcnt
+           FROM
+           (
+            select decode(p.obj#,null,'REST','PARTTAB') c1, sum(s.blocks) sum_blocks
+            from tabpart$ p, seg$ s
+            group by  decode(p.obj#,null,'REST','PARTTAB')
+            where s.file#=p.file#(+)
+            and s.block#=p.block#(+)
+            and s.type#=5
+            )
+          )
+          where c1 = 'PARTTAB';
+       end if;
+    end;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: ffef0879fb6852129cb1f10f2b5792f5
+processedLineage: false
+entityStatus: Approved

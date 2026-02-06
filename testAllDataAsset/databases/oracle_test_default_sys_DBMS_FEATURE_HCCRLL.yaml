@@ -1,0 +1,89 @@
+name: DBMS_FEATURE_HCCRLL
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_HCCRLL
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_HCCRLL
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+        feature_usage         varchar2(1000);
+        num_cmp_dollar        number;
+        num_hcc               number;
+        num_rll               number;
+        blk_rll               number;
+
+    begin
+        -- initialize
+        feature_boolean := 0;
+        aux_count := 0;
+        num_cmp_dollar := 0;
+        num_hcc := 0;
+
+        execute immediate 'select count(*) from compression$ '
+            into num_cmp_dollar;
+
+        -- check if there is something compressed
+        execute immediate 'select count(*) from seg$ s ' ||
+             ' where bitand(s.spare1, 100663296) = 33554432 OR ' ||
+                   ' bitand(s.spare1, 100663296) = 67108864 OR ' ||
+                   ' bitand(s.spare1, 100663296) = 100663296 '
+            into num_hcc;
+
+            -- check for HCC with Row Level Locking
+            execute immediate 'select count(*) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 2147483648) = 2147483648 '
+               into num_rll;
+
+            execute immediate 'select sum(blocks) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 2147483648) = 2147483648 '
+               into blk_rll;
+
+        if ((num_rll > 0) OR (blk_rll > 0)) then
+
+            feature_boolean := 1;
+
+         feature_usage :=
+          'Number of Hybrid Columnar Compressed Segments: ' || to_char(num_hcc) ||
+            ', ' || ' Segments Analyzed: ' || to_char(num_cmp_dollar) ||
+            ', ' || ' Segments with HCC Row Level Locking: ' || to_char(num_rll) ||
+            ', ' || ' Blocks with HCC Row Level Locking: ' || to_char(blk_rll);
+
+            feature_info := to_clob(feature_usage);
+        else
+            feature_info := to_clob('Hybrid Columnar Compression Row Level Locking not detected');
+        end if;
+
+    end;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 3f994599164c797096b44f3d3b5e6c0e
+processedLineage: false
+entityStatus: Approved

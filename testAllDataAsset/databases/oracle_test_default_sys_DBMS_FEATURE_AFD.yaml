@@ -1,0 +1,45 @@
+name: DBMS_FEATURE_AFD
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_AFD
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_afd
+          (is_used OUT number, aux_count OUT number, feature_info OUT clob)
+    AS
+    BEGIN
+      select count(*) into is_used
+             from v$asm_disk_stat where path LIKE 'AFD:%' AND
+                                        state = 'NORMAL' AND
+                                        library LIKE '%AFD Library%' AND
+                                        mount_status = 'CACHED' AND
+                                        group_number != '0';
+    END;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: b34ba995e8a573f0036ef86f7c6a285e
+processedLineage: false
+entityStatus: Approved

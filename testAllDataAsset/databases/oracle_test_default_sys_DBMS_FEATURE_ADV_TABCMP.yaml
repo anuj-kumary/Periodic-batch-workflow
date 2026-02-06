@@ -1,0 +1,86 @@
+name: DBMS_FEATURE_ADV_TABCMP
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ADV_TABCMP
+storedProcedureCode:
+  language: SQL
+  code: |2-
+        feature_info    OUT CLOB)
+    procedure DBMS_FEATURE_ADV_TABCMP(
+        feature_boolean OUT NUMBER,
+        aux_count       OUT NUMBER,
+    AS
+        feature_usage               varchar2(1000);
+        num_tab                     number;
+        num_tab_part                number;
+        num_tab_subpart             number;
+
+    BEGIN
+        feature_boolean             := 0;
+        aux_count                   := 0;
+
+        -- dbms_compression might create tables with
+        -- prefixes 'CMP4%' which we want to ignore
+        execute immediate
+           'select count(*) from dba_tables where ' ||
+           'compress_for = ''ADVANCED'' and table_name ' ||
+           'not like '''
+            || prvt_compression.COMP_TMP_OBJ_PREFIX || '%'''
+        into num_tab;
+
+        execute immediate
+           'select count(*) from dba_tab_partitions where ' ||
+           'compress_for = ''ADVANCED'' '
+        into num_tab_part;
+
+        execute immediate
+           'select count(*) from dba_tab_subpartitions where ' ||
+           'compress_for = ''ADVANCED'' '
+        into num_tab_subpart;
+
+        --Summary
+        feature_usage :=
+            ' ADVANCED Table Compression Feature Usage: ' ||
+                    ' Tables compressed for ADVANCED: ' ||
+                      to_char(num_tab) ||
+            ', ' || ' Table partitions compressed for ADVANCED: ' ||
+                      to_char(num_tab_part) ||
+            ', ' || ' Table subpartitions compressed for ADVANCED: ' ||
+                      to_char(num_tab_subpart);
+
+         if (num_tab + num_tab_part + num_tab_subpart > 0) then
+          feature_boolean := 1;
+          feature_info := to_clob(feature_usage);
+        else
+          feature_boolean := 0;
+          feature_info := to_clob('ADVANCED Table Compression Not Detected');
+        end if;
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: a0643901c40d64424311449c91b65fd6
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,180 @@
+name: DBMS_FEATURE_HCC
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_HCC
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_HCC
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+        feature_usage         varchar2(1000);
+        num_cmp_dollar        number;
+        num_level1            number;
+        num_level2            number;
+        num_level3            number;
+        num_level4            number;
+        num_hcc               number;
+        num_dmls              number;
+        num_rll               number;
+        blk_level1            number;
+        blk_level2            number;
+        blk_level3            number;
+        blk_level4            number;
+        blk_nonhcc            number;
+        blk_nonhcctry         number;
+        blk_rll               number;
+
+    begin
+        -- initialize
+        feature_boolean := 0;
+        aux_count := 0;
+        num_cmp_dollar := 0;
+        num_hcc := 0;
+        num_level1  := 0;
+        num_level2  := 0;
+        num_level3  := 0;
+        num_level4  := 0;
+        blk_level1 := 0;
+        blk_level2 := 0;
+        blk_level3 := 0;
+        blk_level4 := 0;
+
+        execute immediate 'select count(*) from compression$ '
+            into num_cmp_dollar;
+
+        -- check if there is something compressed
+        execute immediate 'select count(*) from seg$ s ' ||
+             ' where bitand(s.spare1, 234881024) = 33554432 OR '  ||
+                   ' bitand(s.spare1, 234881024) = 67108864 OR '  ||
+                   ' bitand(s.spare1, 234881024) = 100663296 OR ' ||
+                   ' bitand(s.spare1, 234881024) = 134217728'
+            into num_hcc;
+
+        if (num_hcc > 0) then
+
+            feature_boolean := 1;
+
+            -- check for HCC for Query LOW (level 1)
+            execute immediate 'select count(*) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 33554432 '
+               into num_level1;
+
+            execute immediate 'select sum(blocks) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 33554432 '
+               into blk_level1;
+
+            -- check for HCC for Query HIGH (level 2)
+            execute immediate 'select count(*) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 67108864 '
+               into num_level2;
+
+            execute immediate 'select sum(blocks) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 67108864 '
+               into blk_level2;
+
+            -- check for HCC for Archive LOW (level 3)
+            execute immediate 'select count(*) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 100663296 '
+               into num_level3;
+
+            execute immediate 'select sum(blocks) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 100663296 '
+               into blk_level3;
+
+            -- check for HCC for Archive HIGH (level 4)
+            execute immediate 'select count(*) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 134217728 '
+               into num_level4;
+
+            execute immediate 'select sum(blocks) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 234881024) = 134217728 '
+               into blk_level4;
+
+
+            -- track OLTP compression (non-HCC compression) w/in HCC
+            execute immediate 'select value from v$sysstat' ||
+                ' where name like ''HCC block compressions completed'''
+                into blk_nonhcc;
+
+            execute immediate 'select value from v$sysstat' ||
+                ' where name like ''HCC block ' ||
+                'compressions attempted'''
+                into blk_nonhcctry;
+
+            execute immediate 'select value from v$sysstat' ||
+                ' where name like ''HCC DML conventional'''
+                into num_dmls;
+
+            -- check for HCC with Row Level Locking
+            execute immediate 'select count(*) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 2147483648) = 2147483648 '
+               into num_rll;
+
+            execute immediate 'select sum(blocks) from seg$ s ' ||
+              ' where bitand(s.spare1, 2048) = 2048 AND ' ||
+                    ' bitand(s.spare1, 2147483648) = 2147483648 '
+               into blk_rll;
+
+         feature_usage :=
+          'Number of Hybrid Columnar Compressed Segments: ' || to_char(num_hcc) ||
+            ', ' || ' Segments Analyzed: ' || to_char(num_cmp_dollar) ||
+            ', ' || ' Segments Compressed Query Low: ' || to_char(num_level1) ||
+            ', ' || ' Blocks Compressed Archive Low: ' || to_char(blk_level3) ||
+            ', ' || ' Blocks Compressed Query Low: ' || to_char(blk_level1) ||
+            ', ' || ' Segments Compressed Query High: ' || to_char(num_level2) ||
+            ', ' || ' Blocks Compressed Query High: ' || to_char(blk_level2) ||
+            ', ' || ' Segments Compressed Archive Low: ' || to_char(num_level3) ||
+            ', ' || ' Segments Compressed Archive High: ' || to_char(num_level4) ||
+            ', ' || ' Blocks Compressed Archive High: ' || to_char(blk_level4) ||
+            ', ' || ' Blocks Compressed Non-HCC: ' || to_char(blk_nonhcc) ||
+            ', ' || ' Attempts to Block Compress: ' || to_char(blk_nonhcctry) ||
+            ', ' || ' Conventional DMLs: ' || to_char(num_dmls) ||
+            ', ' || ' Segments with HCC Row Level Locking: ' || to_char(num_rll) ||
+            ', ' || ' Blocks with HCC Row Level Locking: ' || to_char(blk_rll);
+
+            feature_info := to_clob(feature_usage);
+        else
+            feature_info := to_clob('Hybrid Columnar Compression not detected');
+        end if;
+
+    end;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: bb009896f15aba835bcf2dc93c861125
+processedLineage: false
+entityStatus: Approved

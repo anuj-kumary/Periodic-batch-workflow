@@ -1,0 +1,455 @@
+name: DBMS_FEATURE_REGISTER_ALLHWM
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_REGISTER_ALLHWM
+storedProcedureCode:
+  language: SQL
+  code: |2-
+      /**************************
+    procedure DBMS_FEATURE_REGISTER_ALLHWM
+    as
+    begin
+
+       * User Tables
+       **************************/
+
+      declare
+        HWM_USER_TABLES_STR CONSTANT VARCHAR2(1000) :=
+         'select count(*) from sys.tab$ t, sys.obj$ o ' ||
+           'where t.obj# = o.obj# ' ||
+             'and bitand(t.property, 1) = 0 ' ||
+             'and bitand(o.flags, 128) = 0 ' ||
+             'and o.owner# not in (select u.user# from user$ u ' ||
+                                    'where u.name in (''SYS'', ''SYSTEM''))';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('USER_TABLES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_USER_TABLES_STR,
+          'Number of User Tables');
+      end;
+
+      /**************************
+       * Segment Size
+       **************************/
+
+      declare
+        HWM_SEG_SIZE_STR CONSTANT VARCHAR2(1000) :=
+          'select max(bytes) from dba_segments';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('SEGMENT_SIZE',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_SEG_SIZE_STR,
+          'Size of Largest Segment (Bytes)');
+      end;
+
+      /**************************
+       * Partition Tables
+       **************************/
+
+      declare
+        HWM_PART_TABLES_STR CONSTANT VARCHAR2(1000) :=
+         'select nvl(max(p.partcnt), 0) from sys.partobj$ p, sys.obj$ o ' ||
+           'where p.obj# = o.obj# ' ||
+
+             'and o.type# = 2 ' ||
+             'and o.owner# not in (select u.user# from user$ u ' ||
+                                   'where u.name in (''SYS'', ''SYSTEM'', ''SH''))';
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('PART_TABLES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_PART_TABLES_STR,
+          'Maximum Number of Partitions belonging to an User Table');
+      end;
+
+      /**************************
+       * Partition Indexes
+       **************************/
+
+      declare
+        HWM_PART_INDEXES_STR CONSTANT VARCHAR2(1000) :=
+         'select nvl(max(p.partcnt), 0) from sys.partobj$ p, sys.obj$ o ' ||
+           'where p.obj# = o.obj# ' ||
+             'and o.type# = 1 ' ||
+             'and o.owner# not in (select u.user# from user$ u ' ||
+                                   'where u.name in (''SYS'', ''SYSTEM'', ''SH''))';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('PART_INDEXES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_PART_INDEXES_STR,
+          'Maximum Number of Partitions belonging to an User Index');
+      end;
+
+      /**************************
+       * User Indexes
+       **************************/
+
+      declare
+        HWM_USER_INDEX_STR CONSTANT VARCHAR2(1000) :=
+         'select count(*) from sys.ind$ i, sys.obj$ o ' ||
+           'where i.obj# = o.obj# ' ||
+             'and bitand(i.flags, 4096) = 0 ' ||
+             'and o.owner# not in (select u.user# from user$ u ' ||
+                                    'where u.name in (''SYS'', ''SYSTEM''))';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('USER_INDEXES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_USER_INDEX_STR,
+          'Number of User Indexes');
+      end;
+
+      /**************************
+       * Sessions
+       **************************/
+
+      declare
+        HWM_SESSIONS_STR CONSTANT VARCHAR2(1000) :=
+          'select sessions_highwater from V$LICENSE';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('SESSIONS',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_SESSIONS_STR,
+          'Maximum Number of Concurrent Sessions seen in the database');
+      end;
+
+      /**************************
+       * DB Size
+       **************************/
+
+      declare
+        HWM_DB_SIZE_STR CONSTANT VARCHAR2(1000) :=
+          'select sum(bytes) from dba_data_files';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('DB_SIZE',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_DB_SIZE_STR,
+          'Maximum Size of the Database (Bytes)');
+      end;
+
+      /**************************
+       * Datafiles
+       **************************/
+
+      declare
+        HWM_DATAFILES_STR CONSTANT VARCHAR2(1000) :=
+          'select count(*) from dba_data_files';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('DATAFILES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_DATAFILES_STR,
+          'Maximum Number of Datafiles');
+      end;
+
+      /**************************
+       * Tablespaces
+       **************************/
+
+      declare
+        HWM_TABLESPACES_STR CONSTANT VARCHAR2(1000) :=
+         'select count(*) from sys.ts$ ts ' ||
+           'where ts.online$ != 3 ' ||
+             'and bitand(ts.flags, 2048) != 2048';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('TABLESPACES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_TABLESPACES_STR,
+          'Maximum Number of Tablespaces');
+      end;
+
+      /**************************
+       * CPU count
+       **************************/
+
+      declare
+        HWM_CPU_COUNT_STR CONSTANT VARCHAR2(1000) :=
+          'select sum(cpu_count_highwater) from gv$license';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('CPU_COUNT',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_CPU_COUNT_STR,
+          'Maximum Number of CPUs');
+      end;
+
+      /**************************
+       * Query Length
+       **************************/
+
+      declare
+        HWM_QUERY_LENGTH_STR CONSTANT VARCHAR2(1000) :=
+          'select max(maxquerylen) from v$undostat';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('QUERY_LENGTH',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_QUERY_LENGTH_STR,
+          'Maximum Query Length');
+      end;
+
+      /******************************
+       * National Character Set Usage
+       *******************************/
+
+      declare
+        HWM_NCHAR_COLUMNS_STR CONSTANT VARCHAR2(1000) :=
+          'select count(*) from col$ c, obj$ o ' ||
+          ' where c.charsetform = 2 and c.obj# = o.obj# ' ||
+          ' and o.owner# not in ' ||
+          ' (select distinct u.user_id from all_users u, ' ||
+          ' sys.ku_noexp_view k where (k.OBJ_TYPE=''USER'' and ' ||
+          ' k.name=u.username) or (u.username=''SYSTEM'')) ' ;
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('SQL_NCHAR_COLUMNS',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_NCHAR_COLUMNS_STR,
+          'Maximum Number of SQL NCHAR Columns');
+      end;
+
+      /********************************
+        HWM_INSTANCES_STR CONSTANT VARCHAR2(1000) :=
+       * Instances
+       *********************************/
+      declare
+          'SELECT count(*) FROM gv$instance';
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('INSTANCES',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_INSTANCES_STR,
+          'Oracle Database instances');
+      end;
+
+      /****************************
+       * Materialized Views (User)
+       ****************************/
+
+      declare
+        HWM_USER_MV_STR CONSTANT VARCHAR2(1000) :=
+         'select count(*) from dba_mviews ' ||
+           'where owner not in (''SYS'',''SYSTEM'', ''SH'')';
+
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('USER_MV',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_USER_MV_STR,
+          'Maximum Number of Materialized Views (User)');
+      end;
+
+
+      /*******************
+       * Active Sessions
+       *******************/
+
+      declare
+        HWM_ACTIVE_SESSIONS_STR CONSTANT VARCHAR2(1000) :=
+          'select MAX(SUM(maxval/100)) as MAX_AAS_7DAY '||
+          '  from dba_hist_sysmetric_summary '||
+          ' where metric_name = ''Database Time Per Sec'' '||
+          '   and group_id = 2 '||
+          '   and end_time >  TRUNC(SYSDATE) - 7 '||
+          '   and end_time <= TRUNC(SYSDATE) '||
+          '   and snap_id  > (select MIN(snap_id) from dba_hist_snapshot '||
+          '                    where end_interval_time > TRUNC(SYSDATE) - 8)'||
+          ' group by dbid,snap_id ';
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('ACTIVE_SESSIONS',
+          dbms_feature_usage.DBU_HWM_BY_SQL,
+          HWM_ACTIVE_SESSIONS_STR,
+          'Maximum Average Active Sessions - estimated');
+      end;
+
+      /*******************
+       * DBMS_SCHEDULER   HWM is number of jobs per day
+       *******************/
+
+       declare
+         HWM_DBMS_SCHEDULER_STR CONSTANT VARCHAR2(1000) :=
+           'select '||
+             'round(max(runs*((max_id-min_id)/2 + 1)/tot),0) '||
+           'from '||
+             '( select '||
+                 'trunc(log_date) day, '||
+                 'max(log_id) max_id, '||
+                 'min(log_id) min_id, '||
+                 'count(log_id) tot, '||
+                 'count(case when operation = ''RUN'' then 1 end) runs '||
+               'from '||
+                 'scheduler$_event_log '||
+               'where '||
+                 'log_date > systimestamp - interval ''8'' day '||
+               'group by trunc(log_date) '||
+              ')' ;
+       begin
+         dbms_feature_usage.register_high_water_mark
+          ('HWM_DBMS_SCHEDULER',
+           dbms_feature_usage.DBU_HWM_BY_SQL,
+           HWM_DBMS_SCHEDULER_STR,
+           'Number of job runs per day');
+       end;
+
+      /*******************
+       * Exadata
+       *******************/
+
+       declare
+         HWM_EXADATA_STR CONSTANT VARCHAR2(1000) :=
+            'select replace(substr(statistics_value, 23), ''</nphysicaldisks_stats>'') from gv$cell_state where statistics_type = ''NPHYSDISKS''';
+       begin
+         dbms_feature_usage.register_high_water_mark
+          ('EXADATA_DISKS',
+           dbms_feature_usage.DBU_HWM_BY_SQL,
+           HWM_EXADATA_STR,
+           'Number of physical disks');
+       end;
+
+      /************************
+       * GSM Global services
+       ***********************/
+
+       declare
+         HWM_GSM_STR CONSTANT VARCHAR2(1000) :=
+            'select count(*) from dba_services ' ||
+            'where global_service = ''YES''';
+       begin
+         dbms_feature_usage.register_high_water_mark
+          ('GLOBAL SERVICES',
+           dbms_feature_usage.DBU_HWM_BY_SQL,
+           HWM_GSM_STR,
+           'Number of global services');
+       end;
+
+      /************
+       * Shards
+       ***********/
+
+       declare
+         DBMS_HWM_SHARDS_STR CONSTANT VARCHAR2(1000) :=
+           'DBMS_HWM_SHARDS';
+       begin
+         dbms_feature_usage.register_high_water_mark
+          ('SHARDS',
+           dbms_feature_usage.DBU_HWM_BY_PROCEDURE,
+           DBMS_HWM_SHARDS_STR,
+           'Number of deployed shards in catalog');
+       end;
+
+      /*******************
+       * Primary Shards
+       ******************/
+
+       declare
+         DBMS_HWM_PRIM_SHARDS_STR CONSTANT VARCHAR2(1000) :=
+           'DBMS_HWM_PRIM_SHARDS';
+       begin
+         dbms_feature_usage.register_high_water_mark
+          ('PRIMARY SHARDS',
+           dbms_feature_usage.DBU_HWM_BY_PROCEDURE,
+           DBMS_HWM_PRIM_SHARDS_STR,
+           'Number of deployed primary shards in catalog');
+       end;
+
+      /************************
+       * Flex ASM
+       ***********************/
+
+       declare
+         HWM_FLX_STR CONSTANT VARCHAR2(1000) :=
+            'select sys_context(''SYS_CLUSTER_PROPERTIES'',''FLEXASM_STATE_HW'') '||
+            'from dual';
+       begin
+         dbms_feature_usage.register_high_water_mark
+          ('Flex ASM',
+           dbms_feature_usage.DBU_HWM_BY_SQL,
+           HWM_FLX_STR,
+           'Number of completed and successful failovers');
+       end;
+
+      /**************************
+       * Test HWM
+       **************************/
+
+      declare
+        HWM_TEST_PROC CONSTANT VARCHAR2(1000) :=
+          'DBMS_FEATURE_TEST_PROC_3';
+
+          dbms_feature_usage.DBU_HWM_TEST,
+      begin
+        dbms_feature_usage.register_high_water_mark
+         ('_HWM_TEST_1',
+          dbms_feature_usage.DBU_HWM_BY_PROCEDURE +
+          HWM_TEST_PROC,
+          'Test HWM 1');
+      end;
+
+      dbms_feature_usage.register_high_water_mark
+         ('_HWM_TEST_2',
+          dbms_feature_usage.DBU_HWM_NULL +
+          dbms_feature_usage.DBU_HWM_TEST,
+          'Junk',
+          'Test HWM 2');
+
+      dbms_feature_usage.register_high_water_mark
+         ('_HWM_TEST_3',
+          dbms_feature_usage.DBU_HWM_BY_SQL +
+          dbms_feature_usage.DBU_HWM_TEST,
+          'select 10 from dual',
+          'Test HWM 3');
+
+      dbms_feature_usage.register_high_water_mark
+         ('_HWM_TEST_4',
+          dbms_feature_usage.DBU_HWM_BY_SQL +
+          dbms_feature_usage.DBU_HWM_TEST,
+          'select 1240 from foo',
+          'Test HWM 4 - Error case');
+
+    end;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: f2e6c4e1c9397491a3b038811c61ee2d
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,142 @@
+name: DBMS_FEATURE_RAS
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_RAS
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_RAS
+         ( feature_boolean  OUT NUMBER,
+           aux_count        OUT NUMBER,
+           feature_info     OUT CLOB)
+    AS
+      row_count1              PLS_INTEGER;
+      row_count2              PLS_INTEGER;
+      policy_count            PLS_INTEGER;
+      applied_policy_count    PLS_INTEGER;
+      acl_count               PLS_INTEGER;
+      ace_count               PLS_INTEGER;
+      user_count              PLS_INTEGER;
+      role_count              PLS_INTEGER;
+      sc_count                PLS_INTEGER;
+      privilege_count         PLS_INTEGER;
+      session_count           PLS_INTEGER;
+      external_session_count  PLS_INTEGER;
+      regular_session_count   PLS_INTEGER;
+      dispatcher_used         VARCHAR2(5);
+      midtier_cache_used      VARCHAR2(5);
+      max_seeded_id           NUMBER := 2147493647;
+    begin
+     feature_boolean := 0;
+     feature_info := to_clob('Real Application Security usage not detected');
+     aux_count := 0;
+
+     begin
+
+       /* Check if Real Application Security objects are created. */
+       select count(*) into row_count1 from sys.xs$obj where id > max_seeded_id and BITAND(flags,1) = 0;
+       if row_count1 > 0 then
+         feature_boolean := 1;
+
+         /* Find the number of XDS policies. */
+         select count(*) into policy_count from sys.xs$dsec;
+
+         if policy_count > 0 then
+
+           /* Find the number of applied XDS policies. */
+           select count(*) into applied_policy_count from sys.DBA_XS_APPLIED_POLICIES p
+                  where p.status = 'ENABLED';
+         end if;
+
+         /* Find the number of ACLs. */
+         select count(*) into acl_count from sys.xs$acl where acl# > max_seeded_id;
+
+         /* Find the number of ACEs. */
+         select count(*) into ace_count from sys.xs$ace where acl# > max_seeded_id;
+
+         /* Find the number of users. */
+         select count(*) into user_count from sys.xs$prin p where p.type = 0 and prin# > max_seeded_id;
+
+         /* Find the number of roles. */
+         select count(*) into role_count from sys.xs$prin p where p.type <> 0 and prin# > max_seeded_id;
+
+         /* Find number of security classes. */
+         select count(*) into sc_count from sys.xs$seccls where sc# > max_seeded_id;
+
+         /* Find number of privileges. */
+         select count(*) into privilege_count from sys.xs$priv where priv# > max_seeded_id;
+
+         /* Find the number of sessions. */
+         select count(*) into session_count from sys.rxs$sessions;
+
+         /* Find the number of session created with external user. */
+         select count(*) into external_session_count from sys.rxs$sessions r
+                where BITAND(r.flag,4) = 4;
+
+         /* Find the number of session created with regular XS user. */
+         regular_session_count := session_count - external_session_count;
+
+         /* Find if dispatcher is being used. */
+         select count(*) into row_count1 from sys.dba_xs_role_grants where granted_role = 'XSSESSIONADMIN';
+         select count(*) into row_count2 from sys.dba_role_privs where granted_role = 'XS_SESSION_ADMIN' and grantee <> 'SYS';
+         if ((row_count1 > 0) OR (row_count2 > 0)) then
+           dispatcher_used := 'TRUE';
+         else
+           dispatcher_used := 'FALSE';
+         end if;
+
+         /* Find if midtier cache is used. */
+         select count(*) into row_count1 from sys.dba_xs_role_grants where granted_role = 'XSCACHEADMIN';
+         select count(*) into row_count2 from sys.dba_role_privs where granted_role = 'XS_CACHE_ADMIN' and grantee <> 'SYS';
+         if ((row_count2 > 0) OR (row_count2 > 0)) then
+           midtier_cache_used := 'TRUE';
+         else
+           midtier_cache_used := 'FALSE';
+         end if;
+
+         feature_info := to_clob('Number of policies: '||policy_count||
+                                ' Number of policies applied: '||applied_policy_count||
+                    ' Number of ACLs created: '||acl_count||
+                    ' Number of ACEs: '||ace_count||
+                    ' Number of users created: '||user_count||
+                    ' Number of roles created: '||role_count||
+                    ' Number of security classes created: '||sc_count||
+                    ' Number of privileges created: '||privilege_count||
+                    ' Number of sessions created: '||session_count||
+                    ' Number of external sessions created: '||external_session_count||
+                    ' Number of regular sessions created: '||regular_session_count||
+                    ' Dispatcher used: '||dispatcher_used||
+                    ' Mid-tier cache used: '||midtier_cache_used);
+       end if;
+     exception
+       when others then
+         null;
+     end;
+    END DBMS_FEATURE_RAS;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 4eb0788c7913e9f42cf1fb5eb166c54e
+processedLineage: false
+entityStatus: Approved

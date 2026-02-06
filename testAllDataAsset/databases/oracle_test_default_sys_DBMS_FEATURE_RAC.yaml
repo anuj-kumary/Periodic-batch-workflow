@@ -1,0 +1,60 @@
+name: DBMS_FEATURE_RAC
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_RAC
+storedProcedureCode:
+  language: SQL
+  code: |2-
+       cpu_count_current number;
+    PROCEDURE dbms_feature_rac
+          (is_used OUT number, nodes OUT number, clob_rest OUT clob)
+    AS
+       cpu_stddev_current number;
+    BEGIN
+      -- initialize
+      clob_rest := NULL;
+      nodes := NULL;
+      cpu_count_current := NULL;
+      cpu_stddev_current := NULL;
+
+      select count(*) into is_used from v$system_parameter where
+         name='cluster_database' and value='TRUE';
+       -- if RAC is used see if only active/passive or active/active
+       if (is_used = 1) then
+           select count(*) into nodes from gv$instance;
+           select sum(cpu_count_current), round(stddev(cpu_count_current),1)
+              into cpu_count_current, cpu_stddev_current from gv$license;
+           -- active_instance_count init.ora has been deprecated
+           --   so 'usage:Active Passive' will no longer be returned
+           clob_rest:='usage:All Active:cpu_count_current:'||cpu_count_current
+                    ||':cpu_stddev_current:'||cpu_stddev_current;
+      end if;
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 3d1a5d7a664803dc9a1e931dc0dbef8c
+processedLineage: false
+entityStatus: Approved

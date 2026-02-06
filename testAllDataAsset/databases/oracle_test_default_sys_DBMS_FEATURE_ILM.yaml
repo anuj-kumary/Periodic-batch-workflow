@@ -1,0 +1,67 @@
+name: DBMS_FEATURE_ILM
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_ILM
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure DBMS_FEATURE_ILM
+        (feature_boolean  OUT  NUMBER,
+         aux_count        OUT  NUMBER,
+         feature_info     OUT  CLOB)
+    AS
+        feature_usage         varchar2(1000);
+        num_ilm_pol           number := 0;
+        num_obj_pol           number := 0;
+    begin
+        -- initialize
+        feature_boolean := 0;
+        aux_count       := 0;
+        feature_info    := to_clob('Information Lifecycle Management not detected');
+
+        -- check for ILM usage by counting policies in ILM dictionary
+        execute immediate 'select count(*) from ilm$ '
+           into num_ilm_pol;
+
+        if num_ilm_pol > 0 then
+
+          feature_boolean := 1;
+
+          execute immediate 'select count(*) from ilmobj$ '
+             into num_obj_pol;
+
+          feature_usage   :=
+                    'Number of ILM Policies: ' || to_char(num_ilm_pol) ||
+            ', ' || 'Number of Objects Affected: ' || to_char(num_obj_pol);
+          feature_info    := to_clob(feature_usage);
+
+        end if;
+
+    end;
+dataProducts: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 06e94627dc1e39b1cbb64366c25ac3f3
+processedLineage: false
+entityStatus: Approved

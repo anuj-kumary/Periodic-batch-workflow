@@ -1,0 +1,103 @@
+name: DBMS_FEATURE_PLSQL_NATIVE
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_PLSQL_NATIVE
+storedProcedureCode:
+  language: SQL
+  code: |2-
+      o_report      OUT           clob )
+    PROCEDURE dbms_feature_plsql_native (
+      o_is_used     OUT           number,
+      o_aux_count   OUT           number, -- not used, set to zero
+
+      --
+      -- Find ncomp usage from ncomp_dll$
+      --
+      -- When >0 NATIVE units, sets "o_is_used=1". Always generates XML report,
+      -- for example...
+      --
+      -- <plsqlNativeReport date ="04-feb-2003 14:34">
+      -- <owner name="1234" native="2" interpreted="1"/>
+      -- <owner name="1235" native="10" interpreted="1"/>
+      -- <owner name="CTXSYS" native="118"/>
+      -- ...
+      -- <owner name="SYS" native="1292" interpreted="6"/>
+      -- <owner name="SYSTEM" native="6"/>
+      -- ...
+      -- <owner name="XDB" native="176"/>
+      -- </plsqlNativeReport>
+      --
+
+    is
+      YES      constant number := 1;
+      NO       constant number := 0;
+      NEWLINE  constant varchar2(2 char) := '
+    ';
+      v_date   constant varchar2(30) := to_char(sysdate, 'dd-mon-yyyy hh24:mi');
+      v_report          varchar2(400); -- big enough to hold one "<owner .../>"
+    begin
+
+      o_is_used   := NO;
+      o_aux_count := 0;
+      o_report    := '<plsqlNativeReport date ="' || v_date || '">' || NEWLINE;
+
+      -- For security and privacy reasons, we do not collect the names of the
+      -- non-Oracle schemas. In the case statement below, we filter the schema
+      -- names against v$sysaux_occupants, which contains the list of Oracle
+      -- schemas.
+      for r in (select (case when u.name in
+                                  (select distinct schema_name
+                                     from v$sysaux_occupants)
+                             then u.name
+                             else to_char(u.user#)
+                        end) name,
+                  count(o.obj#) total, count(d.obj#) native
+                  from user$ u, ncomp_dll$ d, obj$ o
+                  where o.obj# = d.obj# (+)
+                    and o.type# in (7,8,9,11,12,13,14)
+                    and u.user# = o.owner#
+                  group by u.name, u.user#
+                  order by u.name) loop
+        if (r.native > 0) then
+          o_is_used := YES;
+        end if;
+        v_report := '<owner name="'|| r.name || '"';
+        if (r.native > 0) then
+          v_report := v_report || ' native="' || r.native || '"';
+        end if;
+        if (r.total > r.native) then
+          v_report := v_report || ' interpreted="' || (r.total - r.native) || '"';
+        end if;
+        v_report := v_report || '/>' || NEWLINE;
+        o_report := o_report || v_report;
+      end loop;
+      o_report := o_report || '</plsqlNativeReport>';
+    end dbms_feature_plsql_native;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 4fd70565d94b84df7a38e58516a897f9
+processedLineage: false
+entityStatus: Approved

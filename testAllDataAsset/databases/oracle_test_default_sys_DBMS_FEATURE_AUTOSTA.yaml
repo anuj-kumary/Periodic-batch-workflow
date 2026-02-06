@@ -1,0 +1,131 @@
+name: DBMS_FEATURE_AUTOSTA
+fullyQualifiedName: oracle_test.default.sys.DBMS_FEATURE_AUTOSTA
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_autosta
+         ( feature_boolean  OUT  NUMBER,
+           aux_count        OUT  NUMBER,
+           feature_info     OUT  CLOB)
+    AS
+      asqlt_task_name    dbms_id := 'SYS_AUTO_SQL_TUNING_TASK';
+
+      execs_since_sample NUMBER;                  -- # of execs since last sample
+      total_execs        NUMBER;                  -- number of task executions
+      w_auto_impl        NUMBER;                  -- execs with AUTO implement on
+      profs_rec          NUMBER;                  -- total profiles in task
+      savedsecs          NUMBER;                  -- db time saved (s)
+      tmp_buf            VARCHAR2(32767);         -- temp buffer
+    BEGIN
+
+      /*
+       * We compute the following stats for db feature usage:
+       *   Projected DB Time Saved through Auto Implementation (savedsecs)
+       *   Number of executions since last sample (execs_since_sample)
+       *   Total number of executions in the task (total_execs)
+       *   Total number of executions with auto-implement ON (w_auto_impl)
+       *   Total number of SQL profiles recommended in the task (profs_rec)
+       *
+       * Note that these stats are only computed through looking at the task,
+       * which, by default, stores results from the last month of history only.
+       */
+
+      -- execs since last sample
+      SELECT count(*)
+      INTO   execs_since_sample
+      FROM   dba_advisor_executions
+      WHERE  task_name = asqlt_task_name AND
+             execution_last_modified >= (SELECT nvl(max(last_sample_date),
+                                                    sysdate-7)
+                                         FROM   dba_feature_usage_statistics);
+
+      -- total # of executions
+      SELECT count(*)
+      INTO   total_execs
+      FROM   dba_advisor_executions
+      WHERE  task_name = asqlt_task_name;
+
+      -- #execs with auto implement ON
+      SELECT count(*)
+      INTO   w_auto_impl
+      FROM   dba_advisor_exec_parameters
+      WHERE  task_name = asqlt_task_name AND
+             parameter_name = 'ACCEPT_SQL_PROFILES' AND
+             parameter_value = 'TRUE';
+
+      -- total profiles recommended so far
+      SELECT count(*)
+      INTO   profs_rec
+      FROM   dba_advisor_recommendations r
+      WHERE  r.task_name = asqlt_task_name AND
+             r.type = 'SQL PROFILE';
+
+      -- db time saved by AUTO impl profiles
+      SELECT round(nvl(sum(before_usec - after_usec)/1000000, 0))
+      INTO   savedsecs
+      FROM   (SELECT nvl(o.attr8, 0) before_usec,
+                     nvl(o.attr8, 0) * (1 - r.benefit/10000) after_usec
+              FROM   dba_sql_profiles sp,
+                     dba_advisor_objects o,
+                     dba_advisor_findings f,
+                     dba_advisor_recommendations r
+              WHERE  o.task_name = asqlt_task_name AND
+                     o.type = 'SQL' AND
+                     sp.task_id = o.task_id AND
+                     sp.task_obj_id = o.object_id AND
+                     sp.task_exec_name = o.execution_name AND
+                     o.task_id = f.task_id AND
+                     o.execution_name = f.execution_name AND
+                     o.object_id = f.object_id AND
+                     f.finding_id = sp.task_fnd_id AND
+                     r.task_id = f.task_id AND
+                     r.execution_name = f.execution_name AND
+                     r.finding_id = f.finding_id AND
+                     r.rec_id = sp.task_rec_id AND
+                     sp.type = 'AUTO');
+
+      -- the used boolean and aux count we set to the number of execs since last
+      -- sample
+      feature_boolean := execs_since_sample;
+      aux_count := execs_since_sample;
+
+      -- compose the CLOB
+      tmp_buf := 'Execution count so far: '          || total_execs || ', ' ||
+                 'Executions with auto-implement: '  || w_auto_impl || ', ' ||
+                 'SQL profiles recommended so far: ' || profs_rec   || ', ' ||
+                 'Projected DB Time Saved Automatically (s): ' || savedsecs;
+
+      dbms_lob.createtemporary(feature_info, TRUE);
+      dbms_lob.writeappend(feature_info, length(tmp_buf), tmp_buf);
+
+    END dbms_feature_autosta;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: dda439efc29a8ce552dc142cd975c4f5
+processedLineage: false
+entityStatus: Approved
