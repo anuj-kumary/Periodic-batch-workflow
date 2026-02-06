@@ -1,0 +1,102 @@
+name: row_filters
+fullyQualifiedName: DatabricksProd.main.information_schema.row_filters
+description: "This table provides details about row filters applied to database tables,\
+  \ including their names, associated schemas, and target columns, enabling users\
+  \ to understand and manage data visibility and access control effectively."
+tableType: View
+columns:
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DatabricksProd.main.information_schema.row_filters.table_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DatabricksProd.main.information_schema.row_filters.table_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DatabricksProd.main.information_schema.row_filters.table_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: filter_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DatabricksProd.main.information_schema.row_filters.filter_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: target_columns
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DatabricksProd.main.information_schema.row_filters.target_columns
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7f351ab4-5b7d-4926-94be-fe250ba04d36
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.main.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: b0be8926-45aa-447c-adc4-e986fc49489f
+  type: database
+  name: main
+  fullyQualifiedName: DatabricksProd.main
+  displayName: main
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: ""
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table provides details about row filters applied to database\
+        \ tables, including their names, associated schemas, and target columns, enabling\
+        \ users to understand and manage data visibility and access control effectively."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.7
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770536365
+domains: []
+dataProducts: []
+sourceHash: 7f7fa63f135a8b431e9d94ab9afd8b81
+processedLineage: false
+entityStatus: Approved

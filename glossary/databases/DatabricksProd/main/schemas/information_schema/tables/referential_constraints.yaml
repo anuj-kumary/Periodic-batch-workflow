@@ -1,0 +1,132 @@
+name: referential_constraints
+fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints
+description: Describes referential (foreign key) constraints defined in the catalog.
+tableType: View
+columns:
+  - name: constraint_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the foreign key constraint.
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.constraint_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: constraint_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the foreign key constraints.
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.constraint_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: constraint_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the check constraint.
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.constraint_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: unique_constraint_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the referenced constraint.
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.unique_constraint_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: unique_constraint_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the referenced constraint.
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.unique_constraint_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: unique_constraint_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the referenced constraint.
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.unique_constraint_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: match_option
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always FULL, reserved for future use.."
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.match_option
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: update_rule
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NO ACTION, reserved for future use."
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.update_rule
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: delete_rule
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NO ACTION, reserved for future use."
+    fullyQualifiedName: DatabricksProd.main.information_schema.referential_constraints.delete_rule
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7f351ab4-5b7d-4926-94be-fe250ba04d36
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.main.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: b0be8926-45aa-447c-adc4-e986fc49489f
+  type: database
+  name: main
+  fullyQualifiedName: DatabricksProd.main
+  displayName: main
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: ""
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 82e85815c19b5d823fc5ab2a78fdd8b6
+processedLineage: false
+entityStatus: Approved

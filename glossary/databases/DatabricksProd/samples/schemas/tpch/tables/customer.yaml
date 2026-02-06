@@ -1,0 +1,216 @@
+name: customer
+fullyQualifiedName: DatabricksProd.samples.tpch.customer
+description: "This table stores customer details such as account balance, address,\
+  \ and market segment, enabling businesses to analyze customer demographics, preferences,\
+  \ and financial behavior for targeted marketing and improved service delivery."
+tableType: Regular
+columns:
+  - name: c_custkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The c_custkey column serves as a unique identifier for each customer,\
+      \ allowing for easy reference and retrieval of customer information."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_custkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The c_name column contains the name of the customer, which is essential\
+      \ for identification and personalization in communications."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_address
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The c_address column contains the physical address of the customer,\
+      \ which is used for shipping and billing purposes."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_address
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_nationkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The c_nationkey column represents a foreign key that links to the\
+      \ nation table, indicating the nation where the customer resides."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_nationkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_phone
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The c_phone column holds the contact phone number of the customer,\
+      \ which is used for communication and customer service purposes."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_phone
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_acctbal
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: "The c_acctbal column represents the account balance of the customer,\
+      \ indicating the amount of money available in their account."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_acctbal
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_mktsegment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The c_mktsegment column indicates the market segment to which the\
+      \ customer belongs, helping to categorize customers based on their purchasing\
+      \ behavior."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_mktsegment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The c_comment column holds additional comments or notes related\
+      \ to the customer, which may provide insights into their preferences or special\
+      \ instructions."
+    fullyQualifiedName: DatabricksProd.samples.tpch.customer.c_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.customer (
+    c_custkey BIGINT,
+    c_name STRING,
+    c_address STRING,
+    c_nationkey BIGINT,
+    c_phone STRING,
+    c_acctbal DECIMAL(18,2),
+    c_mktsegment STRING,
+    c_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/customer'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: a287f55c-4731-42d7-9843-f171238cb938
+  type: testSuite
+  name: customer.testSuite
+  fullyQualifiedName: DatabricksProd.samples.tpch.customer.testSuite
+  displayName: customer.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.c_custkey.description
+      newValue: "The c_custkey column serves as a unique identifier for each customer,\
+        \ allowing for easy reference and retrieval of customer information."
+    - name: columns.c_name.description
+      newValue: "The c_name column contains the name of the customer, which is essential\
+        \ for identification and personalization in communications."
+    - name: columns.c_address.description
+      newValue: "The c_address column contains the physical address of the customer,\
+        \ which is used for shipping and billing purposes."
+    - name: columns.c_nationkey.description
+      newValue: "The c_nationkey column represents a foreign key that links to the\
+        \ nation table, indicating the nation where the customer resides."
+    - name: columns.c_phone.description
+      newValue: "The c_phone column holds the contact phone number of the customer,\
+        \ which is used for communication and customer service purposes."
+    - name: columns.c_acctbal.description
+      newValue: "The c_acctbal column represents the account balance of the customer,\
+        \ indicating the amount of money available in their account."
+    - name: columns.c_mktsegment.description
+      newValue: "The c_mktsegment column indicates the market segment to which the\
+        \ customer belongs, helping to categorize customers based on their purchasing\
+        \ behavior."
+    - name: columns.c_comment.description
+      newValue: "The c_comment column holds additional comments or notes related to\
+        \ the customer, which may provide insights into their preferences or special\
+        \ instructions."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527065
+    columns.c_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_phone.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_acctbal.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_address.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_custkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_nationkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+    columns.c_mktsegment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527323
+domains: []
+dataProducts: []
+sourceHash: 8ba78c6a2f4b8be9753e86a9889160a0
+processedLineage: false
+entityStatus: Approved

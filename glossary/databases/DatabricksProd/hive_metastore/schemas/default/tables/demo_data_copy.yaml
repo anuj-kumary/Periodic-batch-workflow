@@ -1,0 +1,135 @@
+name: demo_data_copy
+fullyQualifiedName: DatabricksProd.hive_metastore.default.demo_data_copy
+description: "This table stores user-related data, including names, email addresses,\
+  \ and unique identifiers, enabling efficient management and analysis of user information\
+  \ for applications such as user authentication, marketing campaigns, and personalized\
+  \ services."
+tableType: Regular
+columns:
+  - name: aaa_foo
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column is used to store a specific identifier or attribute\
+      \ related to the dataset, which may be relevant for categorization or analysis."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.demo_data_copy.aaa_foo
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column holds a unique identifier for each user, which is essential\
+      \ for distinguishing between different users in the dataset."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.demo_data_copy.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column represents the chosen username of the user, which is\
+      \ often used for login purposes and user identification within the system."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.demo_data_copy.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column contains the email address of the user, which is typically\
+      \ used for communication and account verification purposes."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.demo_data_copy.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1a6de823-12f8-48cd-bed3-9e444b5e96d1
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.hive_metastore.default
+  displayName: default
+  deleted: false
+database:
+  id: 6f5b0b83-fb7f-4500-b4cf-072d76378ca1
+  type: database
+  name: hive_metastore
+  fullyQualifiedName: DatabricksProd.hive_metastore
+  displayName: hive_metastore
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE hive_metastore.default.demo_data_copy (
+    aaa_foo STRING,
+    user_id STRING,
+    username STRING,
+    email STRING)
+  USING delta
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.enableDeletionVectors' = 'true',
+    'delta.feature.deletionVectors' = 'supported',
+    'delta.minReaderVersion' = '3',
+    'delta.minWriterVersion' = '7')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.aaa_foo.description
+      newValue: "This column is used to store a specific identifier or attribute related\
+        \ to the dataset, which may be relevant for categorization or analysis."
+    - name: columns.user_id.description
+      newValue: "This column holds a unique identifier for each user, which is essential\
+        \ for distinguishing between different users in the dataset."
+    - name: columns.username.description
+      newValue: "This column represents the chosen username of the user, which is\
+        \ often used for login purposes and user identification within the system."
+    - name: columns.email.description
+      newValue: "This column contains the email address of the user, which is typically\
+        \ used for communication and account verification purposes."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770557772
+    columns.email.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770558045
+    columns.aaa_foo.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770558045
+    columns.user_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770558045
+    columns.username.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770558045
+domains: []
+dataProducts: []
+sourceHash: 4ca9378e434ff73e226a5a49bbb9a471
+processedLineage: false
+entityStatus: Approved

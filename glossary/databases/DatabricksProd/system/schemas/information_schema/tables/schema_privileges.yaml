@@ -1,0 +1,137 @@
+name: schema_privileges
+fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges
+description: "This table provides details on schema-level privileges granted to users,\
+  \ including who granted the privileges and whether they can be further granted.\
+  \ It is useful for database administrators to manage access control and ensure security\
+  \ compliance."
+tableType: Regular
+columns:
+  - name: grantor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal that granted the privilege.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.grantor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: grantee
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal to which the privilege is granted.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.grantee
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: catalog_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog of schema on which the privilege is granted.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.catalog_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schema_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema on which the privilege is granted.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.schema_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: privilege_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Privilege being granted.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.privilege_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_grantable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.is_grantable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inherited_from
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The ancestor relation that the privilege is inherited from.
+    fullyQualifiedName: DatabricksProd.system.information_schema.schema_privileges.inherited_from
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7677775a-b9a7-4a70-a477-9e0fe9c495a1
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.system.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.information_schema.schema_privileges (
+    grantor STRING NOT NULL COMMENT 'Principal that granted the privilege.',
+    grantee STRING NOT NULL COMMENT 'Principal to which the privilege is granted.',
+    catalog_name STRING NOT NULL COMMENT 'Catalog of schema on which the privilege is granted.',
+    schema_name STRING NOT NULL COMMENT 'Schema on which the privilege is granted.',
+    privilege_type STRING NOT NULL COMMENT 'Privilege being granted.',
+    is_grantable STRING NOT NULL COMMENT 'Always NO. Reserved for future use.',
+    inherited_from STRING NOT NULL COMMENT 'The ancestor relation that the privilege is inherited from.')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table provides details on schema-level privileges granted to\
+        \ users, including who granted the privileges and whether they can be further\
+        \ granted. It is useful for database administrators to manage access control\
+        \ and ensure security compliance."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518633910
+domains: []
+dataProducts: []
+sourceHash: 702996ba73f756196961b8e5d015f2f1
+processedLineage: false
+entityStatus: Approved

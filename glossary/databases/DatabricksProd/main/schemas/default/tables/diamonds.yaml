@@ -1,0 +1,194 @@
+name: diamonds
+fullyQualifiedName: DatabricksProd.main.default.diamonds
+description: "This table provides detailed information about diamonds, including their\
+  \ carat weight, clarity, color, and cut. Users can analyze these attributes to assess\
+  \ quality, value, and market trends in the diamond industry."
+tableType: Regular
+columns:
+  - name: carat
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    description: "The 'carat' column represents the weight of the diamond, which is\
+      \ a key factor in determining its value."
+    fullyQualifiedName: DatabricksProd.main.default.diamonds.carat
+    tags:
+      - tagFQN: databricks.column_tag
+        name: column_tag
+        description: DATABRICKS TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cut
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(10)
+    description: "The 'cut' column describes the quality of the diamond's cut, which\
+      \ impacts its brilliance and overall aesthetic appeal."
+    fullyQualifiedName: DatabricksProd.main.default.diamonds.cut
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: color
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "The 'color' column denotes the color grade of the diamond, ranging\
+      \ from colorless to various shades, influencing its desirability."
+    fullyQualifiedName: DatabricksProd.main.default.diamonds.color
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: clarity
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(4)
+    description: "The 'clarity' column indicates the presence of internal or external\
+      \ flaws in the diamond, which affects its overall quality and price."
+    fullyQualifiedName: DatabricksProd.main.default.diamonds.clarity
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: test_double
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: double
+    description: "The 'test_double' column is used for storing a double precision\
+      \ value related to the diamond, possibly for additional measurements or calculations."
+    fullyQualifiedName: DatabricksProd.main.default.diamonds.test_double
+    tags:
+      - tagFQN: databricks.float
+        name: float
+        description: DATABRICKS TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: test_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The 'test_date' column records the date when the diamond was evaluated\
+      \ or tested, providing context for the data."
+    fullyQualifiedName: DatabricksProd.main.default.diamonds.test_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f578b6a4-ea37-4161-8524-5de914e228ce
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.main.default
+  displayName: default
+  deleted: false
+database:
+  id: b0be8926-45aa-447c-adc4-e986fc49489f
+  type: database
+  name: main
+  fullyQualifiedName: DatabricksProd.main
+  displayName: main
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE main.default.diamonds (
+    carat FLOAT,
+    cut VARCHAR(10),
+    color CHAR(1),
+    clarity VARCHAR(4),
+    test_double DOUBLE,
+    test_date DATE)
+  USING delta
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.enableDeletionVectors' = 'true',
+    'delta.feature.deletionVectors' = 'supported',
+    'delta.minReaderVersion' = '3',
+    'delta.minWriterVersion' = '7')
+tags:
+  - tagFQN: databricks.diamonds
+    name: diamonds
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.carat.description
+      newValue: "The 'carat' column represents the weight of the diamond, which is\
+        \ a key factor in determining its value."
+    - name: columns.cut.description
+      newValue: "The 'cut' column describes the quality of the diamond's cut, which\
+        \ impacts its brilliance and overall aesthetic appeal."
+    - name: columns.color.description
+      newValue: "The 'color' column denotes the color grade of the diamond, ranging\
+        \ from colorless to various shades, influencing its desirability."
+    - name: columns.clarity.description
+      newValue: "The 'clarity' column indicates the presence of internal or external\
+        \ flaws in the diamond, which affects its overall quality and price."
+    - name: columns.test_double.description
+      newValue: "The 'test_double' column is used for storing a double precision value\
+        \ related to the diamond, possibly for additional measurements or calculations."
+    - name: columns.test_date.description
+      newValue: "The 'test_date' column records the date when the diamond was evaluated\
+        \ or tested, providing context for the data."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770545592
+    columns.cut.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770546041
+    columns.carat.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770546041
+    columns.color.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770546041
+    columns.clarity.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770546041
+    columns.test_date.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770546041
+    columns.test_double.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770546041
+domains: []
+dataProducts: []
+sourceHash: f1822bdc4aeacd82229ab18352e03fc8
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,112 @@
+name: schema_privileges
+fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges
+description: Lists principals that have privileges on the schemas in the catalog.
+tableType: View
+columns:
+  - name: grantor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal that granted the privilege.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.grantor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: grantee
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal to which the privilege is granted.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.grantee
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: catalog_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog of schema on which the privilege is granted.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.catalog_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schema_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema on which the privilege is granted.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.schema_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: privilege_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Privilege being granted.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.privilege_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_grantable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.is_grantable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inherited_from
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The ancestor relation that the privilege is inherited from.
+    fullyQualifiedName: DatabricksProd.main.information_schema.schema_privileges.inherited_from
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7f351ab4-5b7d-4926-94be-fe250ba04d36
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.main.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: b0be8926-45aa-447c-adc4-e986fc49489f
+  type: database
+  name: main
+  fullyQualifiedName: DatabricksProd.main
+  displayName: main
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: ""
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 4cd07fc1d764749d085d38d0d66adbbc
+processedLineage: false
+entityStatus: Approved

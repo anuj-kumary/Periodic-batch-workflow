@@ -1,0 +1,428 @@
+name: columns
+fullyQualifiedName: DatabricksProd.system.information_schema.columns
+description: "This table provides detailed metadata about the columns in database\
+  \ tables, including data types, constraints, and characteristics, enabling users\
+  \ to understand the structure and properties of their database schema effectively."
+tableType: Regular
+columns:
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog that contains the relation.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.table_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema that contains the relation.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.table_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the relation the column is part of.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.table_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: column_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the column.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.column_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ordinal_position
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: The position (numbered from 1) of the column within the relation.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.ordinal_position
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: column_default
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The default value used when the column is not specified in an INSERT,\
+      \ NULL if undefined."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.column_default
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_nullable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "YES if column is nullable, NO otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.is_nullable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: full_data_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The data type as specified in the column definition.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.full_data_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: data_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The simple data type name of the column, or STRUCT, or ARRAY."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.data_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: character_maximum_length
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.character_maximum_length
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: character_octet_length
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.character_octet_length
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: numeric_precision
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For base-2 integral numeric types, FLOAT, and DOUBLE, the number\
+      \ of supported bits. For DECIMAL the number of digits, NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.numeric_precision
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: numeric_precision_radix
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For DECIMAL 10, for all other numeric types 2, NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.numeric_precision_radix
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: numeric_scale
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For integral numeric types 0, for DECIMAL the number of digits to\
+      \ the right of the decimal point, NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.numeric_scale
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: datetime_precision
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For DATE 0, for TIMESTAMP, and INTERVAL … SECOND 3, any other INTERVAL\
+      \ 0, NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.datetime_precision
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: interval_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "For INTERVAL the unit portion of the interval, e.g. 'YEAR TO MONTH',\
+      \ NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.interval_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: interval_precision
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.interval_precision
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: maximum_cardinality
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.maximum_cardinality
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_identity
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always ‘NO’, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.is_identity
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: identity_generation
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.identity_generation
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: identity_start
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.identity_start
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: identity_increment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.identity_increment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: identity_maximum
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.identity_maximum
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: identity_minimum
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.identity_minimum
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: identity_cycle
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.identity_cycle
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_generated
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.is_generated
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: generation_expression
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.generation_expression
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_system_time_period_start
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NO, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.is_system_time_period_start
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_system_time_period_end
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NO, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.is_system_time_period_end
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: system_time_period_timestamp_generation
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.system_time_period_timestamp_generation
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_updatable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "YES if column is updatable, NO otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.is_updatable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition_index
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "Position (numbered from 1) of the column in the partition, NULL\
+      \ if not a partitioning column."
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.partition_index
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Optional description of the column.
+    fullyQualifiedName: DatabricksProd.system.information_schema.columns.comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7677775a-b9a7-4a70-a477-9e0fe9c495a1
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.system.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.information_schema.columns (
+    table_catalog STRING NOT NULL COMMENT 'Catalog that contains the relation.',
+    table_schema STRING NOT NULL COMMENT 'Schema that contains the relation.',
+    table_name STRING NOT NULL COMMENT 'Name of the relation the column is part of.',
+    column_name STRING NOT NULL COMMENT 'Name of the column.',
+    ordinal_position INT NOT NULL COMMENT 'The position (numbered from 1) of the column within the relation.',
+    column_default STRING COMMENT 'The default value used when the column is not specified in an INSERT, NULL if undefined.',
+    is_nullable STRING NOT NULL COMMENT 'YES if column is nullable, NO otherwise.',
+    full_data_type STRING NOT NULL COMMENT 'The data type as specified in the column definition.',
+    data_type STRING NOT NULL COMMENT 'The simple data type name of the column, or STRUCT, or ARRAY.',
+    character_maximum_length BIGINT COMMENT 'Always NULL, reserved for future use.',
+    character_octet_length BIGINT COMMENT 'Always NULL, reserved for future use.',
+    numeric_precision INT COMMENT 'For base-2 integral numeric types, FLOAT, and DOUBLE, the number of supported bits. For DECIMAL the number of digits, NULL otherwise.',
+    numeric_precision_radix INT COMMENT 'For DECIMAL 10, for all other numeric types 2, NULL otherwise.',
+    numeric_scale INT COMMENT 'For integral numeric types 0, for DECIMAL the number of digits to the right of the decimal point, NULL otherwise.',
+    datetime_precision INT COMMENT 'For DATE 0, for TIMESTAMP, and INTERVAL … SECOND 3, any other INTERVAL 0, NULL otherwise.',
+    interval_type STRING COMMENT 'For INTERVAL the unit portion of the interval, e.g. \'YEAR TO MONTH\', NULL otherwise.',
+    interval_precision INT COMMENT 'Always NULL, reserved for future use.',
+    maximum_cardinality BIGINT COMMENT 'Always NULL, reserved for future use.',
+    is_identity STRING NOT NULL COMMENT 'Always ‘NO’, reserved for future use.',
+    identity_generation STRING COMMENT 'Always NULL, reserved for future use.',
+    identity_start STRING COMMENT 'Always NULL, reserved for future use.',
+    identity_increment STRING COMMENT 'Always NULL, reserved for future use.',
+    identity_maximum STRING COMMENT 'Always NULL, reserved for future use.',
+    identity_minimum STRING COMMENT 'Always NULL, reserved for future use.',
+    identity_cycle STRING COMMENT 'Always NULL, reserved for future use.',
+    is_generated STRING NOT NULL COMMENT 'Always NULL, reserved for future use.',
+    generation_expression STRING COMMENT 'Always NULL, reserved for future use.',
+    is_system_time_period_start STRING NOT NULL COMMENT 'Always NO, reserved for future use.',
+    is_system_time_period_end STRING NOT NULL COMMENT 'Always NO, reserved for future use.',
+    system_time_period_timestamp_generation STRING COMMENT 'Always NULL, reserved for future use.',
+    is_updatable STRING NOT NULL COMMENT 'YES if column is updatable, NO otherwise.',
+    partition_index INT COMMENT 'Position (numbered from 1) of the column in the partition, NULL if not a partitioning column.',
+    comment STRING COMMENT 'Optional description of the column.')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table provides detailed metadata about the columns in database\
+        \ tables, including data types, constraints, and characteristics, enabling\
+        \ users to understand the structure and properties of their database schema\
+        \ effectively."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518649265
+domains: []
+dataProducts: []
+sourceHash: 7fca8d60336a4e2e992f5d06c8cb0b1f
+processedLineage: false
+entityStatus: Approved

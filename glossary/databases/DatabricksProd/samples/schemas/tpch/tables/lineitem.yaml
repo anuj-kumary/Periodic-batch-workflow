@@ -1,0 +1,349 @@
+name: lineitem
+fullyQualifiedName: DatabricksProd.samples.tpch.lineitem
+description: "This table stores detailed information about line items in orders, including\
+  \ quantities, prices, and shipping details, enabling users to analyze sales performance,\
+  \ inventory management, and customer order patterns effectively."
+tableType: Regular
+columns:
+  - name: l_orderkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: This column serves as a unique identifier for the order to which
+      the line item belongs.
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_orderkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_partkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "This column identifies the specific part associated with the line\
+      \ item, linking it to the inventory."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_partkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_suppkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "This column serves as a unique identifier for the supplier of the\
+      \ line item, linking it to the supplier's information."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_suppkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_linenumber
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "This column specifies the sequential number of the line item within\
+      \ an order, helping to identify its position."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_linenumber
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_quantity
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: This column indicates the quantity of the item being ordered in the
+      line item.
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_quantity
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_extendedprice
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: This column shows the total price for the line item before any discounts
+      or taxes are applied.
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_extendedprice
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_discount
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: "This column represents the discount applied to the line item, expressed\
+      \ as a percentage of the extended price."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_discount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_tax
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: "This column represents the tax applied to the line item, calculated\
+      \ based on the extended price."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_tax
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_returnflag
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column indicates whether the line item is eligible for return,\
+      \ providing information on its return status."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_returnflag
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_linestatus
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column indicates the status of the line item, which can reflect\
+      \ whether it is active, completed, or canceled."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_linestatus
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_shipdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "This column specifies the date when the line item was shipped, reflecting\
+      \ the dispatch of the order."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_shipdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_commitdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "This column indicates the date when the line item was committed,\
+      \ reflecting the finalization of the order."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_commitdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_receiptdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "This column records the date when the line item was received, marking\
+      \ the completion of the delivery process."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_receiptdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_shipinstruct
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column contains special instructions for shipping the line\
+      \ item, guiding the fulfillment process."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_shipinstruct
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_shipmode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column indicates the mode of shipping used for the line item,\
+      \ such as air, ground, or express."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_shipmode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: l_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column contains comments related to the line item, providing\
+      \ additional context or notes."
+    fullyQualifiedName: DatabricksProd.samples.tpch.lineitem.l_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.lineitem (
+    l_orderkey BIGINT,
+    l_partkey BIGINT,
+    l_suppkey BIGINT,
+    l_linenumber INT,
+    l_quantity DECIMAL(18,2),
+    l_extendedprice DECIMAL(18,2),
+    l_discount DECIMAL(18,2),
+    l_tax DECIMAL(18,2),
+    l_returnflag STRING,
+    l_linestatus STRING,
+    l_shipdate DATE,
+    l_commitdate DATE,
+    l_receiptdate DATE,
+    l_shipinstruct STRING,
+    l_shipmode STRING,
+    l_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/lineitem'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.l_orderkey.description
+      newValue: This column serves as a unique identifier for the order to which the
+        line item belongs.
+    - name: columns.l_partkey.description
+      newValue: "This column identifies the specific part associated with the line\
+        \ item, linking it to the inventory."
+    - name: columns.l_suppkey.description
+      newValue: "This column serves as a unique identifier for the supplier of the\
+        \ line item, linking it to the supplier's information."
+    - name: columns.l_linenumber.description
+      newValue: "This column specifies the sequential number of the line item within\
+        \ an order, helping to identify its position."
+    - name: columns.l_quantity.description
+      newValue: This column indicates the quantity of the item being ordered in the
+        line item.
+    - name: columns.l_extendedprice.description
+      newValue: This column shows the total price for the line item before any discounts
+        or taxes are applied.
+    - name: columns.l_discount.description
+      newValue: "This column represents the discount applied to the line item, expressed\
+        \ as a percentage of the extended price."
+    - name: columns.l_tax.description
+      newValue: "This column represents the tax applied to the line item, calculated\
+        \ based on the extended price."
+    - name: columns.l_returnflag.description
+      newValue: "This column indicates whether the line item is eligible for return,\
+        \ providing information on its return status."
+    - name: columns.l_linestatus.description
+      newValue: "This column indicates the status of the line item, which can reflect\
+        \ whether it is active, completed, or canceled."
+    - name: columns.l_shipdate.description
+      newValue: "This column specifies the date when the line item was shipped, reflecting\
+        \ the dispatch of the order."
+    - name: columns.l_commitdate.description
+      newValue: "This column indicates the date when the line item was committed,\
+        \ reflecting the finalization of the order."
+    - name: columns.l_receiptdate.description
+      newValue: "This column records the date when the line item was received, marking\
+        \ the completion of the delivery process."
+    - name: columns.l_shipinstruct.description
+      newValue: "This column contains special instructions for shipping the line item,\
+        \ guiding the fulfillment process."
+    - name: columns.l_shipmode.description
+      newValue: "This column indicates the mode of shipping used for the line item,\
+        \ such as air, ground, or express."
+    - name: columns.l_comment.description
+      newValue: "This column contains comments related to the line item, providing\
+        \ additional context or notes."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526136
+    columns.l_tax.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_partkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_suppkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_discount.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_orderkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_quantity.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_shipdate.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_shipmode.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_commitdate.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_linenumber.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_linestatus.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_returnflag.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_receiptdate.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_shipinstruct.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+    columns.l_extendedprice.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770526401
+domains: []
+dataProducts: []
+sourceHash: 5b275f2bfee9de6f552e404878febd6b
+processedLineage: false
+entityStatus: Approved

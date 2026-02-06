@@ -1,0 +1,227 @@
+name: orders
+fullyQualifiedName: DatabricksProd.samples.tpch.orders
+description: "This table stores detailed records of customer orders, including order\
+  \ dates, priorities, statuses, and total prices, enabling businesses to analyze\
+  \ sales trends, manage inventory, and enhance customer service."
+tableType: Regular
+columns:
+  - name: o_orderkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The o_orderkey column serves as the unique identifier for each order,\
+      \ allowing for precise referencing and management of individual orders."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_orderkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_custkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The o_custkey column represents the unique identifier for the customer\
+      \ who placed the order, linking the order to the customer record."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_custkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_orderstatus
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The o_orderstatus column indicates the current status of the order,\
+      \ such as pending, completed, or canceled, providing insight into the order's\
+      \ lifecycle."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_orderstatus
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_totalprice
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: "The o_totalprice column reflects the total monetary value of the\
+      \ order, including all items and applicable charges, which is crucial for financial\
+      \ reporting."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_totalprice
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_orderdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The o_orderdate column indicates the date when the order was placed,\
+      \ which is essential for tracking order timelines and processing."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_orderdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_orderpriority
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The o_orderpriority column specifies the priority level of the order,\
+      \ which can influence processing speed and resource allocation."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_orderpriority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_clerk
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The o_clerk column identifies the clerk who processed the order,\
+      \ providing a reference for tracking and accountability."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_clerk
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_shippriority
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The o_shippriority column denotes the shipping priority assigned\
+      \ to the order, which can affect delivery times and logistics."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_shippriority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: o_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The o_comment column contains any additional comments or notes related\
+      \ to the order, which can provide context or special instructions."
+    fullyQualifiedName: DatabricksProd.samples.tpch.orders.o_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.orders (
+    o_orderkey BIGINT,
+    o_custkey BIGINT,
+    o_orderstatus STRING,
+    o_totalprice DECIMAL(18,2),
+    o_orderdate DATE,
+    o_orderpriority STRING,
+    o_clerk STRING,
+    o_shippriority INT,
+    o_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/orders'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.o_orderkey.description
+      newValue: "The o_orderkey column serves as the unique identifier for each order,\
+        \ allowing for precise referencing and management of individual orders."
+    - name: columns.o_custkey.description
+      newValue: "The o_custkey column represents the unique identifier for the customer\
+        \ who placed the order, linking the order to the customer record."
+    - name: columns.o_orderstatus.description
+      newValue: "The o_orderstatus column indicates the current status of the order,\
+        \ such as pending, completed, or canceled, providing insight into the order's\
+        \ lifecycle."
+    - name: columns.o_totalprice.description
+      newValue: "The o_totalprice column reflects the total monetary value of the\
+        \ order, including all items and applicable charges, which is crucial for\
+        \ financial reporting."
+    - name: columns.o_orderdate.description
+      newValue: "The o_orderdate column indicates the date when the order was placed,\
+        \ which is essential for tracking order timelines and processing."
+    - name: columns.o_orderpriority.description
+      newValue: "The o_orderpriority column specifies the priority level of the order,\
+        \ which can influence processing speed and resource allocation."
+    - name: columns.o_clerk.description
+      newValue: "The o_clerk column identifies the clerk who processed the order,\
+        \ providing a reference for tracking and accountability."
+    - name: columns.o_shippriority.description
+      newValue: "The o_shippriority column denotes the shipping priority assigned\
+        \ to the order, which can affect delivery times and logistics."
+    - name: columns.o_comment.description
+      newValue: "The o_comment column contains any additional comments or notes related\
+        \ to the order, which can provide context or special instructions."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524271
+    columns.o_clerk.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_custkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_orderkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_orderdate.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_totalprice.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_orderstatus.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_shippriority.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+    columns.o_orderpriority.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770524537
+domains: []
+dataProducts: []
+sourceHash: 5b36b823a4ad6f2d5500fa9c4dd17df6
+processedLineage: false
+entityStatus: Approved

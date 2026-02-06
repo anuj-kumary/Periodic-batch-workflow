@@ -1,0 +1,94 @@
+name: src_tab
+fullyQualifiedName: DatabricksProd.hive_metastore.default.src_tab
+description: "This table stores source data with unique identifiers and associated\
+  \ names, allowing users to efficiently manage and query information related to various\
+  \ entities, such as products or services, within their applications."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The 'id' column serves as a unique identifier for each record in\
+      \ the table, allowing for efficient retrieval and management of data."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.src_tab.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(20)
+    description: "The 'name' column stores a string value representing the name associated\
+      \ with each record, providing a way to identify or categorize the data."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.src_tab.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1a6de823-12f8-48cd-bed3-9e444b5e96d1
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.hive_metastore.default
+  displayName: default
+  deleted: false
+database:
+  id: 6f5b0b83-fb7f-4500-b4cf-072d76378ca1
+  type: database
+  name: hive_metastore
+  fullyQualifiedName: DatabricksProd.hive_metastore
+  displayName: hive_metastore
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE hive_metastore.default.src_tab (
+    id INT,
+    name VARCHAR(20))
+  USING delta
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "The 'id' column serves as a unique identifier for each record in\
+        \ the table, allowing for efficient retrieval and management of data."
+    - name: columns.name.description
+      newValue: "The 'name' column stores a string value representing the name associated\
+        \ with each record, providing a way to identify or categorize the data."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770549974
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770550260
+    columns.name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770550260
+domains: []
+dataProducts: []
+sourceHash: 8ff4e0abc57446355f991ebe1945a4b2
+processedLineage: false
+entityStatus: Approved

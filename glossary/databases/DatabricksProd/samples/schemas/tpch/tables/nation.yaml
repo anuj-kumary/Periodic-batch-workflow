@@ -1,0 +1,135 @@
+name: nation
+fullyQualifiedName: DatabricksProd.samples.tpch.nation
+description: "This table provides details about various nations, including their names\
+  \ and associated regions, allowing users to analyze geographical distributions and\
+  \ relationships in datasets, particularly in the context of global trade and demographics."
+tableType: Regular
+columns:
+  - name: n_nationkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: This column serves as a unique identifier for each nation. It is
+      used as a primary key to distinguish one nation from another in the dataset.
+    fullyQualifiedName: DatabricksProd.samples.tpch.nation.n_nationkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: n_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: This column represents the name of the nation. It is used to identify
+      the nation in queries and reports.
+    fullyQualifiedName: DatabricksProd.samples.tpch.nation.n_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: n_regionkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: This column indicates the region to which the nation belongs. It
+      is used to categorize nations based on their geographical or political regions.
+    fullyQualifiedName: DatabricksProd.samples.tpch.nation.n_regionkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: n_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: This column contains comments or additional information related to
+      the nation. It may provide context or insights about the nation that are not
+      captured by other columns.
+    fullyQualifiedName: DatabricksProd.samples.tpch.nation.n_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.nation (
+    n_nationkey BIGINT,
+    n_name STRING,
+    n_regionkey BIGINT,
+    n_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/nation'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.n_nationkey.description
+      newValue: This column serves as a unique identifier for each nation. It is used
+        as a primary key to distinguish one nation from another in the dataset.
+    - name: columns.n_name.description
+      newValue: This column represents the name of the nation. It is used to identify
+        the nation in queries and reports.
+    - name: columns.n_regionkey.description
+      newValue: This column indicates the region to which the nation belongs. It is
+        used to categorize nations based on their geographical or political regions.
+    - name: columns.n_comment.description
+      newValue: This column contains comments or additional information related to
+        the nation. It may provide context or insights about the nation that are not
+        captured by other columns.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770525197
+    columns.n_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770525454
+    columns.n_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770525454
+    columns.n_nationkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770525454
+    columns.n_regionkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770525454
+domains: []
+dataProducts: []
+sourceHash: c5de10b3b8ff5cc28ea939f955bdd6a1
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,94 @@
+name: temp
+fullyQualifiedName: DatabricksProd.hive_metastore.default.temp
+description: "This table stores two bigint values, which can be utilized for various\
+  \ numerical computations or aggregations, making it suitable for analytical tasks\
+  \ or as a temporary storage for intermediate results in data processing workflows."
+tableType: Regular
+columns:
+  - name: a
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: This column represents a unique identifier or key that is used to
+      track or reference specific records within the dataset.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.temp.a
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: b
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "This column is used to store a numerical value that may represent\
+      \ a quantity, measurement, or other relevant metric associated with the records."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.temp.b
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1a6de823-12f8-48cd-bed3-9e444b5e96d1
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.hive_metastore.default
+  displayName: default
+  deleted: false
+database:
+  id: 6f5b0b83-fb7f-4500-b4cf-072d76378ca1
+  type: database
+  name: hive_metastore
+  fullyQualifiedName: DatabricksProd.hive_metastore
+  displayName: hive_metastore
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE hive_metastore.default.temp (
+    a BIGINT,
+    b BIGINT)
+  USING delta
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.a.description
+      newValue: This column represents a unique identifier or key that is used to
+        track or reference specific records within the dataset.
+    - name: columns.b.description
+      newValue: "This column is used to store a numerical value that may represent\
+        \ a quantity, measurement, or other relevant metric associated with the records."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770549064
+    columns.a.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770549319
+    columns.b.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770549319
+domains: []
+dataProducts: []
+sourceHash: d3d1b422a3c333479fe6fc5f6030dbe2
+processedLineage: false
+entityStatus: Approved
