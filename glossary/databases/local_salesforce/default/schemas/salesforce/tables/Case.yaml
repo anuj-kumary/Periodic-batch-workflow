@@ -1,0 +1,357 @@
+name: Case
+fullyQualifiedName: local_salesforce.default.salesforce.Case
+description: Case
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Case ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CaseNumber
+    dataType: UNKNOWN
+    dataLength: 30
+    dataTypeDisplay: string
+    description: Case Number
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.CaseNumber
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ContactId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Contact ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ContactId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: AccountId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Account ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.AccountId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: ParentId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Parent Case ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ParentId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Type
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Case Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Type
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Status
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Status
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: Reason
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Case Reason
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Reason
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: Origin
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Case Origin
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Origin
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: Subject
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Subject
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Subject
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: Priority
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Priority
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Priority
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 32000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IsClosed
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Closed
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.IsClosed
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: ClosedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Closed Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ClosedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: IsEscalated
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Escalated
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.IsEscalated
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.OwnerId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: ContactPhone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Contact Phone
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ContactPhone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: ContactMobile
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Contact Mobile
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ContactMobile
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: ContactEmail
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: email
+    description: Contact Email
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ContactEmail
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: ContactFax
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Contact Fax
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.ContactFax
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: LastViewedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.LastViewedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: LastReferencedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Referenced Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Case.LastReferencedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/Case/list
+domains: []
+dataProducts: []
+sourceHash: 6416fcaf785412babff7472117025b95
+processedLineage: false
+entityStatus: Unprocessed

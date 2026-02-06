@@ -1,0 +1,412 @@
+name: Campaign
+fullyQualifiedName: local_salesforce.default.salesforce.Campaign
+description: Campaign
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Campaign ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ParentId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Parent Campaign ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.ParentId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: Type
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.Type
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Status
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.Status
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: StartDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Start Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.StartDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: EndDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: End Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.EndDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: ExpectedRevenue
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Expected Revenue in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.ExpectedRevenue
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: BudgetedCost
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Budgeted Cost in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.BudgetedCost
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: ActualCost
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Actual Cost in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.ActualCost
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: ExpectedResponse
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: percent
+    description: Expected Response (%)
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.ExpectedResponse
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: NumberSent
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Num Sent in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberSent
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IsActive
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Active
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.IsActive
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 32000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: NumberOfLeads
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Leads in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberOfLeads
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: NumberOfConvertedLeads
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Converted Leads in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberOfConvertedLeads
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: NumberOfContacts
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Contacts in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberOfContacts
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: NumberOfResponses
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Responses in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberOfResponses
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: NumberOfOpportunities
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Opportunities in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberOfOpportunities
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: NumberOfWonOpportunities
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Won Opportunities in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.NumberOfWonOpportunities
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: AmountAllOpportunities
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Value Opportunities in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.AmountAllOpportunities
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: AmountWonOpportunities
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Value Won Opportunities in Campaign
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.AmountWonOpportunities
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.OwnerId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: LastActivityDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Last Activity
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.LastActivityDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: LastViewedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.LastViewedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: LastReferencedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Referenced Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.LastReferencedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: CampaignMemberRecordTypeId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Record Type ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Campaign.CampaignMemberRecordTypeId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/Campaign/list
+domains: []
+dataProducts: []
+sourceHash: 4721f2e63f4c8d7655daf244d47236f9
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,192 @@
+name: AssetTokenEvent
+fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent
+description: Asset Token Event
+tableType: Regular
+columns:
+  - name: ReplayId
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: Replay ID
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.ReplayId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ConnectedAppId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Connected App ID
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.ConnectedAppId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: UserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.UserId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: AssetId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Asset ID
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.AssetId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.Name
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: DeviceId
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Device ID
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.DeviceId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: DeviceKey
+    dataType: VARCHAR
+    dataLength: 2000
+    dataTypeDisplay: textarea
+    description: Device Key
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.DeviceKey
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: Expiration
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Expiration
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.Expiration
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: AssetSerialNumber
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Asset Serial Number
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.AssetSerialNumber
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: AssetName
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Asset Name
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.AssetName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: ActorTokenPayload
+    dataType: VARCHAR
+    dataLength: 6000
+    dataTypeDisplay: textarea
+    description: Actor Token Payload
+    fullyQualifiedName: local_salesforce.default.salesforce.AssetTokenEvent.ActorTokenPayload
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/AssetTokenEvent/list
+domains: []
+dataProducts: []
+sourceHash: 48bf7af603518a144f57abdd60b92054
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,357 @@
+name: ContentDistribution
+fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution
+description: Content Delivery
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Content Delivery ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.OwnerId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 100
+    dataTypeDisplay: string
+    description: Content Delivery Name
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: ContentVersionId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: ContentVersion ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.ContentVersionId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: ContentDocumentId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: ContentDocument ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.ContentDocumentId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: RelatedRecordId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Related Record ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.RelatedRecordId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PreferencesAllowPDFDownload
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Allow Download as PDF
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesAllowPDFDownload
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: PreferencesAllowOriginalDownload
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Allow Download in Original Format
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesAllowOriginalDownload
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: PreferencesPasswordRequired
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Require Password to Access Content
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesPasswordRequired
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: PreferencesNotifyOnVisit
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Notify Me of First View or Download
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesNotifyOnVisit
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: PreferencesLinkLatestVersion
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Content Delivery Opens Latest Version
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesLinkLatestVersion
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: PreferencesAllowViewInBrowser
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Allow View in the Browser
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesAllowViewInBrowser
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: PreferencesExpires
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Content Delivery Expires
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesExpires
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: PreferencesNotifyRndtnComplete
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Email when Preview Images are Ready
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PreferencesNotifyRndtnComplete
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: ExpiryDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Expiration Date
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.ExpiryDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: Password
+    dataType: UNKNOWN
+    dataLength: 36
+    dataTypeDisplay: string
+    description: Password
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.Password
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: ViewCount
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: View Count
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.ViewCount
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: FirstViewDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: First Viewed
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.FirstViewDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: LastViewDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.LastViewDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: DistributionPublicUrl
+    dataType: UNKNOWN
+    dataLength: 256
+    dataTypeDisplay: string
+    description: External Link
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.DistributionPublicUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: ContentDownloadUrl
+    dataType: UNKNOWN
+    dataLength: 256
+    dataTypeDisplay: string
+    description: File Download Link
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.ContentDownloadUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: PdfDownloadUrl
+    dataType: UNKNOWN
+    dataLength: 256
+    dataTypeDisplay: string
+    description: PDF Download Link
+    fullyQualifiedName: local_salesforce.default.salesforce.ContentDistribution.PdfDownloadUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/ContentDistribution/list
+domains: []
+dataProducts: []
+sourceHash: d1aebce73972cadd7b92fada0a2dfad8
+processedLineage: false
+entityStatus: Unprocessed
