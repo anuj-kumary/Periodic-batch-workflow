@@ -1,0 +1,79 @@
+name: T055F
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T055F
+description: Field Group Fields (Master Data)
+tableType: Regular
+columns:
+  - name: FELDN
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 61
+    dataTypeDisplay: char(61)
+    description: "Complete field name (table, separator, field name)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T055F.FELDN
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KOART
+    displayName: Account type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Account Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T055F.KOART
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T055F.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - FELDN
+      - KOART
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ec95ca260efc9e1db70d2dfd7ae35cce
+processedLineage: false
+entityStatus: Approved

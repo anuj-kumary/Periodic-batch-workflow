@@ -1,0 +1,223 @@
+name: T049B
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B
+description: Control Parameters for Autocash
+tableType: Regular
+columns:
+  - name: ANZA4
+    displayName: Num. of doc. numbers in type 4
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Number of Document Numbers in Record Type 4
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.ANZA4
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: ANZA6
+    displayName: Num. of doc. numbers in type 6
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Number of Document Numbers in Record Type 6
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.ANZA6
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BLAEN
+    displayName: Document number length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Document Number Length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.BLAEN
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FB01B
+    displayName: G/L account postings
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: G/L Account Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.FB01B
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: FB01M
+    displayName: G/L acct posting session name
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Session Name (FB01)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.FB01M
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: FB05B
+    displayName: Incoming customer payments
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Incoming Payment Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.FB05B
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: FB05M
+    displayName: Cust.incoming pmnts sess.name
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Session Name of Postings for Customer Incoming Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.FB05M
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: FB1KZ
+    displayName: G/L account posting type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Type of G/L Account Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.FB1KZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: FORMT
+    displayName: Record format
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Tape Record Format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.FORMT
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KNBKB
+    displayName: Insert bank details
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Insert Bank Details using Batch Input (FD02)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.KNBKB
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: KNBKM
+    displayName: Create bank session name
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Session Name (FD02) (Create Bank Data)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.KNBKM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PFADN
+    displayName: Lockbox file path name
+    dataType: CHAR
+    dataLength: 50
+    dataTypeDisplay: char(50)
+    description: Path for the Lockbox File
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.PFADN
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: PPYMT
+    displayName: Partial Payment Indicator
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Partial Payment Flag
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.PPYMT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: VERFA
+    displayName: Processing procedure for check payment
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Processing procedure for check payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049B.VERFA
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - FORMT
+      - MANDT
+      - VERFA
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 650795c99f4b24d7f1a5f7bc2251fe4b
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,259 @@
+name: T049E
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E
+description: Control Data for Swiss ISR Procedure
+tableType: Regular
+columns:
+  - name: APPLK
+    displayName: Application Indicator
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Application Indicator
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.APPLK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: BANKL
+    displayName: Bank number
+    dataType: CHAR
+    dataLength: 15
+    dataTypeDisplay: char(15)
+    description: Bank No.for Billing Document and Dunning Printout with ISR
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.BANKL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: BLART
+    displayName: BLART
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for ISR Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.BLART
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: BUFLG
+    displayName: Leading Company Code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Leading Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.BUFLG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: BUKRS
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code of ISR Subscriber
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.BUKRS
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: KUNID
+    displayName: Customer ID number
+    dataType: CHAR
+    dataLength: 15
+    dataTypeDisplay: char(15)
+    description: Customer ID Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.KUNID
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LBLNR
+    displayName: Doc.no.length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Document Number Length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.LBLNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: LKDNR
+    displayName: LKDNR
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Length of Customer Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.LKDNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NOTAKT
+    displayName: No printing
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Do Not Print ISR"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.NOTAKT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: OFKND
+    displayName: Offeset Customer No.
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset of Customer Number in the ISR Reference Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.OFKND
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: OFSET
+    displayName: Offset of Doc. No.
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset of Document Number in the ISR Reference Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.OFSET
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SAKOV
+    displayName: Payment clrng acct G/L acct
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Payment Cclearing Account Post Office or Bank
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.SAKOV
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: SAKOZ
+    displayName: Incoming payments G/L acct
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: "Incoming Payments Account, Post Office or Bank"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.SAKOZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: TEILN
+    displayName: Subscriber Number
+    dataType: CHAR
+    dataLength: 9
+    dataTypeDisplay: numc(9)
+    description: ISR Subscriber Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.TEILN
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: VERFA
+    displayName: ISR Procedure
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: ISR Procedure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.VERFA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: VKORG
+    displayName: Sales organization
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Sales Organization
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.VKORG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XMESR
+    displayName: Dunning Print with ISR
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Printing of dunning notices with ISR"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049E.XMESR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - KUNID
+      - MANDT
+      - TEILN
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 29c9f5e46399cb773d10492ec2e95c36
+processedLineage: false
+entityStatus: Approved

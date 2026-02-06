@@ -1,0 +1,93 @@
+name: T052S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052S
+description: Terms of Payment for Holdback/Retainage
+tableType: Regular
+columns:
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: RATNR
+    displayName: RATNR
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Sequential Number of Installment to Be Paid
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052S.RATNR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: RATPZ
+    displayName: RATPZ
+    dataType: DECIMAL
+    dataLength: 5
+    precision: 5
+    scale: 3
+    dataTypeDisplay: "dec(5,3)"
+    description: Percentage rate of the holdback/retainage
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052S.RATPZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: RATZT
+    displayName: RATZT
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Payment term for the holdback/retainage
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052S.RATZT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - RATNR
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: bedbaa02f169c92220c74810c71eb37b
+processedLineage: false
+entityStatus: Approved

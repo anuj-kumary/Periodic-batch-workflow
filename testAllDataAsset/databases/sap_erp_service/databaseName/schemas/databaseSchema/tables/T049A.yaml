@@ -1,0 +1,223 @@
+name: T049A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A
+description: Posting Data For Autocash With Lockbox
+tableType: Regular
+columns:
+  - name: BABNK
+    displayName: BABNK
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Bank Posting Document Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BABNK
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BADEB
+    displayName: BADEB
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Customer Posting Document Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BADEB
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BKKTO
+    displayName: Bank (G/L) acct
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Lockbox Holder's Bank (G/L Account) Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BKKTO
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: BSDBH
+    displayName: Post key:credit cust
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Posting Key, Credit Customer"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BSDBH
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: BSDBS
+    displayName: "Post key: debit cust"
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Posting key: debit customer"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BSDBS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: BSSKH
+    displayName: Pstng key:credit G/L
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Posting Key, Credit G/L Account"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BSSKH
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: BSSKS
+    displayName: "Pstng key: debit G/L"
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Posting Key, Debit G/L Account"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BSSKS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.BUKRS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: DESTI
+    displayName: Destination
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Ultimate Destination of Transmission
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.DESTI
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: HBKID
+    displayName: House Bank
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Short Key for a House Bank
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.HBKID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: HKTID
+    displayName: Account ID
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: ID for account details
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.HKTID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ORIGN
+    displayName: Origin of transm.
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Present Origin of Transmission - Transit/Routing Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.ORIGN
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: SEKTO
+    displayName: Bank clear.acct(A/R)
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Lockbox Holder's Bank Clearing Account (A/R)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.SEKTO
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XAUTS
+    displayName: Automatic search
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Flag for Automatic Search for FBZ1
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049A.XAUTS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - DESTI
+      - MANDT
+      - ORIGN
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ea17aecff48fc0ec8fb0541ad44ea790
+processedLineage: false
+entityStatus: Approved

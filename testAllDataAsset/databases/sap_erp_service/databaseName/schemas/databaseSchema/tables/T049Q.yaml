@@ -1,0 +1,223 @@
+name: T049Q
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q
+description: Control Data for Swiss QR-Bill
+tableType: Regular
+columns:
+  - name: BUFLG
+    displayName: Leading Company Code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Leading Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.BUFLG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.BUKRS
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FORM_PARAM
+    displayName: Format Parameter for QR-IBAN
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Format Parameter for QR-IBAN
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.FORM_PARAM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: KUNID
+    displayName: Customer ID Number
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Customer ID Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.KUNID
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LBLNR
+    displayName: Document Number Length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Document Number Length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.LBLNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: LKDNR
+    displayName: Length of Customer Number
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Length of Customer Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.LKDNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NOSTRDBXGINF
+    displayName: Do Not Print Billing Information
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Do Not Print Billing Information
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.NOSTRDBXGINF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: NOTAKT
+    displayName: No Print
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Do Not Print QR-Bill
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.NOTAKT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: NOTAMT
+    displayName: "Indicator: Do Not Print Amount"
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Do Not Print Amount"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.NOTAMT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: OFKND
+    displayName: Offset of Customer No. in ISR Ref No.
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset of Customer Number in the ISR Reference Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.OFKND
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: OFSET
+    displayName: Offset of Document Number
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset of Document Number in the QR-Bill Reference Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.OFSET
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: QRIBAN
+    displayName: QR-IBAN
+    dataType: CHAR
+    dataLength: 34
+    dataTypeDisplay: char(34)
+    description: QR-IBAN International Bank Account Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.QRIBAN
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: QRPROVIDER
+    displayName: QR Provider
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: QR Provider
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.QRPROVIDER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: REFTYPE
+    displayName: Reference Type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "QR Code Reference Type: QRR or SCOR or NON"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T049Q.REFTYPE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - KUNID
+      - MANDT
+      - QRIBAN
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e332699f024bc3ac7f8ebf72577525c1
+processedLineage: false
+entityStatus: Approved

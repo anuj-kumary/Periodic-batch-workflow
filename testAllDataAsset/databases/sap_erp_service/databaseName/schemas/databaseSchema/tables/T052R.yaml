@@ -1,0 +1,103 @@
+name: T052R
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052R
+description: Rules for Issuing Invoices
+tableType: Regular
+columns:
+  - name: BDATU
+    displayName: End of leave
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: End of Leave
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052R.BDATU
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052R.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: RECID
+    displayName: Invoice issue rule
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Rules for Issuing an Invoice
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052R.RECID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: URLID
+    displayName: Knwn/negotiat.leave
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Short Key for Known/Negotiated Leave
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052R.URLID
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: VDATU
+    displayName: Start of leave
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Start of Leave
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052R.VDATU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BDATU
+      - MANDT
+      - URLID
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: c25383bf269b107c07b4db5d914cef34
+processedLineage: false
+entityStatus: Approved

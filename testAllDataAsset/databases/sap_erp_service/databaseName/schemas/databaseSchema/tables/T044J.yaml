@@ -1,0 +1,115 @@
+name: T044J
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J
+description: Preference Key for Reading Valuation Results
+tableType: Regular
+columns:
+  - name: BWBER
+    displayName: Valuation Area
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Valuation Area for FI Year-End Closing
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J.BWBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: CURTP
+    displayName: Crcy type/val.view
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Currency type and valuation view
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J.CURTP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FNAME
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J.FNAME
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TNAME
+    displayName: Table
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J.TNAME
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: UMBWM
+    displayName: Val. Method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Valuation Methods in Financial Accounting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044J.UMBWM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - FNAME
+      - MANDT
+      - TNAME
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ae12a1c24ed52d1e35f61dfcf280d536
+processedLineage: false
+entityStatus: Approved

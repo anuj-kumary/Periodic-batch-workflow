@@ -1,0 +1,127 @@
+name: T047B
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B
+description: Dunning level control
+tableType: Regular
+columns:
+  - name: MAHNA
+    displayName: Dunning Procedure
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Dunning Procedure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.MAHNA
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MAHNS
+    displayName: Dunning Level
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Dunning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.MAHNS
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: VERTG
+    displayName: Days in arrears
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Days in arrears
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.VERTG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XAEND
+    displayName: Always dun?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Send Dunning Notice Although No Changes Were Made?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.XAEND
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XPOST
+    displayName: Print all items
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Print All Items?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.XPOST
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XZINS
+    displayName: Calculate interest?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Calculate Interest?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047B.XZINS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MAHNA
+      - MAHNS
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 8d514f1714d9b3b10419c14aa5c696b1
+processedLineage: false
+entityStatus: Approved

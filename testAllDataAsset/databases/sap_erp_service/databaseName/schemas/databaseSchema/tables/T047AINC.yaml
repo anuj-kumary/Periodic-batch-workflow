@@ -1,0 +1,208 @@
+name: T047AINC
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC
+description: "Include for T047A: Post Dunning Charges/Interest"
+tableType: View
+columns:
+  - name: PSOBD
+    displayName: Doc.Type Dnng Charge
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for Postings for Dunning Charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOBD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: PSOBI
+    displayName: Doc.Type Dnng Intrst
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for Postings for Dunning Interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOBI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: PSODC
+    displayName: Due date of Dunning Charge
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Due date for Dunning Charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSODC
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PSODI
+    displayName: Due Date Dnng Intrst
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Due Date of Dunning Interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSODI
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: PSOFD
+    displayName: Min.Days in Arrears for Intr.
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Minimum Days in Arrears for Dunning Interest Calculation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOFD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: PSOMG
+    displayName: Rtype Dunning Chrgs
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Revenue Type for Dunning Charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOMG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: PSOMI
+    displayName: Interest Calcul. with Dif. Intrst Rates
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Interest Calculation with Different Interest Rates
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOMI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: PSONI
+    displayName: Activate Interest Totaling
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Activate Interest Totaling for Private-Law Dunning Procedure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSONI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: PSOVR
+    displayName: Leads to debt enforcement
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Dunning procedure leads to debt enforcement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOVR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: PSOXL
+    displayName: Public-Law Procedure
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Public-Law Dunning Procedure"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOXL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: PSOZG
+    displayName: RType Dunning Intrst
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Revenue Type for Dunning Interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOZG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: PSOZW
+    displayName: Except.Pymnt.Methods
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: "List: Exception Pymnt Mthds Lding to Days in Arrears/Int = 0"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.PSOZW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XMGBUCH
+    displayName: Post Dunn.Charges
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Dunning Charges Should be Posted"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.XMGBUCH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: XMZBUCH
+    displayName: Post Dunn.Int.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Dunning Interest Should be Posted"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047AINC.XMZBUCH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 0ff1fc7df148cf5bdd0f6ef422c411f5
+processedLineage: false
+entityStatus: Approved

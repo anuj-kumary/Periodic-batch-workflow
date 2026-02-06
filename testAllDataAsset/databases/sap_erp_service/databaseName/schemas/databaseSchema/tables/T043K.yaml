@@ -1,0 +1,187 @@
+name: T043K
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K
+description: Control of Payment Notices to Customers/Vendors
+tableType: Regular
+columns:
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: KMAKO
+    displayName: Correspondence type
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Type of Correspondence for Payments on Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.KMAKO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: KMRES
+    displayName: Correspondence type
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Type of Correspondence for Residual Items
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.KMRES
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: KMTEI
+    displayName: Correspondence type
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Type of Correspondence for Partial Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.KMTEI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TOGRU
+    displayName: Tolerance group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Tolerance group for the business partner/G/L account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.TOGRU
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XMAKO
+    displayName: Payment on account
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment notice for payment on account"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.XMAKO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XMRES
+    displayName: Residual item
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment notice for residual item"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.XMRES
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XMTEI
+    displayName: Partial payment
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment notice for partial payment"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.XMTEI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XRAKO
+    displayName: According to reason code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Type of notice according to reason code"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.XRAKO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XRRES
+    displayName: According to reason code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Type of notice according to reason code"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.XRRES
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XRTEI
+    displayName: According to reason code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Type of notice according to reason code"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043K.XRTEI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+      - TOGRU
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9db28ed6cdd1da8c66afa952cc77a571
+processedLineage: false
+entityStatus: Approved

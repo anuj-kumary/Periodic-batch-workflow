@@ -1,0 +1,175 @@
+name: T047E
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E
+description: Form selection for dunning notices
+tableType: Regular
+columns:
+  - name: FORM_TYPE
+    displayName: Form Type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Form Types
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.FORM_TYPE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: FORNR
+    displayName: FORNR
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.FORNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: FORNR_LONG
+    displayName: Name of Form Object
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of Form Object
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.FORNR_LONG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: KOART
+    displayName: Account type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Open item account type (A/R / A/P)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.KOART
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LISTN
+    displayName: Spool list name
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Spool output list name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.LISTN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: MABER
+    displayName: Dunning Area
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Dunning Area
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.MABER
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: MAHNR
+    displayName: Ref.Dunning Procedure for Texts
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Reference Dunning Procedure for Text Selection
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.MAHNR
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MAHNS
+    displayName: Dunning Level
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Dunning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.MAHNS
+    tags: []
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: RBUKM
+    displayName: Ref.company code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Reference Company Code for Dunning Notices
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.RBUKM
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XAVIS
+    displayName: Payment advice
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Generate payment advice"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047E.XAVIS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KOART
+      - MABER
+      - MAHNR
+      - MAHNS
+      - MANDT
+      - RBUKM
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7fbf481aa576fab45337e3ac93408583
+processedLineage: false
+entityStatus: Approved
