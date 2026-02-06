@@ -1,0 +1,184 @@
+name: lobfragv$
+fullyQualifiedName: oracle_test.default.sys.lobfragv$
+tableType: View
+columns:
+  - name: FRAGOBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.FRAGOBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PARENTOBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.PARENTOBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABFRAGOBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.TABFRAGOBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: INDFRAGOBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.INDFRAGOBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: FRAG#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.FRAG#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fragtype$
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.fragtype$
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TS#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.TS#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: FILE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.FILE#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: BLOCK#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.BLOCK#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: chunk
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.chunk
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pctversion$
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.pctversion$
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: fragflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.fragflags
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: fragpro
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.fragpro
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: spare1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.spare1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare2
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.spare2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare3
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.lobfragv$.spare3
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7f186bce3f3baae7a9806a2efddef11f
+processedLineage: false
+entityStatus: Approved
