@@ -1,0 +1,221 @@
+name: customer
+fullyQualifiedName: testunitycatalog.samples.tpch.customer
+description: ""
+tableType: Regular
+columns:
+  - name: c_custkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_custkey
+    tags: []
+    children: []
+    customMetrics: []
+  - name: c_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_name
+    tags:
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: c_address
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_address
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: c_nationkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_nationkey
+    tags: []
+    children: []
+    customMetrics: []
+  - name: c_phone
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_phone
+    tags:
+      - tagFQN: General.PhoneNumber
+        name: PhoneNumber
+        description: A telephone number.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: c_acctbal
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_acctbal
+    tags: []
+    children: []
+    customMetrics: []
+  - name: c_mktsegment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_mktsegment
+    tags: []
+    children: []
+    customMetrics: []
+  - name: c_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.customer.c_comment
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 55c5b226-2dd1-43e5-bb1e-f2f5225271ee
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: testunitycatalog.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 809e001e-faeb-4ae9-a9f6-501a9a544682
+  type: testSuite
+  name: testunitycatalog.samples.tpch.customer.testSuite
+  fullyQualifiedName: testunitycatalog.samples.tpch.customer.testSuite
+  displayName: testunitycatalog.samples.tpch.customer.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.c_name.tags
+      newValue: "[{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\",\"description\"\
+        :\"PII which if lost, compromised, or disclosed without authorization, could\
+        \ result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.c_address.tags
+      newValue: "[{\"tagFQN\":\"General.Location\",\"name\":\"Location\",\"description\"\
+        :\"Name of politically or geographically defined location (cities, provinces,\
+        \ countries, international regions, bodies of water, mountains.\",\"source\"\
+        :\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"},{\"\
+        tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\":\"\
+        PII which is easily accessible from public sources and can include zip code,\
+        \ race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.c_phone.tags
+      newValue: "[{\"tagFQN\":\"General.PhoneNumber\",\"name\":\"PhoneNumber\",\"\
+        description\":\"A telephone number.\",\"source\":\"Classification\",\"labelType\"\
+        :\"Generated\",\"state\":\"Suggested\"},{\"tagFQN\":\"PII.NonSensitive\",\"\
+        name\":\"NonSensitive\",\"description\":\"PII which is easily accessible from\
+        \ public sources and can include zip code, race, gender, and date of birth.\"\
+        ,\"style\":{},\"source\":\"Classification\",\"labelType\":\"Generated\",\"\
+        state\":\"Suggested\"}]"
+    - name: columns.c_comment.tags
+      newValue: "[{\"tagFQN\":\"General.Person\",\"name\":\"Person\",\"description\"\
+        :\"A full person name, which can include first names, middle names or initials,\
+        \ and last names.\",\"source\":\"Classification\",\"labelType\":\"Generated\"\
+        ,\"state\":\"Suggested\"},{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\"\
+        ,\"description\":\"PII which if lost, compromised, or disclosed without authorization,\
+        \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: f0a24747228995c087f523434800115e
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,112 @@
+name: customeraccounts
+fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts
+tableType: Regular
+columns:
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.email
+    tags: []
+    children: []
+    customMetrics: []
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.accountid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: firstname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.firstname
+    tags: []
+    children: []
+    customMetrics: []
+  - name: lastname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.lastname
+    tags: []
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.customerid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: balance
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.balance
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts._fivetran_deleted
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts._fivetran_synced
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 3181774a-f115-44e6-9043-a0d20e9a7723
+  type: databaseSchema
+  name: stg
+  fullyQualifiedName: testunitycatalog.demo.stg
+  displayName: stg
+  deleted: false
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 5b4dd749-0f88-41e8-ad3d-1d19efa3c292
+  type: testSuite
+  name: testunitycatalog.demo.stg.customeraccounts.testSuite
+  fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts.testSuite
+  displayName: testunitycatalog.demo.stg.customeraccounts.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: ed4438f9ca1e0ec13e0c20392b9f56b5
+processedLineage: false
+entityStatus: Approved

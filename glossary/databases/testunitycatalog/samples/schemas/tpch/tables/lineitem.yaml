@@ -1,0 +1,264 @@
+name: lineitem
+fullyQualifiedName: testunitycatalog.samples.tpch.lineitem
+description: ""
+tableType: Regular
+columns:
+  - name: l_orderkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_orderkey
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_partkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_partkey
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_suppkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_suppkey
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_linenumber
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_linenumber
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_quantity
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_quantity
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_extendedprice
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_extendedprice
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_discount
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_discount
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_tax
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_tax
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_returnflag
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_returnflag
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_linestatus
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_linestatus
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_shipdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_shipdate
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: l_commitdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_commitdate
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: l_receiptdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_receiptdate
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: l_shipinstruct
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_shipinstruct
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_shipmode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_shipmode
+    tags: []
+    children: []
+    customMetrics: []
+  - name: l_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.l_comment
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 55c5b226-2dd1-43e5-bb1e-f2f5225271ee
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: testunitycatalog.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 2908fbec-09f3-4f43-8cb6-33a12abb8ccc
+  type: testSuite
+  name: testunitycatalog.samples.tpch.lineitem.testSuite
+  fullyQualifiedName: testunitycatalog.samples.tpch.lineitem.testSuite
+  displayName: testunitycatalog.samples.tpch.lineitem.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.l_shipdate.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.l_commitdate.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.l_receiptdate.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 92f2b18ca836826be06557264c0faf7e
+processedLineage: false
+entityStatus: Approved

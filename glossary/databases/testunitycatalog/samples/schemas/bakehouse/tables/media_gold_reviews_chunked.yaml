@@ -1,0 +1,148 @@
+name: media_gold_reviews_chunked
+fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked
+description: |2
+
+  The **Bakehouse Dataset** simulates a bakery franchise business and contains several key datasets for various analytical and AI-driven use cases. Please note that this sample dataset has been synthetically curated and is suitable for any Databricks workload.
+
+  Sample use cases for this dataset include:
+
+  * **Building Data Pipelines with Delta Live Tables**: Create automated, real-time data pipelines for efficient data ingestion, transformation, and management.
+  * **Performing Analytics with Databricks SQL**: Conduct powerful SQL-based analytics to uncover actionable insights from structured data, including sales trends and customer behavior.
+  * **Exploring AI and Machine Learning Capabilities**: Use the dataset to develop and train machine learning models, applying AI to forecast trends, optimize operations, and predict customer preferences.
+tableType: Regular
+columns:
+  - name: franchiseID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.franchiseID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: review_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.review_date
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: chunked_text
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.chunked_text
+    tags: []
+    children: []
+    customMetrics: []
+  - name: chunk_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.chunk_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: review_uri
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.review_uri
+    tags:
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b39e494e-3f23-4039-a300-527cc667cce3
+  type: databaseSchema
+  name: bakehouse
+  fullyQualifiedName: testunitycatalog.samples.bakehouse
+  displayName: bakehouse
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: f10685a1-2e97-4e1e-b699-d446b100dd20
+  type: testSuite
+  name: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.testSuite
+  fullyQualifiedName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.testSuite
+  displayName: testunitycatalog.samples.bakehouse.media_gold_reviews_chunked.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.review_date.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.review_uri.tags
+      newValue: "[{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\",\"description\"\
+        :\"PII which if lost, compromised, or disclosed without authorization, could\
+        \ result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 2e5cc10bd8930e198e99183f70939e01
+processedLineage: false
+entityStatus: Approved

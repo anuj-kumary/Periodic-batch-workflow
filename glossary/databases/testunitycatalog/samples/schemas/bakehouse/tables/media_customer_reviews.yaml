@@ -1,0 +1,122 @@
+name: media_customer_reviews
+fullyQualifiedName: testunitycatalog.samples.bakehouse.media_customer_reviews
+description: |2
+
+  The **Bakehouse Dataset** simulates a bakery franchise business and contains several key datasets for various analytical and AI-driven use cases. Please note that this sample dataset has been synthetically curated and is suitable for any Databricks workload.
+
+  Sample use cases for this dataset include:
+
+  * **Building Data Pipelines with Delta Live Tables**: Create automated, real-time data pipelines for efficient data ingestion, transformation, and management.
+  * **Performing Analytics with Databricks SQL**: Conduct powerful SQL-based analytics to uncover actionable insights from structured data, including sales trends and customer behavior.
+  * **Exploring AI and Machine Learning Capabilities**: Use the dataset to develop and train machine learning models, applying AI to forecast trends, optimize operations, and predict customer preferences.
+tableType: Regular
+columns:
+  - name: review
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_customer_reviews.review
+    tags: []
+    children: []
+    customMetrics: []
+  - name: franchiseID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_customer_reviews.franchiseID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: review_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_customer_reviews.review_date
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: new_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.media_customer_reviews.new_id
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b39e494e-3f23-4039-a300-527cc667cce3
+  type: databaseSchema
+  name: bakehouse
+  fullyQualifiedName: testunitycatalog.samples.bakehouse
+  displayName: bakehouse
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 8ee64d33-1b83-4548-84a4-dfcc5149eaaf
+  type: testSuite
+  name: testunitycatalog.samples.bakehouse.media_customer_reviews.testSuite
+  fullyQualifiedName: testunitycatalog.samples.bakehouse.media_customer_reviews.testSuite
+  displayName: testunitycatalog.samples.bakehouse.media_customer_reviews.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.review_date.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 905509ae3627040736b1a3d91abd41d7
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,54 @@
+name: dcc_pitches_v2_iceberg
+fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches_v2_iceberg
+tableType: Regular
+columns: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 2d9c4a8d-697d-4fe9-97c8-752f0af3933f
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: testunitycatalog.demo.uniform_schema
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 5b934a76-e5d4-40e8-9b85-352b76d4f09c
+  type: testSuite
+  name: testunitycatalog.demo.uniform_schema.dcc_pitches_v2_iceberg.testSuite
+  fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches_v2_iceberg.testSuite
+  displayName: testunitycatalog.demo.uniform_schema.dcc_pitches_v2_iceberg.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 65c24d7cb893a6dd0aaed95da1c9a0d1
+processedLineage: false
+entityStatus: Approved
