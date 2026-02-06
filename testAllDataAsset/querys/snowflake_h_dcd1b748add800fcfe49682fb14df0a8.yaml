@@ -1,0 +1,40 @@
+name: dcd1b748add800fcfe49682fb14df0a8
+fullyQualifiedName: snowflake_h.dcd1b748add800fcfe49682fb14df0a8
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.5
+owners: []
+duration: 8496202.0
+users: []
+query: "WITH \"7492547a05b84d643fd227e52ada40ff_rnd\" AS \n(SELECT \"CATALOG_RETURNS_1\"\
+  .\"CR_ORDER_NUMBER\" AS \"CR_ORDER_NUMBER\" \nFROM \"TPCDS_SF100TCL\".\"CATALOG_RETURNS\"\
+  \ AS \"CATALOG_RETURNS_1\" TABLESAMPLE bernoulli(?)), \n\"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \ AS \n(SELECT \"7492547a05b84d643fd227e52ada40ff_rnd\".\"CR_ORDER_NUMBER\" AS \"\
+  CR_ORDER_NUMBER\" \nFROM \"7492547a05b84d643fd227e52ada40ff_rnd\")\n SELECT count(\"\
+  CR_ORDER_NUMBER\") AS \"valuesCount\", count(DISTINCT \"CR_ORDER_NUMBER\") AS \"\
+  distinctCount\", MIN(\"CR_ORDER_NUMBER\") AS min, MAX(\"CR_ORDER_NUMBER\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"CR_ORDER_NUMBER\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\" \nFROM \"7492547a05b84d643fd227e52ada40ff_sample\"\n LIMIT ?"
+checksum: dcd1b748add800fcfe49682fb14df0a8
+queryDate: 1740700800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7103b5aa-a032-43da-be04-f3459f1ac097
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

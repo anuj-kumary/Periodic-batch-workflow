@@ -1,0 +1,39 @@
+name: da41220b59d0ebf339690fe388c11bd6
+fullyQualifiedName: snowflake_h.da41220b59d0ebf339690fe388c11bd6
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 274781.0
+users: []
+query: "SELECT \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"TABLE_CATALOG\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_TABLE_CATALOG\"\
+  , \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"TABLE_SCHEMA\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_TABLE_SCHEMA\"\
+  , \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"TABLE_NAME\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_TABLE_NAME\"\
+  , \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"TABLE_OWNER\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_TABLE_OWNER\"\
+  , \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"CREATED\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_CREATED\"\
+  , \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"LAST_ALTERED\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_LAST_ALTERED\"\
+  , \"INFORMATION_SCHEMA\".\"EVENT_TABLES\".\"COMMENT\" AS \"INFORMATION_SCHEMA_EVENT_TABLES_COMMENT\"\
+  \ \nFROM \"INFORMATION_SCHEMA\".\"EVENT_TABLES\"\n LIMIT ?"
+checksum: da41220b59d0ebf339690fe388c11bd6
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 48096737-cb77-409d-a1ba-adc90acf95ee
+    type: table
+    name: EVENT_TABLES
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES
+    displayName: EVENT_TABLES
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

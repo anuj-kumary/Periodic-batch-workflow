@@ -1,0 +1,38 @@
+name: cb959385708d838de8d7a74e7ce07dc5
+fullyQualifiedName: snowflake_h.cb959385708d838de8d7a74e7ce07dc5
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 6328.0
+users: []
+query: "SELECT \"TPCH_SF100\".\"PARTSUPP\".\"PS_PARTKEY\" AS \"TPCH_SF100_PARTSUPP_PS_PARTKEY\"\
+  , \"TPCH_SF100\".\"PARTSUPP\".\"PS_SUPPKEY\" AS \"TPCH_SF100_PARTSUPP_PS_SUPPKEY\"\
+  , \"TPCH_SF100\".\"PARTSUPP\".\"PS_AVAILQTY\" AS \"TPCH_SF100_PARTSUPP_PS_AVAILQTY\"\
+  , \"TPCH_SF100\".\"PARTSUPP\".\"PS_SUPPLYCOST\" AS \"TPCH_SF100_PARTSUPP_PS_SUPPLYCOST\"\
+  , \"TPCH_SF100\".\"PARTSUPP\".\"PS_COMMENT\" AS \"TPCH_SF100_PARTSUPP_PS_COMMENT\"\
+  \ \nFROM \"TPCH_SF100\".\"PARTSUPP\"\n LIMIT ?"
+checksum: cb959385708d838de8d7a74e7ce07dc5
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 853638a8-95d9-45ea-8c57-9c2aea609709
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

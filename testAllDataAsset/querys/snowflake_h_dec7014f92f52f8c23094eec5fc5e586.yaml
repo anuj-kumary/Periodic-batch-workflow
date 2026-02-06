@@ -1,0 +1,46 @@
+name: dec7014f92f52f8c23094eec5fc5e586
+fullyQualifiedName: snowflake_h.dec7014f92f52f8c23094eec5fc5e586
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.7
+owners: []
+duration: 502.0
+users: []
+query: "SELECT \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_WEB_PAGE_SK\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_WEB_PAGE_SK\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_WEB_PAGE_ID\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_WEB_PAGE_ID\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_REC_START_DATE\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_REC_START_DATE\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_REC_END_DATE\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_REC_END_DATE\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_CREATION_DATE_SK\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_CREATION_DATE_SK\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_ACCESS_DATE_SK\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_ACCESS_DATE_SK\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_AUTOGEN_FLAG\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_AUTOGEN_FLAG\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_CUSTOMER_SK\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_CUSTOMER_SK\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_URL\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_URL\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_TYPE\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_TYPE\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_CHAR_COUNT\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_CHAR_COUNT\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_LINK_COUNT\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_LINK_COUNT\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_IMAGE_COUNT\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_IMAGE_COUNT\"\
+  , \"TPCDS_SF10TCL\".\"WEB_PAGE\".\"WP_MAX_AD_COUNT\" AS \"TPCDS_SF10TCL_WEB_PAGE_WP_MAX_AD_COUNT\"\
+  \ \nFROM \"TPCDS_SF10TCL\".\"WEB_PAGE\"\n LIMIT ?"
+checksum: dec7014f92f52f8c23094eec5fc5e586
+queryDate: 1740700800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: da6fe2f8-69c0-4a62-ab48-c9677ca34544
+    type: table
+    name: WEB_PAGE
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_PAGE
+    displayName: WEB_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

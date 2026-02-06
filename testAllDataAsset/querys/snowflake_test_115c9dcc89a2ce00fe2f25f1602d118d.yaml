@@ -1,0 +1,92 @@
+name: 115c9dcc89a2ce00fe2f25f1602d118d
+fullyQualifiedName: snowflake_test.115c9dcc89a2ce00fe2f25f1602d118d
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 44711.0
+users: []
+query: "WITH \"7492547a05b84d643fd227e52ada40ff_rnd\" AS \n(SELECT \"CATALOG_RETURNS_1\"\
+  .\"CR_RETURN_AMT_INC_TAX\" AS \"CR_RETURN_AMT_INC_TAX\" \nFROM \"TPCDS_SF10TCL\"\
+  .\"CATALOG_RETURNS\" AS \"CATALOG_RETURNS_1\" TABLESAMPLE bernoulli(?)), \n\"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \ AS \n(SELECT \"7492547a05b84d643fd227e52ada40ff_rnd\".\"CR_RETURN_AMT_INC_TAX\"\
+  \ AS \"CR_RETURN_AMT_INC_TAX\" \nFROM \"7492547a05b84d643fd227e52ada40ff_rnd\")\n\
+  \ SELECT count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"0 to 950.564\", count(CASE WHEN\
+  \ (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\"\
+  \ END) AS \"950.564 to 1.901K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ?\
+  \ AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"1.901K\
+  \ to 2.852K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"2.852K to 3.802K\", count(CASE WHEN\
+  \ (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\"\
+  \ END) AS \"3.802K to 4.753K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ?\
+  \ AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"4.753K\
+  \ to 5.703K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"5.703K to 6.654K\", count(CASE WHEN\
+  \ (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\"\
+  \ END) AS \"6.654K to 7.605K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ?\
+  \ AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"7.605K\
+  \ to 8.555K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"8.555K to 9.506K\", count(CASE WHEN\
+  \ (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\"\
+  \ END) AS \"9.506K to 10.456K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ?\
+  \ AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"10.456K\
+  \ to 11.407K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"11.407K to 12.357K\", count(CASE\
+  \ WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"\
+  CR_RETURN_AMT_INC_TAX\" END) AS \"12.357K to 13.308K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\"\
+  \ >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS\
+  \ \"13.308K to 14.258K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"\
+  CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"14.258K to\
+  \ 15.209K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"15.209K to 16.160K\", count(CASE\
+  \ WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"\
+  CR_RETURN_AMT_INC_TAX\" END) AS \"16.160K to 17.110K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\"\
+  \ >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS\
+  \ \"17.110K to 18.061K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"\
+  CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"18.061K to\
+  \ 19.011K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"19.011K to 19.962K\", count(CASE\
+  \ WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"\
+  CR_RETURN_AMT_INC_TAX\" END) AS \"19.962K to 20.912K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\"\
+  \ >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS\
+  \ \"20.912K to 21.863K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"\
+  CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"21.863K to\
+  \ 22.814K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"22.814K to 23.764K\", count(CASE\
+  \ WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"\
+  CR_RETURN_AMT_INC_TAX\" END) AS \"23.764K to 24.715K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\"\
+  \ >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS\
+  \ \"24.715K to 25.665K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"\
+  CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"25.665K to\
+  \ 26.616K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\"\
+  \ < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS \"26.616K to 27.566K\", count(CASE\
+  \ WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"\
+  CR_RETURN_AMT_INC_TAX\" END) AS \"27.566K to 28.517K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\"\
+  \ >= ? AND \"CR_RETURN_AMT_INC_TAX\" < ?) THEN \"CR_RETURN_AMT_INC_TAX\" END) AS\
+  \ \"28.517K to 29.467K\", count(CASE WHEN (\"CR_RETURN_AMT_INC_TAX\" >= ?) THEN\
+  \ \"CR_RETURN_AMT_INC_TAX\" END) AS \"29.467K and up\" \nFROM \"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \n LIMIT ?"
+checksum: 115c9dcc89a2ce00fe2f25f1602d118d
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e9119d1e-971c-4d36-8713-0798a54f4faa
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test

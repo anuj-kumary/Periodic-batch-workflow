@@ -1,0 +1,41 @@
+name: dd97255995c2d2853b1feca8d602d1b6
+fullyQualifiedName: snowflake_h.dd97255995c2d2853b1feca8d602d1b6
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 1560.0
+users: []
+query: "SELECT \"TPCH_SF1000\".\"PART\".\"P_PARTKEY\" AS \"TPCH_SF1000_PART_P_PARTKEY\"\
+  , \"TPCH_SF1000\".\"PART\".\"P_NAME\" AS \"TPCH_SF1000_PART_P_NAME\", \"TPCH_SF1000\"\
+  .\"PART\".\"P_MFGR\" AS \"TPCH_SF1000_PART_P_MFGR\", \"TPCH_SF1000\".\"PART\".\"\
+  P_BRAND\" AS \"TPCH_SF1000_PART_P_BRAND\", \"TPCH_SF1000\".\"PART\".\"P_TYPE\" AS\
+  \ \"TPCH_SF1000_PART_P_TYPE\", \"TPCH_SF1000\".\"PART\".\"P_SIZE\" AS \"TPCH_SF1000_PART_P_SIZE\"\
+  , \"TPCH_SF1000\".\"PART\".\"P_CONTAINER\" AS \"TPCH_SF1000_PART_P_CONTAINER\",\
+  \ \"TPCH_SF1000\".\"PART\".\"P_RETAILPRICE\" AS \"TPCH_SF1000_PART_P_RETAILPRICE\"\
+  , \"TPCH_SF1000\".\"PART\".\"P_COMMENT\" AS \"TPCH_SF1000_PART_P_COMMENT\" \nFROM\
+  \ \"TPCH_SF1000\".\"PART\"\n LIMIT ?"
+checksum: dd97255995c2d2853b1feca8d602d1b6
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 66abe47c-18df-496d-863f-4fa4074d24e3
+    type: table
+    name: PART
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

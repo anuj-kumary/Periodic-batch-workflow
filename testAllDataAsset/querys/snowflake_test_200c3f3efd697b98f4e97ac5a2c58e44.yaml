@@ -1,0 +1,46 @@
+name: 200c3f3efd697b98f4e97ac5a2c58e44
+fullyQualifiedName: snowflake_test.200c3f3efd697b98f4e97ac5a2c58e44
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 149.0
+users: []
+query: "WITH \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\" AS \n(SELECT \"CALL_CENTER_1\"\
+  .\"CC_GMT_OFFSET\" AS \"CC_GMT_OFFSET\" \nFROM \"TPCDS_SF100TCL\".\"CALL_CENTER\"\
+  \ AS \"CALL_CENTER_1\" TABLESAMPLE bernoulli(?)), \n\"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\
+  \ AS \n(SELECT \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\".\"CC_GMT_OFFSET\" AS \"\
+  CC_GMT_OFFSET\" \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\")\n SELECT count(CASE\
+  \ WHEN (\"CC_GMT_OFFSET\" >= ? AND \"CC_GMT_OFFSET\" < ?) THEN \"CC_GMT_OFFSET\"\
+  \ END) AS \"-8.000 to -7.489\", count(CASE WHEN (\"CC_GMT_OFFSET\" >= ? AND \"CC_GMT_OFFSET\"\
+  \ < ?) THEN \"CC_GMT_OFFSET\" END) AS \"-7.489 to -6.978\", count(CASE WHEN (\"\
+  CC_GMT_OFFSET\" >= ? AND \"CC_GMT_OFFSET\" < ?) THEN \"CC_GMT_OFFSET\" END) AS \"\
+  -6.978 to -6.467\", count(CASE WHEN (\"CC_GMT_OFFSET\" >= ? AND \"CC_GMT_OFFSET\"\
+  \ < ?) THEN \"CC_GMT_OFFSET\" END) AS \"-6.467 to -5.957\", count(CASE WHEN (\"\
+  CC_GMT_OFFSET\" >= ? AND \"CC_GMT_OFFSET\" < ?) THEN \"CC_GMT_OFFSET\" END) AS \"\
+  -5.957 to -5.446\", count(CASE WHEN (\"CC_GMT_OFFSET\" >= ?) THEN \"CC_GMT_OFFSET\"\
+  \ END) AS \"-5.446 and up\" \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\n\
+  \ LIMIT ?"
+checksum: 200c3f3efd697b98f4e97ac5a2c58e44
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f6f32e42-c493-462c-8db5-7d565fc8c892
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test

@@ -1,0 +1,37 @@
+name: f93ca750f673b30e14257098006a96ea
+fullyQualifiedName: snowflake_h.f93ca750f673b30e14257098006a96ea
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 1302.0
+users: []
+query: "SELECT \"TPCDS_SF10TCL\".\"HOUSEHOLD_DEMOGRAPHICS\".\"HD_DEMO_SK\" AS \"TPCDS_SF10TCL_HOUSEHOLD_DEMOGRAPHICS_HD_DEMO_SK\"\
+  , \"TPCDS_SF10TCL\".\"HOUSEHOLD_DEMOGRAPHICS\".\"HD_INCOME_BAND_SK\" AS \"TPCDS_SF10TCL_HOUSEHOLD_DEMOGRAPHICS_HD_INCOME_BAND_SK\"\
+  , \"TPCDS_SF10TCL\".\"HOUSEHOLD_DEMOGRAPHICS\".\"HD_BUY_POTENTIAL\" AS \"TPCDS_SF10TCL_HOUSEHOLD_DEMOGRAPHICS_HD_BUY_POTENTIAL\"\
+  , \"TPCDS_SF10TCL\".\"HOUSEHOLD_DEMOGRAPHICS\".\"HD_DEP_COUNT\" AS \"TPCDS_SF10TCL_HOUSEHOLD_DEMOGRAPHICS_HD_DEP_COUNT\"\
+  , \"TPCDS_SF10TCL\".\"HOUSEHOLD_DEMOGRAPHICS\".\"HD_VEHICLE_COUNT\" AS \"TPCDS_SF10TCL_HOUSEHOLD_DEMOGRAPHICS_HD_VEHICLE_COUNT\"\
+  \ \nFROM \"TPCDS_SF10TCL\".\"HOUSEHOLD_DEMOGRAPHICS\"\n LIMIT ?"
+checksum: f93ca750f673b30e14257098006a96ea
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 40c890ac-7001-42ba-aa9a-43c334921979
+    type: table
+    name: HOUSEHOLD_DEMOGRAPHICS
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.HOUSEHOLD_DEMOGRAPHICS
+    displayName: HOUSEHOLD_DEMOGRAPHICS
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

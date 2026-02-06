@@ -1,0 +1,85 @@
+name: 095aba009b6fa31cad6f99824c43351c
+fullyQualifiedName: snowflake_test.095aba009b6fa31cad6f99824c43351c
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 40252.0
+users: []
+query: "WITH \"7492547a05b84d643fd227e52ada40ff_rnd\" AS \n(SELECT \"CATALOG_RETURNS_1\"\
+  .\"CR_RETURN_TAX\" AS \"CR_RETURN_TAX\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_RETURNS\"\
+  \ AS \"CATALOG_RETURNS_1\" TABLESAMPLE bernoulli(?)), \n\"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \ AS \n(SELECT \"7492547a05b84d643fd227e52ada40ff_rnd\".\"CR_RETURN_TAX\" AS \"\
+  CR_RETURN_TAX\" \nFROM \"7492547a05b84d643fd227e52ada40ff_rnd\")\n SELECT count(CASE\
+  \ WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\"\
+  \ END) AS \"0 to 78.487\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"78.487 to 156.974\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  156.974 to 235.461\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"235.461 to 313.947\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  313.947 to 392.434\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"392.434 to 470.921\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  470.921 to 549.408\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"549.408 to 627.895\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  627.895 to 706.382\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"706.382 to 784.869\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  784.869 to 863.356\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"863.356 to 941.843\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  941.843 to 1.020K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.020K to 1.099K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  1.099K to 1.177K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.177K to 1.256K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  1.256K to 1.334K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.334K to 1.413K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  1.413K to 1.491K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.491K to 1.570K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  1.570K to 1.648K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.648K to 1.727K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  1.727K to 1.805K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.805K to 1.884K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  1.884K to 1.962K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"1.962K to 2.041K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  2.041K to 2.119K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"2.119K to 2.198K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  2.198K to 2.276K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\"\
+  \ < ?) THEN \"CR_RETURN_TAX\" END) AS \"2.276K to 2.355K\", count(CASE WHEN (\"\
+  CR_RETURN_TAX\" >= ? AND \"CR_RETURN_TAX\" < ?) THEN \"CR_RETURN_TAX\" END) AS \"\
+  2.355K to 2.433K\", count(CASE WHEN (\"CR_RETURN_TAX\" >= ?) THEN \"CR_RETURN_TAX\"\
+  \ END) AS \"2.433K and up\" \nFROM \"7492547a05b84d643fd227e52ada40ff_sample\"\n\
+  \ LIMIT ?"
+checksum: 095aba009b6fa31cad6f99824c43351c
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e9119d1e-971c-4d36-8713-0798a54f4faa
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test

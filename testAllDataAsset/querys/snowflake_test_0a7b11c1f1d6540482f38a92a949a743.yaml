@@ -1,0 +1,96 @@
+name: 0a7b11c1f1d6540482f38a92a949a743
+fullyQualifiedName: snowflake_test.0a7b11c1f1d6540482f38a92a949a743
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 199.0
+users: []
+query: "WITH \"8924b4b411990bf5c24320a9ab1eba23_rnd\" AS \n(SELECT \"CATALOG_PAGE_1\"\
+  .\"CP_CATALOG_PAGE_SK\" AS \"CP_CATALOG_PAGE_SK\" \nFROM \"TPCDS_SF100TCL\".\"CATALOG_PAGE\"\
+  \ AS \"CATALOG_PAGE_1\" TABLESAMPLE bernoulli(?)), \n\"8924b4b411990bf5c24320a9ab1eba23_sample\"\
+  \ AS \n(SELECT \"8924b4b411990bf5c24320a9ab1eba23_rnd\".\"CP_CATALOG_PAGE_SK\" AS\
+  \ \"CP_CATALOG_PAGE_SK\" \nFROM \"8924b4b411990bf5c24320a9ab1eba23_rnd\")\n SELECT\
+  \ count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"1.000 to 1.358K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"1.358K\
+  \ to 2.715K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"2.715K to 4.073K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"4.073K to 5.430K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"5.430K to 6.787K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"6.787K to 8.144K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"8.144K\
+  \ to 9.501K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"9.501K to 10.858K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"10.858K to 12.216K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"12.216K to 13.573K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"13.573K to 14.930K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"14.930K\
+  \ to 16.287K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"16.287K to 17.644K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"17.644K to 19.002K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"19.002K to 20.359K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"20.359K to 21.716K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"21.716K\
+  \ to 23.073K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"23.073K to 24.430K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"24.430K to 25.787K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"25.787K to 27.145K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"27.145K to 28.502K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"28.502K\
+  \ to 29.859K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"29.859K to 31.216K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"31.216K to 32.573K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"32.573K to 33.931K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"33.931K to 35.288K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"35.288K\
+  \ to 36.645K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"36.645K to 38.002K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"38.002K to 39.359K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"39.359K to 40.716K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"40.716K to 42.074K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"42.074K\
+  \ to 43.431K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"43.431K to 44.788K\", count(CASE WHEN\
+  \ (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\"\
+  \ END) AS \"44.788K to 46.145K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND\
+  \ \"CP_CATALOG_PAGE_SK\" < ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"46.145K to 47.502K\"\
+  , count(CASE WHEN (\"CP_CATALOG_PAGE_SK\" >= ? AND \"CP_CATALOG_PAGE_SK\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_SK\" END) AS \"47.502K to 48.860K\", count(CASE WHEN (\"CP_CATALOG_PAGE_SK\"\
+  \ >= ?) THEN \"CP_CATALOG_PAGE_SK\" END) AS \"48.860K and up\" \nFROM \"8924b4b411990bf5c24320a9ab1eba23_sample\"\
+  \n LIMIT ?"
+checksum: 0a7b11c1f1d6540482f38a92a949a743
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 5585b699-aff3-4d54-8b10-81ba94bca6ff
+    type: table
+    name: CATALOG_PAGE
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_PAGE
+    displayName: CATALOG_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test

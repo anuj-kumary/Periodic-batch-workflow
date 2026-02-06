@@ -1,0 +1,40 @@
+name: 126e637a6802ee46b8e30d467e7e9e4f
+fullyQualifiedName: snowflake_test.126e637a6802ee46b8e30d467e7e9e4f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 264195.0
+users: []
+query: "WITH \"7492547a05b84d643fd227e52ada40ff_rnd\" AS \n(SELECT \"CATALOG_RETURNS_1\"\
+  .\"CR_WAREHOUSE_SK\" AS \"CR_WAREHOUSE_SK\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_RETURNS\"\
+  \ AS \"CATALOG_RETURNS_1\" TABLESAMPLE bernoulli(?)), \n\"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \ AS \n(SELECT \"7492547a05b84d643fd227e52ada40ff_rnd\".\"CR_WAREHOUSE_SK\" AS \"\
+  CR_WAREHOUSE_SK\" \nFROM \"7492547a05b84d643fd227e52ada40ff_rnd\")\n SELECT percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"CR_WAREHOUSE_SK\" ASC) AS median, percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"CR_WAREHOUSE_SK\" ASC) AS \"firstQuartile\", percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"CR_WAREHOUSE_SK\" ASC) AS \"thirdQuartile\" \nFROM \"\
+  7492547a05b84d643fd227e52ada40ff_sample\"\n LIMIT ?"
+checksum: 126e637a6802ee46b8e30d467e7e9e4f
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e9119d1e-971c-4d36-8713-0798a54f4faa
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
