@@ -1,0 +1,61 @@
+name: 12
+displayName: Misc Charts
+fullyQualifiedName: sample_superset.12
+description: ""
+sourceUrl: http://localhost:808/superset/dashboard/misc_charts/
+charts:
+  - id: de80e6a9-949d-49ef-b654-f86fec4b0a45
+    type: chart
+    name: 127
+    fullyQualifiedName: sample_superset.127
+    description: ""
+    displayName: Are you an ethnic minority in your city?
+    deleted: false
+  - id: 0267af2f-ac11-4132-bcd7-e610f2f334f0
+    type: chart
+    name: 197
+    fullyQualifiedName: sample_superset.197
+    description: ""
+    displayName: Arcs
+    deleted: false
+dataModels: []
+owners: []
+tags: []
+service:
+  id: 8db95335-b86e-476f-b5c6-39c029d866ff
+  type: dashboardService
+  name: sample_superset
+  fullyQualifiedName: sample_superset
+  displayName: sample_superset
+  deleted: false
+serviceType: Superset
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: charts
+      newValue: "[{\"id\":\"de80e6a9-949d-49ef-b654-f86fec4b0a45\",\"type\":\"chart\"\
+        ,\"name\":\"127\",\"fullyQualifiedName\":\"sample_superset.127\",\"description\"\
+        :\"\",\"displayName\":\"Are you an ethnic minority in your city?\",\"deleted\"\
+        :false},{\"id\":\"0267af2f-ac11-4132-bcd7-e610f2f334f0\",\"type\":\"chart\"\
+        ,\"name\":\"197\",\"fullyQualifiedName\":\"sample_superset.197\",\"description\"\
+        :\"\",\"displayName\":\"Arcs\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.5
+  changeSummary: {}
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+    inherited: true
+  - id: 761f0a12-7b08-4889-acc3-b8d4d11a7865
+    type: domain
+    name: domain.with.dot
+    fullyQualifiedName: '"domain.with.dot"'
+    description: domain.with.dot
+    displayName: domain.with.dot
+    inherited: true
+dataProducts: []
+entityStatus: Unprocessed

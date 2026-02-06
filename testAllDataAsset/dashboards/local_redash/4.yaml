@@ -1,0 +1,89 @@
+name: 4
+displayName: Orders Dashboard
+fullyQualifiedName: local_redash.4
+description: This dashboard contains order related to orders
+dashboardType: Dashboard
+sourceUrl: https://redash.apps.int.getcollate.io/dashboards/4
+charts:
+  - id: 773538df-3b86-4a8b-84e0-81deb432a5c0
+    type: chart
+    name: 3
+    fullyQualifiedName: local_redash.3
+    description: ""
+    displayName: Orders Query
+    deleted: false
+  - id: bf120cb4-742c-405f-a5ac-616e0b747379
+    type: chart
+    name: 4
+    fullyQualifiedName: local_redash.4
+    description: ""
+    displayName: 4
+    deleted: false
+dataModels: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+tags:
+  - tagFQN: Tier.Tier2
+    name: Tier2
+    description: |-
+      **Important business datasets for your company (not as critical as Tier 1)**
+
+      - Used in important business metrics, product metrics, and dashboards to drive internal decisions
+
+      - Used in important compliance reporting to major regulators, govt entities, and third party
+
+      - Used for less critical online user-facing experiences (user activity, user behavior)
+
+      - Source used to derive other critical Tier-2 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+service:
+  id: b22c98d2-675c-4ab4-8ae1-d11015e78085
+  type: dashboardService
+  name: local_redash
+  fullyQualifiedName: local_redash
+  displayName: local_redash
+  deleted: false
+serviceType: Redash
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: certification
+      oldValue: "{\"tagLabel\":{\"tagFQN\":\"Certification.Bronze\",\"name\":\"Bronze\"\
+        ,\"displayName\":\"Bronze_medal\",\"description\":\"Bronze certified Data\
+        \ Asset test\",\"style\":{\"color\":\"#C08329\",\"iconURL\":\"BronzeCertification.svg\"\
+        },\"source\":\"Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"\
+        },\"appliedDate\":1743070962048,\"expiryDate\":1745662962048}"
+      newValue: "{\"tagLabel\":{\"tagFQN\":\"Certification.Silver\",\"name\":\"Silver\"\
+        ,\"description\":\"Silver certified Data Asset.\",\"style\":{\"color\":\"\
+        #ADADAD\",\"iconURL\":\"SilverCertification.svg\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Automated\",\"state\":\"Confirmed\"},\"appliedDate\":1765803647908,\"\
+        expiryDate\":1768395647908}"
+  fieldsDeleted: []
+  previousVersion: 1.2
+  changeSummary: {}
+domains: []
+dataProducts: []
+certification:
+  tagLabel:
+    tagFQN: Certification.Silver
+    name: Silver
+    description: Silver certified Data Asset.
+    style:
+      color: "#ADADAD"
+      iconURL: SilverCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1765803648665
+  expiryDate: 1768395648665
+sourceHash: cb277324cc0e0dcc133d454f5b65cbde
+entityStatus: Approved

@@ -1,0 +1,60 @@
+name: customers
+displayName: Customers dashboard
+fullyQualifiedName: sample_looker.customers
+description: This is a sample Dashboard for Looker
+sourceUrl: http://localhost:808/looker/dashboard/1/
+charts:
+  - id: 6834d225-ff67-4a29-adac-8bb9e715deaa
+    type: chart
+    name: chart_1
+    fullyQualifiedName: sample_looker.chart_1
+    description: This is a sample Chart for Looker
+    displayName: Chart 1
+    deleted: false
+  - id: 3cef7573-1418-4fd2-92fb-58ea3ffc9574
+    type: chart
+    name: chart_2
+    fullyQualifiedName: sample_looker.chart_2
+    description: This is a sample Chart for Looker
+    displayName: Chart 2
+    deleted: false
+dataModels: []
+owners: []
+tags: []
+service:
+  id: 2d102aaa-e683-425c-a8bf-e4afa43dde99
+  type: dashboardService
+  name: sample_looker
+  fullyQualifiedName: sample_looker
+  displayName: sample_looker
+  deleted: false
+serviceType: Looker
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: charts
+      newValue: "[{\"id\":\"6834d225-ff67-4a29-adac-8bb9e715deaa\",\"type\":\"chart\"\
+        ,\"name\":\"chart_1\",\"fullyQualifiedName\":\"sample_looker.chart_1\",\"\
+        description\":\"This is a sample Chart for Looker\",\"displayName\":\"Chart\
+        \ 1\",\"deleted\":false},{\"id\":\"3cef7573-1418-4fd2-92fb-58ea3ffc9574\"\
+        ,\"type\":\"chart\",\"name\":\"chart_2\",\"fullyQualifiedName\":\"sample_looker.chart_2\"\
+        ,\"description\":\"This is a sample Chart for Looker\",\"displayName\":\"\
+        Chart 2\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 2.0
+  changeSummary: {}
+domains:
+  - id: 6dec5ead-5cdd-4f43-b085-54de6b3f8107
+    type: domain
+    name: Finance
+    fullyQualifiedName: Finance
+    description: "Finance, this is a test"
+    displayName: Finance
+dataProducts:
+  - id: f3f13592-8c5f-4924-9066-a0bf056acd47
+    type: dataProduct
+    name: Banking Catalogue
+    fullyQualifiedName: Banking Catalogue
+    description: Banking Catalogue
+    displayName: banks
+entityStatus: Unprocessed

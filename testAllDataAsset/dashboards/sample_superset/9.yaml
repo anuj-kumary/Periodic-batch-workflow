@@ -1,0 +1,75 @@
+name: 9
+displayName: COVID Vaccine Dashboard
+fullyQualifiedName: sample_superset.9
+description: ""
+sourceUrl: http://localhost:808/superset/dashboard/8/
+charts:
+  - id: 9a94e63b-3b4d-4f06-bea6-fa2c87ca03ce
+    type: chart
+    name: 117
+    fullyQualifiedName: sample_superset.117
+    description: ""
+    displayName: Age distribution of respondents
+    deleted: false
+  - id: 0267af2f-ac11-4132-bcd7-e610f2f334f0
+    type: chart
+    name: 197
+    fullyQualifiedName: sample_superset.197
+    description: ""
+    displayName: Arcs
+    deleted: false
+dataModels:
+  - id: 9b44ec0b-fd1a-4132-9d5e-a7cebe351229
+    type: dashboardDataModel
+    name: 103
+    fullyQualifiedName: sample_superset.model.103
+    description: Data of Vaccine Candidates per Phase
+    displayName: Vaccine Candidates per Phase
+    deleted: false
+  - id: ae29a388-445d-4d72-b07a-939509417411
+    type: dashboardDataModel
+    name: 73
+    fullyQualifiedName: sample_superset.model.73
+    description: Data of Vaccine Candidates per Country
+    displayName: Vaccine Candidates per Country
+    deleted: false
+owners: []
+tags: []
+service:
+  id: 8db95335-b86e-476f-b5c6-39c029d866ff
+  type: dashboardService
+  name: sample_superset
+  fullyQualifiedName: sample_superset
+  displayName: sample_superset
+  deleted: false
+serviceType: Superset
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: charts
+      newValue: "[{\"id\":\"9a94e63b-3b4d-4f06-bea6-fa2c87ca03ce\",\"type\":\"chart\"\
+        ,\"name\":\"117\",\"fullyQualifiedName\":\"sample_superset.117\",\"description\"\
+        :\"\",\"displayName\":\"Age distribution of respondents\",\"deleted\":false},{\"\
+        id\":\"0267af2f-ac11-4132-bcd7-e610f2f334f0\",\"type\":\"chart\",\"name\"\
+        :\"197\",\"fullyQualifiedName\":\"sample_superset.197\",\"description\":\"\
+        \",\"displayName\":\"Arcs\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.7
+  changeSummary: {}
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+    inherited: true
+  - id: 761f0a12-7b08-4889-acc3-b8d4d11a7865
+    type: domain
+    name: domain.with.dot
+    fullyQualifiedName: '"domain.with.dot"'
+    description: domain.with.dot
+    displayName: domain.with.dot
+    inherited: true
+dataProducts: []
+entityStatus: Unprocessed

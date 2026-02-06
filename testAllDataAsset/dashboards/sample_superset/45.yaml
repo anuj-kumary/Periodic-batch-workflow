@@ -1,0 +1,43 @@
+name: 45
+displayName: USA Births Names
+fullyQualifiedName: sample_superset.45
+description: ""
+sourceUrl: http://localhost:808/superset/dashboard/births/
+charts:
+  - id: 169c8de6-adcc-4026-9f77-a130c4d35443
+    type: chart
+    name: 180
+    fullyQualifiedName: sample_superset.180
+    description: ""
+    displayName: Boy Name Cloud
+    deleted: false
+dataModels: []
+owners: []
+tags: []
+service:
+  id: 8db95335-b86e-476f-b5c6-39c029d866ff
+  type: dashboardService
+  name: sample_superset
+  fullyQualifiedName: sample_superset
+  displayName: sample_superset
+  deleted: false
+serviceType: Superset
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: charts
+      newValue: "[{\"id\":\"169c8de6-adcc-4026-9f77-a130c4d35443\",\"type\":\"chart\"\
+        ,\"name\":\"180\",\"fullyQualifiedName\":\"sample_superset.180\",\"description\"\
+        :\"\",\"displayName\":\"Boy Name Cloud\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.6
+  changeSummary: {}
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+dataProducts: []
+entityStatus: Unprocessed
