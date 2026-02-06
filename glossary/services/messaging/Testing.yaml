@@ -1,0 +1,26 @@
+name: Testing
+fullyQualifiedName: Testing
+serviceType: Kinesis
+description: ""
+connection:
+  config:
+    type: Kinesis
+    awsConfig:
+      enabled: false
+      awsRegion: Test
+      assumeRoleSessionName: OpenMetadataSession
+    topicFilterPattern:
+      excludes: []
+      includes:
+        - demo value
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 0621fad7-1ef1-441d-96a9-500a55c01a1f
+    type: user
+    name: sweta.a
+    fullyQualifiedName: '"sweta.a"'
+    displayName: Sweta
+    deleted: false
+dataProducts: []
