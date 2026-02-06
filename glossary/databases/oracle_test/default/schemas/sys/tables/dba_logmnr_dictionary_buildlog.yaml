@@ -1,0 +1,144 @@
+name: dba_logmnr_dictionary_buildlog
+fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog
+tableType: View
+columns:
+  - name: name
+    dataType: VARCHAR
+    dataLength: 384
+    dataTypeDisplay: varchar2(384)
+    description: User supplied Name of this Logminer Dictionary Build
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: date_of_build
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar2(20)
+    description: Date and time at which this Logminer Dictionary Build was performed
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.date_of_build
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: start_scn
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: Begin SCN of this Logminer Dictionary Build operation
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.start_scn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end_scn
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: End SCN of this Logminer Dictionary Build operation
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.end_scn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: build_type
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar2(20)
+    description: Internal string that identifies how this Logminer Dictionary Build
+      was initiated
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.build_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: build_op
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: Internal number that identifies how this Logminer Dictionary Build
+      was initiated
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.build_op
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: container_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: Small number that identifies the PDB or CDB Root of this Logminer
+      Dictionary Build
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.container_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: container_uid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: Unique number that identifies the PDB or CDB Root of this Logminer
+      Dictionary Build
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.container_uid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: container_name
+    dataType: VARCHAR
+    dataLength: 384
+    dataTypeDisplay: varchar2(384)
+    description: Name of the PDB or CDB Root of this Logminer Dictionary Build
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.container_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RESETLOGS_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: SCN that identifies the redo branch of this Logminer Dictionary Build
+    fullyQualifiedName: oracle_test.default.sys.dba_logmnr_dictionary_buildlog.RESETLOGS_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: cccbbbdc29b19d9b444cae23beb2094b
+processedLineage: false
+entityStatus: Approved
