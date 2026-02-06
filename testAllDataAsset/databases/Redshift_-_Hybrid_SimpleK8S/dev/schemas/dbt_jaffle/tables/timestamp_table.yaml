@@ -1,0 +1,103 @@
+name: timestamp_table
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.timestamp_table
+description: "This table records timestamps for various events, allowing users to\
+  \ track when specific entries were added. It can be utilized for auditing, data\
+  \ analysis, and understanding the timing of data changes within the system."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: "The id column serves as a unique identifier for each record in the\
+      \ timestamp_table, ensuring that every entry can be distinctly referenced. This\
+      \ is crucial for maintaining data integrity and facilitating operations such\
+      \ as updates and deletions."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.timestamp_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inserted_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp without time zone
+    description: The inserted_at column records the exact timestamp when each record
+      was created in the timestamp_table. This is important for tracking the age of
+      the data and understanding when specific entries were added.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.timestamp_table.inserted_at
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 8e25cf6b-a84a-4107-a423-6f8e150d0825
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.timestamp_table.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.timestamp_table.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.timestamp_table.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "The id column serves as a unique identifier for each record in the\
+        \ timestamp_table, ensuring that every entry can be distinctly referenced.\
+        \ This is crucial for maintaining data integrity and facilitating operations\
+        \ such as updates and deletions."
+    - name: columns.inserted_at.description
+      newValue: The inserted_at column records the exact timestamp when each record
+        was created in the timestamp_table. This is important for tracking the age
+        of the data and understanding when specific entries were added.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756936798
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756936987
+    columns.inserted_at.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756936987
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1679912937651
+sourceHash: 797e44988e1077ac0f29743f56313ea1
+processedLineage: false
+entityStatus: Unprocessed

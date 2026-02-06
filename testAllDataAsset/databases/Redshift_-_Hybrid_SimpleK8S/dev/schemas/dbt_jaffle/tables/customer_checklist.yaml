@@ -1,0 +1,132 @@
+name: customer_checklist
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist
+description: This table stores tickets sales data. reverse metadata
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: "A unique identifier for each customer, used to distinguish between\
+      \ different customers in the database."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: character varying(256)
+    description: "The full name of the customer, which is essential for identifying\
+      \ and addressing customers."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_customer
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    description: boolean value if it is customer or not
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.is_customer
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: age
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: age of customer boolean test
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.age
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: birthdate
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: character varying(256)
+    description: "The birthdate of the customer, providing specific information about\
+      \ their date of birth."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.birthdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 3dae669e-d877-46ad-91f5-9916bf16d356
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.customer_checklist.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "A unique identifier for each customer, used to distinguish between\
+        \ different customers in the database."
+    - name: columns.name.description
+      newValue: "The full name of the customer, which is essential for identifying\
+        \ and addressing customers."
+    - name: columns.birthdate.description
+      newValue: "The birthdate of the customer, providing specific information about\
+        \ their date of birth."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756949085
+    columns.name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756949085
+    columns.birthdate.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756949085
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1668000936556
+  accessed:
+    timestamp: 1759708800000
+    accessedByAProcess: openmetadata
+sourceHash: f3bd4d330e1096f6f427b893073b5eec
+processedLineage: false
+entityStatus: Unprocessed

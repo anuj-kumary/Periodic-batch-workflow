@@ -1,0 +1,69 @@
+name: geometry_table
+fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.geometry_table
+description: Geometry test changed here
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.geometry_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: geo_col
+    dataType: GEOMETRY
+    dataLength: 1
+    dataTypeDisplay: geometry
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.geometry_table.geo_col
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hll
+    dataType: HLLSKETCH
+    dataLength: 1
+    dataTypeDisplay: hllsketch
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.geometry_table.hll
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 5087da02-fa63-4d41-9f7d-23b7ba9b3f34
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: 512cf596-9c86-4fa8-9610-8adbece7e611
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev
+  displayName: dev
+  deleted: false
+service:
+  id: 9e98204b-a6fd-4bf7-9fba-6a2867b7a664
+  type: databaseService
+  name: Redshift Simple K8s K8s Secret
+  fullyQualifiedName: Redshift Simple K8s K8s Secret
+  description: ""
+  displayName: Redshift Simple K8s K8s Secret
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7cbc4d5d9d13607b0179d88cea4e970e
+processedLineage: false
+entityStatus: Unprocessed

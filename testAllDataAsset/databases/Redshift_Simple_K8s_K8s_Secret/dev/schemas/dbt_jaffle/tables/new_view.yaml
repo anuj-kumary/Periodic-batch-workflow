@@ -1,0 +1,115 @@
+name: new_view
+fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view
+tableType: View
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_lifetime_value
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.customer_lifetime_value
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_name
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: character varying(20)
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.first_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.first_order
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.last_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: most_recent_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.most_recent_order
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: number_of_orders
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.new_view.number_of_orders
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 5087da02-fa63-4d41-9f7d-23b7ba9b3f34
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: 512cf596-9c86-4fa8-9610-8adbece7e611
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev
+  displayName: dev
+  deleted: false
+service:
+  id: 9e98204b-a6fd-4bf7-9fba-6a2867b7a664
+  type: databaseService
+  name: Redshift Simple K8s K8s Secret
+  fullyQualifiedName: Redshift Simple K8s K8s Secret
+  description: ""
+  displayName: Redshift Simple K8s K8s Secret
+  deleted: false
+serviceType: Redshift
+schemaDefinition: "create view dbt_jaffle.new_view as select * from dbt_jaffle.customers\
+  \ c  \n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: processedLineage
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 8bc7de0b25b14293f4dc26ca1529a84e
+processedLineage: true
+entityStatus: Unprocessed

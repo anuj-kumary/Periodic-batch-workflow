@@ -1,0 +1,181 @@
+name: new_view
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view
+description: "This table provides insights into customer behavior, tracking their\
+  \ lifetime value, order history, and personal details, enabling businesses to analyze\
+  \ purchasing patterns and enhance customer relationship strategies."
+tableType: View
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: "The unique identifier for each customer in the database, used to\
+      \ distinguish between different customers."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_lifetime_value
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The total revenue that a customer is expected to generate during
+      their relationship with the company.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.customer_lifetime_value
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_name
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: character varying(20)
+    description: "The first name of the customer, used for personalization and communication\
+      \ purposes."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.first_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The date when the customer made their first purchase, indicating\
+      \ the start of their relationship with the company."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.first_order
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    description: "The last name of the customer, used for personalization and communication\
+      \ purposes."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.last_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: most_recent_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The date of the customer's most recent purchase, indicating their\
+      \ current engagement level."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.most_recent_order
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: number_of_orders
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The total number of orders placed by the customer, indicating their\
+      \ purchasing behavior."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.number_of_orders
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+schemaDefinition: "create view dbt_jaffle.new_view as select * from dbt_jaffle.customers\
+  \ c  \n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: b283a2d8-b48d-4847-8afd-3ed07cf7b3fc
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_view.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.customer_id.description
+      newValue: "The unique identifier for each customer in the database, used to\
+        \ distinguish between different customers."
+    - name: columns.customer_lifetime_value.description
+      newValue: The total revenue that a customer is expected to generate during their
+        relationship with the company.
+    - name: columns.first_name.description
+      newValue: "The first name of the customer, used for personalization and communication\
+        \ purposes."
+    - name: columns.first_order.description
+      newValue: "The date when the customer made their first purchase, indicating\
+        \ the start of their relationship with the company."
+    - name: columns.last_name.description
+      newValue: "The last name of the customer, used for personalization and communication\
+        \ purposes."
+    - name: columns.most_recent_order.description
+      newValue: "The date of the customer's most recent purchase, indicating their\
+        \ current engagement level."
+    - name: columns.number_of_orders.description
+      newValue: "The total number of orders placed by the customer, indicating their\
+        \ purchasing behavior."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945793
+    columns.last_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+    columns.first_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+    columns.first_order.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+    columns.number_of_orders.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+    columns.most_recent_order.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+    columns.customer_lifetime_value.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756945980
+domains: []
+dataProducts: []
+sourceHash: c5d45b45f38ac8120814417a91b50ad9
+processedLineage: true
+entityStatus: Unprocessed

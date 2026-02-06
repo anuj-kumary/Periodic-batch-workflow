@@ -1,0 +1,149 @@
+name: sensitive_customers
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers
+description: "This table stores sensitive customer information, including personal\
+  \ identifiers like social security numbers and usernames, which can be used for\
+  \ secure customer management and data analysis while ensuring compliance with privacy\
+  \ regulations."
+tableType: Regular
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: "A unique identifier for each customer, used to distinguish between\
+      \ different customers in the database."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_name
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: character varying(50)
+    description: "The username associated with the customer, used for login and account\
+      \ management."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.user_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ssn
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: character varying(50)
+    description: "The Social Security Number of the customer, used for identification\
+      \ and verification purposes."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.ssn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: character varying(50)
+    description: "The address of the customer, which is used for identifying their\
+      \ location and for correspondence purposes."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.address
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dwh_x10
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: character varying(50)
+    description: "A field that may contain additional data related to the customer,\
+      \ potentially used for data warehousing or analytics purposes."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.dwh_x10
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 8a4a5446-7851-4063-9e20-aca3957a1fb1
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.sensitive_customers.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.customer_id.description
+      newValue: "A unique identifier for each customer, used to distinguish between\
+        \ different customers in the database."
+    - name: columns.user_name.description
+      newValue: "The username associated with the customer, used for login and account\
+        \ management."
+    - name: columns.ssn.description
+      newValue: "The Social Security Number of the customer, used for identification\
+        \ and verification purposes."
+    - name: columns.address.description
+      newValue: "The address of the customer, which is used for identifying their\
+        \ location and for correspondence purposes."
+    - name: columns.dwh_x10.description
+      newValue: "A field that may contain additional data related to the customer,\
+        \ potentially used for data warehousing or analytics purposes."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940587
+    columns.ssn.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940763
+    columns.address.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940763
+    columns.dwh_x10.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940763
+    columns.user_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940763
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940763
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1731488820569
+sourceHash: 0f5c9d8feea97c75e8c9cc98b3f25bf8
+processedLineage: false
+entityStatus: Unprocessed
