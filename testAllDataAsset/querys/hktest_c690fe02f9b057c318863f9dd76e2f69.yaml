@@ -1,0 +1,41 @@
+name: c690fe02f9b057c318863f9dd76e2f69
+fullyQualifiedName: hktest.c690fe02f9b057c318863f9dd76e2f69
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b21cf3a8-f359-4fc0-bb37-9adc6339b7cc\",\"type\":\"table\"\
+        ,\"name\":\"DBT_SOURCES\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SOURCES\"\
+        ,\"displayName\":\"DBT_SOURCES\",\"deleted\":false}]"
+  previousVersion: 0.4
+  changeSummary: {}
+owners: []
+duration: 67.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "select metadata_hash \n    from dbt_db.DBT_SAMPLE_elementary.dbt_sources\n\
+  \    order by metadata_hash"
+checksum: c690fe02f9b057c318863f9dd76e2f69
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b21cf3a8-f359-4fc0-bb37-9adc6339b7cc
+    type: table
+    name: DBT_SOURCES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SOURCES
+    displayName: DBT_SOURCES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

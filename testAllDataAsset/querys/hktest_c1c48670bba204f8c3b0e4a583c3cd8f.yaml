@@ -1,0 +1,39 @@
+name: c1c48670bba204f8c3b0e4a583c3cd8f
+fullyQualifiedName: hktest.c1c48670bba204f8c3b0e4a583c3cd8f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"f3f7adf0-5934-40b1-9c34-71aa27a03cd6\",\"type\":\"table\"\
+        ,\"name\":\"CNTRCT\",\"fullyQualifiedName\":\"hktest.INDIVIDUAL.CURATED.CNTRCT\"\
+        ,\"displayName\":\"CNTRCT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 48.0
+users: []
+query: "SELECT avg(LEN(\"ANNUITY_TYP_CD\")) AS mean, count(\"ANNUITY_TYP_CD\") AS\
+  \ \"valuesCount\", count(DISTINCT \"ANNUITY_TYP_CD\") AS \"distinctCount\", MIN(LEN(\"\
+  ANNUITY_TYP_CD\")) AS min, MAX(LEN(\"ANNUITY_TYP_CD\")) AS max, coalesce(SUM(CASE\
+  \ WHEN (\"ANNUITY_TYP_CD\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  ANNUITY_TYP_CD\")) AS stddev, SUM(LEN(\"ANNUITY_TYP_CD\")) AS sum \nFROM \"CURATED\"\
+  .\"CNTRCT\"\n LIMIT ?"
+checksum: c1c48670bba204f8c3b0e4a583c3cd8f
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

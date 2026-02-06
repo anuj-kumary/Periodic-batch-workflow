@@ -1,0 +1,42 @@
+name: c2694e09ebe72a10db0fd8e11e2b4275
+fullyQualifiedName: hktest.c2694e09ebe72a10db0fd8e11e2b4275
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d78f1c3b-6d80-4343-986b-64af362d9f05\",\"type\":\"table\"\
+        ,\"name\":\"SAMPLE_CUSTOMERS\",\"fullyQualifiedName\":\"hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS\"\
+        ,\"description\":\"<p>This is a test description</p>\",\"displayName\":\"\
+        SAMPLE_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 247.0
+users: []
+query: "SELECT \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\".\"CUSTOMERID\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_CUSTOMERID\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\".\"NAME\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_NAME\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\".\"EMAIL\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_EMAIL\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\".\"COUNTRY\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_COUNTRY\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\".\"SIGNUPDATE\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_SIGNUPDATE\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\".\"PURCHASEAMOUNT\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_PURCHASEAMOUNT\"\
+  \ \nFROM \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\"\n LIMIT ?"
+checksum: c2694e09ebe72a10db0fd8e11e2b4275
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d78f1c3b-6d80-4343-986b-64af362d9f05
+    type: table
+    name: SAMPLE_CUSTOMERS
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS
+    description: <p>This is a test description</p>
+    displayName: SAMPLE_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

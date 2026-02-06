@@ -1,0 +1,27 @@
+name: c31e3de80f511edbafbc3a0e79266785
+fullyQualifiedName: hktest.c31e3de80f511edbafbc3a0e79266785
+owners: []
+duration: 623.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"P_BRAND\") AS count_1\
+  \ \nFROM \"TPCH_SF100\".\"PART\" GROUP BY \"P_BRAND\" \nHAVING count(\"P_BRAND\"\
+  ) = ?) AS only_once\n LIMIT ?"
+checksum: c31e3de80f511edbafbc3a0e79266785
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d8f39a9b-4f53-4c0d-acb2-d61f40c5b1ea
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

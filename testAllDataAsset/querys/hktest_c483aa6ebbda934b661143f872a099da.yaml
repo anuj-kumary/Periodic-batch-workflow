@@ -1,0 +1,34 @@
+name: c483aa6ebbda934b661143f872a099da
+fullyQualifiedName: hktest.c483aa6ebbda934b661143f872a099da
+owners: []
+duration: 108.0
+users: []
+query: "WITH \"8511959cacf194b495273e731f3ed7de_rnd\" AS \n(SELECT \"WEB_PAGE_1\"\
+  .\"WP_CREATION_DATE_SK\" AS \"WP_CREATION_DATE_SK\" \nFROM \"TPCDS_SF100TCL\".\"\
+  WEB_PAGE\" AS \"WEB_PAGE_1\" TABLESAMPLE ROW(? ROWS)), \n\"8511959cacf194b495273e731f3ed7de_sample\"\
+  \ AS \n(SELECT \"8511959cacf194b495273e731f3ed7de_rnd\".\"WP_CREATION_DATE_SK\"\
+  \ AS \"WP_CREATION_DATE_SK\" \nFROM \"8511959cacf194b495273e731f3ed7de_rnd\")\n\
+  \ SELECT avg(\"WP_CREATION_DATE_SK\") AS mean, count(\"WP_CREATION_DATE_SK\") AS\
+  \ \"valuesCount\", count(DISTINCT \"WP_CREATION_DATE_SK\") AS \"distinctCount\"\
+  , MIN(\"WP_CREATION_DATE_SK\") AS min, MAX(\"WP_CREATION_DATE_SK\") AS max, coalesce(SUM(CASE\
+  \ WHEN (\"WP_CREATION_DATE_SK\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"\
+  WP_CREATION_DATE_SK\") AS stddev, SUM(\"WP_CREATION_DATE_SK\") AS sum \nFROM \"\
+  8511959cacf194b495273e731f3ed7de_sample\"\n LIMIT ?"
+checksum: c483aa6ebbda934b661143f872a099da
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 55292c30-d2e3-4067-b8e8-4a21aa644d73
+    type: table
+    name: WEB_PAGE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_PAGE
+    displayName: WEB_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

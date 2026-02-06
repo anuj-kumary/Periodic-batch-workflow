@@ -1,0 +1,27 @@
+name: c61491ba615d59af2cc7e1e7aeb5ea13
+fullyQualifiedName: hktest.c61491ba615d59af2cc7e1e7aeb5ea13
+owners: []
+duration: 3534.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"C_NAME\") AS count_1\
+  \ \nFROM \"TPCH_SF100\".\"CUSTOMER\" GROUP BY \"C_NAME\" \nHAVING count(\"C_NAME\"\
+  ) = ?) AS only_once\n LIMIT ?"
+checksum: c61491ba615d59af2cc7e1e7aeb5ea13
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: dc092bc6-2f58-414c-a722-42aa3ec1674e
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

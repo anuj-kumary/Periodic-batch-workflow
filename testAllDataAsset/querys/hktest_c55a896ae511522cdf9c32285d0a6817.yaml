@@ -1,0 +1,50 @@
+name: c55a896ae511522cdf9c32285d0a6817
+fullyQualifiedName: hktest.c55a896ae511522cdf9c32285d0a6817
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"47e9fe31-979e-4772-b22a-3db9eb4183f4\",\"type\":\"table\"\
+        ,\"name\":\"DBT_INVOCATIONS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_INVOCATIONS\"\
+        ,\"displayName\":\"DBT_INVOCATIONS\",\"deleted\":false}]"
+  previousVersion: 0.9
+  changeSummary: {}
+owners: []
+duration: 135.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "create or replace   view dbt_db.DBT_SAMPLE_elementary.job_run_results\n  \n\
+  \   as (\n    \n\n\n\n\n\nwith jobs as (\n  select\n    job_name,\n    job_id,\n\
+  \    job_run_id,\n    \nmin(cast(run_started_at as timestamp))\n as job_run_started_at,\n\
+  \    \nmax(cast(run_completed_at as timestamp))\n as job_run_completed_at,\n   \
+  \ \n    datediff(\n        second,\n        \nmin(cast(run_started_at as timestamp))\n\
+  ,\n        \nmax(cast(run_completed_at as timestamp))\n\n        )\n as job_run_execution_time\n\
+  \  from dbt_db.DBT_SAMPLE_elementary.dbt_invocations\n  where job_id is not ?\n\
+  \  group by job_name, job_id, job_run_id\n)\n\nselect\n  job_name as name,\n  job_id\
+  \ as id,\n  job_run_id as run_id,\n  job_run_started_at as run_started_at,\n  job_run_completed_at\
+  \ as run_completed_at,\n  job_run_execution_time as run_execution_time\nfrom jobs\n\
+  \  );"
+checksum: c55a896ae511522cdf9c32285d0a6817
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: ab6b06ab-8cab-4e61-ac8d-ff7c0703bf40
+    type: table
+    name: JOB_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS
+    displayName: JOB_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

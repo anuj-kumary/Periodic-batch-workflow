@@ -1,0 +1,35 @@
+name: c7ea3d1023898b82f57d50db754af8cd
+fullyQualifiedName: hktest.c7ea3d1023898b82f57d50db754af8cd
+owners: []
+duration: 42.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"FULL_TABLE_NAME\")) AS mean, count(\"FULL_TABLE_NAME\") AS\
+  \ \"valuesCount\", count(DISTINCT \"FULL_TABLE_NAME\") AS \"distinctCount\", MIN(LEN(\"\
+  FULL_TABLE_NAME\")) AS min, MAX(LEN(\"FULL_TABLE_NAME\")) AS max, coalesce(SUM(CASE\
+  \ WHEN (\"FULL_TABLE_NAME\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  FULL_TABLE_NAME\")) AS stddev, SUM(LEN(\"FULL_TABLE_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DATA_MONITORING_METRICS\"\n LIMIT ?"
+checksum: c7ea3d1023898b82f57d50db754af8cd
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 65cf3741-cd7e-47a9-a363-7b20bd64f6e6
+    type: table
+    name: DATA_MONITORING_METRICS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DATA_MONITORING_METRICS
+    displayName: DATA_MONITORING_METRICS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

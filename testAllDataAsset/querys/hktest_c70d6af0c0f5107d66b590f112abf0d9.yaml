@@ -1,0 +1,45 @@
+name: c70d6af0c0f5107d66b590f112abf0d9
+fullyQualifiedName: hktest.c70d6af0c0f5107d66b590f112abf0d9
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"7459035c-b190-4009-a3ff-280afbf84319\",\"type\":\"table\"\
+        ,\"name\":\"ALERTS_ANOMALY_DETECTION\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_ANOMALY_DETECTION\"\
+        ,\"displayName\":\"ALERTS_ANOMALY_DETECTION\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 79.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"OWNERS\")) AS mean, count(\"OWNERS\") AS \"valuesCount\"\
+  , count(DISTINCT \"OWNERS\") AS \"distinctCount\", MIN(LEN(\"OWNERS\")) AS min,\
+  \ MAX(LEN(\"OWNERS\")) AS max, coalesce(SUM(CASE WHEN (\"OWNERS\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"OWNERS\")) AS stddev, SUM(LEN(\"\
+  OWNERS\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_ANOMALY_DETECTION\"\n\
+  \ LIMIT ?"
+checksum: c70d6af0c0f5107d66b590f112abf0d9
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 7459035c-b190-4009-a3ff-280afbf84319
+    type: table
+    name: ALERTS_ANOMALY_DETECTION
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_ANOMALY_DETECTION
+    displayName: ALERTS_ANOMALY_DETECTION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

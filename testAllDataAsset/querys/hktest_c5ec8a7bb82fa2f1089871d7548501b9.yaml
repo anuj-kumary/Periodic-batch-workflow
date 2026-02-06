@@ -1,0 +1,35 @@
+name: c5ec8a7bb82fa2f1089871d7548501b9
+fullyQualifiedName: hktest.c5ec8a7bb82fa2f1089871d7548501b9
+owners: []
+duration: 688.0
+users: []
+query: "WITH \"534e5b12fce522f81d9c91fd466b84a9_rnd\" AS \n(SELECT \"STORE_SALES_1\"\
+  .\"SS_CUSTOMER_SK\" AS \"SS_CUSTOMER_SK\" \nFROM \"TPCDS_SF100TCL\".\"STORE_SALES\"\
+  \ AS \"STORE_SALES_1\" TABLESAMPLE ROW(? ROWS)), \n\"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \ AS \n(SELECT \"534e5b12fce522f81d9c91fd466b84a9_rnd\".\"SS_CUSTOMER_SK\" AS \"\
+  SS_CUSTOMER_SK\" \nFROM \"534e5b12fce522f81d9c91fd466b84a9_rnd\")\n SELECT count(CASE\
+  \ WHEN (\"SS_CUSTOMER_SK\" >= ? AND \"SS_CUSTOMER_SK\" < ?) THEN \"SS_CUSTOMER_SK\"\
+  \ END) AS \"1.291M to 31.819M\", count(CASE WHEN (\"SS_CUSTOMER_SK\" >= ? AND \"\
+  SS_CUSTOMER_SK\" < ?) THEN \"SS_CUSTOMER_SK\" END) AS \"31.819M to 62.348M\", count(CASE\
+  \ WHEN (\"SS_CUSTOMER_SK\" >= ? AND \"SS_CUSTOMER_SK\" < ?) THEN \"SS_CUSTOMER_SK\"\
+  \ END) AS \"62.348M to 92.876M\", count(CASE WHEN (\"SS_CUSTOMER_SK\" >= ?) THEN\
+  \ \"SS_CUSTOMER_SK\" END) AS \"92.876M and up\" \nFROM \"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \n LIMIT ?"
+checksum: c5ec8a7bb82fa2f1089871d7548501b9
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8ac2014f-2667-4186-a6c8-8754e351d4ef
+    type: table
+    name: STORE_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.STORE_SALES
+    displayName: STORE_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

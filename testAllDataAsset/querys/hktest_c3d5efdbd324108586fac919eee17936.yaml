@@ -1,0 +1,39 @@
+name: c3d5efdbd324108586fac919eee17936
+fullyQualifiedName: hktest.c3d5efdbd324108586fac919eee17936
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"f3f7adf0-5934-40b1-9c34-71aa27a03cd6\",\"type\":\"table\"\
+        ,\"name\":\"CNTRCT\",\"fullyQualifiedName\":\"hktest.INDIVIDUAL.CURATED.CNTRCT\"\
+        ,\"displayName\":\"CNTRCT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 103.0
+users: []
+query: "SELECT avg(LEN(\"SECURE_POLICY_CD\")) AS mean, count(\"SECURE_POLICY_CD\"\
+  ) AS \"valuesCount\", count(DISTINCT \"SECURE_POLICY_CD\") AS \"distinctCount\"\
+  , MIN(LEN(\"SECURE_POLICY_CD\")) AS min, MAX(LEN(\"SECURE_POLICY_CD\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"SECURE_POLICY_CD\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\", STDDEV_POP(LEN(\"SECURE_POLICY_CD\")) AS stddev, SUM(LEN(\"SECURE_POLICY_CD\"\
+  )) AS sum \nFROM \"CURATED\".\"CNTRCT\"\n LIMIT ?"
+checksum: c3d5efdbd324108586fac919eee17936
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

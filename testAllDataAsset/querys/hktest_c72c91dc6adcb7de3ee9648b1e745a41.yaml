@@ -1,0 +1,47 @@
+name: c72c91dc6adcb7de3ee9648b1e745a41
+fullyQualifiedName: hktest.c72c91dc6adcb7de3ee9648b1e745a41
+owners: []
+duration: 84.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"SCHEMA_NAME\"\
+  ) < ?) THEN LEN(\"SCHEMA_NAME\") END) AS \"10.000 to 11.000\", count(CASE WHEN (LEN(\"\
+  SCHEMA_NAME\") >= ? AND LEN(\"SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\") END)\
+  \ AS \"11.000 to 12.000\", count(CASE WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"\
+  SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\") END) AS \"12.000 to 13.000\", count(CASE\
+  \ WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\"\
+  ) END) AS \"13.000 to 14.000\", count(CASE WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"\
+  SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\") END) AS \"14.000 to 15.000\", count(CASE\
+  \ WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\"\
+  ) END) AS \"15.000 to 16.000\", count(CASE WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"\
+  SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\") END) AS \"16.000 to 17.000\", count(CASE\
+  \ WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\"\
+  ) END) AS \"17.000 to 18.000\", count(CASE WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"\
+  SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\") END) AS \"18.000 to 19.000\", count(CASE\
+  \ WHEN (LEN(\"SCHEMA_NAME\") >= ? AND LEN(\"SCHEMA_NAME\") < ?) THEN LEN(\"SCHEMA_NAME\"\
+  ) END) AS \"19.000 to 20.000\", count(CASE WHEN (LEN(\"SCHEMA_NAME\") >= ?) THEN\
+  \ LEN(\"SCHEMA_NAME\") END) AS \"20.000 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_COLUMNS\"\n LIMIT ?"
+checksum: c72c91dc6adcb7de3ee9648b1e745a41
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 077ae58e-e7e4-47cf-9f42-01225cf95b21
+    type: table
+    name: DBT_COLUMNS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_COLUMNS
+    displayName: DBT_COLUMNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

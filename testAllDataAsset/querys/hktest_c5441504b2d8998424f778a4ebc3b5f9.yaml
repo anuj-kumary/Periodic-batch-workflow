@@ -1,0 +1,34 @@
+name: c5441504b2d8998424f778a4ebc3b5f9
+fullyQualifiedName: hktest.c5441504b2d8998424f778a4ebc3b5f9
+owners: []
+duration: 139.0
+users: []
+query: "WITH \"15e219364c9158944561b60284e81c87_rnd\" AS \n(SELECT \"DATE_DIM_1\"\
+  .\"D_CURRENT_YEAR\" AS \"D_CURRENT_YEAR\" \nFROM \"TPCDS_SF10TCL\".\"DATE_DIM\"\
+  \ AS \"DATE_DIM_1\" TABLESAMPLE ROW(? ROWS)), \n\"15e219364c9158944561b60284e81c87_sample\"\
+  \ AS \n(SELECT \"15e219364c9158944561b60284e81c87_rnd\".\"D_CURRENT_YEAR\" AS \"\
+  D_CURRENT_YEAR\" \nFROM \"15e219364c9158944561b60284e81c87_rnd\")\n SELECT avg(LEN(\"\
+  D_CURRENT_YEAR\")) AS mean, count(\"D_CURRENT_YEAR\") AS \"valuesCount\", count(DISTINCT\
+  \ \"D_CURRENT_YEAR\") AS \"distinctCount\", MIN(LEN(\"D_CURRENT_YEAR\")) AS min,\
+  \ MAX(LEN(\"D_CURRENT_YEAR\")) AS max, coalesce(SUM(CASE WHEN (\"D_CURRENT_YEAR\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"D_CURRENT_YEAR\"\
+  )) AS stddev, SUM(LEN(\"D_CURRENT_YEAR\")) AS sum \nFROM \"15e219364c9158944561b60284e81c87_sample\"\
+  \n LIMIT ?"
+checksum: c5441504b2d8998424f778a4ebc3b5f9
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0521e7ab-e00a-4d08-89fe-da2a09bf0978
+    type: table
+    name: DATE_DIM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.DATE_DIM
+    displayName: DATE_DIM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

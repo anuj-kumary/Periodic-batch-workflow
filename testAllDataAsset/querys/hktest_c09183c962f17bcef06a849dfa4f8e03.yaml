@@ -1,0 +1,32 @@
+name: c09183c962f17bcef06a849dfa4f8e03
+fullyQualifiedName: hktest.c09183c962f17bcef06a849dfa4f8e03
+owners: []
+duration: 66.0
+users: []
+query: "WITH \"4c9e7581028a01fc71dfc3997bd40912_rnd\" AS \n(SELECT \"LOAN_1\".\"CREATE_DTTM\"\
+  \ AS \"CREATE_DTTM\" \nFROM \"LANDING\".\"LOAN\" AS \"LOAN_1\" TABLESAMPLE ROW(?\
+  \ ROWS)), \n\"4c9e7581028a01fc71dfc3997bd40912_sample\" AS \n(SELECT \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  .\"CREATE_DTTM\" AS \"CREATE_DTTM\" \nFROM \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  )\n SELECT ? AS anon_1, count(\"CREATE_DTTM\") AS \"valuesCount\", count(DISTINCT\
+  \ \"CREATE_DTTM\") AS \"distinctCount\", MIN(\"CREATE_DTTM\") AS min, MAX(\"CREATE_DTTM\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"CREATE_DTTM\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", ? AS anon__1, ? AS anon__2 \nFROM \"4c9e7581028a01fc71dfc3997bd40912_sample\"\
+  \n LIMIT ?"
+checksum: c09183c962f17bcef06a849dfa4f8e03
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: daeebc3d-e209-4d6c-838c-8a72fc77990f
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

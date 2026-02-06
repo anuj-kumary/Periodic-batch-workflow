@@ -1,0 +1,34 @@
+name: c52bc36582c00219da266870c0769d89
+fullyQualifiedName: hktest.c52bc36582c00219da266870c0769d89
+owners: []
+duration: 25.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"URL\")) AS mean, count(\"URL\") AS \"valuesCount\", count(DISTINCT\
+  \ \"URL\") AS \"distinctCount\", MIN(LEN(\"URL\")) AS min, MAX(LEN(\"URL\")) AS\
+  \ max, coalesce(SUM(CASE WHEN (\"URL\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(LEN(\"URL\")) AS stddev, SUM(LEN(\"URL\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_EXPOSURES\"\n LIMIT ?"
+checksum: c52bc36582c00219da266870c0769d89
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 63c57e4c-b711-41ac-87e8-2bc0b63008df
+    type: table
+    name: DBT_EXPOSURES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES
+    displayName: DBT_EXPOSURES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

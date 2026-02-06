@@ -1,0 +1,69 @@
+name: c3b3454b6f86ba800bce754cda93034b
+fullyQualifiedName: hktest.c3b3454b6f86ba800bce754cda93034b
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0b565859-50f2-4c96-b4f3-2abd5feeecb1\",\"type\":\"table\"\
+        ,\"name\":\"LINEITEM\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM\"\
+        ,\"description\":\"Lineitem data as defined by TPC-H\",\"displayName\":\"\
+        LINEITEM\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 50.0
+users: []
+query: "SELECT count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"\
+  L_PARTKEY\" END) AS \"1.000 to 8.334K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND\
+  \ \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"8.334K to 16.668K\", count(CASE\
+  \ WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"\
+  16.668K to 25.001K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?)\
+  \ THEN \"L_PARTKEY\" END) AS \"25.001K to 33.334K\", count(CASE WHEN (\"L_PARTKEY\"\
+  \ >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"33.334K to 41.667K\"\
+  , count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\"\
+  \ END) AS \"41.667K to 50.001K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\"\
+  \ < ?) THEN \"L_PARTKEY\" END) AS \"50.001K to 58.334K\", count(CASE WHEN (\"L_PARTKEY\"\
+  \ >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"58.334K to 66.667K\"\
+  , count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\"\
+  \ END) AS \"66.667K to 75.001K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\"\
+  \ < ?) THEN \"L_PARTKEY\" END) AS \"75.001K to 83.334K\", count(CASE WHEN (\"L_PARTKEY\"\
+  \ >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"83.334K to 91.667K\"\
+  , count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\"\
+  \ END) AS \"91.667K to 100.001K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\"\
+  \ < ?) THEN \"L_PARTKEY\" END) AS \"100.001K to 108.334K\", count(CASE WHEN (\"\
+  L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"108.334K to\
+  \ 116.667K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"\
+  L_PARTKEY\" END) AS \"116.667K to 125.000K\", count(CASE WHEN (\"L_PARTKEY\" >=\
+  \ ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"125.000K to 133.334K\",\
+  \ count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\"\
+  \ END) AS \"133.334K to 141.667K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\"\
+  \ < ?) THEN \"L_PARTKEY\" END) AS \"141.667K to 150.000K\", count(CASE WHEN (\"\
+  L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"150.000K to\
+  \ 158.334K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"\
+  L_PARTKEY\" END) AS \"158.334K to 166.667K\", count(CASE WHEN (\"L_PARTKEY\" >=\
+  \ ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\" END) AS \"166.667K to 175.000K\",\
+  \ count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\" < ?) THEN \"L_PARTKEY\"\
+  \ END) AS \"175.000K to 183.333K\", count(CASE WHEN (\"L_PARTKEY\" >= ? AND \"L_PARTKEY\"\
+  \ < ?) THEN \"L_PARTKEY\" END) AS \"183.333K to 191.667K\", count(CASE WHEN (\"\
+  L_PARTKEY\" >= ?) THEN \"L_PARTKEY\" END) AS \"191.667K and up\" \nFROM \"TPCH_SF1\"\
+  .\"LINEITEM\"\n LIMIT ?"
+checksum: c3b3454b6f86ba800bce754cda93034b
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b565859-50f2-4c96-b4f3-2abd5feeecb1
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

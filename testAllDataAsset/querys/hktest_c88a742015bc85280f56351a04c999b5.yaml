@@ -1,0 +1,27 @@
+name: c88a742015bc85280f56351a04c999b5
+fullyQualifiedName: hktest.c88a742015bc85280f56351a04c999b5
+owners: []
+duration: 787.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"PS_PARTKEY\") AS\
+  \ count_1 \nFROM \"TPCH_SF10\".\"PARTSUPP\" GROUP BY \"PS_PARTKEY\" \nHAVING count(\"\
+  PS_PARTKEY\") = ?) AS only_once\n LIMIT ?"
+checksum: c88a742015bc85280f56351a04c999b5
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9bbaa7c7-34ce-4cd3-a409-43f685e7074b
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

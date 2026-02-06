@@ -1,0 +1,36 @@
+name: c3e1582b911a70a4b9be1fc0cf09dd60
+fullyQualifiedName: hktest.c3e1582b911a70a4b9be1fc0cf09dd60
+owners: []
+duration: 107.0
+users: []
+query: "WITH \"3cfba54f6873dfd55b0b09d32910b20e_rnd\" AS \n(SELECT \"STORE_1\".\"\
+  S_MARKET_ID\" AS \"S_MARKET_ID\" \nFROM \"TPCDS_SF10TCL\".\"STORE\" AS \"STORE_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"3cfba54f6873dfd55b0b09d32910b20e_sample\" AS \n\
+  (SELECT \"3cfba54f6873dfd55b0b09d32910b20e_rnd\".\"S_MARKET_ID\" AS \"S_MARKET_ID\"\
+  \ \nFROM \"3cfba54f6873dfd55b0b09d32910b20e_rnd\")\n SELECT count(CASE WHEN (\"\
+  S_MARKET_ID\" >= ? AND \"S_MARKET_ID\" < ?) THEN \"S_MARKET_ID\" END) AS \"1.000\
+  \ to 3.186\", count(CASE WHEN (\"S_MARKET_ID\" >= ? AND \"S_MARKET_ID\" < ?) THEN\
+  \ \"S_MARKET_ID\" END) AS \"3.186 to 5.372\", count(CASE WHEN (\"S_MARKET_ID\" >=\
+  \ ? AND \"S_MARKET_ID\" < ?) THEN \"S_MARKET_ID\" END) AS \"5.372 to 7.559\", count(CASE\
+  \ WHEN (\"S_MARKET_ID\" >= ? AND \"S_MARKET_ID\" < ?) THEN \"S_MARKET_ID\" END)\
+  \ AS \"7.559 to 9.745\", count(CASE WHEN (\"S_MARKET_ID\" >= ?) THEN \"S_MARKET_ID\"\
+  \ END) AS \"9.745 and up\" \nFROM \"3cfba54f6873dfd55b0b09d32910b20e_sample\"\n\
+  \ LIMIT ?"
+checksum: c3e1582b911a70a4b9be1fc0cf09dd60
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8b867dd5-07fb-4f21-a899-5b84cd0ae9c4
+    type: table
+    name: STORE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE
+    displayName: STORE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

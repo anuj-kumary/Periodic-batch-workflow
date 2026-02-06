@@ -1,0 +1,21 @@
+name: c0d62c3350ed8a66a1a08eb154d6e2ad
+fullyQualifiedName: hktest.c0d62c3350ed8a66a1a08eb154d6e2ad
+owners: []
+duration: 61.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"STATUS\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"STATUS\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"STATUS\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"JAFFLE_SHOP\".\"ORDERS\"\n LIMIT ?"
+checksum: c0d62c3350ed8a66a1a08eb154d6e2ad
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

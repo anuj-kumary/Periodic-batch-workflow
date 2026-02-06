@@ -1,0 +1,29 @@
+name: c74b28235f2b2f3c25ccf662071bc6b5
+fullyQualifiedName: hktest.c74b28235f2b2f3c25ccf662071bc6b5
+owners: []
+duration: 200.0
+users: []
+query: "SELECT avg(LEN(\"SRC_SYS_NM\")) AS mean, count(\"SRC_SYS_NM\") AS \"valuesCount\"\
+  , count(DISTINCT \"SRC_SYS_NM\") AS \"distinctCount\", MIN(LEN(\"SRC_SYS_NM\"))\
+  \ AS min, MAX(LEN(\"SRC_SYS_NM\")) AS max, coalesce(SUM(CASE WHEN (\"SRC_SYS_NM\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"SRC_SYS_NM\"))\
+  \ AS stddev, SUM(LEN(\"SRC_SYS_NM\")) AS sum \nFROM \"CURATED\".\"CNTRCT\"\n LIMIT\
+  \ ?"
+checksum: c74b28235f2b2f3c25ccf662071bc6b5
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
