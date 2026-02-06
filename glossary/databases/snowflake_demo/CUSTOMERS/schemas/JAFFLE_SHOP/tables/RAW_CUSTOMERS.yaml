@@ -1,0 +1,194 @@
+name: RAW_CUSTOMERS
+fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS
+description: "This table stores customer information, including their first and last\
+  \ names, along with a unique identifier. It can be used to manage customer relationships,\
+  \ track purchases, and analyze customer demographics for targeted marketing strategies."
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The ID column serves as a unique identifier for each customer, ensuring\
+      \ that every record can be distinctly referenced and managed within the database."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The FIRST_NAME column stores the first name of the customer, which\
+      \ is used to identify and address individuals in a personalized manner."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.FIRST_NAME
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The LAST_NAME column contains the last name of the customer, which,\
+      \ along with the first name, helps in identifying and distinguishing between\
+      \ customers."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.LAST_NAME
+    tags:
+      - tagFQN: General.NRP
+        name: NRP
+        description: "A person’s Nationality, religious or political group."
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: e0027524-f16c-4744-9819-382e8783f50c
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace TABLE RAW_CUSTOMERS (\n\tID NUMBER(38,0),\n\t\
+  FIRST_NAME VARCHAR(16777216),\n\tLAST_NAME VARCHAR(16777216)\n);"
+tags:
+  - tagFQN: Tier.Tier2
+    name: Tier2
+    description: |-
+      **Important business datasets for your company (not as critical as Tier 1)**
+
+      - Used in important business metrics, product metrics, and dashboards to drive internal decisions
+
+      - Used in important compliance reporting to major regulators, govt entities, and third party
+
+      - Used for less critical online user-facing experiences (user activity, user behavior)
+
+      - Source used to derive other critical Tier-2 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 92a49c33-ff21-463b-8f9f-cc8aeadd932e
+  type: testSuite
+  name: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.testSuite
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.testSuite
+  displayName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: "The ID column serves as a unique identifier for each customer, ensuring\
+        \ that every record can be distinctly referenced and managed within the database."
+    - name: columns.FIRST_NAME.description
+      newValue: "The FIRST_NAME column stores the first name of the customer, which\
+        \ is used to identify and address individuals in a personalized manner."
+    - name: columns.LAST_NAME.description
+      newValue: "The LAST_NAME column contains the last name of the customer, which,\
+        \ along with the first name, helps in identifying and distinguishing between\
+        \ customers."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.6
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1744179096450
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179096748
+    columns.LAST_NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179096748
+    columns.FIRST_NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179096748
+sourceUrl: https://app.snowflake.com/gwtbvpm/pg25341/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/table/RAW_CUSTOMERS
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1744070400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: 2a31d5c57caf78244d0e1a178bbba549
+processedLineage: false
+entityStatus: Approved

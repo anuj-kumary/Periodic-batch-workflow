@@ -1,0 +1,92 @@
+name: STG_CUSTOMERS
+fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.STG_CUSTOMERS
+tableType: View
+columns:
+  - name: CUSTOMER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.STG_CUSTOMERS.CUSTOMER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.STG_CUSTOMERS.FIRST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.STG_CUSTOMERS.LAST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: d42b71c9-e2ff-4c42-8750-cd64a21ea350
+  type: databaseSchema
+  name: COLLATE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP
+  description: Collate e-commerce
+  displayName: COLLATE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace   view CUSTOMERS.jaffle_shop.stg_customers\n\
+  \  \n   as (\n    with source as (\n    select * from CUSTOMERS.jaffle_shop.raw_customers\n\
+  \n),\n\nrenamed as (\n\n    select\n        id as customer_id,\n        first_name,\n\
+  \        last_name\n\n    from source\n\n)\n\nselect * from renamed\n  );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/CUSTOMERS/schemas/COLLATE_SHOP/view/STG_CUSTOMERS
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+dataProducts: []
+sourceHash: 5b6f7d36400a6386dbb4e27d724216de
+processedLineage: false
+entityStatus: Unprocessed

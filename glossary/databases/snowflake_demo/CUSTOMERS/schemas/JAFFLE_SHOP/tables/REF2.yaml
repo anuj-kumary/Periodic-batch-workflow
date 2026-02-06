@@ -1,0 +1,205 @@
+name: REF2
+fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2
+description: "This table stores customer data, including their lifetime value, order\
+  \ history, and personal details, enabling businesses to analyze customer behavior,\
+  \ enhance marketing strategies, and improve overall customer relationship management."
+tableType: View
+columns:
+  - name: CUSTOMER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "A unique identifier assigned to each customer, used to distinguish\
+      \ between different customers in the database."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.CUSTOMER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The first name of the customer, used for personalization and identification\
+      \ purposes."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.FIRST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The last name of the customer, used alongside the first name for\
+      \ identification and personalization."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.LAST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_ORDER
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The date when the customer made their first order, which helps in\
+      \ understanding customer acquisition and retention."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.FIRST_ORDER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MOST_RECENT_ORDER
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The date of the customer's most recent order, which is useful for\
+      \ tracking customer activity and engagement."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.MOST_RECENT_ORDER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NUMBER_OF_ORDERS
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 18
+    scale: 0
+    dataTypeDisplay: "number(18,0)"
+    description: "The total count of orders placed by the customer, indicating their\
+      \ purchasing behavior and loyalty."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.NUMBER_OF_ORDERS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMER_LIFETIME_VALUE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 6
+    dataTypeDisplay: "number(38,6)"
+    description: An estimate of the total revenue that a customer is expected to generate
+      during their relationship with the business.
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.CUSTOMER_LIFETIME_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: e0027524-f16c-4744-9819-382e8783f50c
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view REF2(\n\tCUSTOMER_ID,\n\tFIRST_NAME,\n\t\
+  LAST_NAME,\n\tFIRST_ORDER,\n\tMOST_RECENT_ORDER,\n\tNUMBER_OF_ORDERS,\n\tCUSTOMER_LIFETIME_VALUE\n\
+  ) as SELECT * FROM REFINED_CUSTOMERS;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 5f9d951e-86c5-4d08-b3af-26f93b2c389a
+  type: testSuite
+  name: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.testSuite
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.testSuite
+  displayName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF2.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.CUSTOMER_ID.description
+      newValue: "A unique identifier assigned to each customer, used to distinguish\
+        \ between different customers in the database."
+    - name: columns.FIRST_NAME.description
+      newValue: "The first name of the customer, used for personalization and identification\
+        \ purposes."
+    - name: columns.LAST_NAME.description
+      newValue: "The last name of the customer, used alongside the first name for\
+        \ identification and personalization."
+    - name: columns.FIRST_ORDER.description
+      newValue: "The date when the customer made their first order, which helps in\
+        \ understanding customer acquisition and retention."
+    - name: columns.MOST_RECENT_ORDER.description
+      newValue: "The date of the customer's most recent order, which is useful for\
+        \ tracking customer activity and engagement."
+    - name: columns.NUMBER_OF_ORDERS.description
+      newValue: "The total count of orders placed by the customer, indicating their\
+        \ purchasing behavior and loyalty."
+    - name: columns.CUSTOMER_LIFETIME_VALUE.description
+      newValue: An estimate of the total revenue that a customer is expected to generate
+        during their relationship with the business.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091397
+    columns.LAST_NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+    columns.FIRST_NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+    columns.CUSTOMER_ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+    columns.FIRST_ORDER.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+    columns.NUMBER_OF_ORDERS.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+    columns.MOST_RECENT_ORDER.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+    columns.CUSTOMER_LIFETIME_VALUE.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179091572
+sourceUrl: https://app.snowflake.com/gwtbvpm/pg25341/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/view/REF2
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+dataProducts: []
+sourceHash: 6406028d4a780e0ac3939312bed8974c
+processedLineage: true
+entityStatus: Approved

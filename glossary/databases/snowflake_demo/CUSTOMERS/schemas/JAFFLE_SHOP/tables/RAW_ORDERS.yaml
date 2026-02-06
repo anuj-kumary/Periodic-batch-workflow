@@ -1,0 +1,195 @@
+name: RAW_ORDERS
+fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS
+description: "This table stores order details from customers, including unique identifiers,\
+  \ order dates, statuses, and user IDs, enabling businesses to track and analyze\
+  \ customer purchasing behavior and order fulfillment processes."
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The ID column serves as a unique identifier for each order in the\
+      \ system, ensuring that every order can be distinctly referenced."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The USER_ID column links each order to the specific user who placed\
+      \ it, facilitating user account management and order history tracking."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.USER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDER_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The ORDER_DATE column records the date and time when the order was\
+      \ placed, providing essential information for tracking and managing orders over\
+      \ time."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.ORDER_DATE
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATUS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The STATUS column indicates the current state of the order, such\
+      \ as pending, completed, or canceled, allowing for effective order management\
+      \ and customer communication."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.STATUS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: e0027524-f16c-4744-9819-382e8783f50c
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace TABLE RAW_ORDERS (\n\tID NUMBER(38,0),\n\tUSER_ID\
+  \ NUMBER(38,0),\n\tORDER_DATE DATE,\n\tSTATUS VARCHAR(16777216)\n);"
+tags:
+  - tagFQN: Tier.Tier2
+    name: Tier2
+    description: |-
+      **Important business datasets for your company (not as critical as Tier 1)**
+
+      - Used in important business metrics, product metrics, and dashboards to drive internal decisions
+
+      - Used in important compliance reporting to major regulators, govt entities, and third party
+
+      - Used for less critical online user-facing experiences (user activity, user behavior)
+
+      - Source used to derive other critical Tier-2 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: f1ba5c41-db8d-4a9d-84b7-7d1d03750049
+  type: testSuite
+  name: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.testSuite
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.testSuite
+  displayName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: "The ID column serves as a unique identifier for each order in the\
+        \ system, ensuring that every order can be distinctly referenced."
+    - name: columns.USER_ID.description
+      newValue: "The USER_ID column links each order to the specific user who placed\
+        \ it, facilitating user account management and order history tracking."
+    - name: columns.ORDER_DATE.description
+      newValue: "The ORDER_DATE column records the date and time when the order was\
+        \ placed, providing essential information for tracking and managing orders\
+        \ over time."
+    - name: columns.STATUS.description
+      newValue: "The STATUS column indicates the current state of the order, such\
+        \ as pending, completed, or canceled, allowing for effective order management\
+        \ and customer communication."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.6
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1744179095548
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179095815
+    columns.STATUS.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179095815
+    columns.USER_ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179095815
+    columns.ORDER_DATE.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179095815
+sourceUrl: https://app.snowflake.com/gwtbvpm/pg25341/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/table/RAW_ORDERS
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1744070400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: ca329429412b50f0f824de5be57c3fe6
+processedLineage: false
+entityStatus: Approved

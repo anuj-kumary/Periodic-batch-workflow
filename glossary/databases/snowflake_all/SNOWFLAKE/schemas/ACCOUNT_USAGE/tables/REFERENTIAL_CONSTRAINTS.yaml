@@ -1,0 +1,203 @@
+name: REFERENTIAL_CONSTRAINTS
+fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS
+tableType: View
+columns:
+  - name: CONSTRAINT_CATALOG_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.CONSTRAINT_CATALOG_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_SCHEMA_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.CONSTRAINT_SCHEMA_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_CATALOG_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_CATALOG_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_SCHEMA_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_SCHEMA_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MATCH_OPTION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.MATCH_OPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UPDATE_RULE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.UPDATE_RULE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DELETE_RULE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.DELETE_RULE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DELETED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REFERENTIAL_CONSTRAINTS.DELETED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 00ce1da4-1a78-4b94-a791-32166446ad0f
+  type: databaseSchema
+  name: ACCOUNT_USAGE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE
+  displayName: ACCOUNT_USAGE
+  deleted: false
+database:
+  id: dee8c08b-03e8-4569-a337-eab4df5d24ac
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 4af6c116-941c-445f-8c08-713dd72e2873
+  type: databaseService
+  name: snowflake_all
+  fullyQualifiedName: snowflake_all
+  description: ""
+  displayName: snowflake_all
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/eggtndd/jd74081/#/data/databases/SNOWFLAKE/schemas/ACCOUNT_USAGE/view/REFERENTIAL_CONSTRAINTS
+domains: []
+dataProducts: []
+sourceHash: 4db7188a1eabdd1bea0fea782dd99305
+processedLineage: false
+entityStatus: Approved

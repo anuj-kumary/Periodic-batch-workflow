@@ -1,0 +1,314 @@
+name: REFINED_CUSTOMERS
+fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS
+description: "This table provides insights into customer behavior and value, capturing\
+  \ essential details such as lifetime value, order history, and personal information,\
+  \ enabling businesses to analyze customer engagement and tailor marketing strategies\
+  \ effectively."
+tableType: Regular
+columns:
+  - name: CUSTOMER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "<p>A unique identifier assigned to each customer, used to distinguish\
+      \ one customer from another in the database. ฌ เฌอ</p>"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.CUSTOMER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The first name of the customer, used for personalization and communication\
+      \ purposes."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.FIRST_NAME
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "<p>The last name of the customer, used alongside the first name\
+      \ for identification and personalization.ฌ เฌอ</p>"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.LAST_NAME
+    tags:
+      - tagFQN: General.NRP
+        name: NRP
+        description: "A person’s Nationality, religious or political group."
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_ORDER
+    displayName: ฌ เฌอ
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The date when the customer made their first order, which helps in\
+      \ understanding customer acquisition and retention."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.FIRST_ORDER
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MOST_RECENT_ORDER
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The date of the customer's most recent order, which is important\
+      \ for tracking customer activity and engagement."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.MOST_RECENT_ORDER
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NUMBER_OF_ORDERS
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 18
+    scale: 0
+    dataTypeDisplay: "number(18,0)"
+    description: "The total count of orders placed by the customer, indicating their\
+      \ purchasing behavior and loyalty."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.NUMBER_OF_ORDERS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMER_LIFETIME_VALUE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 6
+    dataTypeDisplay: "number(38,6)"
+    description: An estimate of the total revenue that a customer is expected to generate
+      during their relationship with the business.
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS.CUSTOMER_LIFETIME_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: d081b205-3f86-4dc8-8aab-b789df5298ba
+    type: user
+    name: joseph
+    fullyQualifiedName: joseph
+    displayName: Jo
+    deleted: false
+databaseSchema:
+  id: e0027524-f16c-4744-9819-382e8783f50c
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace TABLE REFINED_CUSTOMERS (\n\tCUSTOMER_ID NUMBER(38,0),\n\
+  \tFIRST_NAME VARCHAR(16777216),\n\tLAST_NAME VARCHAR(16777216),\n\tFIRST_ORDER DATE,\n\
+  \tMOST_RECENT_ORDER DATE,\n\tNUMBER_OF_ORDERS NUMBER(18,0),\n\tCUSTOMER_LIFETIME_VALUE\
+  \ NUMBER(38,6)\n);"
+tags:
+  - tagFQN: Tier.Tier1
+    name: Tier1
+    description: |-
+      **Critical Source of Truth business data assets of an organization**
+
+      - Used in critical metrics and dashboards to drive business and product decisions
+
+      - Used in critical compliance reporting to regulators, govt entities, and third party
+
+      - Used in brand or revenue impacting online user-facing experiences (search results, advertisement, promotions, and experimentation)
+
+      - Other high impact use, such as ML models and fraud detection
+
+      - Source used to derive other critical Tier-1 datasets
+    style:
+      color: "#ec1313"
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '`custom`.tag1'
+    name: tag1
+    displayName: tag1
+    description: <p>tag1</p>
+    style:
+      color: "#fd3f3f"
+      iconURL: https://cdn-icons-png.flaticon.com/512/9029/9029931.png
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '`custom`.xyzZ'
+    name: xyzZ
+    description: <p>DATABRICKS TAG TEST</p>
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1768992294000
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.LAST_NAME.tags
+      newValue: "[{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\",\"description\"\
+        :\"PII which if lost, compromised, or disclosed without authorization, could\
+        \ result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"PII.Sensitive\"\
+        ,\"name\":\"Sensitive\",\"description\":\"PII which if lost, compromised,\
+        \ or disclosed without authorization, could result in substantial harm, embarrassment,\
+        \ inconvenience, or unfairness to an individual.\",\"style\":{\"color\":\"\
+        #ff0000\"},\"source\":\"Classification\",\"labelType\":\"Manual\",\"state\"\
+        :\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.2
+  changeSummary:
+    owners:
+      changedBy: joseph
+      changedAt: 1744740446021
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1744179085558
+    columns.LAST_NAME.description:
+      changedBy: nikhil.c
+      changedAt: 1754051896495
+    columns.FIRST_NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179085558
+    columns.CUSTOMER_ID.description:
+      changedBy: nikhil.c
+      changedAt: 1754051896495
+    columns.FIRST_ORDER.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179085558
+    columns.NUMBER_OF_ORDERS.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179085558
+    columns.MOST_RECENT_ORDER.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179085558
+    columns.CUSTOMER_LIFETIME_VALUE.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179085558
+sourceUrl: https://app.snowflake.com/gwtbvpm/pg25341/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/table/REFINED_CUSTOMERS
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1744070400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: 0914928dff9ea8aa626cbca91436b23b
+processedLineage: false
+entityStatus: Approved

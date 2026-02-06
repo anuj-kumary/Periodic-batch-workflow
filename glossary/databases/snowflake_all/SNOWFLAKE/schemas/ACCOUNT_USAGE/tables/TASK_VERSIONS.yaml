@@ -1,0 +1,238 @@
+name: TASK_VERSIONS
+fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS
+tableType: View
+columns:
+  - name: ROOT_TASK_ID
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: text(40)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.ROOT_TASK_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRAPH_VERSION
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.GRAPH_VERSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRAPH_VERSION_CREATED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.GRAPH_VERSION_CREATED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ID
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: text(40)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATABASE_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.DATABASE_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATABASE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.DATABASE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SCHEMA_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.SCHEMA_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SCHEMA_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.SCHEMA_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.OWNER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: WAREHOUSE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.WAREHOUSE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SCHEDULE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.SCHEDULE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PREDECESSORS
+    dataType: ARRAY
+    arrayDataType: UNKNOWN
+    dataLength: 1
+    dataTypeDisplay: array
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.PREDECESSORS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: text(100)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.STATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFINITION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.DEFINITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONDITION_TEXT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.CONDITION_TEXT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ALLOW_OVERLAPPING_EXECUTION
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.ALLOW_OVERLAPPING_EXECUTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ERROR_INTEGRATION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.ERROR_INTEGRATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_COMMITTED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.LAST_COMMITTED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_SUSPENDED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.TASK_VERSIONS.LAST_SUSPENDED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 00ce1da4-1a78-4b94-a791-32166446ad0f
+  type: databaseSchema
+  name: ACCOUNT_USAGE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE
+  displayName: ACCOUNT_USAGE
+  deleted: false
+database:
+  id: dee8c08b-03e8-4569-a337-eab4df5d24ac
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 4af6c116-941c-445f-8c08-713dd72e2873
+  type: databaseService
+  name: snowflake_all
+  fullyQualifiedName: snowflake_all
+  description: ""
+  displayName: snowflake_all
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/eggtndd/jd74081/#/data/databases/SNOWFLAKE/schemas/ACCOUNT_USAGE/view/TASK_VERSIONS
+domains: []
+dataProducts: []
+sourceHash: a7268ed44d6150282978ad71888d7aae
+processedLineage: false
+entityStatus: Approved
