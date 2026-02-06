@@ -1,0 +1,83 @@
+name: ACT_ID_PRIV_MAPPING
+fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_ID_PRIV_MAPPING
+tableType: Regular
+columns:
+  - name: ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_ID_PRIV_MAPPING.ID_
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: PRIV_ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_ID_PRIV_MAPPING.PRIV_ID_
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: USER_ID_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_ID_PRIV_MAPPING.USER_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GROUP_ID_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_ID_PRIV_MAPPING.GROUP_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: FOREIGN_KEY
+    columns:
+      - PRIV_ID_
+    referredColumns:
+      - Gyo local test mysql 20240324.dev.openmetadata_db.ACT_ID_PRIV.ID_
+    relationshipType: MANY_TO_ONE
+owners: []
+databaseSchema:
+  id: 46a47ac8-ecec-4832-a500-68963b6e3601
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 523334aefb59552d4e1a2dc040b68fe8
+processedLineage: false
+entityStatus: Approved

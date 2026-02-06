@@ -1,0 +1,203 @@
+name: STATISTICS
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NON_UNIQUE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.NON_UNIQUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.INDEX_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.INDEX_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SEQ_IN_INDEX
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.SEQ_IN_INDEX
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLUMN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.COLUMN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLLATION
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar(1)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.COLLATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CARDINALITY
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.CARDINALITY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUB_PART
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.SUB_PART
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PACKED
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.PACKED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NULLABLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.NULLABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_TYPE
+    dataType: VARCHAR
+    dataLength: 11
+    dataTypeDisplay: varchar(11)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.INDEX_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 8
+    dataTypeDisplay: varchar(8)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_COMMENT
+    dataType: VARCHAR
+    dataLength: 2048
+    dataTypeDisplay: varchar(2048)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.INDEX_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_VISIBLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.IS_VISIBLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXPRESSION
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.STATISTICS.EXPRESSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: eed6ad6edf39ddb9e6a068c6c1e17745
+processedLineage: false
+entityStatus: Approved

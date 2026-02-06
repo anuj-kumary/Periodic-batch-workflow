@@ -1,0 +1,131 @@
+name: ACT_RE_DEPLOYMENT
+fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT
+tableType: Regular
+columns:
+  - name: ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.ID_
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: NAME_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.NAME_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CATEGORY_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.CATEGORY_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: KEY_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.KEY_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TENANT_ID_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.TENANT_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEPLOY_TIME_
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.DEPLOY_TIME_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DERIVED_FROM_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.DERIVED_FROM_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DERIVED_FROM_ROOT_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.DERIVED_FROM_ROOT_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARENT_DEPLOYMENT_ID_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.PARENT_DEPLOYMENT_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ENGINE_VERSION_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_RE_DEPLOYMENT.ENGINE_VERSION_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 46a47ac8-ecec-4832-a500-68963b6e3601
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 71bbe81da2568fcc8111b2ba0a82f539
+processedLineage: false
+entityStatus: Approved

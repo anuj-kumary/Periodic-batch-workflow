@@ -1,0 +1,131 @@
+name: INNODB_TABLES
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES
+tableType: View
+columns:
+  - name: TABLE_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.TABLE_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 655
+    dataTypeDisplay: varchar(655)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: FLAG
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.FLAG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: N_COLS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.N_COLS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SPACE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.SPACE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ROW_FORMAT
+    dataType: VARCHAR
+    dataLength: 12
+    dataTypeDisplay: varchar(12)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.ROW_FORMAT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ZIP_PAGE_SIZE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.ZIP_PAGE_SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SPACE_TYPE
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar(10)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.SPACE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INSTANT_COLS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.INSTANT_COLS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TOTAL_ROW_VERSIONS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLES.TOTAL_ROW_VERSIONS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: c9a8e241e11834a618d36d959656b01c
+processedLineage: false
+entityStatus: Approved

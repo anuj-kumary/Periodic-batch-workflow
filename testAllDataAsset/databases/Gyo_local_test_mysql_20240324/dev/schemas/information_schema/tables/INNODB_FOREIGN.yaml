@@ -1,0 +1,86 @@
+name: INNODB_FOREIGN
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FOREIGN
+tableType: View
+columns:
+  - name: ID
+    dataType: VARCHAR
+    dataLength: 129
+    dataTypeDisplay: varchar(129)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FOREIGN.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FOR_NAME
+    dataType: VARCHAR
+    dataLength: 129
+    dataTypeDisplay: varchar(129)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FOREIGN.FOR_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REF_NAME
+    dataType: VARCHAR
+    dataLength: 129
+    dataTypeDisplay: varchar(129)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FOREIGN.REF_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: N_COLS
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FOREIGN.N_COLS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TYPE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FOREIGN.TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9b3b234f9847ef34c35a43abcc0d7119
+processedLineage: false
+entityStatus: Approved

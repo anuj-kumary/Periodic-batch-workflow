@@ -1,0 +1,113 @@
+name: PROCESSLIST
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST
+tableType: View
+columns:
+  - name: ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: USER
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar(32)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.USER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: HOST
+    dataType: VARCHAR
+    dataLength: 261
+    dataTypeDisplay: varchar(261)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.HOST
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DB
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.DB
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMAND
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar(16)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.COMMAND
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TIME
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.TIME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.STATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INFO
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROCESSLIST.INFO
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ed100763276910fe39fea1d80df16697
+processedLineage: false
+entityStatus: Approved

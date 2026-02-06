@@ -1,0 +1,77 @@
+name: ST_UNITS_OF_MEASURE
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_UNITS_OF_MEASURE
+tableType: View
+columns:
+  - name: UNIT_NAME
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_UNITS_OF_MEASURE.UNIT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIT_TYPE
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar(7)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_UNITS_OF_MEASURE.UNIT_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONVERSION_FACTOR
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_UNITS_OF_MEASURE.CONVERSION_FACTOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DESCRIPTION
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_UNITS_OF_MEASURE.DESCRIPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 87c7a49a1d758382ca70d6301800725e
+processedLineage: false
+entityStatus: Approved

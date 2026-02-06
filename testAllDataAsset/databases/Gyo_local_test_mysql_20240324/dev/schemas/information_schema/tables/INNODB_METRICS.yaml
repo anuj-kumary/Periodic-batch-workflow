@@ -1,0 +1,194 @@
+name: INNODB_METRICS
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS
+tableType: View
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SUBSYSTEM
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.SUBSYSTEM
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.COUNT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MAX_COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.MAX_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MIN_COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.MIN_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AVG_COUNT
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.AVG_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNT_RESET
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.COUNT_RESET
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MAX_COUNT_RESET
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.MAX_COUNT_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MIN_COUNT_RESET
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.MIN_COUNT_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AVG_COUNT_RESET
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.AVG_COUNT_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_ENABLED
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.TIME_ENABLED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_DISABLED
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.TIME_DISABLED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_ELAPSED
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.TIME_ELAPSED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_RESET
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.TIME_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATUS
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.STATUS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TYPE
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_METRICS.COMMENT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b8ea219dbd1163d30bd9ed4dd3c323d1
+processedLineage: false
+entityStatus: Approved
