@@ -1,0 +1,84 @@
+name: PACKAGES
+fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.PACKAGES
+tableType: View
+columns:
+  - name: PACKAGE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package name
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.PACKAGES.PACKAGE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package version
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.PACKAGES.VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: LANGUAGE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package language
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.PACKAGES.LANGUAGE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: RUNTIME_VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Supported runtime version
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.PACKAGES.RUNTIME_VERSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: edd68efa-a871-40fd-8c01-c19d84895707
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 7fc7fe92-547f-478e-b870-936ddfc693a3
+  type: database
+  name: SAMPLE_CUSTOMER_DATA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA
+  description: ""
+  displayName: SAMPLE_CUSTOMER_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SAMPLE_CUSTOMER_DATA/schemas/INFORMATION_SCHEMA/view/PACKAGES
+domains: []
+dataProducts: []
+sourceHash: b609ed261a325577ad47902a565f45d7
+processedLineage: false
+entityStatus: Approved

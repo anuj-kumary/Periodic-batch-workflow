@@ -1,0 +1,164 @@
+name: STREAMLITS
+fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS
+tableType: View
+columns:
+  - name: STREAMLIT_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database that the streamlit belongs to
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema that the streamlit belongs to
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_OWNER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_ROOT_LOCATION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Root location of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_ROOT_LOCATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_MAIN_FILE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Main file of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_MAIN_FILE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_QUERY_WAREHOUSE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Query warehouse of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_QUERY_WAREHOUSE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_URL_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: URL id of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_URL_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last altered time of the streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this streamlit
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STREAMLIT_TITLE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Title for the streamlit app
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.STREAMLITS.STREAMLIT_TITLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: edd68efa-a871-40fd-8c01-c19d84895707
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 7fc7fe92-547f-478e-b870-936ddfc693a3
+  type: database
+  name: SAMPLE_CUSTOMER_DATA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA
+  description: ""
+  displayName: SAMPLE_CUSTOMER_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SAMPLE_CUSTOMER_DATA/schemas/INFORMATION_SCHEMA/view/STREAMLITS
+domains: []
+dataProducts: []
+sourceHash: 553fe1db4283c47c78ef7e2a5398a75e
+processedLineage: false
+entityStatus: Approved
