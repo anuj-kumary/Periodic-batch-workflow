@@ -1,0 +1,115 @@
+name: T080A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A
+description: Structure definition work list suffix
+tableType: Regular
+columns:
+  - name: FELDNM
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A.FELDNM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LFDNR
+    displayName: Sequence number
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Sequence number of container definition
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A.LFDNR
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: TABNM
+    displayName: Table name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name (4 Characters)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A.TABNM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: TASKID
+    displayName: Task
+    dataType: CHAR
+    dataLength: 14
+    dataTypeDisplay: char(14)
+    description: Task ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A.TASKID
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: XDRUCK
+    displayName: Print indicator
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Field should be printed in reporting"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A.XDRUCK
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XHEADER
+    displayName: Header ind.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Field is assigned to a worklist header"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T080A.XHEADER
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - LFDNR
+      - TASKID
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 133d1f2b22338b05275a3abab43f34af
+processedLineage: false
+entityStatus: Approved

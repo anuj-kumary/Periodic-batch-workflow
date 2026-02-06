@@ -1,0 +1,387 @@
+name: T090
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090
+description: Depreciation calculation keys
+tableType: Regular
+columns:
+  - name: AFACLA
+    displayName: Classification
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Ordinary depreciation classification
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.AFACLA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: AFAMET
+    displayName: Depr.calc.method
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation calculation method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.AFAMET
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: AFARSL
+    displayName: Calculation key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Internal calculation key for depreciation and interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.AFARSL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AFATYP
+    displayName: Type of depreciation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.AFATYP
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: DEGFAK
+    displayName: Decl.multiplicat.factor
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 2
+    dataTypeDisplay: "dec(3,2)"
+    description: Declining-balance multiplication factor
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.DEGFAK
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: GBEGIN
+    displayName: Start of validity period
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Start of Validity Period
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.GBEGIN
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MAXPRZ
+    displayName: Maximum percentage rate
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 4
+    dataTypeDisplay: "dec(7,4)"
+    description: Maximum percentage rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.MAXPRZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MINPRZ
+    displayName: Min.percentage rate
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 4
+    dataTypeDisplay: "dec(7,4)"
+    description: Minimum percentage rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.MINPRZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: MSFAKR
+    displayName: Multiple shift
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Effects of multiple shifts in depreciation key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.MSFAKR
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: PERBAB
+    displayName: Retirement
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Retirement"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.PERBAB
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: PERBNA
+    displayName: Acq. following year
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Acquisition in the following year"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.PERBNA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: PERBUM
+    displayName: Transfer
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control : Transfer"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.PERBUM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: PERBZU
+    displayName: Acquisition
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Acquisition"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.PERBZU
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: SCHROTT
+    displayName: Effect of scrap value on base value
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Effect of scrap value on the base value
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.SCHROTT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: UMAFSL
+    displayName: Changeover key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Calculation key after changeover
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.UMAFSL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: UMRPRZ
+    displayName: Net.val.rate for dep.chng
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Net book value percentage rate for depreciation changeover
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.UMRPRZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: UMSTM
+    displayName: Changeover method
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Changeover method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.UMSTM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: XAFAUT
+    displayName: Automatic calculation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Automatic calculation of depreciation or interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XAFAUT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XAFNAH
+    displayName: "Ind: Dep. by fisc. year"
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation levels by fiscal years and periods
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XAFNAH
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: XBZDAT
+    displayName: Calc.Dep from AsstValDate
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Ind.: Calculate depreciation from the asset value date"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XBZDAT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: XDAILY
+    displayName: Dep. to the day
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation calculation to exact day
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XDAILY
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: XEFDAU
+    displayName: Eff.life after pland end
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation with expired effective life
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XEFDAU
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XENDAU
+    displayName: Dep. after plnd.life end
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation after end of planned life
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XENDAU
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XLIFEC
+    displayName: Reduce use.life at FY end
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Reduce useful life to the end of fiscal year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XLIFEC
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XRAFA
+    displayName: No reduct. in short year
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Do not reduce depreciation in shortened fiscal year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XRAFA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: XSTILL
+    displayName: Calculate shutdown
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Calculate shutdown
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XSTILL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XUNTNL
+    displayName: Dep.below NBValue zero
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Calculation of depreciation below net book value zero
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090.XUNTNL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFARSL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 033eb3f5ffb7313b02539db6db69deb1
+processedLineage: false
+entityStatus: Approved

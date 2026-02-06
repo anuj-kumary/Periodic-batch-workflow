@@ -1,0 +1,155 @@
+name: T090NS
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS
+description: Multilevel Method
+tableType: Regular
+columns:
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.AFAPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AFPROZ
+    displayName: Dep. percentage rate
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 4
+    dataTypeDisplay: "dec(7,4)"
+    description: Depreciation percentage rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.AFPROZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: BEZWKZ
+    displayName: Base value for dep. calculat.
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Base value key for depreciation calculation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.BEZWKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: DAUJAR
+    displayName: Validity in years
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Validity period in years
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.DAUJAR
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: DAUPER
+    displayName: Months valid
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Validity period in months
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.DAUPER
+    tags: []
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: KGPROZ
+    displayName: Reduction perc. rate
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 4
+    dataTypeDisplay: "dec(7,4)"
+    description: Reduction of base value by an entered percentage rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.KGPROZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: METSTU
+    displayName: Multilevel method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Multilevel Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.METSTU
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XPDAUR
+    displayName: Percent from rem. life
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Calculate percentage from remaining useful life"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NS.XPDAUR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFAPL
+      - DAUJAR
+      - DAUPER
+      - MANDT
+      - METSTU
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a8a0210638856b3bfe10249f264a77d7
+processedLineage: false
+entityStatus: Approved

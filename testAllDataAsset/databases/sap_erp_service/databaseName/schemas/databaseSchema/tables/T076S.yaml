@@ -1,0 +1,391 @@
+name: T076S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S
+description: "EDI-INVOIC: Program Parameters"
+tableType: Regular
+columns:
+  - name: CBLARTKG
+    displayName: Cred.memo doc.type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: Credit Memo Document Type"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CBLARTKG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: CBLARTKR
+    displayName: Invoice doc.type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: Invoice Document Type"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CBLARTKR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: CBSCHLKH
+    displayName: Vendor credit posting key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: Vendor Credit Posting Key"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CBSCHLKH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: CBSCHLKS
+    displayName: Vendor debit posting key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: Vendor Debit Posting Key"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CBSCHLKS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: CBSCHLSH
+    displayName: G/L account credit posting key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: G/L Account Credit Posting Key"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CBSCHLSH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: CBSCHLSS
+    displayName: G/L account debit posting key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: G/L Account Debit Posting Key"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CBSCHLSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: CEDIVRKH
+    displayName: Credit clearing acct
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: "EDI: Clearing Account for Credit Document Division"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CEDIVRKH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: CEDIVRKS
+    displayName: Debit clearing acct
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: "EDI: Clearing Account for Debit Document Division"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CEDIVRKS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: CMEINS
+    displayName: Stand.base unit of measure
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: unit(3)
+    description: "EDI: Standard Unit of Measure if not Transferred"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CMEINS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: CMWSKZFREI
+    displayName: Tax-exempt tax code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "EDI: Tax Code for Tax-Exempt Transactions"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.CMWSKZFREI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: DINVCONSBTR
+    displayName: Check Amount
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Check Credit Memo Amount and Currency for Consistency
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.DINVCONSBTR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: DINVCONSMNG
+    displayName: Check Quantity
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Check Credit Memo Qty and Unit of Measure for Consistency
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.DINVCONSMNG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: DINVCONSXBLNR
+    displayName: Check Ext. Doc. No.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Check Credit Memo Reference to External Doc. No."
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.DINVCONSXBLNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: DINVKORR
+    displayName: EDI Processing
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Indicator for Automatic Correction (Diff. Invoicing)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.DINVKORR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: EDIBDCA
+    displayName: Process BI sess.immed.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Process Batch Input Session Immediately"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.EDIBDCA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: EDIBDCK
+    displayName: BDC sess.instd pstng directly
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Generate Batch Input Sess.(Instead of Posting Directly)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.EDIBDCK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: EDINEGDIFF
+    displayName: Check
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Indicator for Check for Negative Unclarified Errors"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.EDINEGDIFF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: EDIPRP
+    displayName: Park document
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Park Document"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.EDIPRP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: EDITXJ
+    displayName: Tax jurisdict.code transferred
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Tax Jurisdiction Code Transferred"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.EDITXJ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: KOKSEPA
+    displayName: Displ.header surch./disc.separately
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Display Surcharges/Discounts at Header Level Separately"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.KOKSEPA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: KONTO
+    displayName: Partner No.
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Partner number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.KONTO
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KOPSEPA
+    displayName: Displ.item surch./disc.separately
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Display Surcharges/Discounts at Item Level Separately"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.KOPSEPA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: KTBUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.KTBUKRS
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MRMCONSMATNR
+    displayName: Check material no.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicates that material number consistency is checked (EDI)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.MRMCONSMATNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: MRMCONSMEINS
+    displayName: Check unit of meas.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicates that unit of measure consistency is checked (EDI)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.MRMCONSMEINS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: MRMKORR
+    displayName: Processing
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Indicator for Automatic Correction"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.MRMKORR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: MWSTINCL
+    displayName: Calculate tax
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "EDI: Calculate Tax"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.MWSTINCL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: PARART
+    displayName: Partn.Type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Partner Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076S.PARART
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KONTO
+      - KTBUKRS
+      - MANDT
+      - PARART
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 91f338f389cf8263a9fbc5e9f9c201c6
+processedLineage: false
+entityStatus: Approved

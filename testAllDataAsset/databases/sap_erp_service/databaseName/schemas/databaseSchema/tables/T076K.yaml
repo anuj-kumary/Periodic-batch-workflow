@@ -1,0 +1,283 @@
+name: T076K
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K
+description: "FI-EDI: Additional Account Assignments"
+tableType: Regular
+columns:
+  - name: ANLN1
+    displayName: Asset
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Main Asset Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.ANLN1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: ANLN2
+    displayName: Sub-number
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Asset Subnumber
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.ANLN2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: AUFNR
+    displayName: Order
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Order Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.AUFNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: BESCHR
+    displayName: Description
+    dataType: CHAR
+    dataLength: 20
+    dataTypeDisplay: char(20)
+    description: Description
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.BESCHR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: DATAB
+    displayName: Valid From
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Valid-From Date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.DATAB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: DATBI
+    displayName: Valid To
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Valid To Date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.DATBI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: GSBER
+    displayName: Business Area
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Business Area
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.GSBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: IDZUKONT
+    displayName: Additional account assignment ID
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: ID for Additional Account Assignments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.IDZUKONT
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: KDAUF
+    displayName: Sales Order
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Sales Order Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.KDAUF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: KOKRS
+    displayName: Controlling Area
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Controlling Area
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.KOKRS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: KONTO
+    displayName: Partner No.
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Partner number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.KONTO
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KOSTL
+    displayName: Cost Center
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Cost Center
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.KOSTL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: KTBUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.KTBUKRS
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NPLNR
+    displayName: Network
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Network Number for Account Assignment
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.NPLNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: PAOBJNR
+    displayName: Profitab. Segmt No.
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: numc(10)
+    description: Profitability Segment Number (CO-PA)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.PAOBJNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: PARART
+    displayName: Partn.Type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Partner Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.PARART
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: PRCTR
+    displayName: Profit Center
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Profit Center
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.PRCTR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: PS_PSP_PNR
+    displayName: WBS Element
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: numc(8)
+    description: Work Breakdown Structure Element (WBS Element)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.PS_PSP_PNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: WERKS
+    displayName: Plant
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Plant
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T076K.WERKS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - IDZUKONT
+      - KONTO
+      - KTBUKRS
+      - MANDT
+      - PARART
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: aaf6bd0f32d30b49dd5c2285bb3d2153
+processedLineage: false
+entityStatus: Approved

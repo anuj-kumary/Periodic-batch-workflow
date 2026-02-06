@@ -1,0 +1,79 @@
+name: T078S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078S
+description: Action Type Screen Selection for G/L Acct Master Data
+tableType: Regular
+columns:
+  - name: AKTYP
+    displayName: Activity category
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Activity category in SAP transaction
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078S.AKTYP
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: FAUSS
+    displayName: Field status
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Field status definition for G/L accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078S.FAUSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AKTYP
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 4f522ba77d93a837f98c7490f4640d6b
+processedLineage: false
+entityStatus: Approved

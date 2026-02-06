@@ -1,0 +1,91 @@
+name: T086T
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086T
+description: Names for Reporting Sort Versions
+tableType: Regular
+columns:
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086T.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SPRAS
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086T.SPRAS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: SRTVAR
+    displayName: Sort version
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Sort version for reporting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086T.SRTVAR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: SVARTX
+    displayName: Description
+    dataType: CHAR
+    dataLength: 50
+    dataTypeDisplay: char(50)
+    description: Text Field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086T.SVARTX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - SPRAS
+      - SRTVAR
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d484cc33e86f592c0f8fa356002e40f4
+processedLineage: false
+entityStatus: Approved

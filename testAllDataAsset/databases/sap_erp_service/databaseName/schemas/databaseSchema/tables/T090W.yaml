@@ -1,0 +1,91 @@
+name: T090W
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090W
+description: Short Texts for Depreciation Trace
+tableType: Regular
+columns:
+  - name: OBJCT
+    displayName: Text object
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Text object for depreciation trace
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090W.OBJCT
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: OBTXT
+    displayName: Object name
+    dataType: CHAR
+    dataLength: 50
+    dataTypeDisplay: char(50)
+    description: Text for the depreciation trace object
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090W.OBTXT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: SPRAS
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090W.SPRAS
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TXTYP
+    displayName: Text type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Text type for depreciation trace
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090W.TXTYP
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - OBJCT
+      - SPRAS
+      - TXTYP
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: c64450233ecb54963e4491eaf3d72401
+processedLineage: false
+entityStatus: Approved

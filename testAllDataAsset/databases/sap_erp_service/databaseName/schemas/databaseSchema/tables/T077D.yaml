@@ -1,0 +1,283 @@
+name: T077D
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D
+description: Customer account groups
+tableType: Regular
+columns:
+  - name: DEAR1
+    displayName: Competitors
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Competitor"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.DEAR1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: DEAR2
+    displayName: Sales partners
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Sales partner"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.DEAR2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: DEAR3
+    displayName: Prospect
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Sales prospect"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.DEAR3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: DEAR4
+    displayName: Customer type 4
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator for customer type 4
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.DEAR4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: DEAR5
+    displayName: Default sold-to pty
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: ID for default sold-to party
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.DEAR5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: DEAR6
+    displayName: Consumer
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Consumer"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.DEAR6
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: FAUS1
+    displayName: FAUS1
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUS1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: FAUS2
+    displayName: FAUS2
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUS2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: FAUS3
+    displayName: FAUS3
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUS3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: FAUSA
+    displayName: FAUSA
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUSA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FAUSF
+    displayName: FAUSF
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for comp.code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUSF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FAUSG
+    displayName: FAUSG
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for comp.code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUSG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: FAUSU
+    displayName: Sales data
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for sales fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUSU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: FAUSV
+    displayName: Sales data
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for sales fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUSV
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FAUSW
+    displayName: FieldStatus plant
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, plant master for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.FAUSW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: KALSM
+    displayName: Output determ.proc.
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Output determination procedure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.KALSM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: KTOKD
+    displayName: Account group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Customer Account Group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.KTOKD
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NUMKR
+    displayName: Number Range
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Number Range
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.NUMKR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XCPDS
+    displayName: One-time account
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Account group for one-time accounts?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077D.XCPDS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KTOKD
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e5375522f4d485ea6a5925e77d5f847a
+processedLineage: false
+entityStatus: Approved

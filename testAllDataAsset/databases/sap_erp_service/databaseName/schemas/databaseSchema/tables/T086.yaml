@@ -1,0 +1,535 @@
+name: T086
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086
+description: Sort version Reporting
+tableType: Regular
+columns:
+  - name: ANZUNTNR
+    displayName: No.of sub-numbers where totalling starts
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Number of subnumbers at which the main number is totalled
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.ANZUNTNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 40
+    children: []
+    customMetrics: []
+  - name: FELDN1
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.FELDN1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FELDN2
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.FELDN2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: FELDN3
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.FELDN3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: FELDN4
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.FELDN4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: FELDN5
+    displayName: Field name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.FELDN5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: LAENGE1
+    displayName: Field length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Internal field length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.LAENGE1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: LAENGE2
+    displayName: Field length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Internal field length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.LAENGE2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: LAENGE3
+    displayName: Field length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Internal field length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.LAENGE3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: LAENGE4
+    displayName: Field length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Internal field length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.LAENGE4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: LAENGE5
+    displayName: Field length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Internal field length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.LAENGE5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: OFFSET1
+    displayName: Offset in field
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset within the field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.OFFSET1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: OFFSET2
+    displayName: Offset in field
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset within the field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.OFFSET2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: OFFSET3
+    displayName: Offset in field
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset within the field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.OFFSET3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: OFFSET4
+    displayName: Offset in field
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset within the field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.OFFSET4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: OFFSET5
+    displayName: Offset in field
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Offset within the field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.OFFSET5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: SRTVAR
+    displayName: Sort version
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Sort version for reporting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.SRTVAR
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: TABLN1
+    displayName: Table Name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.TABLN1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: TABLN2
+    displayName: Table Name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.TABLN2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: TABLN3
+    displayName: Table Name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.TABLN3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: TABLN4
+    displayName: Table Name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.TABLN4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: TABLN5
+    displayName: Table Name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Table Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.TABLN5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: XAFLG1
+    displayName: Statistics
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Statistical outline"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XAFLG1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XAFLG2
+    displayName: Statistics
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Statistical outline"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XAFLG2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XAFLG3
+    displayName: Statistics
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Statistical outline"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XAFLG3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XAFLG4
+    displayName: Statistics
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Statistical outline"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XAFLG4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: XAFLG5
+    displayName: Statistics
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Statistical outline"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XAFLG5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: XANLN1
+    displayName: Totals per main no.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Totals by main number in reporting"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XANLN1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: XANLN2
+    displayName: Sort subnumbers in descending order
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Sort asset subnumbers in descending order"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XANLN2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: XLEERZL
+    displayName: Make totals line stand out
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Blank line after total for main number"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XLEERZL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 41
+    children: []
+    customMetrics: []
+  - name: XNEWPG1
+    displayName: Change to new page
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: New page when this sort field has new contents"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XNEWPG1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: XNEWPG2
+    displayName: Change to new page
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: New page when this sort field has new contents"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XNEWPG2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: XNEWPG3
+    displayName: Change to new page
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: New page when this sort field has new contents"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XNEWPG3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 37
+    children: []
+    customMetrics: []
+  - name: XNEWPG4
+    displayName: Change to new page
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: New page when this sort field has new contents"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XNEWPG4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 38
+    children: []
+    customMetrics: []
+  - name: XNEWPG5
+    displayName: Change to new page
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: New page when this sort field has new contents"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XNEWPG5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 39
+    children: []
+    customMetrics: []
+  - name: XSUMM1
+    displayName: Total output
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create totals at this sort level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XSUMM1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XSUMM2
+    displayName: Total output
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create totals at this sort level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XSUMM2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XSUMM3
+    displayName: Total output
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create totals at this sort level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XSUMM3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XSUMM4
+    displayName: Total output
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create totals at this sort level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XSUMM4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: XSUMM5
+    displayName: Total output
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create totals at this sort level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T086.XSUMM5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - SRTVAR
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6a7bf182f919a19829ee667c8a1d392b
+processedLineage: false
+entityStatus: Approved

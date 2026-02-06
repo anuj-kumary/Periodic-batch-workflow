@@ -1,0 +1,91 @@
+name: T090S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090S
+description: Names For Internal Calculation Keys
+tableType: Regular
+columns:
+  - name: AFARSL
+    displayName: Calculation key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Internal calculation key for depreciation and interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090S.AFARSL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: AFATXT
+    displayName: Description
+    dataType: CHAR
+    dataLength: 50
+    dataTypeDisplay: char(50)
+    description: Name for internal calculation keys
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090S.AFATXT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SPRAS
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090S.SPRAS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFARSL
+      - MANDT
+      - SPRAS
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2019c675043e84ef5e2cce2401b11145
+processedLineage: false
+entityStatus: Approved

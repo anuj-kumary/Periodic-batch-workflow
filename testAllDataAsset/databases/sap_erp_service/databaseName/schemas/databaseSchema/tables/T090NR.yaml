@@ -1,0 +1,139 @@
+name: T090NR
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR
+description: Base Method
+tableType: Regular
+columns:
+  - name: AFAMET
+    displayName: Depr.calc.method
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation calculation method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.AFAMET
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: AFARSL
+    displayName: Base method
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Base method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.AFARSL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AFATYP
+    displayName: Type of depreciation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.AFATYP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: XEFDAU
+    displayName: Curb
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation with curb
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.XEFDAU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XENDAU
+    displayName: Dep. after plnd.life end
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation after end of planned life
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.XENDAU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XLIFEC
+    displayName: Reduce use.life at FY end
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Reduce useful life to the end of fiscal year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.XLIFEC
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XUNTNL
+    displayName: Dep.below NBValue zero
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Calculation of depreciation below net book value zero
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NR.XUNTNL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFARSL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 12b9400f87fbb7c6526a07fabbdfac2b
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,199 @@
+name: T090C
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C
+description: External depreciation keys
+tableType: Regular
+columns:
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.AFAPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AFASL
+    displayName: Depreciation key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Depreciation key (external)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.AFASL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ANHWSL
+    displayName: Cutoff value
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Cutoff value key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.ANHWSL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NAFASL
+    displayName: Ordinary deprec.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Internal calculation key for ordinary depreciation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.NAFASL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: NAFVER
+    displayName: Past depreciation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Past depreciation when key is changed"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.NAFVER
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: PROZST
+    displayName: No. of places
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Number of places that the percentage rate is rounded to
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.PROZST
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: SAFASL
+    displayName: Special depreciation
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Internal calculation key for special depreciation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.SAFASL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XNAAUS
+    displayName: No ordinary dep. with special dep.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: No ord. depreciation with special depreciation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.XNAAUS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XNAZUG
+    displayName: Acq.only allowed in capitalization year
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Acquisition only in year depreciation started
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.XNAZUG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XPERGJ
+    displayName: Period control according to fiscal years
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Period control per fiscal year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.XPERGJ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XUMZUG
+    displayName: Transfer only within vintage year
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Transfer only within vintage year"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.XUMZUG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XZIAUS
+    displayName: No interest if no deprec. is planned
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: No interest if there is no depreciation planned
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090C.XZIAUS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFAPL
+      - AFASL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b56e9929539e2047fb491c442d1e53aa
+processedLineage: false
+entityStatus: Approved
