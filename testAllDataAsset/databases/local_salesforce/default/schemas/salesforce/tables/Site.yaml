@@ -1,0 +1,434 @@
+name: Site
+fullyQualifiedName: local_salesforce.default.salesforce.Site
+description: Site
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Site ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Site Name
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Subdomain
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Site Subdomain Prefix
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.Subdomain
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: UrlPathPrefix
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Default Web Address
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.UrlPathPrefix
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: GuestUserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.GuestUserId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Site Status
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.Status
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: AdminId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.AdminId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: OptionsEnableFeeds
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Feeds
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsEnableFeeds
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: OptionsRequireHttps
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Require Secure Connections (HTTPS)
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsRequireHttps
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: OptionsAllowHomePage
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Standard Home Page
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowHomePage
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: OptionsAllowStandardIdeasPages
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Standard Ideas Pages
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowStandardIdeasPages
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: OptionsAllowStandardSearch
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Standard Lookup Pages
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowStandardSearch
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: OptionsAllowStandardLookups
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Standard Search Pages
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowStandardLookups
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: OptionsAllowStandardAnswersPages
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Standard Answers Pages
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowStandardAnswersPages
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: OptionsAllowGuestSupportApi
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Guest Access to the Support API
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowGuestSupportApi
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: OptionsAllowStandardPortalPages
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Allow Access to Standard Salesforce Pages
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsAllowStandardPortalPages
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: OptionsCspUpgradeInsecureRequests
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Upgrade all requests to HTTPS
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsCspUpgradeInsecureRequests
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: OptionsContentSniffingProtection
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Content Sniffing Protection
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsContentSniffingProtection
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: OptionsBrowserXssProtection
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Enable Browser Cross Site Scripting Protection
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsBrowserXssProtection
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: OptionsReferrerPolicyOriginWhenCrossOrigin
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Referrer URL Protection
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.OptionsReferrerPolicyOriginWhenCrossOrigin
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 1000
+    dataTypeDisplay: textarea
+    description: Site Description
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: MasterLabel
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Site Label
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.MasterLabel
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: AnalyticsTrackingCode
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Analytics Tracking Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.AnalyticsTrackingCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: SiteType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Site Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.SiteType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: ClickjackProtectionLevel
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Clickjack Protection Level
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.ClickjackProtectionLevel
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: DailyBandwidthLimit
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Daily Bandwidth Limit (MB)
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.DailyBandwidthLimit
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: DailyBandwidthUsed
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Daily Bandwidth Used
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.DailyBandwidthUsed
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: DailyRequestTimeLimit
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Daily Request Time Limit (min)
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.DailyRequestTimeLimit
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: DailyRequestTimeUsed
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Daily Request Time Used
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.DailyRequestTimeUsed
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: MonthlyPageViewsEntitlement
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Monthly Page Views Allowed
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.MonthlyPageViewsEntitlement
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.Site.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/Site/list
+domains: []
+dataProducts: []
+sourceHash: 97b7b5654e0506d416abf11fb84ce246
+processedLineage: false
+entityStatus: Unprocessed

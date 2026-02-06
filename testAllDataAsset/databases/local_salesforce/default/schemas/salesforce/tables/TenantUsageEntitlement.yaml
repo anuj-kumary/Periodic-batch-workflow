@@ -1,0 +1,258 @@
+name: TenantUsageEntitlement
+fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement
+description: Tenant Usage Entitlement
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Tenant Usage Entitlement ID
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: ResourceGroupKey
+    dataType: UNKNOWN
+    dataLength: 120
+    dataTypeDisplay: string
+    description: Resource Group Key
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.ResourceGroupKey
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: Setting
+    dataType: UNKNOWN
+    dataLength: 120
+    dataTypeDisplay: string
+    description: Setting
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.Setting
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: StartDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Start Date
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.StartDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: EndDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: End Date
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.EndDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: CurrentAmountAllowed
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Current Amount Allowed
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.CurrentAmountAllowed
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: Frequency
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: Frequency
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.Frequency
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IsPersistentResource
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Persistent Resource
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.IsPersistentResource
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: HasRollover
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Rollover
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.HasRollover
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: OverageGrace
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: percent
+    description: Overage Grace
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.OverageGrace
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: AmountUsed
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Amount Used
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.AmountUsed
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: UsageDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Usage Date
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.UsageDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: MasterLabel
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Setting Label
+    fullyQualifiedName: local_salesforce.default.salesforce.TenantUsageEntitlement.MasterLabel
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/TenantUsageEntitlement/list
+domains: []
+dataProducts: []
+sourceHash: 266f679f0a8b14446f9fce51b825e53c
+processedLineage: false
+entityStatus: Unprocessed

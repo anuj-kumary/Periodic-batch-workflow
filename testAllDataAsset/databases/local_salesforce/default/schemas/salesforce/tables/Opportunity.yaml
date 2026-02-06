@@ -1,0 +1,401 @@
+name: Opportunity
+fullyQualifiedName: local_salesforce.default.salesforce.Opportunity
+description: Opportunity
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Opportunity ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AccountId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Account ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.AccountId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 120
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 32000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: StageName
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Stage
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.StageName
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Amount
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Amount
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Amount
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Probability
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: percent
+    description: Probability (%)
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Probability
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: CloseDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Close Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.CloseDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: Type
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Opportunity Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Type
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: NextStep
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Next Step
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.NextStep
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: LeadSource
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Lead Source
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.LeadSource
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: IsClosed
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Closed
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.IsClosed
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IsWon
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Won
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.IsWon
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: ForecastCategory
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Forecast Category
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.ForecastCategory
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: ForecastCategoryName
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Forecast Category
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.ForecastCategoryName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: HasOpportunityLineItem
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Line Item
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.HasOpportunityLineItem
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: Pricebook2Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Price Book ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Pricebook2Id
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.OwnerId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: LastActivityDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Last Activity
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.LastActivityDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: FiscalQuarter
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Fiscal Quarter
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.FiscalQuarter
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: FiscalYear
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Fiscal Year
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.FiscalYear
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: Fiscal
+    dataType: UNKNOWN
+    dataLength: 6
+    dataTypeDisplay: string
+    description: Fiscal Period
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.Fiscal
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: LastViewedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.LastViewedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: LastReferencedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Referenced Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.LastReferencedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: HasOpenActivity
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Open Activity
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.HasOpenActivity
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: HasOverdueTask
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Overdue Task
+    fullyQualifiedName: local_salesforce.default.salesforce.Opportunity.HasOverdueTask
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/Opportunity/list
+domains: []
+dataProducts: []
+sourceHash: 270552bc154e90b50288b98cea2dc7cd
+processedLineage: false
+entityStatus: Unprocessed

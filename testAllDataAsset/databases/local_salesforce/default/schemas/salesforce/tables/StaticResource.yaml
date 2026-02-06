@@ -1,0 +1,192 @@
+name: StaticResource
+fullyQualifiedName: local_salesforce.default.salesforce.StaticResource
+description: Static Resource
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Static Resource ID
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NamespacePrefix
+    dataType: UNKNOWN
+    dataLength: 15
+    dataTypeDisplay: string
+    description: Namespace Prefix
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.NamespacePrefix
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ContentType
+    dataType: UNKNOWN
+    dataLength: 120
+    dataTypeDisplay: string
+    description: MIME Type
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.ContentType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BodyLength
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Size
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.BodyLength
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Body
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: base64
+    description: Body
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.Body
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: CacheControl
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Cache Control
+    fullyQualifiedName: local_salesforce.default.salesforce.StaticResource.CacheControl
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/StaticResource/list
+domains: []
+dataProducts: []
+sourceHash: 1e59c9691bf77ce3fc52c34b72ebda80
+processedLineage: false
+entityStatus: Unprocessed

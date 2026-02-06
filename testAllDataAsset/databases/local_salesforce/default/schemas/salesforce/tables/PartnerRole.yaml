@@ -1,0 +1,159 @@
+name: PartnerRole
+fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole
+description: Partner Role Value
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Partner Role Value ID
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MasterLabel
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Master Label
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.MasterLabel
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: ApiName
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Api Name
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.ApiName
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: SortOrder
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Sort Order
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.SortOrder
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: ReverseRole
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Reverse Role
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.ReverseRole
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.PartnerRole.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/PartnerRole/list
+domains: []
+dataProducts: []
+sourceHash: fcd9dbfe84f2fb92b0a1341c0c23ec96
+processedLineage: false
+entityStatus: Unprocessed

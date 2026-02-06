@@ -1,0 +1,555 @@
+name: Order
+fullyQualifiedName: local_salesforce.default.salesforce.Order
+description: Order
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Order ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.OwnerId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AccountId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Account ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.AccountId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: Pricebook2Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Price Book ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.Pricebook2Id
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: EffectiveDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Order Start Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.EffectiveDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: EndDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Order End Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.EndDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Status
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.Status
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 32000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: CustomerAuthorizedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Customer Authorized By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.CustomerAuthorizedById
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: CompanyAuthorizedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Company Authorized By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.CompanyAuthorizedById
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: Type
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Order Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.Type
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: BillingStreet
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: textarea
+    description: Billing Street
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingStreet
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: BillingCity
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Billing City
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingCity
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: BillingState
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Billing State/Province
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingState
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: BillingPostalCode
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Billing Zip/Postal Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingPostalCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: BillingCountry
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Billing Country
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingCountry
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: BillingStateCode
+    dataType: UNKNOWN
+    dataLength: 10
+    dataTypeDisplay: picklist
+    description: Billing State Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingStateCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: BillingCountryCode
+    dataType: UNKNOWN
+    dataLength: 10
+    dataTypeDisplay: picklist
+    description: Billing Country Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingCountryCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: BillingLatitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Billing Latitude
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingLatitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: BillingLongitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Billing Longitude
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingLongitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: BillingGeocodeAccuracy
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Billing Geocode Accuracy
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingGeocodeAccuracy
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: BillingAddress
+    dataType: VARCHAR
+    dataLength: 0
+    dataTypeDisplay: address
+    description: Billing Address
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.BillingAddress
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: ShippingStreet
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: textarea
+    description: Shipping Street
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingStreet
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: ShippingCity
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Shipping City
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingCity
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: ShippingState
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Shipping State/Province
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingState
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: ShippingPostalCode
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Shipping Zip/Postal Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingPostalCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: ShippingCountry
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Shipping Country
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingCountry
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: ShippingStateCode
+    dataType: UNKNOWN
+    dataLength: 10
+    dataTypeDisplay: picklist
+    description: Shipping State Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingStateCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: ShippingCountryCode
+    dataType: UNKNOWN
+    dataLength: 10
+    dataTypeDisplay: picklist
+    description: Shipping Country Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingCountryCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: ShippingLatitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Shipping Latitude
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingLatitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: ShippingLongitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Shipping Longitude
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingLongitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: ShippingGeocodeAccuracy
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Shipping Geocode Accuracy
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingGeocodeAccuracy
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: ShippingAddress
+    dataType: VARCHAR
+    dataLength: 0
+    dataTypeDisplay: address
+    description: Shipping Address
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ShippingAddress
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: ActivatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Activated Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ActivatedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: ActivatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Activated By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.ActivatedById
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: StatusCode
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Status Category
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.StatusCode
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: OrderNumber
+    dataType: UNKNOWN
+    dataLength: 30
+    dataTypeDisplay: string
+    description: Order Number
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.OrderNumber
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 37
+    children: []
+    customMetrics: []
+  - name: TotalAmount
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: currency
+    description: Order Amount
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.TotalAmount
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 38
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 39
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 40
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 41
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 42
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 43
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 44
+    children: []
+    customMetrics: []
+  - name: LastViewedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.LastViewedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 45
+    children: []
+    customMetrics: []
+  - name: LastReferencedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Referenced Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Order.LastReferencedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 46
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/Order/list
+domains: []
+dataProducts: []
+sourceHash: d001455e77f12114cd82828e6e1b93e7
+processedLineage: false
+entityStatus: Unprocessed
