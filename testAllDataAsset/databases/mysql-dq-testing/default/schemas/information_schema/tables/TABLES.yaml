@@ -1,0 +1,269 @@
+name: TABLES
+fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_TYPE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(11)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ENGINE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.ENGINE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: VERSION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.VERSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROW_FORMAT
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(10)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.ROW_FORMAT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_ROWS
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_ROWS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AVG_ROW_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.AVG_ROW_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATA_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.DATA_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MAX_DATA_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.MAX_DATA_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.INDEX_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATA_FREE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.DATA_FREE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AUTO_INCREMENT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.AUTO_INCREMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATE_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.CREATE_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UPDATE_TIME
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.UPDATE_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHECK_TIME
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.CHECK_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_COLLATION
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_COLLATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHECKSUM
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.CHECKSUM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATE_OPTIONS
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.CREATE_OPTIONS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_COMMENT
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: text
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES.TABLE_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`TABLES` AS select `cat`.`name`\
+  \ AS `TABLE_CATALOG`,`sch`.`name` AS `TABLE_SCHEMA`,`tbl`.`name` AS `TABLE_NAME`,`tbl`.`type`\
+  \ AS `TABLE_TYPE`,if((`tbl`.`type` = 'BASE TABLE'),`tbl`.`engine`,NULL) AS `ENGINE`,if((`tbl`.`type`\
+  \ = 'VIEW'),NULL,10) AS `VERSION`,`tbl`.`row_format` AS `ROW_FORMAT`,if((`tbl`.`type`\
+  \ = 'VIEW'),NULL,internal_table_rows(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`table_rows`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `TABLE_ROWS`,if((`tbl`.`type` = 'VIEW'),NULL,internal_avg_row_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`avg_row_length`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `AVG_ROW_LENGTH`,if((`tbl`.`type` = 'VIEW'),NULL,internal_data_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`data_length`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `DATA_LENGTH`,if((`tbl`.`type` = 'VIEW'),NULL,internal_max_data_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`max_data_length`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `MAX_DATA_LENGTH`,if((`tbl`.`type` = 'VIEW'),NULL,internal_index_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`index_length`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `INDEX_LENGTH`,if((`tbl`.`type` = 'VIEW'),NULL,internal_data_free(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`data_free`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `DATA_FREE`,if((`tbl`.`type` = 'VIEW'),NULL,internal_auto_increment(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,((0 <> is_visible_dd_object(`tbl`.`hidden`,false,`tbl`.`options`))\
+  \ is false),`ts`.`se_private_data`,coalesce(`stat`.`auto_increment`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0),`tbl`.`se_private_data`)) AS `AUTO_INCREMENT`,`tbl`.`created`\
+  \ AS `CREATE_TIME`,if((`tbl`.`type` = 'VIEW'),NULL,internal_update_time(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(cast(`stat`.`update_time`\
+  \ as unsigned),0),coalesce(cast(`stat`.`cached_time` as unsigned),0))) AS `UPDATE_TIME`,if((`tbl`.`type`\
+  \ = 'VIEW'),NULL,internal_check_time(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(cast(`stat`.`check_time`\
+  \ as unsigned),0),coalesce(cast(`stat`.`cached_time` as unsigned),0))) AS `CHECK_TIME`,`col`.`name`\
+  \ AS `TABLE_COLLATION`,if((`tbl`.`type` = 'VIEW'),NULL,internal_checksum(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),`ts`.`se_private_data`,coalesce(`stat`.`checksum`,0),coalesce(cast(`stat`.`cached_time`\
+  \ as unsigned),0))) AS `CHECKSUM`,if((`tbl`.`type` = 'VIEW'),NULL,get_dd_create_options(`tbl`.`options`,if((ifnull(`tbl`.`partition_expression`,'NOT_PART_TBL')\
+  \ = 'NOT_PART_TBL'),0,1),if((`sch`.`default_encryption` = 'YES'),1,0))) AS `CREATE_OPTIONS`,internal_get_comment_or_error(`sch`.`name`,`tbl`.`name`,`tbl`.`type`,`tbl`.`options`,`tbl`.`comment`)\
+  \ AS `TABLE_COMMENT` from (((((`mysql`.`tables` `tbl` join `mysql`.`schemata` `sch`\
+  \ on((`tbl`.`schema_id` = `sch`.`id`))) join `mysql`.`catalogs` `cat` on((`cat`.`id`\
+  \ = `sch`.`catalog_id`))) left join `mysql`.`collations` `col` on((`tbl`.`collation_id`\
+  \ = `col`.`id`))) left join `mysql`.`tablespaces` `ts` on((`tbl`.`tablespace_id`\
+  \ = `ts`.`id`))) left join `mysql`.`table_stats` `stat` on(((`tbl`.`name` = `stat`.`table_name`)\
+  \ and (`sch`.`name` = `stat`.`schema_name`)))) where ((0 <> can_access_table(`sch`.`name`,`tbl`.`name`))\
+  \ and (0 <> is_visible_dd_object(`tbl`.`hidden`)))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2b3ad9e06823ca654681646e623b5e2d
+processedLineage: false
+entityStatus: Approved

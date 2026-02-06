@@ -1,0 +1,173 @@
+name: ROLE_TABLE_GRANTS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS
+tableType: View
+columns:
+  - name: GRANTOR
+    dataType: VARCHAR
+    dataLength: 97
+    dataTypeDisplay: varchar(97)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.GRANTOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRANTOR_HOST
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.GRANTOR_HOST
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRANTEE
+    dataType: CHAR
+    dataLength: 32
+    dataTypeDisplay: char(32)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.GRANTEE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRANTEE_HOST
+    dataType: CHAR
+    dataLength: 255
+    dataTypeDisplay: char(255)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.GRANTEE_HOST
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: CHAR
+    dataLength: 64
+    dataTypeDisplay: char(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: CHAR
+    dataLength: 64
+    dataTypeDisplay: char(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PRIVILEGE_TYPE
+    dataType: SET
+    dataLength: 1
+    dataTypeDisplay: set(11)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.PRIVILEGE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_GRANTABLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS.IS_GRANTABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`ROLE_TABLE_GRANTS` AS with recursive\
+  \ `role_graph` (`c_parent_user`,`c_parent_host`,`c_from_user`,`c_from_host`,`c_to_user`,`c_to_host`,`role_path`,`c_with_admin`,`c_enabled`)\
+  \ as (select internal_get_username() AS `INTERNAL_GET_USERNAME()`,internal_get_hostname()\
+  \ AS `INTERNAL_GET_HOSTNAME()`,internal_get_username() AS `INTERNAL_GET_USERNAME()`,internal_get_hostname()\
+  \ AS `INTERNAL_GET_HOSTNAME()`,cast('' as char(64) charset utf8mb4) AS `CAST(''\
+  \ as CHAR(64) CHARSET utf8mb4)`,cast('' as char(255) charset utf8mb4) AS `CAST(''\
+  \ as CHAR(255) CHARSET utf8mb4)`,cast(sha2(concat(quote(internal_get_username()),'@',quote(internal_get_hostname())),256)\
+  \ as char(17000) charset utf8mb4) AS `CAST(SHA2(CONCAT(QUOTE(INTERNAL_GET_USERNAME()),'@',\
+  \                        QUOTE(INTERNAL_GET_HOSTNAME())), 256)            AS CHAR(17000)\
+  \ CHARSET utf8mb4)`,cast('N' as char(1) charset utf8mb4) AS `CAST('N' as CHAR(1)\
+  \ CHARSET utf8mb4)`,false AS `FALSE` union select internal_get_username() AS `INTERNAL_GET_USERNAME()`,internal_get_hostname()\
+  \ AS `INTERNAL_GET_HOSTNAME()`,`mandatory_roles`.`ROLE_NAME` AS `ROLE_NAME`,`mandatory_roles`.`ROLE_HOST`\
+  \ AS `ROLE_HOST`,internal_get_username() AS `INTERNAL_GET_USERNAME()`,internal_get_hostname()\
+  \ AS `INTERNAL_GET_HOSTNAME()`,cast(sha2(concat(quote(`mandatory_roles`.`ROLE_NAME`),'@',convert(quote(`mandatory_roles`.`ROLE_HOST`)\
+  \ using utf8mb4)),256) as char(17000) charset utf8mb4) AS `CAST(SHA2(CONCAT(QUOTE(ROLE_NAME),'@',\
+  \                   CONVERT(QUOTE(ROLE_HOST) using utf8mb4)), 256)             \
+  \ AS CHAR(17000) CHARSET utf8mb4)`,cast('N' as char(1) charset utf8mb4) AS `CAST('N'\
+  \ as CHAR(1) CHARSET utf8mb4)`,false AS `FALSE` from json_table(internal_get_mandatory_roles_json(),\
+  \ '$[*]' columns (`ROLE_NAME` varchar(255) character set utf8mb4 path '$.ROLE_NAME',\
+  \ `ROLE_HOST` varchar(255) character set utf8mb4 path '$.ROLE_HOST')) `mandatory_roles`\
+  \ where concat(quote(`mandatory_roles`.`ROLE_NAME`),'@',convert(quote(`mandatory_roles`.`ROLE_HOST`)\
+  \ using utf8mb4)) in (select concat(convert(quote(`mysql`.`role_edges`.`FROM_USER`)\
+  \ using utf8mb4),'@',convert(quote(`mysql`.`role_edges`.`FROM_HOST`) using utf8mb4))\
+  \ from `mysql`.`role_edges` where ((`mysql`.`role_edges`.`TO_USER` = internal_get_username())\
+  \ and (convert(`mysql`.`role_edges`.`TO_HOST` using utf8mb4) = convert(internal_get_hostname()\
+  \ using utf8mb4)))) is false union select `role_graph`.`c_parent_user` AS `c_parent_user`,`role_graph`.`c_parent_host`\
+  \ AS `c_parent_host`,`mysql`.`role_edges`.`FROM_USER` AS `FROM_USER`,`mysql`.`role_edges`.`FROM_HOST`\
+  \ AS `FROM_HOST`,`mysql`.`role_edges`.`TO_USER` AS `TO_USER`,`mysql`.`role_edges`.`TO_HOST`\
+  \ AS `TO_HOST`,if((locate(sha2(concat(convert(quote(`mysql`.`role_edges`.`FROM_USER`)\
+  \ using utf8mb4),'@',convert(quote(`mysql`.`role_edges`.`FROM_HOST`) using utf8mb4)),256),`role_graph`.`role_path`)\
+  \ = 0),concat(`role_graph`.`role_path`,'->',convert(sha2(concat(convert(quote(`mysql`.`role_edges`.`FROM_USER`)\
+  \ using utf8mb4),'@',convert(quote(`mysql`.`role_edges`.`FROM_HOST`) using utf8mb4)),256)\
+  \ using utf8mb4)),NULL) AS `IF(LOCATE(SHA2(CONCAT(QUOTE(FROM_USER),'@',        \
+  \              CONVERT(QUOTE(FROM_HOST) using utf8mb4)), 256),                 role_path)\
+  \ = 0,          CONCAT(role_path,'->', SHA2(CONCAT(QUOTE(FROM_USER),'@',       \
+  \    CONVERT(QUOTE(FROM_HOST) using utf8`,`mysql`.`role_edges`.`WITH_ADMIN_OPTION`\
+  \ AS `WITH_ADMIN_OPTION`,if(((0 <> `role_graph`.`c_enabled`) or (0 <> internal_is_enabled_role(`mysql`.`role_edges`.`FROM_USER`,`mysql`.`role_edges`.`FROM_HOST`))),true,false)\
+  \ AS `IF(c_enabled OR        INTERNAL_IS_ENABLED_ROLE(FROM_USER, FROM_HOST), TRUE,\
+  \ FALSE)` from (`mysql`.`role_edges` join `role_graph`) where ((`mysql`.`role_edges`.`TO_USER`\
+  \ = `role_graph`.`c_from_user`) and (convert(`mysql`.`role_edges`.`TO_HOST` using\
+  \ utf8mb4) = `role_graph`.`c_from_host`) and (`role_graph`.`role_path` is not null)))\
+  \ select distinct internal_get_username(`tp`.`Grantor`) AS `GRANTOR`,internal_get_hostname(`tp`.`Grantor`)\
+  \ AS `GRANTOR_HOST`,`tp`.`User` AS `GRANTEE`,`tp`.`Host` AS `GRANTEE_HOST`,'def'\
+  \ AS `TABLE_CATALOG`,`tp`.`Db` AS `TABLE_SCHEMA`,`tp`.`Table_name` AS `TABLE_NAME`,`tp`.`Table_priv`\
+  \ AS `PRIVILEGE_TYPE`,if((find_in_set('Grant',`tp`.`Table_priv`) > 0),'YES','NO')\
+  \ AS `IS_GRANTABLE` from (`mysql`.`tables_priv` `tp` join `role_graph` `rg` on(((`tp`.`User`\
+  \ = `rg`.`c_from_user`) and (convert(`tp`.`Host` using utf8mb4) = `rg`.`c_from_host`))))\
+  \ where ((`tp`.`Table_priv` > 0) and (`rg`.`c_to_user` <> '') and (`rg`.`c_enabled`\
+  \ = true))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 33ce11fe957a9ad3cdf990b26a9e3f72
+processedLineage: false
+entityStatus: Approved

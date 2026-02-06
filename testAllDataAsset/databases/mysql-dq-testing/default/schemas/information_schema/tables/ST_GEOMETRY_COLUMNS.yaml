@@ -1,0 +1,114 @@
+name: ST_GEOMETRY_COLUMNS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLUMN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.COLUMN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SRS_NAME
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: varchar(80)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.SRS_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SRS_ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.SRS_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GEOMETRY_TYPE_NAME
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS.GEOMETRY_TYPE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`ST_GEOMETRY_COLUMNS` AS select\
+  \ `information_schema`.`cols`.`TABLE_CATALOG` AS `TABLE_CATALOG`,`information_schema`.`cols`.`TABLE_SCHEMA`\
+  \ AS `TABLE_SCHEMA`,`information_schema`.`cols`.`TABLE_NAME` AS `TABLE_NAME`,`information_schema`.`cols`.`COLUMN_NAME`\
+  \ AS `COLUMN_NAME`,`information_schema`.`srs`.`SRS_NAME` AS `SRS_NAME`,`information_schema`.`cols`.`SRS_ID`\
+  \ AS `SRS_ID`,`information_schema`.`cols`.`DATA_TYPE` AS `GEOMETRY_TYPE_NAME` from\
+  \ (`information_schema`.`COLUMNS` `cols` left join `information_schema`.`ST_SPATIAL_REFERENCE_SYSTEMS`\
+  \ `srs` on((`information_schema`.`cols`.`SRS_ID` = `information_schema`.`srs`.`SRS_ID`)))\
+  \ where (`information_schema`.`cols`.`DATA_TYPE` in ('geometry','point','linestring','polygon','multipoint','multilinestring','multipolygon','geomcollection'))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: cb3b3231056260b985f3e92d26d12767
+processedLineage: false
+entityStatus: Approved

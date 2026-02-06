@@ -1,0 +1,106 @@
+name: captured_columns
+fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns
+tableType: Regular
+columns:
+  - name: object_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.object_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: column_name
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.column_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: column_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.column_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: column_type
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.column_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: column_ordinal
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.column_ordinal
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_computed
+    dataType: BIT
+    dataLength: 1
+    dataTypeDisplay: bit
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.is_computed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: masking_function
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(4000)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns.masking_function
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - object_id
+      - column_ordinal
+owners: []
+databaseSchema:
+  id: 0193585f-522c-446a-92d8-9bd59b1da890
+  type: databaseSchema
+  name: cdc
+  fullyQualifiedName: MSSQL_TEST.mydb.cdc
+  displayName: cdc
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 03433cc8cbdde7beb5d3fdcf26b2afb0
+processedLineage: false
+entityStatus: Approved

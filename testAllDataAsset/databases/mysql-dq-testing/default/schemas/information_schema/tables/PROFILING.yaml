@@ -1,0 +1,231 @@
+name: PROFILING
+fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING
+tableType: View
+columns:
+  - name: QUERY_ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.QUERY_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SEQ
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.SEQ
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.STATE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DURATION
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "decimal(9,6)"
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.DURATION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CPU_USER
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "decimal(9,6)"
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.CPU_USER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CPU_SYSTEM
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "decimal(9,6)"
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.CPU_SYSTEM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTEXT_VOLUNTARY
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.CONTEXT_VOLUNTARY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTEXT_INVOLUNTARY
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.CONTEXT_INVOLUNTARY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BLOCK_OPS_IN
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.BLOCK_OPS_IN
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BLOCK_OPS_OUT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.BLOCK_OPS_OUT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MESSAGES_SENT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.MESSAGES_SENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MESSAGES_RECEIVED
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.MESSAGES_RECEIVED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PAGE_FAULTS_MAJOR
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.PAGE_FAULTS_MAJOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PAGE_FAULTS_MINOR
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.PAGE_FAULTS_MINOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SWAPS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.SWAPS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SOURCE_FUNCTION
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.SOURCE_FUNCTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SOURCE_FILE
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.SOURCE_FILE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SOURCE_LINE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING.SOURCE_LINE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `PROFILING` (
+    `QUERY_ID` int NOT NULL DEFAULT '0',
+    `SEQ` int NOT NULL DEFAULT '0',
+    `STATE` varchar(30) NOT NULL DEFAULT '',
+    `DURATION` decimal(9,6) NOT NULL DEFAULT '0.000000',
+    `CPU_USER` decimal(9,6) DEFAULT NULL,
+    `CPU_SYSTEM` decimal(9,6) DEFAULT NULL,
+    `CONTEXT_VOLUNTARY` int DEFAULT NULL,
+    `CONTEXT_INVOLUNTARY` int DEFAULT NULL,
+    `BLOCK_OPS_IN` int DEFAULT NULL,
+    `BLOCK_OPS_OUT` int DEFAULT NULL,
+    `MESSAGES_SENT` int DEFAULT NULL,
+    `MESSAGES_RECEIVED` int DEFAULT NULL,
+    `PAGE_FAULTS_MAJOR` int DEFAULT NULL,
+    `PAGE_FAULTS_MINOR` int DEFAULT NULL,
+    `SWAPS` int DEFAULT NULL,
+    `SOURCE_FUNCTION` varchar(30) DEFAULT NULL,
+    `SOURCE_FILE` varchar(20) DEFAULT NULL,
+    `SOURCE_LINE` int DEFAULT NULL
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 27526e80d1dbfccd4d8e19cf547c306d
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,59 @@
+name: sysutility_ucp_utility_space_utilization
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysutility_ucp_utility_space_utilization
+tableType: View
+columns:
+  - name: total_utility_storage
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: real
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysutility_ucp_utility_space_utilization.total_utility_storage
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: total_utilized_space
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: real
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysutility_ucp_utility_space_utilization.total_utilized_space
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e224f68fe0ca0f67e62c18a676af847a
+processedLineage: false
+entityStatus: Approved

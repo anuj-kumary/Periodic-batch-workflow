@@ -1,0 +1,322 @@
+name: PARTITIONS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARTITION_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.PARTITION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUBPARTITION_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.SUBPARTITION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARTITION_ORDINAL_POSITION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.PARTITION_ORDINAL_POSITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUBPARTITION_ORDINAL_POSITION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.SUBPARTITION_ORDINAL_POSITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARTITION_METHOD
+    dataType: VARCHAR
+    dataLength: 13
+    dataTypeDisplay: varchar(13)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.PARTITION_METHOD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUBPARTITION_METHOD
+    dataType: VARCHAR
+    dataLength: 13
+    dataTypeDisplay: varchar(13)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.SUBPARTITION_METHOD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARTITION_EXPRESSION
+    dataType: VARCHAR
+    dataLength: 2048
+    dataTypeDisplay: varchar(2048)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.PARTITION_EXPRESSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUBPARTITION_EXPRESSION
+    dataType: VARCHAR
+    dataLength: 2048
+    dataTypeDisplay: varchar(2048)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.SUBPARTITION_EXPRESSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARTITION_DESCRIPTION
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: text
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.PARTITION_DESCRIPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_ROWS
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.TABLE_ROWS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AVG_ROW_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.AVG_ROW_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATA_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.DATA_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MAX_DATA_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.MAX_DATA_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.INDEX_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATA_FREE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.DATA_FREE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATE_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.CREATE_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UPDATE_TIME
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.UPDATE_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHECK_TIME
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.CHECK_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHECKSUM
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.CHECKSUM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARTITION_COMMENT
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: text
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.PARTITION_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NODEGROUP
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.NODEGROUP
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLESPACE_NAME
+    dataType: VARCHAR
+    dataLength: 268
+    dataTypeDisplay: varchar(268)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS.TABLESPACE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`PARTITIONS` AS select `cat`.`name`\
+  \ AS `TABLE_CATALOG`,`sch`.`name` AS `TABLE_SCHEMA`,`tbl`.`name` AS `TABLE_NAME`,`part`.`name`\
+  \ AS `PARTITION_NAME`,`sub_part`.`name` AS `SUBPARTITION_NAME`,(`part`.`number`\
+  \ + 1) AS `PARTITION_ORDINAL_POSITION`,(`sub_part`.`number` + 1) AS `SUBPARTITION_ORDINAL_POSITION`,(case\
+  \ `tbl`.`partition_type` when 'HASH' then 'HASH' when 'RANGE' then 'RANGE' when\
+  \ 'LIST' then 'LIST' when 'AUTO' then 'AUTO' when 'KEY_51' then 'KEY' when 'KEY_55'\
+  \ then 'KEY' when 'LINEAR_KEY_51' then 'LINEAR KEY' when 'LINEAR_KEY_55' then 'LINEAR\
+  \ KEY' when 'LINEAR_HASH' then 'LINEAR HASH' when 'RANGE_COLUMNS' then 'RANGE COLUMNS'\
+  \ when 'LIST_COLUMNS' then 'LIST COLUMNS' else NULL end) AS `PARTITION_METHOD`,(case\
+  \ `tbl`.`subpartition_type` when 'HASH' then 'HASH' when 'RANGE' then 'RANGE' when\
+  \ 'LIST' then 'LIST' when 'AUTO' then 'AUTO' when 'KEY_51' then 'KEY' when 'KEY_55'\
+  \ then 'KEY' when 'LINEAR_KEY_51' then 'LINEAR KEY' when 'LINEAR_KEY_55' then 'LINEAR\
+  \ KEY' when 'LINEAR_HASH' then 'LINEAR HASH' when 'RANGE_COLUMNS' then 'RANGE COLUMNS'\
+  \ when 'LIST_COLUMNS' then 'LIST COLUMNS' else NULL end) AS `SUBPARTITION_METHOD`,`tbl`.`partition_expression_utf8`\
+  \ AS `PARTITION_EXPRESSION`,`tbl`.`subpartition_expression_utf8` AS `SUBPARTITION_EXPRESSION`,`part`.`description_utf8`\
+  \ AS `PARTITION_DESCRIPTION`,internal_table_rows(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `TABLE_ROWS`,internal_avg_row_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `AVG_ROW_LENGTH`,internal_data_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `DATA_LENGTH`,internal_max_data_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `MAX_DATA_LENGTH`,internal_index_length(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `INDEX_LENGTH`,internal_data_free(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `DATA_FREE`,`tbl`.`created` AS `CREATE_TIME`,internal_update_time(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `UPDATE_TIME`,internal_check_time(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `CHECK_TIME`,internal_checksum(`sch`.`name`,`tbl`.`name`,if((`tbl`.`partition_type`\
+  \ is null),`tbl`.`engine`,''),`tbl`.`se_private_id`,(`tbl`.`hidden` <> 'Visible'),if((`sub_part`.`name`\
+  \ is null),if((`part`.`name` is null),`tbl`.`se_private_data`,`part_ts`.`se_private_data`),`sub_part_ts`.`se_private_data`),0,0,ifnull(`sub_part`.`name`,`part`.`name`))\
+  \ AS `CHECKSUM`,if((`sub_part`.`name` is null),ifnull(`part`.`comment`,''),ifnull(`sub_part`.`comment`,''))\
+  \ AS `PARTITION_COMMENT`,if((`part`.`name` is null),'',internal_get_partition_nodegroup(if((`sub_part`.`name`\
+  \ is null),`part`.`options`,`sub_part`.`options`))) AS `NODEGROUP`,ifnull(`sub_part_ts`.`name`,`part_ts`.`name`)\
+  \ AS `TABLESPACE_NAME` from ((((((`mysql`.`tables` `tbl` join `mysql`.`schemata`\
+  \ `sch` on((`sch`.`id` = `tbl`.`schema_id`))) join `mysql`.`catalogs` `cat` on((`cat`.`id`\
+  \ = `sch`.`catalog_id`))) left join `mysql`.`table_partitions` `part` on((`part`.`table_id`\
+  \ = `tbl`.`id`))) left join `mysql`.`table_partitions` `sub_part` on((`sub_part`.`parent_partition_id`\
+  \ = `part`.`id`))) left join `mysql`.`tablespaces` `part_ts` on((`part_ts`.`id`\
+  \ = `part`.`tablespace_id`))) left join `mysql`.`tablespaces` `sub_part_ts` on(((`sub_part`.`tablespace_id`\
+  \ is not null) and (`sub_part_ts`.`id` = `sub_part`.`tablespace_id`)))) where ((0\
+  \ <> can_access_table(`sch`.`name`,`tbl`.`name`)) and (0 <> is_visible_dd_object(`tbl`.`hidden`))\
+  \ and (`part`.`parent_partition_id` is null))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 40d56ce130b1fd1b9efd8c807f6e1ea8
+processedLineage: false
+entityStatus: Approved

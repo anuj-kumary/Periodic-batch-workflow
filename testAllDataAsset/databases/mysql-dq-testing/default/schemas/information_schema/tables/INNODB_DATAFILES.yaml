@@ -1,0 +1,66 @@
+name: INNODB_DATAFILES
+fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_DATAFILES
+tableType: View
+columns:
+  - name: SPACE
+    dataType: VARBINARY
+    dataLength: 256
+    dataTypeDisplay: varbinary(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_DATAFILES.SPACE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PATH
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar(512)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_DATAFILES.PATH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`INNODB_DATAFILES` AS select get_dd_tablespace_private_data(`ts`.`se_private_data`,'id')\
+  \ AS `SPACE`,`ts_files`.`file_name` AS `PATH` from (`mysql`.`tablespace_files` `ts_files`\
+  \ join `mysql`.`tablespaces` `ts` on((`ts`.`id` = `ts_files`.`tablespace_id`)))\
+  \ where ((`ts`.`se_private_data` is not null) and (`ts`.`engine` = 'InnoDB') and\
+  \ (`ts`.`name` <> 'mysql') and (`ts`.`name` <> 'innodb_temporary'))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 356f63dfade696d7e20361ee463af5ec
+processedLineage: false
+entityStatus: Approved

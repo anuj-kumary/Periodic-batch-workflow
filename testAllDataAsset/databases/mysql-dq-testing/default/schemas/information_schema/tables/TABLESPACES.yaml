@@ -1,0 +1,135 @@
+name: TABLESPACES
+fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES
+tableType: View
+columns:
+  - name: TABLESPACE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.TABLESPACE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ENGINE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.ENGINE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLESPACE_TYPE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.TABLESPACE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LOGFILE_GROUP_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.LOGFILE_GROUP_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXTENT_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.EXTENT_SIZE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AUTOEXTEND_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.AUTOEXTEND_SIZE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MAXIMUM_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.MAXIMUM_SIZE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NODEGROUP_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.NODEGROUP_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLESPACE_COMMENT
+    dataType: VARCHAR
+    dataLength: 2048
+    dataTypeDisplay: varchar(2048)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES.TABLESPACE_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `TABLESPACES` (
+    `TABLESPACE_NAME` varchar(64) NOT NULL DEFAULT '',
+    `ENGINE` varchar(64) NOT NULL DEFAULT '',
+    `TABLESPACE_TYPE` varchar(64) DEFAULT NULL,
+    `LOGFILE_GROUP_NAME` varchar(64) DEFAULT NULL,
+    `EXTENT_SIZE` bigint unsigned DEFAULT NULL,
+    `AUTOEXTEND_SIZE` bigint unsigned DEFAULT NULL,
+    `MAXIMUM_SIZE` bigint unsigned DEFAULT NULL,
+    `NODEGROUP_ID` bigint unsigned DEFAULT NULL,
+    `TABLESPACE_COMMENT` varchar(2048) DEFAULT NULL
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2ffb2d8ad6e096081c992d1cfcc73027
+processedLineage: false
+entityStatus: Approved

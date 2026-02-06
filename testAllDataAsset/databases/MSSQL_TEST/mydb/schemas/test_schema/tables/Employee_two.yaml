@@ -1,0 +1,77 @@
+name: Employee_two
+fullyQualifiedName: MSSQL_TEST.mydb.test_schema.Employee_two
+tableType: Regular
+columns:
+  - name: EmployeeID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.test_schema.Employee_two.EmployeeID
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: FirstName
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(50)
+    fullyQualifiedName: MSSQL_TEST.mydb.test_schema.Employee_two.FirstName
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LastName
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(50)
+    fullyQualifiedName: MSSQL_TEST.mydb.test_schema.Employee_two.LastName
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Department
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(50)
+    fullyQualifiedName: MSSQL_TEST.mydb.test_schema.Employee_two.Department
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 9d8f811b-1c3c-44ab-a201-b3114f7e8872
+  type: databaseSchema
+  name: test_schema
+  fullyQualifiedName: MSSQL_TEST.mydb.test_schema
+  displayName: test_schema
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 85ce79cdebef3dafeef0262148ace861
+processedLineage: false
+entityStatus: Approved

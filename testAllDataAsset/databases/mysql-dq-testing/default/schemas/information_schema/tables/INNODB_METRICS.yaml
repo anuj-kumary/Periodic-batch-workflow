@@ -1,0 +1,215 @@
+name: INNODB_METRICS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS
+tableType: View
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SUBSYSTEM
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.SUBSYSTEM
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.COUNT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MAX_COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.MAX_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MIN_COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.MIN_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AVG_COUNT
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.AVG_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNT_RESET
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.COUNT_RESET
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MAX_COUNT_RESET
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.MAX_COUNT_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MIN_COUNT_RESET
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.MIN_COUNT_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AVG_COUNT_RESET
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.AVG_COUNT_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_ENABLED
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.TIME_ENABLED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_DISABLED
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.TIME_DISABLED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_ELAPSED
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.TIME_ELAPSED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_RESET
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.TIME_RESET
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATUS
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.STATUS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TYPE
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS.COMMENT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `INNODB_METRICS` (
+    `NAME` varchar(193) NOT NULL DEFAULT '',
+    `SUBSYSTEM` varchar(193) NOT NULL DEFAULT '',
+    `COUNT` bigint NOT NULL DEFAULT '0',
+    `MAX_COUNT` bigint DEFAULT NULL,
+    `MIN_COUNT` bigint DEFAULT NULL,
+    `AVG_COUNT` double DEFAULT NULL,
+    `COUNT_RESET` bigint NOT NULL DEFAULT '0',
+    `MAX_COUNT_RESET` bigint DEFAULT NULL,
+    `MIN_COUNT_RESET` bigint DEFAULT NULL,
+    `AVG_COUNT_RESET` double DEFAULT NULL,
+    `TIME_ENABLED` datetime DEFAULT NULL,
+    `TIME_DISABLED` datetime DEFAULT NULL,
+    `TIME_ELAPSED` bigint DEFAULT NULL,
+    `TIME_RESET` datetime DEFAULT NULL,
+    `STATUS` varchar(193) NOT NULL DEFAULT '',
+    `TYPE` varchar(193) NOT NULL DEFAULT '',
+    `COMMENT` varchar(193) NOT NULL DEFAULT ''
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 257e51cd679ee6117ced23be7f250f80
+processedLineage: false
+entityStatus: Approved

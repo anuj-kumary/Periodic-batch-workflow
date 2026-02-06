@@ -1,0 +1,79 @@
+name: index_columns
+fullyQualifiedName: MSSQL_TEST.mydb.cdc.index_columns
+tableType: Regular
+columns:
+  - name: object_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.index_columns.object_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: column_name
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.index_columns.column_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: index_ordinal
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.index_columns.index_ordinal
+    tags: []
+    children: []
+    customMetrics: []
+  - name: column_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.index_columns.column_id
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - object_id
+      - index_ordinal
+      - column_id
+owners: []
+databaseSchema:
+  id: 0193585f-522c-446a-92d8-9bd59b1da890
+  type: databaseSchema
+  name: cdc
+  fullyQualifiedName: MSSQL_TEST.mydb.cdc
+  displayName: cdc
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fb70d3a4998a8a9e34b7c69e6ec30870
+processedLineage: false
+entityStatus: Approved

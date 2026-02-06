@@ -1,0 +1,145 @@
+name: RDS_PROCESSLIST
+fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST
+tableType: View
+columns:
+  - name: ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: USER
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar(32)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.USER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: HOST
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.HOST
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DB
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.DB
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMAND
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar(16)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.COMMAND
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TIME
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.TIME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.STATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INFO
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.INFO
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: QUERY_DIGEST_TEXT
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.QUERY_DIGEST_TEXT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: QUERY_DIGEST_HASH
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST.QUERY_DIGEST_HASH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `RDS_PROCESSLIST` (
+    `ID` bigint unsigned NOT NULL DEFAULT '0',
+    `USER` varchar(32) NOT NULL DEFAULT '',
+    `HOST` varchar(64) NOT NULL DEFAULT '',
+    `DB` varchar(64) DEFAULT NULL,
+    `COMMAND` varchar(16) NOT NULL DEFAULT '',
+    `TIME` int NOT NULL DEFAULT '0',
+    `STATE` varchar(64) DEFAULT NULL,
+    `INFO` longtext,
+    `QUERY_DIGEST_TEXT` longtext,
+    `QUERY_DIGEST_HASH` varchar(64) DEFAULT NULL
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d8e3d607d73e7daa9bffa93831c1a2b9
+processedLineage: false
+entityStatus: Approved

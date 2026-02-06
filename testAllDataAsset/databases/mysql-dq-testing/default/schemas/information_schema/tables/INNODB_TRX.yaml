@@ -1,0 +1,295 @@
+name: INNODB_TRX
+fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX
+tableType: View
+columns:
+  - name: trx_id
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_state
+    dataType: VARCHAR
+    dataLength: 13
+    dataTypeDisplay: varchar(13)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_state
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_started
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_started
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_requested_lock_id
+    dataType: VARCHAR
+    dataLength: 105
+    dataTypeDisplay: varchar(105)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_requested_lock_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trx_wait_started
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_wait_started
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trx_weight
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_weight
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_mysql_thread_id
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_mysql_thread_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_query
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: varchar(1024)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_query
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trx_operation_state
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_operation_state
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trx_tables_in_use
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_tables_in_use
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_tables_locked
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_tables_locked
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_lock_structs
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_lock_structs
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_lock_memory_bytes
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_lock_memory_bytes
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_rows_locked
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_rows_locked
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_rows_modified
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_rows_modified
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_concurrency_tickets
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_concurrency_tickets
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_isolation_level
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar(16)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_isolation_level
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_unique_checks
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_unique_checks
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_foreign_key_checks
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_foreign_key_checks
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_last_foreign_key_error
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_last_foreign_key_error
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trx_adaptive_hash_latched
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_adaptive_hash_latched
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_adaptive_hash_timeout
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_adaptive_hash_timeout
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_is_read_only
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_is_read_only
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_autocommit_non_locking
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_autocommit_non_locking
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: trx_schedule_weight
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX.trx_schedule_weight
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `INNODB_TRX` (
+    `trx_id` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_state` varchar(13) NOT NULL DEFAULT '',
+    `trx_started` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+    `trx_requested_lock_id` varchar(105) DEFAULT NULL,
+    `trx_wait_started` datetime DEFAULT NULL,
+    `trx_weight` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_mysql_thread_id` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_query` varchar(1024) DEFAULT NULL,
+    `trx_operation_state` varchar(64) DEFAULT NULL,
+    `trx_tables_in_use` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_tables_locked` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_lock_structs` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_lock_memory_bytes` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_rows_locked` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_rows_modified` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_concurrency_tickets` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_isolation_level` varchar(16) NOT NULL DEFAULT '',
+    `trx_unique_checks` int NOT NULL DEFAULT '0',
+    `trx_foreign_key_checks` int NOT NULL DEFAULT '0',
+    `trx_last_foreign_key_error` varchar(256) DEFAULT NULL,
+    `trx_adaptive_hash_latched` int NOT NULL DEFAULT '0',
+    `trx_adaptive_hash_timeout` bigint unsigned NOT NULL DEFAULT '0',
+    `trx_is_read_only` int NOT NULL DEFAULT '0',
+    `trx_autocommit_non_locking` int NOT NULL DEFAULT '0',
+    `trx_schedule_weight` bigint unsigned DEFAULT NULL
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 8773233a02ccae2068db9f9d965a1e58
+processedLineage: false
+entityStatus: Approved

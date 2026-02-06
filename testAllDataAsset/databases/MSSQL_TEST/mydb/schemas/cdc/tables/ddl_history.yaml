@@ -1,0 +1,97 @@
+name: ddl_history
+fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history
+tableType: Regular
+columns:
+  - name: source_object_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history.source_object_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: object_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history.object_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: required_column_update
+    dataType: BIT
+    dataLength: 1
+    dataTypeDisplay: bit
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history.required_column_update
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ddl_command
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(-1)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history.ddl_command
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ddl_lsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history.ddl_lsn
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ddl_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history.ddl_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - object_id
+      - ddl_lsn
+owners: []
+databaseSchema:
+  id: 0193585f-522c-446a-92d8-9bd59b1da890
+  type: databaseSchema
+  name: cdc
+  fullyQualifiedName: MSSQL_TEST.mydb.cdc
+  displayName: cdc
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3952d1c9d7e79e88906cff45c782adbb
+processedLineage: false
+entityStatus: Approved

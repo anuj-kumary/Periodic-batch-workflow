@@ -1,0 +1,126 @@
+name: vw_autoadmin_health_status
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status
+tableType: View
+columns:
+  - name: Datetime
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Datetime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Instance name
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Instance name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Storage errors
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Storage errors
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Sql errors
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Sql errors
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Credential errors
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Credential
+      errors
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Other errors
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Other errors
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Deleted or invalid backup files
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Deleted or
+      invalid backup files
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Number of backup loops
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Number of backup
+      loops
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Number of retention loops
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: MSSQL_TEST.msdb.dbo.vw_autoadmin_health_status.Number of retention
+      loops
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6a72be9c82bde6b24c91d9ac02826752
+processedLineage: false
+entityStatus: Approved

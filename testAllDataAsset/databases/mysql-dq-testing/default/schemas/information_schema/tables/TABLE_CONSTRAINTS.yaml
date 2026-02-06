@@ -1,0 +1,121 @@
+name: TABLE_CONSTRAINTS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS
+tableType: View
+columns:
+  - name: CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_TYPE
+    dataType: VARCHAR
+    dataLength: 11
+    dataTypeDisplay: varchar(11)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.CONSTRAINT_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ENFORCED
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS.ENFORCED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`TABLE_CONSTRAINTS` AS select `cat`.`name`\
+  \ AS `CONSTRAINT_CATALOG`,`sch`.`name` AS `CONSTRAINT_SCHEMA`,`constraints`.`CONSTRAINT_NAME`\
+  \ AS `CONSTRAINT_NAME`,`sch`.`name` AS `TABLE_SCHEMA`,`tbl`.`name` AS `TABLE_NAME`,`constraints`.`CONSTRAINT_TYPE`\
+  \ AS `CONSTRAINT_TYPE`,`constraints`.`ENFORCED` AS `ENFORCED` from (((`mysql`.`tables`\
+  \ `tbl` join `mysql`.`schemata` `sch` on((`tbl`.`schema_id` = `sch`.`id`))) join\
+  \ `mysql`.`catalogs` `cat` on((`cat`.`id` = `sch`.`catalog_id`))) join lateral (select\
+  \ `idx`.`name` AS `CONSTRAINT_NAME`,if((`idx`.`type` = 'PRIMARY'),'PRIMARY KEY',`idx`.`type`)\
+  \ AS `CONSTRAINT_TYPE`,'YES' AS `ENFORCED` from `mysql`.`indexes` `idx` where ((`idx`.`table_id`\
+  \ = `tbl`.`id`) and (`idx`.`type` in ('PRIMARY','UNIQUE')) and (0 <> is_visible_dd_object(`tbl`.`hidden`,`idx`.`hidden`,`idx`.`options`)))\
+  \ union all select (`fk`.`name` collate utf8mb3_tolower_ci) AS `CONSTRAINT_NAME`,'FOREIGN\
+  \ KEY' AS `CONSTRAINT_TYPE`,'YES' AS `ENFORCED` from `mysql`.`foreign_keys` `fk`\
+  \ where (`fk`.`table_id` = `tbl`.`id`) union all select `cc`.`name` AS `CONSTRAINT_NAME`,'CHECK'\
+  \ AS `CONSTRAINT_TYPE`,`cc`.`enforced` AS `ENFORCED` from `mysql`.`check_constraints`\
+  \ `cc` where (`cc`.`table_id` = `tbl`.`id`)) `constraints`) where ((0 <> can_access_table(`sch`.`name`,`tbl`.`name`))\
+  \ and (0 <> is_visible_dd_object(`tbl`.`hidden`)))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d12aaa9e537d706497416ace81188f32
+processedLineage: false
+entityStatus: Approved
