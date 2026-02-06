@@ -1,0 +1,71 @@
+name: V_EM_HORIZONTAL_PRODUCTS
+displayName: ""
+fullyQualifiedName: snowflake_prod.EDW_LS.PRODUCT_EM.V_EM_HORIZONTAL_PRODUCTS
+description: <p>Test Desc</p>
+columns:
+  - name: id
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.PRODUCT_EM.V_EM_HORIZONTAL_PRODUCTS.id
+    tags: []
+    ordinalPosition: 2097
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 4ea09bfc-2d0e-4791-90a0-a53c67288fcf
+  type: databaseSchema
+  name: PRODUCT_EM
+  fullyQualifiedName: snowflake_prod.EDW_LS.PRODUCT_EM
+  description: <p>Test Desc</p>
+  displayName: PRODUCT_EM
+  deleted: false
+database:
+  id: 4103eafe-8123-4d72-b538-158a3f8f1532
+  type: database
+  name: EDW_LS
+  fullyQualifiedName: snowflake_prod.EDW_LS
+  description: <p>Test Desc</p>
+  displayName: EDW_LS
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: <p>Test Desc</p>
+    - name: columns.id.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944926962
+    columns.id.description:
+      changedBy: prajwal
+      changedAt: 1760944927180
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed

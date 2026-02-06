@@ -1,0 +1,126 @@
+name: DATABASES
+fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES
+tableType: View
+columns:
+  - name: DATABASE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the database
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.DATABASE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DATABASE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the schema
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.DATABASE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_TRANSIENT
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Whether this is a transient table
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.IS_TRANSIENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this database
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the database
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last altered time of the database
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RETENTION_TIME
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: Number of days that historical data is retained for Time Travel
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.RETENTION_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The type of database
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES.TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1b47979b-a537-41c7-9b1e-4327158e00d6
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 55441f0a-3fc0-41a5-a8dc-353936ccb2d8
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
+  description: <p>free tier </p>
+  displayName: snowflake_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/rtbezht/rf91450/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/DATABASES
+domains: []
+dataProducts: []
+sourceHash: fb5239a7497866b3b2fd42db1e9a5803
+processedLineage: false
+entityStatus: Approved

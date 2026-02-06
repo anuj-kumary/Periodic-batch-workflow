@@ -1,0 +1,71 @@
+name: EM_CRPO_METRICS
+displayName: ""
+fullyQualifiedName: snowflake_prod.EDW_LS.FINANCE_FPA_EM.EM_CRPO_METRICS
+description: <p>Test Desc</p>
+columns:
+  - name: id
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.FINANCE_FPA_EM.EM_CRPO_METRICS.id
+    tags: []
+    ordinalPosition: 2084
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 4afb973a-1e74-47ed-bc51-de01b0578236
+  type: databaseSchema
+  name: FINANCE_FPA_EM
+  fullyQualifiedName: snowflake_prod.EDW_LS.FINANCE_FPA_EM
+  description: <p>Test Desc</p>
+  displayName: FINANCE_FPA_EM
+  deleted: false
+database:
+  id: 4103eafe-8123-4d72-b538-158a3f8f1532
+  type: database
+  name: EDW_LS
+  fullyQualifiedName: snowflake_prod.EDW_LS
+  description: <p>Test Desc</p>
+  displayName: EDW_LS
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: <p>Test Desc</p>
+    - name: columns.id.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944924355
+    columns.id.description:
+      changedBy: prajwal
+      changedAt: 1760944924524
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed

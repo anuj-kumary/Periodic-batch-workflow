@@ -1,0 +1,71 @@
+name: SN_OPPORTUNITYSUMMARIES
+displayName: ""
+fullyQualifiedName: snowflake_prod.RDS.DYNAMICS365.SN_OPPORTUNITYSUMMARIES
+description: <p>Test Desc</p>
+columns:
+  - name: id
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.RDS.DYNAMICS365.SN_OPPORTUNITYSUMMARIES.id
+    tags: []
+    ordinalPosition: 2231
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 8c2a47ca-693f-4bbe-b1ac-389ad9dc436a
+  type: databaseSchema
+  name: DYNAMICS365
+  fullyQualifiedName: snowflake_prod.RDS.DYNAMICS365
+  description: <p>Test Desc</p>
+  displayName: DYNAMICS365
+  deleted: false
+database:
+  id: 408d0055-bd42-42cd-a73c-92f47c04d42e
+  type: database
+  name: RDS
+  fullyQualifiedName: snowflake_prod.RDS
+  description: <p>Test Desc</p>
+  displayName: RDS
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: <p>Test Desc</p>
+    - name: columns.id.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944962429
+    columns.id.description:
+      changedBy: prajwal
+      changedAt: 1760944962962
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed

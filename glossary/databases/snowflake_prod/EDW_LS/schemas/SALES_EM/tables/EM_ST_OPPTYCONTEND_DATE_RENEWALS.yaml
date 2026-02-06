@@ -1,0 +1,162 @@
+name: EM_ST_OPPTYCONTEND_DATE_RENEWALS
+displayName: ""
+fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS
+description: <p>Test Desc</p>
+columns:
+  - name: OptySalesQuarter
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.OptySalesQuarter
+    tags: []
+    ordinalPosition: 2111
+    children: []
+    customMetrics: []
+  - name: OptySysCreatedOn
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.OptySysCreatedOn
+    tags: []
+    ordinalPosition: 2112
+    children: []
+    customMetrics: []
+  - name: OptyNumber
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.OptyNumber
+    tags: []
+    ordinalPosition: 2113
+    children: []
+    customMetrics: []
+  - name: STExtractDate
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.STExtractDate
+    tags: []
+    ordinalPosition: 2114
+    children: []
+    customMetrics: []
+  - name: OptyContEndDate
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.OptyContEndDate
+    tags: []
+    ordinalPosition: 2115
+    children: []
+    customMetrics: []
+  - name: STOpportunityType
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.STOpportunityType
+    tags: []
+    ordinalPosition: 2116
+    children: []
+    customMetrics: []
+  - name: ClosedOptyContractEndDate
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.ClosedOptyContractEndDate
+    tags: []
+    ordinalPosition: 2117
+    children: []
+    customMetrics: []
+  - name: STOptyContEndDate
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM.EM_ST_OPPTYCONTEND_DATE_RENEWALS.STOptyContEndDate
+    tags: []
+    ordinalPosition: 2118
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: c8f254ff-0dcb-425b-a796-42110fd0d6c6
+  type: databaseSchema
+  name: SALES_EM
+  fullyQualifiedName: snowflake_prod.EDW_LS.SALES_EM
+  description: <p>Test Desc</p>
+  displayName: SALES_EM
+  deleted: false
+database:
+  id: 4103eafe-8123-4d72-b538-158a3f8f1532
+  type: database
+  name: EDW_LS
+  fullyQualifiedName: snowflake_prod.EDW_LS
+  description: <p>Test Desc</p>
+  displayName: EDW_LS
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.STOptyContEndDate.description
+      newValue: <p>Test Desc</p>
+    - name: columns.STOptyContEndDate.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.OptyNumber.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.STExtractDate.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.OptyContEndDate.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.OptySalesQuarter.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.OptySysCreatedOn.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.STOpportunityType.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+    columns.STOptyContEndDate.description:
+      changedBy: prajwal
+      changedAt: 1760944931545
+    columns.ClosedOptyContractEndDate.description:
+      changedBy: prajwal
+      changedAt: 1760944931367
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed
