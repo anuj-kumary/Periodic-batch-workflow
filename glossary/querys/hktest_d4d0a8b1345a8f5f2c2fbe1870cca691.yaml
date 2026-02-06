@@ -1,0 +1,32 @@
+name: d4d0a8b1345a8f5f2c2fbe1870cca691
+fullyQualifiedName: hktest.d4d0a8b1345a8f5f2c2fbe1870cca691
+owners: []
+duration: 48.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"MESSAGE\") >= ?) THEN LEN(\"MESSAGE\") END)\
+  \ AS \"8.000 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_RUN_RESULTS\"\n LIMIT\
+  \ ?"
+checksum: d4d0a8b1345a8f5f2c2fbe1870cca691
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 82019c2f-8995-4c30-b679-ee0139132419
+    type: table
+    name: DBT_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_RUN_RESULTS
+    displayName: DBT_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

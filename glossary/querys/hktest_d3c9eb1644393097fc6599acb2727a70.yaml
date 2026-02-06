@@ -1,0 +1,28 @@
+name: d3c9eb1644393097fc6599acb2727a70
+fullyQualifiedName: hktest.d3c9eb1644393097fc6599acb2727a70
+owners: []
+duration: 282.0
+users: []
+query: "SELECT avg(\"CUSTOMERID\") AS mean, count(\"CUSTOMERID\") AS \"valuesCount\"\
+  , count(DISTINCT \"CUSTOMERID\") AS \"distinctCount\", MIN(\"CUSTOMERID\") AS min,\
+  \ MAX(\"CUSTOMERID\") AS max, coalesce(SUM(CASE WHEN (\"CUSTOMERID\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CUSTOMERID\") AS stddev, SUM(\"\
+  CUSTOMERID\") AS sum \nFROM \"MSSQLBANKING_STG\".\"CUSTOMERACCOUNTS\"\n LIMIT ?"
+checksum: d3c9eb1644393097fc6599acb2727a70
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d03f73b0-8a36-4cd5-a82f-a07db17fe588
+    type: table
+    name: CUSTOMERACCOUNTS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG.CUSTOMERACCOUNTS
+    displayName: CUSTOMERACCOUNTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,77 @@
+name: d73f533dbc3db2f1ff7f1326ef0f493f
+fullyQualifiedName: hktest.d73f533dbc3db2f1ff7f1326ef0f493f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"ae833c0b-5dc6-41d8-ab5d-f0c043a45959\",\"type\":\"table\"\
+        ,\"name\":\"DBT_MODELS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS\"\
+        ,\"displayName\":\"DBT_MODELS\",\"deleted\":false}]"
+  previousVersion: 1.1
+  changeSummary: {}
+owners: []
+duration: 842.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "with tests as (\n                select * from dbt_db.DBT_SAMPLE_elementary.dbt_tests\n\
+  \            ),\n            \n            test_results as (\n                select\
+  \ * from dbt_db.DBT_SAMPLE_elementary.elementary_test_results\n            ),\n\n\
+  \            models as (\n                select * from dbt_db.DBT_SAMPLE_elementary.dbt_models\n\
+  \            ),\n            \n            sources as (\n                select\
+  \ * from dbt_db.DBT_SAMPLE_elementary.dbt_sources\n            ),\n\n          \
+  \  nodes as (\n                select\n                    models.unique_id as unique_id,\n\
+  \                    models.name as name,\n                    models.meta,\n  \
+  \                  models.tags,\n                    ? as type\n               \
+  \ from models\n                union all\n                select\n             \
+  \       sources.unique_id as unique_id,\n                    sources.name as name,\n\
+  \                    sources.meta,\n                    sources.tags,\n        \
+  \            ? as type\n                from sources\n            ),\n\n       \
+  \     test_results_times as (\n                select\n                    test_unique_id,\n\
+  \                    max(detected_at) as last_detected_at,\n                   \
+  \ min(detected_at) as first_detected_at\n                from test_results\n   \
+  \             group by test_unique_id\n            ),\n\n            last_test_results\
+  \ as (\n                select\n                    test_results.test_unique_id,\n\
+  \                    test_results.detected_at,\n                    test_results.status,\n\
+  \                    test_results.test_type,\n                    test_results.test_sub_type\n\
+  \                from test_results\n                join test_results_times \n \
+  \                   on test_results_times.test_unique_id = test_results.test_unique_id\n\
+  \                    and test_results_times.last_detected_at = test_results.detected_at\n\
+  \            )\n\n            select\n                tests.unique_id,\n       \
+  \         tests.parent_model_unique_id as model_unique_id,\n                tests.database_name,\n\
+  \                tests.schema_name,\n                nodes.name as model_name,\n\
+  \                tests.test_column_name as column_name,\n                tests.name,\n\
+  \                tests.description,\n                tests.package_name,\n     \
+  \           tests.original_path,\n                tests.test_params,\n         \
+  \       tests.meta,\n                nodes.meta as model_meta,\n               \
+  \ tests.tags,\n                nodes.tags as model_tags,\n                tests.type,\n\
+  \                last_test_results.test_type,\n                last_test_results.test_sub_type,\n\
+  \                test_results_times.first_detected_at as created_at,\n         \
+  \       last_test_results.detected_at as latest_run_time,\n                last_test_results.status\
+  \ as latest_run_status\n            from tests\n            left join test_results_times\
+  \ on tests.unique_id = test_results_times.test_unique_id\n            left join\
+  \ last_test_results on tests.unique_id = last_test_results.test_unique_id\n    \
+  \        left join nodes on tests.parent_model_unique_id = nodes.unique_id"
+checksum: d73f533dbc3db2f1ff7f1326ef0f493f
+queryDate: 1748563200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: ae833c0b-5dc6-41d8-ab5d-f0c043a45959
+    type: table
+    name: DBT_MODELS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS
+    displayName: DBT_MODELS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

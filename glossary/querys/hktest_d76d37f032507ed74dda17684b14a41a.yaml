@@ -1,0 +1,28 @@
+name: d76d37f032507ed74dda17684b14a41a
+fullyQualifiedName: hktest.d76d37f032507ed74dda17684b14a41a
+owners: []
+duration: 155.0
+users: []
+query: "SELECT ? AS anon_1, count(\"SIGNUPDATE\") AS \"valuesCount\", count(DISTINCT\
+  \ \"SIGNUPDATE\") AS \"distinctCount\", MIN(\"SIGNUPDATE\") AS min, MAX(\"SIGNUPDATE\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"SIGNUPDATE\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", ? AS anon__1, ? AS anon__2 \nFROM \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\"\
+  \n LIMIT ?"
+checksum: d76d37f032507ed74dda17684b14a41a
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8213dbf1-647b-4c39-8dac-cc9f4f0135e3
+    type: table
+    name: SAMPLE_CUSTOMERS_UPPER
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER
+    displayName: SAMPLE_CUSTOMERS_UPPER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

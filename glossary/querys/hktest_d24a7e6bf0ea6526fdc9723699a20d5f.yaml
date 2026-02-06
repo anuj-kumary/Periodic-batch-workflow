@@ -1,0 +1,35 @@
+name: d24a7e6bf0ea6526fdc9723699a20d5f
+fullyQualifiedName: hktest.d24a7e6bf0ea6526fdc9723699a20d5f
+owners: []
+duration: 86.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"GENERATED_AT\")) AS mean, count(\"GENERATED_AT\") AS \"valuesCount\"\
+  , count(DISTINCT \"GENERATED_AT\") AS \"distinctCount\", MIN(LEN(\"GENERATED_AT\"\
+  )) AS min, MAX(LEN(\"GENERATED_AT\")) AS max, coalesce(SUM(CASE WHEN (\"GENERATED_AT\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"GENERATED_AT\"\
+  )) AS stddev, SUM(LEN(\"GENERATED_AT\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_TESTS\"\n LIMIT ?"
+checksum: d24a7e6bf0ea6526fdc9723699a20d5f
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 7d74658f-d1ee-451a-b639-f1dca08b142d
+    type: table
+    name: DBT_TESTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_TESTS
+    displayName: DBT_TESTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

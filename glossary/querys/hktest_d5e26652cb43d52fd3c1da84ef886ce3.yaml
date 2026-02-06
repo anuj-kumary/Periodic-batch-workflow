@@ -1,0 +1,30 @@
+name: d5e26652cb43d52fd3c1da84ef886ce3
+fullyQualifiedName: hktest.d5e26652cb43d52fd3c1da84ef886ce3
+owners: []
+duration: 203.0
+users: []
+query: "WITH ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd AS \n(SELECT \"ORDERS_1\".\"O_ORDERDATE\"\
+  \ AS \"O_ORDERDATE\" \nFROM \"TPCH_SF10\".\"ORDERS\" AS \"ORDERS_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nab2fad6a9f7c58c2c0dabdb6c89213f1_sample AS \n(SELECT ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd.\"\
+  O_ORDERDATE\" AS \"O_ORDERDATE\" \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd)\n\
+  \ SELECT ? AS anon_1, ? AS anon__1, ? AS anon__2 \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_sample\n\
+  \ LIMIT ?"
+checksum: d5e26652cb43d52fd3c1da84ef886ce3
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b7a1e96e-d5da-448b-a809-946f32a21041
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

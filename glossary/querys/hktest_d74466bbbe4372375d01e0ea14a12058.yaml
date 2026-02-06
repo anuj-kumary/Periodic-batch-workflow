@@ -1,0 +1,23 @@
+name: d74466bbbe4372375d01e0ea14a12058
+fullyQualifiedName: hktest.d74466bbbe4372375d01e0ea14a12058
+owners: []
+duration: 702.0
+users: []
+query: "SELECT avg(\"NUMBER_OF_ORDERS\") AS mean, count(\"NUMBER_OF_ORDERS\") AS \"\
+  valuesCount\", count(DISTINCT \"NUMBER_OF_ORDERS\") AS \"distinctCount\", MIN(\"\
+  NUMBER_OF_ORDERS\") AS min, MAX(\"NUMBER_OF_ORDERS\") AS max, coalesce(SUM(CASE\
+  \ WHEN (\"NUMBER_OF_ORDERS\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"\
+  NUMBER_OF_ORDERS\") AS stddev, SUM(\"NUMBER_OF_ORDERS\") AS sum \nFROM \"JAFFLE_SHOP\"\
+  .\"CUSTOMERS\"\n LIMIT ?"
+checksum: d74466bbbe4372375d01e0ea14a12058
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,29 @@
+name: d7ba16b02af7f314923a3ae411e005bd
+fullyQualifiedName: hktest.d7ba16b02af7f314923a3ae411e005bd
+owners: []
+duration: 79.0
+users: []
+query: "SELECT avg(LEN(\"CONT_MAX_PART_SUR\")) AS mean, count(\"CONT_MAX_PART_SUR\"\
+  ) AS \"valuesCount\", count(DISTINCT \"CONT_MAX_PART_SUR\") AS \"distinctCount\"\
+  , MIN(LEN(\"CONT_MAX_PART_SUR\")) AS min, MAX(LEN(\"CONT_MAX_PART_SUR\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"CONT_MAX_PART_SUR\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", STDDEV_POP(LEN(\"CONT_MAX_PART_SUR\")) AS stddev, SUM(LEN(\"CONT_MAX_PART_SUR\"\
+  )) AS sum \nFROM \"CURATED\".\"CONT\"\n LIMIT ?"
+checksum: d7ba16b02af7f314923a3ae411e005bd
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

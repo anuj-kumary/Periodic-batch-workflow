@@ -1,0 +1,44 @@
+name: d56524bf1737d84be4405f8dcf1cb9c4
+fullyQualifiedName: hktest.d56524bf1737d84be4405f8dcf1cb9c4
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"6f76a5d5-3b77-43b8-9af6-d88def60b362\",\"type\":\"table\"\
+        ,\"name\":\"BANKACCOUNT\",\"fullyQualifiedName\":\"hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.BANKACCOUNT\"\
+        ,\"displayName\":\"BANKACCOUNT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 54.0
+users: []
+query: "SELECT count(CASE WHEN (\"CUSTOMERID\" >= ? AND \"CUSTOMERID\" < ?) THEN \"\
+  CUSTOMERID\" END) AS \"1.000 to 8.937\", count(CASE WHEN (\"CUSTOMERID\" >= ? AND\
+  \ \"CUSTOMERID\" < ?) THEN \"CUSTOMERID\" END) AS \"8.937 to 16.874\", count(CASE\
+  \ WHEN (\"CUSTOMERID\" >= ? AND \"CUSTOMERID\" < ?) THEN \"CUSTOMERID\" END) AS\
+  \ \"16.874 to 24.811\", count(CASE WHEN (\"CUSTOMERID\" >= ? AND \"CUSTOMERID\"\
+  \ < ?) THEN \"CUSTOMERID\" END) AS \"24.811 to 32.748\", count(CASE WHEN (\"CUSTOMERID\"\
+  \ >= ? AND \"CUSTOMERID\" < ?) THEN \"CUSTOMERID\" END) AS \"32.748 to 40.685\"\
+  , count(CASE WHEN (\"CUSTOMERID\" >= ? AND \"CUSTOMERID\" < ?) THEN \"CUSTOMERID\"\
+  \ END) AS \"40.685 to 48.622\", count(CASE WHEN (\"CUSTOMERID\" >= ?) THEN \"CUSTOMERID\"\
+  \ END) AS \"48.622 and up\" \nFROM \"MSSQLBANKING_ACCOUNT\".\"BANKACCOUNT\"\n LIMIT\
+  \ ?"
+checksum: d56524bf1737d84be4405f8dcf1cb9c4
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6f76a5d5-3b77-43b8-9af6-d88def60b362
+    type: table
+    name: BANKACCOUNT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.BANKACCOUNT
+    displayName: BANKACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

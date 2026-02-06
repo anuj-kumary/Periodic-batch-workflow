@@ -1,0 +1,77 @@
+name: d60f68a0f00294680653f38c604fa6a5
+fullyQualifiedName: hktest.d60f68a0f00294680653f38c604fa6a5
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"1f508427-80b3-49cc-a1fe-0eb4dee09b71\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 215.0
+users: []
+query: "SELECT count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"\
+  O_ORDERKEY\" END) AS \"1.000 to 20.690M\", count(CASE WHEN (\"O_ORDERKEY\" >= ?\
+  \ AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"20.690M to 41.379M\", count(CASE\
+  \ WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS\
+  \ \"41.379M to 62.069M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"62.069M to 82.759M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"82.759M to 103.448M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"103.448M to 124.138M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"\
+  O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"124.138M to 144.828M\", count(CASE\
+  \ WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS\
+  \ \"144.828M to 165.517M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"165.517M to 186.207M\", count(CASE WHEN (\"\
+  O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"186.207M\
+  \ to 206.897M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN\
+  \ \"O_ORDERKEY\" END) AS \"206.897M to 227.586M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"227.586M to 248.276M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"248.276M to 268.966M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"\
+  O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"268.966M to 289.655M\", count(CASE\
+  \ WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS\
+  \ \"289.655M to 310.345M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"310.345M to 331.034M\", count(CASE WHEN (\"\
+  O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"331.034M\
+  \ to 351.724M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN\
+  \ \"O_ORDERKEY\" END) AS \"351.724M to 372.414M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"372.414M to 393.103M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"393.103M to 413.793M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"\
+  O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"413.793M to 434.483M\", count(CASE\
+  \ WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS\
+  \ \"434.483M to 455.172M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"455.172M to 475.862M\", count(CASE WHEN (\"\
+  O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"475.862M\
+  \ to 496.552M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN\
+  \ \"O_ORDERKEY\" END) AS \"496.552M to 517.241M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"517.241M to 537.931M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"537.931M to 558.621M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"\
+  O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"558.621M to 579.310M\", count(CASE\
+  \ WHEN (\"O_ORDERKEY\" >= ?) THEN \"O_ORDERKEY\" END) AS \"579.310M and up\" \n\
+  FROM \"TPCH_SF100\".\"ORDERS\"\n LIMIT ?"
+checksum: d60f68a0f00294680653f38c604fa6a5
+queryDate: 1752105600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 1f508427-80b3-49cc-a1fe-0eb4dee09b71
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,120 @@
+name: d22a37bfc317b9e3566060850c91a50e
+fullyQualifiedName: hktest.d22a37bfc317b9e3566060850c91a50e
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"9bc6307f-5d2d-4ecf-b1f5-f791a29d4443\",\"type\":\"table\"\
+        ,\"name\":\"PART\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART\"\
+        ,\"description\":\"Part data as defined by TPC-H\",\"displayName\":\"PART\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 328.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?)\
+  \ THEN LEN(\"P_COMMENT\") END) AS \"5.000 to 5.308\", count(CASE WHEN (LEN(\"P_COMMENT\"\
+  ) >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"5.308 to 5.616\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"5.616 to 5.923\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"5.923 to 6.231\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"6.231 to 6.539\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"6.539 to 6.847\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"6.847 to 7.155\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"7.155 to 7.462\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"7.462 to 7.770\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"7.770 to 8.078\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"8.078 to 8.386\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"8.386 to 8.694\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"8.694 to 9.001\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"9.001 to 9.309\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"9.309 to 9.617\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"9.617 to 9.925\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"9.925 to 10.233\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"10.233 to 10.540\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"10.540 to 10.848\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"10.848 to 11.156\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"11.156 to 11.464\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"11.464 to 11.772\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"11.772 to 12.079\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"12.079 to 12.387\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"12.387 to 12.695\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"12.695 to 13.003\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"13.003 to 13.310\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"13.310 to 13.618\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"13.618 to 13.926\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"13.926 to 14.234\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"14.234 to 14.542\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"14.542 to 14.849\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"14.849 to 15.157\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"15.157 to 15.465\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"15.465 to 15.773\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"15.773 to 16.081\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"16.081 to 16.388\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"16.388 to 16.696\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"16.696 to 17.004\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"17.004 to 17.312\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"17.312 to 17.620\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"17.620 to 17.927\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"17.927 to 18.235\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"18.235 to 18.543\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"18.543 to 18.851\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"18.851 to 19.159\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"19.159 to 19.466\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"19.466 to 19.774\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"19.774 to 20.082\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"20.082 to 20.390\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"20.390 to 20.698\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"20.698 to 21.005\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"21.005 to 21.313\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"21.313 to 21.621\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"21.621 to 21.929\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ?) THEN LEN(\"P_COMMENT\") END) AS \"21.929 and up\" \nFROM \"TPCH_SF1\".\"PART\"\
+  \n LIMIT ?"
+checksum: d22a37bfc317b9e3566060850c91a50e
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9bc6307f-5d2d-4ecf-b1f5-f791a29d4443
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,20 @@
+name: d6bd112c541fa9ecfea7d463c4657169
+fullyQualifiedName: hktest.d6bd112c541fa9ecfea7d463c4657169
+owners: []
+duration: 166.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CUSTOMER_ID\") AS\
+  \ count_1 \nFROM \"JAFFLE_SHOP\".\"ORDERS\" GROUP BY \"CUSTOMER_ID\" \nHAVING count(\"\
+  CUSTOMER_ID\") = ?) AS only_once\n LIMIT ?"
+checksum: d6bd112c541fa9ecfea7d463c4657169
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
