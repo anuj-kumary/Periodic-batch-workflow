@@ -1,0 +1,178 @@
+name: databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json
+fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json"
+tableType: Regular
+columns:
+  - name: backingTablesMap
+    displayName: backingTablesMap
+    dataType: JSON
+    dataTypeDisplay: json
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".backingTablesMap
+    tags: []
+    children:
+      - name: '`demo-test-cat`.`test-schema`.`lineage_demo_table`'
+        displayName: '`demo-test-cat`.`test-schema`.`lineage_demo_table`'
+        dataType: STRING
+        dataTypeDisplay: STRING
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".backingTablesMap."`demo-test-cat`.`test-schema`.`lineage_demo_table`"
+        tags: []
+        children: []
+      - name: '`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`'
+        displayName: '`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`'
+        dataType: STRING
+        dataTypeDisplay: STRING
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".backingTablesMap."`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`"
+        tags: []
+        children: []
+      - name: '`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`'
+        displayName: '`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`'
+        dataType: STRING
+        dataTypeDisplay: STRING
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".backingTablesMap."`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`"
+        tags: []
+        children: []
+    customMetrics: []
+  - name: flowInfo
+    displayName: flowInfo
+    dataType: JSON
+    dataTypeDisplay: json
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo
+    tags: []
+    children:
+      - name: '`external_source`'
+        displayName: '`external_source`'
+        dataType: JSON
+        dataTypeDisplay: JSON
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo.`external_source`
+        tags: []
+        children:
+          - name: inputs
+            displayName: inputs
+            dataType: ARRAY
+            dataTypeDisplay: ARRAY
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo.`external_source`.inputs
+            tags: []
+            children: []
+          - name: flowType
+            displayName: flowType
+            dataType: STRING
+            dataTypeDisplay: STRING
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo.`external_source`.flowType
+            tags: []
+            children: []
+      - name: '`demo-test-cat`.`test-schema`.`lineage_demo_table`'
+        displayName: '`demo-test-cat`.`test-schema`.`lineage_demo_table`'
+        dataType: JSON
+        dataTypeDisplay: JSON
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`lineage_demo_table`"
+        tags: []
+        children:
+          - name: inputs
+            displayName: inputs
+            dataType: ARRAY
+            dataTypeDisplay: ARRAY
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`lineage_demo_table`".inputs
+            tags: []
+            children: []
+          - name: flowType
+            displayName: flowType
+            dataType: STRING
+            dataTypeDisplay: STRING
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`lineage_demo_table`".flowType
+            tags: []
+            children: []
+      - name: '`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`'
+        displayName: '`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`'
+        dataType: JSON
+        dataTypeDisplay: JSON
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`"
+        tags: []
+        children:
+          - name: inputs
+            displayName: inputs
+            dataType: ARRAY
+            dataTypeDisplay: ARRAY
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`".inputs
+            tags: []
+            children: []
+          - name: flowType
+            displayName: flowType
+            dataType: STRING
+            dataTypeDisplay: STRING
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`sample_trips_dlt_example`".flowType
+            tags: []
+            children: []
+      - name: '`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`'
+        displayName: '`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`'
+        dataType: JSON
+        dataTypeDisplay: JSON
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`"
+        tags: []
+        children:
+          - name: inputs
+            displayName: inputs
+            dataType: ARRAY
+            dataTypeDisplay: ARRAY
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`".inputs
+            tags: []
+            children: []
+          - name: flowType
+            displayName: flowType
+            dataType: STRING
+            dataTypeDisplay: STRING
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".flowInfo."`demo-test-cat`.`test-schema`.`sample_zones_dlt_example`".flowType
+            tags: []
+            children: []
+    customMetrics: []
+  - name: version
+    displayName: version
+    dataType: INT
+    dataTypeDisplay: int
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".version
+    tags: []
+    children: []
+    customMetrics: []
+  - name: isValid
+    displayName: isValid
+    dataType: BOOLEAN
+    dataTypeDisplay: boolean
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/_dlt_metadata/_graph_cache/115f1983-1e70-46a9-b7fb-dd0150179561_graph_cache.json".isValid
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: b7bb62d9-5ce4-4da8-a0bd-56aa291fb4f9
+  type: databaseSchema
+  name: awsdatalake-testing
+  fullyQualifiedName: abc.default.awsdatalake-testing
+  displayName: awsdatalake-testing
+  deleted: false
+database:
+  id: 21b2a19d-78f7-45bc-8b85-e7cedccfac79
+  type: database
+  name: default
+  fullyQualifiedName: abc.default
+  displayName: default
+  deleted: false
+service:
+  id: d9609609-83c5-46dc-b2a7-ea2b261be6d7
+  type: databaseService
+  name: abc
+  fullyQualifiedName: abc
+  description: ""
+  displayName: abc
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: json
+sourceHash: 4b4454655c7f06246ecf00fe8b4c36b1
+processedLineage: false
+entityStatus: Unprocessed

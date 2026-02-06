@@ -1,0 +1,353 @@
+name: databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet
+fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet"
+tableType: Regular
+columns:
+  - name: id
+    displayName: id
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: sequence
+    displayName: sequence
+    dataType: STRUCT
+    dataTypeDisplay: "struct<control_plane_seq_no: double, data_plane_id: struct<instance:\
+      \ string, seq_no: int64>>"
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".sequence
+    tags: []
+    children:
+      - name: control_plane_seq_no
+        displayName: control_plane_seq_no
+        dataType: FLOAT
+        dataTypeDisplay: double
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".sequence.control_plane_seq_no
+        tags: []
+        children: []
+      - name: data_plane_id
+        displayName: data_plane_id
+        dataType: STRUCT
+        dataTypeDisplay: "struct<instance: string, seq_no: int64>"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".sequence.data_plane_id
+        tags: []
+        children:
+          - name: instance
+            displayName: instance
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".sequence.data_plane_id.instance
+            tags: []
+            children: []
+          - name: seq_no
+            displayName: seq_no
+            dataType: INT
+            dataTypeDisplay: int64
+            fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".sequence.data_plane_id.seq_no
+            tags: []
+            children: []
+    customMetrics: []
+  - name: origin
+    displayName: origin
+    dataType: STRUCT
+    dataTypeDisplay: "struct<batch_id: double, catalog_name: null, cloud: string,\
+      \ cluster_id: string, dataset_name: string, flow_attempt_id: null, flow_id:\
+      \ string, flow_name: string, ingestion_source_type: null, maintenance_id: null,\
+      \ materialization_name: string, operation_id: null, org_id: int64, pipeline_id:\
+      \ string, pipeline_name: string, pipeline_type: string, region: string, request_id:\
+      \ string, schema_name: null, sink_name: null, source_name: null, table_id: null,\
+      \ table_name: null, uc_parent_table_id: null, uc_resource_id: null, uc_table_id:\
+      \ string, update_id: string, user_id: null>"
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin
+    tags: []
+    children:
+      - name: batch_id
+        displayName: batch_id
+        dataType: FLOAT
+        dataTypeDisplay: double
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.batch_id
+        tags: []
+        children: []
+      - name: catalog_name
+        displayName: catalog_name
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.catalog_name
+        tags: []
+        children: []
+      - name: cloud
+        displayName: cloud
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.cloud
+        tags: []
+        children: []
+      - name: cluster_id
+        displayName: cluster_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.cluster_id
+        tags: []
+        children: []
+      - name: dataset_name
+        displayName: dataset_name
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.dataset_name
+        tags: []
+        children: []
+      - name: flow_attempt_id
+        displayName: flow_attempt_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.flow_attempt_id
+        tags: []
+        children: []
+      - name: flow_id
+        displayName: flow_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.flow_id
+        tags: []
+        children: []
+      - name: flow_name
+        displayName: flow_name
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.flow_name
+        tags: []
+        children: []
+      - name: ingestion_source_type
+        displayName: ingestion_source_type
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.ingestion_source_type
+        tags: []
+        children: []
+      - name: maintenance_id
+        displayName: maintenance_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.maintenance_id
+        tags: []
+        children: []
+      - name: materialization_name
+        displayName: materialization_name
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.materialization_name
+        tags: []
+        children: []
+      - name: operation_id
+        displayName: operation_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.operation_id
+        tags: []
+        children: []
+      - name: org_id
+        displayName: org_id
+        dataType: INT
+        dataTypeDisplay: int64
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.org_id
+        tags: []
+        children: []
+      - name: pipeline_id
+        displayName: pipeline_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.pipeline_id
+        tags: []
+        children: []
+      - name: pipeline_name
+        displayName: pipeline_name
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.pipeline_name
+        tags: []
+        children: []
+      - name: pipeline_type
+        displayName: pipeline_type
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.pipeline_type
+        tags: []
+        children: []
+      - name: region
+        displayName: region
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.region
+        tags: []
+        children: []
+      - name: request_id
+        displayName: request_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.request_id
+        tags: []
+        children: []
+      - name: schema_name
+        displayName: schema_name
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.schema_name
+        tags: []
+        children: []
+      - name: sink_name
+        displayName: sink_name
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.sink_name
+        tags: []
+        children: []
+      - name: source_name
+        displayName: source_name
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.source_name
+        tags: []
+        children: []
+      - name: table_id
+        displayName: table_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.table_id
+        tags: []
+        children: []
+      - name: table_name
+        displayName: table_name
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.table_name
+        tags: []
+        children: []
+      - name: uc_parent_table_id
+        displayName: uc_parent_table_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.uc_parent_table_id
+        tags: []
+        children: []
+      - name: uc_resource_id
+        displayName: uc_resource_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.uc_resource_id
+        tags: []
+        children: []
+      - name: uc_table_id
+        displayName: uc_table_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.uc_table_id
+        tags: []
+        children: []
+      - name: update_id
+        displayName: update_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.update_id
+        tags: []
+        children: []
+      - name: user_id
+        displayName: user_id
+        dataType: UNKNOWN
+        dataTypeDisplay: "null"
+        fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".origin.user_id
+        tags: []
+        children: []
+    customMetrics: []
+  - name: timestamp
+    displayName: timestamp
+    dataType: DATETIME
+    dataTypeDisplay: "timestamp[ns]"
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".timestamp
+    tags: []
+    children: []
+    customMetrics: []
+  - name: message
+    displayName: message
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".message
+    tags: []
+    children: []
+    customMetrics: []
+  - name: level
+    displayName: level
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".level
+    tags: []
+    children: []
+    customMetrics: []
+  - name: maturity_level
+    displayName: maturity_level
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".maturity_level
+    tags: []
+    children: []
+    customMetrics: []
+  - name: error
+    displayName: error
+    dataType: UNKNOWN
+    dataTypeDisplay: "null"
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".error
+    tags: []
+    children: []
+    customMetrics: []
+  - name: details
+    displayName: details
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".details
+    tags: []
+    children: []
+    customMetrics: []
+  - name: event_type
+    displayName: event_type
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/151c0c2d-2aba-4414-909d-2dff467dd8e4/part-00000-c1d8f316-c08b-4b35-b163-5df81bc49724.c000.snappy.parquet".event_type
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: b7bb62d9-5ce4-4da8-a0bd-56aa291fb4f9
+  type: databaseSchema
+  name: awsdatalake-testing
+  fullyQualifiedName: abc.default.awsdatalake-testing
+  displayName: awsdatalake-testing
+  deleted: false
+database:
+  id: 21b2a19d-78f7-45bc-8b85-e7cedccfac79
+  type: database
+  name: default
+  fullyQualifiedName: abc.default
+  displayName: default
+  deleted: false
+service:
+  id: d9609609-83c5-46dc-b2a7-ea2b261be6d7
+  type: databaseService
+  name: abc
+  fullyQualifiedName: abc
+  description: ""
+  displayName: abc
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: 0947b0f9a935325446839183fcc51fcc
+processedLineage: false
+entityStatus: Unprocessed
