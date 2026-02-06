@@ -1,0 +1,240 @@
+name: MODEL_VERSIONS
+fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS
+tableType: View
+columns:
+  - name: CATALOG_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database name which the MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.CATALOG_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CATALOG_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: ID of the database which the MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.CATALOG_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SCHEMA_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema which the MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.SCHEMA_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SCHEMA_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: ID of the Schema which the MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.SCHEMA_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MODEL_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the model which the MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.MODEL_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MODEL_VERSION_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the MODEL VERSION
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.MODEL_VERSION_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this MODEL VERSION
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MODEL_COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for the MODEL this MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.MODEL_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the MODEL VERSION
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CREATED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Date and time when the MODEL VERSION was created
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.CREATED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Date and time when the MODEL VERSION was last updated
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.LAST_ALTERED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FUNCTIONS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Functions in the MODEL VERSION
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.FUNCTIONS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MODEL_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Type of the model the MODEL VERSION belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.MODEL_TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PYTHON_VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Python version the MODEL VERSION is using
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.PYTHON_VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: LANGUAGE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Language the MODEL VERSION is implemented in
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.LANGUAGE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DEPENDENCIES
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Dependencies of the MODEL VERSION
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.DEPENDENCIES
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: METADATA
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: object
+    description: Metadata of the MODEL VERSION
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.METADATA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USERDATA
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: object
+    description: Usetdata of the model version
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.MODEL_VERSIONS.USERDATA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1b47979b-a537-41c7-9b1e-4327158e00d6
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 55441f0a-3fc0-41a5-a8dc-353936ccb2d8
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
+  description: <p>free tier </p>
+  displayName: snowflake_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"accessed\":{\"timestamp\":1740614400000,\"accessedByAProcess\"\
+        :\"TESTOPENMETADATA\"}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://app.snowflake.com/rtbezht/rf91450/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/MODEL_VERSIONS
+domains: []
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1740614400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: f991ab8000f8c3eef8e26d5803ae23f3
+processedLineage: false
+entityStatus: Approved

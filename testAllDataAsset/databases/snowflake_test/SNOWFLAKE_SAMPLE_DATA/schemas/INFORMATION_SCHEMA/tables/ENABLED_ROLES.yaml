@@ -1,0 +1,64 @@
+name: ENABLED_ROLES
+fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.ENABLED_ROLES
+tableType: View
+columns:
+  - name: ROLE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.ENABLED_ROLES.ROLE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ROLE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Owner of the role
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.ENABLED_ROLES.ROLE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1b47979b-a537-41c7-9b1e-4327158e00d6
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 55441f0a-3fc0-41a5-a8dc-353936ccb2d8
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
+  description: <p>free tier </p>
+  displayName: snowflake_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/rtbezht/rf91450/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/ENABLED_ROLES
+domains: []
+dataProducts: []
+sourceHash: d0b59b0b9aa709806f733fb23d0a5f04
+processedLineage: false
+entityStatus: Approved

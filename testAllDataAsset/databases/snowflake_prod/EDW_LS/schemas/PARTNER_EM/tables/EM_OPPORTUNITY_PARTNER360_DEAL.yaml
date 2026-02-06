@@ -1,0 +1,71 @@
+name: EM_OPPORTUNITY_PARTNER360_DEAL
+displayName: ""
+fullyQualifiedName: snowflake_prod.EDW_LS.PARTNER_EM.EM_OPPORTUNITY_PARTNER360_DEAL
+description: <p>Test Desc</p>
+columns:
+  - name: id
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW_LS.PARTNER_EM.EM_OPPORTUNITY_PARTNER360_DEAL.id
+    tags: []
+    ordinalPosition: 2092
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 630c7fdf-b055-4e1f-b925-f01a97d2f274
+  type: databaseSchema
+  name: PARTNER_EM
+  fullyQualifiedName: snowflake_prod.EDW_LS.PARTNER_EM
+  description: <p>Test Desc</p>
+  displayName: PARTNER_EM
+  deleted: false
+database:
+  id: 4103eafe-8123-4d72-b538-158a3f8f1532
+  type: database
+  name: EDW_LS
+  fullyQualifiedName: snowflake_prod.EDW_LS
+  description: <p>Test Desc</p>
+  displayName: EDW_LS
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: <p>Test Desc</p>
+    - name: columns.id.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944925823
+    columns.id.description:
+      changedBy: prajwal
+      changedAt: 1760944926050
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed

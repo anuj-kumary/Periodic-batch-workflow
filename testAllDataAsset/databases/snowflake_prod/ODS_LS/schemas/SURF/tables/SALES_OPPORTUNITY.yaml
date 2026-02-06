@@ -1,0 +1,110 @@
+name: SALES_OPPORTUNITY
+displayName: ""
+fullyQualifiedName: snowflake_prod.ODS_LS.SURF.SALES_OPPORTUNITY
+description: <p>Test Desc</p>
+columns:
+  - name: OptyNumber
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.ODS_LS.SURF.SALES_OPPORTUNITY.OptyNumber
+    tags: []
+    ordinalPosition: 2216
+    children: []
+    customMetrics: []
+  - name: OptyContEndDate
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.ODS_LS.SURF.SALES_OPPORTUNITY.OptyContEndDate
+    tags: []
+    ordinalPosition: 2217
+    children: []
+    customMetrics: []
+  - name: OptySalesQuarter
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.ODS_LS.SURF.SALES_OPPORTUNITY.OptySalesQuarter
+    tags: []
+    ordinalPosition: 2218
+    children: []
+    customMetrics: []
+  - name: OptySysCreatedOn
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.ODS_LS.SURF.SALES_OPPORTUNITY.OptySysCreatedOn
+    tags: []
+    ordinalPosition: 2219
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 1822e28d-62de-4b76-be3f-ae525cd1b63c
+  type: databaseSchema
+  name: SURF
+  fullyQualifiedName: snowflake_prod.ODS_LS.SURF
+  description: <p>Test Desc</p>
+  displayName: SURF
+  deleted: false
+database:
+  id: 28340ab2-ce6d-433c-8fc4-76f7bccb09d4
+  type: database
+  name: ODS_LS
+  fullyQualifiedName: snowflake_prod.ODS_LS
+  description: <p>Test Desc</p>
+  displayName: ODS_LS
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.OptySysCreatedOn.description
+      newValue: <p>Test Desc</p>
+    - name: columns.OptySysCreatedOn.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944958149
+    columns.OptyNumber.description:
+      changedBy: prajwal
+      changedAt: 1760944958149
+    columns.OptyContEndDate.description:
+      changedBy: prajwal
+      changedAt: 1760944958149
+    columns.OptySalesQuarter.description:
+      changedBy: prajwal
+      changedAt: 1760944958149
+    columns.OptySysCreatedOn.description:
+      changedBy: prajwal
+      changedAt: 1760944958337
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed

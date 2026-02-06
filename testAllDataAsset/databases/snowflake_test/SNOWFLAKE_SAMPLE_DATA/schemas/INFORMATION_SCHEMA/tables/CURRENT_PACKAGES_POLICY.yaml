@@ -1,0 +1,104 @@
+name: CURRENT_PACKAGES_POLICY
+fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY
+tableType: View
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Packages policy name
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: LANGUAGE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package language
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY.LANGUAGE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ALLOWLIST
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Allowlist
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY.ALLOWLIST
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: BLOCKLIST
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: BLocklist
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY.BLOCKLIST
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ADDITIONAL_CREATION_BLOCKLIST
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Additional creation blocklist
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY.ADDITIONAL_CREATION_BLOCKLIST
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: comment
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1b47979b-a537-41c7-9b1e-4327158e00d6
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 55441f0a-3fc0-41a5-a8dc-353936ccb2d8
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
+  description: <p>free tier </p>
+  displayName: snowflake_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/rtbezht/rf91450/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/CURRENT_PACKAGES_POLICY
+domains: []
+dataProducts: []
+sourceHash: bc3cec5c5fa95a4fd1ac8360bacf8aad
+processedLineage: false
+entityStatus: Approved

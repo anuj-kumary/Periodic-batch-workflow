@@ -1,0 +1,146 @@
+name: CLASSES
+fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES
+tableType: View
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the BUNDLE CLASS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SCHEMA_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema which the CLASS belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.SCHEMA_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DATABASE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database which the CLASS belongs to
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.DATABASE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Current version of the CLASS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the CLASS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OWNER_ROLE_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Type of role that owns the CLASS.
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.OWNER_ROLE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_SERVICE_CLASS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Whether this is a SERVICE class
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.IS_SERVICE_CLASS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Date and time when the CLASS was created
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for the CLASS
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.CLASSES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1b47979b-a537-41c7-9b1e-4327158e00d6
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 55441f0a-3fc0-41a5-a8dc-353936ccb2d8
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
+  description: <p>free tier </p>
+  displayName: snowflake_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"accessed\":{\"timestamp\":1740614400000,\"accessedByAProcess\"\
+        :\"TESTOPENMETADATA\"}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://app.snowflake.com/rtbezht/rf91450/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/CLASSES
+domains: []
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1740614400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: c3d848928f12ae28a5ba8208888f829b
+processedLineage: false
+entityStatus: Approved

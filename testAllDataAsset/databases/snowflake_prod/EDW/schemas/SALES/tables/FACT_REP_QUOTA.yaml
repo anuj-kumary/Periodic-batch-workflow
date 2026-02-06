@@ -1,0 +1,136 @@
+name: FACT_REP_QUOTA
+displayName: ""
+fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA
+description: <p>Test Desc</p>
+columns:
+  - name: TERRITORY_ID
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA.TERRITORY_ID
+    tags: []
+    ordinalPosition: 1711
+    children: []
+    customMetrics: []
+  - name: QUARTER_YYQQ
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA.QUARTER_YYQQ
+    tags: []
+    ordinalPosition: 1712
+    children: []
+    customMetrics: []
+  - name: QUOTA_REP_USD
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA.QUOTA_REP_USD
+    tags: []
+    ordinalPosition: 1713
+    children: []
+    customMetrics: []
+  - name: TERRITORY_SYSID
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA.TERRITORY_SYSID
+    tags: []
+    ordinalPosition: 1714
+    children: []
+    customMetrics: []
+  - name: SALESREP_ID
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA.SALESREP_ID
+    tags: []
+    ordinalPosition: 1715
+    children: []
+    customMetrics: []
+  - name: GEO_ID
+    displayName: ""
+    dataType: STRING
+    dataTypeDisplay: string
+    description: <p>Test Desc</p>
+    fullyQualifiedName: snowflake_prod.EDW.SALES.FACT_REP_QUOTA.GEO_ID
+    tags: []
+    ordinalPosition: 1716
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: db4f2b9f-fdf1-459f-b397-e75db448a694
+  type: databaseSchema
+  name: SALES
+  fullyQualifiedName: snowflake_prod.EDW.SALES
+  description: <p>Test Desc</p>
+  displayName: SALES
+  deleted: false
+database:
+  id: fd81f8ea-d19e-4973-b7b4-6ba8632c9f0d
+  type: database
+  name: EDW
+  fullyQualifiedName: snowflake_prod.EDW
+  description: <p>Test Desc</p>
+  displayName: EDW
+  deleted: false
+service:
+  id: c363f8bf-dc59-49f5-b7f0-284dbce400e5
+  type: databaseService
+  name: snowflake_prod
+  fullyQualifiedName: snowflake_prod
+  description: <p>Data warehouse for Production</p>
+  displayName: snowflake_prod
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.GEO_ID.description
+      newValue: <p>Test Desc</p>
+    - name: columns.GEO_ID.displayName
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: prajwal
+      changedAt: 1760944798653
+    columns.GEO_ID.description:
+      changedBy: prajwal
+      changedAt: 1760944799366
+    columns.SALESREP_ID.description:
+      changedBy: prajwal
+      changedAt: 1760944798653
+    columns.QUARTER_YYQQ.description:
+      changedBy: prajwal
+      changedAt: 1760944798653
+    columns.TERRITORY_ID.description:
+      changedBy: prajwal
+      changedAt: 1760944798653
+    columns.QUOTA_REP_USD.description:
+      changedBy: prajwal
+      changedAt: 1760944798653
+    columns.TERRITORY_SYSID.description:
+      changedBy: prajwal
+      changedAt: 1760944798653
+retentionPeriod: ""
+sourceUrl: ""
+domains: []
+dataProducts: []
+processedLineage: false
+queries: []
+entityStatus: Unprocessed
