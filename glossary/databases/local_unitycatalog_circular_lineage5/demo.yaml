@@ -1,0 +1,42 @@
+name: demo
+fullyQualifiedName: local_unitycatalog_circular_lineage5.demo
+description: Updated database description via reverse ingestion test - ABYUYUCRNWQSXOV
+dataProducts: []
+tags:
+  - tagFQN: beedd.sdaaaaa
+    name: sdaaaaa
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: sdaaaaa.sdaaaaa
+    name: sdaaaaa
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: e7ac33bd-4e30-489b-8150-b570970d2b76
+  type: databaseService
+  name: local_unitycatalog_circular_lineage5
+  fullyQualifiedName: local_unitycatalog_circular_lineage5
+  displayName: local_unitycatalog_circular_lineage5
+  deleted: false
+serviceType: UnityCatalog
+databaseSchemas:
+  - id: c8f79e53-fdb8-4031-b5be-f6279cffa587
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: local_unitycatalog_circular_lineage5.demo.default
+    description: Default schema (auto-created)
+    displayName: default
+    deleted: false
+default: false
+domains: []
+sourceHash: 8a44778e7a6348193ea96b15028fbc8c
+entityStatus: Unprocessed

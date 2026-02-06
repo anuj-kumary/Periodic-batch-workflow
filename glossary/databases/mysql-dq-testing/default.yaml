@@ -1,0 +1,38 @@
+name: default
+fullyQualifiedName: mysql-dq-testing.default
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+databaseSchemas:
+  - id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: mysql-dq-testing.default.information_schema
+    description: <p>test description</p>
+    displayName: information_schema
+    deleted: false
+  - id: d14daac9-6fbe-4ad0-bc35-761e5ccdf8aa
+    type: databaseSchema
+    name: openmetadata
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata
+    displayName: openmetadata
+    deleted: false
+  - id: cd2065ed-4ca9-40e9-b3bc-4650b96aa0f8
+    type: databaseSchema
+    name: performance_schema
+    fullyQualifiedName: mysql-dq-testing.default.performance_schema
+    displayName: performance_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: d8416ce6e83dbdb78582aeb6b0af4794
+entityStatus: Approved
