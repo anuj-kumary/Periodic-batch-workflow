@@ -1,0 +1,57 @@
+name: alert_entity.testSuite
+fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_entity.testSuite
+tests:
+  - id: 5505aaca-0a25-4910-ae9a-06768dca3324
+    type: testCase
+    name: alert_entity_table_column_count_to_be_between_lShe
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_entity.alert_entity_table_column_count_to_be_between_lShe
+    displayName: alert_entity_table_column_count_to_be_between_lShe
+    deleted: false
+  - id: edcb4cd8-c94b-46d7-80e8-7986becb6f51
+    type: testCase
+    name: alert_entity_table_column_name_to_exist_SNEo
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_entity.alert_entity_table_column_name_to_exist_SNEo
+    displayName: alert_entity_table_column_name_to_exist_SNEo
+    deleted: false
+  - id: 0da50d54-ce2e-44d8-b4ed-bc516887025e
+    type: testCase
+    name: alert_entity_table_custom_sql_query_YMdk
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_entity.alert_entity_table_custom_sql_query_YMdk
+    displayName: alert_entity_table_custom_sql_query_YMdk
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: 41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b
+    type: user
+    name: shailesh
+    fullyQualifiedName: shailesh
+    displayName: Shailesh Parmar
+    deleted: false
+basic: true
+basicEntityReference:
+  id: 5c2ccccd-3d52-4254-94c8-e39ea6d5b202
+  type: table
+  name: alert_entity
+  fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_entity
+summary:
+  success: 0
+  failed: 2
+  aborted: 1
+  queued: 0
+  total: 3
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: mysql-dq-testing.default.openmetadata.alert_entity.alert_entity_table_custom_sql_query_YMdk
+    status: Aborted
+    timestamp: 1731417516328
+  - testCaseName: mysql-dq-testing.default.openmetadata.alert_entity.alert_entity_table_column_name_to_exist_SNEo
+    status: Failed
+    timestamp: 1731417516282
+  - testCaseName: mysql-dq-testing.default.openmetadata.alert_entity.alert_entity_table_column_count_to_be_between_lShe
+    status: Failed
+    timestamp: 1731417516238
+domains: []
+tags: []
+inherited: false
+reviewers: []

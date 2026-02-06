@@ -1,0 +1,107 @@
+name: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.testSuite
+fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.testSuite
+tests:
+  - id: cc31134b-a12e-4072-a276-9921660a5af6
+    type: testCase
+    name: Ree
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.Ree
+    displayName: Ree
+    deleted: false
+  - id: fb6a4d5e-b0f9-421b-b97e-7d30626e1c47
+    type: testCase
+    name: RowsMustBeGreat
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.RowsMustBeGreat
+    description: "<p><a data-type=\"mention\" target=\"_blank\" data-id=\"5c220ad3-1d3e-4a9a-884f-3ad523426b4f\"\
+      \ data-label=\"Data\" href=\"https://sandbox-beta.open-metadata.org/settings/members/teams/Data\"\
+      \ data-entitytype=\"team\" data-fqn=\"Data\">&lt;#E.team.Data|[@Data](https://sandbox-beta.open-metadata.org/settings/members/teams/Data)&gt;</a>\
+      \  sadssad</p><p></p>"
+    displayName: RowsMustBeGreat
+    deleted: false
+  - id: 7ec5939f-25d0-4604-a0e7-6b9cf4b3e6de
+    type: testCase
+    name: Sales test 100%
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.Sales test 100%
+    displayName: Sales test 100%
+    deleted: false
+  - id: 5fabd9d9-235d-453d-b98c-555f270f2901
+    type: testCase
+    name: TestingQueuedStatus
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.TestingQueuedStatus
+    displayName: TestingQueuedStatus
+    deleted: false
+  - id: 8249c747-19be-4c0b-a8e8-d6e5a3a76622
+    type: testCase
+    name: ref 7%table#column$count | to-be=between & g_9_nu
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.ref 7%table#column$count
+      | to-be=between & g_9_nu
+    displayName: ref 7%table#column$count | to-be=between & g_9_nu
+    deleted: false
+  - id: 2d9ae53d-a557-4f42-af9c-839030b168cd
+    type: testCase
+    name: ref_7_table_column_count_to_be_between_x_wn_6
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.ref_7_table_column_count_to_be_between_x_wn_6
+    displayName: ref_7_table_column_count_to_be_between_x_wn_6
+    deleted: false
+  - id: 6bf33e41-01c2-4336-bdfb-e984e46e875c
+    type: testCase
+    name: ref_7_table_column_count_to_equal_fb_ff_test_harshit
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.ref_7_table_column_count_to_equal_fb_ff_test_harshit
+    displayName: ref_7_table_column_count_to_equal_fb_ff_test_harshit
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: f7971c49-bca7-48fb-bb1a-821a1e2c5802
+    type: user
+    name: prajwal161998
+    fullyQualifiedName: prajwal161998
+    displayName: prajwal161998
+    deleted: false
+    inherited: true
+basic: true
+basicEntityReference:
+  id: c42bca78-aaca-4383-a77a-15177afc7a78
+  type: table
+  name: REF7
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7
+summary:
+  success: 2
+  failed: 5
+  aborted: 0
+  queued: 0
+  total: 7
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.ref 7%table#column$count
+      | to-be=between & g_9_nu
+    status: Failed
+    timestamp: 1763942540609
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.TestingQueuedStatus
+    status: Success
+    timestamp: 1763942541091
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.ref_7_table_column_count_to_be_between_x_wn_6
+    status: Failed
+    timestamp: 1763942540717
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.Ree
+    status: Success
+    timestamp: 1763942540512
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.Sales test 100%
+    status: Failed
+    timestamp: 1763942540997
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.ref_7_table_column_count_to_equal_fb_ff_test_harshit
+    status: Failed
+    timestamp: 1763942540809
+  - testCaseName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.REF7.RowsMustBeGreat
+    status: Failed
+    timestamp: 1763942540904
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+tags: []
+inherited: false
+reviewers: []

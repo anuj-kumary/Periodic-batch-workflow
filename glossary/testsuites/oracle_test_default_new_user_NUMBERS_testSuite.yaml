@@ -1,0 +1,46 @@
+name: NUMBERS.testSuite
+fullyQualifiedName: oracle_test.default.new_user.NUMBERS.testSuite
+tests:
+  - id: 3d96c7e0-0483-4f00-9256-baa6f3da794c
+    type: testCase
+    name: NUMBERS_table_diff_cuBV
+    fullyQualifiedName: oracle_test.default.new_user.NUMBERS.NUMBERS_table_diff_cuBV
+    displayName: NUMBERS_table_diff_cuBV
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: e31dc062-635f-4fc5-b727-2d4b7cb25753
+    type: user
+    name: imri.paran
+    fullyQualifiedName: '"imri.paran"'
+    displayName: Imri Paran
+    deleted: false
+basic: true
+basicEntityReference:
+  id: 047a6229-c651-4fb7-b0ef-c325f7dc6152
+  type: table
+  name: NUMBERS
+  fullyQualifiedName: oracle_test.default.new_user.NUMBERS
+summary:
+  success: 0
+  failed: 0
+  aborted: 1
+  queued: 0
+  total: 1
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: oracle_test.default.new_user.NUMBERS.NUMBERS_table_diff_cuBV
+    status: Aborted
+    timestamp: 1736294514060
+domains:
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+    inherited: true
+tags: []
+inherited: false
+reviewers: []

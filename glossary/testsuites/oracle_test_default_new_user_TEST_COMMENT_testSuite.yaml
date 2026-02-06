@@ -1,0 +1,39 @@
+name: TEST_COMMENT.testSuite
+fullyQualifiedName: oracle_test.default.new_user.TEST_COMMENT.testSuite
+tests:
+  - id: ddb73fb6-7258-4988-aff7-aa12b3e2db0c
+    type: testCase
+    name: TEST_COMMENT_table_diff_7UIL
+    fullyQualifiedName: oracle_test.default.new_user.TEST_COMMENT.TEST_COMMENT_table_diff_7UIL
+    displayName: TEST_COMMENT_table_diff_7UIL
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: e31dc062-635f-4fc5-b727-2d4b7cb25753
+    type: user
+    name: imri.paran
+    fullyQualifiedName: '"imri.paran"'
+    displayName: Imri Paran
+    deleted: false
+basic: true
+basicEntityReference:
+  id: 66fdc297-ab5a-4f60-a762-ab50a1428923
+  type: table
+  name: TEST_COMMENT
+  fullyQualifiedName: oracle_test.default.new_user.TEST_COMMENT
+summary:
+  success: 0
+  failed: 0
+  aborted: 1
+  queued: 0
+  total: 1
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: oracle_test.default.new_user.TEST_COMMENT.TEST_COMMENT_table_diff_7UIL
+    status: Aborted
+    timestamp: 1736294462769
+domains: []
+tags: []
+inherited: false
+reviewers: []

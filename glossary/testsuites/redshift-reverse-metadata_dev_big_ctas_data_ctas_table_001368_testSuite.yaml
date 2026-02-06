@@ -1,0 +1,49 @@
+name: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368.testSuite
+fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368.testSuite
+tests:
+  - id: 40db2cbd-4950-4e0d-96ee-b4fa9e1be9a3
+    type: testCase
+    name: TestingTestCaseDQ
+    fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368.TestingTestCaseDQ
+    displayName: TestingTestCaseDQ
+    deleted: false
+  - id: 29ac26e9-ab72-4978-a026-165af2cbe813
+    type: testCase
+    name: ctas_table_001368_table_row_count_to_equal_fz_wp
+    fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368.ctas_table_001368_table_row_count_to_equal_fz_wp
+    displayName: ctas_table_001368_table_row_count_to_equal_fz_wp
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: f14f17bf-0923-4234-8e73-2dcc051f2adc
+    type: user
+    name: admin
+    fullyQualifiedName: admin
+    displayName: admin
+    deleted: false
+    inherited: true
+basic: true
+basicEntityReference:
+  id: 455a8382-2f4c-4c01-a021-f774553b9545
+  type: table
+  name: ctas_table_001368
+  fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368
+summary:
+  success: 0
+  failed: 2
+  aborted: 0
+  queued: 0
+  total: 2
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368.TestingTestCaseDQ
+    status: Failed
+    timestamp: 1755821123354
+  - testCaseName: redshift-reverse-metadata.dev.big_ctas_data.ctas_table_001368.ctas_table_001368_table_row_count_to_equal_fz_wp
+    status: Failed
+    timestamp: 1755821120365
+domains: []
+tags: []
+inherited: false
+reviewers: []

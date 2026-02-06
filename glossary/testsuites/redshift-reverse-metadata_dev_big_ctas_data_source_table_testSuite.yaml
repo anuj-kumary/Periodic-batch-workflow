@@ -1,0 +1,33 @@
+name: redshift-reverse-metadata.dev.big_ctas_data.source_table.testSuite
+fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.source_table.testSuite
+tests:
+  - id: d20829fc-ef65-4c79-80f8-f126a89c4977
+    type: testCase
+    name: source_table_table_column_count_to_be_between_0_vs_r
+    fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.source_table.source_table_table_column_count_to_be_between_0_vs_r
+    displayName: source_table_table_column_count_to_be_between_0_vs_r
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners: []
+basic: true
+basicEntityReference:
+  id: 19d6651c-46fc-4654-8807-a62b2b4ca1cf
+  type: table
+  name: source_table
+  fullyQualifiedName: redshift-reverse-metadata.dev.big_ctas_data.source_table
+summary:
+  success: 0
+  failed: 1
+  aborted: 0
+  queued: 0
+  total: 1
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: redshift-reverse-metadata.dev.big_ctas_data.source_table.source_table_table_column_count_to_be_between_0_vs_r
+    status: Failed
+    timestamp: 1757924848832
+domains: []
+tags: []
+inherited: false
+reviewers: []

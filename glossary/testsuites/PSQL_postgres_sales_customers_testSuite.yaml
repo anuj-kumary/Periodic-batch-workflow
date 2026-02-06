@@ -1,0 +1,46 @@
+name: customers.testSuite
+fullyQualifiedName: PSQL.postgres.sales.customers.testSuite
+tests:
+  - id: 92a67243-a91a-4498-98f5-39345909ca1e
+    type: testCase
+    name: customers_table_column_count_to_be_between_eeeF
+    fullyQualifiedName: PSQL.postgres.sales.customers.customers_table_column_count_to_be_between_eeeF
+    displayName: customers_table_column_count_to_be_between_eeeF_display_name
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: 41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b
+    type: user
+    name: shailesh
+    fullyQualifiedName: shailesh
+    displayName: Shailesh Parmar
+    deleted: false
+basic: true
+basicEntityReference:
+  id: 5402104a-a8bc-4856-bfd3-d87ee57c3455
+  type: table
+  name: customers
+  fullyQualifiedName: PSQL.postgres.sales.customers
+summary:
+  success: 0
+  failed: 1
+  aborted: 0
+  queued: 0
+  total: 1
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: PSQL.postgres.sales.customers.customers_table_column_count_to_be_between_eeeF
+    status: Failed
+    timestamp: 1747390087534
+domains:
+  - id: e0c57bf5-9e9c-4757-9a2b-3303af44361e
+    type: domain
+    name: Sub Domain Pere
+    fullyQualifiedName: Domain Pere.Sub Domain Pere
+    description: asd
+    displayName: Sub Domain Pere
+    inherited: true
+tags: []
+inherited: false
+reviewers: []

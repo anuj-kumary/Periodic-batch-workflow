@@ -1,0 +1,36 @@
+name: red-test-dc.dev.dbt_jaffle.stg_customers.testSuite
+fullyQualifiedName: red-test-dc.dev.dbt_jaffle.stg_customers.testSuite
+tests:
+  - id: 0d137b55-1813-4c40-8d9c-03c3758b821c
+    type: testCase
+    name: stg_customers_table_diff_u_ws_s
+    fullyQualifiedName: red-test-dc.dev.dbt_jaffle.stg_customers.stg_customers_table_diff_u_ws_s
+    displayName: stg_customers_table_diff_u_ws_s
+    deleted: false
+  - id: 5a403326-7740-4229-88a3-5c0158953098
+    type: testCase
+    name: stg_customers_table_diff_wz_ym
+    fullyQualifiedName: red-test-dc.dev.dbt_jaffle.stg_customers.stg_customers_table_diff_wz_ym
+    displayName: stg_customers_table_diff_wz_ym
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners: []
+basic: true
+basicEntityReference:
+  id: 74bf78be-cea8-4779-b0f1-30b1ee087b70
+  type: table
+  name: stg_customers
+  fullyQualifiedName: red-test-dc.dev.dbt_jaffle.stg_customers
+summary:
+  success: 0
+  failed: 0
+  aborted: 0
+  queued: 0
+  total: 0
+  columnTestSummary: []
+testCaseResultSummary: []
+domains: []
+tags: []
+inherited: false
+reviewers: []

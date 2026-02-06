@@ -1,0 +1,36 @@
+name: PSQL.postgres.imri_test.financial.testSuite
+fullyQualifiedName: PSQL.postgres.imri_test.financial.testSuite
+tests:
+  - id: a37c76de-900c-4908-884b-4be937c94f6d
+    type: testCase
+    name: financial_table_column_count_to_be_between_AziN
+    fullyQualifiedName: PSQL.postgres.imri_test.financial.financial_table_column_count_to_be_between_AziN
+    displayName: financial_table_column_count_to_be_between_AziN
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: 41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b
+    type: user
+    name: shailesh
+    fullyQualifiedName: shailesh
+    displayName: Shailesh Parmar
+    deleted: false
+basic: true
+basicEntityReference:
+  id: e75d2b27-4ff2-45eb-914d-d1cc4dec3ef8
+  type: table
+  name: financial
+  fullyQualifiedName: PSQL.postgres.imri_test.financial
+summary:
+  success: 0
+  failed: 0
+  aborted: 0
+  queued: 0
+  total: 0
+  columnTestSummary: []
+testCaseResultSummary: []
+domains: []
+tags: []
+inherited: false
+reviewers: []

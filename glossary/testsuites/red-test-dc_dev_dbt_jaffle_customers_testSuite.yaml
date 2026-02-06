@@ -1,0 +1,48 @@
+name: red-test-dc.dev.dbt_jaffle.customers.testSuite
+fullyQualifiedName: red-test-dc.dev.dbt_jaffle.customers.testSuite
+tests:
+  - id: e3b08413-b63b-4391-a272-a6563dea5a71
+    type: testCase
+    name: rows
+    fullyQualifiedName: red-test-dc.dev.dbt_jaffle.customers.rows
+    displayName: rows
+    deleted: false
+pipelines: []
+serviceType: TestSuite
+owners:
+  - id: 64236ffb-0fa6-41c8-a94a-bdd2208c8dd1
+    type: user
+    name: nikhilctest
+    fullyQualifiedName: nikhilctest
+    description: ""
+    displayName: Nikhil Test
+    deleted: false
+    inherited: true
+basic: true
+basicEntityReference:
+  id: a3ccd006-0945-4a41-934a-72cc4561c4ea
+  type: table
+  name: customers
+  fullyQualifiedName: red-test-dc.dev.dbt_jaffle.customers
+summary:
+  success: 0
+  failed: 1
+  aborted: 0
+  queued: 0
+  total: 1
+  columnTestSummary: []
+testCaseResultSummary:
+  - testCaseName: red-test-dc.dev.dbt_jaffle.customers.rows
+    status: Failed
+    timestamp: 1755821986645
+domains:
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+    inherited: true
+tags: []
+inherited: false
+reviewers: []
