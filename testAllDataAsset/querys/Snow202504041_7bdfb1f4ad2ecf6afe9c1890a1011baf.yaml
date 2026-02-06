@@ -1,0 +1,37 @@
+name: 7bdfb1f4ad2ecf6afe9c1890a1011baf
+fullyQualifiedName: Snow202504041.7bdfb1f4ad2ecf6afe9c1890a1011baf
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"4839bd63-c320-4bb6-84b6-e6cd18b56d28\",\"type\":\"table\"\
+        ,\"name\":\"STG_CUSTOMERS\",\"fullyQualifiedName\":\"Snow202504041.CUSTOMERS.JAFFLE_SHOP.STG_CUSTOMERS\"\
+        ,\"displayName\":\"STG_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 104.0
+users: []
+query: "SELECT \"JAFFLE_SHOP\".\"STG_CUSTOMERS\".\"CUSTOMER_ID\" AS \"JAFFLE_SHOP_STG_CUSTOMERS_CUSTOMER_ID\"\
+  , \"JAFFLE_SHOP\".\"STG_CUSTOMERS\".\"FIRST_NAME\" AS \"JAFFLE_SHOP_STG_CUSTOMERS_FIRST_NAME\"\
+  , \"JAFFLE_SHOP\".\"STG_CUSTOMERS\".\"LAST_NAME\" AS \"JAFFLE_SHOP_STG_CUSTOMERS_LAST_NAME\"\
+  \ \nFROM \"JAFFLE_SHOP\".\"STG_CUSTOMERS\"\n LIMIT ?"
+checksum: 7bdfb1f4ad2ecf6afe9c1890a1011baf
+queryDate: 1743638400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 4839bd63-c320-4bb6-84b6-e6cd18b56d28
+    type: table
+    name: STG_CUSTOMERS
+    fullyQualifiedName: Snow202504041.CUSTOMERS.JAFFLE_SHOP.STG_CUSTOMERS
+    displayName: STG_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: e041515c-b7c3-4820-b885-33947a571d2d
+  type: databaseService
+  name: Snow202504041
+  fullyQualifiedName: Snow202504041

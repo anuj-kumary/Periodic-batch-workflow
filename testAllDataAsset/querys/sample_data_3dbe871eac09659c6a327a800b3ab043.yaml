@@ -1,0 +1,66 @@
+name: 3dbe871eac09659c6a327a800b3ab043
+fullyQualifiedName: sample_data.3dbe871eac09659c6a327a800b3ab043
+description: |-
+  Select all columns from the dim_customer table.
+  Filter rows where total_order_count is greater than 5319.
+  Add an additional filter to include only rows where average_order_size is less than 1569.
+owners:
+  - id: 9cd9a536-ab77-4d73-bb65-cc71ed8a85ac
+    type: user
+    name: sachin
+    fullyQualifiedName: sachin
+    displayName: Sachin Chaurasiya
+    deleted: false
+users: []
+query: |
+  SELECT *
+  FROM ecommerce_db.shopify.dim_customer
+  WHERE
+      total_order_count > 5319 AND average_order_size < 1569
+checksum: 3dbe871eac09659c6a327a800b3ab043
+queryDate: 1721912733637
+usedBy: []
+tags:
+  - tagFQN: '`custom`.tag1'
+    name: tag1
+    displayName: tag1
+    description: <p>tag1</p>
+    style:
+      color: "#fd3f3f"
+      iconURL: https://cdn-icons-png.flaticon.com/512/9029/9029931.png
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: testexclusive.exclusive-2
+    name: exclusive-2
+    displayName: exclusive 2
+    description: exclusive
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+queryUsedIn:
+  - id: 555cc79f-50fd-4cf4-a903-da52f101dcc1
+    type: table
+    name: dim_customer
+    fullyQualifiedName: sample_data.ecommerce_db.shopify.dim_customer
+    description: "The dimension table contains data about your customers. The customers\
+      \ table contains one row per customer. It includes historical metrics (such\
+      \ as the total amount that each customer has spent in your store) as well as\
+      \ forward-looking metrics (such as the predicted number of days between future\
+      \ orders and the expected order value in the next 30 days). This table also\
+      \ includes columns that segment customers into various categories (such as new,\
+      \ returning, promising, at risk, dormant, and loyal), which you can use to target\
+      \ marketing activities."
+    displayName: dim_customer
+    deleted: false
+processedLineage: false
+service:
+  id: 75199480-3d06-4b6f-89d2-e8805ebe8d01
+  type: databaseService
+  name: sample_data
+  fullyQualifiedName: sample_data

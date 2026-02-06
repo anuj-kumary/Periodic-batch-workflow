@@ -1,0 +1,39 @@
+name: 5d0711dd36909632ae0866ce8285c81f
+fullyQualifiedName: sample_data.5d0711dd36909632ae0866ce8285c81f
+owners:
+  - id: 50527e0b-d90f-498a-ae53-3c499885e78f
+    type: user
+    name: nikhil.chennam
+    fullyQualifiedName: '"nikhil.chennam"'
+    displayName: nikhil.chennam
+    deleted: false
+users: []
+query: |-
+  SELECT * FROM ecommerce_db.shopify.dim_address
+  WHERE zip NOT BETWEEN 90001 AND 96162
+  LIMIT 50;
+checksum: 5d0711dd36909632ae0866ce8285c81f
+queryDate: 1765457147363
+usedBy: []
+tags: []
+queryUsedIn:
+  - id: d31b12a1-84c6-43f6-8b83-e07ea6dfc2e6
+    type: table
+    name: dim_address
+    fullyQualifiedName: sample_data.ecommerce_db.shopify.dim_address
+    description: "This dimension table contains the billing and shipping addresses\
+      \ of customers. You can join this table with the sales table to generate lists\
+      \ of the billing and shipping addresses. Customers can enter their addresses\
+      \ more than once, so the same address can appear in more than one row in this\
+      \ table. This table contains one row per customer address."
+    displayName: dim_address
+    deleted: false
+processedLineage: false
+service:
+  id: 75199480-3d06-4b6f-89d2-e8805ebe8d01
+  type: databaseService
+  name: sample_data
+  fullyQualifiedName: sample_data
+  displayName: sample_data
+  deleted: false
+entityStatus: Unprocessed
