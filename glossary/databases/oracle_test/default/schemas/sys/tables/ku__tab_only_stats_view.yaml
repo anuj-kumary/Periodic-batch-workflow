@@ -1,0 +1,175 @@
+name: ku$_tab_only_stats_view
+fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view
+tableType: View
+columns:
+  - name: obj_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.obj_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trigflag
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.trigflag
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tabname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.tabname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partname
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.partname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: subpartname
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.subpartname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bobj_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(1,0)"
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.bobj_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sysgen_cols
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.sysgen_cols
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blkcnt
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.blkcnt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rowcnt
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.rowcnt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: avgrln
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.avgrln
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sample_size
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.sample_size
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: analyzetime
+    dataType: VARCHAR
+    dataLength: 19
+    dataTypeDisplay: varchar2(19)
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.analyzetime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cache_info
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_cached_stats_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.cache_info
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: col_stats
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_col_stats_list_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_tab_only_stats_view.col_stats
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 083e7bcdc2e6eb0506edd64edc6b23c3
+processedLineage: false
+entityStatus: Approved
