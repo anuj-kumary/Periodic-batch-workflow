@@ -1,0 +1,68 @@
+name: demo_data_ext_tbl2
+fullyQualifiedName: DBX_TEXT.demo.default.demo_data_ext_tbl2
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: DBX_TEXT.demo.default.demo_data_ext_tbl2.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.default.demo_data_ext_tbl2.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.default.demo_data_ext_tbl2.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 99cfd595-fc4c-4f27-a124-e263fa985aab
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DBX_TEXT.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a2e7a2a13eb1007fa0556016bd0600d2
+processedLineage: false
+entityStatus: Approved

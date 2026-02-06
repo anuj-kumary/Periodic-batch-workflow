@@ -1,0 +1,114 @@
+name: customeraccounts
+fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts
+tableType: Regular
+columns:
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts.accountid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: firstname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts.firstname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lastname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts.lastname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: balance
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts.balance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: e889bd29-5d4a-4ca1-acc8-52e1f86cab65
+  type: databaseSchema
+  name: stg
+  fullyQualifiedName: dbx - keshav.demo.stg
+  displayName: stg
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/7f819925-17e0-48fa-ba4f-b9109bdefefb
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: c7e3afdabd4c30e67f962e1500a8da7a
+processedLineage: false
+entityStatus: Unprocessed

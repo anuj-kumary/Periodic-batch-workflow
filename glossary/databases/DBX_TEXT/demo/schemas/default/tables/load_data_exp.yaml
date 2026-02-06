@@ -1,0 +1,113 @@
+name: load_data_exp
+fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp
+tableType: Regular
+columns:
+  - name: customerid
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customername
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.customername
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: city
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.city
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: country
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.country
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: territory
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.territory
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactfirstname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.contactfirstname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactlastname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: DBX_TEXT.demo.default.load_data_exp.contactlastname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 99cfd595-fc4c-4f27-a124-e263fa985aab
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DBX_TEXT.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 81ae68650c2fbecbdcbca8c63da8af2f
+processedLineage: false
+entityStatus: Approved

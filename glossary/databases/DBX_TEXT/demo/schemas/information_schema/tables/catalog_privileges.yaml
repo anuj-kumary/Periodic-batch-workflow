@@ -1,0 +1,124 @@
+name: catalog_privileges
+fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges
+description: <p>Lists principals that have privileges on the catalogs. </p>
+tableType: View
+columns:
+  - name: grantor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal that granted the privilege.
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges.grantor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: grantee
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal to which the privilege is granted.
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges.grantee
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: catalog_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog on which the privilege is granted.
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges.catalog_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: privilege_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Privilege being granted.
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges.privilege_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_grantable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use.
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges.is_grantable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inherited_from
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The ancestor relation that the privilege is inherited from.
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.catalog_privileges.inherited_from
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 02572492-b9af-4e28-8231-b6d311e81d51
+    type: team
+    name: abc.def.ghi
+    fullyQualifiedName: '"abc.def.ghi"'
+    description: ""
+    displayName: abc.def.ghi
+    deleted: false
+databaseSchema:
+  id: 2cc90cac-2293-4dad-afa4-9ce5b3a8c46b
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DBX_TEXT.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: description
+      oldValue: Lists principals that have privileges on the catalogs.
+      newValue: <p>Lists principals that have privileges on the catalogs. </p>
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    owners:
+      changedBy: harsh.vador
+      changedAt: 1764067461208
+    description:
+      changedBy: harsh.vador
+      changedAt: 1764067484024
+domains: []
+dataProducts: []
+sourceHash: bed9c83c5cf8ddeba97b8a1297e42335
+processedLineage: false
+entityStatus: Approved

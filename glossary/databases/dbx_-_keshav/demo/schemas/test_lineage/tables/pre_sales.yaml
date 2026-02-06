@@ -1,0 +1,86 @@
+name: pre_sales
+fullyQualifiedName: dbx - keshav.demo.test_lineage.pre_sales
+description: Raw/pre-staged sales input
+tableType: Regular
+columns:
+  - name: id
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.pre_sales.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.pre_sales.order_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.pre_sales.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(12,2)"
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.pre_sales.amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 2deef982-ed00-48f4-9640-986c01418124
+    type: user
+    name: harsh.soni
+    fullyQualifiedName: '"harsh.soni"'
+    displayName: harsh.soni
+    deleted: false
+databaseSchema:
+  id: 11fc7fcd-1f47-43f4-951f-507cba46a871
+  type: databaseSchema
+  name: test_lineage
+  fullyQualifiedName: dbx - keshav.demo.test_lineage
+  description: test lineage upstream/downstream
+  displayName: test_lineage
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/a5ecc5c1-04b5-4a3c-bef7-c340824ec241
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fc21c3922320f7f7c56bbef084e5b73b
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,58 @@
+name: example_table
+fullyQualifiedName: DBX_TEXT.demo.default.example_table
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: DBX_TEXT.demo.default.example_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: values
+    dataType: ARRAY
+    arrayDataType: "NULL"
+    dataTypeDisplay: array<void>
+    fullyQualifiedName: DBX_TEXT.demo.default.example_table.values
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 99cfd595-fc4c-4f27-a124-e263fa985aab
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DBX_TEXT.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fbce62bcd7b30874b2bb073c6f00a6ac
+processedLineage: false
+entityStatus: Approved

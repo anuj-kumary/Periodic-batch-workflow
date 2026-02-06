@@ -1,0 +1,49 @@
+name: dcc_pitches_v2_iceberg
+fullyQualifiedName: dbx - keshav.demo.uniform_schema.dcc_pitches_v2_iceberg
+tableType: Regular
+columns: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 44eb96a5-3770-488f-9aae-7a4df8401aeb
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: dbx - keshav.demo.uniform_schema
+  description: uniform schema demo
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/ecf69bfe-69dd-4b58-a920-2cb633934cdf
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 39b57eed83577671f6a7d2fd96d8227f
+processedLineage: false
+entityStatus: Unprocessed

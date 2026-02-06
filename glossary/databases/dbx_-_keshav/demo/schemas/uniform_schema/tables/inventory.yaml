@@ -1,0 +1,112 @@
+name: inventory
+fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory
+tableType: Regular
+columns:
+  - name: inventory_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.inventory_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: product_sku
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.product_sku
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: warehouse_location
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.warehouse_location
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: quantity_available
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.quantity_available
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_restocked_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.last_restocked_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.created_at
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updated_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.inventory.updated_at
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 44eb96a5-3770-488f-9aae-7a4df8401aeb
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: dbx - keshav.demo.uniform_schema
+  description: uniform schema demo
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/6e5f560d-3a1e-4e5a-b4a2-cd790fd6e201
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: c09e392848b153392a07fd9754a1b129
+processedLineage: false
+entityStatus: Unprocessed

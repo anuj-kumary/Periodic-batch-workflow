@@ -1,0 +1,113 @@
+name: s3_tbl
+fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.CUSTOMERID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMERNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.CUSTOMERNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.EMAIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CITY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.CITY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.COUNTRY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TERRITORY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.TERRITORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTACTFIRSTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.CONTACTFIRSTNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTACTLASTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.s3_tbl.CONTACTLASTNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: de4cee1a-5f85-472d-aa5b-d9ffe1b75785
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: DBX_TEXT.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ed41c56e89759136eb512e43326e4601
+processedLineage: false
+entityStatus: Approved

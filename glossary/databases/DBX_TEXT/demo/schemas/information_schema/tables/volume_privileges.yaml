@@ -1,0 +1,113 @@
+name: volume_privileges
+fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges
+tableType: View
+columns:
+  - name: grantor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.grantor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: grantee
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.grantee
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: volume_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.volume_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: volume_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.volume_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: volume_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.volume_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: privilege_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.privilege_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_grantable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.is_grantable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inherited_from
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DBX_TEXT.demo.information_schema.volume_privileges.inherited_from
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2cc90cac-2293-4dad-afa4-9ce5b3a8c46b
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DBX_TEXT.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ae627781148d9e3e8d9f3f62f48dda15
+processedLineage: false
+entityStatus: Approved
