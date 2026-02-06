@@ -1,0 +1,114 @@
+name: my_table
+fullyQualifiedName: demo_unity.demo.new_schema.my_table
+description: <p>test desc2</p>
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: demo_unity.demo.new_schema.my_table.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: age
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: demo_unity.demo.new_schema.my_table.age
+    tags: []
+    children: []
+    customMetrics: []
+  - name: alert_test
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: demo_unity.demo.new_schema.my_table.alert_test
+    tags: []
+    children: []
+    customMetrics: []
+  - name: alert_test_two
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: demo_unity.demo.new_schema.my_table.alert_test_two
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c
+    type: user
+    name: 23saints23
+    fullyQualifiedName: 23saints23
+    displayName: 23saints23
+    deleted: false
+databaseSchema:
+  id: 69281bac-c4b7-4c0d-bb42-33ebe79ee68a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: demo_unity.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns
+      newValue: "[{\"name\":\"age\",\"dataType\":\"INT\",\"dataLength\":1,\"dataTypeDisplay\"\
+        :\"int\",\"fullyQualifiedName\":\"demo_unity.demo.new_schema.my_table.age\"\
+        ,\"tags\":[]},{\"name\":\"alert_test\",\"dataType\":\"INT\",\"dataLength\"\
+        :1,\"dataTypeDisplay\":\"int\",\"fullyQualifiedName\":\"demo_unity.demo.new_schema.my_table.alert_test\"\
+        ,\"tags\":[]},{\"name\":\"alert_test_two\",\"dataType\":\"INT\",\"dataLength\"\
+        :1,\"dataTypeDisplay\":\"int\",\"fullyQualifiedName\":\"demo_unity.demo.new_schema.my_table.alert_test_two\"\
+        ,\"tags\":[]}]"
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: d3244e12212f36a499f1b58028421759
+      newValue: 388c4c09da79124acd89fd9112b2af95
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: imri.paran
+      changedAt: 1743430850461
+domains: []
+dataProducts: []
+certification:
+  tagLabel:
+    tagFQN: Certification.Bronze
+    name: Bronze
+    displayName: Bronze_medal
+    description: Bronze certified Data Asset test
+    style:
+      color: "#C08329"
+      iconURL: BronzeCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1732805856088
+  expiryDate: 1735397856088
+sourceHash: 388c4c09da79124acd89fd9112b2af95
+processedLineage: false
+entityStatus: Approved

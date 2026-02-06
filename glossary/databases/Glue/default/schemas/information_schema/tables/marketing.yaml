@@ -1,0 +1,120 @@
+name: marketing
+fullyQualifiedName: Glue.default.information_schema.marketing
+description: Marketing data
+tableType: Iceberg
+columns:
+  - name: ad_id
+    dataType: NUMERIC
+    dataTypeDisplay: bigint
+    description: Ad ID
+    fullyQualifiedName: Glue.default.information_schema.marketing.ad_id
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: campaign_id
+    dataType: NUMERIC
+    dataTypeDisplay: bigint
+    description: campaign ID
+    fullyQualifiedName: Glue.default.information_schema.marketing.campaign_id
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+owners:
+  - id: 089347d6-806c-4a27-8b95-9d101d0d3667
+    type: user
+    name: bethbryant
+    fullyQualifiedName: bethbryant
+    displayName: Aaron Alexander
+    deleted: false
+  - id: 5aef0524-79a1-4935-93f2-98ac9ee2e5ea
+    type: user
+    name: karan
+    fullyQualifiedName: karan
+    displayName: Karan Hotchandani
+    deleted: false
+  - id: d0107fe9-afbe-4966-914f-bfec7dfc5861
+    type: user
+    name: wilsondanny
+    fullyQualifiedName: wilsondanny
+    displayName: Aaron Baker
+    deleted: false
+databaseSchema:
+  id: 39629edf-78d2-4dc6-ad3f-c0c72d6bc079
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Glue.default.information_schema
+  description: This **mock** database contains tables related to the Glue service
+  displayName: information_schema
+  deleted: false
+database:
+  id: b3c43721-b319-4f9b-a869-9fb0d25cdd8f
+  type: database
+  name: default
+  fullyQualifiedName: Glue.default
+  description: This **mock** database contains tables related to the Glue service
+  displayName: default
+  deleted: false
+service:
+  id: bf51b977-9cdd-4091-89e5-60e6f1d476a5
+  type: databaseService
+  name: Glue
+  fullyQualifiedName: Glue
+  displayName: Glue2
+  deleted: false
+serviceType: Glue
+tags:
+  - tagFQN: Tier.Tier1
+    name: Tier1
+    description: |-
+      **Critical Source of Truth business data assets of an organization**
+
+      - Used in critical metrics and dashboards to drive business and product decisions
+
+      - Used in critical compliance reporting to regulators, govt entities, and third party
+
+      - Used in brand or revenue impacting online user-facing experiences (search results, advertisement, promotions, and experimentation)
+
+      - Other high impact use, such as ML models and fraud detection
+
+      - Source used to derive other critical Tier-1 datasets
+    style:
+      color: "#ec1313"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: entityStatus
+      oldValue: Approved
+      newValue: Unprocessed
+  fieldsDeleted: []
+  previousVersion: 1.2
+  changeSummary:
+    owners:
+      changedBy: karan
+      changedAt: 1746332111585
+    columns.ad_id.description:
+      changedBy: karan
+      changedAt: 1746324365493
+sourceUrl: https://www.glue.com/marketing
+domains:
+  - id: e3f8138b-8db5-4850-807c-585cc86f4185
+    type: domain
+    name: Domain2
+    fullyQualifiedName: Domain2
+    description: <p>Domain2</p>
+    displayName: Domain2
+dataProducts: []
+processedLineage: false
+entityStatus: Unprocessed

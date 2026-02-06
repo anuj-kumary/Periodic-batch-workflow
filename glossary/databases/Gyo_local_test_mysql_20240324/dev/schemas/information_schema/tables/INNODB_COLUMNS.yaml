@@ -1,0 +1,113 @@
+name: INNODB_COLUMNS
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS
+tableType: View
+columns:
+  - name: TABLE_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.TABLE_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: POS
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.POS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MTYPE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.MTYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PRTYPE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.PRTYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: LEN
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.LEN
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: HAS_DEFAULT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.HAS_DEFAULT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DEFAULT_VALUE
+    dataType: MEDIUMBLOB
+    dataLength: 1
+    dataTypeDisplay: mediumblob
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_COLUMNS.DEFAULT_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9e811127224ac3b5adc788c59f0ae1af
+processedLineage: false
+entityStatus: Approved

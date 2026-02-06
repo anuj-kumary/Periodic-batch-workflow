@@ -1,0 +1,133 @@
+name: comments_test
+fullyQualifiedName: demo_unity.demo.new_schema.comments_test
+description: "The 'comments_test' table is designed to hold data related to user comments\
+  \ on various test items. It includes information such as the unique identifier of\
+  \ each comment and a complex column that stores additional data related to the comment.\
+  \ This table can be useful for analyzing user feedback on tests, identifying common\
+  \ issues or areas of improvement, and tracking changes over time in user comments."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: new comm
+    fullyQualifiedName: demo_unity.demo.new_schema.comments_test.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: complex_col
+    dataType: STRUCT
+    dataLength: 1
+    dataTypeDisplay: "struct<b1:int,b2:struct<b11:int>>"
+    description: demo com
+    fullyQualifiedName: demo_unity.demo.new_schema.comments_test.complex_col
+    tags: []
+    children:
+      - name: b1
+        dataType: INT
+        dataTypeDisplay: int
+        description: inner comment 11
+        fullyQualifiedName: demo_unity.demo.new_schema.comments_test.complex_col.b1
+        tags: []
+        children: []
+      - name: b2
+        dataType: STRUCT
+        dataTypeDisplay: struct<b11:int>
+        description: inner comment 12
+        fullyQualifiedName: demo_unity.demo.new_schema.comments_test.complex_col.b2
+        tags: []
+        children:
+          - name: b11
+            dataType: INT
+            dataTypeDisplay: int
+            description: inner comment 21
+            fullyQualifiedName: demo_unity.demo.new_schema.comments_test.complex_col.b2.b11
+            tags: []
+            children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 69281bac-c4b7-4c0d-bb42-33ebe79ee68a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: demo_unity.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags:
+  - tagFQN: SENSITIVE.Sensitive
+    name: Sensitive
+    description: SNOWFLAKE TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: STAGE.production
+    name: production
+    description: SNOWFLAKE TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 3826d66b-a875-4ca6-9f2a-76843b8eb36e
+  type: testSuite
+  name: demo_unity.demo.new_schema.comments_test.testSuite
+  fullyQualifiedName: demo_unity.demo.new_schema.comments_test.testSuite
+  displayName: demo_unity.demo.new_schema.comments_test.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: tags
+      oldValue: "[{\"tagFQN\":\"Tier.Tier5\",\"name\":\"Tier5\",\"description\":\"\
+        **Private/Unused data assets - No impact beyond individual users**\\n\\n-\
+        \ Data assets without any ownership with no usage in the last 60 days\\n\\\
+        n- Data assets owned by individuals without team ownership\\n\\n\",\"source\"\
+        :\"Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"}]"
+  previousVersion: 0.6
+  changeSummary: {}
+domains: []
+dataProducts: []
+certification:
+  tagLabel:
+    tagFQN: Certification.Gold
+    name: Gold
+    description: Gold certified Data Asset.
+    style:
+      color: "#FFCE00"
+      iconURL: GoldCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1732805856416
+  expiryDate: 1735397856416
+sourceHash: 8d588a13d51b66162364a4235aa3d0a0
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,342 @@
+name: cloudfront_logs2
+fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2
+description: TEST DESCRIPTION
+tableType: External
+columns:
+  - name: date
+    displayName: date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: TEST COMMENT 1
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.date
+    tags: []
+    children: []
+    customMetrics: []
+  - name: time
+    displayName: time
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.time
+    tags: []
+    children: []
+    customMetrics: []
+  - name: location
+    displayName: location
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: NEW LOC
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.location
+    tags: []
+    children: []
+    customMetrics: []
+  - name: bytes
+    displayName: bytes
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: TEST BYTES
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.bytes
+    tags: []
+    children: []
+    customMetrics: []
+  - name: request_ip
+    displayName: request_ip
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.request_ip
+    tags: []
+    children: []
+    customMetrics: []
+  - name: method
+    displayName: method
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.method
+    tags: []
+    children: []
+    customMetrics: []
+  - name: host
+    displayName: host
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.host
+    tags: []
+    children: []
+    customMetrics: []
+  - name: uri
+    displayName: uri
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.uri
+    tags: []
+    children: []
+    customMetrics: []
+  - name: status
+    displayName: status
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.status
+    tags: []
+    children: []
+    customMetrics: []
+  - name: referrer
+    displayName: referrer
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.referrer
+    tags: []
+    children: []
+    customMetrics: []
+  - name: user_agent
+    displayName: user_agent
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.user_agent
+    tags: []
+    children: []
+    customMetrics: []
+  - name: query_string
+    displayName: query_string
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.query_string
+    tags: []
+    children: []
+    customMetrics: []
+  - name: cookie
+    displayName: cookie
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.cookie
+    tags: []
+    children: []
+    customMetrics: []
+  - name: result_type
+    displayName: result_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.result_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: request_id
+    displayName: request_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.request_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: host_header
+    displayName: host_header
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.host_header
+    tags: []
+    children: []
+    customMetrics: []
+  - name: request_protocol
+    displayName: request_protocol
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.request_protocol
+    tags: []
+    children: []
+    customMetrics: []
+  - name: request_bytes
+    displayName: request_bytes
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.request_bytes
+    tags: []
+    children: []
+    customMetrics: []
+  - name: time_taken
+    displayName: time_taken
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.time_taken
+    tags: []
+    children: []
+    customMetrics: []
+  - name: xforwarded_for
+    displayName: xforwarded_for
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.xforwarded_for
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ssl_protocol
+    displayName: ssl_protocol
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.ssl_protocol
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ssl_cipher
+    displayName: ssl_cipher
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.ssl_cipher
+    tags: []
+    children: []
+    customMetrics: []
+  - name: response_result_type
+    displayName: response_result_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.response_result_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: http_version
+    displayName: http_version
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.http_version
+    tags: []
+    children: []
+    customMetrics: []
+  - name: fle_status
+    displayName: fle_status
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.fle_status
+    tags: []
+    children: []
+    customMetrics: []
+  - name: fle_encrypted_fields
+    displayName: fle_encrypted_fields
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.fle_encrypted_fields
+    tags: []
+    children: []
+    customMetrics: []
+  - name: c_port
+    displayName: c_port
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.c_port
+    tags: []
+    children: []
+    customMetrics: []
+  - name: time_to_first_byte
+    displayName: time_to_first_byte
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.time_to_first_byte
+    tags: []
+    children: []
+    customMetrics: []
+  - name: x_edge_detailed_result_type
+    displayName: x_edge_detailed_result_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.x_edge_detailed_result_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: sc_content_type
+    displayName: sc_content_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.sc_content_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: sc_content_len
+    displayName: sc_content_len
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.sc_content_len
+    tags: []
+    children: []
+    customMetrics: []
+  - name: sc_range_start
+    displayName: sc_range_start
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.sc_range_start
+    tags: []
+    children: []
+    customMetrics: []
+  - name: sc_range_end
+    displayName: sc_range_end
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: glue_test.118146679784.default.cloudfront_logs2.sc_range_end
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: ed3d0711-b5b6-4c25-a07a-f2129670e962
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: glue_test.118146679784.default
+  displayName: default
+  deleted: false
+database:
+  id: d44dbcb7-fb8e-4256-84bf-88e6119b9ef2
+  type: database
+  name: 118146679784
+  fullyQualifiedName: glue_test.118146679784
+  displayName: 118146679784
+  deleted: false
+service:
+  id: e518214a-f845-4790-9cab-1e9e64925968
+  type: databaseService
+  name: glue_test
+  fullyQualifiedName: glue_test
+  description: ""
+  displayName: glue_test
+  deleted: false
+serviceType: Glue
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://us-east-2.console.aws.amazon.com/glue/home?region=us-east-2#/v2/data-catalog/tables/view/cloudfront_logs2?database=default&catalogId=118146679784&versionId=latest
+domains: []
+dataProducts: []
+sourceHash: 526d041f97a428c8de2e18745723358b
+processedLineage: false
+entityStatus: Approved

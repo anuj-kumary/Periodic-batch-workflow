@@ -1,0 +1,114 @@
+name: load_data_exp
+fullyQualifiedName: demo_unity.demo.default.load_data_exp
+tableType: Regular
+columns:
+  - name: customerid
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.customerid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: customername
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.customername
+    tags: []
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.email
+    tags: []
+    children: []
+    customMetrics: []
+  - name: city
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.city
+    tags: []
+    children: []
+    customMetrics: []
+  - name: country
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.country
+    tags: []
+    children: []
+    customMetrics: []
+  - name: territory
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.territory
+    tags: []
+    children: []
+    customMetrics: []
+  - name: contactfirstname
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.contactfirstname
+    tags: []
+    children: []
+    customMetrics: []
+  - name: contactlastname
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar
+    fullyQualifiedName: demo_unity.demo.default.load_data_exp.contactlastname
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d41c161d-5e79-4207-8d33-628da9331901
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: demo_unity.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: a39d46161d52bddab1e171781d37904c
+      newValue: a55051bbc9010b17b45141c622e81189
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: a55051bbc9010b17b45141c622e81189
+processedLineage: false
+entityStatus: Approved

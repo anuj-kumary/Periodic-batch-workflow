@@ -1,0 +1,158 @@
+name: UserRecordAccess
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: User Record Access ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: UserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.UserId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: RecordId
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Record ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.RecordId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: HasReadAccess
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Read Access
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.HasReadAccess
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: HasEditAccess
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Edit Access
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.HasEditAccess
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: HasDeleteAccess
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Delete Access
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.HasDeleteAccess
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: HasTransferAccess
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has Transfer Access
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.HasTransferAccess
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: HasAllAccess
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Has All Access
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.HasAllAccess
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: MaxAccessLevel
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Maximum Access Level
+    fullyQualifiedName: demo_salesforce.default.salesforce.UserRecordAccess.MaxAccessLevel
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620886918
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/UserRecordAccess/list
+domains: []
+dataProducts: []
+sourceHash: cbba7e4d98c763af7701a781e583dc2a
+processedLineage: false
+entityStatus: Approved

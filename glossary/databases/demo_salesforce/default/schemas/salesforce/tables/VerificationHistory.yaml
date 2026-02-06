@@ -1,0 +1,268 @@
+name: VerificationHistory
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Identity Verification ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: EventGroup
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Verification Attempt
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.EventGroup
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: VerificationTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Time
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.VerificationTime
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: VerificationMethod
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: Method
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.VerificationMethod
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: UserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.UserId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Activity
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: User Activity
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.Activity
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: Status
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.Status
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: LoginHistoryId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Login History ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.LoginHistoryId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: SourceIp
+    dataType: UNKNOWN
+    dataLength: 200
+    dataTypeDisplay: string
+    description: Source IP
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.SourceIp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LoginGeoId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Login Geo Data ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.LoginGeoId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: Remarks
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Activity Message
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.Remarks
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: ResourceId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Connected App ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.ResourceId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: Policy
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: Triggered By
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.Policy
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.VerificationHistory.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620887639
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/VerificationHistory/list
+domains: []
+dataProducts: []
+sourceHash: a3ee990846f126a5aee585a4befae6f1
+processedLineage: false
+entityStatus: Approved

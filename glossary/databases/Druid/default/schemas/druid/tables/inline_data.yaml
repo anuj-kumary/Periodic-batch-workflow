@@ -1,0 +1,260 @@
+name: inline_data
+fullyQualifiedName: Druid.default.druid.inline_data
+description: ""
+tableType: Regular
+columns:
+  - name: __time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: Druid.default.druid.inline_data.__time
+    tags:
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PersonalData.SpecialCategory
+        name: SpecialCategory
+        description: "GDPR special category data is personal information of data subjects\
+          \ that is especially sensitive, the exposure of which could significantly\
+          \ impact the rights and freedoms of data subjects and potentially be used\
+          \ against them for unlawful discrimination."
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: channel
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.channel
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cityName
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.cityName
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: countryIsoCode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.countryIsoCode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: countryName
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.countryName
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: isAnonymous
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.isAnonymous
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: isMinor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.isMinor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: isNew
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.isNew
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: isRobot
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.isRobot
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: isUnpatrolled
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.isUnpatrolled
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: metroCode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.metroCode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: namespace
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.namespace
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: page
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.page
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: regionIsoCode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.regionIsoCode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: regionName
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.regionName
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.druid.inline_data.user
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: delta
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.druid.inline_data.delta
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: added
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.druid.inline_data.added
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: deleted
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.druid.inline_data.deleted
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f407954f-4012-4fce-ae6b-9289a8d08c85
+  type: databaseSchema
+  name: druid
+  fullyQualifiedName: Druid.default.druid
+  displayName: druid
+  deleted: false
+database:
+  id: 735d8e37-f921-42b8-9de6-ca6049d5cd9c
+  type: database
+  name: default
+  fullyQualifiedName: Druid.default
+  displayName: default
+  deleted: false
+service:
+  id: 604e3478-a6c7-41b9-9c58-0303183dbed1
+  type: databaseService
+  name: Druid
+  fullyQualifiedName: Druid
+  displayName: Druid
+  deleted: false
+serviceType: Druid
+tags:
+  - tagFQN: TeddyNewName New.Annul Percentage Rate
+    name: Annul Percentage Rate
+    displayName: ""
+    description: "The total annualized cost of a loan. When you borrow money, whether\
+      \ it’s via a credit card, car loan or another loan, the lender is required to\
+      \ disclose the APR, so you understand the full cost of borrowing the money."
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.9
+extension:
+  string: Hello Test Property
+domains: []
+dataProducts: []
+sourceHash: f6b8d800fe9988634e553fdd67d72325
+processedLineage: false
+entityStatus: Approved

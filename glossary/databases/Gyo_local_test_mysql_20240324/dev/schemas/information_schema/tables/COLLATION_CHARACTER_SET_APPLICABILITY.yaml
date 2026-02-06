@@ -1,0 +1,59 @@
+name: COLLATION_CHARACTER_SET_APPLICABILITY
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATION_CHARACTER_SET_APPLICABILITY
+tableType: View
+columns:
+  - name: COLLATION_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATION_CHARACTER_SET_APPLICABILITY.COLLATION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_SET_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATION_CHARACTER_SET_APPLICABILITY.CHARACTER_SET_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 951d8719d449fd3379d6bc17e37d567d
+processedLineage: false
+entityStatus: Approved

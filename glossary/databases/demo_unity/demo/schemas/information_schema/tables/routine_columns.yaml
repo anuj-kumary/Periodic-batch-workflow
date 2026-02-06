@@ -1,0 +1,302 @@
+name: routine_columns
+fullyQualifiedName: demo_unity.demo.information_schema.routine_columns
+description: Describes result columns of table valued functions.
+tableType: View
+columns:
+  - name: specific_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the routine.
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.specific_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: specific_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Database (schema) containing the routine.
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.specific_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: specific_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema unique (specific) name of the routine.
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.specific_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ordinal_position
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: The position (1-based) of the column in the result column list.
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.ordinal_position
+    tags: []
+    children: []
+    customMetrics: []
+  - name: column_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Name of the column, NULL if unnamed."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.column_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: data_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The parameter data type name.
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.data_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: full_data_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The parameter data type definition, for example 'DECIMAL(10, 4)'."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.full_data_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: character_maximum_length
+    dataType: LONG
+    dataLength: 1
+    dataTypeDisplay: long
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.character_maximum_length
+    tags: []
+    children: []
+    customMetrics: []
+  - name: character_octet_length
+    dataType: LONG
+    dataLength: 1
+    dataTypeDisplay: long
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.character_octet_length
+    tags: []
+    children: []
+    customMetrics: []
+  - name: numeric_precision
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For base-2 integral numeric types, FLOAT, and DOUBLE, the number\
+      \ of supported bits. For DECIMAL the number of digits, NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.numeric_precision
+    tags: []
+    children: []
+    customMetrics: []
+  - name: numeric_precision_radix
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For DECIMAL 10, for all other numeric types 2, NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.numeric_precision_radix
+    tags: []
+    children: []
+    customMetrics: []
+  - name: numeric_scale
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For integral numeric types 0, for DECIMAL the number of digits to\
+      \ the right of the decimal point, NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.numeric_scale
+    tags: []
+    children: []
+    customMetrics: []
+  - name: datetime_precision
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For DATE 0, for TIMESTAMP, and INTERVAL … SECOND 3, any other INTERVAL\
+      \ 0, NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.datetime_precision
+    tags: []
+    children: []
+    customMetrics: []
+  - name: interval_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "For INTERVAL the unit portion of the interval, e.g. 'YEAR TO MONTH',\
+      \ NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.interval_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: interval_precision
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.interval_precision
+    tags: []
+    children: []
+    customMetrics: []
+  - name: maximum_cardinality
+    dataType: LONG
+    dataLength: 1
+    dataTypeDisplay: long
+    description: "Always NULL, reserved for future use."
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.maximum_cardinality
+    tags: []
+    children: []
+    customMetrics: []
+  - name: comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: An optional comment describing the result column.
+    fullyQualifiedName: demo_unity.demo.information_schema.routine_columns.comment
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Describes result columns of table valued functions.
+    - name: columns.specific_catalog.description
+      newValue: Catalog containing the routine.
+    - name: columns.specific_schema.description
+      newValue: Database (schema) containing the routine.
+    - name: columns.specific_name.description
+      newValue: Schema unique (specific) name of the routine.
+    - name: columns.ordinal_position.description
+      newValue: The position (1-based) of the column in the result column list.
+    - name: columns.column_name.description
+      newValue: "Name of the column, NULL if unnamed."
+    - name: columns.data_type.description
+      newValue: The parameter data type name.
+    - name: columns.full_data_type.description
+      newValue: "The parameter data type definition, for example 'DECIMAL(10, 4)'."
+    - name: columns.character_maximum_length.description
+      newValue: "Always NULL, reserved for future use."
+    - name: columns.character_octet_length.description
+      newValue: "Always NULL, reserved for future use."
+    - name: columns.numeric_precision.description
+      newValue: "For base-2 integral numeric types, FLOAT, and DOUBLE, the number\
+        \ of supported bits. For DECIMAL the number of digits, NULL otherwise."
+    - name: columns.numeric_precision_radix.description
+      newValue: "For DECIMAL 10, for all other numeric types 2, NULL otherwise."
+    - name: columns.numeric_scale.description
+      newValue: "For integral numeric types 0, for DECIMAL the number of digits to\
+        \ the right of the decimal point, NULL otherwise."
+    - name: columns.datetime_precision.description
+      newValue: "For DATE 0, for TIMESTAMP, and INTERVAL … SECOND 3, any other INTERVAL\
+        \ 0, NULL otherwise."
+    - name: columns.interval_type.description
+      newValue: "For INTERVAL the unit portion of the interval, e.g. 'YEAR TO MONTH',\
+        \ NULL otherwise."
+    - name: columns.interval_precision.description
+      newValue: "Always NULL, reserved for future use."
+    - name: columns.maximum_cardinality.description
+      newValue: "Always NULL, reserved for future use."
+    - name: columns.comment.description
+      newValue: An optional comment describing the result column.
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: 0be9ec0cffcdd8de4235a0b9c4bbcf97
+      newValue: 1505d466685a519c292913bc5ffdce74
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.data_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.column_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.interval_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.numeric_scale.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.specific_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.full_data_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.specific_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.ordinal_position.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.specific_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.numeric_precision.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.datetime_precision.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.interval_precision.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.maximum_cardinality.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.character_octet_length.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.numeric_precision_radix.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+    columns.character_maximum_length.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305859927
+domains: []
+dataProducts: []
+sourceHash: 1505d466685a519c292913bc5ffdce74
+processedLineage: false
+entityStatus: Approved

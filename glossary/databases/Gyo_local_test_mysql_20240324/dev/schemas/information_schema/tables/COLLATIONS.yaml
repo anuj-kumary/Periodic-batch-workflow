@@ -1,0 +1,104 @@
+name: COLLATIONS
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS
+tableType: View
+columns:
+  - name: COLLATION_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.COLLATION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_SET_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.CHARACTER_SET_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_DEFAULT
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.IS_DEFAULT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_COMPILED
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.IS_COMPILED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SORTLEN
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.SORTLEN
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PAD_ATTRIBUTE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(9)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.COLLATIONS.PAD_ATTRIBUTE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 0b2195290b92869ac7532e282e32d95b
+processedLineage: false
+entityStatus: Approved

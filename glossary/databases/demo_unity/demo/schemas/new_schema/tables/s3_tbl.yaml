@@ -1,0 +1,105 @@
+name: s3_tbl
+fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.CUSTOMERID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CUSTOMERNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.CUSTOMERNAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.EMAIL
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CITY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.CITY
+    tags: []
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.COUNTRY
+    tags: []
+    children: []
+    customMetrics: []
+  - name: TERRITORY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.TERRITORY
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CONTACTFIRSTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.CONTACTFIRSTNAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CONTACTLASTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.s3_tbl.CONTACTLASTNAME
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 69281bac-c4b7-4c0d-bb42-33ebe79ee68a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: demo_unity.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d7dd811ae5867fc409d12ba02844327f
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,165 @@
+name: last_10_days_orders
+fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders
+description: Potato
+tableType: View
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Unique identifier
+    fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the person
+    fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: STRUCT
+    dataLength: 1
+    dataTypeDisplay: "struct<street:string,city:string,state:string,postal_code:string,country:string,coordinates:struct<latitude:double,longitude:double>>"
+    description: Address information
+    fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address
+    tags: []
+    children:
+      - name: street
+        dataType: STRING
+        dataTypeDisplay: string
+        description: Street name
+        fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.street
+        tags: []
+        children: []
+      - name: city
+        dataType: STRING
+        dataTypeDisplay: string
+        description: City name
+        fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.city
+        tags: []
+        children: []
+      - name: state
+        dataType: STRING
+        dataTypeDisplay: string
+        description: State name
+        fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.state
+        tags: []
+        children: []
+      - name: postal_code
+        dataType: STRING
+        dataTypeDisplay: string
+        description: Postal code
+        fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.postal_code
+        tags: []
+        children: []
+      - name: country
+        dataType: STRING
+        dataTypeDisplay: string
+        description: Country name
+        fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.country
+        tags: []
+        children: []
+      - name: coordinates
+        dataType: STRUCT
+        dataTypeDisplay: "struct<latitude:double,longitude:double>"
+        description: Geographic coordinates including latitude and longitude
+        fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.coordinates
+        tags: []
+        children:
+          - name: latitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            description: Latitude coordinate
+            fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.coordinates.latitude
+            tags: []
+            children: []
+          - name: longitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            description: Longitude coordinate
+            fullyQualifiedName: demo_unity.demo.new_schema.last_10_days_orders.address.coordinates.longitude
+            tags: []
+            children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 69281bac-c4b7-4c0d-bb42-33ebe79ee68a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: demo_unity.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags:
+  - tagFQN: Certification.Bronze
+    name: Bronze
+    displayName: Bronze_medal
+    description: Bronze certified Data Asset test
+    style:
+      color: "#C08329"
+      iconURL: BronzeCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: tags
+      oldValue: "[{\"tagFQN\":\"Tier.Tier2\",\"name\":\"Tier2\",\"description\":\"\
+        **Important business datasets for your company (not as critical as Tier 1)**\\\
+        n\\n- Used in important business metrics, product metrics, and dashboards\
+        \ to drive internal decisions\\n\\n- Used in important compliance reporting\
+        \ to major regulators, govt entities, and third party\\n\\n- Used for less\
+        \ critical online user-facing experiences (user activity, user behavior)\\\
+        n\\n- Source used to derive other critical Tier-2 datasets\",\"source\":\"\
+        Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"}]"
+  previousVersion: 0.4
+  changeSummary: {}
+domains: []
+dataProducts: []
+certification:
+  tagLabel:
+    tagFQN: Certification.Silver
+    name: Silver
+    description: Silver certified Data Asset.
+    style:
+      color: "#ADADAD"
+      iconURL: SilverCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1732805856709
+  expiryDate: 1735397856709
+sourceHash: 9cb29494ae071f7a377c10522b78c56c
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,135 @@
+name: dcc_pitches
+fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches
+tableType: Regular
+columns:
+  - name: Title
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Title
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Description
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Address_1
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Address_1
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Address_2
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Address_2
+    tags: []
+    children: []
+    customMetrics: []
+  - name: NACE_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.NACE_code
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Latitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Latitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Longitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Longitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Region
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.Region
+    tags: []
+    children: []
+    customMetrics: []
+  - name: DccArea
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.DccArea
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CensusSmallArea
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.CensusSmallArea
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ElectoralDivision
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches.ElectoralDivision
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 5c1b0e80-9c9b-47b4-b5f6-271890ce585e
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: demo_unity.demo.uniform_schema
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f5a5077be0c08eba7c7c03bb71cfb98b
+processedLineage: false
+entityStatus: Approved

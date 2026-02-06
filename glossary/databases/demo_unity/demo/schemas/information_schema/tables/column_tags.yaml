@@ -1,0 +1,89 @@
+name: column_tags
+fullyQualifiedName: demo_unity.demo.information_schema.column_tags
+tableType: View
+columns:
+  - name: catalog_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.column_tags.catalog_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: schema_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.column_tags.schema_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.column_tags.table_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: column_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.column_tags.column_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: tag_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.column_tags.tag_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: tag_value
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.column_tags.tag_value
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7ab167f590a900b9195adba8bf1c6977
+processedLineage: false
+entityStatus: Approved

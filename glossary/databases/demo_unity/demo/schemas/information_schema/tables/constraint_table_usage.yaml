@@ -1,0 +1,140 @@
+name: constraint_table_usage
+fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage
+description: Describes the constraints referencing tables in the catalog.
+tableType: View
+columns:
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage.table_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage.table_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage.table_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: constraint_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the constraint.
+    fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage.constraint_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: constraint_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the constraint.
+    fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage.constraint_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: constraint_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the constraint.
+    fullyQualifiedName: demo_unity.demo.information_schema.constraint_table_usage.constraint_name
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Describes the constraints referencing tables in the catalog.
+    - name: columns.table_catalog.description
+      newValue: Catalog containing the relation.
+    - name: columns.table_schema.description
+      newValue: Schema containing the relation.
+    - name: columns.table_name.description
+      newValue: Name of the relation.
+    - name: columns.constraint_catalog.description
+      newValue: Catalog containing the constraint.
+    - name: columns.constraint_schema.description
+      newValue: Schema containing the constraint.
+    - name: columns.constraint_name.description
+      newValue: Name of the constraint.
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: b292235930fbd2667c8e9bda538bb5fc
+      newValue: 766d1534303c92108f8219601a54e05b
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+    columns.table_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+    columns.table_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+    columns.table_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+    columns.constraint_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+    columns.constraint_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+    columns.constraint_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305856968
+domains: []
+dataProducts: []
+sourceHash: 766d1534303c92108f8219601a54e05b
+processedLineage: false
+entityStatus: Approved

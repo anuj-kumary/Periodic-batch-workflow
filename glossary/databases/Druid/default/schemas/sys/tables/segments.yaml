@@ -1,0 +1,238 @@
+name: segments
+fullyQualifiedName: Druid.default.sys.segments
+description: ""
+tableType: Regular
+columns:
+  - name: segment_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.segment_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: datasource
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.datasource
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: start
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.start
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.end
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: size
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.size
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition_num
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.partition_num
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: num_replicas
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.num_replicas
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: num_rows
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.num_rows
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_active
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.is_active
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_published
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.is_published
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_available
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.is_available
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_realtime
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.is_realtime
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_overshadowed
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.is_overshadowed
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: shard_spec
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.shard_spec
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dimensions
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.dimensions
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: metrics
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.metrics
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_compaction_state
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.segments.last_compaction_state
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: replication_factor
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.segments.replication_factor
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c
+    type: user
+    name: 23saints23
+    fullyQualifiedName: 23saints23
+    displayName: 23saints23
+    deleted: false
+databaseSchema:
+  id: 8c2762de-226e-483a-9ae4-188a2c8b9015
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: Druid.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 735d8e37-f921-42b8-9de6-ca6049d5cd9c
+  type: database
+  name: default
+  fullyQualifiedName: Druid.default
+  displayName: default
+  deleted: false
+service:
+  id: 604e3478-a6c7-41b9-9c58-0303183dbed1
+  type: databaseService
+  name: Druid
+  fullyQualifiedName: Druid
+  displayName: Druid
+  deleted: false
+serviceType: Druid
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: eb3a553b-4f68-4594-9e40-6fce504f36ce
+  type: testSuite
+  name: Druid.default.sys.segments.testSuite
+  fullyQualifiedName: Druid.default.sys.segments.testSuite
+  displayName: Druid.default.sys.segments.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c\",\"type\":\"user\"\
+        ,\"name\":\"23saints23\",\"fullyQualifiedName\":\"23saints23\",\"displayName\"\
+        :\"23saints23\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.8
+  changeSummary:
+    owners:
+      changedBy: ashish
+      changedAt: 1758535451932
+domains: []
+dataProducts: []
+sourceHash: 44a917c59880f02a57a2a2438b5ab420
+processedLineage: false
+entityStatus: Approved

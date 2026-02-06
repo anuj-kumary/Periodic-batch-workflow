@@ -1,0 +1,47 @@
+name: dcc_pitches_v2_iceberg
+fullyQualifiedName: demo_unity.demo.uniform_schema.dcc_pitches_v2_iceberg
+tableType: Regular
+columns: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 5c1b0e80-9c9b-47b4-b5f6-271890ce585e
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: demo_unity.demo.uniform_schema
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6faa4fd54659656ce83bb179b4f09b99
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,147 @@
+name: sales
+fullyQualifiedName: Glue.default.information_schema.sales
+description: Sales data
+tableType: Regular
+columns:
+  - name: SKU
+    dataType: NUMERIC
+    dataTypeDisplay: numeric
+    description: Article SKU
+    fullyQualifiedName: Glue.default.information_schema.sales.SKU
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: Quantity
+    dataType: NUMERIC
+    dataTypeDisplay: numeric
+    description: Quantity of SKU
+    fullyQualifiedName: Glue.default.information_schema.sales.Quantity
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+owners:
+  - id: fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c
+    type: user
+    name: 23saints23
+    fullyQualifiedName: 23saints23
+    displayName: 23saints23
+    deleted: false
+  - id: 4614b5b7-7acc-4b93-96a5-3913903851f8
+    type: user
+    name: aanqueti18
+    fullyQualifiedName: aanqueti18
+    displayName: aanqueti18
+    deleted: false
+  - id: 089347d6-806c-4a27-8b95-9d101d0d3667
+    type: user
+    name: bethbryant
+    fullyQualifiedName: bethbryant
+    displayName: Aaron Alexander
+    deleted: false
+  - id: d9b7c607-9f6d-4478-b02f-8fd754aac26b
+    type: user
+    name: carlosmartinez
+    fullyQualifiedName: carlosmartinez
+    displayName: Aaron Cantrell
+    deleted: false
+  - id: d80a224c-d4e4-4d8d-acbc-c07f8eac81f2
+    type: user
+    name: cschultz
+    fullyQualifiedName: cschultz
+    displayName: Aaron Brandt
+    deleted: false
+  - id: 02d03179-e7fb-4006-8a82-aa058a46c57e
+    type: user
+    name: jaimecrosby
+    fullyQualifiedName: jaimecrosby
+    displayName: Aaron Bradley
+    deleted: false
+  - id: 10f000b3-98e8-44ce-9323-e5428da915ba
+    type: user
+    name: jeffery97
+    fullyQualifiedName: jeffery97
+    displayName: Aaron Brown
+    deleted: false
+  - id: d0107fe9-afbe-4966-914f-bfec7dfc5861
+    type: user
+    name: wilsondanny
+    fullyQualifiedName: wilsondanny
+    displayName: Aaron Baker
+    deleted: false
+databaseSchema:
+  id: 39629edf-78d2-4dc6-ad3f-c0c72d6bc079
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Glue.default.information_schema
+  description: This **mock** database contains tables related to the Glue service
+  displayName: information_schema
+  deleted: false
+database:
+  id: b3c43721-b319-4f9b-a869-9fb0d25cdd8f
+  type: database
+  name: default
+  fullyQualifiedName: Glue.default
+  description: This **mock** database contains tables related to the Glue service
+  displayName: default
+  deleted: false
+service:
+  id: bf51b977-9cdd-4091-89e5-60e6f1d476a5
+  type: databaseService
+  name: Glue
+  fullyQualifiedName: Glue
+  displayName: Glue2
+  deleted: false
+serviceType: Glue
+tags:
+  - tagFQN: Tier.Tier1
+    name: Tier1
+    description: |-
+      **Critical Source of Truth business data assets of an organization**
+
+      - Used in critical metrics and dashboards to drive business and product decisions
+
+      - Used in critical compliance reporting to regulators, govt entities, and third party
+
+      - Used in brand or revenue impacting online user-facing experiences (search results, advertisement, promotions, and experimentation)
+
+      - Other high impact use, such as ML models and fraud detection
+
+      - Source used to derive other critical Tier-1 datasets
+    style:
+      color: "#ec1313"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: entityStatus
+      oldValue: Approved
+      newValue: Unprocessed
+  fieldsDeleted: []
+  previousVersion: 0.9
+  changeSummary:
+    owners:
+      changedBy: dhruv.p
+      changedAt: 1747114825756
+sourceUrl: https://www.glue.com/sales
+domains:
+  - id: 6b0b0c97-f2f2-40d9-876b-b224c9b15735
+    type: domain
+    name: DomainTest222
+    fullyQualifiedName: DomainTest22.DomainTest222
+    description: <p>DomainTest222</p>
+    displayName: DomainTest222
+dataProducts: []
+processedLineage: false
+entityStatus: Unprocessed
