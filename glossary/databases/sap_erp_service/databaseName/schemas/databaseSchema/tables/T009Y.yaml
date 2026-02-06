@@ -1,0 +1,127 @@
+name: T009Y
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y
+description: Shortened fiscal years in Asset Accounting
+tableType: Regular
+columns:
+  - name: ANZBP
+    displayName: No.posting periods
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Number of posting periods
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.ANZBP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: ANZSP
+    displayName: No.special periods
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Number of special periods
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.ANZSP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: GJAHR
+    displayName: Fiscal Year
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: numc(4)
+    description: Fiscal Year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.GJAHR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: GJBEG
+    displayName: Fiscal year start date
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Fiscal year start date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.GJBEG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: GJEND
+    displayName: Fiscal year end
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Fiscal year end date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.GJEND
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PERIV
+    displayName: Fiscal Year Variant
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Fiscal Year Variant
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T009Y.PERIV
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - GJAHR
+      - MANDT
+      - PERIV
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6680098377ea7582bf66213bbd9b1f78
+processedLineage: false
+entityStatus: Approved

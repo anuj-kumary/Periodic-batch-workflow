@@ -1,0 +1,271 @@
+name: T011_XBRL
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL
+description: Fin. Statement Vers. from XBRL Taxonomies
+tableType: Regular
+columns:
+  - name: BRANCH
+    displayName: Industry
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Industry of XBRL Industry Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.BRANCH
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: CLOSETYPE
+    displayName: Closing Type
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Closing Type of XBRL Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.CLOSETYPE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: DSPRA
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.DSPRA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: INCOMEUSE
+    displayName: Appropriation of Net Income
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Appropriation of Net Income
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.INCOMEUSE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: KINDOFBUS
+    displayName: Insurer Type
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Insurer Type of XBRL Insurance Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.KINDOFBUS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: KINDOFINST
+    displayName: Credit Instit. Type
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Credit Institution Type of XBRL Banking Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.KINDOFINST
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: KTOPL
+    displayName: Chart of Accounts
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Financial Statement Version Uses Only One Chart of Accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.KTOPL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: LEADINGFILE
+    displayName: Entry Schema of XBRL Taxonomy
+    dataType: CHAR
+    dataLength: 255
+    dataTypeDisplay: char(255)
+    description: Entry Schema of an XBRL Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.LEADINGFILE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LEGALFORM
+    displayName: Legal Form of Comp.
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Legal Form of XBRL Banking Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.LEGALFORM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: LEGALFORM_INS
+    displayName: Legal Form of Comp.
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Legal Form of XBRL Insurance Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.LEGALFORM_INS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PLFORMAT
+    displayName: Inc.Statement Format
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Income Statement Format of XBRL Core Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.PLFORMAT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: SOERGBIL
+    displayName: Special or Supplementary Balance Sheet
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Financial Statement Structure for Spec./Suppl. Balance Sheet
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.SOERGBIL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: STRTYPE
+    displayName: Version Type from XBRL Tax.
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Type of Financial Statement Version from XBRL Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.STRTYPE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: TAXTYPE
+    displayName: Taxonomy
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Type of XBRL Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.TAXTYPE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: VERSN
+    displayName: FSV/Asset History Sheet
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: FS Version or Asset History Sheet from XBRL Taxonomy
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.VERSN
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: XAUTO
+    displayName: Item Keys Automatically
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Automatically Allocate Item Keys"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.XAUTO
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XERGS
+    displayName: Group Account Number
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Financial Statement Version Uses Group Chart of Accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.XERGS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XFBER
+    displayName: Functional areas permittd
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: assignment of functional areas is permitted"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011_XBRL.XFBER
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - VERSN
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b12d941b3fac97217d3b01644c7f1377
+processedLineage: false
+entityStatus: Approved

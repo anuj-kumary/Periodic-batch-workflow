@@ -1,0 +1,52 @@
+name: T005APP
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005APP
+description: Appendix to T005
+tableType: View
+columns:
+  - name: SUREG
+    displayName: Super region
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Super region per country
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005APP.SUREG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e118a7e2a42b1c05cb7e2a07141ffe1f
+processedLineage: false
+entityStatus: Approved

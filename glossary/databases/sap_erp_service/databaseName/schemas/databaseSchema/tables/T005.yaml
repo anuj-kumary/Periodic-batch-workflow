@@ -1,0 +1,875 @@
+name: T005
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005
+description: Countries
+tableType: Regular
+columns:
+  - name: .INCLU--AP(T005GCCVAT)
+    displayName: .INCLU--AP
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: unknown
+    description: ""
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.".INCLU--AP(T005GCCVAT)"
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 69
+    children: []
+    customMetrics: []
+  - name: .INCLU--AP(T005APP)
+    displayName: .INCLU--AP
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: unknown
+    description: ""
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.".INCLU--AP(T005APP)"
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 71
+    children: []
+    customMetrics: []
+  - name: .INCLU--AP(T005ISP)
+    displayName: .INCLU--AP
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: unknown
+    description: ""
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.".INCLU--AP(T005ISP)"
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 73
+    children: []
+    customMetrics: []
+  - name: ADDRS
+    displayName: Address layout key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Formatting routine key for printing addresses
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.ADDRS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.AFAPL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 61
+    children: []
+    customMetrics: []
+  - name: BNKEY
+    displayName: Bank Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Name of the bank key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.BNKEY
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: CTNCONCEPT
+    displayName: W/tax certificate numbering concepts
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "Withholding tax certificate numbering: Concepts"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.CTNCONCEPT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 66
+    children: []
+    customMetrics: []
+  - name: CURHA
+    displayName: Hard currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key of the Hard Currency
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.CURHA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 58
+    children: []
+    customMetrics: []
+  - name: CURIN
+    displayName: Index-based curr.
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key of the Index-Based Currency
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.CURIN
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 57
+    children: []
+    customMetrics: []
+  - name: DATFM
+    displayName: Date format
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Date Format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.DATFM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 56
+    children: []
+    customMetrics: []
+  - name: GWGWRT
+    displayName: "Max.LVA amount: for posting"
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Maximum low-value asset amount
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.GWGWRT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 62
+    children: []
+    customMetrics: []
+  - name: INTCA
+    displayName: ISO Code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Country ISO code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.INTCA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: INTCA3
+    displayName: ISO Code 3 Characters
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: ISO country code 3 char
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.INTCA3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: INTCN
+    displayName: Intrastat code
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Intrastat Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.INTCN
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 54
+    children: []
+    customMetrics: []
+  - name: INTCN3
+    displayName: ISO Code Numeric 3-Chars.
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: ISO Country Code Numeric 3-Characters
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.INTCN3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: KALSM
+    displayName: Procedure
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: "Procedure (Pricing, Output Control, Acct. Det., Costing,...)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.KALSM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 49
+    children: []
+    customMetrics: []
+  - name: KURST
+    displayName: Exchange rate type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Exchange Rate Type for Translation into Country Currency
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.KURST
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 60
+    children: []
+    customMetrics: []
+  - name: KZRBWB
+    displayName: Post net book value
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator post net book value for retirement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.KZRBWB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 64
+    children: []
+    customMetrics: []
+  - name: KZSRV
+    displayName: Taxes at ind. serv. level
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Taxes at individual service level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.KZSRV
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 67
+    children: []
+    customMetrics: []
+  - name: LAND1
+    displayName: Country Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LAND1
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LANDA
+    displayName: Alternative Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Alternative Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LANDA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 51
+    children: []
+    customMetrics: []
+  - name: LANDD
+    displayName: Nationality
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: "DUEVO: Nationality"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LANDD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 47
+    children: []
+    customMetrics: []
+  - name: LANDGRP_VP
+    displayName: Ctry gping-ship.sch.
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Country grouping for shipping schedule
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LANDGRP_VP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 74
+    children: []
+    customMetrics: []
+  - name: LANDK
+    displayName: Vehicle country key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Vehicle country key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LANDK
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LKVRZ
+    displayName: Trde stat.short name
+    dataType: CHAR
+    dataLength: 7
+    dataTypeDisplay: char(7)
+    description: Short Name for Foreign Trade Statistics
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LKVRZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 53
+    children: []
+    customMetrics: []
+  - name: LNBKN
+    displayName: Bank account number length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Bank account number length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNBKN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: LNBKS
+    displayName: Length of Bank Key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Length of Bank Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNBKS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: LNBLZ
+    displayName: Bank number length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Bank number length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNBLZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: LNPLZ
+    displayName: Postal code length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Postal code length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNPLZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LNPSK
+    displayName: Post office bank acct no.length
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Post office bank current account number length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNPSK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: LNST1
+    displayName: Permitted Length for Tax Number 1
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Permitted Input Length for Tax Numbre 1
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNST1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: LNST2
+    displayName: Permitted Length for Tax Number 2
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Permitted Input Length for Tax Number 2
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNST2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 37
+    children: []
+    customMetrics: []
+  - name: LNST3
+    displayName: Permitted Length for Tax Number 3
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Permitted Input Length for Tax Number 3
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNST3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 39
+    children: []
+    customMetrics: []
+  - name: LNST4
+    displayName: Permitted Length for Tax Number 4
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Permitted Input Length for Tax Number 4
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNST4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 41
+    children: []
+    customMetrics: []
+  - name: LNST5
+    displayName: Permitted Length for Tax Number 5
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Permitted Input Length for Tax Number 5
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.LNST5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 43
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NMFMT
+    displayName: Standard name format
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Standard name format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.NMFMT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PRBKN
+    displayName: Check rule for bank acct no.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking bank account number field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRBKN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: PRBKS
+    displayName: Check rule for bank key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking bank key field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRBKS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: PRBLZ
+    displayName: Check rule for bank number
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking bank number field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRBLZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: PRPLZ
+    displayName: Check rule for postal code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for the postal code field check
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRPLZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: PRPSK
+    displayName: Check rule for pst.chck acct no.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking postal check account number field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRPSK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: PRST1
+    displayName: Check rule for tax code 1
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking tax code 1 field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRST1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: PRST2
+    displayName: Check rule for tax code 2
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking tax code 2 field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRST2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 38
+    children: []
+    customMetrics: []
+  - name: PRST3
+    displayName: Check rule for tax code 3
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking tax code 3 field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRST3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 40
+    children: []
+    customMetrics: []
+  - name: PRST4
+    displayName: Check rule for tax code 4
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking tax code 4 field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRST4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 42
+    children: []
+    customMetrics: []
+  - name: PRST5
+    displayName: Check rule for tax code 5
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking tax code 5 field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRST5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 44
+    children: []
+    customMetrics: []
+  - name: PRUIN
+    displayName: VAT registration number
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Rule for checking VAT registration number field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.PRUIN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: SPRAS
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.SPRAS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SUREG
+    displayName: Super region
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Super region per country
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.SUREG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 72
+    children: []
+    customMetrics: []
+  - name: UINLN
+    displayName: VAT registration no.
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: VAT registration number length
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.UINLN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: UMRWRT
+    displayName: Net book value for dep.change
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Net book value for changeover of depreciation method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.UMRWRT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 63
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Country currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Country currency
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.WAERS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 59
+    children: []
+    customMetrics: []
+  - name: WECHF
+    displayName: B/exch.payment period
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Payment period for bill of exchange
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.WECHF
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 52
+    children: []
+    customMetrics: []
+  - name: XADDR
+    displayName: Print Country Name
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Flag: Print country name in foreign addresses?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XADDR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XANZUM
+    displayName: Capitalize AuC w/o downpayment
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator transfer down payments from previous years
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XANZUM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 65
+    children: []
+    customMetrics: []
+  - name: XDEZP
+    displayName: Decimal format
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Decimal point format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XDEZP
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 55
+    children: []
+    customMetrics: []
+  - name: XEGLD
+    displayName: EU Member
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: European Union Member?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XEGLD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: XGCCV
+    displayName: GCC Member
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: GCC Countries Member?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XGCCV
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 70
+    children: []
+    customMetrics: []
+  - name: XLAND
+    displayName: Country version
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Country version flag
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XLAND
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XMWSN
+    displayName: Tax base is net value
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Base amount for tax is net of discount ?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XMWSN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XPLPF
+    displayName: PO Box postal code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Flag: PO Box postal code required?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XPLPF
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XPLST
+    displayName: Street postcode
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Flag: Street-specific postal code? (City file)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XPLST
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XPLZS
+    displayName: Postal code required
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Flag: Street address postal code required entry?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XPLZS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XPRBK
+    displayName: Bank data
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Use check module for bank fields ?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XPRBK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: XPRSO
+    displayName: Other data
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Use check module for tax fields etc. ?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XPRSO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: XREGS
+    displayName: City file active
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Flag: City file address check"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XREGS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XSKFN
+    displayName: Discount base is net value
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Discount base amount is the net value"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XSKFN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: XXINVE
+    displayName: Capital Goods Ind.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Display Capital Goods Indicator?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005.XXINVE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 68
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - LAND1
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a79247102dce7bd2a845535a0032871f
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,345 @@
+name: T007A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A
+description: Tax Keys
+tableType: Regular
+columns:
+  - name: EGRKZ
+    displayName: EU Code / Code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: EU Code / Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.EGRKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: J_1BISS
+    displayName: Serv. w/o ICMS/IPI
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Tax Calculation: Service Without ICMS/IPI"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BISS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: J_1BTAXLW1
+    displayName: ICMS law
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: "Tax law: ICMS"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BTAXLW1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: J_1BTAXLW2
+    displayName: IPI law
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: "Tax law: IPI"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BTAXLW2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: J_1BTAXLW4
+    displayName: COFINS Law
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: COFINS Tax Law
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BTAXLW4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: J_1BTAXLW5
+    displayName: PIS Law
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: PIS Tax Law
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BTAXLW5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: J_1BTXICEX
+    displayName: ICMS-exempt
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: ICMS Stored as "Exempt" Instead of "Other Basis"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BTXICEX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: J_1BTXIPEX
+    displayName: IPI-exempt
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: IPI Stored as "Exempt" Instead of "Other Basis"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BTXIPEX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: J_1BUSAGE
+    displayName: Usage
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Tax Calculation: Material Usage"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.J_1BUSAGE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: KALSM
+    displayName: Procedure
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: "Procedure (Pricing, Output Control, Acct. Det., Costing,...)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.KALSM
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LSTML
+    displayName: Country for TaxReturn
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country for Tax Return
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.LSTML
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MOSSC
+    displayName: MOSS Tax Rep. Cntry
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: MOSS Tax Reporting Country for Electronic Service
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.MOSSC
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: MWART
+    displayName: Tax type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Tax Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.MWART
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: MWSKZ
+    displayName: Tax Code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Tax on Sales/Purchases Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.MWSKZ
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: NEWDEFTAX
+    displayName: New Def. Tax Code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "New Deferred Tax Code: Yes/No"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.NEWDEFTAX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: OSS_CLASSIFICATION
+    displayName: OSS Classification
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: OSS Classification
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.OSS_CLASSIFICATION
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: PROCD
+    displayName: SAP int.product code
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: SAP internal product code (external interface)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.PROCD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: PRUEF
+    displayName: Deviation error
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Error Message for Invalid Tax Amount ?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.PRUEF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: TOLERANCE
+    displayName: Tolerance per.rate tax calculation
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Tolerance Percentage Rate for Tax Calculation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.TOLERANCE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: TXIND
+    displayName: Tax category
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Tax Category for US Taxes
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.TXIND
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: TXREL
+    displayName: Relevant to tax
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: '''Tax Relevant'' Indicator (Only for External Tax System)'
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.TXREL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XINACT
+    displayName: Inactive
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Set Tax Code to "Inactive" - No Further Use
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.XINACT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: XMSTU
+    displayName: XMSTU
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Single-Character Flag
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.XMSTU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XSLTA
+    displayName: XSLTA
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Tax code for sales taxes"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007A.XSLTA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KALSM
+      - MANDT
+      - MWSKZ
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 697a3c247afb314b4ca1f0bbaa18697a
+processedLineage: false
+entityStatus: Approved

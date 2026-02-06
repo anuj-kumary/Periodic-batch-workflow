@@ -1,0 +1,103 @@
+name: T005J
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005J
+description: "Communication: country dialling code exceptions (Telephone)"
+tableType: Regular
+columns:
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005J.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SKFROM
+    displayName: From country
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country of origin
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005J.SKFROM
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: SKRM1DIG
+    displayName: Digit to delete
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Digit to be deleted for calls from abroad
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005J.SKRM1DIG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: SKTELEFON
+    displayName: Tel.
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Complete foreign dialling code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005J.SKTELEFON
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: SKTO
+    displayName: To
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Destination country
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005J.SKTO
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - SKFROM
+      - SKTO
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 653a7cfe8c8b479622db02c7fe82ceb0
+processedLineage: false
+entityStatus: Approved

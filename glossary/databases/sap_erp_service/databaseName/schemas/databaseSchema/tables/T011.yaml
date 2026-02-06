@@ -1,0 +1,211 @@
+name: T011
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011
+description: Financial Statement Versions
+tableType: Regular
+columns:
+  - name: AKTVA
+    displayName: Assets
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Item key representing the assets
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.AKTVA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: ANHNG
+    displayName: Fin.statement notes
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Item key that represents notes to financial statements
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.ANHNG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: ASPRA
+    displayName: Alternative language
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Alternative languages
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.ASPRA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: DSPRA
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.DSPRA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ERGAK
+    displayName: "Net result: loss"
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Item key representing the line item net loss
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.ERGAK
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: ERGGV
+    displayName: P+L profit
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Fin.statement key representing the P+L profit item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.ERGGV
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: ERGPA
+    displayName: Net profit for the year
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Fin.statement key representing the net profit/yr
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.ERGPA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: KTOPL
+    displayName: Chart of Accounts
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Financial Statement Version Uses Only One Chart of Accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.KTOPL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PSSVA
+    displayName: Liabilities & Equity
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Item Key Representing the Liabilities
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.PSSVA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: VERSN
+    displayName: FS Version
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Financial Statement Version
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.VERSN
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: XAUTO
+    displayName: Item Keys Automatically
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Automatically Allocate Item Keys"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.XAUTO
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XERGS
+    displayName: Group Account Number
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Financial Statement Version Uses Group Chart of Accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.XERGS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XFBER
+    displayName: Functional areas permittd
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: assignment of functional areas is permitted"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T011.XFBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - VERSN
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 33e8c475b682bb352baa6f9c6d8e6625
+processedLineage: false
+entityStatus: Approved
