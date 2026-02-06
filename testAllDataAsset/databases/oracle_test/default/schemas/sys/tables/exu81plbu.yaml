@@ -1,0 +1,220 @@
+name: exu81plbu
+fullyQualifiedName: oracle_test.default.sys.exu81plbu
+tableType: View
+columns:
+  - name: tobjid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.tobjid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ownerid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.ownerid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: cname
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.cname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lobname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.lobname
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: tsname
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar2(30)
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.tsname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sgflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.sgflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: property
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.property
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: chunk
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.chunk
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: versionp
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.versionp
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.flags
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: iniexts
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.iniexts
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: extsize
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.extsize
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: minexts
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.minexts
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: maxexts
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.maxexts
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: extpct
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.extpct
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flists
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.flists
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: freegrp
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.freegrp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pcache
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.pcache
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: coltype
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.coltype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: coltypflg
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu81plbu.coltypflg
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: eedf8f12ca564b8a9118eff233a228b8
+processedLineage: false
+entityStatus: Approved
