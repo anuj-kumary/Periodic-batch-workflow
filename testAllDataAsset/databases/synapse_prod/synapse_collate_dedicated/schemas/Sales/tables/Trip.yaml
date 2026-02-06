@@ -1,0 +1,260 @@
+name: Trip
+fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip
+tableType: Regular
+columns:
+  - name: DateID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.DateID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MedallionID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.MedallionID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: HackneyLicenseID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.HackneyLicenseID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PickupTimeID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PickupTimeID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DropoffTimeID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.DropoffTimeID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PickupGeographyID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PickupGeographyID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffGeographyID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.DropoffGeographyID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PickupLatitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PickupLatitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PickupLongitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PickupLongitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PickupLatLong
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PickupLatLong
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffLatitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.DropoffLatitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffLongitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.DropoffLongitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffLatLong
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.DropoffLatLong
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PassengerCount
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PassengerCount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TripDurationSeconds
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.TripDurationSeconds
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TripDistanceMiles
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.TripDistanceMiles
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PaymentType
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.PaymentType
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FareAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.FareAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SurchargeAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.SurchargeAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TaxAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.TaxAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TipAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.TipAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TollsAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.TollsAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TotalAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.Trip.TotalAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 3f350f89-086c-410e-902a-3e00d62b3a6b
+  type: databaseSchema
+  name: Sales
+  fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales
+  displayName: Sales
+  deleted: false
+database:
+  id: 4f5f5b8b-4d6e-4151-b99a-646de86bc298
+  type: database
+  name: synapse_collate_dedicated
+  fullyQualifiedName: synapse_prod.synapse_collate_dedicated
+  displayName: synapse_collate_dedicated
+  deleted: false
+service:
+  id: cabb8781-4876-4f96-a6d2-557f753b94f1
+  type: databaseService
+  name: synapse_prod
+  fullyQualifiedName: synapse_prod
+  description: ""
+  displayName: synapse_prod
+  deleted: false
+serviceType: Synapse
+schemaDefinition: "CREATE TABLE \"Sales\".\"Trip\" (\n\t\"DateID\" INTEGER NOT NULL,\
+  \ \n\t\"MedallionID\" INTEGER NOT NULL, \n\t\"HackneyLicenseID\" INTEGER NOT NULL,\
+  \ \n\t\"PickupTimeID\" INTEGER NOT NULL, \n\t\"DropoffTimeID\" INTEGER NOT NULL,\
+  \ \n\t\"PickupGeographyID\" INTEGER, \n\t\"DropoffGeographyID\" INTEGER, \n\t\"\
+  PickupLatitude\" FLOAT, \n\t\"PickupLongitude\" FLOAT, \n\t\"PickupLatLong\" VARCHAR(50)\
+  \ COLLATE \"SQL_Latin1_General_CP1_CI_AS\", \n\t\"DropoffLatitude\" FLOAT, \n\t\"\
+  DropoffLongitude\" FLOAT, \n\t\"DropoffLatLong\" VARCHAR(50) COLLATE \"SQL_Latin1_General_CP1_CI_AS\"\
+  , \n\t\"PassengerCount\" INTEGER, \n\t\"TripDurationSeconds\" INTEGER, \n\t\"TripDistanceMiles\"\
+  \ FLOAT, \n\t\"PaymentType\" VARCHAR(50) COLLATE \"SQL_Latin1_General_CP1_CI_AS\"\
+  , \n\t\"FareAmount\" MONEY, \n\t\"SurchargeAmount\" MONEY, \n\t\"TaxAmount\" MONEY,\
+  \ \n\t\"TipAmount\" MONEY, \n\t\"TollsAmount\" MONEY, \n\t\"TotalAmount\" MONEY\n\
+  )"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d5ec962b597b2060244c70f441d69be2
+processedLineage: false
+entityStatus: Approved
