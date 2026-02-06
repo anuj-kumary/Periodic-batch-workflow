@@ -1,0 +1,45 @@
+name: 3de789a16e432e278d2be0753e329182
+fullyQualifiedName: Hybrid Runner snowflake.3de789a16e432e278d2be0753e329182
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"7a336155-2a9e-44ea-9865-4d69a5bb48ae\",\"type\":\"table\"\
+        ,\"name\":\"FILTERED_EMPLOYEES_SALES_20250903\",\"fullyQualifiedName\":\"\
+        Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.FILTERED_EMPLOYEES_SALES_20250903\"\
+        ,\"displayName\":\"FILTERED_EMPLOYEES_SALES_20250903\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 94.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT count(CASE WHEN (\"SALARY\" >= ? AND \"SALARY\" < ?) THEN \"SALARY\"\
+  \ END) AS \"95.000K to 96.587K\", count(CASE WHEN (\"SALARY\" >= ?) THEN \"SALARY\"\
+  \ END) AS \"96.587K and up\" \nFROM \"ALL_LINAGE_SCHEMA\".\"FILTERED_EMPLOYEES_SALES_20250903\"\
+  \n LIMIT ?"
+checksum: 3de789a16e432e278d2be0753e329182
+queryDate: 1762300800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: 7a336155-2a9e-44ea-9865-4d69a5bb48ae
+    type: table
+    name: FILTERED_EMPLOYEES_SALES_20250903
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.FILTERED_EMPLOYEES_SALES_20250903
+    displayName: FILTERED_EMPLOYEES_SALES_20250903
+    deleted: false
+processedLineage: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+entityStatus: Unprocessed

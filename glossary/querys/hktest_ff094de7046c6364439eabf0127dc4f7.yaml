@@ -1,0 +1,33 @@
+name: ff094de7046c6364439eabf0127dc4f7
+fullyQualifiedName: hktest.ff094de7046c6364439eabf0127dc4f7
+owners: []
+duration: 1427.0
+users: []
+query: "WITH \"9be203cdfef8628939c9942fb61fdae3_rnd\" AS \n(SELECT \"PART_1\".\"P_NAME\"\
+  \ AS \"P_NAME\" \nFROM \"TPCH_SF100\".\"PART\" AS \"PART_1\" TABLESAMPLE ROW(? ROWS)),\
+  \ \n\"9be203cdfef8628939c9942fb61fdae3_sample\" AS \n(SELECT \"9be203cdfef8628939c9942fb61fdae3_rnd\"\
+  .\"P_NAME\" AS \"P_NAME\" \nFROM \"9be203cdfef8628939c9942fb61fdae3_rnd\")\n SELECT\
+  \ avg(LEN(\"P_NAME\")) AS mean, count(\"P_NAME\") AS \"valuesCount\", count(DISTINCT\
+  \ \"P_NAME\") AS \"distinctCount\", MIN(LEN(\"P_NAME\")) AS min, MAX(LEN(\"P_NAME\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"P_NAME\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\", STDDEV_POP(LEN(\"P_NAME\")) AS stddev, SUM(LEN(\"P_NAME\")) AS sum\
+  \ \nFROM \"9be203cdfef8628939c9942fb61fdae3_sample\"\n LIMIT ?"
+checksum: ff094de7046c6364439eabf0127dc4f7
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d8f39a9b-4f53-4c0d-acb2-d61f40c5b1ea
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

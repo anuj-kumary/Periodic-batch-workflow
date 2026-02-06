@@ -1,0 +1,32 @@
+name: ff964620fb0faa085b7f1816c9eb0e1c
+fullyQualifiedName: hktest.ff964620fb0faa085b7f1816c9eb0e1c
+owners: []
+duration: 55.0
+users: []
+query: "WITH \"2b7a46f33414da8fedece549604bc0f1_rnd\" AS \n(SELECT \"CREDITCARD_1\"\
+  .\"CUSTOMERID\" AS \"CUSTOMERID\" \nFROM \"MSSQLBANKING_ACCOUNT\".\"CREDITCARD\"\
+  \ AS \"CREDITCARD_1\" TABLESAMPLE ROW(? ROWS)), \n\"2b7a46f33414da8fedece549604bc0f1_sample\"\
+  \ AS \n(SELECT \"2b7a46f33414da8fedece549604bc0f1_rnd\".\"CUSTOMERID\" AS \"CUSTOMERID\"\
+  \ \nFROM \"2b7a46f33414da8fedece549604bc0f1_rnd\")\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"CUSTOMERID\" ASC) AS median, percentile_cont(?) WITHIN GROUP\
+  \ (ORDER BY \"CUSTOMERID\" ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"CUSTOMERID\" ASC) AS \"thirdQuartile\" \nFROM \"2b7a46f33414da8fedece549604bc0f1_sample\"\
+  \n LIMIT ?"
+checksum: ff964620fb0faa085b7f1816c9eb0e1c
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 90111e7a-d7bb-46c9-976d-2a483c18a2f5
+    type: table
+    name: CREDITCARD
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.CREDITCARD
+    displayName: CREDITCARD
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

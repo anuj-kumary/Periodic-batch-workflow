@@ -1,0 +1,25 @@
+name: a7516ce3da25fdf5f45dfb501965c088
+fullyQualifiedName: hktest2.a7516ce3da25fdf5f45dfb501965c088
+owners: []
+duration: 82.0
+users: []
+query: "select *,\n       upper(NAME) as NAME_UPPER_DBT\nfrom SAMPLE_DATA\n  \n  limit\
+  \ ?"
+checksum: a7516ce3da25fdf5f45dfb501965c088
+queryDate: 1747699200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: c035af7f-0b1c-43bc-a72c-903ebb7d1d16
+    type: table
+    name: SAMPLE_DATA
+    fullyQualifiedName: hktest2.SAMPLE.DBT_SCHEMA.SAMPLE_DATA
+    displayName: SAMPLE_DATA
+    deleted: false
+processedLineage: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2

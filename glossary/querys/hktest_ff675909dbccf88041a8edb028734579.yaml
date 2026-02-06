@@ -1,0 +1,73 @@
+name: ff675909dbccf88041a8edb028734579
+fullyQualifiedName: hktest.ff675909dbccf88041a8edb028734579
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0b565859-50f2-4c96-b4f3-2abd5feeecb1\",\"type\":\"table\"\
+        ,\"name\":\"LINEITEM\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM\"\
+        ,\"description\":\"Lineitem data as defined by TPC-H\",\"displayName\":\"\
+        LINEITEM\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 70.0
+users: []
+query: "SELECT count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" <\
+  \ ?) THEN \"L_EXTENDEDPRICE\" END) AS \"901.000 to 5.236K\", count(CASE WHEN (\"\
+  L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END)\
+  \ AS \"5.236K to 9.572K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\"\
+  \ < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"9.572K to 13.907K\", count(CASE WHEN (\"\
+  L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END)\
+  \ AS \"13.907K to 18.242K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\"\
+  \ < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"18.242K to 22.578K\", count(CASE WHEN\
+  \ (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\"\
+  \ END) AS \"22.578K to 26.913K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND\
+  \ \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"26.913K to 31.248K\"\
+  , count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"\
+  L_EXTENDEDPRICE\" END) AS \"31.248K to 35.584K\", count(CASE WHEN (\"L_EXTENDEDPRICE\"\
+  \ >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"35.584K to\
+  \ 39.919K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" <\
+  \ ?) THEN \"L_EXTENDEDPRICE\" END) AS \"39.919K to 44.255K\", count(CASE WHEN (\"\
+  L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END)\
+  \ AS \"44.255K to 48.590K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\"\
+  \ < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"48.590K to 52.925K\", count(CASE WHEN\
+  \ (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\"\
+  \ END) AS \"52.925K to 57.261K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND\
+  \ \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"57.261K to 61.596K\"\
+  , count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"\
+  L_EXTENDEDPRICE\" END) AS \"61.596K to 65.931K\", count(CASE WHEN (\"L_EXTENDEDPRICE\"\
+  \ >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"65.931K to\
+  \ 70.267K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" <\
+  \ ?) THEN \"L_EXTENDEDPRICE\" END) AS \"70.267K to 74.602K\", count(CASE WHEN (\"\
+  L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END)\
+  \ AS \"74.602K to 78.937K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\"\
+  \ < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"78.937K to 83.273K\", count(CASE WHEN\
+  \ (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\"\
+  \ END) AS \"83.273K to 87.608K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND\
+  \ \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"87.608K to 91.943K\"\
+  , count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"\
+  L_EXTENDEDPRICE\" END) AS \"91.943K to 96.279K\", count(CASE WHEN (\"L_EXTENDEDPRICE\"\
+  \ >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"96.279K to\
+  \ 100.614K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ?) THEN \"L_EXTENDEDPRICE\"\
+  \ END) AS \"100.614K and up\" \nFROM \"TPCH_SF1\".\"LINEITEM\"\n LIMIT ?"
+checksum: ff675909dbccf88041a8edb028734579
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b565859-50f2-4c96-b4f3-2abd5feeecb1
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

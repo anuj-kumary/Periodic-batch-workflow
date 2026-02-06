@@ -1,0 +1,61 @@
+name: fe7c651c4d8759416d47dcdb9ce43a7d
+fullyQualifiedName: hktest.fe7c651c4d8759416d47dcdb9ce43a7d
+owners: []
+duration: 1582.0
+users: []
+query: "SELECT count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"\
+  L_SUPPKEY\" END) AS \"1.000 to 3.705K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND\
+  \ \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"3.705K to 7.408K\", count(CASE\
+  \ WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"\
+  7.408K to 11.112K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?)\
+  \ THEN \"L_SUPPKEY\" END) AS \"11.112K to 14.816K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"14.816K to 18.519K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"18.519K to 22.223K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"22.223K to 25.927K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"25.927K to 29.630K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"29.630K to 33.334K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"33.334K to 37.038K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"37.038K to 40.741K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"40.741K to 44.445K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"44.445K to 48.149K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"48.149K to 51.852K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"51.852K to 55.556K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"55.556K to 59.260K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"59.260K to 62.963K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"62.963K to 66.667K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"66.667K to 70.371K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"70.371K to 74.074K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"74.074K to 77.778K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"77.778K to 81.482K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"81.482K to 85.185K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\"\
+  \ END) AS \"85.185K to 88.889K\", count(CASE WHEN (\"L_SUPPKEY\" >= ? AND \"L_SUPPKEY\"\
+  \ < ?) THEN \"L_SUPPKEY\" END) AS \"88.889K to 92.593K\", count(CASE WHEN (\"L_SUPPKEY\"\
+  \ >= ? AND \"L_SUPPKEY\" < ?) THEN \"L_SUPPKEY\" END) AS \"92.593K to 96.296K\"\
+  , count(CASE WHEN (\"L_SUPPKEY\" >= ?) THEN \"L_SUPPKEY\" END) AS \"96.296K and\
+  \ up\" \nFROM \"TPCH_SF10\".\"LINEITEM\"\n LIMIT ?"
+checksum: fe7c651c4d8759416d47dcdb9ce43a7d
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 98e57e0d-b1b7-4dd8-ae1e-418bef3de0ed
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

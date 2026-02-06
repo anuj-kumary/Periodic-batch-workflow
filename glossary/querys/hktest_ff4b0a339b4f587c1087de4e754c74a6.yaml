@@ -1,0 +1,30 @@
+name: ff4b0a339b4f587c1087de4e754c74a6
+fullyQualifiedName: hktest.ff4b0a339b4f587c1087de4e754c74a6
+owners: []
+duration: 54.0
+users: []
+query: "SELECT avg(LEN(\"CONFORMED_MKTG_CMPGN_TYP_NM\")) AS mean, count(\"CONFORMED_MKTG_CMPGN_TYP_NM\"\
+  ) AS \"valuesCount\", count(DISTINCT \"CONFORMED_MKTG_CMPGN_TYP_NM\") AS \"distinctCount\"\
+  , MIN(LEN(\"CONFORMED_MKTG_CMPGN_TYP_NM\")) AS min, MAX(LEN(\"CONFORMED_MKTG_CMPGN_TYP_NM\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"CONFORMED_MKTG_CMPGN_TYP_NM\" IS ?) THEN ?\
+  \ ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"CONFORMED_MKTG_CMPGN_TYP_NM\"\
+  )) AS stddev, SUM(LEN(\"CONFORMED_MKTG_CMPGN_TYP_NM\")) AS sum \nFROM \"CURATED\"\
+  .\"CNTRCT\"\n LIMIT ?"
+checksum: ff4b0a339b4f587c1087de4e754c74a6
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

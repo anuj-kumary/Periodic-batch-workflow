@@ -1,0 +1,38 @@
+name: 0e657e51ac36deb855e3088cdaab95c5
+fullyQualifiedName: hktest2.0e657e51ac36deb855e3088cdaab95c5
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"f198f65f-7ae4-46f5-9978-1c2ae1c40588\",\"type\":\"table\"\
+        ,\"name\":\"SAMPLE_TABLE\",\"fullyQualifiedName\":\"hktest2.SAMPLE.PUBLIC.SAMPLE_TABLE\"\
+        ,\"displayName\":\"SAMPLE_TABLE\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 22.0
+users: []
+query: |-
+  CREATE OR REPLACE TABLE SAMPLE_TABLE_TRANSFORMED2 AS
+  SELECT *,
+         UPPER(NAME) AS NAME_UPPER
+  FROM SAMPLE.PUBLIC.SAMPLE_TABLE;
+checksum: 0e657e51ac36deb855e3088cdaab95c5
+queryDate: 1747612800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 03a4efd2-9dc1-4b37-8834-25206b8d4c0b
+    type: table
+    name: SAMPLE_TABLE_TRANSFORMED2
+    fullyQualifiedName: hktest2.SAMPLE.PUBLIC.SAMPLE_TABLE_TRANSFORMED2
+    displayName: SAMPLE_TABLE_TRANSFORMED2
+    deleted: false
+processedLineage: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2
