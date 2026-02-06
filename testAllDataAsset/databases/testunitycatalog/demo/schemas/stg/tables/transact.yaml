@@ -1,0 +1,104 @@
+name: transact
+fullyQualifiedName: testunitycatalog.demo.stg.transact
+tableType: Regular
+columns:
+  - name: transactid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.demo.stg.transact.transactid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.demo.stg.transact.accountid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.demo.stg.transact.amount
+    tags: []
+    children: []
+    customMetrics: []
+  - name: transactdate
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.demo.stg.transact.transactdate
+    tags: []
+    children: []
+    customMetrics: []
+  - name: transacttype
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.stg.transact.transacttype
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testunitycatalog.demo.stg.transact._fivetran_deleted
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.demo.stg.transact._fivetran_synced
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 3181774a-f115-44e6-9043-a0d20e9a7723
+  type: databaseSchema
+  name: stg
+  fullyQualifiedName: testunitycatalog.demo.stg
+  displayName: stg
+  deleted: false
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 53d01de7-7452-4f07-8641-dd142718cc21
+  type: testSuite
+  name: testunitycatalog.demo.stg.transact.testSuite
+  fullyQualifiedName: testunitycatalog.demo.stg.transact.testSuite
+  displayName: testunitycatalog.demo.stg.transact.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 23e21832b2546c14143875c2a5736531
+processedLineage: false
+entityStatus: Approved

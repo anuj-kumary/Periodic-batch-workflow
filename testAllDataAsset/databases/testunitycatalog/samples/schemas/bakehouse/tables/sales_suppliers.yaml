@@ -1,0 +1,229 @@
+name: sales_suppliers
+fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers
+description: |2
+
+  The **Bakehouse Dataset** simulates a bakery franchise business and contains several key datasets for various analytical and AI-driven use cases. Please note that this sample dataset has been synthetically curated and is suitable for any Databricks workload.
+
+  Sample use cases for this dataset include:
+
+  * **Building Data Pipelines with Delta Live Tables**: Create automated, real-time data pipelines for efficient data ingestion, transformation, and management.
+  * **Performing Analytics with Databricks SQL**: Conduct powerful SQL-based analytics to uncover actionable insights from structured data, including sales trends and customer behavior.
+  * **Exploring AI and Machine Learning Capabilities**: Use the dataset to develop and train machine learning models, applying AI to forecast trends, optimize operations, and predict customer preferences.
+tableType: Regular
+columns:
+  - name: supplierID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.supplierID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.name
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: ingredient
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.ingredient
+    tags: []
+    children: []
+    customMetrics: []
+  - name: continent
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.continent
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: city
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.city
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: district
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.district
+    tags: []
+    children: []
+    customMetrics: []
+  - name: size
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.size
+    tags: []
+    children: []
+    customMetrics: []
+  - name: longitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.longitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: latitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.latitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: approved
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.approved
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b39e494e-3f23-4039-a300-527cc667cce3
+  type: databaseSchema
+  name: bakehouse
+  fullyQualifiedName: testunitycatalog.samples.bakehouse
+  displayName: bakehouse
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: a4640563-f288-4d48-9a02-54228313eb13
+  type: testSuite
+  name: testunitycatalog.samples.bakehouse.sales_suppliers.testSuite
+  fullyQualifiedName: testunitycatalog.samples.bakehouse.sales_suppliers.testSuite
+  displayName: testunitycatalog.samples.bakehouse.sales_suppliers.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.name.tags
+      newValue: "[{\"tagFQN\":\"General.Person\",\"name\":\"Person\",\"description\"\
+        :\"A full person name, which can include first names, middle names or initials,\
+        \ and last names.\",\"source\":\"Classification\",\"labelType\":\"Generated\"\
+        ,\"state\":\"Suggested\"},{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\"\
+        ,\"description\":\"PII which if lost, compromised, or disclosed without authorization,\
+        \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.continent.tags
+      newValue: "[{\"tagFQN\":\"General.Location\",\"name\":\"Location\",\"description\"\
+        :\"Name of politically or geographically defined location (cities, provinces,\
+        \ countries, international regions, bodies of water, mountains.\",\"source\"\
+        :\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"},{\"\
+        tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\":\"\
+        PII which is easily accessible from public sources and can include zip code,\
+        \ race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.city.tags
+      newValue: "[{\"tagFQN\":\"General.Location\",\"name\":\"Location\",\"description\"\
+        :\"Name of politically or geographically defined location (cities, provinces,\
+        \ countries, international regions, bodies of water, mountains.\",\"source\"\
+        :\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"},{\"\
+        tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\":\"\
+        PII which is easily accessible from public sources and can include zip code,\
+        \ race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 305899f9c8e9df8d569f9b1507ea3312
+processedLineage: false
+entityStatus: Approved

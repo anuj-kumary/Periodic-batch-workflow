@@ -1,0 +1,187 @@
+name: part
+fullyQualifiedName: testunitycatalog.samples.tpch.part
+description: ""
+tableType: Regular
+columns:
+  - name: p_partkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_partkey
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_name
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: p_mfgr
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_mfgr
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_brand
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_brand
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_size
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_size
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_container
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_container
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_retailprice
+    dataType: DECIMAL
+    dataLength: 18
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_retailprice
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.tpch.part.p_comment
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 55c5b226-2dd1-43e5-bb1e-f2f5225271ee
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: testunitycatalog.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 8fba0ac2-a75a-4493-b017-13e322f5f7f8
+  type: testSuite
+  name: testunitycatalog.samples.tpch.part.testSuite
+  fullyQualifiedName: testunitycatalog.samples.tpch.part.testSuite
+  displayName: testunitycatalog.samples.tpch.part.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.p_name.tags
+      newValue: "[{\"tagFQN\":\"General.Person\",\"name\":\"Person\",\"description\"\
+        :\"A full person name, which can include first names, middle names or initials,\
+        \ and last names.\",\"source\":\"Classification\",\"labelType\":\"Generated\"\
+        ,\"state\":\"Suggested\"},{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\"\
+        ,\"description\":\"PII which if lost, compromised, or disclosed without authorization,\
+        \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.p_comment.tags
+      newValue: "[{\"tagFQN\":\"General.Person\",\"name\":\"Person\",\"description\"\
+        :\"A full person name, which can include first names, middle names or initials,\
+        \ and last names.\",\"source\":\"Classification\",\"labelType\":\"Generated\"\
+        ,\"state\":\"Suggested\"},{\"tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\"\
+        ,\"description\":\"PII which if lost, compromised, or disclosed without authorization,\
+        \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+        \ to an individual.\",\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: ab0cda2e7d5eb0af7a97dea1b3a06adb
+processedLineage: false
+entityStatus: Approved

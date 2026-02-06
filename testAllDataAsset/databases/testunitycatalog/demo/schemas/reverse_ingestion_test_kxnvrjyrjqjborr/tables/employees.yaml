@@ -1,0 +1,80 @@
+name: employees
+fullyQualifiedName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees
+description: Updated table description
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Updated column description
+    fullyQualifiedName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees.name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: created_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees.created_at
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: f8b0ec48-4b3a-43d8-86cd-495d578a77a3
+  type: databaseSchema
+  name: reverse_ingestion_test_kxnvrjyrjqjborr
+  fullyQualifiedName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr
+  displayName: reverse_ingestion_test_kxnvrjyrjqjborr
+  deleted: false
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: eb194dc3-60fd-4752-9d18-d5bb3057f9a0
+  type: testSuite
+  name: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees.testSuite
+  fullyQualifiedName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees.testSuite
+  displayName: testunitycatalog.demo.reverse_ingestion_test_kxnvrjyrjqjborr.employees.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 2e8946dfd0691ab26f0d580c25f9221a
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,157 @@
+name: trips
+fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips
+description: ""
+tableType: Regular
+columns:
+  - name: tpep_pickup_datetime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.tpep_pickup_datetime
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: tpep_dropoff_datetime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.tpep_dropoff_datetime
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: trip_distance
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.trip_distance
+    tags: []
+    children: []
+    customMetrics: []
+  - name: fare_amount
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.fare_amount
+    tags: []
+    children: []
+    customMetrics: []
+  - name: pickup_zip
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.pickup_zip
+    tags: []
+    children: []
+    customMetrics: []
+  - name: dropoff_zip
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.dropoff_zip
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: acc09eb2-82c7-4d3a-9d71-b51fdb027f04
+  type: databaseSchema
+  name: nyctaxi
+  fullyQualifiedName: testunitycatalog.samples.nyctaxi
+  displayName: nyctaxi
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: b2f9d666-04dd-4144-aa4d-ec68d21e11b4
+  type: testSuite
+  name: testunitycatalog.samples.nyctaxi.trips.testSuite
+  fullyQualifiedName: testunitycatalog.samples.nyctaxi.trips.testSuite
+  displayName: testunitycatalog.samples.nyctaxi.trips.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.tpep_pickup_datetime.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.tpep_dropoff_datetime.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: d2442e49c6872ec551640662c392b135
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,142 @@
+name: dcc_pitches
+fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches
+tableType: Regular
+columns:
+  - name: Title
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Title
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Description
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Address_1
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Address_1
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Address_2
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Address_2
+    tags: []
+    children: []
+    customMetrics: []
+  - name: NACE_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.NACE_code
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Latitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Latitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Longitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Longitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Region
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.Region
+    tags: []
+    children: []
+    customMetrics: []
+  - name: DccArea
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.DccArea
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CensusSmallArea
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.CensusSmallArea
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ElectoralDivision
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.ElectoralDivision
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 2d9c4a8d-697d-4fe9-97c8-752f0af3933f
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: testunitycatalog.demo.uniform_schema
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 6dd2e0be-5480-4ea9-bd6e-5e05ed38ab0b
+  type: testSuite
+  name: testunitycatalog.demo.uniform_schema.dcc_pitches.testSuite
+  fullyQualifiedName: testunitycatalog.demo.uniform_schema.dcc_pitches.testSuite
+  displayName: testunitycatalog.demo.uniform_schema.dcc_pitches.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 9ba97b23d7f7a4db3cb9a61df00af516
+processedLineage: false
+entityStatus: Approved

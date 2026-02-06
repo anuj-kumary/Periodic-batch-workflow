@@ -1,0 +1,553 @@
+name: claims_sample_synthetic
+fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic
+description: |2
+
+  HealthVerity synchronizes transformational technologies with the nation’s largest healthcare and consumer data ecosystem to power previously unattainable outcomes and fundamentally advance science. HealthVerity offers hundreds of data sources across medical, pharmacy, lab, biomarker, EHR, consumer, and more.
+
+  This sample high-fidelity synthetic dataset from HealthVerity represents 1,500+ synthetic patients modeled on de-identified medical and pharmacy claims. **This dataset is intended for educational rather than production purposes, and may be used solely in non-production settings for internal testing, evaluation and/or informational purposes, and may not be relied upon or used for general commercial use**. This is only a synthetic sample dataset meant to illustrate a small portion of the type and volume of Real-world Data that is available within the HealthVerity Marketplace ecosystem. HealthVerity would welcome the opportunity to learn more about your project, and determine the optimal patient data for your objective. For more details on our offerings, please visit our website ([https://www.healthverity.com](https://www.healthverity.com)) or contact us through [https://www.healthverity.com/contact/](https://www.healthverity.com/contact/).
+tableType: Regular
+columns:
+  - name: hvid
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The HealthVerity universal identifier for the patient, as determined\
+      \ by the HealthVerity matching engine."
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.hvid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: claim_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Uniquely identifies a single claim that was submitted for reimbursement
+      by this data vendor.
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.claim_id
+    tags:
+      - tagFQN: General.PhoneNumber
+        name: PhoneNumber
+        description: A telephone number.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: claim_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Indicates whether the claim is a professional (P) or institutional
+      (I) claim.
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.claim_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: date_service
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The calendar date on which the services referred to in this claim\
+      \ were rendered. (2400/DTP03, DTP01=472)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.date_service
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: diagnosis_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "A code indicating the patient's disease, injury, or condition, as\
+      \ identified by a healthcare practitioner. (2300/HI(01-12)-02)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.diagnosis_code
+    tags:
+      - tagFQN: General.DriverLicense
+        name: DriverLicense
+        description: Person's driver's license image or number.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: procedure_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "A code indicating the course of action taken by the healthcare practitioner.\
+      \ (837P 2400/SV101-02; 837I 2400/SV201, SV202)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_code
+    tags: []
+    children: []
+    customMetrics: []
+  - name: patient_gender
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "A single character identifying the gender of the person who received\
+      \ healthcare treatment. F = Female, M = Male, U = Unknown. (2010CA/DMG03)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.patient_gender
+    tags: []
+    children: []
+    customMetrics: []
+  - name: patient_year_of_birth
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The four-digit year in which the patient was born. (2010CA/DMG02)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.patient_year_of_birth
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: patient_zip3
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The first three digits of the U.S. postal code for the residence\
+      \ of the person who received healthcare treatment. If not supplied by the data\
+      \ provider, HealthVerity may populate this field with the first three digits\
+      \ of the postal code for the primary care provider or the rendering provider.\
+      \ (2010CA/N403)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.patient_zip3
+    tags: []
+    children: []
+    customMetrics: []
+  - name: patient_state
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The two-character postal code for the state in which the patient
+      resides. (2010CA/N402)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.patient_state
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: inst_admit_type_std_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A standard code indicating the priority of this admission or visit.
+      (837I 2300/CL101)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.inst_admit_type_std_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: inst_admit_source_std_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A standard code indicating the source of the referral for the admission
+      or visit. (837I 2300/CL102)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.inst_admit_source_std_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: inst_discharge_status_std_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A standard code indicating the status of the patient as of the statement
+      end date. (837I 2300/CL103)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.inst_discharge_status_std_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: inst_type_of_bill_std_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "A standard code identifying the type of facility where services\
+      \ were performed. (837I 2300/CLM05-01, CLM05-03)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.inst_type_of_bill_std_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: inst_drg_std_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A standard diagnosis-related group code indicating the payment classification.
+      (837I 2300/HCP06)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.inst_drg_std_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: place_of_service_std_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "A standard code indicating the facility or place where services\
+      \ were rendered, as maintained by the Centers for Medicare and Medicaid Services\
+      \ (CMS). (2400/SV105)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.place_of_service_std_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: service_line_number
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: An integer representing the sequence for this service line within
+      the claim. (2400/LX01)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.service_line_number
+    tags: []
+    children: []
+    customMetrics: []
+  - name: diagnosis_code_qual
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The type of code used to indicate the disease, injury, or condition.\
+      \ Examples: ICD-10, ICD-9."
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.diagnosis_code_qual
+    tags: []
+    children: []
+    customMetrics: []
+  - name: admit_diagnosis_ind
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A flag indicating whether the diagnosis reported on an institutional
+      claim represents the admitting diagnosis. (2300/HI01-02)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.admit_diagnosis_ind
+    tags: []
+    children: []
+    customMetrics: []
+  - name: procedure_code_qual
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The type of code used to indicate the course of action taken by\
+      \ the healthcare practitioner. Examples: CPT, HCPCS. (837P 2400/SV101-01; 837I\
+      \ 2400/SV202-01)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_code_qual
+    tags: []
+    children: []
+    customMetrics: []
+  - name: procedure_units_billed
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The number of discrete actions, elements, or precisely measured\
+      \ amounts administered in this course of action. (837P 2400/SV104; 837I 2400/SV205)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_units_billed
+    tags: []
+    children: []
+    customMetrics: []
+  - name: procedure_modifier_1
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Identifies the first qualifier for the procedure code. This is a
+      code that supplies additional information about the procedure. (837P 2400/SV101-03;
+      837I 2400/SV202-03)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_modifier_1
+    tags: []
+    children: []
+    customMetrics: []
+  - name: procedure_modifier_2
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Identifies the second qualifier for the procedure code. This is a
+      code that supplies additional information about the procedure. (837P 2400/SV101-04;
+      837I 2400/SV202-04)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_modifier_2
+    tags: []
+    children: []
+    customMetrics: []
+  - name: procedure_modifier_3
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Identifies the third qualifier for the procedure code. This is a
+      code that supplies additional information about the procedure. (837P 2400/SV101-05;
+      837I 2400/SV202-05)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_modifier_3
+    tags: []
+    children: []
+    customMetrics: []
+  - name: procedure_modifier_4
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Identifies the fourth qualifier for the procedure code. This is a
+      code that supplies additional information about the procedure. (837P 2400/SV101-06;
+      837I 2400/SV202-06)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.procedure_modifier_4
+    tags: []
+    children: []
+    customMetrics: []
+  - name: revenue_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A standard NUBC revenue code from the UB claim form. (837I 2400/SV201)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.revenue_code
+    tags: []
+    children: []
+    customMetrics: []
+  - name: line_charge
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The total amount charged for this service line. (837P 2400/SV102;
+      837I 2400/SV203)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.line_charge
+    tags: []
+    children: []
+    customMetrics: []
+  - name: line_allowed
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The total amount allowed for this service line. (2400/HCP02)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.line_allowed
+    tags: []
+    children: []
+    customMetrics: []
+  - name: prov_rendering_npi
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The standard National Provider Identifier (NPI) for the provider\
+      \ who rendered services. (837P 2310B-2420A/NM109, NM108=XX; 837I 2310D-2420C/NM109,\
+      \ NM108=XX)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.prov_rendering_npi
+    tags: []
+    children: []
+    customMetrics: []
+  - name: prov_billing_npi
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The standard National Provider Identifier (NPI) for the provider\
+      \ that billed for services. (2010AA/NM109, NM108=XX)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.prov_billing_npi
+    tags: []
+    children: []
+    customMetrics: []
+  - name: prov_referring_npi
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The standard National Provider Identifier (NPI) for the provider\
+      \ who referred the patient to the rendering provider. (837P 2310A/NM109, NM108=XX;\
+      \ 837I 2310F/NM109, NM108=XX)"
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.prov_referring_npi
+    tags: []
+    children: []
+    customMetrics: []
+  - name: payer_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: A code indicating the classification for the payer.
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.payer_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: prov_rendering_std_taxonomy
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The National Uniform Claim Committee (NUCC) standard taxonomy code
+      for the provider who rendered services. (837P 2310B/PRV03; 837I 2310D/PRV03)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.prov_rendering_std_taxonomy
+    tags: []
+    children: []
+    customMetrics: []
+  - name: prov_billing_std_taxonomy
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The National Uniform Claim Committee (NUCC) standard taxonomy code
+      for the provider who submitted the claim. (2000A/PRV03)
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.prov_billing_std_taxonomy
+    tags: []
+    children: []
+    customMetrics: []
+  - name: prov_referring_std_taxonomy
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The National Uniform Claim Committee (NUCC) standard taxonomy code
+      for the provider who referred the patient to the rendering provider.
+    fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.prov_referring_std_taxonomy
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d01b20f4-b45d-42f1-8fa4-c16376101d52
+  type: databaseSchema
+  name: healthverity
+  fullyQualifiedName: testunitycatalog.samples.healthverity
+  displayName: healthverity
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 7fd5dba6-ad29-4a03-9ebc-343854e38ac3
+  type: testSuite
+  name: testunitycatalog.samples.healthverity.claims_sample_synthetic.testSuite
+  fullyQualifiedName: testunitycatalog.samples.healthverity.claims_sample_synthetic.testSuite
+  displayName: testunitycatalog.samples.healthverity.claims_sample_synthetic.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.claim_id.tags
+      newValue: "[{\"tagFQN\":\"General.PhoneNumber\",\"name\":\"PhoneNumber\",\"\
+        description\":\"A telephone number.\",\"source\":\"Classification\",\"labelType\"\
+        :\"Generated\",\"state\":\"Suggested\"},{\"tagFQN\":\"PII.NonSensitive\",\"\
+        name\":\"NonSensitive\",\"description\":\"PII which is easily accessible from\
+        \ public sources and can include zip code, race, gender, and date of birth.\"\
+        ,\"style\":{},\"source\":\"Classification\",\"labelType\":\"Generated\",\"\
+        state\":\"Suggested\"}]"
+    - name: columns.date_service.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.diagnosis_code.tags
+      newValue: "[{\"tagFQN\":\"General.DriverLicense\",\"name\":\"DriverLicense\"\
+        ,\"description\":\"Person's driver's license image or number.\",\"source\"\
+        :\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"},{\"\
+        tagFQN\":\"PII.Sensitive\",\"name\":\"Sensitive\",\"description\":\"PII which\
+        \ if lost, compromised, or disclosed without authorization, could result in\
+        \ substantial harm, embarrassment, inconvenience, or unfairness to an individual.\"\
+        ,\"style\":{\"color\":\"#ff0000\"},\"source\":\"Classification\",\"labelType\"\
+        :\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.patient_year_of_birth.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.patient_state.tags
+      newValue: "[{\"tagFQN\":\"General.Location\",\"name\":\"Location\",\"description\"\
+        :\"Name of politically or geographically defined location (cities, provinces,\
+        \ countries, international regions, bodies of water, mountains.\",\"source\"\
+        :\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"},{\"\
+        tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\":\"\
+        PII which is easily accessible from public sources and can include zip code,\
+        \ race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 89b8400fd6ffc3d91eb49f6b360e42b1
+processedLineage: false
+entityStatus: Approved

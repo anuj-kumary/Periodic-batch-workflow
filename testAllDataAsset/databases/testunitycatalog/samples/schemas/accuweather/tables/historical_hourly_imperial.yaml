@@ -1,0 +1,529 @@
+name: historical_hourly_imperial
+fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial
+description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+  \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+  \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+  \ contains one month of data for the top 50 global cities. Please note that this\
+  \ sample dataset represents a reduced portion of the available data attributes,\
+  \ volume, and data types available within AccuWeather's Data Suite and is intended\
+  \ for exploratory purposes rather than for production.\n\nSome examples these datasets\
+  \ can be explored include:\n- Compare weather conditions across the top 50 global\
+  \ cities to identify regional patterns in temperature, precipitation, and other\
+  \ weather parameters.\n- Create visualizations like time series plots, heatmaps,\
+  \ or box plots to better understand the distribution and weather variability.\n\
+  - Explore correlations between different weather parameters within and across cities\
+  \ to understand how they are related.\n- Investigate temporal trends by analyzing\
+  \ how weather fluctuates over time.\n- Identify outliers in the data that could\
+  \ indicate extreme weather occurrences.\n\nWith more access to AccuWeather's Data\
+  \ Suite available on the Databricks Marketplace, users can leverage weather information\
+  \ in a number of ways which include some of the following:\n\n- **Economic Risk\
+  \ & Impact Analysis**: Utilize historical weather data to determine relationships\
+  \ on business metrics that are trained to predict potential impacts, such as supply\
+  \ chain disruptions, labor productivity, and transportation delays.\n- **Energy\
+  \ Demand Planning & Forecasting**: Inform energy supply and production forecasts\
+  \ for wind, solar, and hydro installations by integrating historical weather information\
+  \ helping to optimize resource allocation and reduce operational risks.\n- **Revenue\
+  \ Projections & Consumer Behavior Analysis**: Join historical weather data with\
+  \ past business data to create more accurate sales growth predictions, accounting\
+  \ for weather-driven demand.\n- **Weather-Targeted Advertising**: Craft advertising\
+  \ campaigns by using historical and forecast weather data to reach consumers at\
+  \ the most critical times, maximizing interest and increasing conversion.\n"
+tableType: Regular
+columns:
+  - name: city_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.city_name
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: country_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.country_code
+    tags: []
+    children: []
+    customMetrics: []
+  - name: latitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.latitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: longitude
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.longitude
+    tags: []
+    children: []
+    customMetrics: []
+  - name: date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.date
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: cloud_base_height
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.cloud_base_height
+    tags: []
+    children: []
+    customMetrics: []
+  - name: cloud_cover_high
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.cloud_cover_high
+    tags: []
+    children: []
+    customMetrics: []
+  - name: cloud_cover_low
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.cloud_cover_low
+    tags: []
+    children: []
+    customMetrics: []
+  - name: cloud_cover_medium
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.cloud_cover_medium
+    tags: []
+    children: []
+    customMetrics: []
+  - name: cloud_cover_total
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.cloud_cover_total
+    tags: []
+    children: []
+    customMetrics: []
+  - name: humidity_relative
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.humidity_relative
+    tags: []
+    children: []
+    customMetrics: []
+  - name: index_uv
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.index_uv
+    tags: []
+    children: []
+    customMetrics: []
+  - name: has_ice
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.has_ice
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ice_lwe
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.ice_lwe
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ice_lwe_rate
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.ice_lwe_rate
+    tags: []
+    children: []
+    customMetrics: []
+  - name: minutes_of_ice
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.minutes_of_ice
+    tags: []
+    children: []
+    customMetrics: []
+  - name: minutes_of_precipitation
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.minutes_of_precipitation
+    tags: []
+    children: []
+    customMetrics: []
+  - name: minutes_of_sun
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.minutes_of_sun
+    tags: []
+    children: []
+    customMetrics: []
+  - name: minutes_of_rain
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.minutes_of_rain
+    tags: []
+    children: []
+    customMetrics: []
+  - name: minutes_of_snow
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.minutes_of_snow
+    tags: []
+    children: []
+    customMetrics: []
+  - name: has_precipitation
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.has_precipitation
+    tags: []
+    children: []
+    customMetrics: []
+  - name: precipitation_lwe
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.precipitation_lwe
+    tags: []
+    children: []
+    customMetrics: []
+  - name: precipitation_lwe_rate
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.precipitation_lwe_rate
+    tags: []
+    children: []
+    customMetrics: []
+  - name: precipitation_type
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.precipitation_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: precipitation_type_desc
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.precipitation_type_desc
+    tags: []
+    children: []
+    customMetrics: []
+  - name: pressure
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.pressure
+    tags: []
+    children: []
+    customMetrics: []
+  - name: pressure_msl
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.pressure_msl
+    tags: []
+    children: []
+    customMetrics: []
+  - name: has_rain
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.has_rain
+    tags: []
+    children: []
+    customMetrics: []
+  - name: rain_lwe
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.rain_lwe
+    tags: []
+    children: []
+    customMetrics: []
+  - name: rain_lwe_rate
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.rain_lwe_rate
+    tags: []
+    children: []
+    customMetrics: []
+  - name: snow_cover
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.snow_cover
+    tags: []
+    children: []
+    customMetrics: []
+  - name: snow_depth
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.snow_depth
+    tags: []
+    children: []
+    customMetrics: []
+  - name: has_snow
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.has_snow
+    tags: []
+    children: []
+    customMetrics: []
+  - name: snow
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.snow
+    tags: []
+    children: []
+    customMetrics: []
+  - name: snow_lwe
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.snow_lwe
+    tags: []
+    children: []
+    customMetrics: []
+  - name: snow_lwe_rate
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.snow_lwe_rate
+    tags: []
+    children: []
+    customMetrics: []
+  - name: solar_irradiance
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.solar_irradiance
+    tags: []
+    children: []
+    customMetrics: []
+  - name: solar_radiation_net
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.solar_radiation_net
+    tags: []
+    children: []
+    customMetrics: []
+  - name: temperature
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.temperature
+    tags: []
+    children: []
+    customMetrics: []
+  - name: temperature_dew_point
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.temperature_dew_point
+    tags: []
+    children: []
+    customMetrics: []
+  - name: temperature_heat_index
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.temperature_heat_index
+    tags: []
+    children: []
+    customMetrics: []
+  - name: temperature_realfeel
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.temperature_realfeel
+    tags: []
+    children: []
+    customMetrics: []
+  - name: temperature_realfeel_shade
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.temperature_realfeel_shade
+    tags: []
+    children: []
+    customMetrics: []
+  - name: temperature_wind_chill
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.temperature_wind_chill
+    tags: []
+    children: []
+    customMetrics: []
+  - name: visibility
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.visibility
+    tags: []
+    children: []
+    customMetrics: []
+  - name: wind_direction
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.wind_direction
+    tags: []
+    children: []
+    customMetrics: []
+  - name: wind_gust
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.wind_gust
+    tags: []
+    children: []
+    customMetrics: []
+  - name: wind_gust_instantaneous
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.wind_gust_instantaneous
+    tags: []
+    children: []
+    customMetrics: []
+  - name: wind_speed
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.wind_speed
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 9e407493-fce0-4091-81eb-5f4cc6bae3ec
+  type: databaseSchema
+  name: accuweather
+  fullyQualifiedName: testunitycatalog.samples.accuweather
+  displayName: accuweather
+  deleted: false
+database:
+  id: ce62dd08-d2d3-4cc1-bd5b-575811cfee90
+  type: database
+  name: samples
+  fullyQualifiedName: testunitycatalog.samples
+  displayName: samples
+  deleted: false
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 902cea47-3461-4c07-8034-58637332649d
+  type: testSuite
+  name: testunitycatalog.samples.accuweather.historical_hourly_imperial.testSuite
+  fullyQualifiedName: testunitycatalog.samples.accuweather.historical_hourly_imperial.testSuite
+  displayName: testunitycatalog.samples.accuweather.historical_hourly_imperial.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.city_name.tags
+      newValue: "[{\"tagFQN\":\"General.Location\",\"name\":\"Location\",\"description\"\
+        :\"Name of politically or geographically defined location (cities, provinces,\
+        \ countries, international regions, bodies of water, mountains.\",\"source\"\
+        :\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"},{\"\
+        tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\":\"\
+        PII which is easily accessible from public sources and can include zip code,\
+        \ race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+    - name: columns.date.tags
+      newValue: "[{\"tagFQN\":\"General.DateTime\",\"name\":\"DateTime\",\"description\"\
+        :\"Absolute or relative dates or periods or times smaller than a day.\",\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        },{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\",\"description\"\
+        :\"PII which is easily accessible from public sources and can include zip\
+        \ code, race, gender, and date of birth.\",\"style\":{},\"source\":\"Classification\"\
+        ,\"labelType\":\"Generated\",\"state\":\"Suggested\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 1d8343669a162f5636562a6d06092550
+processedLineage: false
+entityStatus: Approved
