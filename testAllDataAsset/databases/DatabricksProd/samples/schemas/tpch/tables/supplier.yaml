@@ -1,0 +1,189 @@
+name: supplier
+fullyQualifiedName: DatabricksProd.samples.tpch.supplier
+description: "This table stores details about suppliers, including their account balance,\
+  \ address, contact information, and associated nation key, enabling businesses to\
+  \ manage supplier relationships and analyze procurement data effectively."
+tableType: Regular
+columns:
+  - name: s_suppkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The s_suppkey column is a unique identifier for each supplier, used\
+      \ to distinguish between different suppliers in the database."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_suppkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: s_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The s_name column stores the name of the supplier, which is used\
+      \ to identify the supplier in transactions and reports."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: s_address
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The s_address column contains the physical address of the supplier,\
+      \ which is essential for shipping and communication purposes."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_address
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: s_nationkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The s_nationkey column is a foreign key that links the supplier\
+      \ to a specific nation, indicating the country where the supplier is located."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_nationkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: s_phone
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The s_phone column contains the contact phone number of the supplier,\
+      \ facilitating direct communication."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_phone
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: s_acctbal
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: "The s_acctbal column represents the account balance of the supplier,\
+      \ indicating the financial status of the supplier's account."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_acctbal
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: s_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The s_comment column holds additional remarks or comments about\
+      \ the supplier, providing context or specific notes relevant to the supplier's\
+      \ relationship."
+    fullyQualifiedName: DatabricksProd.samples.tpch.supplier.s_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.supplier (
+    s_suppkey BIGINT,
+    s_name STRING,
+    s_address STRING,
+    s_nationkey BIGINT,
+    s_phone STRING,
+    s_acctbal DECIMAL(18,2),
+    s_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/supplier'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.s_suppkey.description
+      newValue: "The s_suppkey column is a unique identifier for each supplier, used\
+        \ to distinguish between different suppliers in the database."
+    - name: columns.s_name.description
+      newValue: "The s_name column stores the name of the supplier, which is used\
+        \ to identify the supplier in transactions and reports."
+    - name: columns.s_address.description
+      newValue: "The s_address column contains the physical address of the supplier,\
+        \ which is essential for shipping and communication purposes."
+    - name: columns.s_nationkey.description
+      newValue: "The s_nationkey column is a foreign key that links the supplier to\
+        \ a specific nation, indicating the country where the supplier is located."
+    - name: columns.s_phone.description
+      newValue: "The s_phone column contains the contact phone number of the supplier,\
+        \ facilitating direct communication."
+    - name: columns.s_acctbal.description
+      newValue: "The s_acctbal column represents the account balance of the supplier,\
+        \ indicating the financial status of the supplier's account."
+    - name: columns.s_comment.description
+      newValue: "The s_comment column holds additional remarks or comments about the\
+        \ supplier, providing context or specific notes relevant to the supplier's\
+        \ relationship."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520316
+    columns.s_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+    columns.s_phone.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+    columns.s_acctbal.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+    columns.s_address.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+    columns.s_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+    columns.s_suppkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+    columns.s_nationkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770520620
+domains: []
+dataProducts: []
+sourceHash: bc7310f19177567263e9aa15f7c2419e
+processedLineage: false
+entityStatus: Approved

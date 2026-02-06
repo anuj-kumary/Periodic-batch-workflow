@@ -1,0 +1,198 @@
+name: s3_tbl_new
+fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new
+description: "This table stores customer information, including names, contact details,\
+  \ and geographic data, enabling businesses to analyze customer demographics, manage\
+  \ relationships, and tailor marketing strategies effectively."
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The CUSTOMERID column serves as a unique identifier for each customer.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.CUSTOMERID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMERNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The CUSTOMERNAME column contains the full name of the customer.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.CUSTOMERNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The EMAIL column stores the email address of the customer for communication
+      purposes.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.EMAIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CITY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The CITY column represents the name of the city where the customer
+      is located.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.CITY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The COUNTRY column indicates the country where the customer resides.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.COUNTRY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TERRITORY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The TERRITORY column specifies the geographical area or region assigned
+      to the customer.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.TERRITORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTACTFIRSTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The CONTACTFIRSTNAME column contains the first name of the contact
+      person for the customer.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.CONTACTFIRSTNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTACTLASTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The CONTACTLASTNAME column holds the last name of the contact person
+      for the customer.
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.s3_tbl_new.CONTACTLASTNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1a6de823-12f8-48cd-bed3-9e444b5e96d1
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.hive_metastore.default
+  displayName: default
+  deleted: false
+database:
+  id: 6f5b0b83-fb7f-4500-b4cf-072d76378ca1
+  type: database
+  name: hive_metastore
+  fullyQualifiedName: DatabricksProd.hive_metastore
+  displayName: hive_metastore
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE hive_metastore.default.s3_tbl_new (
+    CUSTOMERID STRING,
+    CUSTOMERNAME STRING,
+    EMAIL STRING,
+    CITY STRING,
+    COUNTRY STRING,
+    TERRITORY STRING,
+    CONTACTFIRSTNAME STRING,
+    CONTACTLASTNAME STRING)
+  USING delta
+  TBLPROPERTIES (
+    'delta.enableDeletionVectors' = 'true',
+    'delta.feature.deletionVectors' = 'supported',
+    'delta.minReaderVersion' = '3',
+    'delta.minWriterVersion' = '7')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.CUSTOMERID.description
+      newValue: The CUSTOMERID column serves as a unique identifier for each customer.
+    - name: columns.CUSTOMERNAME.description
+      newValue: The CUSTOMERNAME column contains the full name of the customer.
+    - name: columns.EMAIL.description
+      newValue: The EMAIL column stores the email address of the customer for communication
+        purposes.
+    - name: columns.CITY.description
+      newValue: The CITY column represents the name of the city where the customer
+        is located.
+    - name: columns.COUNTRY.description
+      newValue: The COUNTRY column indicates the country where the customer resides.
+    - name: columns.TERRITORY.description
+      newValue: The TERRITORY column specifies the geographical area or region assigned
+        to the customer.
+    - name: columns.CONTACTFIRSTNAME.description
+      newValue: The CONTACTFIRSTNAME column contains the first name of the contact
+        person for the customer.
+    - name: columns.CONTACTLASTNAME.description
+      newValue: The CONTACTLASTNAME column holds the last name of the contact person
+        for the customer.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770550957
+    columns.CITY.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.EMAIL.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.COUNTRY.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.TERRITORY.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.CUSTOMERID.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.CUSTOMERNAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.CONTACTLASTNAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+    columns.CONTACTFIRSTNAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770551331
+domains: []
+dataProducts: []
+sourceHash: 02f370ad975435d9fbbe57c5c13373bd
+processedLineage: false
+entityStatus: Approved

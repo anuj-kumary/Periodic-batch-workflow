@@ -1,0 +1,189 @@
+name: table_two
+fullyQualifiedName: DatabricksProd.demo.new_schema.table_two
+description: Table with complex datatypes
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Unique identifier
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the person
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: STRUCT
+    dataTypeDisplay: "struct<street:string,city:string,state:string,postal_code:string,country:string,coordinates:struct<latitude:double,longitude:double>>"
+    description: Address information
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address
+    tags: []
+    children:
+      - name: street
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.street
+        tags: []
+        children: []
+      - name: city
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.city
+        tags: []
+        children: []
+      - name: state
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.state
+        tags: []
+        children: []
+      - name: postal_code
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.postal_code
+        tags:
+          - tagFQN: '"Test.tag&1".test&tag&&11'
+            name: test&tag&&11
+            displayName: ""
+            description: test&tag&&11
+            style:
+              color: "#e19a37"
+            source: Classification
+            labelType: Manual
+            state: Confirmed
+            appliedAt: 1767969396000
+            appliedBy: admin
+        children: []
+      - name: country
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.country
+        tags: []
+        children: []
+      - name: coordinates
+        dataType: STRUCT
+        dataTypeDisplay: "struct<latitude:double,longitude:double>"
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.coordinates
+        tags:
+          - tagFQN: advanceSearch.advanceSearchTag
+            name: advanceSearchTag
+            displayName: advanceSearchTagDisplayName
+            description: advanceSearchTag
+            style: {}
+            source: Classification
+            labelType: Manual
+            state: Confirmed
+            appliedAt: 1767969396000
+            appliedBy: admin
+        children:
+          - name: latitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.coordinates.latitude
+            tags: []
+            children: []
+          - name: longitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.address.coordinates.longitude
+            tags:
+              - tagFQN: '"Test.tag&1".test&tag&&11'
+                name: test&tag&&11
+                displayName: ""
+                description: test&tag&&11
+                style:
+                  color: "#e19a37"
+                source: Classification
+                labelType: Manual
+                state: Confirmed
+                appliedAt: 1767969396000
+                appliedBy: admin
+            children: []
+    customMetrics: []
+  - name: phone_numbers
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: List of phone numbers
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.phone_numbers
+    tags:
+      - tagFQN: '"Test.tag&1".test&tag&&11'
+        name: test&tag&&11
+        displayName: ""
+        description: test&tag&&11
+        style:
+          color: "#e19a37"
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+    children: []
+    customMetrics: []
+  - name: preferences
+    dataType: MAP
+    dataTypeDisplay: "map<string,struct<key1:string,key2:int>>"
+    description: User preferences with nested struct
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_two.preferences
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 420834f5-1a71-4745-9447-2f52361c437a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: DatabricksProd.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 716ed3e4-f66d-4d5d-a911-0467233dcb5c
+  type: database
+  name: demo
+  fullyQualifiedName: DatabricksProd.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE demo.new_schema.table_two (
+    id INT COMMENT 'Unique identifier',
+    name STRING COMMENT 'Name of the person',
+    address STRUCT<street: STRING COMMENT 'Street name', city: STRING COMMENT 'City name', state: STRING COMMENT 'State name', postal_code: STRING COMMENT 'Postal code', country: STRING COMMENT 'Country name', coordinates: STRUCT<latitude: DOUBLE COMMENT 'Latitude coordinate', longitude: DOUBLE COMMENT 'Longitude coordinate'> COMMENT 'Geographic coordinates including latitude and longitude'> COMMENT 'Address information',
+    phone_numbers ARRAY<STRING> COMMENT 'List of phone numbers',
+    preferences MAP<STRING, STRUCT<key1: STRING COMMENT 'First key', key2: INT COMMENT 'Second key'>> COMMENT 'User preferences with nested struct')
+  USING delta
+  COMMENT 'Table with complex datatypes'
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 70b8891632823ad5bf679583f4c9b88d
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,157 @@
+name: views
+fullyQualifiedName: DatabricksProd.system.information_schema.views
+description: "This table provides metadata about database views, including their definitions,\
+  \ properties, and characteristics. Users can leverage this information to understand\
+  \ view structures, assess their updatability, and manage database access effectively."
+tableType: Regular
+columns:
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the view.
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.table_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the view.
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.table_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the relation.
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.table_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: view_definition
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The view text if the user owns the view, NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.view_definition
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: check_option
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always 'NONE'. Reserved for future use.
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.check_option
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_updatable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.is_updatable
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_insertable_into
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use.
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.is_insertable_into
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sql_path
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NULL. Reserved for future use.
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.sql_path
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_materialized
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: DatabricksProd.system.information_schema.views.is_materialized
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7677775a-b9a7-4a70-a477-9e0fe9c495a1
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.system.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.information_schema.views (
+    table_catalog STRING NOT NULL COMMENT 'Catalog containing the view.',
+    table_schema STRING NOT NULL COMMENT 'Schema containing the view.',
+    table_name STRING NOT NULL COMMENT 'Name of the relation.',
+    view_definition STRING COMMENT 'The view text if the user owns the view, NULL otherwise.',
+    check_option STRING NOT NULL COMMENT 'Always \'NONE\'. Reserved for future use.',
+    is_updatable STRING NOT NULL COMMENT 'Always NO. Reserved for future use',
+    is_insertable_into STRING NOT NULL COMMENT 'Always NO. Reserved for future use.',
+    sql_path STRING COMMENT 'Always NULL. Reserved for future use.',
+    is_materialized STRING)
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table provides metadata about database views, including their\
+        \ definitions, properties, and characteristics. Users can leverage this information\
+        \ to understand view structures, assess their updatability, and manage database\
+        \ access effectively."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518624585
+domains: []
+dataProducts: []
+sourceHash: 4e1dad64089882e4e992031543e69690
+processedLineage: false
+entityStatus: Approved

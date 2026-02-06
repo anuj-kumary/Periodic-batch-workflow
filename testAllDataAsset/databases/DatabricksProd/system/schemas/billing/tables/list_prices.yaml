@@ -1,0 +1,204 @@
+name: list_prices
+fullyQualifiedName: DatabricksProd.system.billing.list_prices
+description: "This table stores pricing information for various cloud services, detailing\
+  \ account-specific rates, applicable currencies, and effective time periods, enabling\
+  \ users to analyze and manage billing for different SKUs and usage units effectively."
+tableType: Regular
+columns:
+  - name: account_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The unique identifier for the account associated with the billing
+      record.
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.account_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: price_start_time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: The timestamp indicating when the pricing becomes effective.
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.price_start_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: price_end_time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: The timestamp indicating when the pricing becomes no longer valid.
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.price_end_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sku_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the stock keeping unit (SKU) for which the pricing is
+      applicable.
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.sku_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cloud
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The cloud service provider or platform related to the pricing information.
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.cloud
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: currency_code
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The code representing the currency in which the price is denominated.
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.currency_code
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: usage_unit
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The unit of measurement for usage associated with the pricing, such\
+      \ as hours or gigabytes."
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.usage_unit
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pricing
+    dataType: STRUCT
+    dataTypeDisplay: "struct<default:decimal(38,18)>"
+    description: "A structured representation of the pricing details, including the\
+      \ default price."
+    fullyQualifiedName: DatabricksProd.system.billing.list_prices.pricing
+    tags: []
+    children:
+      - name: default
+        dataType: DECIMAL
+        dataLength: 38
+        dataTypeDisplay: "decimal(38,18)"
+        fullyQualifiedName: DatabricksProd.system.billing.list_prices.pricing.default
+        tags: []
+        children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 3c744198-2802-44fd-b248-942fbd986075
+  type: databaseSchema
+  name: billing
+  fullyQualifiedName: DatabricksProd.system.billing
+  displayName: billing
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.billing.list_prices (
+    account_id STRING,
+    price_start_time TIMESTAMP,
+    price_end_time TIMESTAMP,
+    sku_name STRING,
+    cloud STRING,
+    currency_code STRING,
+    usage_unit STRING,
+    pricing STRUCT<default: DECIMAL(38,18)>)
+  USING deltasharing
+  TBLPROPERTIES (
+    'delta.autoOptimize.autoCompact' = 'auto',
+    'delta.autoOptimize.optimizeWrite' = 'true',
+    'delta.lastCommitTimestamp' = '1720188488000',
+    'delta.lastUpdateVersion' = '8151',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2',
+    'view.query.out.numCols' = '8')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.account_id.description
+      newValue: The unique identifier for the account associated with the billing
+        record.
+    - name: columns.price_start_time.description
+      newValue: The timestamp indicating when the pricing becomes effective.
+    - name: columns.price_end_time.description
+      newValue: The timestamp indicating when the pricing becomes no longer valid.
+    - name: columns.sku_name.description
+      newValue: The name of the stock keeping unit (SKU) for which the pricing is
+        applicable.
+    - name: columns.cloud.description
+      newValue: The cloud service provider or platform related to the pricing information.
+    - name: columns.currency_code.description
+      newValue: The code representing the currency in which the price is denominated.
+    - name: columns.usage_unit.description
+      newValue: "The unit of measurement for usage associated with the pricing, such\
+        \ as hours or gigabytes."
+    - name: columns.pricing.description
+      newValue: "A structured representation of the pricing details, including the\
+        \ default price."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.4
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656348
+    columns.cloud.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.pricing.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.sku_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.account_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.usage_unit.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.currency_code.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.price_end_time.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+    columns.price_start_time.description:
+      changedBy: ingestion-bot
+      changedAt: 1743518656611
+domains: []
+dataProducts: []
+sourceHash: 95c67e80f073d78f4a551723fa841993
+processedLineage: false
+entityStatus: Approved

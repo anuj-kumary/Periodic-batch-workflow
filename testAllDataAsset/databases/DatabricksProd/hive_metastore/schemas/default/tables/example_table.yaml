@@ -1,0 +1,115 @@
+name: example_table
+fullyQualifiedName: DatabricksProd.hive_metastore.default.example_table
+description: "This table stores data related to entities, featuring unique identifiers,\
+  \ names, and an array of scores, allowing users to analyze performance metrics and\
+  \ aggregate results for various applications."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The unique identifier for each record in the table, used to distinguish\
+      \ one entry from another."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.example_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The name associated with the record, typically representing a person,\
+      \ entity, or item."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.example_table.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: scores
+    dataType: ARRAY
+    arrayDataType: DOUBLE
+    dataTypeDisplay: array<double>
+    description: "A collection of numerical values representing scores or ratings,\
+      \ which can be used for analysis or evaluation purposes."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.example_table.scores
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1a6de823-12f8-48cd-bed3-9e444b5e96d1
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.hive_metastore.default
+  displayName: default
+  deleted: false
+database:
+  id: 6f5b0b83-fb7f-4500-b4cf-072d76378ca1
+  type: database
+  name: hive_metastore
+  fullyQualifiedName: DatabricksProd.hive_metastore
+  displayName: hive_metastore
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE hive_metastore.default.example_table (
+    id INT,
+    name STRING,
+    scores ARRAY<DOUBLE>)
+  USING delta
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.enableDeletionVectors' = 'true',
+    'delta.feature.deletionVectors' = 'supported',
+    'delta.minReaderVersion' = '3',
+    'delta.minWriterVersion' = '7')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "The unique identifier for each record in the table, used to distinguish\
+        \ one entry from another."
+    - name: columns.name.description
+      newValue: "The name associated with the record, typically representing a person,\
+        \ entity, or item."
+    - name: columns.scores.description
+      newValue: "A collection of numerical values representing scores or ratings,\
+        \ which can be used for analysis or evaluation purposes."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770555908
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770556174
+    columns.name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770556174
+    columns.scores.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770556174
+domains: []
+dataProducts: []
+sourceHash: 77f55dc1ae67cdbf63639671d916aff2
+processedLineage: false
+entityStatus: Approved

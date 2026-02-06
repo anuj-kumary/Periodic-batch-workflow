@@ -1,0 +1,158 @@
+name: key_column_usage
+fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage
+description: "This table provides details about the columns that are part of constraints\
+  \ in a database, helping users understand relationships and dependencies between\
+  \ tables, which is essential for database design and integrity enforcement."
+tableType: Regular
+columns:
+  - name: constraint_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the constraint.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.constraint_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: constraint_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the constraint.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.constraint_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: constraint_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the constraint.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.constraint_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the table.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.table_catalog
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the table.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.table_schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the table in which the constraint is defined.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.table_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: column_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the column.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.column_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ordinal_position
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Position (1-based) of the column in the key.
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.ordinal_position
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: position_in_unique_constraint
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "For foreign key, position (1-based) of the column in parent unique\
+      \ or primary key constraint, NULL otherwise."
+    fullyQualifiedName: DatabricksProd.system.information_schema.key_column_usage.position_in_unique_constraint
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7677775a-b9a7-4a70-a477-9e0fe9c495a1
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.system.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.information_schema.key_column_usage (
+    constraint_catalog STRING NOT NULL COMMENT 'Catalog containing the constraint.',
+    constraint_schema STRING NOT NULL COMMENT 'Schema containing the constraint.',
+    constraint_name STRING NOT NULL COMMENT 'Name of the constraint.',
+    table_catalog STRING NOT NULL COMMENT 'Catalog containing the table.',
+    table_schema STRING NOT NULL COMMENT 'Schema containing the table.',
+    table_name STRING NOT NULL COMMENT 'Name of the table in which the constraint is defined.',
+    column_name STRING NOT NULL COMMENT 'Name of the column.',
+    ordinal_position INT NOT NULL COMMENT 'Position (1-based) of the column in the key.',
+    position_in_unique_constraint INT COMMENT 'For foreign key, position (1-based) of the column in parent unique or primary key constraint, NULL otherwise.')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table provides details about the columns that are part of constraints\
+        \ in a database, helping users understand relationships and dependencies between\
+        \ tables, which is essential for database design and integrity enforcement."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518643994
+domains: []
+dataProducts: []
+sourceHash: 783528727a50274679340ac0501e5bf7
+processedLineage: false
+entityStatus: Approved

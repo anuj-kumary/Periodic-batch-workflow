@@ -1,0 +1,112 @@
+name: sample_table
+fullyQualifiedName: DatabricksProd.main.default.sample_table
+description: "This table stores demographic information, including individuals' ages\
+  \ and unique identifiers, allowing users to analyze and manage data related to personal\
+  \ attributes effectively."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "A unique identifier for each record in the table, used to distinguish\
+      \ one entry from another."
+    fullyQualifiedName: DatabricksProd.main.default.sample_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The name of the individual, typically representing their first and\
+      \ last name."
+    fullyQualifiedName: DatabricksProd.main.default.sample_table.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: age
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The age of the individual, representing how many years they have\
+      \ lived."
+    fullyQualifiedName: DatabricksProd.main.default.sample_table.age
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f578b6a4-ea37-4161-8524-5de914e228ce
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.main.default
+  displayName: default
+  deleted: false
+database:
+  id: b0be8926-45aa-447c-adc4-e986fc49489f
+  type: database
+  name: main
+  fullyQualifiedName: DatabricksProd.main
+  displayName: main
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE main.default.sample_table (
+    id INT,
+    name STRING,
+    age INT)
+  USING delta
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "A unique identifier for each record in the table, used to distinguish\
+        \ one entry from another."
+    - name: columns.name.description
+      newValue: "The name of the individual, typically representing their first and\
+        \ last name."
+    - name: columns.age.description
+      newValue: "The age of the individual, representing how many years they have\
+        \ lived."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770544566
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770544830
+    columns.age.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770544830
+    columns.name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770544830
+domains: []
+dataProducts: []
+sourceHash: 4397f09766b5cf0547b8381863229f1c
+processedLineage: false
+entityStatus: Approved

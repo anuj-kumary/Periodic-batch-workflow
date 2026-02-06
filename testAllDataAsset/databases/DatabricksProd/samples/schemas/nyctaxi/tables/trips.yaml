@@ -1,0 +1,171 @@
+name: trips
+fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips
+description: "This table provides detailed records of taxi trips, including fare amounts,\
+  \ pickup and dropoff locations, and trip distances, enabling analysis of transportation\
+  \ patterns and fare trends in urban areas."
+tableType: Regular
+columns:
+  - name: tpep_pickup_datetime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: "The tpep_pickup_datetime column captures the exact date and time\
+      \ when the trip began, which is essential for calculating trip duration and\
+      \ understanding demand patterns."
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips.tpep_pickup_datetime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tpep_dropoff_datetime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: "The tpep_dropoff_datetime column records the exact date and time\
+      \ when the trip ended, allowing for analysis of trip duration and patterns over\
+      \ time."
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips.tpep_dropoff_datetime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: trip_distance
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: double
+    description: "The trip_distance column measures the total distance traveled during\
+      \ the trip, which is important for fare calculation and analyzing travel patterns."
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips.trip_distance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fare_amount
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: double
+    description: "The fare_amount column represents the total fare charged for the\
+      \ trip, which includes the base fare, any additional charges, and surcharges."
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips.fare_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pickup_zip
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The pickup_zip column indicates the ZIP code where the trip started,\
+      \ helping to identify the geographical area of the pickup location."
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips.pickup_zip
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dropoff_zip
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The dropoff_zip column indicates the ZIP code where the trip ended,\
+      \ providing information about the geographical area of the dropoff location."
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi.trips.dropoff_zip
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 851fbd7a-d6c0-40e8-b107-0f4a4f141c99
+  type: databaseSchema
+  name: nyctaxi
+  fullyQualifiedName: DatabricksProd.samples.nyctaxi
+  displayName: nyctaxi
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.nyctaxi.trips (
+    tpep_pickup_datetime TIMESTAMP,
+    tpep_dropoff_datetime TIMESTAMP,
+    trip_distance DOUBLE,
+    fare_amount DOUBLE,
+    pickup_zip INT,
+    dropoff_zip INT)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/nyctaxi-with-zipcodes/subsampled'
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.tpep_pickup_datetime.description
+      newValue: "The tpep_pickup_datetime column captures the exact date and time\
+        \ when the trip began, which is essential for calculating trip duration and\
+        \ understanding demand patterns."
+    - name: columns.tpep_dropoff_datetime.description
+      newValue: "The tpep_dropoff_datetime column records the exact date and time\
+        \ when the trip ended, allowing for analysis of trip duration and patterns\
+        \ over time."
+    - name: columns.trip_distance.description
+      newValue: "The trip_distance column measures the total distance traveled during\
+        \ the trip, which is important for fare calculation and analyzing travel patterns."
+    - name: columns.fare_amount.description
+      newValue: "The fare_amount column represents the total fare charged for the\
+        \ trip, which includes the base fare, any additional charges, and surcharges."
+    - name: columns.pickup_zip.description
+      newValue: "The pickup_zip column indicates the ZIP code where the trip started,\
+        \ helping to identify the geographical area of the pickup location."
+    - name: columns.dropoff_zip.description
+      newValue: "The dropoff_zip column indicates the ZIP code where the trip ended,\
+        \ providing information about the geographical area of the dropoff location."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770527990
+    columns.pickup_zip.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770528240
+    columns.dropoff_zip.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770528240
+    columns.fare_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770528240
+    columns.trip_distance.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770528240
+    columns.tpep_pickup_datetime.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770528240
+    columns.tpep_dropoff_datetime.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770528240
+domains: []
+dataProducts: []
+sourceHash: 390426aa5ecee8d577c9510f4d946cf4
+processedLineage: false
+entityStatus: Approved

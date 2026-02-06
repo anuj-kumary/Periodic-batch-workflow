@@ -1,0 +1,225 @@
+name: part
+fullyQualifiedName: DatabricksProd.samples.tpch.part
+description: "This table stores detailed information about various parts, including\
+  \ their brand, type, and pricing. Users can leverage this data for inventory management,\
+  \ sales analysis, and understanding product offerings in a supply chain context."
+tableType: Regular
+columns:
+  - name: p_partkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The p_partkey column serves as a unique identifier for each part,\
+      \ allowing for easy reference and retrieval of specific items."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_partkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The p_name column holds the name of the part, which is typically\
+      \ a descriptive title that identifies the product."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_mfgr
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The p_mfgr column indicates the manufacturer of the part, identifying\
+      \ the company that produces the item."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_mfgr
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_brand
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The p_brand column represents the brand name of the part, indicating\
+      \ the manufacturer or company associated with the product."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_brand
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The p_type column classifies the part into a specific type or category,\
+      \ providing insight into the nature of the product."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_size
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The p_size column indicates the size of the part, which may refer\
+      \ to dimensions or volume, helping to categorize the product."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_size
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_container
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The p_container column specifies the type of container in which\
+      \ the part is packaged, such as box, bag, or crate."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_container
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_retailprice
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    description: "The p_retailprice column represents the retail price of the part,\
+      \ indicating the cost at which the item is sold to consumers."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_retailprice
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The p_comment column contains additional comments or notes about\
+      \ the part, providing context or details that may be relevant for understanding\
+      \ the product."
+    fullyQualifiedName: DatabricksProd.samples.tpch.part.p_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.part (
+    p_partkey BIGINT,
+    p_name STRING,
+    p_mfgr STRING,
+    p_brand STRING,
+    p_type STRING,
+    p_size INT,
+    p_container STRING,
+    p_retailprice DECIMAL(18,2),
+    p_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/part'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.p_partkey.description
+      newValue: "The p_partkey column serves as a unique identifier for each part,\
+        \ allowing for easy reference and retrieval of specific items."
+    - name: columns.p_name.description
+      newValue: "The p_name column holds the name of the part, which is typically\
+        \ a descriptive title that identifies the product."
+    - name: columns.p_mfgr.description
+      newValue: "The p_mfgr column indicates the manufacturer of the part, identifying\
+        \ the company that produces the item."
+    - name: columns.p_brand.description
+      newValue: "The p_brand column represents the brand name of the part, indicating\
+        \ the manufacturer or company associated with the product."
+    - name: columns.p_type.description
+      newValue: "The p_type column classifies the part into a specific type or category,\
+        \ providing insight into the nature of the product."
+    - name: columns.p_size.description
+      newValue: "The p_size column indicates the size of the part, which may refer\
+        \ to dimensions or volume, helping to categorize the product."
+    - name: columns.p_container.description
+      newValue: "The p_container column specifies the type of container in which the\
+        \ part is packaged, such as box, bag, or crate."
+    - name: columns.p_retailprice.description
+      newValue: "The p_retailprice column represents the retail price of the part,\
+        \ indicating the cost at which the item is sold to consumers."
+    - name: columns.p_comment.description
+      newValue: "The p_comment column contains additional comments or notes about\
+        \ the part, providing context or details that may be relevant for understanding\
+        \ the product."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523342
+    columns.p_mfgr.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_size.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_brand.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_partkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_container.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+    columns.p_retailprice.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770523603
+domains: []
+dataProducts: []
+sourceHash: b3b71e0d457fd9d346b3973f3652aa15
+processedLineage: false
+entityStatus: Approved

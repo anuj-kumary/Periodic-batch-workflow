@@ -1,0 +1,80 @@
+name: recipient_allowed_ip_ranges
+fullyQualifiedName: DatabricksProd.system.information_schema.recipient_allowed_ip_ranges
+description: "This table stores the allowed IP address ranges for recipients, enabling\
+  \ administrators to manage and restrict access based on specific IPs, enhancing\
+  \ security and ensuring that only authorized users can connect to the system."
+tableType: Regular
+columns:
+  - name: recipient_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the recipient.
+    fullyQualifiedName: DatabricksProd.system.information_schema.recipient_allowed_ip_ranges.recipient_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: allowed_ip_range
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Allowed IP range in IP address or CIDR format.
+    fullyQualifiedName: DatabricksProd.system.information_schema.recipient_allowed_ip_ranges.allowed_ip_range
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7677775a-b9a7-4a70-a477-9e0fe9c495a1
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.system.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.information_schema.recipient_allowed_ip_ranges (
+    recipient_name STRING NOT NULL COMMENT 'Name of the recipient.',
+    allowed_ip_range STRING NOT NULL COMMENT 'Allowed IP range in IP address or CIDR format.')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table stores the allowed IP address ranges for recipients, enabling\
+        \ administrators to manage and restrict access based on specific IPs, enhancing\
+        \ security and ensuring that only authorized users can connect to the system."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518640194
+domains: []
+dataProducts: []
+sourceHash: d65318a01a3f3cfe95d97a1de97e73df
+processedLineage: false
+entityStatus: Approved

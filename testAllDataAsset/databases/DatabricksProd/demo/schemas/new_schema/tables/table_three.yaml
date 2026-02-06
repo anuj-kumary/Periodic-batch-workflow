@@ -1,0 +1,192 @@
+name: table_three
+fullyQualifiedName: DatabricksProd.demo.new_schema.table_three
+description: Table with complex datatypes
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Unique identifier
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the person
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: STRUCT
+    dataTypeDisplay: "struct<street:string,city:string,state:string,postal_code:string,country:string,coordinates:struct<latitude:double,longitude:double>>"
+    description: Address information
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address
+    tags: []
+    children:
+      - name: street
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.street
+        tags: []
+        children: []
+      - name: city
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.city
+        tags: []
+        children: []
+      - name: state
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.state
+        tags: []
+        children: []
+      - name: postal_code
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.postal_code
+        tags: []
+        children: []
+      - name: country
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.country
+        tags: []
+        children: []
+      - name: coordinates
+        dataType: STRUCT
+        dataTypeDisplay: "struct<latitude:double,longitude:double>"
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.coordinates
+        tags: []
+        children:
+          - name: latitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.coordinates.latitude
+            tags: []
+            children: []
+          - name: longitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.address.coordinates.longitude
+            tags: []
+            children: []
+    customMetrics: []
+  - name: phone_numbers
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: List of phone numbers
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.phone_numbers
+    tags: []
+    children: []
+    customMetrics: []
+  - name: preferences
+    dataType: MAP
+    dataTypeDisplay: "map<string,struct<key1:string,key2:int,nested_struct:struct<nested_key1:string,nested_key2:boolean>>>"
+    description: User preferences with nested struct
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.preferences
+    tags: []
+    children: []
+    customMetrics: []
+  - name: orders
+    dataType: ARRAY
+    arrayDataType: STRUCT
+    dataTypeDisplay: "array<struct<order_id:int,product:string,quantity:int,details:struct<timestamp:timestamp,status:string>>>"
+    description: List of orders
+    fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders
+    tags: []
+    children:
+      - name: order_id
+        dataType: INT
+        dataTypeDisplay: int
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders.order_id
+        tags: []
+        children: []
+      - name: product
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders.product
+        tags: []
+        children: []
+      - name: quantity
+        dataType: INT
+        dataTypeDisplay: int
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders.quantity
+        tags: []
+        children: []
+      - name: details
+        dataType: STRUCT
+        dataTypeDisplay: "struct<timestamp:timestamp,status:string>"
+        fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders.details
+        tags: []
+        children:
+          - name: timestamp
+            dataType: TIMESTAMP
+            dataTypeDisplay: timestamp
+            fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders.details.timestamp
+            tags: []
+            children: []
+          - name: status
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: DatabricksProd.demo.new_schema.table_three.orders.details.status
+            tags: []
+            children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 420834f5-1a71-4745-9447-2f52361c437a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: DatabricksProd.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 716ed3e4-f66d-4d5d-a911-0467233dcb5c
+  type: database
+  name: demo
+  fullyQualifiedName: DatabricksProd.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE demo.new_schema.table_three (
+    id INT COMMENT 'Unique identifier',
+    name STRING COMMENT 'Name of the person',
+    address STRUCT<street: STRING COMMENT 'Street name', city: STRING COMMENT 'City name', state: STRING COMMENT 'State name', postal_code: STRING COMMENT 'Postal code', country: STRING COMMENT 'Country name', coordinates: STRUCT<latitude: DOUBLE COMMENT 'Latitude coordinate', longitude: DOUBLE COMMENT 'Longitude coordinate'> COMMENT 'Geographic coordinates including latitude and longitude'> COMMENT 'Address information',
+    phone_numbers ARRAY<STRING> COMMENT 'List of phone numbers',
+    preferences MAP<STRING, STRUCT<key1: STRING COMMENT 'First key', key2: INT COMMENT 'Second key', nested_struct: STRUCT<nested_key1: STRING COMMENT 'Nested key 1', nested_key2: BOOLEAN COMMENT 'Nested key 2'> COMMENT 'Nested struct within preferences map'>> COMMENT 'User preferences with nested struct',
+    orders ARRAY<STRUCT<order_id: INT COMMENT 'Order identifier', product: STRING COMMENT 'Product name', quantity: INT COMMENT 'Quantity ordered', details: STRUCT<timestamp: TIMESTAMP COMMENT 'Timestamp of the order', status: STRING COMMENT 'Order status'> COMMENT 'Additional details of the order'>> COMMENT 'List of orders')
+  USING delta
+  COMMENT 'Table with complex datatypes'
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 37bc77db5cd1f0de26e4eebf2fefc90b
+processedLineage: false
+entityStatus: Approved

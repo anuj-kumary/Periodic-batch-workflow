@@ -1,0 +1,118 @@
+name: region
+fullyQualifiedName: DatabricksProd.samples.tpch.region
+description: "This table provides details about various geographical regions, including\
+  \ their names and associated comments, allowing users to analyze regional data and\
+  \ make informed decisions based on location-specific insights."
+tableType: Regular
+columns:
+  - name: r_regionkey
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "This column serves as a unique identifier for each region, allowing\
+      \ for efficient referencing and linking of data related to specific regions\
+      \ in other tables."
+    fullyQualifiedName: DatabricksProd.samples.tpch.region.r_regionkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: r_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column holds the name of the region, which is used to identify\
+      \ and distinguish it from other regions in the dataset."
+    fullyQualifiedName: DatabricksProd.samples.tpch.region.r_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: r_comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "This column contains comments or notes related to the region, providing\
+      \ additional context or information about the region's characteristics or significance."
+    fullyQualifiedName: DatabricksProd.samples.tpch.region.r_comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+  type: databaseSchema
+  name: tpch
+  fullyQualifiedName: DatabricksProd.samples.tpch
+  displayName: tpch
+  deleted: false
+database:
+  id: 6daa62ed-cfef-486c-9ce4-cf67ef977744
+  type: database
+  name: samples
+  fullyQualifiedName: DatabricksProd.samples
+  displayName: samples
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE samples.tpch.region (
+    r_regionkey BIGINT,
+    r_name STRING,
+    r_comment STRING)
+  USING delta
+  LOCATION 'dbfs:/databricks-datasets/tpch/delta-001/region'
+  TBLPROPERTIES (
+    'delta.checkpoint.writeStatsAsJson' = 'false',
+    'delta.checkpoint.writeStatsAsStruct' = 'true',
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.r_regionkey.description
+      newValue: "This column serves as a unique identifier for each region, allowing\
+        \ for efficient referencing and linking of data related to specific regions\
+        \ in other tables."
+    - name: columns.r_name.description
+      newValue: "This column holds the name of the region, which is used to identify\
+        \ and distinguish it from other regions in the dataset."
+    - name: columns.r_comment.description
+      newValue: "This column contains comments or notes related to the region, providing\
+        \ additional context or information about the region's characteristics or\
+        \ significance."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743770521332
+    columns.r_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770521623
+    columns.r_comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770521623
+    columns.r_regionkey.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770521623
+domains: []
+dataProducts: []
+sourceHash: aa455ea879054bb1dcf78edd3ddb2ee1
+processedLineage: false
+entityStatus: Approved

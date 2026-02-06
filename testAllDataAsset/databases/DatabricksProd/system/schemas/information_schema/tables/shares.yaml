@@ -1,0 +1,135 @@
+name: shares
+fullyQualifiedName: DatabricksProd.system.information_schema.shares
+description: "This table stores details about shared resources within the system,\
+  \ including metadata such as creation and alteration timestamps, user information,\
+  \ and ownership, enabling users to manage and track shared assets effectively."
+tableType: Regular
+columns:
+  - name: share_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the share.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.share_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: share_owner
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Owner of the share.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.share_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: An optional comment that describes the share.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.comment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: Timestamp when the share was created.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.created
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created_by
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal who created the share.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.created_by
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_altered
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: Timestamp when the share was last altered in any way.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.last_altered
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_altered_by
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal who last altered the share.
+    fullyQualifiedName: DatabricksProd.system.information_schema.shares.last_altered_by
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7677775a-b9a7-4a70-a477-9e0fe9c495a1
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: DatabricksProd.system.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 27e04784-3cc8-4808-9ddb-ec6bd25dbe84
+  type: database
+  name: system
+  fullyQualifiedName: DatabricksProd.system
+  displayName: system
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE system.information_schema.shares (
+    share_name STRING NOT NULL COMMENT 'Name of the share.',
+    share_owner STRING NOT NULL COMMENT 'Owner of the share.',
+    comment STRING COMMENT 'An optional comment that describes the share.',
+    created TIMESTAMP NOT NULL COMMENT 'Timestamp when the share was created.',
+    created_by STRING NOT NULL COMMENT 'Principal who created the share.',
+    last_altered TIMESTAMP NOT NULL COMMENT 'Timestamp when the share was last altered in any way.',
+    last_altered_by STRING NOT NULL COMMENT 'Principal who last altered the share.')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: "This table stores details about shared resources within the system,\
+        \ including metadata such as creation and alteration timestamps, user information,\
+        \ and ownership, enabling users to manage and track shared assets effectively."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743518630886
+domains: []
+dataProducts: []
+sourceHash: 46a03e15f08d0cea75810579614e5f6f
+processedLineage: false
+entityStatus: Approved

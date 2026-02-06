@@ -1,0 +1,72 @@
+name: ayush_table
+fullyQualifiedName: DatabricksProd.hive_metastore.default.ayush_table
+description: DEMOO COMMENT
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The 'id' column serves as a unique identifier for each record in\
+      \ the table, allowing for efficient data retrieval and management."
+    fullyQualifiedName: DatabricksProd.hive_metastore.default.ayush_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1a6de823-12f8-48cd-bed3-9e444b5e96d1
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: DatabricksProd.hive_metastore.default
+  displayName: default
+  deleted: false
+database:
+  id: 6f5b0b83-fb7f-4500-b4cf-072d76378ca1
+  type: database
+  name: hive_metastore
+  fullyQualifiedName: DatabricksProd.hive_metastore
+  displayName: hive_metastore
+  deleted: false
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  CREATE TABLE hive_metastore.default.ayush_table (
+    id INT)
+  USING delta
+  COMMENT 'DEMOO COMMENT'
+  TBLPROPERTIES (
+    'delta.minReaderVersion' = '1',
+    'delta.minWriterVersion' = '2')
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "The 'id' column serves as a unique identifier for each record in\
+        \ the table, allowing for efficient data retrieval and management."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743770559588
+domains: []
+dataProducts: []
+sourceHash: c6bc7377eb3c8bb892c0614abe847e3b
+processedLineage: false
+entityStatus: Approved
