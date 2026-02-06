@@ -1,0 +1,91 @@
+name: T042ZFCL
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ZFCL
+description: Additional Payment Method Classifications for Payment Progm
+tableType: Regular
+columns:
+  - name: FPMCL
+    displayName: Add. payment meth. classificatns
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Additional Permitted Payment Meth.Classifications per Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ZFCL.FPMCL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LTERM
+    displayName: Minimum term
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Minimum Term for Clearing Items
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ZFCL.LTERM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ZFCL.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MTERM
+    displayName: Maximum term
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Maximum Term for Clearing Items
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ZFCL.MTERM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - FPMCL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 04fc7abff8e7d29162e34fb8505f8fdc
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,163 @@
+name: T042IY
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY
+description: Account Determination for Payment Programs
+tableType: Regular
+columns:
+  - name: APPLI
+    displayName: APPLI
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Application ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.APPLI
+    tags: []
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: GEBKZ
+    displayName: GEBKZ
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Charge Indicator
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.GEBKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: GSBER
+    displayName: Business area
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Business Area for Bank Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.GSBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: HBKID
+    displayName: House Bank
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Short Key for a House Bank
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.HBKID
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: HKTID
+    displayName: Account ID
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: ID for account details
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.HKTID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: RANGF
+    displayName: RANGF
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: numc(5)
+    description: Number Which Sets the Ranking Order of the Entries
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.RANGF
+    tags: []
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: UKONT
+    displayName: Bank subaccount
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: G/L Account to be Posted to (Bank Subaccount)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.UKONT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: VKONT
+    displayName: Clearing account
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Clearing Account for Bill Liability at the Bank
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.VKONT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042IY.WAERS
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - APPLI
+      - HBKID
+      - MANDT
+      - RANGF
+      - WAERS
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2e2c0d47f24d72d15ff24237a697a190
+processedLineage: false
+entityStatus: Approved

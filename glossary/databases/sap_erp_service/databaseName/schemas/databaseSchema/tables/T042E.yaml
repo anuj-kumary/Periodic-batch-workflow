@@ -1,0 +1,430 @@
+name: T042E
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E
+description: Company Code-Specific Specifications for Payment Methods
+tableType: Regular
+columns:
+  - name: ANZPO
+    displayName: Line items per form
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Maximum Number of Items on a Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.ANZPO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: AUST1
+    displayName: Issuer
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Issuer on the Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.AUST1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: AUST2
+    displayName: Issuer
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Issuer on the Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.AUST2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: AUST3
+    displayName: Issuer
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Issuer on the Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.AUST3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: AUSTO
+    displayName: Issuer
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Issuer on the Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.AUSTO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: BISBT
+    displayName: Maximum amount
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Maximum Amount for a Payment with this Payment Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.BISBT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: CORRTXT
+    displayName: Form name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: "Smart Forms: Name of a text module"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.CORRTXT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.MANDT
+    tags: []
+    constraint: PRIMARY_KEY
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PDFFO
+    displayName: Form for the Payment Medium
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of the PDF-based Form for the Payment Medium
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.PDFFO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: PDFWF
+    displayName: Next Form
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of the Next PDF-based Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.PDFWF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: SPLBT
+    displayName: Distribution amount
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Distribution into payments up to a maximum of this amount
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.SPLBT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: SVARH
+    displayName: Correspondence sort varnt
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Sort Variant for Payment Transaction Correspondence
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.SVARH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: SVARP
+    displayName: Line items sort variant
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Sort Variant for the Line Items
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.SVARP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: VONBT
+    displayName: Minimum amount
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Minimum Amount for a Payment Using this Payment Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.VONBT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.WAERS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: WANFF
+    displayName: Days until due date
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Number of Days Until Bill of Exchange Pmnt Request Due Date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.WANFF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: WFORN
+    displayName: Next form
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Name of Next Form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.WFORN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: WGBKZ
+    displayName: Bill protest ID
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator for the bill of exchange protest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.WGBKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: XAUSB
+    displayName: Cust/vendor bank abroad allowed?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment via Cust./Vend. Bank Abroad Allowed?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XAUSB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XAUSL
+    displayName: Allowed for pyts to cust/vendors abroad?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Foreign Business Partner Allowed?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XAUSL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XAVIS
+    displayName: Pmnt advice if form is full
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Separate Payment Advice if Form is Full?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XAVIS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XEIPO
+    displayName: Single payment for marked item
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: One Payment per Item?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XEIPO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XEIPO_EXT
+    displayName: Extended Individual Payment
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Extended Individual Payment"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XEIPO_EXT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: XFOSP
+    displayName: Extra forms if form is full
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Extra Forms if Form is Full"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XFOSP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: XFWAE
+    displayName: Foreign currency allowed
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method for Foreign Currencies Allowed"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XFWAE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XNOTX
+    displayName: Do Not Consider Item Text
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Do Not Consider Item Text"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XNOTX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: XOPTB
+    displayName: Optimize by bank group
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Carry Out Bank Selection by Bank Group"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XOPTB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XOPTP
+    displayName: Optimize by postal code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Carry Out Bank Selection by Postal Code"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XOPTP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XSAVI
+    displayName: Always pymt adv.note
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Always Payment Advice Notes for this Payment Mthd"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XSAVI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: XWVBU
+    displayName: Post bill liability at the bank
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Line Item for Bill Liability at the Bank?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XWVBU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: XZFAE
+    displayName: Payment per due day
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment per Due Day"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XZFAE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: XZWAE
+    displayName: Amount Limits in EUR
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Amount Limits in EUR"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042E.XZWAE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: bf596a7edba8a2aacbcf62a8ffbf8e8a
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,439 @@
+name: T042Z
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z
+description: Payment Methods for Automatic Payment
+tableType: Regular
+columns:
+  - name: BLART
+    displayName: Document type for payment
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for the Payment Document
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.BLART
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: BLARV
+    displayName: Clearing document type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Clearing Document Type for Intercompany Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.BLARV
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: FORMI
+    displayName: Pmnt medium format
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Payment Medium Format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.FORMI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: FORMZ
+    displayName: Format supplement
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Supplement for Payment Medium Format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.FORMZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: LAND1
+    displayName: Country Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.LAND1
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PROGN
+    displayName: Name of the print program
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Name of the Program for the Form Printout
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.PROGN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: TEXT1
+    displayName: Name (in language of country)
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of Payment Method in Language of the Country
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.TEXT1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: TXTSL
+    displayName: Key in code line
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Text key for the code line on the form
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.TXTSL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: UMSKZ
+    displayName: Sp.G/L ind.b/ex. / b/ex.pmnt req.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Special G/L Indicicator for Bill/Exch. / Bill/Exch.Pmnt Req.
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.UMSKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: WEART
+    displayName: Bill of exch. type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Bill of exchange type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.WEART
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: WLSTN
+    displayName: Print dataset for b/exch.
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Name of the Dataset for the Bill/Exch. with Check/Bill/Exch.
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.WLSTN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: XAKTZ
+    displayName: Bill of exch. accepted
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Bill of exchange was accepted"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XAKTZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: XBKKT
+    displayName: Bank details
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Bank Details of Business Partner Required
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XBKKT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XEINZ
+    displayName: Payment Method for Incoming Pmnts
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method Used for Incoming Payments?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XEINZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XESRD
+    displayName: POR payment procedure
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Must POR Subscriber Number Be Set?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XESRD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XEURO
+    displayName: EU Internal Transfer
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: EU Internal Transfer w/o Reporting Section"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XEURO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XEZER
+    displayName: Collection authorization
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Must Collection Authorization Be Provided?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XEZER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XIBAN
+    displayName: SWIFT Code and IBAN
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: IBAN or SWIFT Code Are Required
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XIBAN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: XNOPO
+    displayName: Generate payment order only
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Order Instead of Payment Posting"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XNOPO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: XNO_ACCNO
+    displayName: XNO_ACCNO
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: No Account Number Required"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XNO_ACCNO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: XORB
+    displayName: Add. payment meth. classificatns
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Additional Permitted Payment Meth.Classifications per Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XORB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: XPGIR
+    displayName: Post office curr.acct method?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method for Post Office Bank"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XPGIR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XPSKT
+    displayName: Payment by postal check account
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment by Postal Check/Postal Giro?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XPSKT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XSCHK
+    displayName: Check is created
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Is a Check Created Using This Payment Method?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XSCHK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XSEPA
+    displayName: SEPA Mandate Required
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: SEPA Mandate Required"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XSEPA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: XSTRA
+    displayName: "Street,P.O.box or P.O.box pst code"
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Street, P.O.box or P.O.box postal code required"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XSTRA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XSWEC
+    displayName: Check/bill of exchange
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method for Check/Bill of Exchange?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XSWEC
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: XWANF
+    displayName: Bill of exchange payment request
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create a Bill of Exchange Pmnt Request?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XWANF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: XWECH
+    displayName: Bill of exchange will be created
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create a bill of Exchange Posting?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XWECH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: XWECS
+    displayName: Create bill/exch.before due date
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Create a bill of Exchange Before Due Date?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XWECS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: XZANF
+    displayName: Payment demand
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment demand"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XZANF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: XZWHR
+    displayName: Allowed for personnel payments
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method Allowed for Personnel Payments?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z.XZWHR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - LAND1
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: eda681845aed79b6804b2812ff2ed080
+processedLineage: false
+entityStatus: Approved

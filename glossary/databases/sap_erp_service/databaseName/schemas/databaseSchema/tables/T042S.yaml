@@ -1,0 +1,133 @@
+name: T042S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S
+description: Charges/expenses for automatic pmnt transactions
+tableType: Regular
+columns:
+  - name: BETRG
+    displayName: Amount limit for charges
+    dataType: CHAR
+    dataLength: 13
+    dataTypeDisplay: numc(13)
+    description: Amount up Until Which the Following Charge Rates are Valid
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.BETRG
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BETRG_R
+    displayName: Amount limit
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Payment Amount Limit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.BETRG_R
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: GEBKZ
+    displayName: GEBKZ
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Charge Indicator
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.GEBKZ
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SPES1
+    displayName: Form Charges
+    dataType: DECIMAL
+    dataLength: 11
+    precision: 11
+    scale: 2
+    dataTypeDisplay: "curr(11,2)"
+    description: Form Charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.SPES1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: SPES2
+    displayName: Form Charges
+    dataType: DECIMAL
+    dataLength: 11
+    precision: 11
+    scale: 2
+    dataTypeDisplay: "curr(11,2)"
+    description: Form Charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.SPES2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042S.WAERS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BETRG
+      - GEBKZ
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2f83b713920f61299be2da77520713b8
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,160 @@
+name: T042Z_L_BF
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF
+description: List data on payment method
+tableType: View
+columns:
+  - name: LAND1
+    displayName: Country Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.LAND1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TEXT1
+    displayName: TEXT1
+    dataType: CHAR
+    dataLength: 50
+    dataTypeDisplay: char(50)
+    description: Text
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.TEXT1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XBKKT
+    displayName: Bank details
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Bank Details of Business Partner Required
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XBKKT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XEINZ
+    displayName: Payment Method for Incoming Pmnts
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method Used for Incoming Payments?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XEINZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XESRD
+    displayName: POR payment procedure
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Must POR Subscriber Number Be Set?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XESRD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XEZER
+    displayName: Collection authorization
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Must Collection Authorization Be Provided?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XEZER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XPGIR
+    displayName: Post office curr.acct method?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method for Post Office Bank"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XPGIR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XSCHK
+    displayName: Check is created
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Is a Check Created Using This Payment Method?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XSCHK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XSTRA
+    displayName: "Street,P.O.box or P.O.box pst code"
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Street, P.O.box or P.O.box postal code required"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XSTRA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XZWHR
+    displayName: Allowed for personnel payments
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Payment Method Allowed for Personnel Payments?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042Z_L_BF.XZWHR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 28dfe5844e365c1a3f0eaca8b300f6d2
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,103 @@
+name: T042ECT
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ECT
+description: Letter for Payment Correspondence (PDF)
+tableType: Regular
+columns:
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ECT.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TDTXTNAME
+    displayName: Form name
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: "Smart Forms: Name of a text module"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ECT.TDTXTNAME
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: XBALANCE_ZERO
+    displayName: Zero bal.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Letter Text for Zero Balance Notifications"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ECT.XBALANCE_ZERO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XDEFAULT_DIRDEB
+    displayName: Default Debit Memo
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Default Letter Text for Debit Memos"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ECT.XDEFAULT_DIRDEB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XDEFAULT_PAYMENT
+    displayName: Default Payment
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Default Letter Text for Payments"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042ECT.XDEFAULT_PAYMENT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - TDTXTNAME
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 5fc14e4bfe26219dc438ba30f182b8b8
+processedLineage: false
+entityStatus: Approved

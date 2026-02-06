@@ -1,0 +1,141 @@
+name: T042V
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V
+description: Value date for automatic payments
+tableType: Regular
+columns:
+  - name: ANZTG
+    displayName: Days to value date
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Number of Days to Value Date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.ANZTG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: BETRG
+    displayName: Amount limit
+    dataType: CHAR
+    dataLength: 13
+    dataTypeDisplay: numc(13)
+    description: Amount up Until Which the Val.Date Period Specified is Valid
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.BETRG
+    tags: []
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: BETRG_R
+    displayName: Amount limit
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Payment Amount Limit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.BETRG_R
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: HBKID
+    displayName: House Bank
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Short Key for a House Bank
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.HBKID
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: HKTID
+    displayName: Account ID
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: ID for account details
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.HKTID
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042V.WAERS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BETRG
+      - BUKRS
+      - HBKID
+      - HKTID
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e84f524a1298cb8c92d5ad5b449cab24
+processedLineage: false
+entityStatus: Approved
