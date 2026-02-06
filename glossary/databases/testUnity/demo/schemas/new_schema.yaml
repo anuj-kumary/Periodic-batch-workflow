@@ -1,0 +1,123 @@
+name: new_schema
+fullyQualifiedName: testUnity.demo.new_schema
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: be64a4f3-8bae-40fa-b446-404134c794ec
+  type: database
+  name: demo
+  fullyQualifiedName: testUnity.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: ce4230b2-d59c-44cd-9373-bee9a02ae099
+    type: table
+    name: comments_test
+    fullyQualifiedName: testUnity.demo.new_schema.comments_test
+    description: "The 'comments_test' table is designed to hold data related to user\
+      \ comments on various test items. It includes information such as the unique\
+      \ identifier of each comment and a complex column that stores additional data\
+      \ related to the comment. This table can be useful for analyzing user feedback\
+      \ on tests, identifying common issues or areas of improvement, and tracking\
+      \ changes over time in user comments."
+    displayName: comments_test
+    deleted: false
+  - id: daeb111f-c80e-46f7-bb8e-7cbda4030832
+    type: table
+    name: last_10_days_orders
+    fullyQualifiedName: testUnity.demo.new_schema.last_10_days_orders
+    displayName: last_10_days_orders
+    deleted: false
+  - id: d5b6d665-7330-4c98-ae2b-24678fe0a13c
+    type: table
+    name: my_table
+    fullyQualifiedName: testUnity.demo.new_schema.my_table
+    displayName: my_table
+    deleted: false
+  - id: 881ee014-7ad3-4e95-b19c-08bdf00b22b8
+    type: table
+    name: my_table2
+    fullyQualifiedName: testUnity.demo.new_schema.my_table2
+    displayName: my_table2
+    deleted: false
+  - id: 9053cd54-3f5a-403c-a31b-ab5860662fd3
+    type: table
+    name: new_table
+    fullyQualifiedName: testUnity.demo.new_schema.new_table
+    displayName: new_table
+    deleted: false
+  - id: 93b7716a-997b-413a-b270-c1404829c782
+    type: table
+    name: new_table_1
+    fullyQualifiedName: testUnity.demo.new_schema.new_table_1
+    displayName: new_table_1
+    deleted: false
+  - id: a43c5782-b976-499a-ab86-6caf3275f6c3
+    type: table
+    name: new_table_str
+    fullyQualifiedName: testUnity.demo.new_schema.new_table_str
+    displayName: new_table_str
+    deleted: false
+  - id: 6a04a897-0103-4393-bb74-b66b0383724f
+    type: table
+    name: new_table_str22
+    fullyQualifiedName: testUnity.demo.new_schema.new_table_str22
+    displayName: new_table_str22
+    deleted: false
+  - id: 47d267b4-1401-473c-adf3-45c2d18ae304
+    type: table
+    name: orders_list
+    fullyQualifiedName: testUnity.demo.new_schema.orders_list
+    displayName: orders_list
+    deleted: false
+  - id: a844dfd5-3c1d-4a11-a0c7-34ad8aa67f24
+    type: table
+    name: person_address
+    fullyQualifiedName: testUnity.demo.new_schema.person_address
+    displayName: person_address
+    deleted: false
+  - id: dbe9dfa2-d28e-43d2-81df-65f64c52fc73
+    type: table
+    name: s3_tbl
+    fullyQualifiedName: testUnity.demo.new_schema.s3_tbl
+    displayName: s3_tbl
+    deleted: false
+  - id: 1a76aa88-1992-4095-ac01-58f82b304901
+    type: table
+    name: src_tabl
+    fullyQualifiedName: testUnity.demo.new_schema.src_tabl
+    displayName: src_tabl
+    deleted: false
+  - id: d6f06c31-d6d7-4f6f-894e-4875ff57dfe3
+    type: table
+    name: table_three
+    fullyQualifiedName: testUnity.demo.new_schema.table_three
+    description: Table with complex datatypes
+    displayName: table_three
+    deleted: false
+  - id: 7b802517-bb7f-4da9-888f-0b68dfcce821
+    type: table
+    name: table_two
+    fullyQualifiedName: testUnity.demo.new_schema.table_two
+    description: Table with complex datatypes
+    displayName: table_two
+    deleted: false
+  - id: 2865079f-a186-47e6-9b2e-120a8fd02db6
+    type: table
+    name: trg_tabl
+    fullyQualifiedName: testUnity.demo.new_schema.trg_tabl
+    displayName: trg_tabl
+    deleted: false
+tags: []
+domains: []
+sourceHash: bcfab0854cf5acc7ada69d159639ac59
+entityStatus: Approved

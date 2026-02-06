@@ -1,0 +1,55 @@
+name: stackoverflow
+fullyQualifiedName: testUnity.postgres_catalog.stackoverflow
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 631ee5ac-ca75-4695-9cb0-9c82bd02a746
+  type: database
+  name: postgres_catalog
+  fullyQualifiedName: testUnity.postgres_catalog
+  displayName: postgres_catalog
+  deleted: false
+tables:
+  - id: 58453e9c-a9d4-4955-b294-677138add36b
+    type: table
+    name: _airbyte_raw__airbyte_raw_tags
+    fullyQualifiedName: testUnity.postgres_catalog.stackoverflow._airbyte_raw__airbyte_raw_tags
+    displayName: _airbyte_raw__airbyte_raw_tags
+    deleted: false
+  - id: e35bf882-9e98-4f46-8925-253e42685b3e
+    type: table
+    name: _airbyte_raw__airbyte_tmp_cjy_tags
+    fullyQualifiedName: testUnity.postgres_catalog.stackoverflow._airbyte_raw__airbyte_tmp_cjy_tags
+    displayName: _airbyte_raw__airbyte_tmp_cjy_tags
+    deleted: false
+  - id: 75bd083b-2087-42c1-91d3-a72e7f78e556
+    type: table
+    name: _airbyte_raw__airbyte_tmp_lhf_tags
+    fullyQualifiedName: testUnity.postgres_catalog.stackoverflow._airbyte_raw__airbyte_tmp_lhf_tags
+    displayName: _airbyte_raw__airbyte_tmp_lhf_tags
+    deleted: false
+  - id: d8a99af0-9224-4136-a1eb-dcf1896a9db8
+    type: table
+    name: _airbyte_raw__airbyte_tmp_rnv_badges
+    fullyQualifiedName: testUnity.postgres_catalog.stackoverflow._airbyte_raw__airbyte_tmp_rnv_badges
+    displayName: _airbyte_raw__airbyte_tmp_rnv_badges
+    deleted: false
+  - id: ccdc3c4b-9b6d-4267-aeb3-47766ad80c40
+    type: table
+    name: _airbyte_raw__airbyte_tmp_tgc_badges
+    fullyQualifiedName: testUnity.postgres_catalog.stackoverflow._airbyte_raw__airbyte_tmp_tgc_badges
+    displayName: _airbyte_raw__airbyte_tmp_tgc_badges
+    deleted: false
+tags: []
+domains: []
+sourceHash: c11f3836ce884ea9c9f325a559cb5602
+entityStatus: Approved

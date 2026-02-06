@@ -1,0 +1,129 @@
+name: new_schema
+fullyQualifiedName: testunitycatalog.demo.new_schema
+dataProducts: []
+owners: []
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 9e5d41c2-793e-48aa-afe3-09b695edaea3
+    type: table
+    name: comments_test
+    fullyQualifiedName: testunitycatalog.demo.new_schema.comments_test
+    description: "The 'comments_test' table is designed to hold data related to user\
+      \ comments on various test items. It includes information such as the unique\
+      \ identifier of each comment and a complex column that stores additional data\
+      \ related to the comment. This table can be useful for analyzing user feedback\
+      \ on tests, identifying common issues or areas of improvement, and tracking\
+      \ changes over time in user comments."
+    displayName: comments_test
+    deleted: false
+  - id: 597a3e09-9615-4677-b6cf-b3fd1df83a00
+    type: table
+    name: ddltable
+    fullyQualifiedName: testunitycatalog.demo.new_schema.ddltable
+    displayName: ddltable
+    deleted: false
+  - id: 1e9b7ae5-2888-41b5-a224-0158c97ebb00
+    type: table
+    name: last_10_days_orders
+    fullyQualifiedName: testunitycatalog.demo.new_schema.last_10_days_orders
+    displayName: last_10_days_orders
+    deleted: false
+  - id: cb7b8ae1-0747-43b3-b3ee-c56c0f52c229
+    type: table
+    name: my_table
+    fullyQualifiedName: testunitycatalog.demo.new_schema.my_table
+    displayName: my_table
+    deleted: false
+  - id: b00b0c8f-54dd-4216-9162-7e61ba40f330
+    type: table
+    name: my_table2
+    fullyQualifiedName: testunitycatalog.demo.new_schema.my_table2
+    displayName: my_table2
+    deleted: false
+  - id: b545bf53-5c36-4422-98c2-e2d3de29af83
+    type: table
+    name: new_table
+    fullyQualifiedName: testunitycatalog.demo.new_schema.new_table
+    displayName: new_table
+    deleted: false
+  - id: 6e238404-4acb-47f2-b3a4-f04b53d7853c
+    type: table
+    name: new_table_1
+    fullyQualifiedName: testunitycatalog.demo.new_schema.new_table_1
+    displayName: new_table_1
+    deleted: false
+  - id: bc8c7f7b-e0b8-4778-94f0-7af0ced6bd2d
+    type: table
+    name: new_table_str
+    fullyQualifiedName: testunitycatalog.demo.new_schema.new_table_str
+    displayName: new_table_str
+    deleted: false
+  - id: 4043596d-12b5-4f16-91dc-12b979b90d47
+    type: table
+    name: new_table_str22
+    fullyQualifiedName: testunitycatalog.demo.new_schema.new_table_str22
+    displayName: new_table_str22
+    deleted: false
+  - id: 34f13f0c-1ae3-4bd8-a2da-38bbd3b9ad07
+    type: table
+    name: orders_list
+    fullyQualifiedName: testunitycatalog.demo.new_schema.orders_list
+    displayName: orders_list
+    deleted: false
+  - id: 35d41b3a-63b7-4c8a-a71f-0a981251676b
+    type: table
+    name: person_address
+    fullyQualifiedName: testunitycatalog.demo.new_schema.person_address
+    displayName: person_address
+    deleted: false
+  - id: 0732ee49-6422-4d8c-af99-f71f38c0b36d
+    type: table
+    name: s3_tbl
+    fullyQualifiedName: testunitycatalog.demo.new_schema.s3_tbl
+    displayName: s3_tbl
+    deleted: false
+  - id: 36cc4fcd-aded-4faa-9990-96fd90258ac3
+    type: table
+    name: src_tabl
+    fullyQualifiedName: testunitycatalog.demo.new_schema.src_tabl
+    displayName: src_tabl
+    deleted: false
+  - id: 9976a803-fc04-40df-8cd1-ed83dcf65bc8
+    type: table
+    name: table_three
+    fullyQualifiedName: testunitycatalog.demo.new_schema.table_three
+    description: Table with complex datatypes
+    displayName: table_three
+    deleted: false
+  - id: c39253cb-ca51-4242-8826-0575b3ff0f45
+    type: table
+    name: table_two
+    fullyQualifiedName: testunitycatalog.demo.new_schema.table_two
+    description: Table with complex datatypes
+    displayName: table_two
+    deleted: false
+  - id: 4034cda8-8aae-40d7-878b-0c0434bea269
+    type: table
+    name: trg_tabl
+    fullyQualifiedName: testunitycatalog.demo.new_schema.trg_tabl
+    displayName: trg_tabl
+    deleted: false
+tags: []
+domains: []
+sourceHash: 290245fc339d5eb9c9618c31ccedf729
+entityStatus: Approved

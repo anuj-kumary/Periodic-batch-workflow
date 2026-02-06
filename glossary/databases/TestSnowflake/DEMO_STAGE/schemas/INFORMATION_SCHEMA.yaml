@@ -1,0 +1,273 @@
+name: INFORMATION_SCHEMA
+fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA
+description: Views describing the contents of schemas in this database
+dataProducts: []
+owners: []
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+database:
+  id: 0a1a6fb1-90d3-447d-96a2-d1807ce270e8
+  type: database
+  name: DEMO_STAGE
+  fullyQualifiedName: TestSnowflake.DEMO_STAGE
+  displayName: DEMO_STAGE
+  deleted: false
+tables:
+  - id: 72a2878e-7d3f-4dba-8b48-744c11f438e5
+    type: table
+    name: APPLICABLE_ROLES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.APPLICABLE_ROLES
+    displayName: APPLICABLE_ROLES
+    deleted: false
+  - id: a1b56843-66bb-4330-8a78-0412460e8a1a
+    type: table
+    name: CLASSES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.CLASSES
+    displayName: CLASSES
+    deleted: false
+  - id: f3da5071-7d22-4b02-869a-f7dddf5a0c31
+    type: table
+    name: CLASS_INSTANCES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.CLASS_INSTANCES
+    displayName: CLASS_INSTANCES
+    deleted: false
+  - id: f86586f8-4767-4914-86ce-d6c03063dbbd
+    type: table
+    name: CLASS_INSTANCE_FUNCTIONS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.CLASS_INSTANCE_FUNCTIONS
+    displayName: CLASS_INSTANCE_FUNCTIONS
+    deleted: false
+  - id: dda42a97-0d59-402e-9985-21caea2d7f6a
+    type: table
+    name: CLASS_INSTANCE_PROCEDURES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.CLASS_INSTANCE_PROCEDURES
+    displayName: CLASS_INSTANCE_PROCEDURES
+    deleted: false
+  - id: 658b16f5-cdcc-4b27-b905-4e4b0b7b1493
+    type: table
+    name: COLUMNS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.COLUMNS
+    displayName: COLUMNS
+    deleted: false
+  - id: 65a6714a-352a-44e3-b886-d779c1d3674c
+    type: table
+    name: CORTEX_SEARCH_SERVICES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.CORTEX_SEARCH_SERVICES
+    displayName: CORTEX_SEARCH_SERVICES
+    deleted: false
+  - id: 08c1a7e4-f2db-4e15-b035-66aea1080e0a
+    type: table
+    name: CURRENT_PACKAGES_POLICY
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.CURRENT_PACKAGES_POLICY
+    displayName: CURRENT_PACKAGES_POLICY
+    deleted: false
+  - id: ddc89303-f316-4720-aad1-8ea877e38997
+    type: table
+    name: DATABASES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.DATABASES
+    displayName: DATABASES
+    deleted: false
+  - id: dbea3fdb-7019-4902-ade7-baaa2b0600f4
+    type: table
+    name: ELEMENT_TYPES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.ELEMENT_TYPES
+    displayName: ELEMENT_TYPES
+    deleted: false
+  - id: 9a318c7d-3adc-46e5-82c6-c601cc983b4e
+    type: table
+    name: ENABLED_ROLES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.ENABLED_ROLES
+    displayName: ENABLED_ROLES
+    deleted: false
+  - id: 5b6da67d-27b6-48e1-9cfe-e4fa15b77c9e
+    type: table
+    name: EVENT_TABLES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.EVENT_TABLES
+    displayName: EVENT_TABLES
+    deleted: false
+  - id: 80dc0951-8f63-4d3d-b8a3-63f1e7aca9ab
+    type: table
+    name: EXTERNAL_TABLES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.EXTERNAL_TABLES
+    displayName: EXTERNAL_TABLES
+    deleted: false
+  - id: 444b8459-57e7-4937-8690-56324b048ad4
+    type: table
+    name: FIELDS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.FIELDS
+    displayName: FIELDS
+    deleted: false
+  - id: 2dfc674d-e7da-41f6-95ec-1e57315700f1
+    type: table
+    name: FILE_FORMATS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.FILE_FORMATS
+    displayName: FILE_FORMATS
+    deleted: false
+  - id: 83ae49a3-d06f-4120-85f2-208272beaf16
+    type: table
+    name: FUNCTIONS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.FUNCTIONS
+    displayName: FUNCTIONS
+    deleted: false
+  - id: 7fe6b65d-e2b7-4181-bf7f-2c1a71836836
+    type: table
+    name: GIT_REPOSITORIES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.GIT_REPOSITORIES
+    displayName: GIT_REPOSITORIES
+    deleted: false
+  - id: 33a28cca-fda8-47e4-bf00-eab4faf8707e
+    type: table
+    name: HYBRID_TABLES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.HYBRID_TABLES
+    displayName: HYBRID_TABLES
+    deleted: false
+  - id: 2a2468a1-631e-4420-b0ea-e27de16bcd8d
+    type: table
+    name: INDEXES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.INDEXES
+    displayName: INDEXES
+    deleted: false
+  - id: 0df92586-0d6d-4266-9246-d5b5595a5b16
+    type: table
+    name: INDEX_COLUMNS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.INDEX_COLUMNS
+    displayName: INDEX_COLUMNS
+    deleted: false
+  - id: 02902b71-6282-4f91-8ab0-56d2a8e57f85
+    type: table
+    name: INFORMATION_SCHEMA_CATALOG_NAME
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.INFORMATION_SCHEMA_CATALOG_NAME
+    displayName: INFORMATION_SCHEMA_CATALOG_NAME
+    deleted: false
+  - id: 43e74b9c-e44e-40f2-a3ab-a47160579339
+    type: table
+    name: LOAD_HISTORY
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.LOAD_HISTORY
+    displayName: LOAD_HISTORY
+    deleted: false
+  - id: f5cad042-4b12-4410-998c-94ef8b4162e3
+    type: table
+    name: MODEL_VERSIONS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.MODEL_VERSIONS
+    displayName: MODEL_VERSIONS
+    deleted: false
+  - id: a2f2b810-90af-4e75-b32c-1f7623bc604a
+    type: table
+    name: OBJECT_PRIVILEGES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.OBJECT_PRIVILEGES
+    displayName: OBJECT_PRIVILEGES
+    deleted: false
+  - id: 1ee8560d-d169-433f-9c83-f6eb554726e7
+    type: table
+    name: PACKAGES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.PACKAGES
+    displayName: PACKAGES
+    deleted: false
+  - id: 7e860dfa-1d51-413f-931f-54811f542b77
+    type: table
+    name: PIPES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.PIPES
+    displayName: PIPES
+    deleted: false
+  - id: dc075e9c-0e3a-4cb5-84e6-6b567332b530
+    type: table
+    name: PROCEDURES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.PROCEDURES
+    displayName: PROCEDURES
+    deleted: false
+  - id: 8ca2423d-df25-4d9c-b710-c20364b231b7
+    type: table
+    name: REFERENTIAL_CONSTRAINTS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS
+    displayName: REFERENTIAL_CONSTRAINTS
+    deleted: false
+  - id: 48c4b863-99f2-43a4-99f9-a2ba55e16fb5
+    type: table
+    name: REPLICATION_DATABASES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.REPLICATION_DATABASES
+    displayName: REPLICATION_DATABASES
+    deleted: false
+  - id: 52648e83-6525-4742-be8b-ea4951e132a9
+    type: table
+    name: REPLICATION_GROUPS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.REPLICATION_GROUPS
+    displayName: REPLICATION_GROUPS
+    deleted: false
+  - id: 1e59ebb0-db77-4874-9522-b6765db64ba8
+    type: table
+    name: SCHEMATA
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.SCHEMATA
+    displayName: SCHEMATA
+    deleted: false
+  - id: 5589d861-1360-4fe4-8a96-01554a96d3db
+    type: table
+    name: SEQUENCES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.SEQUENCES
+    displayName: SEQUENCES
+    deleted: false
+  - id: 7422512b-b3ed-4c3f-851d-06cae4baa443
+    type: table
+    name: SERVICES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.SERVICES
+    displayName: SERVICES
+    deleted: false
+  - id: 8436c949-f5e9-4bdf-a53b-19a8d91d0f57
+    type: table
+    name: STAGES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.STAGES
+    displayName: STAGES
+    deleted: false
+  - id: 915fde6c-1ac1-4fc8-949a-6c197a38fba8
+    type: table
+    name: STREAMLITS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.STREAMLITS
+    displayName: STREAMLITS
+    deleted: false
+  - id: b3476b8b-14a8-45b7-a583-036314ec0f78
+    type: table
+    name: TABLES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.TABLES
+    displayName: TABLES
+    deleted: false
+  - id: c2c11b2f-a59a-4aa4-8fe2-334d4b175673
+    type: table
+    name: TABLE_CONSTRAINTS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+    displayName: TABLE_CONSTRAINTS
+    deleted: false
+  - id: 05b9595a-5806-411a-82aa-fba38a299403
+    type: table
+    name: TABLE_PRIVILEGES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.TABLE_PRIVILEGES
+    displayName: TABLE_PRIVILEGES
+    deleted: false
+  - id: 5a6149ab-db56-45ce-9def-84138e947637
+    type: table
+    name: TABLE_STORAGE_METRICS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.TABLE_STORAGE_METRICS
+    displayName: TABLE_STORAGE_METRICS
+    deleted: false
+  - id: acaaf9cb-09a2-416c-b822-10760ff03596
+    type: table
+    name: USAGE_PRIVILEGES
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.USAGE_PRIVILEGES
+    displayName: USAGE_PRIVILEGES
+    deleted: false
+  - id: 2b66edc2-7749-44e2-aec4-a47e7e8be487
+    type: table
+    name: VIEWS
+    fullyQualifiedName: TestSnowflake.DEMO_STAGE.INFORMATION_SCHEMA.VIEWS
+    displayName: VIEWS
+    deleted: false
+tags: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/INFORMATION_SCHEMA
+domains: []
+sourceHash: e6416a511453cc241a9416aea963434c
+entityStatus: Approved

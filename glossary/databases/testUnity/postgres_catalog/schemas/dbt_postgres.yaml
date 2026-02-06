@@ -1,0 +1,85 @@
+name: dbt_postgres
+fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 631ee5ac-ca75-4695-9cb0-9c82bd02a746
+  type: database
+  name: postgres_catalog
+  fullyQualifiedName: testUnity.postgres_catalog
+  displayName: postgres_catalog
+  deleted: false
+tables:
+  - id: a4a6dd37-d14e-4174-90c6-6d62a50fe227
+    type: table
+    name: customer_view
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.customer_view
+    displayName: customer_view
+    deleted: false
+  - id: 5fa2cf0b-b0ac-4013-a718-13eb60293a80
+    type: table
+    name: customer_view1
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.customer_view1
+    displayName: customer_view1
+    deleted: false
+  - id: e0c730af-cd82-42b9-a125-e93633abc7b3
+    type: table
+    name: customers
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.customers
+    displayName: customers
+    deleted: false
+  - id: db972f05-7dfa-4609-898d-07b0b62efadd
+    type: table
+    name: orders
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.orders
+    displayName: orders
+    deleted: false
+  - id: 1f8a2b61-a074-4007-9597-0e6cf40bc27a
+    type: table
+    name: raw_customers
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.raw_customers
+    displayName: raw_customers
+    deleted: false
+  - id: 665baba5-3829-4e84-afac-e1c32d4d0479
+    type: table
+    name: raw_orders
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.raw_orders
+    displayName: raw_orders
+    deleted: false
+  - id: dbd97540-b8f4-46d1-acc5-4ec4c31681ef
+    type: table
+    name: raw_payments
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.raw_payments
+    displayName: raw_payments
+    deleted: false
+  - id: e63d61ea-c099-4e87-96ba-a72a903c12f8
+    type: table
+    name: stg_customers
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.stg_customers
+    displayName: stg_customers
+    deleted: false
+  - id: 3028f610-3a4b-4645-a8c9-3636e53f9d20
+    type: table
+    name: stg_orders
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.stg_orders
+    displayName: stg_orders
+    deleted: false
+  - id: 03678f00-6914-4112-85ff-63c78cf38802
+    type: table
+    name: stg_payments
+    fullyQualifiedName: testUnity.postgres_catalog.dbt_postgres.stg_payments
+    displayName: stg_payments
+    deleted: false
+tags: []
+domains: []
+sourceHash: 97910642c92d99b3760d8700a1ee8737
+entityStatus: Approved

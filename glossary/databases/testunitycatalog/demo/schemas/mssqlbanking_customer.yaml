@@ -1,0 +1,55 @@
+name: mssqlbanking_customer
+fullyQualifiedName: testunitycatalog.demo.mssqlbanking_customer
+dataProducts: []
+owners: []
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 4fe33e94-e9aa-48dc-8087-ca0f2b79dae6
+    type: table
+    name: address
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_customer.address
+    displayName: address
+    deleted: false
+  - id: 5b2653c9-2d8c-46a1-a562-2cea46f3103e
+    type: table
+    name: customercontacthistory
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_customer.customercontacthistory
+    displayName: customercontacthistory
+    deleted: false
+  - id: 86066462-0820-4f55-859d-093099978c43
+    type: table
+    name: customerinfo
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_customer.customerinfo
+    displayName: customerinfo
+    deleted: false
+  - id: 66956c04-950d-44ab-801e-2b4513e420ca
+    type: table
+    name: customerlogin
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_customer.customerlogin
+    displayName: customerlogin
+    deleted: false
+  - id: cfbf8405-74a2-4cd6-9a43-cacb9d02333e
+    type: table
+    name: customerpreferences
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_customer.customerpreferences
+    displayName: customerpreferences
+    deleted: false
+tags: []
+domains: []
+sourceHash: cd4c324b9297ef92daedbf681c5135b6
+entityStatus: Approved

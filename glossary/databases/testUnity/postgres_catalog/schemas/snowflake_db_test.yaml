@@ -1,0 +1,31 @@
+name: snowflake_db_test
+fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 631ee5ac-ca75-4695-9cb0-9c82bd02a746
+  type: database
+  name: postgres_catalog
+  fullyQualifiedName: testUnity.postgres_catalog
+  displayName: postgres_catalog
+  deleted: false
+tables:
+  - id: 2aff9032-2d33-4d40-a6b4-33532ac361c9
+    type: table
+    name: dim_data_columns
+    fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns
+    displayName: dim_data_columns
+    deleted: false
+tags: []
+domains: []
+sourceHash: b7e11a1622407bc1570ba1a1505daae3
+entityStatus: Approved

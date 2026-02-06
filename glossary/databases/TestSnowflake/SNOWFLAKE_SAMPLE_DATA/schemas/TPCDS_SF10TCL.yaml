@@ -1,0 +1,171 @@
+name: TPCDS_SF10TCL
+fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
+dataProducts: []
+owners: []
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+database:
+  id: ef08a354-f59d-4892-9c1a-f7607fdec2af
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+tables:
+  - id: 4666d6bd-0480-4953-ad72-df5f4bd2f4ab
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+  - id: fc6ebfbd-3f1f-4ed5-962f-e4fcb94872b8
+    type: table
+    name: CATALOG_PAGE
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_PAGE
+    displayName: CATALOG_PAGE
+    deleted: false
+  - id: 026605e7-c93c-442b-9045-b3ce54f256fc
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+  - id: a241e450-7ee1-41b4-b3ee-53be24b9dc19
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+  - id: 52d8e6b2-fadf-4f9b-bc97-29937eda05dd
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CUSTOMER
+    displayName: CUSTOMER
+    deleted: false
+  - id: fb74c6a3-1e39-43c4-bbe0-ba896903fb67
+    type: table
+    name: CUSTOMER_ADDRESS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CUSTOMER_ADDRESS
+    displayName: CUSTOMER_ADDRESS
+    deleted: false
+  - id: f14ef29d-b9f7-4799-adbf-7b7ae1a7fed8
+    type: table
+    name: CUSTOMER_DEMOGRAPHICS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CUSTOMER_DEMOGRAPHICS
+    displayName: CUSTOMER_DEMOGRAPHICS
+    deleted: false
+  - id: 88c7be1e-cc34-413d-9414-57554df40e74
+    type: table
+    name: DATE_DIM
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.DATE_DIM
+    displayName: DATE_DIM
+    deleted: false
+  - id: 01d4f380-846e-43e1-a1f8-5d96876c3108
+    type: table
+    name: HOUSEHOLD_DEMOGRAPHICS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.HOUSEHOLD_DEMOGRAPHICS
+    displayName: HOUSEHOLD_DEMOGRAPHICS
+    deleted: false
+  - id: 9e6b838c-a700-4f78-98cc-b66efc215960
+    type: table
+    name: INCOME_BAND
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.INCOME_BAND
+    displayName: INCOME_BAND
+    deleted: false
+  - id: ba3912df-e55c-4c8c-962f-50d68aa3bdd1
+    type: table
+    name: INVENTORY
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.INVENTORY
+    displayName: INVENTORY
+    deleted: false
+  - id: 2f395bcb-c85e-4f36-9093-01b50e4e1a7d
+    type: table
+    name: ITEM
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.ITEM
+    displayName: ITEM
+    deleted: false
+  - id: b32928ab-7cd2-49b4-8d93-54a578f50c01
+    type: table
+    name: PROMOTION
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.PROMOTION
+    displayName: PROMOTION
+    deleted: false
+  - id: 6d61840e-6e1c-4bcb-a271-a42f325719c9
+    type: table
+    name: REASON
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.REASON
+    displayName: REASON
+    deleted: false
+  - id: d90038ff-c3c0-4bf9-bf08-7ae3cb631cbd
+    type: table
+    name: SHIP_MODE
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.SHIP_MODE
+    displayName: SHIP_MODE
+    deleted: false
+  - id: de80a6a6-1a29-4041-a1be-3a934fc554a0
+    type: table
+    name: STORE
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE
+    displayName: STORE
+    deleted: false
+  - id: 2781a4c0-09c8-440c-a794-486dd1d2169f
+    type: table
+    name: STORE_RETURNS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE_RETURNS
+    displayName: STORE_RETURNS
+    deleted: false
+  - id: 0fcd695c-bb13-40fd-a642-ec818e60f839
+    type: table
+    name: STORE_SALES
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE_SALES
+    displayName: STORE_SALES
+    deleted: false
+  - id: 98d2a282-da11-4627-b2f3-12f4259c3099
+    type: table
+    name: TIME_DIM
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.TIME_DIM
+    displayName: TIME_DIM
+    deleted: false
+  - id: 3d3fcd85-dfa3-4cf1-a536-1f264c4459b3
+    type: table
+    name: WAREHOUSE
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WAREHOUSE
+    displayName: WAREHOUSE
+    deleted: false
+  - id: b2fb48bf-9508-4806-b1a7-00acc1d87aac
+    type: table
+    name: WEB_PAGE
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_PAGE
+    displayName: WEB_PAGE
+    deleted: false
+  - id: 55742948-96db-4912-8a08-88053dbbe97d
+    type: table
+    name: WEB_RETURNS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_RETURNS
+    displayName: WEB_RETURNS
+    deleted: false
+  - id: 0c3a1acf-2c49-4c70-9e63-01e4b156b071
+    type: table
+    name: WEB_SALES
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_SALES
+    displayName: WEB_SALES
+    deleted: false
+  - id: 1ceab384-393c-4f77-a5cf-af6ccb5b44df
+    type: table
+    name: WEB_SITE
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_SITE
+    displayName: WEB_SITE
+    deleted: false
+tags: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/TPCDS_SF10TCL
+domains: []
+sourceHash: df978fbe7e07e60b5efb279a2adf4b17
+entityStatus: Approved

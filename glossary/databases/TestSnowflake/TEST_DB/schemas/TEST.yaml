@@ -1,0 +1,44 @@
+name: TEST
+fullyQualifiedName: TestSnowflake.TEST_DB.TEST
+dataProducts: []
+owners: []
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+database:
+  id: ba6e13e2-da0e-4e22-ae89-e7d07eeffce8
+  type: database
+  name: TEST_DB
+  fullyQualifiedName: TestSnowflake.TEST_DB
+  displayName: TEST_DB
+  deleted: false
+tables:
+  - id: edd0fb25-3b94-4b22-83cf-e3e9860d195e
+    type: table
+    name: NUMERIC_VALUES
+    fullyQualifiedName: TestSnowflake.TEST_DB.TEST.NUMERIC_VALUES
+    displayName: NUMERIC_VALUES
+    deleted: false
+  - id: 698878d8-30f0-4d39-9de7-bb9ff1bc17c0
+    type: table
+    name: PABLO_TEST
+    fullyQualifiedName: TestSnowflake.TEST_DB.TEST.PABLO_TEST
+    displayName: PABLO_TEST
+    deleted: false
+  - id: 127c0520-777c-4f35-bd5e-e87ab84e6138
+    type: table
+    name: PABLO_TEST_VIEW
+    fullyQualifiedName: TestSnowflake.TEST_DB.TEST.PABLO_TEST_VIEW
+    displayName: PABLO_TEST_VIEW
+    deleted: false
+tags: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/TEST
+domains: []
+sourceHash: 26a5a840792e758fcd184853897a753b
+entityStatus: Approved

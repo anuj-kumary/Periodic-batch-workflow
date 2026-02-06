@@ -1,0 +1,37 @@
+name: billing
+fullyQualifiedName: testUnity.system.billing
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 7135eccb-705e-4fed-86ea-502ef7401ea0
+  type: database
+  name: system
+  fullyQualifiedName: testUnity.system
+  displayName: system
+  deleted: false
+tables:
+  - id: f9fb6356-69f2-45e4-823d-4b2b7dd9b2e4
+    type: table
+    name: list_prices
+    fullyQualifiedName: testUnity.system.billing.list_prices
+    displayName: list_prices
+    deleted: false
+  - id: bbba5684-5d47-4daf-8859-aba256cd4c37
+    type: table
+    name: usage
+    fullyQualifiedName: testUnity.system.billing.usage
+    displayName: usage
+    deleted: false
+tags: []
+domains: []
+sourceHash: 421989142f862a3658fe012ab6ad4aee
+entityStatus: Approved

@@ -1,0 +1,68 @@
+name: E2E_TEST
+fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST
+dataProducts: []
+owners: []
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+database:
+  id: a213ddaf-3d73-4906-9c6c-524b1e5fbf18
+  type: database
+  name: E2E_DB
+  fullyQualifiedName: TestSnowflake.E2E_DB
+  displayName: E2E_DB
+  deleted: false
+tables:
+  - id: d59aee94-3751-4dfc-b7b6-ef366cd0cbd4
+    type: table
+    name: COUNTRIES
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.COUNTRIES
+    displayName: COUNTRIES
+    deleted: false
+  - id: 6276ee7c-4832-4ab1-af8e-3e95737203bf
+    type: table
+    name: JOBS
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.JOBS
+    displayName: JOBS
+    deleted: false
+  - id: 9b608119-d862-4182-be43-e36d819631bc
+    type: table
+    name: LOCATIONS
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.LOCATIONS
+    displayName: LOCATIONS
+    deleted: false
+  - id: be010613-469d-4bc8-9063-55fe3a6588a6
+    type: table
+    name: REGIONS
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.REGIONS
+    displayName: REGIONS
+    deleted: false
+  - id: 914b1c67-3223-4364-b7e1-7cbcbbc77f77
+    type: table
+    name: TEST_DEPARTMENTS
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.TEST_DEPARTMENTS
+    displayName: TEST_DEPARTMENTS
+    deleted: false
+  - id: 3f25a321-bf09-40ef-b3a1-e9d17809b2ac
+    type: table
+    name: TEST_DEPENDENTS
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.TEST_DEPENDENTS
+    displayName: TEST_DEPENDENTS
+    deleted: false
+  - id: b0d49cb7-0860-4761-af65-9933ea513183
+    type: table
+    name: TEST_EMPLOYEES
+    fullyQualifiedName: TestSnowflake.E2E_DB.E2E_TEST.TEST_EMPLOYEES
+    displayName: TEST_EMPLOYEES
+    deleted: false
+tags: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/E2E_TEST
+domains: []
+sourceHash: 66f780bce2c9745d15f06780c3172743
+entityStatus: Approved

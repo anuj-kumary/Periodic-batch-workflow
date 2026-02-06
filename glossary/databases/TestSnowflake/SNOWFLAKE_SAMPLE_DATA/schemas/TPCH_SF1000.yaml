@@ -1,0 +1,84 @@
+name: TPCH_SF1000
+fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000
+description: TPC-H scaling factor 1000
+dataProducts: []
+owners: []
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+database:
+  id: ef08a354-f59d-4892-9c1a-f7607fdec2af
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+tables:
+  - id: c1f944e8-1c82-4c7b-9cb6-703d7a7cf8ec
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+  - id: 084ba7e1-287f-4c1e-8ce6-96a33e8e67d0
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+  - id: 4df9f10e-9feb-4999-8f8e-7970be07d2d6
+    type: table
+    name: NATION
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.NATION
+    description: Nation data as defined by TPC-H
+    displayName: NATION
+    deleted: false
+  - id: 00bb8b5b-c62e-4c00-a9d6-56f82c97134a
+    type: table
+    name: ORDERS
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+  - id: b7a4186f-6b35-4768-ba4b-184ef8c215c2
+    type: table
+    name: PART
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+  - id: 04e2b28f-83c3-49c6-a752-f277aa854934
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+  - id: 33affe84-f6d0-4a1e-817d-b7f3f3bcb525
+    type: table
+    name: REGION
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.REGION
+    description: Region data as defined by TPC-H
+    displayName: REGION
+    deleted: false
+  - id: b58d88b6-3fff-450c-817e-eef725720121
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+tags: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/TPCH_SF1000
+domains: []
+sourceHash: d52f4ec14970aad6a6809c0972477fd2
+entityStatus: Approved

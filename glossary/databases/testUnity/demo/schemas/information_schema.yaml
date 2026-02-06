@@ -1,0 +1,215 @@
+name: information_schema
+fullyQualifiedName: testUnity.demo.information_schema
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: be64a4f3-8bae-40fa-b446-404134c794ec
+  type: database
+  name: demo
+  fullyQualifiedName: testUnity.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 5b68a433-658e-4f15-8891-fa5184e6659d
+    type: table
+    name: catalog_privileges
+    fullyQualifiedName: testUnity.demo.information_schema.catalog_privileges
+    description: Lists principals that have privileges on the catalogs.
+    displayName: catalog_privileges
+    deleted: false
+  - id: a6754e66-a7e6-4895-aa56-8de7f1fe038f
+    type: table
+    name: catalog_tags
+    fullyQualifiedName: testUnity.demo.information_schema.catalog_tags
+    displayName: catalog_tags
+    deleted: false
+  - id: 57609025-1867-4972-8ecd-8ebf36830f30
+    type: table
+    name: catalogs
+    fullyQualifiedName: testUnity.demo.information_schema.catalogs
+    description: Describes catalogs.
+    displayName: catalogs
+    deleted: false
+  - id: 7a706bde-4f36-448b-a1fa-b52fe7d92375
+    type: table
+    name: check_constraints
+    fullyQualifiedName: testUnity.demo.information_schema.check_constraints
+    description: Reserved for future use.
+    displayName: check_constraints
+    deleted: false
+  - id: e722624b-bf2a-4865-a81d-701ff73156ff
+    type: table
+    name: column_masks
+    fullyQualifiedName: testUnity.demo.information_schema.column_masks
+    displayName: column_masks
+    deleted: false
+  - id: c756e1c3-838c-46e2-8cac-cba1930e754a
+    type: table
+    name: column_tags
+    fullyQualifiedName: testUnity.demo.information_schema.column_tags
+    displayName: column_tags
+    deleted: false
+  - id: bea055f8-4eab-41a8-ac6c-7f809bab0d22
+    type: table
+    name: columns
+    fullyQualifiedName: testUnity.demo.information_schema.columns
+    description: Describes columns of tables and views in the catalog.
+    displayName: columns
+    deleted: false
+  - id: 306445fb-75cb-4979-bb75-ca8c46313209
+    type: table
+    name: constraint_column_usage
+    fullyQualifiedName: testUnity.demo.information_schema.constraint_column_usage
+    description: Describes the constraints referencing columns in the catalog.
+    displayName: constraint_column_usage
+    deleted: false
+  - id: 285f96e4-0ae6-49ff-b27a-0bd8691ccb07
+    type: table
+    name: constraint_table_usage
+    fullyQualifiedName: testUnity.demo.information_schema.constraint_table_usage
+    description: Describes the constraints referencing tables in the catalog.
+    displayName: constraint_table_usage
+    deleted: false
+  - id: f2270717-9df5-4ee1-93b9-9d1e0c34a660
+    type: table
+    name: information_schema_catalog_name
+    fullyQualifiedName: testUnity.demo.information_schema.information_schema_catalog_name
+    description: Returns the name of this information schema’s catalog.
+    displayName: information_schema_catalog_name
+    deleted: false
+  - id: a7b2c302-f70a-4850-863d-ba4c859aebf0
+    type: table
+    name: key_column_usage
+    fullyQualifiedName: testUnity.demo.information_schema.key_column_usage
+    description: Lists the columns of the primary or foreign key constraints within
+      the catalog.
+    displayName: key_column_usage
+    deleted: false
+  - id: ce6c41db-3f4a-4d89-bee8-ad67090439ca
+    type: table
+    name: parameters
+    fullyQualifiedName: testUnity.demo.information_schema.parameters
+    description: Describes parameters of routines (functions) in the catalog.
+    displayName: parameters
+    deleted: false
+  - id: 1ea0b614-a197-4c3c-adcd-bef46da0f92c
+    type: table
+    name: referential_constraints
+    fullyQualifiedName: testUnity.demo.information_schema.referential_constraints
+    description: Describes referential (foreign key) constraints defined in the catalog.
+    displayName: referential_constraints
+    deleted: false
+  - id: 6ed94279-b087-46b9-b5fb-8990a7940e84
+    type: table
+    name: routine_columns
+    fullyQualifiedName: testUnity.demo.information_schema.routine_columns
+    description: Describes result columns of table valued functions.
+    displayName: routine_columns
+    deleted: false
+  - id: ba2ed054-5e9a-403e-aab6-1b40589d5015
+    type: table
+    name: routine_privileges
+    fullyQualifiedName: testUnity.demo.information_schema.routine_privileges
+    description: Lists principals that have privileges on the routines in the catalog.
+    displayName: routine_privileges
+    deleted: false
+  - id: 09e77ce0-8049-4bf6-8b47-e0de069dee80
+    type: table
+    name: routines
+    fullyQualifiedName: testUnity.demo.information_schema.routines
+    description: Describes routines (functions) in the catalog.
+    displayName: routines
+    deleted: false
+  - id: 90125d2f-f64c-4608-8e81-fcf18d1ba72b
+    type: table
+    name: row_filters
+    fullyQualifiedName: testUnity.demo.information_schema.row_filters
+    displayName: row_filters
+    deleted: false
+  - id: c7184aad-4971-4756-b3e1-e64b6f2eea27
+    type: table
+    name: schema_privileges
+    fullyQualifiedName: testUnity.demo.information_schema.schema_privileges
+    description: Lists principals that have privileges on the schemas in the catalog.
+    displayName: schema_privileges
+    deleted: false
+  - id: 35b6b315-1203-4295-8f5c-c65568197323
+    type: table
+    name: schema_tags
+    fullyQualifiedName: testUnity.demo.information_schema.schema_tags
+    displayName: schema_tags
+    deleted: false
+  - id: 1ee6cb47-8682-4d95-9d98-7f15ba68fcab
+    type: table
+    name: schemata
+    fullyQualifiedName: testUnity.demo.information_schema.schemata
+    description: Describes schemas within the catalog.
+    displayName: schemata
+    deleted: false
+  - id: be122eb5-e3ba-49b3-9946-30170fdbdbf1
+    type: table
+    name: table_constraints
+    fullyQualifiedName: testUnity.demo.information_schema.table_constraints
+    description: Describes metadata for all primary and foreign key constraints within
+      the catalog.
+    displayName: table_constraints
+    deleted: false
+  - id: 26b9e13d-9008-4d8e-b4ac-2d7f91580cc7
+    type: table
+    name: table_privileges
+    fullyQualifiedName: testUnity.demo.information_schema.table_privileges
+    description: Lists principals that have privileges on the tables and views in
+      the catalog.
+    displayName: table_privileges
+    deleted: false
+  - id: 990faedf-51a1-4559-ab3d-38d078e06670
+    type: table
+    name: table_tags
+    fullyQualifiedName: testUnity.demo.information_schema.table_tags
+    displayName: table_tags
+    deleted: false
+  - id: e5f8ab9b-d362-4b29-8604-a4888f21b97d
+    type: table
+    name: tables
+    fullyQualifiedName: testUnity.demo.information_schema.tables
+    description: Describes tables and views defined within the catalog.
+    displayName: tables
+    deleted: false
+  - id: 3dc81371-ccfa-4740-8d4a-32c0ecdb7540
+    type: table
+    name: views
+    fullyQualifiedName: testUnity.demo.information_schema.views
+    description: Describes view specific information about the views in the catalog.
+    displayName: views
+    deleted: false
+  - id: 1a50fe95-8b71-46b1-bf0b-11c0506a9837
+    type: table
+    name: volume_privileges
+    fullyQualifiedName: testUnity.demo.information_schema.volume_privileges
+    displayName: volume_privileges
+    deleted: false
+  - id: 47f90e9b-817a-4af7-9ea1-e217215ef310
+    type: table
+    name: volume_tags
+    fullyQualifiedName: testUnity.demo.information_schema.volume_tags
+    displayName: volume_tags
+    deleted: false
+  - id: 9a970a66-236f-4614-8e4c-768acd0b476a
+    type: table
+    name: volumes
+    fullyQualifiedName: testUnity.demo.information_schema.volumes
+    displayName: volumes
+    deleted: false
+tags: []
+domains: []
+sourceHash: fd1905aebe1b515ff020542ae7318d5d
+entityStatus: Approved

@@ -1,0 +1,49 @@
+name: sdoh_cms_dual_eligible_enrollment
+fullyQualifiedName: testUnity.postgres_catalog.sdoh_cms_dual_eligible_enrollment
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 631ee5ac-ca75-4695-9cb0-9c82bd02a746
+  type: database
+  name: postgres_catalog
+  fullyQualifiedName: testUnity.postgres_catalog
+  displayName: postgres_catalog
+  deleted: false
+tables:
+  - id: 1a42483f-0d5e-4c42-b2ee-5ea1d9625643
+    type: table
+    name: _airbyte_raw__airbyte_raw_new_cities
+    fullyQualifiedName: testUnity.postgres_catalog.sdoh_cms_dual_eligible_enrollment._airbyte_raw__airbyte_raw_new_cities
+    displayName: _airbyte_raw__airbyte_raw_new_cities
+    deleted: false
+  - id: c0cec9af-f621-4fba-9425-75b218f97b2b
+    type: table
+    name: _airbyte_raw__airbyte_tmp_ast_new_cities
+    fullyQualifiedName: testUnity.postgres_catalog.sdoh_cms_dual_eligible_enrollment._airbyte_raw__airbyte_tmp_ast_new_cities
+    displayName: _airbyte_raw__airbyte_tmp_ast_new_cities
+    deleted: false
+  - id: 35fff518-f22e-4f9d-9934-a7f2f2279bed
+    type: table
+    name: _airbyte_raw__airbyte_tmp_sez_asd
+    fullyQualifiedName: testUnity.postgres_catalog.sdoh_cms_dual_eligible_enrollment._airbyte_raw__airbyte_tmp_sez_asd
+    displayName: _airbyte_raw__airbyte_tmp_sez_asd
+    deleted: false
+  - id: 3ff60bbf-af21-4f26-b192-1cd7110bdc10
+    type: table
+    name: _airbyte_raw__airbyte_tmp_wpi_new_cities
+    fullyQualifiedName: testUnity.postgres_catalog.sdoh_cms_dual_eligible_enrollment._airbyte_raw__airbyte_tmp_wpi_new_cities
+    displayName: _airbyte_raw__airbyte_tmp_wpi_new_cities
+    deleted: false
+tags: []
+domains: []
+sourceHash: d4bc246675dbdd7d62228bd58f903ec7
+entityStatus: Approved

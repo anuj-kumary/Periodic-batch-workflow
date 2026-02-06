@@ -1,0 +1,85 @@
+name: sales
+fullyQualifiedName: testUnity.postgres_catalog.sales
+dataProducts: []
+owners: []
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 631ee5ac-ca75-4695-9cb0-9c82bd02a746
+  type: database
+  name: postgres_catalog
+  fullyQualifiedName: testUnity.postgres_catalog
+  displayName: postgres_catalog
+  deleted: false
+tables:
+  - id: 04a08065-8607-4a38-8d6e-65679fc24020
+    type: table
+    name: _airbyte_raw_customers
+    fullyQualifiedName: testUnity.postgres_catalog.sales._airbyte_raw_customers
+    displayName: _airbyte_raw_customers
+    deleted: false
+  - id: ea30d679-91be-4215-ba6a-6dc02582ff0e
+    type: table
+    name: _airbyte_raw_order_items
+    fullyQualifiedName: testUnity.postgres_catalog.sales._airbyte_raw_order_items
+    displayName: _airbyte_raw_order_items
+    deleted: false
+  - id: dcef47b2-d237-473a-b17d-ef98b31dd7d7
+    type: table
+    name: _airbyte_raw_orders
+    fullyQualifiedName: testUnity.postgres_catalog.sales._airbyte_raw_orders
+    displayName: _airbyte_raw_orders
+    deleted: false
+  - id: 704adf14-7f69-4a4f-b0a6-6133bd62ec38
+    type: table
+    name: _airbyte_raw_staffs
+    fullyQualifiedName: testUnity.postgres_catalog.sales._airbyte_raw_staffs
+    displayName: _airbyte_raw_staffs
+    deleted: false
+  - id: ae115fbe-d629-48ff-9a6c-6dd82b1d8856
+    type: table
+    name: _airbyte_raw_stores
+    fullyQualifiedName: testUnity.postgres_catalog.sales._airbyte_raw_stores
+    displayName: _airbyte_raw_stores
+    deleted: false
+  - id: 0669ab65-c783-4d54-abd7-3b7588c71616
+    type: table
+    name: customers
+    fullyQualifiedName: testUnity.postgres_catalog.sales.customers
+    displayName: customers
+    deleted: false
+  - id: d2de9802-d7a9-4d71-943a-19aa9fa1da8a
+    type: table
+    name: order_items
+    fullyQualifiedName: testUnity.postgres_catalog.sales.order_items
+    displayName: order_items
+    deleted: false
+  - id: f3bbc7b4-29a0-4232-9753-18a4e2563903
+    type: table
+    name: orders
+    fullyQualifiedName: testUnity.postgres_catalog.sales.orders
+    displayName: orders
+    deleted: false
+  - id: 12e22f33-d5ce-426c-9490-0338c56b2ff6
+    type: table
+    name: staffs
+    fullyQualifiedName: testUnity.postgres_catalog.sales.staffs
+    displayName: staffs
+    deleted: false
+  - id: 87d301cc-0165-4f89-931c-c836524ff3b3
+    type: table
+    name: stores
+    fullyQualifiedName: testUnity.postgres_catalog.sales.stores
+    displayName: stores
+    deleted: false
+tags: []
+domains: []
+sourceHash: 407ce6564a60208a051f49af629f7a03
+entityStatus: Approved

@@ -1,0 +1,37 @@
+name: stg
+fullyQualifiedName: testDbxtest.demo.stg
+dataProducts: []
+owners: []
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: ad58259e-8eaf-4058-a7ce-e8b9de9d84bf
+    type: table
+    name: customeraccounts
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts
+    displayName: customeraccounts
+    deleted: false
+  - id: 1b08fbd0-5ed3-4f2c-b6c7-449e360a84ca
+    type: table
+    name: transact
+    fullyQualifiedName: testDbxtest.demo.stg.transact
+    displayName: transact
+    deleted: false
+tags: []
+domains: []
+sourceHash: f1a91cb98a9eee6455c569c3b6e7079b
+entityStatus: Approved

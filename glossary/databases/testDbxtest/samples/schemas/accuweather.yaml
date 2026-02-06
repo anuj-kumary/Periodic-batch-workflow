@@ -1,0 +1,445 @@
+name: accuweather
+fullyQualifiedName: testDbxtest.samples.accuweather
+dataProducts: []
+owners: []
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+database:
+  id: f874651a-ac4e-4968-930a-531a93879ab4
+  type: database
+  name: samples
+  fullyQualifiedName: testDbxtest.samples
+  displayName: samples
+  deleted: false
+tables:
+  - id: e0e050c1-2ac0-4a3d-944d-801f2409b95f
+    type: table
+    name: forecast_daily_calendar_imperial
+    fullyQualifiedName: testDbxtest.samples.accuweather.forecast_daily_calendar_imperial
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: forecast_daily_calendar_imperial
+    deleted: false
+  - id: f69c0307-1551-4cf8-8eb8-6365a309564c
+    type: table
+    name: forecast_daily_calendar_metric
+    fullyQualifiedName: testDbxtest.samples.accuweather.forecast_daily_calendar_metric
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: forecast_daily_calendar_metric
+    deleted: false
+  - id: d39c576b-4cf5-409c-821b-b3c68e599b23
+    type: table
+    name: forecast_daynight_imperial
+    fullyQualifiedName: testDbxtest.samples.accuweather.forecast_daynight_imperial
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: forecast_daynight_imperial
+    deleted: false
+  - id: b8f0e602-888d-4646-a251-23598759b5a3
+    type: table
+    name: forecast_daynight_metric
+    fullyQualifiedName: testDbxtest.samples.accuweather.forecast_daynight_metric
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: forecast_daynight_metric
+    deleted: false
+  - id: 57a1d5a2-df37-4e0d-8322-0cb15b9e8435
+    type: table
+    name: forecast_hourly_imperial
+    fullyQualifiedName: testDbxtest.samples.accuweather.forecast_hourly_imperial
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: forecast_hourly_imperial
+    deleted: false
+  - id: 52754dd3-9c96-4adf-b6e3-51591dac94f7
+    type: table
+    name: forecast_hourly_metric
+    fullyQualifiedName: testDbxtest.samples.accuweather.forecast_hourly_metric
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: forecast_hourly_metric
+    deleted: false
+  - id: 3f1eacf8-7195-4da2-8a9c-6d93c7eb6be4
+    type: table
+    name: historical_daily_calendar_imperial
+    fullyQualifiedName: testDbxtest.samples.accuweather.historical_daily_calendar_imperial
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: historical_daily_calendar_imperial
+    deleted: false
+  - id: 141fd646-7eee-4c82-9b41-54671da5dbb7
+    type: table
+    name: historical_daily_calendar_metric
+    fullyQualifiedName: testDbxtest.samples.accuweather.historical_daily_calendar_metric
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: historical_daily_calendar_metric
+    deleted: false
+  - id: 579f5557-0e8b-4401-9a09-68327b3a91b7
+    type: table
+    name: historical_daynight_imperial
+    fullyQualifiedName: testDbxtest.samples.accuweather.historical_daynight_imperial
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: historical_daynight_imperial
+    deleted: false
+  - id: 3c874cfe-7ef4-4f34-8713-020112318c60
+    type: table
+    name: historical_daynight_metric
+    fullyQualifiedName: testDbxtest.samples.accuweather.historical_daynight_metric
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: historical_daynight_metric
+    deleted: false
+  - id: e1f7ac58-07e6-48bd-a156-3bb5dbd5251c
+    type: table
+    name: historical_hourly_imperial
+    fullyQualifiedName: testDbxtest.samples.accuweather.historical_hourly_imperial
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: historical_hourly_imperial
+    deleted: false
+  - id: e19e4a21-4046-496d-9fb8-2e06d8825378
+    type: table
+    name: historical_hourly_metric
+    fullyQualifiedName: testDbxtest.samples.accuweather.historical_hourly_metric
+    description: "View [listing on Databricks Marketplace.](/marketplace/consumer/listings/235b45d2-d625-4c1c-90a2-68e4568dda40)\
+      \ \nThese datasets are a sample collection of AccuWeather's enriched and comprehensive\
+      \ daily, 12-hour day-night, and hourly historical weather parameters. The sample\
+      \ contains one month of data for the top 50 global cities. Please note that\
+      \ this sample dataset represents a reduced portion of the available data attributes,\
+      \ volume, and data types available within AccuWeather's Data Suite and is intended\
+      \ for exploratory purposes rather than for production.\n\nSome examples these\
+      \ datasets can be explored include:\n- Compare weather conditions across the\
+      \ top 50 global cities to identify regional patterns in temperature, precipitation,\
+      \ and other weather parameters.\n- Create visualizations like time series plots,\
+      \ heatmaps, or box plots to better understand the distribution and weather variability.\n\
+      - Explore correlations between different weather parameters within and across\
+      \ cities to understand how they are related.\n- Investigate temporal trends\
+      \ by analyzing how weather fluctuates over time.\n- Identify outliers in the\
+      \ data that could indicate extreme weather occurrences.\n\nWith more access\
+      \ to AccuWeather's Data Suite available on the Databricks Marketplace, users\
+      \ can leverage weather information in a number of ways which include some of\
+      \ the following:\n\n- **Economic Risk & Impact Analysis**: Utilize historical\
+      \ weather data to determine relationships on business metrics that are trained\
+      \ to predict potential impacts, such as supply chain disruptions, labor productivity,\
+      \ and transportation delays.\n- **Energy Demand Planning & Forecasting**: Inform\
+      \ energy supply and production forecasts for wind, solar, and hydro installations\
+      \ by integrating historical weather information helping to optimize resource\
+      \ allocation and reduce operational risks.\n- **Revenue Projections & Consumer\
+      \ Behavior Analysis**: Join historical weather data with past business data\
+      \ to create more accurate sales growth predictions, accounting for weather-driven\
+      \ demand.\n- **Weather-Targeted Advertising**: Craft advertising campaigns by\
+      \ using historical and forecast weather data to reach consumers at the most\
+      \ critical times, maximizing interest and increasing conversion.\n"
+    displayName: historical_hourly_metric
+    deleted: false
+tags: []
+domains: []
+sourceHash: 24396dc3e14fe55b9fd5287670199a19
+entityStatus: Approved

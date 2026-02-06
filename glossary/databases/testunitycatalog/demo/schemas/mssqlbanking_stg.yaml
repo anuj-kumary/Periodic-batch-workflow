@@ -1,0 +1,37 @@
+name: mssqlbanking_stg
+fullyQualifiedName: testunitycatalog.demo.mssqlbanking_stg
+dataProducts: []
+owners: []
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 125994ce-51d6-4d2c-a69a-539a8a086f96
+    type: table
+    name: customeraccounts
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_stg.customeraccounts
+    displayName: customeraccounts
+    deleted: false
+  - id: 3230c0e4-1a92-4a8d-a299-09314cc75b6d
+    type: table
+    name: transact
+    fullyQualifiedName: testunitycatalog.demo.mssqlbanking_stg.transact
+    displayName: transact
+    deleted: false
+tags: []
+domains: []
+sourceHash: 16e374051826ba4104e669dbbff80f72
+entityStatus: Approved

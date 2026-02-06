@@ -1,0 +1,42 @@
+name: default
+fullyQualifiedName: testDbxtest.main.default
+description: Default schema (auto-created)
+dataProducts: []
+owners: []
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+database:
+  id: 3989a24e-4321-4fe0-91e2-fcceaff37b8b
+  type: database
+  name: main
+  fullyQualifiedName: testDbxtest.main
+  displayName: main
+  deleted: false
+tables: []
+tags:
+  - tagFQN: databricks.new_tag_custom
+    name: new_tag_custom
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: imp.NONE
+    name: NONE
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+domains: []
+sourceHash: 97ad4fc392df026fff5930ff44981b10
+entityStatus: Approved

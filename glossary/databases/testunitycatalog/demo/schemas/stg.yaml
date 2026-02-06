@@ -1,0 +1,37 @@
+name: stg
+fullyQualifiedName: testunitycatalog.demo.stg
+dataProducts: []
+owners: []
+service:
+  id: fd3d5144-3617-4ec5-9cdc-43b78edbe578
+  type: databaseService
+  name: testunitycatalog
+  fullyQualifiedName: testunitycatalog
+  description: ""
+  displayName: testunitycatalog
+  deleted: false
+serviceType: UnityCatalog
+database:
+  id: 2f3a2f0e-8b66-418a-98b9-5a9ca1c51848
+  type: database
+  name: demo
+  fullyQualifiedName: testunitycatalog.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 6d4420ab-6ba5-4c7d-a353-50a4d486f5fe
+    type: table
+    name: customeraccounts
+    fullyQualifiedName: testunitycatalog.demo.stg.customeraccounts
+    displayName: customeraccounts
+    deleted: false
+  - id: 48fe7f89-c071-4d00-bcd8-ba26a1f61b46
+    type: table
+    name: transact
+    fullyQualifiedName: testunitycatalog.demo.stg.transact
+    displayName: transact
+    deleted: false
+tags: []
+domains: []
+sourceHash: 9059fdb75b871c441f3b9bab7c6c806d
+entityStatus: Approved
