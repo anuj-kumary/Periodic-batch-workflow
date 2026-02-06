@@ -1,0 +1,38 @@
+name: deep_nested_container_5
+fullyQualifiedName: s3_storage_sample.deep_nested_container_1.deep_nested_container_2.deep_nested_container_3.deep_nested_container_4.deep_nested_container_5
+owners: []
+service:
+  id: eba43edd-90db-4976-a3d3-ec71e92a6975
+  type: storageService
+  name: s3_storage_sample
+  fullyQualifiedName: s3_storage_sample
+  displayName: s3_storage_sample
+  deleted: false
+parent:
+  id: 5dc46148-6b53-40af-ab10-0d20b5a4252c
+  type: container
+  name: deep_nested_container_4
+  fullyQualifiedName: s3_storage_sample.deep_nested_container_1.deep_nested_container_2.deep_nested_container_3.deep_nested_container_4
+  displayName: deep_nested_container_4
+  deleted: false
+children: []
+serviceType: S3
+tags:
+  - tagFQN: Tier.Tier4
+    name: Tier4
+    description: |-
+      **Team level datasets that are typically non-business and general internal system**
+
+      - Used in product metrics, and dashboards to drive team decisions
+
+      - Used to track operational metrics of internal systems owned by the team
+
+      - Source used to derive other critical Tier-4 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+domains: []
+dataProducts: []
+entityStatus: Unprocessed

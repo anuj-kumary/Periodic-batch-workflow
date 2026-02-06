@@ -1,0 +1,44 @@
+name: departments
+fullyQualifiedName: s3_storage_sample.departments
+displayName: Company departments
+description: Bucket containing company department information
+owners: []
+service:
+  id: eba43edd-90db-4976-a3d3-ec71e92a6975
+  type: storageService
+  name: s3_storage_sample
+  fullyQualifiedName: s3_storage_sample
+  displayName: s3_storage_sample
+  deleted: false
+children:
+  - id: 6edff6bd-2dfb-4c37-85fa-4f51a3f2784d
+    type: container
+    name: engineering
+    fullyQualifiedName: s3_storage_sample.departments.engineering
+    description: Bucket containing engineering department information
+    displayName: Engineering department
+    deleted: false
+  - id: 45613edf-c928-4577-a4bf-ed0595682495
+    type: container
+    name: finance
+    fullyQualifiedName: s3_storage_sample.departments.finance
+    description: Bucket containing finance department information
+    displayName: Finance department
+    deleted: false
+  - id: 71dc7d10-2f3a-4b25-85c5-c5381c59bd68
+    type: container
+    name: media
+    fullyQualifiedName: s3_storage_sample.departments.media
+    description: Bucket containing media department information
+    displayName: Media department
+    deleted: false
+prefix: /departments/
+numberOfObjects: 2.0
+size: 2048.0
+fileFormats:
+  - csv
+serviceType: S3
+tags: []
+domains: []
+dataProducts: []
+entityStatus: Unprocessed

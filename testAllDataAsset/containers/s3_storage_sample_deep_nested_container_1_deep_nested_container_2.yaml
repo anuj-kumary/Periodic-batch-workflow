@@ -1,0 +1,29 @@
+name: deep_nested_container_2
+fullyQualifiedName: s3_storage_sample.deep_nested_container_1.deep_nested_container_2
+owners: []
+service:
+  id: eba43edd-90db-4976-a3d3-ec71e92a6975
+  type: storageService
+  name: s3_storage_sample
+  fullyQualifiedName: s3_storage_sample
+  displayName: s3_storage_sample
+  deleted: false
+parent:
+  id: 3c2d3ba4-b191-4968-9298-f09f69e46291
+  type: container
+  name: deep_nested_container_1
+  fullyQualifiedName: s3_storage_sample.deep_nested_container_1
+  displayName: deep_nested_container_1
+  deleted: false
+children:
+  - id: 138dbefc-7bff-4804-9227-256dcd777d16
+    type: container
+    name: deep_nested_container_3
+    fullyQualifiedName: s3_storage_sample.deep_nested_container_1.deep_nested_container_2.deep_nested_container_3
+    displayName: deep_nested_container_3
+    deleted: false
+serviceType: S3
+tags: []
+domains: []
+dataProducts: []
+entityStatus: Unprocessed

@@ -1,0 +1,38 @@
+name: deep_nested_container_1
+fullyQualifiedName: s3_storage_sample.deep_nested_container_1
+owners:
+  - id: f14f17bf-0923-4234-8e73-2dcc051f2adc
+    type: user
+    name: admin
+    fullyQualifiedName: admin
+    displayName: admin
+    deleted: false
+service:
+  id: eba43edd-90db-4976-a3d3-ec71e92a6975
+  type: storageService
+  name: s3_storage_sample
+  fullyQualifiedName: s3_storage_sample
+  displayName: s3_storage_sample
+  deleted: false
+children:
+  - id: 2edcaa1d-61d0-430e-8eb1-49e443575ac4
+    type: container
+    name: deep_nested_container_2
+    fullyQualifiedName: s3_storage_sample.deep_nested_container_1.deep_nested_container_2
+    displayName: deep_nested_container_2
+    deleted: false
+serviceType: S3
+tags: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"f14f17bf-0923-4234-8e73-2dcc051f2adc\",\"type\":\"user\"\
+        ,\"name\":\"admin\",\"fullyQualifiedName\":\"admin\",\"displayName\":\"admin\"\
+        ,\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+entityStatus: Unprocessed
