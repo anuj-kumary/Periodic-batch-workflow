@@ -1,0 +1,115 @@
+name: TEST_VIEW
+fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.TEST_VIEW
+description: "This table stores essential data related to various entities, featuring\
+  \ unique identifiers and descriptive names, making it useful for querying and analyzing\
+  \ information in applications or reports."
+tableType: View
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The ID column serves as a unique identifier for each record in the\
+      \ dataset, ensuring that every entry can be distinctly referenced. It is essential\
+      \ for maintaining data integrity and facilitating relationships between different\
+      \ tables."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.TEST_VIEW.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The NAME column contains descriptive text that represents the name\
+      \ associated with each record. This could refer to a product name, a person's\
+      \ name, or any other relevant label that provides context to the data."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.TEST_VIEW.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 4b247e10-18be-446e-97e8-ba9fdc9c31e1
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: e8fe5ca8-d77c-4919-993b-13a7ebe1e6ad
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 0864e26e-4866-4214-880d-b141a3e5dd37
+  type: databaseService
+  name: hk_table_view_bug_test
+  fullyQualifiedName: hk_table_view_bug_test
+  description: ""
+  displayName: hk_table_view_bug_test
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: |-
+  CREATE OR REPLACE VIEW test_view AS
+  SELECT id, name
+  FROM D;
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: c7e5a34a-90a9-4098-a6b0-c030f5b5fed6
+  type: testSuite
+  name: hk_table_view_bug_test.HK_DB.HK_SCHEMA.TEST_VIEW.testSuite
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.TEST_VIEW.testSuite
+  displayName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.TEST_VIEW.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: "The ID column serves as a unique identifier for each record in the\
+        \ dataset, ensuring that every entry can be distinctly referenced. It is essential\
+        \ for maintaining data integrity and facilitating relationships between different\
+        \ tables."
+    - name: columns.NAME.description
+      newValue: "The NAME column contains descriptive text that represents the name\
+        \ associated with each record. This could refer to a product name, a person's\
+        \ name, or any other relevant label that provides context to the data."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1757057321099
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057321359
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057321359
+sourceUrl: https://app.snowflake.com/tshirvw/ve46548/#/data/databases/HK_DB/schemas/HK_SCHEMA/view/TEST_VIEW
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1756944000000
+    accessedBy:
+      id: d32d383f-071b-4aa8-8de7-241b3493453c
+      type: user
+      fullyQualifiedName: himanshu
+      href: https://sandbox-beta.open-metadata.org/v1/users/d32d383f-071b-4aa8-8de7-241b3493453c
+sourceHash: 39041e83cd0333f61b7a9d9c9673757a
+processedLineage: true
+entityStatus: Approved

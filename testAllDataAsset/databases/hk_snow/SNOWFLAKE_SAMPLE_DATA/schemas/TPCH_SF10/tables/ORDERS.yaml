@@ -1,0 +1,134 @@
+name: ORDERS
+fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS
+description: Orders data as defined by TPC-H
+tableType: Regular
+columns:
+  - name: O_ORDERKEY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_ORDERKEY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_CUSTKEY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_CUSTKEY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_ORDERSTATUS
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_ORDERSTATUS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_TOTALPRICE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 12
+    scale: 2
+    dataTypeDisplay: "number(12,2)"
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_TOTALPRICE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_ORDERDATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_ORDERDATE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_ORDERPRIORITY
+    dataType: VARCHAR
+    dataLength: 15
+    dataTypeDisplay: text(15)
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_ORDERPRIORITY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_CLERK
+    dataType: VARCHAR
+    dataLength: 15
+    dataTypeDisplay: text(15)
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_CLERK
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_SHIPPRIORITY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_SHIPPRIORITY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: O_COMMENT
+    dataType: VARCHAR
+    dataLength: 79
+    dataTypeDisplay: text(79)
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS.O_COMMENT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 78ea6b65-1483-4125-b338-d3ad88417e5f
+  type: databaseSchema
+  name: TPCH_SF10
+  fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
+  description: TPC-H scaling factor 10
+  displayName: TPCH_SF10
+  deleted: false
+database:
+  id: 49428beb-ded8-46ec-9625-2a201204d21a
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 89ad4fb4-b82f-407d-846a-6669b40ab0d6
+  type: databaseService
+  name: hk_snow
+  fullyQualifiedName: hk_snow
+  description: ""
+  displayName: hk_snow
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/rmpftce/eh21932/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF10/table/ORDERS
+domains: []
+dataProducts: []
+sourceHash: 37745e753b5038f500d42a9ea5cf3395
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,76 @@
+name: MY_FIRST_DBT_MODEL
+fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.MY_FIRST_DBT_MODEL
+description: ""
+tableType: Transient
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 1
+    scale: 0
+    dataTypeDisplay: "number(1,0)"
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.MY_FIRST_DBT_MODEL.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: db009168-0d0e-463f-85a2-33a83bfa50fd
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: 13ff90f2-7cc9-49c5-a299-d3254725569f
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hkauto.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: bb6d2ec6-abc7-4eff-bf1f-b565fc51f8c0
+  type: databaseService
+  name: hkauto
+  fullyQualifiedName: hkauto
+  description: ""
+  displayName: hkauto
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: daa69ec3-3dde-4a91-90b5-f92379c727f8
+  type: testSuite
+  name: hkauto.HK_DB.HK_SCHEMA.MY_FIRST_DBT_MODEL.testSuite
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.MY_FIRST_DBT_MODEL.testSuite
+  displayName: hkauto.HK_DB.HK_SCHEMA.MY_FIRST_DBT_MODEL.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: columns.ID.description
+      oldValue: "The ID column serves as a unique identifier for each record in the\
+        \ table, ensuring that every entry can be distinctly recognized and referenced."
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: himanshu
+      changedAt: 1754487829509
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828348906
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/MY_FIRST_DBT_MODEL
+domains: []
+dataProducts: []
+sourceHash: c5be1355e66b2ab084e6f5c9cf2ce709
+processedLineage: false
+entityStatus: Approved

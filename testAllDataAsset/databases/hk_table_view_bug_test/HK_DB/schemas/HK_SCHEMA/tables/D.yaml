@@ -1,0 +1,207 @@
+name: D
+fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D
+description: "This table stores detailed records related to various categories, including\
+  \ their creation dates and names, allowing users to track and analyze category-related\
+  \ data effectively for reporting and decision-making purposes."
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The ID column serves as a unique identifier for each record in the\
+      \ table, ensuring that each entry can be distinctly referenced."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.ID
+    tags:
+      - tagFQN: class_hk.tag_hk
+        name: tag_hk
+        displayName: ""
+        description: <p>Testing tags</p>
+        style:
+          color: "#f2cb07"
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The NAME column contains the name associated with the record, which\
+      \ can represent a product, category, or other relevant entity."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CATEGORY
+    dataType: VARCHAR
+    dataLength: 8
+    dataTypeDisplay: text(8)
+    description: "The CATEGORY column represents the classification or type of the\
+      \ record, allowing for categorization of data entries."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.CATEGORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MONTH_ADDED
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The MONTH_ADDED column captures the month in which the record was\
+      \ added, providing additional temporal context to the data."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.MONTH_ADDED
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED_AT
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The CREATED_AT column indicates the date when the record was created,\
+      \ providing a timestamp for data entry."
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.CREATED_AT
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 4b247e10-18be-446e-97e8-ba9fdc9c31e1
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: e8fe5ca8-d77c-4919-993b-13a7ebe1e6ad
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 0864e26e-4866-4214-880d-b141a3e5dd37
+  type: databaseService
+  name: hk_table_view_bug_test
+  fullyQualifiedName: hk_table_view_bug_test
+  description: ""
+  displayName: hk_table_view_bug_test
+  deleted: false
+serviceType: Snowflake
+tags:
+  - tagFQN: hk gloss 1.hk gloss 1
+    name: hk gloss 1
+    displayName: ""
+    description: <p>hk gloss 1</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: f800a70f-80fd-4a41-bd8e-b50f5868d491
+  type: testSuite
+  name: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.testSuite
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.testSuite
+  displayName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.D.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"hk gloss 1.hk gloss 1\",\"name\":\"hk gloss 1\",\"\
+        displayName\":\"\",\"description\":\"<p>hk gloss 1</p>\",\"style\":{},\"source\"\
+        :\"Glossary\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"},{\"tagFQN\"\
+        :\"hk gloss 1.hk gloss 1\",\"name\":\"hk gloss 1\",\"displayName\":\"\",\"\
+        description\":\"<p>hk gloss 1</p>\",\"style\":{},\"source\":\"Glossary\",\"\
+        labelType\":\"Manual\",\"state\":\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322314
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322314
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322314
+    columns.CATEGORY.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322314
+    columns.CREATED_AT.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322314
+    columns.MONTH_ADDED.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322314
+sourceUrl: https://app.snowflake.com/tshirvw/ve46548/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/D
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1756944000000
+    accessedBy:
+      id: d32d383f-071b-4aa8-8de7-241b3493453c
+      type: user
+      fullyQualifiedName: himanshu
+      href: https://sandbox-beta.open-metadata.org/v1/users/d32d383f-071b-4aa8-8de7-241b3493453c
+sourceHash: aded3964da64039fecd972f3c25e3ee5
+processedLineage: false
+entityStatus: Approved

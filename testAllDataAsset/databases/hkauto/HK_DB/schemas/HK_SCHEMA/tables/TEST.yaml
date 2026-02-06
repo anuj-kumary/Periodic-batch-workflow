@@ -1,0 +1,99 @@
+name: TEST
+fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.TEST
+description: "This table stores unique identifiers and names, allowing users to manage\
+  \ and reference entities efficiently. It can be utilized for various applications,\
+  \ such as tracking records or organizing data related to specific items or individuals."
+tableType: View
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 1
+    scale: 0
+    dataTypeDisplay: "number(1,0)"
+    description: "The ID column serves as a unique identifier for each record in the\
+      \ table, ensuring that every entry can be distinctly recognized and referenced."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.TEST.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 4
+    dataTypeDisplay: text(4)
+    description: "The NAME column contains textual information representing the name\
+      \ associated with each record, providing a descriptive label for identification."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.TEST.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: db009168-0d0e-463f-85a2-33a83bfa50fd
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: 13ff90f2-7cc9-49c5-a299-d3254725569f
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hkauto.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: bb6d2ec6-abc7-4eff-bf1f-b565fc51f8c0
+  type: databaseService
+  name: hkauto
+  fullyQualifiedName: hkauto
+  description: ""
+  displayName: hkauto
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace   view HK_DB.HK_SCHEMA.test\n  \n   as (\n  \
+  \  -- models/example.sql\nselect 1 as id, 'test' as name\n  );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 57a2bf96-26d2-489c-9f22-6e0ef896f91b
+  type: testSuite
+  name: hkauto.HK_DB.HK_SCHEMA.TEST.testSuite
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.TEST.testSuite
+  displayName: hkauto.HK_DB.HK_SCHEMA.TEST.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: "The ID column serves as a unique identifier for each record in the\
+        \ table, ensuring that every entry can be distinctly recognized and referenced."
+    - name: columns.NAME.description
+      newValue: "The NAME column contains textual information representing the name\
+        \ associated with each record, providing a descriptive label for identification."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1752828336757
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828336997
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828336997
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/HK_DB/schemas/HK_SCHEMA/view/TEST
+domains: []
+dataProducts: []
+sourceHash: 677d403b4fcd3d8da3467f36d2bae353
+processedLineage: false
+entityStatus: Approved

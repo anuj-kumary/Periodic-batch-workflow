@@ -1,0 +1,192 @@
+name: C
+fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C
+description: "This table stores categorized data entries with associated creation\
+  \ dates and unique identifiers, allowing users to track and manage various items\
+  \ effectively based on their categories and names."
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: The ID column serves as a unique identifier for each entry in the
+      table. It is crucial for distinguishing between different records and ensuring
+      data integrity.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The NAME column contains the names associated with each entry. This
+      is important for identifying and describing the entries in a meaningful way.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CATEGORY
+    dataType: VARCHAR
+    dataLength: 8
+    dataTypeDisplay: text(8)
+    description: The CATEGORY column is used to classify the entries in the table
+      into distinct groups or types. This allows for better organization and analysis
+      of the data based on different categories.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.CATEGORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MONTH_ADDED
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The MONTH_ADDED column indicates the month in which the entry was
+      added. This provides additional context for the timing of data entries.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.MONTH_ADDED
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED_AT
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The CREATED_AT column records the date when each entry was created.
+      This is essential for tracking the timeline of data entries and understanding
+      their recency.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.CREATED_AT
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 4b247e10-18be-446e-97e8-ba9fdc9c31e1
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: e8fe5ca8-d77c-4919-993b-13a7ebe1e6ad
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 0864e26e-4866-4214-880d-b141a3e5dd37
+  type: databaseService
+  name: hk_table_view_bug_test
+  fullyQualifiedName: hk_table_view_bug_test
+  description: ""
+  displayName: hk_table_view_bug_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: b0c0a25e-08db-46c0-bb9e-eb253355f569
+  type: testSuite
+  name: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.testSuite
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.testSuite
+  displayName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.C.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: The ID column serves as a unique identifier for each entry in the
+        table. It is crucial for distinguishing between different records and ensuring
+        data integrity.
+    - name: columns.NAME.description
+      newValue: The NAME column contains the names associated with each entry. This
+        is important for identifying and describing the entries in a meaningful way.
+    - name: columns.CATEGORY.description
+      newValue: The CATEGORY column is used to classify the entries in the table into
+        distinct groups or types. This allows for better organization and analysis
+        of the data based on different categories.
+    - name: columns.MONTH_ADDED.description
+      newValue: The MONTH_ADDED column indicates the month in which the entry was
+        added. This provides additional context for the timing of data entries.
+    - name: columns.CREATED_AT.description
+      newValue: The CREATED_AT column records the date when each entry was created.
+        This is essential for tracking the timeline of data entries and understanding
+        their recency.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1757057322891
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057323160
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057323160
+    columns.CATEGORY.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057323160
+    columns.CREATED_AT.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057323160
+    columns.MONTH_ADDED.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057323160
+sourceUrl: https://app.snowflake.com/tshirvw/ve46548/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/C
+domains: []
+dataProducts: []
+sourceHash: 2dd497af1dbe792757f92a0d20e09267
+processedLineage: false
+entityStatus: Approved
