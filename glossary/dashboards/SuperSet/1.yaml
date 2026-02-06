@@ -1,0 +1,143 @@
+name: 1
+displayName: World Bank's Data
+fullyQualifiedName: SuperSet.1
+dashboardType: Dashboard
+sourceUrl: http://ec2-3-142-98-17.us-east-2.compute.amazonaws.com:8080/superset/dashboard/world_health/
+charts:
+  - id: 676997a4-25a4-44df-9003-0f3fa04d4f94
+    type: chart
+    name: 32
+    fullyQualifiedName: SuperSet.32
+    displayName: Region Filter
+    deleted: false
+  - id: 182fa2bf-b7b8-4f1c-a3d8-4a4ae0bf589a
+    type: chart
+    name: 33
+    fullyQualifiedName: SuperSet.33
+    displayName: World's Population
+    deleted: false
+  - id: da2f297b-89fb-4ada-9fb0-3b3b5a584b2f
+    type: chart
+    name: 34
+    fullyQualifiedName: SuperSet.34
+    description: "[{\"tagFQN\":\"test_2_policy_tag.test_2_policy_tag\",\"source\"\
+      :\"Classification\",\"name\":\"test_2_policy_tag\",\"description\":\"Bigquery\
+      \ Policy Tag\"}]"
+    displayName: Most Populated Countries
+    deleted: false
+  - id: b25527fa-c7c8-42d9-80ef-b639d9c538f3
+    type: chart
+    name: 35
+    fullyQualifiedName: SuperSet.35
+    displayName: Growth Rate
+    deleted: false
+  - id: 197aacaa-a421-45bc-86af-50747d8afadc
+    type: chart
+    name: 36
+    fullyQualifiedName: SuperSet.36
+    displayName: '% Rural'
+    deleted: false
+  - id: 76b51668-b15d-445b-bae4-5498acfbd5bf
+    type: chart
+    name: 37
+    fullyQualifiedName: SuperSet.37
+    displayName: Life Expectancy VS Rural %
+    deleted: false
+  - id: 1a8328a3-e675-4759-83f9-c703322bfb36
+    type: chart
+    name: 38
+    fullyQualifiedName: SuperSet.38
+    displayName: Rural Breakdown
+    deleted: false
+  - id: 0703766b-24be-4465-a3a1-745fd1a97615
+    type: chart
+    name: 39
+    fullyQualifiedName: SuperSet.39
+    displayName: World's Pop Growth
+    deleted: false
+  - id: 54cf4a7f-928f-4829-97b0-c2b80b55f214
+    type: chart
+    name: 40
+    fullyQualifiedName: SuperSet.40
+    displayName: Box plot
+    deleted: false
+  - id: a4971fde-2e45-4827-ac68-dd80e08106e2
+    type: chart
+    name: 41
+    fullyQualifiedName: SuperSet.41
+    displayName: Treemap
+    deleted: false
+  - id: f6c89605-a1f6-4ae2-b743-ae0761e19850
+    type: chart
+    name: 42
+    fullyQualifiedName: SuperSet.42
+    displayName: Parallel Coordinates
+    deleted: false
+dataModels: []
+owners: []
+tags:
+  - tagFQN: KnowledgeCenter.Article
+    name: Article
+    description: Knowledge Article Description
+    style: {}
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PII.Sensitive
+    name: Sensitive
+    description: "PII which if lost, compromised, or disclosed without authorization,\
+      \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+      \ to an individual."
+    style:
+      color: "#ff0000"
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Person.Address
+    name: Address
+    description: Address of a Person.
+    style:
+      color: "#d54110"
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PersonalData.Personal
+    name: Personal
+    description: Data that can be used to directly or indirectly identify a person.
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+service:
+  id: 96b2c37d-8d8c-4ef1-8bef-1c4fd361dffd
+  type: dashboardService
+  name: SuperSet
+  fullyQualifiedName: SuperSet
+  description: ""
+  displayName: SuperSet
+  deleted: false
+serviceType: Superset
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+    inherited: true
+  - id: 761f0a12-7b08-4889-acc3-b8d4d11a7865
+    type: domain
+    name: domain.with.dot
+    fullyQualifiedName: '"domain.with.dot"'
+    description: domain.with.dot
+    displayName: domain.with.dot
+    inherited: true
+dataProducts: []
+entityStatus: Approved

@@ -1,0 +1,95 @@
+name: 5
+displayName: World Data
+fullyQualifiedName: local_redash.5
+description: World Query Data Text
+dashboardType: Dashboard
+sourceUrl: https://redash.apps.int.getcollate.io/dashboards/5
+charts:
+  - id: a3edf5e8-cb01-4156-a820-75398b0a9343
+    type: chart
+    name: 5
+    fullyQualifiedName: local_redash.5
+    description: ""
+    displayName: World Query Data
+    deleted: false
+  - id: 3f90a94a-3de0-4159-a16d-d6c18deb7a53
+    type: chart
+    name: 6
+    fullyQualifiedName: local_redash.6
+    description: ""
+    displayName: 6
+    deleted: false
+dataModels: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+tags:
+  - tagFQN: RedashTags.worldtag
+    name: worldtag
+    description: Redash Tag
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Tier.Tier5
+    name: Tier5
+    description: |+
+      **Private/Unused data assets - No impact beyond individual users**
+
+      - Data assets without any ownership with no usage in the last 60 days
+
+      - Data assets owned by individuals without team ownership
+
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+service:
+  id: b22c98d2-675c-4ab4-8ae1-d11015e78085
+  type: dashboardService
+  name: local_redash
+  fullyQualifiedName: local_redash
+  displayName: local_redash
+  deleted: false
+serviceType: Redash
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: certification
+      oldValue: "{\"tagLabel\":{\"tagFQN\":\"Certification.Bronze\",\"name\":\"Bronze\"\
+        ,\"displayName\":\"Bronze_medal\",\"description\":\"Bronze certified Data\
+        \ Asset test\",\"style\":{\"color\":\"#C08329\",\"iconURL\":\"BronzeCertification.svg\"\
+        },\"source\":\"Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"\
+        },\"appliedDate\":1743070962265,\"expiryDate\":1745662962265}"
+      newValue: "{\"tagLabel\":{\"tagFQN\":\"Certification.Bronze\",\"name\":\"Bronze\"\
+        ,\"displayName\":\"Bronze_medal\",\"description\":\"Bronze certified Data\
+        \ Asset test\",\"style\":{\"color\":\"#C08329\",\"iconURL\":\"BronzeCertification.svg\"\
+        },\"source\":\"Classification\",\"labelType\":\"Automated\",\"state\":\"Confirmed\"\
+        },\"appliedDate\":1765803645454,\"expiryDate\":1768395645454}"
+  fieldsDeleted: []
+  previousVersion: 1.3
+  changeSummary: {}
+domains: []
+dataProducts: []
+certification:
+  tagLabel:
+    tagFQN: Certification.Bronze
+    name: Bronze
+    displayName: Bronze_medal
+    description: Bronze certified Data Asset test
+    style:
+      color: "#C08329"
+      iconURL: BronzeCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1765803646206
+  expiryDate: 1768395646206
+sourceHash: ac7df119225e697c7e77b3f28069ac50
+entityStatus: Approved
