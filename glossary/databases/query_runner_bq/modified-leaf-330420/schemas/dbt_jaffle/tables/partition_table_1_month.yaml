@@ -1,0 +1,77 @@
+name: partition_table_1_month
+fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.partition_table_1_month
+tableType: Partitioned
+columns:
+  - name: transaction_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.partition_table_1_month.transaction_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: transaction_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.partition_table_1_month.transaction_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+tablePartition:
+  columns:
+    - columnName: transaction_date
+      intervalType: TIME-UNIT
+      interval: MONTH
+owners: []
+databaseSchema:
+  id: 71c68c52-6776-491c-8e0f-d0c6fd16ef6d
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle
+  description: "Hello there, it's the description"
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: ca8d273e-c526-40d5-be10-20f981830f2c
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: query_runner_bq.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: 97732e10-864e-4a8b-b734-9d0bcceb11fa
+  type: databaseService
+  name: query_runner_bq
+  fullyQualifiedName: query_runner_bq
+  description: ""
+  displayName: query_runner_bq
+  deleted: false
+serviceType: BigQuery
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"created\":{\"timestamp\":1661437651105}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2sdbt_jaffle!3spartition_table_1_month
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1661437651105
+sourceHash: c5d03f49475cfa37ba67e662a9c9a81c
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,118 @@
+name: COLLATE_METADATA
+fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.COLLATE_METADATA
+tableType: Regular
+columns:
+  - name: id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.COLLATE_METADATA.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eventtype
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.COLLATE_METADATA.eventtype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: exportedatutc
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.COLLATE_METADATA.exportedatutc
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: data
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle.COLLATE_METADATA.data
+    tags:
+      - tagFQN: General.URL
+        name: URL
+        description: "A URL (Uniform Resource Locator), unique identifier used to\
+          \ locate a resource on the Internet."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        reason: Chose PII.NonSensitive with a classification score of 1.00
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 71c68c52-6776-491c-8e0f-d0c6fd16ef6d
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: query_runner_bq.modified-leaf-330420.dbt_jaffle
+  description: "Hello there, it's the description"
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: ca8d273e-c526-40d5-be10-20f981830f2c
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: query_runner_bq.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: 97732e10-864e-4a8b-b734-9d0bcceb11fa
+  type: databaseService
+  name: query_runner_bq
+  fullyQualifiedName: query_runner_bq
+  description: ""
+  displayName: query_runner_bq
+  deleted: false
+serviceType: BigQuery
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.data.tags
+      newValue: "[{\"tagFQN\":\"General.URL\",\"name\":\"URL\",\"description\":\"\
+        A URL (Uniform Resource Locator), unique identifier used to locate a resource\
+        \ on the Internet.\",\"source\":\"Classification\",\"labelType\":\"Generated\"\
+        ,\"state\":\"Suggested\"},{\"tagFQN\":\"PII.NonSensitive\",\"name\":\"NonSensitive\"\
+        ,\"description\":\"PII which is easily accessible from public sources and\
+        \ can include zip code, race, gender, and date of birth.\",\"style\":{},\"\
+        source\":\"Classification\",\"labelType\":\"Generated\",\"state\":\"Suggested\"\
+        ,\"reason\":\"Chose PII.NonSensitive with a classification score of 1.00\"\
+        }]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2sdbt_jaffle!3sCOLLATE_METADATA
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1758625063189
+sourceHash: 26725e69eba1d88c522a2ca40f39f04c
+processedLineage: false
+entityStatus: Unprocessed
