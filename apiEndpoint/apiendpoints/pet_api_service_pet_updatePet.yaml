@@ -1,0 +1,110 @@
+name: updatePet
+fullyQualifiedName: pet_api_service.pet.updatePet
+description: Update an existing pet by Id
+endpointURL: https://petstore3.swagger.io/api/v3/openapi.json#operation/updatePet
+requestMethod: PUT
+requestSchema:
+  schemaFields:
+    - name: id
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.id
+      tags: []
+    - name: name
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.name
+      tags: []
+    - name: category
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.category
+      tags: []
+      children:
+        - name: id
+          dataType: UNKNOWN
+          fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.category.id
+          tags: []
+        - name: name
+          dataType: STRING
+          fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.category.name
+          tags: []
+    - name: photoUrls
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.photoUrls
+      tags: []
+    - name: tags
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.tags
+      tags: []
+    - name: status
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.updatePet.requestSchema.status
+      tags: []
+responseSchema:
+  schemaFields:
+    - name: id
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.id
+      tags: []
+    - name: name
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.name
+      tags: []
+    - name: category
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.category
+      tags: []
+      children:
+        - name: id
+          dataType: UNKNOWN
+          fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.category.id
+          tags: []
+        - name: name
+          dataType: STRING
+          fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.category.name
+          tags: []
+    - name: photoUrls
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.photoUrls
+      tags: []
+    - name: tags
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.tags
+      tags: []
+    - name: status
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.updatePet.responseSchema.status
+      tags: []
+apiCollection:
+  id: f215a721-5fc2-4126-bb89-d83e20fab161
+  type: apiCollection
+  name: pet
+  fullyQualifiedName: pet_api_service.pet
+  description: Everything about your Pets
+  displayName: pet
+  deleted: false
+owners: []
+tags: []
+service:
+  id: c5d3b9ff-c8b4-4d3c-a695-7e94c798e3f8
+  type: apiService
+  name: pet_api_service
+  fullyQualifiedName: pet_api_service
+  description: ""
+  displayName: pet_api_service
+  deleted: false
+serviceType: Rest
+domains:
+  - id: 6dec5ead-5cdd-4f43-b085-54de6b3f8107
+    type: domain
+    name: Finance
+    fullyQualifiedName: Finance
+    description: "Finance, this is a test"
+    displayName: Finance
+    inherited: true
+dataProducts:
+  - id: f3f13592-8c5f-4924-9066-a0bf056acd47
+    type: dataProduct
+    name: Banking Catalogue
+    fullyQualifiedName: Banking Catalogue
+    description: Banking Catalogue
+    displayName: banks
+sourceHash: 222ad321a01d4e4a4e263e428df78a8f

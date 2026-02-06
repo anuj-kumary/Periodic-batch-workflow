@@ -1,0 +1,190 @@
+name: createTable
+displayName: Create a table
+fullyQualifiedName: ometa_api_service.tables.createTable
+description: Create a new table under an existing database
+endpointURL: https://docs.open-metadata.org/api/v1/tables
+requestMethod: POST
+requestSchema:
+  schemaType: JSON
+  schemaFields:
+    - name: databaseSchema
+      dataType: STRING
+      description: db schema of new table
+      fullyQualifiedName: ometa_api_service.tables.createTable.requestSchema.databaseSchema
+      tags:
+        - tagFQN: Business Department.test_business_term
+          name: test_business_term
+          displayName: Test Business Term
+          description: this is test_business_term
+          style: {}
+          source: Glossary
+          labelType: Manual
+          state: Confirmed
+          appliedAt: 1768809329000
+          appliedBy: harsh.v
+        - tagFQN: General.BankNumber
+          name: BankNumber
+          description: Bank Account Number.
+          source: Classification
+          labelType: Manual
+          state: Confirmed
+          appliedAt: 1767969396000
+          appliedBy: admin
+        - tagFQN: General.BirthDate
+          name: BirthDate
+          description: Person's birth date.
+          source: Classification
+          labelType: Manual
+          state: Confirmed
+          appliedAt: 1767969396000
+          appliedBy: admin
+        - tagFQN: General.Password
+          name: Password
+          description: Field holding password information.
+          source: Classification
+          labelType: Manual
+          state: Confirmed
+          appliedAt: 1767969396000
+          appliedBy: admin
+        - tagFQN: PersonalData.Personal
+          name: Personal
+          description: Data that can be used to directly or indirectly identify a
+            person.
+          source: Classification
+          labelType: Manual
+          state: Confirmed
+          appliedAt: 1767969396000
+          appliedBy: admin
+    - name: name
+      dataType: STRING
+      description: name of table
+      fullyQualifiedName: ometa_api_service.tables.createTable.requestSchema.name
+      tags:
+        - tagFQN: dbtTags.model_tag_two
+          name: model_tag_two
+          description: dbt Tags
+          source: Classification
+          labelType: Derived
+          state: Confirmed
+          appliedAt: 1767969396000
+          appliedBy: admin
+        - tagFQN: testing3.term2
+          name: term2
+          displayName: term2
+          description: term2
+          style: {}
+          source: Glossary
+          labelType: Manual
+          state: Confirmed
+          appliedAt: 1767969396000
+          appliedBy: admin
+    - name: columns
+      dataType: RECORD
+      description: list of columns
+      fullyQualifiedName: ometa_api_service.tables.createTable.requestSchema.columns
+      tags: []
+      children:
+        - name: name
+          dataType: STRING
+          description: name of column
+          fullyQualifiedName: ometa_api_service.tables.createTable.requestSchema.columns.name
+          tags: []
+        - name: datatype
+          dataType: STRING
+          description: datatype of column
+          fullyQualifiedName: ometa_api_service.tables.createTable.requestSchema.columns.datatype
+          tags: []
+responseSchema:
+  schemaType: JSON
+  schemaFields:
+    - name: id
+      dataType: STRING
+      description: id of created table
+      fullyQualifiedName: ometa_api_service.tables.createTable.responseSchema.id
+      tags: []
+    - name: name
+      dataType: STRING
+      description: name of created table
+      fullyQualifiedName: ometa_api_service.tables.createTable.responseSchema.name
+      tags: []
+    - name: columns
+      dataType: RECORD
+      description: list of columns
+      fullyQualifiedName: ometa_api_service.tables.createTable.responseSchema.columns
+      tags: []
+      children:
+        - name: name
+          dataType: STRING
+          description: name of column
+          fullyQualifiedName: ometa_api_service.tables.createTable.responseSchema.columns.name
+          tags: []
+        - name: datatype
+          dataType: STRING
+          description: datatype of column
+          fullyQualifiedName: ometa_api_service.tables.createTable.responseSchema.columns.datatype
+          tags: []
+apiCollection:
+  id: 7b22cb4c-e1ef-484b-b253-da4d75c4cdb6
+  type: apiCollection
+  name: tables
+  fullyQualifiedName: ometa_api_service.tables
+  displayName: tables
+  deleted: false
+owners:
+  - id: c32bf443-6959-4d39-a1ac-83a84410290d
+    type: user
+    name: chirag
+    fullyQualifiedName: chirag
+    displayName: Chirag Madlani DS
+    deleted: false
+  - id: 4fe82bea-acf0-4407-bc16-26bd71192ff3
+    type: user
+    name: chirag.m
+    fullyQualifiedName: '"chirag.m"'
+    displayName: chirag.m
+    deleted: false
+  - id: 9cd9a536-ab77-4d73-bb65-cc71ed8a85ac
+    type: user
+    name: sachin
+    fullyQualifiedName: sachin
+    displayName: Sachin Chaurasiya
+    deleted: false
+tags:
+  - tagFQN: PII.None
+    name: None
+    description: Non PII
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+service:
+  id: 9ab72338-ca26-4060-8229-c6bbfd484ba7
+  type: apiService
+  name: ometa_api_service
+  fullyQualifiedName: ometa_api_service
+  displayName: ometa_api_service
+  deleted: false
+serviceType: Rest
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: requestSchema.schemaFields.databaseSchema.tags
+      newValue: "[{\"tagFQN\":\"Business Department.test_business_term\",\"name\"\
+        :\"test_business_term\",\"displayName\":\"Test Business Term\",\"description\"\
+        :\"this is test_business_term\",\"style\":{},\"source\":\"Glossary\",\"labelType\"\
+        :\"Manual\",\"state\":\"Confirmed\",\"appliedBy\":\"harsh.v\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.7
+  changeSummary: {}
+domains:
+  - id: 2e79f0ec-3e03-45f2-ba5a-93116362eec8
+    type: domain
+    name: TestingD
+    fullyQualifiedName: TestingD
+    description: <p>testing</p>
+    displayName: TestingD
+    inherited: true
+dataProducts: []
+entityStatus: Unprocessed

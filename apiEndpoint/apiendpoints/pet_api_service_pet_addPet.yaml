@@ -1,0 +1,138 @@
+name: addPet
+fullyQualifiedName: pet_api_service.pet.addPet
+description: Add a new pet to the store
+endpointURL: https://petstore3.swagger.io/api/v3/openapi.json#operation/addPet
+requestMethod: POST
+requestSchema:
+  schemaFields:
+    - name: id
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.id
+      tags: []
+    - name: name
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.name
+      tags: []
+    - name: category
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.category
+      tags: []
+      children:
+        - name: id
+          dataType: UNKNOWN
+          fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.category.id
+          tags: []
+        - name: name
+          dataType: STRING
+          fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.category.name
+          tags: []
+    - name: photoUrls
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.photoUrls
+      tags: []
+    - name: tags
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.tags
+      tags: []
+    - name: status
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.addPet.requestSchema.status
+      tags: []
+responseSchema:
+  schemaFields:
+    - name: id
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.id
+      tags: []
+    - name: name
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.name
+      tags: []
+    - name: category
+      dataType: UNKNOWN
+      fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.category
+      tags: []
+      children:
+        - name: id
+          dataType: UNKNOWN
+          fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.category.id
+          tags: []
+        - name: name
+          dataType: STRING
+          fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.category.name
+          tags: []
+    - name: photoUrls
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.photoUrls
+      tags: []
+    - name: tags
+      dataType: ARRAY
+      fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.tags
+      tags: []
+    - name: status
+      dataType: STRING
+      fullyQualifiedName: pet_api_service.pet.addPet.responseSchema.status
+      tags: []
+apiCollection:
+  id: f215a721-5fc2-4126-bb89-d83e20fab161
+  type: apiCollection
+  name: pet
+  fullyQualifiedName: pet_api_service.pet
+  description: Everything about your Pets
+  displayName: pet
+  deleted: false
+owners: []
+tags: []
+service:
+  id: c5d3b9ff-c8b4-4d3c-a695-7e94c798e3f8
+  type: apiService
+  name: pet_api_service
+  fullyQualifiedName: pet_api_service
+  description: ""
+  displayName: pet_api_service
+  deleted: false
+serviceType: Rest
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: entityStatus
+      newValue: Unprocessed
+    - name: certification
+      newValue: "{\"tagLabel\":{\"tagFQN\":\"Certification.Silver\",\"name\":\"Silver\"\
+        ,\"description\":\"Silver certified Data Asset.\",\"style\":{\"color\":\"\
+        #ADADAD\",\"iconURL\":\"SilverCertification.svg\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Manual\",\"state\":\"Confirmed\"},\"appliedDate\":1770016367890,\"\
+        expiryDate\":1772608367890}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+domains:
+  - id: 6dec5ead-5cdd-4f43-b085-54de6b3f8107
+    type: domain
+    name: Finance
+    fullyQualifiedName: Finance
+    description: "Finance, this is a test"
+    displayName: Finance
+    inherited: true
+dataProducts:
+  - id: f3f13592-8c5f-4924-9066-a0bf056acd47
+    type: dataProduct
+    name: Banking Catalogue
+    fullyQualifiedName: Banking Catalogue
+    description: Banking Catalogue
+    displayName: banks
+certification:
+  tagLabel:
+    tagFQN: Certification.Silver
+    name: Silver
+    description: Silver certified Data Asset.
+    style:
+      color: "#ADADAD"
+      iconURL: SilverCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1770016367895
+  expiryDate: 1772608367895
+sourceHash: 126fed48993b1373eee3566b33593361
+entityStatus: Unprocessed

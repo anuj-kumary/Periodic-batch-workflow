@@ -1,0 +1,118 @@
+name: createUser
+displayName: Create a user
+fullyQualifiedName: ometa_api_service.users.createUser
+description: Create a new user
+endpointURL: https://docs.open-metadata.org/api/v1/users
+requestMethod: POST
+requestSchema:
+  schemaType: JSON
+  schemaFields:
+    - name: email
+      dataType: STRING
+      description: email of new user
+      fullyQualifiedName: ometa_api_service.users.createUser.requestSchema.email
+      tags: []
+    - name: name
+      dataType: STRING
+      description: name of new user
+      fullyQualifiedName: ometa_api_service.users.createUser.requestSchema.name
+      tags: []
+responseSchema:
+  schemaType: JSON
+  schemaFields:
+    - name: id
+      dataType: STRING
+      description: ID of user
+      fullyQualifiedName: ometa_api_service.users.createUser.responseSchema.id
+      tags: []
+    - name: name
+      dataType: STRING
+      description: name of user
+      fullyQualifiedName: ometa_api_service.users.createUser.responseSchema.name
+      tags: []
+    - name: email
+      dataType: STRING
+      description: email id of user
+      fullyQualifiedName: ometa_api_service.users.createUser.responseSchema.email
+      tags: []
+apiCollection:
+  id: 658a9db0-cb27-494b-9933-37f268f002f4
+  type: apiCollection
+  name: users
+  fullyQualifiedName: ometa_api_service.users
+  displayName: users
+  deleted: false
+owners:
+  - id: fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c
+    type: user
+    name: 23saints23
+    fullyQualifiedName: 23saints23
+    displayName: 23saints23
+    deleted: false
+  - id: 4614b5b7-7acc-4b93-96a5-3913903851f8
+    type: user
+    name: aanqueti18
+    fullyQualifiedName: aanqueti18
+    displayName: aanqueti18
+    deleted: false
+  - id: 46176ec0-595d-412e-a1f1-f207da730868
+    type: user
+    name: aaron.warren5
+    fullyQualifiedName: '"aaron.warren5"'
+    displayName: Aaron Warren
+    deleted: false
+  - id: 844d36b6-6915-439b-83f5-a72b5a5a59f5
+    type: user
+    name: abhishek.porwal
+    fullyQualifiedName: '"abhishek.porwal"'
+    displayName: abhishek.porwal
+    deleted: false
+  - id: 089347d6-806c-4a27-8b95-9d101d0d3667
+    type: user
+    name: bethbryant
+    fullyQualifiedName: bethbryant
+    displayName: Aaron Alexander
+    deleted: false
+  - id: 84c3b0ae-c426-4d03-b3dd-2a56c5d49b38
+    type: user
+    name: dhruv.p
+    fullyQualifiedName: '"dhruv.p"'
+    displayName: Dhruv
+    deleted: false
+tags:
+  - tagFQN: Tier.Gold
+    name: Gold
+    displayName: Gold
+    description: New
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+service:
+  id: 9ab72338-ca26-4060-8229-c6bbfd484ba7
+  type: apiService
+  name: ometa_api_service
+  fullyQualifiedName: ometa_api_service
+  displayName: ometa_api_service
+  deleted: false
+serviceType: Rest
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: entityStatus
+      newValue: Unprocessed
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary: {}
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+    inherited: true
+dataProducts: []
+entityStatus: Unprocessed
