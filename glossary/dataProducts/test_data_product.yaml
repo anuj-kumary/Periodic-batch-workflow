@@ -1,0 +1,109 @@
+name: test_data_product
+fullyQualifiedName: test_data_product
+displayName: Test Data Product
+description: <p>desc</p><hr><p></p>
+style: {}
+owners:
+  - id: fcc81c9c-1ca2-4ab6-a44f-722c436c7aa8
+    type: user
+    name: rupesh
+    fullyQualifiedName: rupesh
+    description: |-
+      Amundsen is one of the OSS Data Catalogs that was developed by Lyft and was open-sourced in October 2019. It quickly became popular for solving data discovery and data governance challenges. However, in recent years, Amundsen’s development and growth have slowed down considerably. Without an active community and no clear roadmap to address the emerging needs, the users of Amundsen are looking for alternatives in the OSS space.
+
+      OpenMetadata is redefining the modern metadata platform with a bold vision. We have built a centralized metadata repository based on metadata specifications and APIs from the ground up. It is the foundation for innovation with several applications, such as Discovery, Collaboration, Governance, Data Quality, and Data Insights going beyond passive Data Catalogs. Learn more about OpenMetadata’s journey so far here.
+    displayName: Rupesh Chavan
+    deleted: false
+experts:
+  - id: 84c3b0ae-c426-4d03-b3dd-2a56c5d49b38
+    type: user
+    name: dhruv.p
+    fullyQualifiedName: '"dhruv.p"'
+    displayName: Dhruv
+    deleted: false
+    inherited: true
+  - id: 18ca6cd1-d696-4a22-813f-c7a42fc09dc4
+    type: user
+    name: ashish
+    fullyQualifiedName: ashish
+    description: this is test description. this is test description!this is test description!this
+      is test description!this is test description!this is test description!this is
+      test description!this is test description!this is test description!this is test
+      description!this is test description!
+    displayName: Ashish Gupta
+    deleted: false
+    inherited: true
+  - id: 41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b
+    type: user
+    name: shailesh
+    fullyQualifiedName: shailesh
+    displayName: Shailesh Parmar
+    deleted: false
+    inherited: true
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+    inherited: true
+reviewers: []
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+lifecycleStage: DEVELOPMENT
+tags:
+  - tagFQN: Demo.demodemo
+    name: demodemo
+    description: S3 TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.BankNumber
+    name: BankNumber
+    description: Bank Account Number.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.BirthDate
+    name: BirthDate
+    description: Person's birth date.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.Password
+    name: Password
+    description: Field holding password information.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: imp.sample
+    name: sample
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: description
+      oldValue: <p>desc</p>
+      newValue: <p>desc</p><hr><p></p>
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+entityStatus: Approved

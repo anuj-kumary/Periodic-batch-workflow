@@ -1,0 +1,35 @@
+name: MyProduct
+fullyQualifiedName: MyProduct
+description: MyProduct
+style: {}
+owners: []
+experts: []
+reviewers: []
+domains:
+  - id: 635cf2af-5175-44e4-91f1-030beab290d5
+    type: domain
+    name: Marketing
+    fullyQualifiedName: Marketing
+    description: Marketing
+    displayName: Marketing
+lifecycleStage: DEVELOPMENT
+tags:
+  - tagFQN: PostgresPolicyTags.sample_policy
+    name: sample_policy
+    description: Postgres Tag Value
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"PostgresPolicyTags.sample_policy\",\"name\":\"sample_policy\"\
+        ,\"description\":\"Postgres Tag Value\",\"source\":\"Classification\",\"labelType\"\
+        :\"Manual\",\"state\":\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+entityStatus: Approved
