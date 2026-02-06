@@ -1,0 +1,126 @@
+name: entity_usage
+fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: entityType
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.entityType
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: usageDate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.usageDate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.count1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count7
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.count7
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count30
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.count30
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: percentile1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.percentile1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: percentile7
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.percentile7
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: percentile30
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.entity_usage.percentile30
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: UNIQUE
+    columns:
+      - usageDate
+      - id
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f681c0b32f54403ac1dca8c1d8e55027
+processedLineage: false
+entityStatus: Approved

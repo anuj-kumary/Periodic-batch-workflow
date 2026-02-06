@@ -1,0 +1,324 @@
+name: Address
+fullyQualifiedName: local_salesforce.default.salesforce.Address
+description: Address
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Address ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: ParentId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Parent ID
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.ParentId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LocationType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Location Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.LocationType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: AddressType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Address Type
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.AddressType
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: Street
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: textarea
+    description: Address
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Street
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: City
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: City
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.City
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: State
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: State/Province
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.State
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: PostalCode
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Zip/Postal Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.PostalCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: Country
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Country
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Country
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: StateCode
+    dataType: UNKNOWN
+    dataLength: 10
+    dataTypeDisplay: picklist
+    description: State/Province Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.StateCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: CountryCode
+    dataType: UNKNOWN
+    dataLength: 10
+    dataTypeDisplay: picklist
+    description: Country Code
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.CountryCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: Latitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Latitude
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Latitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: Longitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Longitude
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Longitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: GeocodeAccuracy
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Geocode Accuracy
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.GeocodeAccuracy
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: Address
+    dataType: VARCHAR
+    dataLength: 0
+    dataTypeDisplay: address
+    description: Address
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Address
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Description
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: DrivingDirections
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: Driving Directions
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.DrivingDirections
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: TimeZone
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: Time Zone
+    fullyQualifiedName: local_salesforce.default.salesforce.Address.TimeZone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/Address/list
+domains: []
+dataProducts: []
+sourceHash: 09c0433ee177cbce5a255f78141ad0c4
+processedLineage: false
+entityStatus: Unprocessed

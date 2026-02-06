@@ -1,0 +1,230 @@
+name: thread_entity
+fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.id
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: entityLink
+    dataType: VARCHAR
+    dataLength: 3072
+    dataTypeDisplay: varchar(3072)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.entityLink
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: assignedTo
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.assignedTo
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.json
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: createdAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.createdAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: createdBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.createdBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.updatedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.updatedBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: resolved
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.resolved
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: type
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: taskId
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.taskId
+    tags: []
+    constraint: UNIQUE
+    children: []
+    customMetrics: []
+  - name: taskStatus
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.taskStatus
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: taskAssignees
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.taskAssignees
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: announcementStart
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.announcementStart
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: announcementEnd
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.announcementEnd
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hash_id
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar(32)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.hash_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: testCaseResolutionStatusId
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.testCaseResolutionStatusId
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: domain
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.domain
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: taskAssigneesIds
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: text
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.taskAssigneesIds
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: entityId
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.entityId
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: entityType
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.thread_entity.entityType
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 43d6d848ff14390066cd838809c0879b
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,160 @@
+name: QRTZ_FIRED_TRIGGERS
+fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS
+tableType: Regular
+columns:
+  - name: SCHED_NAME
+    dataType: VARCHAR
+    dataLength: 120
+    dataTypeDisplay: varchar(120)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.SCHED_NAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ENTRY_ID
+    dataType: VARCHAR
+    dataLength: 95
+    dataTypeDisplay: varchar(95)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.ENTRY_ID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: TRIGGER_NAME
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.TRIGGER_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TRIGGER_GROUP
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.TRIGGER_GROUP
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: INSTANCE_NAME
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.INSTANCE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: FIRED_TIME
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.FIRED_TIME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SCHED_TIME
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.SCHED_TIME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PRIORITY
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.PRIORITY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar(16)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.STATE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: JOB_NAME
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.JOB_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: JOB_GROUP
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.JOB_GROUP
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_NONCONCURRENT
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar(1)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.IS_NONCONCURRENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REQUESTS_RECOVERY
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar(1)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_FIRED_TRIGGERS.REQUESTS_RECOVERY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - SCHED_NAME
+      - ENTRY_ID
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b5bd1c15088fb0f9ba3710c5711558f0
+processedLineage: false
+entityStatus: Approved
