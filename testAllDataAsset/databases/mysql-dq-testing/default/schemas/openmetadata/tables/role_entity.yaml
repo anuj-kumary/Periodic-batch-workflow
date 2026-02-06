@@ -1,0 +1,95 @@
+name: role_entity
+fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity.id
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity.name
+    tags: []
+    constraint: UNIQUE
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity.json
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: updatedAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity.updatedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity.updatedBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: deleted
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity.deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d14daac9-6fbe-4ad0-bc35-761e5ccdf8aa
+  type: databaseSchema
+  name: openmetadata
+  fullyQualifiedName: mysql-dq-testing.default.openmetadata
+  displayName: openmetadata
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: bbd1bcdf8e00f6b4cc1ecc461d92c39d
+processedLineage: false
+entityStatus: Approved

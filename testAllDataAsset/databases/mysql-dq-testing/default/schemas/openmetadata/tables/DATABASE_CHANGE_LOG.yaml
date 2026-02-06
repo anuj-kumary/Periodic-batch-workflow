@@ -1,0 +1,131 @@
+name: DATABASE_CHANGE_LOG
+fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG
+tableType: Regular
+columns:
+  - name: installed_rank
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.installed_rank
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: description
+    dataType: VARCHAR
+    dataLength: 200
+    dataTypeDisplay: varchar(200)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.description
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: type
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: script
+    dataType: VARCHAR
+    dataLength: 1000
+    dataTypeDisplay: varchar(1000)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.script
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: checksum
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.checksum
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: installed_by
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.installed_by
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: installed_on
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.installed_on
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: execution_time
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.execution_time
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: success
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG.success
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d14daac9-6fbe-4ad0-bc35-761e5ccdf8aa
+  type: databaseSchema
+  name: openmetadata
+  fullyQualifiedName: mysql-dq-testing.default.openmetadata
+  displayName: openmetadata
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 88fd0971f761b16a9713335b9850d676
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,106 @@
+name: field_relationship
+fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship
+tableType: Regular
+columns:
+  - name: fromFQN
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.fromFQN
+    tags: []
+    children: []
+    customMetrics: []
+  - name: toFQN
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.toFQN
+    tags: []
+    children: []
+    customMetrics: []
+  - name: fromType
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.fromType
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: toType
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.toType
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: relation
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.relation
+    tags: []
+    children: []
+    customMetrics: []
+  - name: jsonSchema
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.jsonSchema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship.json
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - fromFQN
+      - relation
+      - toFQN
+owners: []
+databaseSchema:
+  id: d14daac9-6fbe-4ad0-bc35-761e5ccdf8aa
+  type: databaseSchema
+  name: openmetadata
+  fullyQualifiedName: mysql-dq-testing.default.openmetadata
+  displayName: openmetadata
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ee712eb46d5d3ce7ca120d8fa39b3528
+processedLineage: false
+entityStatus: Approved

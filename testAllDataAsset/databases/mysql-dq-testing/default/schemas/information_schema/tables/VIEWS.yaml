@@ -1,0 +1,146 @@
+name: VIEWS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: VIEW_DEFINITION
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.VIEW_DEFINITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHECK_OPTION
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(8)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.CHECK_OPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_UPDATABLE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.IS_UPDATABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFINER
+    dataType: VARCHAR
+    dataLength: 288
+    dataTypeDisplay: varchar(288)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.DEFINER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SECURITY_TYPE
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar(7)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.SECURITY_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_SET_CLIENT
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.CHARACTER_SET_CLIENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLLATION_CONNECTION
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS.COLLATION_CONNECTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`VIEWS` AS select `cat`.`name`\
+  \ AS `TABLE_CATALOG`,`sch`.`name` AS `TABLE_SCHEMA`,`vw`.`name` AS `TABLE_NAME`,if((can_access_view(`sch`.`name`,`vw`.`name`,`vw`.`view_definer`,`vw`.`options`)\
+  \ = true),`vw`.`view_definition_utf8`,'') AS `VIEW_DEFINITION`,`vw`.`view_check_option`\
+  \ AS `CHECK_OPTION`,`vw`.`view_is_updatable` AS `IS_UPDATABLE`,`vw`.`view_definer`\
+  \ AS `DEFINER`,if((`vw`.`view_security_type` = 'DEFAULT'),'DEFINER',`vw`.`view_security_type`)\
+  \ AS `SECURITY_TYPE`,`cs`.`name` AS `CHARACTER_SET_CLIENT`,`conn_coll`.`name` AS\
+  \ `COLLATION_CONNECTION` from (((((`mysql`.`tables` `vw` join `mysql`.`schemata`\
+  \ `sch` on((`vw`.`schema_id` = `sch`.`id`))) join `mysql`.`catalogs` `cat` on((`cat`.`id`\
+  \ = `sch`.`catalog_id`))) join `mysql`.`collations` `conn_coll` on((`conn_coll`.`id`\
+  \ = `vw`.`view_connection_collation_id`))) join `mysql`.`collations` `client_coll`\
+  \ on((`client_coll`.`id` = `vw`.`view_client_collation_id`))) join `mysql`.`character_sets`\
+  \ `cs` on((`cs`.`id` = `client_coll`.`character_set_id`))) where ((0 <> can_access_table(`sch`.`name`,`vw`.`name`))\
+  \ and (`vw`.`type` = 'VIEW'))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e672b6952ebf56f1ad6b90b263000716
+processedLineage: false
+entityStatus: Approved

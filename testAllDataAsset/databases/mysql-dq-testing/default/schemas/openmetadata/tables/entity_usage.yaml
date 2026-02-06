@@ -1,0 +1,126 @@
+name: entity_usage
+fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: entityType
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.entityType
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: usageDate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.usageDate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.count1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count7
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.count7
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count30
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.count30
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: percentile1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.percentile1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: percentile7
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.percentile7
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: percentile30
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage.percentile30
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: UNIQUE
+    columns:
+      - id
+      - usageDate
+owners: []
+databaseSchema:
+  id: d14daac9-6fbe-4ad0-bc35-761e5ccdf8aa
+  type: databaseSchema
+  name: openmetadata
+  fullyQualifiedName: mysql-dq-testing.default.openmetadata
+  displayName: openmetadata
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 63dfb898e81e5ea8d942ace0e1c3ffad
+processedLineage: false
+entityStatus: Approved
