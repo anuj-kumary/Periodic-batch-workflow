@@ -1,0 +1,391 @@
+name: v_$wait_chains
+fullyQualifiedName: oracle_test.default.sys.v_$wait_chains
+tableType: View
+columns:
+  - name: chain_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.chain_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: chain_is_cycle
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.chain_is_cycle
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: chain_signature
+    dataType: VARCHAR
+    dataLength: 801
+    dataTypeDisplay: varchar2(801)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.chain_signature
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: chain_signature_hash
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.chain_signature_hash
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: instance
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.instance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: osid
+    dataType: VARCHAR
+    dataLength: 25
+    dataTypeDisplay: varchar2(25)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.osid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.pid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.sid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SESS_SERIAL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.SESS_SERIAL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pdb_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.pdb_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pdb_name
+    dataType: VARCHAR
+    dataLength: 129
+    dataTypeDisplay: varchar2(129)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.pdb_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_is_valid
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_is_valid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_instance
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_instance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_osid
+    dataType: VARCHAR
+    dataLength: 25
+    dataTypeDisplay: varchar2(25)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_osid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_pid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_pid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_sid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_sid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BLOCKER_SESS_SERIAL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.BLOCKER_SESS_SERIAL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_pdb_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_pdb_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_pdb_name
+    dataType: VARCHAR
+    dataLength: 129
+    dataTypeDisplay: varchar2(129)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_pdb_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocker_chain_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.blocker_chain_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: in_wait
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.in_wait
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: time_since_last_wait_secs
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.time_since_last_wait_secs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: wait_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.wait_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: wait_event
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.wait_event
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: wait_event_text
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.wait_event_text
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.p1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p1_text
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.p1_text
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p2
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.p2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p2_text
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.p2_text
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p3
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.p3
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p3_text
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.p3_text
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: in_wait_secs
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.in_wait_secs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: time_remaining_secs
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.time_remaining_secs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: num_waiters
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.num_waiters
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROW_WAIT_OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.ROW_WAIT_OBJ#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROW_WAIT_FILE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.ROW_WAIT_FILE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROW_WAIT_BLOCK#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.ROW_WAIT_BLOCK#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROW_WAIT_ROW#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.ROW_WAIT_ROW#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$wait_chains.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 5b4316b79577e84fbe6488a377b9b4c4
+processedLineage: false
+entityStatus: Approved
