@@ -1,0 +1,128 @@
+name: products
+fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products
+tableType: View
+columns:
+  - name: product_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.product_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: product_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.product_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: product_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.product_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: product_description
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.product_description
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: product_price
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: numeric
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.product_price
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_food_item
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.is_food_item
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_drink_item
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle.products.is_drink_item
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b58ceebf-a79c-45ba-ae4e-c4e3a2052cc4
+  type: databaseSchema
+  name: demo_dbt_jaffle
+  fullyQualifiedName: query_runner_bq.modified-leaf-330420.demo_dbt_jaffle
+  description: ""
+  displayName: demo_dbt_jaffle
+  deleted: false
+database:
+  id: ca8d273e-c526-40d5-be10-20f981830f2c
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: query_runner_bq.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: 97732e10-864e-4a8b-b734-9d0bcceb11fa
+  type: databaseService
+  name: query_runner_bq
+  fullyQualifiedName: query_runner_bq
+  description: ""
+  displayName: query_runner_bq
+  deleted: false
+serviceType: BigQuery
+schemaDefinition: |-
+  CREATE VIEW demo_dbt_jaffle.products AS with
+
+  products as (
+
+      select * from `modified-leaf-330420`.`demo_dbt_jaffle`.`stg_products`
+
+  )
+
+  select * from products
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: processedLineage
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2sdemo_dbt_jaffle!3sproducts
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1762959044432
+sourceHash: 551fb58214e1be57a59b5d47ba5b91fd
+processedLineage: true
+entityStatus: Unprocessed
