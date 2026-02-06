@@ -1,0 +1,463 @@
+name: v_$backup_files
+fullyQualifiedName: oracle_test.default.sys.v_$backup_files
+tableType: View
+columns:
+  - name: pkey
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.pkey
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: backup_type
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar2(32)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.backup_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: file_type
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar2(32)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.file_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: keep
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar2(3)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.keep
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: keep_until
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.keep_until
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: keep_options
+    dataType: VARCHAR
+    dataLength: 13
+    dataTypeDisplay: varchar2(13)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.keep_options
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar2(16)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fname
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: varchar2(1024)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.fname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tag
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar2(32)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.tag
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: media
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: varchar2(80)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.media
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: recid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.recid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: stamp
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.stamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: device_type
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar2(255)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.device_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: block_size
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.block_size
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: completion_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.completion_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: compressed
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar2(3)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.compressed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: obsolete
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar2(3)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.obsolete
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bytes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_stamp
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_stamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_type
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar2(32)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_incr_type
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar2(32)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_incr_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_pieces
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_pieces
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_copies
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_copies
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_completion_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_completion_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_status
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar2(16)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_bytes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_compressed
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar2(3)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_compressed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_tag
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: varchar2(1024)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_tag
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bs_device_type
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar2(255)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.bs_device_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BP_PIECE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.BP_PIECE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BP_COPY#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.BP_COPY#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DF_FILE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.DF_FILE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: df_tablespace
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar2(30)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.df_tablespace
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DF_RESETLOGS_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.DF_RESETLOGS_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DF_CREATION_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.DF_CREATION_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DF_CHECKPOINT_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.DF_CHECKPOINT_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: df_ckp_mod_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.df_ckp_mod_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RL_THREAD#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.RL_THREAD#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RL_SEQUENCE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.RL_SEQUENCE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RL_RESETLOGS_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.RL_RESETLOGS_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RL_FIRST_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.RL_FIRST_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rl_first_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.rl_first_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RL_NEXT_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.RL_NEXT_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rl_next_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.rl_next_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_files.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b37c1485a540acf26aac0cb9e2f4ada2
+processedLineage: false
+entityStatus: Approved

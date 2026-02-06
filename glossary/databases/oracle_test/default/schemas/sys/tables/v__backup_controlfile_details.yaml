@@ -1,0 +1,184 @@
+name: v_$backup_controlfile_details
+fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details
+tableType: View
+columns:
+  - name: btype
+    dataType: CHAR
+    dataLength: 9
+    dataTypeDisplay: char(9)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.btype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: btype_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.btype_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: session_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.session_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: session_recid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.session_recid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: session_stamp
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.session_stamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: id1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.id1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: id2
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.id2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: creation_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.creation_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RESETLOGS_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.RESETLOGS_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: resetlogs_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.resetlogs_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHECKPOINT_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.CHECKPOINT_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: checkpoint_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.checkpoint_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: filesize
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.filesize
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: compression_ratio
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.compression_ratio
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: filesize_display
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.filesize_display
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_controlfile_details.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2d8dbf02072eba3821f08e2471371ade
+processedLineage: false
+entityStatus: Approved

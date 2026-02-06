@@ -1,0 +1,157 @@
+name: v_$backup_datafile_summary
+fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary
+tableType: View
+columns:
+  - name: num_files_backed
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.num_files_backed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: num_distinct_files_backed
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.num_distinct_files_backed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: num_distinct_ts_backed
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.num_distinct_ts_backed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MIN_CHECKPOINT_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.MIN_CHECKPOINT_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MAX_CHECKPOINT_CHANGE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.MAX_CHECKPOINT_CHANGE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: min_checkpoint_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.min_checkpoint_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_checkpoint_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.max_checkpoint_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: input_bytes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.input_bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: output_bytes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.output_bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: compression_ratio
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.compression_ratio
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: input_bytes_display
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.input_bytes_display
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: output_bytes_display
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.output_bytes_display
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.v_$backup_datafile_summary.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: c22c36fd9bf8442332d2d51f0a075d26
+processedLineage: false
+entityStatus: Approved
