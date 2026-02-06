@@ -1,0 +1,33 @@
+name: 801036fd67c577a5959561fda2fbf2fb
+fullyQualifiedName: hktest.801036fd67c577a5959561fda2fbf2fb
+owners: []
+duration: 60.0
+users: []
+query: "WITH \"2061f84ba305bd56039e785b3920a99b_rnd\" AS \n(SELECT \"COBE_ETI_1\"\
+  .\"MET_SUB_COVERAGE_CODE\" AS \"MET_SUB_COVERAGE_CODE\" \nFROM \"LANDING\".\"COBE_ETI\"\
+  \ AS \"COBE_ETI_1\" TABLESAMPLE ROW(? ROWS)), \n\"2061f84ba305bd56039e785b3920a99b_sample\"\
+  \ AS \n(SELECT \"2061f84ba305bd56039e785b3920a99b_rnd\".\"MET_SUB_COVERAGE_CODE\"\
+  \ AS \"MET_SUB_COVERAGE_CODE\" \nFROM \"2061f84ba305bd56039e785b3920a99b_rnd\")\n\
+  \ SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"MET_SUB_COVERAGE_CODE\"\
+  ) ASC) AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"MET_SUB_COVERAGE_CODE\"\
+  ) ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"MET_SUB_COVERAGE_CODE\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"2061f84ba305bd56039e785b3920a99b_sample\"\n\
+  \ LIMIT ?"
+checksum: 801036fd67c577a5959561fda2fbf2fb
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7177a74e-7bdc-4ef4-86d3-f41e58404c78
+    type: table
+    name: COBE_ETI
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.COBE_ETI
+    displayName: COBE_ETI
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

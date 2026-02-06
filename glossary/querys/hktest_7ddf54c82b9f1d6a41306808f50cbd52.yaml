@@ -1,0 +1,29 @@
+name: 7ddf54c82b9f1d6a41306808f50cbd52
+fullyQualifiedName: hktest.7ddf54c82b9f1d6a41306808f50cbd52
+owners: []
+duration: 101.0
+users: []
+query: "SELECT avg(LEN(\"CONT_PIP_CALC_METH\")) AS mean, count(\"CONT_PIP_CALC_METH\"\
+  ) AS \"valuesCount\", count(DISTINCT \"CONT_PIP_CALC_METH\") AS \"distinctCount\"\
+  , MIN(LEN(\"CONT_PIP_CALC_METH\")) AS min, MAX(LEN(\"CONT_PIP_CALC_METH\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"CONT_PIP_CALC_METH\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", STDDEV_POP(LEN(\"CONT_PIP_CALC_METH\")) AS stddev, SUM(LEN(\"CONT_PIP_CALC_METH\"\
+  )) AS sum \nFROM \"LANDING\".\"CONT\"\n LIMIT ?"
+checksum: 7ddf54c82b9f1d6a41306808f50cbd52
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: cf2309d8-d7e7-4cd1-b805-b99f1a50f838
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

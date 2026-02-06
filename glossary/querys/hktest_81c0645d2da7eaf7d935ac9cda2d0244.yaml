@@ -1,0 +1,39 @@
+name: 81c0645d2da7eaf7d935ac9cda2d0244
+fullyQualifiedName: hktest.81c0645d2da7eaf7d935ac9cda2d0244
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d78f1c3b-6d80-4343-986b-64af362d9f05\",\"type\":\"table\"\
+        ,\"name\":\"SAMPLE_CUSTOMERS\",\"fullyQualifiedName\":\"hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS\"\
+        ,\"description\":\"<p>This is a test description</p>\",\"displayName\":\"\
+        SAMPLE_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 94.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\"\n LIMIT ?"
+checksum: 81c0645d2da7eaf7d935ac9cda2d0244
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d78f1c3b-6d80-4343-986b-64af362d9f05
+    type: table
+    name: SAMPLE_CUSTOMERS
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS
+    description: <p>This is a test description</p>
+    displayName: SAMPLE_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

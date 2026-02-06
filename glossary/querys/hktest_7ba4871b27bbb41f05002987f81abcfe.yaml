@@ -1,0 +1,34 @@
+name: 7ba4871b27bbb41f05002987f81abcfe
+fullyQualifiedName: hktest.7ba4871b27bbb41f05002987f81abcfe
+owners: []
+duration: 76.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"ALERT_TYPE\") ASC)\
+  \ AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"ALERT_TYPE\") ASC)\
+  \ AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"ALERT_TYPE\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_SCHEMA_CHANGES\"\
+  \n LIMIT ?"
+checksum: 7ba4871b27bbb41f05002987f81abcfe
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 5cb8e589-4ee6-4f02-9217-98ba637ba168
+    type: table
+    name: ALERTS_SCHEMA_CHANGES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_SCHEMA_CHANGES
+    displayName: ALERTS_SCHEMA_CHANGES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

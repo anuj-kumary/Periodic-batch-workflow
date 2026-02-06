@@ -1,0 +1,30 @@
+name: 7d840779b8036455202bcd7eeb6152aa
+fullyQualifiedName: hktest.7d840779b8036455202bcd7eeb6152aa
+owners: []
+duration: 130.0
+users: []
+query: "SELECT avg(LEN(\"MET_SUB_COVERAGE_CODE\")) AS mean, count(\"MET_SUB_COVERAGE_CODE\"\
+  ) AS \"valuesCount\", count(DISTINCT \"MET_SUB_COVERAGE_CODE\") AS \"distinctCount\"\
+  , MIN(LEN(\"MET_SUB_COVERAGE_CODE\")) AS min, MAX(LEN(\"MET_SUB_COVERAGE_CODE\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"MET_SUB_COVERAGE_CODE\" IS ?) THEN ? ELSE ?\
+  \ END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"MET_SUB_COVERAGE_CODE\")) AS stddev,\
+  \ SUM(LEN(\"MET_SUB_COVERAGE_CODE\")) AS sum \nFROM \"LANDING\".\"COBE_ETI\"\n LIMIT\
+  \ ?"
+checksum: 7d840779b8036455202bcd7eeb6152aa
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7177a74e-7bdc-4ef4-86d3-f41e58404c78
+    type: table
+    name: COBE_ETI
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.COBE_ETI
+    displayName: COBE_ETI
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

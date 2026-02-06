@@ -1,0 +1,64 @@
+name: 7d3fa67174f9058fb3e438790bdfd3ce
+fullyQualifiedName: hktest.7d3fa67174f9058fb3e438790bdfd3ce
+owners: []
+duration: 1005.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?)\
+  \ THEN LEN(\"P_COMMENT\") END) AS \"5.000 to 5.654\", count(CASE WHEN (LEN(\"P_COMMENT\"\
+  ) >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"5.654 to 6.308\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"6.308 to 6.962\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"6.962 to 7.615\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"7.615 to 8.269\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"8.269 to 8.923\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"8.923 to 9.577\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"9.577 to 10.231\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"10.231 to 10.885\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"10.885 to 11.538\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"11.538 to 12.192\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"12.192 to 12.846\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"12.846 to 13.500\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"13.500 to 14.154\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"14.154 to 14.808\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"14.808 to 15.462\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"15.462 to 16.115\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"16.115 to 16.769\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"16.769 to 17.423\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"17.423 to 18.077\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"18.077 to 18.731\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"18.731 to 19.385\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"19.385 to 20.038\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"P_COMMENT\") END) AS \"20.038 to 20.692\"\
+  , count(CASE WHEN (LEN(\"P_COMMENT\") >= ? AND LEN(\"P_COMMENT\") < ?) THEN LEN(\"\
+  P_COMMENT\") END) AS \"20.692 to 21.346\", count(CASE WHEN (LEN(\"P_COMMENT\") >=\
+  \ ?) THEN LEN(\"P_COMMENT\") END) AS \"21.346 and up\" \nFROM \"TPCH_SF100\".\"\
+  PART\"\n LIMIT ?"
+checksum: 7d3fa67174f9058fb3e438790bdfd3ce
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d8f39a9b-4f53-4c0d-acb2-d61f40c5b1ea
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

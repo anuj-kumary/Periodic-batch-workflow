@@ -1,0 +1,35 @@
+name: 81e69f097736f1a3619a80f005bf284f
+fullyQualifiedName: hktest.81e69f097736f1a3619a80f005bf284f
+owners: []
+duration: 25.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"METADATA_HASH\")) AS mean, count(\"METADATA_HASH\") AS \"\
+  valuesCount\", count(DISTINCT \"METADATA_HASH\") AS \"distinctCount\", MIN(LEN(\"\
+  METADATA_HASH\")) AS min, MAX(LEN(\"METADATA_HASH\")) AS max, coalesce(SUM(CASE\
+  \ WHEN (\"METADATA_HASH\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  METADATA_HASH\")) AS stddev, SUM(LEN(\"METADATA_HASH\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_EXPOSURES\"\n LIMIT ?"
+checksum: 81e69f097736f1a3619a80f005bf284f
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 63c57e4c-b711-41ac-87e8-2bc0b63008df
+    type: table
+    name: DBT_EXPOSURES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES
+    displayName: DBT_EXPOSURES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

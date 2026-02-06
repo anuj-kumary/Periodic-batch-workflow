@@ -1,0 +1,30 @@
+name: 7edf4a463f906424b99c5912ce339323
+fullyQualifiedName: hktest.7edf4a463f906424b99c5912ce339323
+owners: []
+duration: 74.0
+users: []
+query: "SELECT avg(LEN(\"CONT_INIT_PREM_PAID_DATE\")) AS mean, count(\"CONT_INIT_PREM_PAID_DATE\"\
+  ) AS \"valuesCount\", count(DISTINCT \"CONT_INIT_PREM_PAID_DATE\") AS \"distinctCount\"\
+  , MIN(LEN(\"CONT_INIT_PREM_PAID_DATE\")) AS min, MAX(LEN(\"CONT_INIT_PREM_PAID_DATE\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"CONT_INIT_PREM_PAID_DATE\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"CONT_INIT_PREM_PAID_DATE\")) AS\
+  \ stddev, SUM(LEN(\"CONT_INIT_PREM_PAID_DATE\")) AS sum \nFROM \"LANDING\".\"CONT\"\
+  \n LIMIT ?"
+checksum: 7edf4a463f906424b99c5912ce339323
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: cf2309d8-d7e7-4cd1-b805-b99f1a50f838
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,41 @@
+name: 7ce73fc70d7be123ab8cf76b88a2299d
+fullyQualifiedName: hktest.7ce73fc70d7be123ab8cf76b88a2299d
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"c27ff794-d899-421c-a0d8-d5b1667216d9\",\"type\":\"table\"\
+        ,\"name\":\"SCHEMA_COLUMNS_SNAPSHOT\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SCHEMA_COLUMNS_SNAPSHOT\"\
+        ,\"displayName\":\"SCHEMA_COLUMNS_SNAPSHOT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 41.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT ? AS anon_1, ? AS anon__1, ? AS anon__2 \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"SCHEMA_COLUMNS_SNAPSHOT\"\n LIMIT ?"
+checksum: 7ce73fc70d7be123ab8cf76b88a2299d
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: c27ff794-d899-421c-a0d8-d5b1667216d9
+    type: table
+    name: SCHEMA_COLUMNS_SNAPSHOT
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SCHEMA_COLUMNS_SNAPSHOT
+    displayName: SCHEMA_COLUMNS_SNAPSHOT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

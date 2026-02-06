@@ -1,0 +1,40 @@
+name: 7eb921e2d32c906e42395cb7c0683638
+fullyQualifiedName: hktest.7eb921e2d32c906e42395cb7c0683638
+owners: []
+duration: 141.0
+users: []
+query: "WITH \"9be203cdfef8628939c9942fb61fdae3_rnd\" AS \n(SELECT \"PART_1\".\"P_TYPE\"\
+  \ AS \"P_TYPE\" \nFROM \"TPCH_SF10\".\"PART\" AS \"PART_1\" TABLESAMPLE ROW(? ROWS)),\
+  \ \n\"9be203cdfef8628939c9942fb61fdae3_sample\" AS \n(SELECT \"9be203cdfef8628939c9942fb61fdae3_rnd\"\
+  .\"P_TYPE\" AS \"P_TYPE\" \nFROM \"9be203cdfef8628939c9942fb61fdae3_rnd\")\n SELECT\
+  \ count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"17.000 to 18.086\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"18.086 to 19.172\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  19.172 to 20.257\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"20.257 to 21.343\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"21.343 to\
+  \ 22.429\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"22.429 to 23.515\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"23.515 to 24.600\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ?) THEN LEN(\"P_TYPE\") END) AS \"24.600 and\
+  \ up\" \nFROM \"9be203cdfef8628939c9942fb61fdae3_sample\"\n LIMIT ?"
+checksum: 7eb921e2d32c906e42395cb7c0683638
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: edafde3d-6c1b-476a-9f4c-7225f6146b68
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

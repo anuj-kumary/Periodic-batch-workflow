@@ -1,0 +1,36 @@
+name: 7e39ed0244b305257218a5753fb343fe
+fullyQualifiedName: hktest.7e39ed0244b305257218a5753fb343fe
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"1d22d001-8666-4a58-9a4b-712dc2b06d4c\",\"type\":\"table\"\
+        ,\"name\":\"TEST_TABLE\",\"fullyQualifiedName\":\"hktest.NEW_E2E.PUBLIC.TEST_TABLE\"\
+        ,\"displayName\":\"TEST_TABLE\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 304.0
+users: []
+query: "SELECT \"PUBLIC\".\"TEST_TABLE\".\"ID\" AS \"PUBLIC_TEST_TABLE_ID\", \"PUBLIC\"\
+  .\"TEST_TABLE\".\"NAME\" AS \"PUBLIC_TEST_TABLE_NAME\" \nFROM \"PUBLIC\".\"TEST_TABLE\"\
+  \n LIMIT ?"
+checksum: 7e39ed0244b305257218a5753fb343fe
+queryDate: 1750204800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 1d22d001-8666-4a58-9a4b-712dc2b06d4c
+    type: table
+    name: TEST_TABLE
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.TEST_TABLE
+    displayName: TEST_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

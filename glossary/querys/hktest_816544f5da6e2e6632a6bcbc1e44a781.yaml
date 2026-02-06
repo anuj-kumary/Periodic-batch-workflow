@@ -1,0 +1,35 @@
+name: 816544f5da6e2e6632a6bcbc1e44a781
+fullyQualifiedName: hktest.816544f5da6e2e6632a6bcbc1e44a781
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"e30c77e4-2b5b-4c61-b2a7-0dda3901c07a\",\"type\":\"table\"\
+        ,\"name\":\"T4\",\"fullyQualifiedName\":\"hktest.NEW_E2E.PUBLIC.T4\",\"displayName\"\
+        :\"T4\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 128.0
+users: []
+query: "SELECT \"PUBLIC\".\"T4\".\"ID\" AS \"PUBLIC_T4_ID\", \"PUBLIC\".\"T4\".\"\
+  NAME\" AS \"PUBLIC_T4_NAME\" \nFROM \"PUBLIC\".\"T4\"\n LIMIT ?"
+checksum: 816544f5da6e2e6632a6bcbc1e44a781
+queryDate: 1750204800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e30c77e4-2b5b-4c61-b2a7-0dda3901c07a
+    type: table
+    name: T4
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.T4
+    displayName: T4
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

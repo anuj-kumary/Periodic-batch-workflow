@@ -1,0 +1,28 @@
+name: 80dfb3a6daf8129d115fe41248f1c2a6
+fullyQualifiedName: hktest.80dfb3a6daf8129d115fe41248f1c2a6
+owners: []
+duration: 195.0
+users: []
+query: "SELECT ? AS anon_1, count(\"_FIVETRAN_DELETED\") AS \"valuesCount\", count(DISTINCT\
+  \ \"_FIVETRAN_DELETED\") AS \"distinctCount\", ? AS anon__1, ? AS anon__2, coalesce(SUM(CASE\
+  \ WHEN (\"_FIVETRAN_DELETED\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", ? AS\
+  \ anon__3, ? AS anon__4 \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERLOGIN\"\n LIMIT\
+  \ ?"
+checksum: 80dfb3a6daf8129d115fe41248f1c2a6
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 362a3c96-9793-4426-b8a0-46295ee4a87b
+    type: table
+    name: CUSTOMERLOGIN
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERLOGIN
+    displayName: CUSTOMERLOGIN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

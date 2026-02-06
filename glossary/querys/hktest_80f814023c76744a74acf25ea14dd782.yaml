@@ -1,0 +1,29 @@
+name: 80f814023c76744a74acf25ea14dd782
+fullyQualifiedName: hktest.80f814023c76744a74acf25ea14dd782
+owners: []
+duration: 129.0
+users: []
+query: "SELECT avg(LEN(\"PREM_BNS_IND\")) AS mean, count(\"PREM_BNS_IND\") AS \"valuesCount\"\
+  , count(DISTINCT \"PREM_BNS_IND\") AS \"distinctCount\", MIN(LEN(\"PREM_BNS_IND\"\
+  )) AS min, MAX(LEN(\"PREM_BNS_IND\")) AS max, coalesce(SUM(CASE WHEN (\"PREM_BNS_IND\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"PREM_BNS_IND\"\
+  )) AS stddev, SUM(LEN(\"PREM_BNS_IND\")) AS sum \nFROM \"CURATED\".\"CNTRCT\"\n\
+  \ LIMIT ?"
+checksum: 80f814023c76744a74acf25ea14dd782
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

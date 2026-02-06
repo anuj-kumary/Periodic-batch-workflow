@@ -1,0 +1,37 @@
+name: 816df8c599b8b9c795b53fa4a57244b4
+fullyQualifiedName: hktest.816df8c599b8b9c795b53fa4a57244b4
+owners: []
+duration: 90.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"FACEBOOK_COMPANY_PAGE_C\"\
+  \ AS \"FACEBOOK_COMPANY_PAGE_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT\
+  \ c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"FACEBOOK_COMPANY_PAGE_C\" AS \"FACEBOOK_COMPANY_PAGE_C\"\
+  \ \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n SELECT avg(LEN(\"FACEBOOK_COMPANY_PAGE_C\"\
+  )) AS mean, count(\"FACEBOOK_COMPANY_PAGE_C\") AS \"valuesCount\", count(DISTINCT\
+  \ \"FACEBOOK_COMPANY_PAGE_C\") AS \"distinctCount\", MIN(LEN(\"FACEBOOK_COMPANY_PAGE_C\"\
+  )) AS min, MAX(LEN(\"FACEBOOK_COMPANY_PAGE_C\")) AS max, coalesce(SUM(CASE WHEN\
+  \ (\"FACEBOOK_COMPANY_PAGE_C\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  FACEBOOK_COMPANY_PAGE_C\")) AS stddev, SUM(LEN(\"FACEBOOK_COMPANY_PAGE_C\")) AS\
+  \ sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n LIMIT ?"
+checksum: 816df8c599b8b9c795b53fa4a57244b4
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

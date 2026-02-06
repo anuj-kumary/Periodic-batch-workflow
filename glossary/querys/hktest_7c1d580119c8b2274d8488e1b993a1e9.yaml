@@ -1,0 +1,32 @@
+name: 7c1d580119c8b2274d8488e1b993a1e9
+fullyQualifiedName: hktest.7c1d580119c8b2274d8488e1b993a1e9
+owners: []
+duration: 79.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"SCHEMA_NAME\") AS\
+  \ count_1 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_SCHEMA_CHANGES\" GROUP BY \"\
+  SCHEMA_NAME\" \nHAVING count(\"SCHEMA_NAME\") = ?) AS only_once\n LIMIT ?"
+checksum: 7c1d580119c8b2274d8488e1b993a1e9
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 5cb8e589-4ee6-4f02-9217-98ba637ba168
+    type: table
+    name: ALERTS_SCHEMA_CHANGES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_SCHEMA_CHANGES
+    displayName: ALERTS_SCHEMA_CHANGES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

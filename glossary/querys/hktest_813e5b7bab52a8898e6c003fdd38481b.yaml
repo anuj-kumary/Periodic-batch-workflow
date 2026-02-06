@@ -1,0 +1,26 @@
+name: 813e5b7bab52a8898e6c003fdd38481b
+fullyQualifiedName: hktest.813e5b7bab52a8898e6c003fdd38481b
+owners: []
+duration: 74.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"_FIVETRAN_SYNCED\"\
+  ) AS count_1 \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERLOGIN\" GROUP BY \"_FIVETRAN_SYNCED\"\
+  \ \nHAVING count(\"_FIVETRAN_SYNCED\") = ?) AS only_once\n LIMIT ?"
+checksum: 813e5b7bab52a8898e6c003fdd38481b
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 362a3c96-9793-4426-b8a0-46295ee4a87b
+    type: table
+    name: CUSTOMERLOGIN
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERLOGIN
+    displayName: CUSTOMERLOGIN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,28 @@
+name: 80a78bc37d5c23ede8b986b41cfa219d
+fullyQualifiedName: hktest.80a78bc37d5c23ede8b986b41cfa219d
+owners: []
+duration: 323.0
+users: []
+query: "SELECT avg(\"ADDRESSID\") AS mean, count(\"ADDRESSID\") AS \"valuesCount\"\
+  , count(DISTINCT \"ADDRESSID\") AS \"distinctCount\", MIN(\"ADDRESSID\") AS min,\
+  \ MAX(\"ADDRESSID\") AS max, coalesce(SUM(CASE WHEN (\"ADDRESSID\" IS ?) THEN ?\
+  \ ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"ADDRESSID\") AS stddev, SUM(\"\
+  ADDRESSID\") AS sum \nFROM \"MSSQLBANKING_CUSTOMER\".\"ADDRESS\"\n LIMIT ?"
+checksum: 80a78bc37d5c23ede8b986b41cfa219d
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 47446995-13cc-44ba-aa77-73e9475e23c0
+    type: table
+    name: ADDRESS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.ADDRESS
+    displayName: ADDRESS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

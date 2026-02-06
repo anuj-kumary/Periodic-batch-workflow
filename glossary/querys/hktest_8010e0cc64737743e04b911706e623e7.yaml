@@ -1,0 +1,38 @@
+name: 8010e0cc64737743e04b911706e623e7
+fullyQualifiedName: hktest.8010e0cc64737743e04b911706e623e7
+owners: []
+duration: 73.0
+users: []
+query: "WITH \"1c6e45753e34d042abb1eb906cd3e3b8_rnd\" AS \n(SELECT \"CUSTOMERINFO_1\"\
+  .\"PHONENUMBER\" AS \"PHONENUMBER\" \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERINFO\"\
+  \ AS \"CUSTOMERINFO_1\" TABLESAMPLE ROW(? ROWS)), \n\"1c6e45753e34d042abb1eb906cd3e3b8_sample\"\
+  \ AS \n(SELECT \"1c6e45753e34d042abb1eb906cd3e3b8_rnd\".\"PHONENUMBER\" AS \"PHONENUMBER\"\
+  \ \nFROM \"1c6e45753e34d042abb1eb906cd3e3b8_rnd\")\n SELECT count(CASE WHEN (LEN(\"\
+  PHONENUMBER\") >= ? AND LEN(\"PHONENUMBER\") < ?) THEN LEN(\"PHONENUMBER\") END)\
+  \ AS \"1.000 to 3.172\", count(CASE WHEN (LEN(\"PHONENUMBER\") >= ? AND LEN(\"PHONENUMBER\"\
+  ) < ?) THEN LEN(\"PHONENUMBER\") END) AS \"3.172 to 5.343\", count(CASE WHEN (LEN(\"\
+  PHONENUMBER\") >= ? AND LEN(\"PHONENUMBER\") < ?) THEN LEN(\"PHONENUMBER\") END)\
+  \ AS \"5.343 to 7.515\", count(CASE WHEN (LEN(\"PHONENUMBER\") >= ? AND LEN(\"PHONENUMBER\"\
+  ) < ?) THEN LEN(\"PHONENUMBER\") END) AS \"7.515 to 9.686\", count(CASE WHEN (LEN(\"\
+  PHONENUMBER\") >= ? AND LEN(\"PHONENUMBER\") < ?) THEN LEN(\"PHONENUMBER\") END)\
+  \ AS \"9.686 to 11.858\", count(CASE WHEN (LEN(\"PHONENUMBER\") >= ?) THEN LEN(\"\
+  PHONENUMBER\") END) AS \"11.858 and up\" \nFROM \"1c6e45753e34d042abb1eb906cd3e3b8_sample\"\
+  \n LIMIT ?"
+checksum: 8010e0cc64737743e04b911706e623e7
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e4a80c06-2eeb-4d82-8a71-61523f5b7361
+    type: table
+    name: CUSTOMERINFO
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERINFO
+    displayName: CUSTOMERINFO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
