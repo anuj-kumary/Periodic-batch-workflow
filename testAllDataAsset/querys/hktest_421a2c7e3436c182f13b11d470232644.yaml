@@ -1,0 +1,27 @@
+name: 421a2c7e3436c182f13b11d470232644
+fullyQualifiedName: hktest.421a2c7e3436c182f13b11d470232644
+owners: []
+duration: 153.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONFORMED_UND_ID_NM\"\
+  ) ASC) AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONFORMED_UND_ID_NM\"\
+  ) ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONFORMED_UND_ID_NM\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"CURATED\".\"CNTRCT\"\n LIMIT ?"
+checksum: 421a2c7e3436c182f13b11d470232644
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

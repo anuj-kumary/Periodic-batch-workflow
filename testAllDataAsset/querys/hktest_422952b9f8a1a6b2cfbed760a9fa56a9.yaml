@@ -1,0 +1,40 @@
+name: 422952b9f8a1a6b2cfbed760a9fa56a9
+fullyQualifiedName: hktest.422952b9f8a1a6b2cfbed760a9fa56a9
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 112.0
+users: []
+query: "SELECT ? AS anon_1, count(\"O_ORDERDATE\") AS \"valuesCount\", count(DISTINCT\
+  \ \"O_ORDERDATE\") AS \"distinctCount\", MIN(\"O_ORDERDATE\") AS min, MAX(\"O_ORDERDATE\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"O_ORDERDATE\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", ? AS anon__1, ? AS anon__2 \nFROM \"TPCH_SF1000\".\"ORDERS\"\n\
+  \ LIMIT ?"
+checksum: 422952b9f8a1a6b2cfbed760a9fa56a9
+queryDate: 1752105600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

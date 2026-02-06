@@ -1,0 +1,27 @@
+name: 436a3e8ffd9b64932c90a9d9535f7cf8
+fullyQualifiedName: hktest.436a3e8ffd9b64932c90a9d9535f7cf8
+owners: []
+duration: 95.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"INIT_PREM_PAID_AMT\" ASC)\
+  \ AS median, percentile_cont(?) WITHIN GROUP (ORDER BY \"INIT_PREM_PAID_AMT\" ASC)\
+  \ AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY \"INIT_PREM_PAID_AMT\"\
+  \ ASC) AS \"thirdQuartile\" \nFROM \"CURATED\".\"CNTRCT\"\n LIMIT ?"
+checksum: 436a3e8ffd9b64932c90a9d9535f7cf8
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,22 @@
+name: 40e68478159c52d73d1673358a349d3b
+fullyQualifiedName: hktest.40e68478159c52d73d1673358a349d3b
+owners: []
+duration: 75.0
+users: []
+query: "SELECT avg(LEN(\"STATUS\")) AS mean, count(\"STATUS\") AS \"valuesCount\"\
+  , count(DISTINCT \"STATUS\") AS \"distinctCount\", MAX(LEN(\"STATUS\")) AS max,\
+  \ MIN(LEN(\"STATUS\")) AS min, coalesce(SUM(CASE WHEN (\"STATUS\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"STATUS\")) AS stddev, SUM(LEN(\"\
+  STATUS\")) AS sum \nFROM \"JAFFLE_SHOP\".\"ORDERS\"\n LIMIT ?"
+checksum: 40e68478159c52d73d1673358a349d3b
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

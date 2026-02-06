@@ -1,0 +1,32 @@
+name: 4567a38156e00b3b6da9d184fbb58ab9
+fullyQualifiedName: hktest.4567a38156e00b3b6da9d184fbb58ab9
+owners: []
+duration: 23.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"LOADED_AT_FIELD\"\
+  ) AS count_1 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_SOURCES\" GROUP BY \"LOADED_AT_FIELD\"\
+  \ \nHAVING count(\"LOADED_AT_FIELD\") = ?) AS only_once\n LIMIT ?"
+checksum: 4567a38156e00b3b6da9d184fbb58ab9
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b21cf3a8-f359-4fc0-bb37-9adc6339b7cc
+    type: table
+    name: DBT_SOURCES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SOURCES
+    displayName: DBT_SOURCES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

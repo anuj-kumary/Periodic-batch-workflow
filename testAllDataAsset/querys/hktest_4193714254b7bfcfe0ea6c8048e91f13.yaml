@@ -1,0 +1,29 @@
+name: 4193714254b7bfcfe0ea6c8048e91f13
+fullyQualifiedName: hktest.4193714254b7bfcfe0ea6c8048e91f13
+owners: []
+duration: 153.0
+users: []
+query: "SELECT avg(\"CC_DIVISION\") AS mean, count(\"CC_DIVISION\") AS \"valuesCount\"\
+  , count(DISTINCT \"CC_DIVISION\") AS \"distinctCount\", MIN(\"CC_DIVISION\") AS\
+  \ min, MAX(\"CC_DIVISION\") AS max, coalesce(SUM(CASE WHEN (\"CC_DIVISION\" IS ?)\
+  \ THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CC_DIVISION\") AS stddev,\
+  \ SUM(\"CC_DIVISION\") AS sum \nFROM \"TPCDS_SF100TCL\".\"CALL_CENTER\"\n LIMIT\
+  \ ?"
+checksum: 4193714254b7bfcfe0ea6c8048e91f13
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 531ee58b-4045-4f54-a1b5-eac7668fb709
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

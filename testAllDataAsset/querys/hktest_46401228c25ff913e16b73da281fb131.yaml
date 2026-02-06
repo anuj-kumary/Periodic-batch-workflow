@@ -1,0 +1,35 @@
+name: 46401228c25ff913e16b73da281fb131
+fullyQualifiedName: hktest.46401228c25ff913e16b73da281fb131
+owners: []
+duration: 84.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"ERROR\")) AS mean, count(\"ERROR\") AS \"valuesCount\", count(DISTINCT\
+  \ \"ERROR\") AS \"distinctCount\", MIN(LEN(\"ERROR\")) AS min, MAX(LEN(\"ERROR\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"ERROR\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\", STDDEV_POP(LEN(\"ERROR\")) AS stddev, SUM(LEN(\"ERROR\")) AS sum \n\
+  FROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_DBT_SOURCE_FRESHNESS\"\n LIMIT ?"
+checksum: 46401228c25ff913e16b73da281fb131
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 00848a13-7b46-4d6d-9264-3b7319c0bf5c
+    type: table
+    name: ALERTS_DBT_SOURCE_FRESHNESS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_DBT_SOURCE_FRESHNESS
+    description: <p><strong>ALERTS_DBT_SOURCE_FRESHNESS</strong></p>
+    displayName: ALERTS_DBT_SOURCE_FRESHNESS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

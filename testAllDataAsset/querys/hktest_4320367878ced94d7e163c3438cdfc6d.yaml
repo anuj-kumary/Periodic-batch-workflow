@@ -1,0 +1,30 @@
+name: 4320367878ced94d7e163c3438cdfc6d
+fullyQualifiedName: hktest.4320367878ced94d7e163c3438cdfc6d
+owners: []
+duration: 60.0
+users: []
+query: "WITH \"53f6b3ace3aa40916de167636293ac80_rnd\" AS \n(SELECT \"CONT_1\".\"ZCIHCONT_NUM_COVERAGES\"\
+  \ AS \"ZCIHCONT_NUM_COVERAGES\" \nFROM \"CURATED\".\"CONT\" AS \"CONT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \n\"53f6b3ace3aa40916de167636293ac80_sample\" AS \n(SELECT \"53f6b3ace3aa40916de167636293ac80_rnd\"\
+  .\"ZCIHCONT_NUM_COVERAGES\" AS \"ZCIHCONT_NUM_COVERAGES\" \nFROM \"53f6b3ace3aa40916de167636293ac80_rnd\"\
+  )\n SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"ZCIHCONT_NUM_COVERAGES\"\
+  ) AS count_1 \nFROM \"53f6b3ace3aa40916de167636293ac80_sample\" GROUP BY \"ZCIHCONT_NUM_COVERAGES\"\
+  \ \nHAVING count(\"ZCIHCONT_NUM_COVERAGES\") = ?) AS only_once\n LIMIT ?"
+checksum: 4320367878ced94d7e163c3438cdfc6d
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,27 @@
+name: 45dc6d1f02d51a0c7acb201de59cb872
+fullyQualifiedName: hktest.45dc6d1f02d51a0c7acb201de59cb872
+owners: []
+duration: 25.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"STREET\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"STREET\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"STREET\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"MSSQLBANKING_CUSTOMER\".\"ADDRESS\"\n LIMIT ?"
+checksum: 45dc6d1f02d51a0c7acb201de59cb872
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 47446995-13cc-44ba-aa77-73e9475e23c0
+    type: table
+    name: ADDRESS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.ADDRESS
+    displayName: ADDRESS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

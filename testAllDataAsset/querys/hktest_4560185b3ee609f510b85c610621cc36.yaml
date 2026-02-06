@@ -1,0 +1,39 @@
+name: 4560185b3ee609f510b85c610621cc36
+fullyQualifiedName: hktest.4560185b3ee609f510b85c610621cc36
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"97a1a769-0ed2-4e8f-b352-177a49154924\",\"type\":\"table\"\
+        ,\"name\":\"SUPPLIER\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER\"\
+        ,\"description\":\"Supplier data as defined by TPC-H\",\"displayName\":\"\
+        SUPPLIER\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 80.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"S_NATIONKEY\" ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"S_NATIONKEY\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"S_NATIONKEY\" ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"TPCH_SF1\".\"SUPPLIER\"\n LIMIT ?"
+checksum: 4560185b3ee609f510b85c610621cc36
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 97a1a769-0ed2-4e8f-b352-177a49154924
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

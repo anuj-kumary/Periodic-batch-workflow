@@ -1,0 +1,37 @@
+name: 457d22e5ba9cb960ed971b9ad68b59f9
+fullyQualifiedName: hktest.457d22e5ba9cb960ed971b9ad68b59f9
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d1421023-d4ef-4bea-ad0f-0b3f8a230893\",\"type\":\"table\"\
+        ,\"name\":\"PERSONS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.PERSONS\"\
+        ,\"displayName\":\"PERSONS\",\"deleted\":false}]"
+  previousVersion: 1.6
+  changeSummary: {}
+owners: []
+duration: 170.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"FULL_NAME\") ASC) AS\
+  \ median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"FULL_NAME\") ASC) AS \"\
+  firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"FULL_NAME\") ASC)\
+  \ AS \"thirdQuartile\" \nFROM \"E2E_TEST\".\"PERSONS\"\n LIMIT ?"
+checksum: 457d22e5ba9cb960ed971b9ad68b59f9
+queryDate: 1752537600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d1421023-d4ef-4bea-ad0f-0b3f8a230893
+    type: table
+    name: PERSONS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.PERSONS
+    displayName: PERSONS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

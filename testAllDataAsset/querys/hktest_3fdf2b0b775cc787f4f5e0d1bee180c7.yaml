@@ -1,0 +1,49 @@
+name: 3fdf2b0b775cc787f4f5e0d1bee180c7
+fullyQualifiedName: hktest.3fdf2b0b775cc787f4f5e0d1bee180c7
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"fc52b7d2-1fa5-4e29-a34d-152a038cd51a\",\"type\":\"table\"\
+        ,\"name\":\"LOAN_VW\",\"fullyQualifiedName\":\"hktest.INDIVIDUAL.LANDING.LOAN_VW\"\
+        ,\"displayName\":\"LOAN_VW\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 897.0
+users:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+query: "create or replace view LANDING.LOAN_VW(\n\tLOAN_TABLE_ID,\n\tLOAN_SYSTEM_ID,\n\
+  \tLOAN_EXTRACT_DATE,\n\tLOAN_EXTRACT_TIME,\n\tLOAN_REF_LOOKUP_PREFIX,\n\tLOAN_COMPANY_CODE,\n\
+  \tLOAN_CO_CODE,\n\tLOAN_CO_TYPE,\n\tLOAN_CONTRACT_NO,\n\tLOAN_SEQUENCE,\n\tLOAN_INITIATED_DATE,\n\
+  \tLOAN_NEXT_PAYMENT_DATE,\n\tLOAN_DEFAULTED_DATE,\n\tLOAN_INTEREST_RATE,\n\tLOAN_EARNED_INT_RATE,\n\
+  \tLOAN_PREFERRED_INT_RATE,\n\tLOAN_STATUS,\n\tLOAN_INDICATOR,\n\tLOAN_REPAY_IND,\n\
+  \tLOAN_REPAY_BILL_TYPE,\n\tLOAN_REPAY_BILL_FREQ,\n\tLOAN_ORIGINAL_AMT,\n\tLOAN_PAYOFF,\n\
+  \tZCIHLOAN_LOAN_BALANCE,\n\tLOAN_PAYOFF_INT_DUE,\n\tLOAN_REPAY_AMOUNT,\n\tLOAN_INTEREST_DUE,\n\
+  \tLOAN_NEXT_PAYMENT_AMT,\n\tLOAN_LOAN_PREF_AMT,\n\tLOAN_LOAN_NON_PREF_AMT,\n\tFILE_RUN_ID,\n\
+  \tCREATE_DTTM,\n\tAK_HASH_KY,\n\tFILE_ROW_NUMBER,\n\tSTAGE_FILE_NAME\n) as SELECT\
+  \ * FROM LANDING.LOAN;"
+checksum: 3fdf2b0b775cc787f4f5e0d1bee180c7
+queryDate: 1747872000000
+usedBy:
+  - MAYUR
+tags: []
+queryUsedIn:
+  - id: daeebc3d-e209-4d6c-838c-8a72fc77990f
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

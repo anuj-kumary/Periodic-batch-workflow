@@ -1,0 +1,49 @@
+name: 40edc0c72a12160f0dc842bd24aacaf1
+fullyQualifiedName: hktest.40edc0c72a12160f0dc842bd24aacaf1
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"ae833c0b-5dc6-41d8-ab5d-f0c043a45959\",\"type\":\"table\"\
+        ,\"name\":\"DBT_MODELS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS\"\
+        ,\"displayName\":\"DBT_MODELS\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 438.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "with dbt_artifacts_models as (\n                select\n                 \
+  \ name,\n                  unique_id,\n                  database_name,\n      \
+  \            schema_name,\n                  case when alias is not ? then alias\n\
+  \                  else name end as table_name,\n                  owner as owners,\n\
+  \                  tags,\n                  package_name,\n                  description,\n\
+  \                  materialization,\n                  \n                  \n  \
+  \                  patch_path,\n                  \n                  original_path\
+  \ as full_path,\n                  meta\n                from dbt_db.DBT_SAMPLE_elementary.dbt_models\n\
+  \                \n                  where package_name != ?\n                \n\
+  \              )\n\n             select * from dbt_artifacts_models"
+checksum: 40edc0c72a12160f0dc842bd24aacaf1
+queryDate: 1748563200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: ae833c0b-5dc6-41d8-ab5d-f0c043a45959
+    type: table
+    name: DBT_MODELS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS
+    displayName: DBT_MODELS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

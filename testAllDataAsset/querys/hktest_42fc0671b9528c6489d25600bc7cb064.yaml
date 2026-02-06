@@ -1,0 +1,161 @@
+name: 42fc0671b9528c6489d25600bc7cb064
+fullyQualifiedName: hktest.42fc0671b9528c6489d25600bc7cb064
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"9bc6307f-5d2d-4ecf-b1f5-f791a29d4443\",\"type\":\"table\"\
+        ,\"name\":\"PART\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART\"\
+        ,\"description\":\"Part data as defined by TPC-H\",\"displayName\":\"PART\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 487.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"16.000 to 16.103\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"16.103 to 16.205\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"16.205 to 16.308\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"16.308 to 16.410\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  16.410 to 16.513\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"16.513 to 16.616\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"16.616 to\
+  \ 16.718\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"16.718 to 16.821\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"16.821 to 16.923\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"16.923 to 17.026\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"17.026 to 17.129\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  17.129 to 17.231\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"17.231 to 17.334\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"17.334 to\
+  \ 17.436\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"17.436 to 17.539\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"17.539 to 17.642\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"17.642 to 17.744\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"17.744 to 17.847\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  17.847 to 17.949\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"17.949 to 18.052\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"18.052 to\
+  \ 18.155\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"18.155 to 18.257\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"18.257 to 18.360\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"18.360 to 18.462\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"18.462 to 18.565\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  18.565 to 18.668\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"18.668 to 18.770\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"18.770 to\
+  \ 18.873\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"18.873 to 18.975\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"18.975 to 19.078\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"19.078 to 19.181\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"19.181 to 19.283\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  19.283 to 19.386\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"19.386 to 19.488\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"19.488 to\
+  \ 19.591\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"19.591 to 19.694\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"19.694 to 19.796\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"19.796 to 19.899\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"19.899 to 20.001\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  20.001 to 20.104\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"20.104 to 20.207\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"20.207 to\
+  \ 20.309\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"20.309 to 20.412\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"20.412 to 20.514\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"20.514 to 20.617\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"20.617 to 20.720\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  20.720 to 20.822\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"20.822 to 20.925\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"20.925 to\
+  \ 21.027\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"21.027 to 21.130\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"21.130 to 21.233\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"21.233 to 21.335\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"21.335 to 21.438\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  21.438 to 21.540\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"21.540 to 21.643\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"21.643 to\
+  \ 21.746\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"21.746 to 21.848\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"21.848 to 21.951\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"21.951 to 22.053\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"22.053 to 22.156\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  22.156 to 22.259\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"22.259 to 22.361\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"22.361 to\
+  \ 22.464\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"22.464 to 22.566\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"22.566 to 22.669\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"22.669 to 22.772\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"22.772 to 22.874\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  22.874 to 22.977\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"22.977 to 23.079\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"23.079 to\
+  \ 23.182\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"23.182 to 23.284\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"23.284 to 23.387\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"23.387 to 23.490\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"23.490 to 23.592\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  23.592 to 23.695\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"23.695 to 23.797\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"23.797 to\
+  \ 23.900\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"23.900 to 24.003\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"24.003 to 24.105\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"24.105 to 24.208\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"\
+  P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"24.208 to 24.310\", count(CASE WHEN\
+  \ (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"\
+  24.310 to 24.413\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") <\
+  \ ?) THEN LEN(\"P_TYPE\") END) AS \"24.413 to 24.516\", count(CASE WHEN (LEN(\"\
+  P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"24.516 to\
+  \ 24.618\", count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN\
+  \ LEN(\"P_TYPE\") END) AS \"24.618 to 24.721\", count(CASE WHEN (LEN(\"P_TYPE\"\
+  ) >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\") END) AS \"24.721 to 24.823\"\
+  , count(CASE WHEN (LEN(\"P_TYPE\") >= ? AND LEN(\"P_TYPE\") < ?) THEN LEN(\"P_TYPE\"\
+  ) END) AS \"24.823 to 24.926\", count(CASE WHEN (LEN(\"P_TYPE\") >= ?) THEN LEN(\"\
+  P_TYPE\") END) AS \"24.926 and up\" \nFROM \"TPCH_SF1\".\"PART\"\n LIMIT ?"
+checksum: 42fc0671b9528c6489d25600bc7cb064
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9bc6307f-5d2d-4ecf-b1f5-f791a29d4443
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

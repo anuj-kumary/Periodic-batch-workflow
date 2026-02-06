@@ -1,0 +1,34 @@
+name: 4446f9f554433fdb52a4431d5e7dfb57
+fullyQualifiedName: hktest.4446f9f554433fdb52a4431d5e7dfb57
+owners: []
+duration: 268.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"EMAIL\")) AS mean, count(\"EMAIL\") AS \"valuesCount\", count(DISTINCT\
+  \ \"EMAIL\") AS \"distinctCount\", MIN(LEN(\"EMAIL\")) AS min, MAX(LEN(\"EMAIL\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"EMAIL\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\", STDDEV_POP(LEN(\"EMAIL\")) AS stddev, SUM(LEN(\"EMAIL\")) AS sum \n\
+  FROM \"DBT_SAMPLE\".\"SAMPLE_TABLE\"\n LIMIT ?"
+checksum: 4446f9f554433fdb52a4431d5e7dfb57
+queryDate: 1748563200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 27d28fd3-67f5-4719-8ec4-6975d578a5c1
+    type: table
+    name: SAMPLE_TABLE
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE
+    displayName: SAMPLE_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

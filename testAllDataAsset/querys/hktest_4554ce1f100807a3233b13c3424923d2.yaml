@@ -1,0 +1,49 @@
+name: 4554ce1f100807a3233b13c3424923d2
+fullyQualifiedName: hktest.4554ce1f100807a3233b13c3424923d2
+owners: []
+duration: 166.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\"\
+  ) < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"23.000 to 27.801\", count(CASE WHEN\
+  \ (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\") < ?) THEN LEN(\"ORIGINAL_PATH\"\
+  ) END) AS \"27.801 to 32.601\", count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND\
+  \ LEN(\"ORIGINAL_PATH\") < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"32.601 to 37.402\"\
+  , count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\") < ?) THEN\
+  \ LEN(\"ORIGINAL_PATH\") END) AS \"37.402 to 42.202\", count(CASE WHEN (LEN(\"ORIGINAL_PATH\"\
+  ) >= ? AND LEN(\"ORIGINAL_PATH\") < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"42.202\
+  \ to 47.003\", count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\"\
+  ) < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"47.003 to 51.803\", count(CASE WHEN\
+  \ (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\") < ?) THEN LEN(\"ORIGINAL_PATH\"\
+  ) END) AS \"51.803 to 56.604\", count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND\
+  \ LEN(\"ORIGINAL_PATH\") < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"56.604 to 61.404\"\
+  , count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\") < ?) THEN\
+  \ LEN(\"ORIGINAL_PATH\") END) AS \"61.404 to 66.205\", count(CASE WHEN (LEN(\"ORIGINAL_PATH\"\
+  ) >= ? AND LEN(\"ORIGINAL_PATH\") < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"66.205\
+  \ to 71.005\", count(CASE WHEN (LEN(\"ORIGINAL_PATH\") >= ? AND LEN(\"ORIGINAL_PATH\"\
+  ) < ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"71.005 to 75.806\", count(CASE WHEN\
+  \ (LEN(\"ORIGINAL_PATH\") >= ?) THEN LEN(\"ORIGINAL_PATH\") END) AS \"75.806 and\
+  \ up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"MODEL_RUN_RESULTS\"\n LIMIT ?"
+checksum: 4554ce1f100807a3233b13c3424923d2
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

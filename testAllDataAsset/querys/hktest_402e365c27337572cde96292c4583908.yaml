@@ -1,0 +1,30 @@
+name: 402e365c27337572cde96292c4583908
+fullyQualifiedName: hktest.402e365c27337572cde96292c4583908
+owners: []
+duration: 207.0
+users: []
+query: "WITH d6872606714d25fbbda7b70a0d67ebf8_rnd AS \n(SELECT \"SUPPLIER_1\".\"S_PHONE\"\
+  \ AS \"S_PHONE\" \nFROM \"TPCH_SF10\".\"SUPPLIER\" AS \"SUPPLIER_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nd6872606714d25fbbda7b70a0d67ebf8_sample AS \n(SELECT d6872606714d25fbbda7b70a0d67ebf8_rnd.\"\
+  S_PHONE\" AS \"S_PHONE\" \nFROM d6872606714d25fbbda7b70a0d67ebf8_rnd)\n SELECT count(*)\
+  \ AS \"uniqueCount\" \nFROM (SELECT count(\"S_PHONE\") AS count_1 \nFROM d6872606714d25fbbda7b70a0d67ebf8_sample\
+  \ GROUP BY \"S_PHONE\" \nHAVING count(\"S_PHONE\") = ?) AS only_once\n LIMIT ?"
+checksum: 402e365c27337572cde96292c4583908
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: ceb86caf-d57c-49fb-8952-eac20aa5e03a
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

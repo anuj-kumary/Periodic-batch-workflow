@@ -1,0 +1,33 @@
+name: 449fb304adf546e7998e6b6a9a2f19eb
+fullyQualifiedName: hktest.449fb304adf546e7998e6b6a9a2f19eb
+owners: []
+duration: 727.0
+users: []
+query: "WITH \"534e5b12fce522f81d9c91fd466b84a9_rnd\" AS \n(SELECT \"STORE_SALES_1\"\
+  .\"SS_HDEMO_SK\" AS \"SS_HDEMO_SK\" \nFROM \"TPCDS_SF10TCL\".\"STORE_SALES\" AS\
+  \ \"STORE_SALES_1\" TABLESAMPLE ROW(? ROWS)), \n\"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \ AS \n(SELECT \"534e5b12fce522f81d9c91fd466b84a9_rnd\".\"SS_HDEMO_SK\" AS \"SS_HDEMO_SK\"\
+  \ \nFROM \"534e5b12fce522f81d9c91fd466b84a9_rnd\")\n SELECT avg(\"SS_HDEMO_SK\"\
+  ) AS mean, count(\"SS_HDEMO_SK\") AS \"valuesCount\", count(DISTINCT \"SS_HDEMO_SK\"\
+  ) AS \"distinctCount\", MIN(\"SS_HDEMO_SK\") AS min, MAX(\"SS_HDEMO_SK\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"SS_HDEMO_SK\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"SS_HDEMO_SK\") AS stddev, SUM(\"SS_HDEMO_SK\") AS sum \nFROM \"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \n LIMIT ?"
+checksum: 449fb304adf546e7998e6b6a9a2f19eb
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 56c7b35b-10b9-406e-8fb5-9324de94e5a1
+    type: table
+    name: STORE_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE_SALES
+    displayName: STORE_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

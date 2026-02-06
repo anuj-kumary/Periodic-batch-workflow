@@ -1,0 +1,33 @@
+name: 468c59ac9599393adbe2f4c1f2aa20d2
+fullyQualifiedName: hktest.468c59ac9599393adbe2f4c1f2aa20d2
+owners: []
+duration: 402.0
+users: []
+query: "WITH d6872606714d25fbbda7b70a0d67ebf8_rnd AS \n(SELECT \"SUPPLIER_1\".\"S_NAME\"\
+  \ AS \"S_NAME\" \nFROM \"TPCH_SF100\".\"SUPPLIER\" AS \"SUPPLIER_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nd6872606714d25fbbda7b70a0d67ebf8_sample AS \n(SELECT d6872606714d25fbbda7b70a0d67ebf8_rnd.\"\
+  S_NAME\" AS \"S_NAME\" \nFROM d6872606714d25fbbda7b70a0d67ebf8_rnd)\n SELECT avg(LEN(\"\
+  S_NAME\")) AS mean, count(\"S_NAME\") AS \"valuesCount\", count(DISTINCT \"S_NAME\"\
+  ) AS \"distinctCount\", MIN(LEN(\"S_NAME\")) AS min, MAX(LEN(\"S_NAME\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"S_NAME\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(LEN(\"S_NAME\")) AS stddev, SUM(LEN(\"S_NAME\")) AS sum \nFROM d6872606714d25fbbda7b70a0d67ebf8_sample\n\
+  \ LIMIT ?"
+checksum: 468c59ac9599393adbe2f4c1f2aa20d2
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b34210ba-5818-4ae4-95a1-4f393705da90
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

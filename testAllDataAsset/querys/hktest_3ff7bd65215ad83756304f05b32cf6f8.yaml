@@ -1,0 +1,20 @@
+name: 3ff7bd65215ad83756304f05b32cf6f8
+fullyQualifiedName: hktest.3ff7bd65215ad83756304f05b32cf6f8
+owners: []
+duration: 69.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CUSTOMER_LIFETIME_VALUE\"\
+  ) AS count_1 \nFROM \"JAFFLE_SHOP\".\"CUSTOMERS\" GROUP BY \"CUSTOMER_LIFETIME_VALUE\"\
+  \ \nHAVING count(\"CUSTOMER_LIFETIME_VALUE\") = ?) AS only_once\n LIMIT ?"
+checksum: 3ff7bd65215ad83756304f05b32cf6f8
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

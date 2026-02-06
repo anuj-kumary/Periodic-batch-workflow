@@ -1,0 +1,35 @@
+name: 4656bccb92327a0b1a56085b02552938
+fullyQualifiedName: hktest.4656bccb92327a0b1a56085b02552938
+owners: []
+duration: 58.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"PREVIOUS_MAIN_NSC_STORY_C\"\
+  \ AS \"PREVIOUS_MAIN_NSC_STORY_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT\
+  \ c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"PREVIOUS_MAIN_NSC_STORY_C\" AS \"PREVIOUS_MAIN_NSC_STORY_C\"\
+  \ \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"PREVIOUS_MAIN_NSC_STORY_C\" ASC) AS median, percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"PREVIOUS_MAIN_NSC_STORY_C\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"PREVIOUS_MAIN_NSC_STORY_C\" ASC) AS\
+  \ \"thirdQuartile\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n LIMIT ?"
+checksum: 4656bccb92327a0b1a56085b02552938
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,38 @@
+name: 40e0d12049daba36dffcf683624b8bab
+fullyQualifiedName: hktest.40e0d12049daba36dffcf683624b8bab
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"6f76a5d5-3b77-43b8-9af6-d88def60b362\",\"type\":\"table\"\
+        ,\"name\":\"BANKACCOUNT\",\"fullyQualifiedName\":\"hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.BANKACCOUNT\"\
+        ,\"displayName\":\"BANKACCOUNT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 67.0
+users: []
+query: "SELECT avg(\"CUSTOMERID\") AS mean, count(\"CUSTOMERID\") AS \"valuesCount\"\
+  , count(DISTINCT \"CUSTOMERID\") AS \"distinctCount\", MIN(\"CUSTOMERID\") AS min,\
+  \ MAX(\"CUSTOMERID\") AS max, coalesce(SUM(CASE WHEN (\"CUSTOMERID\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CUSTOMERID\") AS stddev, SUM(\"\
+  CUSTOMERID\") AS sum \nFROM \"MSSQLBANKING_ACCOUNT\".\"BANKACCOUNT\"\n LIMIT ?"
+checksum: 40e0d12049daba36dffcf683624b8bab
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6f76a5d5-3b77-43b8-9af6-d88def60b362
+    type: table
+    name: BANKACCOUNT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.BANKACCOUNT
+    displayName: BANKACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,45 @@
+name: 46b5afe5f96edf0dfcc5d0e122cf19c6
+fullyQualifiedName: hktest.46b5afe5f96edf0dfcc5d0e122cf19c6
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"7459035c-b190-4009-a3ff-280afbf84319\",\"type\":\"table\"\
+        ,\"name\":\"ALERTS_ANOMALY_DETECTION\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_ANOMALY_DETECTION\"\
+        ,\"displayName\":\"ALERTS_ANOMALY_DETECTION\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 79.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"COLUMN_NAME\")) AS mean, count(\"COLUMN_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"COLUMN_NAME\") AS \"distinctCount\", MIN(LEN(\"COLUMN_NAME\"\
+  )) AS min, MAX(LEN(\"COLUMN_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"COLUMN_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"COLUMN_NAME\"\
+  )) AS stddev, SUM(LEN(\"COLUMN_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"ALERTS_ANOMALY_DETECTION\"\n LIMIT ?"
+checksum: 46b5afe5f96edf0dfcc5d0e122cf19c6
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 7459035c-b190-4009-a3ff-280afbf84319
+    type: table
+    name: ALERTS_ANOMALY_DETECTION
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_ANOMALY_DETECTION
+    displayName: ALERTS_ANOMALY_DETECTION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

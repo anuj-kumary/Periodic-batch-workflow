@@ -1,0 +1,32 @@
+name: 474aeff774265437565035d7aa4c87bc
+fullyQualifiedName: hktest.474aeff774265437565035d7aa4c87bc
+owners: []
+duration: 98.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"COMPILED_CODE\"\
+  ) AS count_1 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"MODEL_RUN_RESULTS\" GROUP BY \"\
+  COMPILED_CODE\" \nHAVING count(\"COMPILED_CODE\") = ?) AS only_once\n LIMIT ?"
+checksum: 474aeff774265437565035d7aa4c87bc
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
