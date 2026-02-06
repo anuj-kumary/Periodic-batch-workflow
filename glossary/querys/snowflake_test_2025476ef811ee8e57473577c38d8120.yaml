@@ -1,0 +1,43 @@
+name: 2025476ef811ee8e57473577c38d8120
+fullyQualifiedName: snowflake_test.2025476ef811ee8e57473577c38d8120
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 111.0
+users: []
+query: "WITH \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\" AS \n(SELECT \"CALL_CENTER_1\"\
+  .\"CC_COUNTY\" AS \"CC_COUNTY\" \nFROM \"TPCDS_SF100TCL\".\"CALL_CENTER\" AS \"\
+  CALL_CENTER_1\" TABLESAMPLE bernoulli(?)), \n\"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\
+  \ AS \n(SELECT \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\".\"CC_COUNTY\" AS \"CC_COUNTY\"\
+  \ \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\")\n SELECT count(CASE WHEN (LEN(\"\
+  CC_COUNTY\") >= ? AND LEN(\"CC_COUNTY\") < ?) THEN LEN(\"CC_COUNTY\") END) AS \"\
+  11.000 to 13.554\", count(CASE WHEN (LEN(\"CC_COUNTY\") >= ? AND LEN(\"CC_COUNTY\"\
+  ) < ?) THEN LEN(\"CC_COUNTY\") END) AS \"13.554 to 16.109\", count(CASE WHEN (LEN(\"\
+  CC_COUNTY\") >= ? AND LEN(\"CC_COUNTY\") < ?) THEN LEN(\"CC_COUNTY\") END) AS \"\
+  16.109 to 18.663\", count(CASE WHEN (LEN(\"CC_COUNTY\") >= ?) THEN LEN(\"CC_COUNTY\"\
+  ) END) AS \"18.663 and up\" \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\n\
+  \ LIMIT ?"
+checksum: 2025476ef811ee8e57473577c38d8120
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f6f32e42-c493-462c-8db5-7d565fc8c892
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test

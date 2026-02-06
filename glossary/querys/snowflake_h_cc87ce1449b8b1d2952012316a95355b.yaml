@@ -1,0 +1,41 @@
+name: cc87ce1449b8b1d2952012316a95355b
+fullyQualifiedName: snowflake_h.cc87ce1449b8b1d2952012316a95355b
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 541341.0
+users: []
+query: "WITH \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\" AS \n(SELECT \"CALL_CENTER_1\"\
+  .\"CC_COMPANY\" AS \"CC_COMPANY\" \nFROM \"TPCDS_SF10TCL\".\"CALL_CENTER\" AS \"\
+  CALL_CENTER_1\" TABLESAMPLE bernoulli(?)), \n\"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\
+  \ AS \n(SELECT \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\".\"CC_COMPANY\" AS \"CC_COMPANY\"\
+  \ \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\")\n SELECT avg(\"CC_COMPANY\")\
+  \ AS mean, count(\"CC_COMPANY\") AS \"valuesCount\", count(DISTINCT \"CC_COMPANY\"\
+  ) AS \"distinctCount\", MIN(\"CC_COMPANY\") AS min, MAX(\"CC_COMPANY\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"CC_COMPANY\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"CC_COMPANY\") AS stddev, SUM(\"CC_COMPANY\") AS sum \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\
+  \n LIMIT ?"
+checksum: cc87ce1449b8b1d2952012316a95355b
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8f88fae3-bb61-4f94-965c-92c9c6fa423f
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

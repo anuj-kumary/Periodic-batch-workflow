@@ -1,0 +1,46 @@
+name: deae7f4cbd5cfecb23a39b79f0983ab5
+fullyQualifiedName: snowflake_h.deae7f4cbd5cfecb23a39b79f0983ab5
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.7
+owners: []
+duration: 37.0
+users: []
+query: "SELECT \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_WAREHOUSE_SK\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_WAREHOUSE_SK\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_WAREHOUSE_ID\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_WAREHOUSE_ID\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_WAREHOUSE_NAME\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_WAREHOUSE_NAME\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_WAREHOUSE_SQ_FT\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_WAREHOUSE_SQ_FT\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_STREET_NUMBER\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_STREET_NUMBER\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_STREET_NAME\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_STREET_NAME\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_STREET_TYPE\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_STREET_TYPE\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_SUITE_NUMBER\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_SUITE_NUMBER\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_CITY\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_CITY\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_COUNTY\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_COUNTY\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_STATE\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_STATE\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_ZIP\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_ZIP\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_COUNTRY\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_COUNTRY\"\
+  , \"TPCDS_SF10TCL\".\"WAREHOUSE\".\"W_GMT_OFFSET\" AS \"TPCDS_SF10TCL_WAREHOUSE_W_GMT_OFFSET\"\
+  \ \nFROM \"TPCDS_SF10TCL\".\"WAREHOUSE\"\n LIMIT ?"
+checksum: deae7f4cbd5cfecb23a39b79f0983ab5
+queryDate: 1740700800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 16740465-be14-4bb8-b45f-b7416d9b2d30
+    type: table
+    name: WAREHOUSE
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WAREHOUSE
+    displayName: WAREHOUSE
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

@@ -1,0 +1,38 @@
+name: 110e97f8c8c799cf428685e8c041cdac
+fullyQualifiedName: snowflake_test.110e97f8c8c799cf428685e8c041cdac
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 78.0
+users: []
+query: "WITH \"8924b4b411990bf5c24320a9ab1eba23_rnd\" AS \n(SELECT \"CATALOG_PAGE_1\"\
+  .\"CP_TYPE\" AS \"CP_TYPE\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_PAGE\" AS \"CATALOG_PAGE_1\"\
+  \ TABLESAMPLE bernoulli(?)), \n\"8924b4b411990bf5c24320a9ab1eba23_sample\" AS \n\
+  (SELECT \"8924b4b411990bf5c24320a9ab1eba23_rnd\".\"CP_TYPE\" AS \"CP_TYPE\" \nFROM\
+  \ \"8924b4b411990bf5c24320a9ab1eba23_rnd\")\n SELECT count(*) AS \"uniqueCount\"\
+  \ \nFROM (SELECT count(\"CP_TYPE\") AS count_1 \nFROM \"8924b4b411990bf5c24320a9ab1eba23_sample\"\
+  \ GROUP BY \"CP_TYPE\" \nHAVING count(\"CP_TYPE\") = ?) AS only_once\n LIMIT ?"
+checksum: 110e97f8c8c799cf428685e8c041cdac
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3ab7b913-1d09-453e-b61f-bc057856f791
+    type: table
+    name: CATALOG_PAGE
+    fullyQualifiedName: snowflake_test.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_PAGE
+    displayName: CATALOG_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: 6d146814-0a2b-4296-ba8d-05f0c5888c40
+  type: databaseService
+  name: snowflake_test
+  fullyQualifiedName: snowflake_test
