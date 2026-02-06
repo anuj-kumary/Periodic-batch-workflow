@@ -1,0 +1,108 @@
+name: ORDERS
+fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.ORDERS
+description: <p>I am updating <strong>this table!!XX</strong></p><p></p><pre><code>look
+  at this code!</code></pre><p></p>
+tableType: Regular
+columns:
+  - name: ORDER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.ORDERS.ORDER_ID
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: USER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.ORDERS.USER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDER_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.ORDERS.ORDER_DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AMOUNT
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 10
+    scale: 2
+    dataTypeDisplay: "number(10,2)"
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.ORDERS.AMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 23505ab1-f25b-4cd2-b50e-3e10ae5e7586
+  type: databaseSchema
+  name: PUBLIC
+  fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC
+  displayName: PUBLIC
+  deleted: false
+database:
+  id: 851dfbfd-5214-4c53-b55a-3ff470b6aa56
+  type: database
+  name: USER_DATA
+  fullyQualifiedName: snowflake-reverse-metadata.USER_DATA
+  displayName: USER_DATA
+  deleted: false
+service:
+  id: c1041734-d004-42bd-9c5b-1aab726a8ee6
+  type: databaseService
+  name: snowflake-reverse-metadata
+  fullyQualifiedName: snowflake-reverse-metadata
+  description: ""
+  displayName: snowflake-reverse-metadata
+  deleted: false
+serviceType: Snowflake
+tags:
+  - tagFQN: STAGE.production
+    name: production
+    description: SNOWFLAKE TAG VALUE
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: description
+      oldValue: <p>I am updating <strong>this table!!</strong></p><p></p><pre><code>look
+        at this code!</code></pre><p></p>
+      newValue: <p>I am updating <strong>this table!!XX</strong></p><p></p><pre><code>look
+        at this code!</code></pre><p></p>
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: imri.paran
+      changedAt: 1744266436495
+sourceUrl: https://app.snowflake.com/pkfkglv/of58949/#/data/databases/USER_DATA/schemas/PUBLIC/table/ORDERS
+domains: []
+dataProducts: []
+sourceHash: 90fd2a2c1384df19e679c4f2f28a66a5
+processedLineage: false
+entityStatus: Approved

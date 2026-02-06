@@ -1,0 +1,143 @@
+name: OBJECT_PRIVILEGES
+fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES
+tableType: View
+columns:
+  - name: GRANTOR
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Role who granted the privilege
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.GRANTOR
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: GRANTEE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Object to which the privilege is granted
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.GRANTEE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: GRANTED_TO
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Object kind on which the privilege is granted
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.GRANTED_TO
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OBJECT_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database containing the object on which the privilege is granted
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.OBJECT_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OBJECT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema containing the object on which the privilege is granted
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.OBJECT_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OBJECT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the object on which the privilege is granted
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.OBJECT_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OBJECT_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Type of the object on which the privilege is granted
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.OBJECT_TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PRIVILEGE_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Type of the granted privilege
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.PRIVILEGE_TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_GRANTABLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Whether the privilege was granted WITH GRANT OPTION
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.IS_GRANTABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the privilege
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.OBJECT_PRIVILEGES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2578dc48-ad43-4c1c-9265-b3f7d051d5b5
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: c58e03f9-2043-4bb9-b6c2-c832f4d9725f
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: ddfc267a-864a-44e0-b26c-82033d85723d
+  type: databaseService
+  name: snowflake
+  fullyQualifiedName: snowflake
+  displayName: snowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/pnnjztq/lt39982/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/OBJECT_PRIVILEGES
+domains: []
+dataProducts: []
+sourceHash: 42de3b138eac4a40c856d3e8aae2527c
+processedLineage: false
+entityStatus: Approved

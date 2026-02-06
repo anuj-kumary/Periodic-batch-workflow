@@ -1,0 +1,143 @@
+name: GIT_REPOSITORIES
+fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES
+tableType: View
+columns:
+  - name: GIT_REPOSITORY_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database that the git repository belongs to
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.GIT_REPOSITORY_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: GIT_REPOSITORY_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema that the git repository belongs to
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.GIT_REPOSITORY_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: GIT_REPOSITORY_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.GIT_REPOSITORY_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: GIT_REPOSITORY_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.GIT_REPOSITORY_OWNER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORIGIN
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Origin of the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.ORIGIN
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: API_INTEGRATION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the api integration used by the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.API_INTEGRATION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: GIT_CREDENTIALS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the secret used by the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.GIT_CREDENTIALS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last altered time of the git repository
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.GIT_REPOSITORIES.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2578dc48-ad43-4c1c-9265-b3f7d051d5b5
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: c58e03f9-2043-4bb9-b6c2-c832f4d9725f
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: ddfc267a-864a-44e0-b26c-82033d85723d
+  type: databaseService
+  name: snowflake
+  fullyQualifiedName: snowflake
+  displayName: snowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/pnnjztq/lt39982/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/GIT_REPOSITORIES
+domains: []
+dataProducts: []
+sourceHash: 42b0fb489c075049fcc3a84981373780
+processedLineage: false
+entityStatus: Approved

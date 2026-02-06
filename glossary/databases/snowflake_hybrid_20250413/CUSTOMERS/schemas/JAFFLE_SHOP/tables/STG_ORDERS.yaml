@@ -1,0 +1,95 @@
+name: STG_ORDERS
+fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.STG_ORDERS
+tableType: View
+columns:
+  - name: ORDER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.STG_ORDERS.ORDER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.STG_ORDERS.CUSTOMER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDER_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.STG_ORDERS.ORDER_DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATUS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.STG_ORDERS.STATUS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: c82c28c0-7d88-473f-865a-9b404591caed
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 918a7573-85ac-4aa8-ab79-abe1be6e9028
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 562edf42-13bc-4b51-8d46-e4b4f3263cc2
+  type: databaseService
+  name: snowflake hybrid 20250413
+  fullyQualifiedName: snowflake hybrid 20250413
+  description: ""
+  displayName: snowflake hybrid 20250413
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"created\":{\"timestamp\":1744502400000,\"accessedByAProcess\"\
+        :\"TESTOPENMETADATA\"}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/view/STG_ORDERS
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1744502400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: 894566eb73cc5e96c84f189fea598e7c
+processedLineage: false
+entityStatus: Approved
