@@ -1,0 +1,31 @@
+name: dev
+fullyQualifiedName: Hybrid Runner Redshift.dev
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 960bf455-a898-43ad-b514-6f31e5e00427
+  type: databaseService
+  name: Hybrid Runner Redshift
+  fullyQualifiedName: Hybrid Runner Redshift
+  description: ""
+  displayName: Hybrid Runner Redshift
+  deleted: false
+serviceType: Redshift
+databaseSchemas:
+  - id: d5c52629-3b09-4165-80e1-888ee03db359
+    type: databaseSchema
+    name: redshift_connector_testing
+    fullyQualifiedName: Hybrid Runner Redshift.dev.redshift_connector_testing
+    displayName: redshift_connector_testing
+    deleted: false
+  - id: 6c20f5c5-1f17-4f59-88b5-460709e250f5
+    type: databaseSchema
+    name: sample_data
+    fullyQualifiedName: Hybrid Runner Redshift.dev.sample_data
+    displayName: sample_data
+    deleted: false
+default: false
+domains: []
+sourceHash: 6a2a49f6b000b6651791bde735d28c25
+entityStatus: Unprocessed

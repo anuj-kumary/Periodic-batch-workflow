@@ -1,0 +1,32 @@
+name: BRONZE
+fullyQualifiedName: hk_snow.BRONZE
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 89ad4fb4-b82f-407d-846a-6669b40ab0d6
+  type: databaseService
+  name: hk_snow
+  fullyQualifiedName: hk_snow
+  description: ""
+  displayName: hk_snow
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 582ee80a-f0e0-407e-82b5-ce4d230fe121
+    type: databaseSchema
+    name: B_SCHEMA
+    fullyQualifiedName: hk_snow.BRONZE.B_SCHEMA
+    displayName: B_SCHEMA
+    deleted: false
+  - id: c6d96d57-5baf-42db-912e-d66f9c8a1afb
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hk_snow.BRONZE.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/rmpftce/eh21932/#/data/databases/BRONZE
+domains: []
+sourceHash: 74a4b54b0383131e3e77e2824939f692
+entityStatus: Unprocessed

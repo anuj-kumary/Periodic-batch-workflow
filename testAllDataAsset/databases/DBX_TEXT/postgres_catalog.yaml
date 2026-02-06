@@ -1,0 +1,80 @@
+name: postgres_catalog
+fullyQualifiedName: DBX_TEXT.postgres_catalog
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: c0ae8caf-1aa4-4b8c-9cf2-ceec200d00bc
+    type: databaseSchema
+    name: dbt_postgres
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.dbt_postgres
+    displayName: dbt_postgres
+    deleted: false
+  - id: 132bf5f2-a030-4f17-afca-d6eb94c9a6c0
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: ce4b7e44-99af-46f8-8662-6838f9d2d22a
+    type: databaseSchema
+    name: pg_catalog
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.pg_catalog
+    displayName: pg_catalog
+    deleted: false
+  - id: 5e949967-ab05-496b-ba6b-f183a80a0fe0
+    type: databaseSchema
+    name: production
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.production
+    displayName: production
+    deleted: false
+  - id: 2a5e3841-3034-411b-8ac7-3492722409b9
+    type: databaseSchema
+    name: public
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.public
+    displayName: public
+    deleted: false
+  - id: 5f1f1e13-ac26-46f3-a40c-99c5624e6403
+    type: databaseSchema
+    name: sales
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.sales
+    displayName: sales
+    deleted: false
+  - id: 5bf9500f-a35e-45c8-b5d3-d276561ac8dc
+    type: databaseSchema
+    name: sdoh_cms_dual_eligible_enrollment
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.sdoh_cms_dual_eligible_enrollment
+    displayName: sdoh_cms_dual_eligible_enrollment
+    deleted: false
+  - id: 4de67d4a-a643-4cdb-8bc9-4feda331656b
+    type: databaseSchema
+    name: snowflake_db_test
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.snowflake_db_test
+    description: <p>test desc</p>
+    displayName: snowflake_db_test
+    deleted: false
+  - id: 672e4198-00ea-45ea-9011-1bb572113b2c
+    type: databaseSchema
+    name: stackoverflow
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.stackoverflow
+    displayName: stackoverflow
+    deleted: false
+  - id: 59c9694d-b177-4f6e-b897-da614e05a602
+    type: databaseSchema
+    name: test_schema
+    fullyQualifiedName: DBX_TEXT.postgres_catalog.test_schema
+    displayName: test_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: 852ea3853c970681cb39f1756743dd95
+entityStatus: Approved

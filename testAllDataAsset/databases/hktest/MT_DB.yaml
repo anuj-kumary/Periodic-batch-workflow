@@ -1,0 +1,81 @@
+name: MT_DB
+fullyQualifiedName: hktest.MT_DB
+description: This is a testing database
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 34cc360e-3734-44de-9017-d61a8157cef4
+    type: databaseSchema
+    name: LINEAGE_FILTER_SCHEMA
+    fullyQualifiedName: hktest.MT_DB.LINEAGE_FILTER_SCHEMA
+    displayName: LINEAGE_FILTER_SCHEMA
+    deleted: false
+  - id: 86d4405d-583f-4b7b-90a5-a798114d45ad
+    type: databaseSchema
+    name: LINEAGE_SCHEMA
+    fullyQualifiedName: hktest.MT_DB.LINEAGE_SCHEMA
+    displayName: LINEAGE_SCHEMA
+    deleted: false
+  - id: 65b04d9b-09e8-4c46-a3b9-04c5d558cc96
+    type: databaseSchema
+    name: MT_SCHEMA
+    fullyQualifiedName: hktest.MT_DB.MT_SCHEMA
+    displayName: MT_SCHEMA
+    deleted: false
+  - id: cc2d5029-d0c0-473c-80fb-1ce38ab627eb
+    type: databaseSchema
+    name: OWNERS_TEST
+    fullyQualifiedName: hktest.MT_DB.OWNERS_TEST
+    displayName: OWNERS_TEST
+    deleted: false
+  - id: 643af446-f258-46dc-a75b-23418973e73b
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.MT_DB.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+  - id: e0966015-1044-44a7-a5ff-2e01417ca3db
+    type: databaseSchema
+    name: QUERY_PERF_SCHEMA
+    fullyQualifiedName: hktest.MT_DB.QUERY_PERF_SCHEMA
+    displayName: QUERY_PERF_SCHEMA
+    deleted: false
+  - id: d5acdd38-16fd-4518-89c2-3690dd7b1b5b
+    type: databaseSchema
+    name: SERVICENOW_TEST
+    fullyQualifiedName: hktest.MT_DB.SERVICENOW_TEST
+    displayName: SERVICENOW_TEST
+    deleted: false
+  - id: a2141365-be45-4bfd-9360-16c1c92ff9c6
+    type: databaseSchema
+    name: SP_SCHEMA
+    fullyQualifiedName: hktest.MT_DB.SP_SCHEMA
+    displayName: SP_SCHEMA
+    deleted: false
+  - id: 766639c4-c2e0-43d5-b69a-40ca3ff70df4
+    type: databaseSchema
+    name: STORED_PROC_LINEAGE_PERF_SCHEMA
+    fullyQualifiedName: hktest.MT_DB.STORED_PROC_LINEAGE_PERF_SCHEMA
+    displayName: STORED_PROC_LINEAGE_PERF_SCHEMA
+    deleted: false
+  - id: 0c19ef54-577b-4ebe-ac5d-5c40d9982afc
+    type: databaseSchema
+    name: TAGS_TEST
+    fullyQualifiedName: hktest.MT_DB.TAGS_TEST
+    displayName: TAGS_TEST
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/MT_DB
+domains: []
+sourceHash: a608dc89affc45e740e2546f77a5b517
+entityStatus: Approved

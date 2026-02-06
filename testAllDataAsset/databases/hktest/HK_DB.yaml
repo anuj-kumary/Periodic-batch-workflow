@@ -1,0 +1,48 @@
+name: HK_DB
+fullyQualifiedName: hktest.HK_DB
+dataProducts: []
+tags: []
+owners:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 48396fdf-11a4-43a7-8424-de29a5bd07ae
+    type: databaseSchema
+    name: HK_SCHEMA
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA
+    displayName: HK_SCHEMA
+    deleted: false
+  - id: 288cdfff-788c-440c-bb48-81fe306baaac
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.HK_DB.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"d32d383f-071b-4aa8-8de7-241b3493453c\",\"type\":\"user\"\
+        ,\"name\":\"himanshu\",\"fullyQualifiedName\":\"himanshu\",\"displayName\"\
+        :\"Himanshu Khairajani\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/HK_DB
+domains: []
+sourceHash: ff17d238081f2cc7c7601d832cf62a8f
+entityStatus: Approved

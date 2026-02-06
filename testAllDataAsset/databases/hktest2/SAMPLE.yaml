@@ -1,0 +1,44 @@
+name: SAMPLE
+fullyQualifiedName: hktest2.SAMPLE
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2
+  description: ""
+  displayName: hktest2
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: fcae0f7b-c6fc-488a-869b-74316adf2d4e
+    type: databaseSchema
+    name: DBT_HKHAIRAJANI
+    fullyQualifiedName: hktest2.SAMPLE.DBT_HKHAIRAJANI
+    displayName: DBT_HKHAIRAJANI
+    deleted: false
+  - id: 0bc5c628-06d2-4c28-969e-e5d585d211e9
+    type: databaseSchema
+    name: DBT_HKHAIRAJANI_PUBLIC
+    fullyQualifiedName: hktest2.SAMPLE.DBT_HKHAIRAJANI_PUBLIC
+    displayName: DBT_HKHAIRAJANI_PUBLIC
+    deleted: false
+  - id: 3a9ce885-7685-4b07-99e3-ffb7c7bff1ab
+    type: databaseSchema
+    name: DBT_SCHEMA
+    fullyQualifiedName: hktest2.SAMPLE.DBT_SCHEMA
+    displayName: DBT_SCHEMA
+    deleted: false
+  - id: b57973b3-35b4-4eee-96cc-3836ac51aac0
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest2.SAMPLE.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/SAMPLE
+domains: []
+sourceHash: ca2f3e451fd77a174be0dade59c3e6ab
+entityStatus: Approved

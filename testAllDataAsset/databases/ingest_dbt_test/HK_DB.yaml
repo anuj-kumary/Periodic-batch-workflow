@@ -1,0 +1,26 @@
+name: HK_DB
+fullyQualifiedName: ingest_dbt_test.HK_DB
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 47ed96e3-fb2c-4f8e-adeb-7bec14c6a308
+  type: databaseService
+  name: ingest_dbt_test
+  fullyQualifiedName: ingest_dbt_test
+  description: ""
+  displayName: ingest_dbt_test
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 8fc4ec4e-2ef5-4587-a9be-a9bc2022934d
+    type: databaseSchema
+    name: HK_SCHEMA
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA
+    displayName: HK_SCHEMA
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/xropqkk/eq96782/#/data/databases/HK_DB
+domains: []
+sourceHash: e82c62c4e03ae41871eb7fb27c51be42
+entityStatus: Approved

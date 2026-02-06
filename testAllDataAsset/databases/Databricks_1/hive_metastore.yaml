@@ -1,0 +1,58 @@
+name: hive_metastore
+fullyQualifiedName: Databricks 1.hive_metastore
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: aed8be03-c783-454d-bae1-0bd8c2680c9e
+  type: databaseService
+  name: Databricks 1
+  fullyQualifiedName: Databricks 1
+  description: ""
+  displayName: DatabricKS
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 2eeaae55-d730-44f5-8cd7-ebe29561af50
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: Databricks 1.hive_metastore.default
+    displayName: default
+    deleted: false
+  - id: 90cd8614-1354-452a-a658-5eb6800901d7
+    type: databaseSchema
+    name: omd_lineage_test
+    fullyQualifiedName: Databricks 1.hive_metastore.omd_lineage_test
+    displayName: omd_lineage_test
+    deleted: false
+  - id: 598a6c74-577f-41ed-8667-67fd32c5e4bf
+    type: databaseSchema
+    name: test_db
+    fullyQualifiedName: Databricks 1.hive_metastore.test_db
+    displayName: test_db
+    deleted: false
+  - id: 530ab33f-d5c1-4749-a5e1-748ca02d6399
+    type: databaseSchema
+    name: test_schema_name
+    fullyQualifiedName: Databricks 1.hive_metastore.test_schema_name
+    displayName: test_schema_name
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: true
+      newValue: false
+  fieldsDeleted: []
+  previousVersion: 0.2
+default: false
+domains:
+  - id: c5953260-03a0-47dc-a602-7431689b0a3e
+    type: domain
+    name: testing-rbac-sub-domain
+    fullyQualifiedName: Design.testing-rbac-sub-domain
+    description: Testing RBAC SUB DOMAIN
+    displayName: Testing RBAC SUB DOMAIN
+    inherited: true
+sourceHash: adc675a7e752a1dd3f22be97901e1b8d
+entityStatus: Approved

@@ -1,0 +1,36 @@
+name: samples
+fullyQualifiedName: DatabricksProd.samples
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 60fe06e5-df9a-4463-ab0c-5745e74872c3
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: DatabricksProd.samples.default
+    displayName: default
+    deleted: false
+  - id: 851fbd7a-d6c0-40e8-b107-0f4a4f141c99
+    type: databaseSchema
+    name: nyctaxi
+    fullyQualifiedName: DatabricksProd.samples.nyctaxi
+    displayName: nyctaxi
+    deleted: false
+  - id: ff1d73b1-6c42-455a-85c8-45bab84614fd
+    type: databaseSchema
+    name: tpch
+    fullyQualifiedName: DatabricksProd.samples.tpch
+    displayName: tpch
+    deleted: false
+default: false
+domains: []
+sourceHash: d3cc55e3232a8e6bf8435681b3e88b64
+entityStatus: Approved

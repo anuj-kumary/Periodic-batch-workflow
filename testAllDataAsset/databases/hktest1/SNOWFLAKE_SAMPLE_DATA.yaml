@@ -1,0 +1,74 @@
+name: SNOWFLAKE_SAMPLE_DATA
+fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA
+displayName: HK snowflake sample
+description: Preloaded TPCH Data provided by Snowflake during account provisioning
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bac8305b-a253-4ae2-9ca8-6009c7ebcdce
+  type: databaseService
+  name: hktest1
+  fullyQualifiedName: hktest1
+  description: ""
+  displayName: hktest1
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 34505af7-ff4f-4c88-9ef6-90c7e476c31d
+    type: databaseSchema
+    name: TPCDS_SF100TCL
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL
+    displayName: TPCDS_SF100TCL
+    deleted: false
+  - id: b64b1527-e12c-4720-9640-36f8acd4b0eb
+    type: databaseSchema
+    name: TPCDS_SF10TCL
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
+    displayName: TPCDS_SF10TCL
+    deleted: false
+  - id: b9d5c79a-cb82-409d-8971-cc128507bae3
+    type: databaseSchema
+    name: TPCH_SF1
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1
+    description: TPC-H scaling factor 1
+    displayName: TPCH_SF1
+    deleted: false
+  - id: 7c7f78fc-3c0d-4943-943e-eb0ba3fe124e
+    type: databaseSchema
+    name: TPCH_SF10
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
+    description: TPC-H scaling factor 10
+    displayName: TPCH_SF10
+    deleted: false
+  - id: 7a351c97-936c-498d-9c78-1e44f4f7295b
+    type: databaseSchema
+    name: TPCH_SF100
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100
+    description: TPC-H scaling factor 100
+    displayName: TPCH_SF100
+    deleted: false
+  - id: 590a9515-8f40-4e54-8931-15ee3c9ff45b
+    type: databaseSchema
+    name: TPCH_SF1000
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000
+    description: TPC-H scaling factor 1000
+    displayName: TPCH_SF1000
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: displayName
+      newValue: HK snowflake sample
+    - name: owners
+      newValue: "[{\"id\":\"5649c360-e69e-40b6-af9f-c7910ab8c059\",\"type\":\"user\"\
+        ,\"name\":\"himanshu.k\",\"fullyQualifiedName\":\"\\\"himanshu.k\\\"\",\"\
+        displayName\":\"Himanshu Khairajani\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+default: false
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/SNOWFLAKE_SAMPLE_DATA
+domains: []
+sourceHash: d4f59af1240651e5e699e6d7ff7e2b2c
+entityStatus: Approved

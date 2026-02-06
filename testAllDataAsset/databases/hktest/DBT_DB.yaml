@@ -1,0 +1,65 @@
+name: DBT_DB
+fullyQualifiedName: hktest.DBT_DB
+dataProducts: []
+tags:
+  - tagFQN: '`custom`.tag1'
+    name: tag1
+    displayName: tag1
+    description: <p>tag1</p>
+    style:
+      color: "#fd3f3f"
+      iconURL: https://cdn-icons-png.flaticon.com/512/9029/9029931.png
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 784e8d90-2db1-4b79-806b-5dad5f2a175e
+    type: databaseSchema
+    name: DBT_SAMPLE
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE
+    displayName: DBT_SAMPLE
+    deleted: false
+  - id: b5501099-adf3-4f46-95af-aaff8525a665
+    type: databaseSchema
+    name: DBT_SAMPLE2
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE2
+    displayName: DBT_SAMPLE2
+    deleted: false
+  - id: bd39c7db-3e43-4f2a-9f8a-802f906ece03
+    type: databaseSchema
+    name: DBT_SAMPLE_ELEMENTARY
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY
+    displayName: DBT_SAMPLE_ELEMENTARY
+    deleted: false
+  - id: d1296f43-1f79-4cc9-9cff-f7ff58bd6f7b
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.DBT_DB.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: true
+      newValue: false
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+default: false
+sourceUrl: https://app.snowflake.com/djywarg/lk40101/#/data/databases/DBT_DB
+domains: []
+sourceHash: e7c3d177a36a7e97577d099f7376ec22
+entityStatus: Approved

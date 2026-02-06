@@ -1,0 +1,32 @@
+name: HK_DB
+fullyQualifiedName: hk_snow.HK_DB
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 89ad4fb4-b82f-407d-846a-6669b40ab0d6
+  type: databaseService
+  name: hk_snow
+  fullyQualifiedName: hk_snow
+  description: ""
+  displayName: hk_snow
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 0cad9b22-fd4f-45ae-b31a-8c055cab33ca
+    type: databaseSchema
+    name: HK_SCHEMA
+    fullyQualifiedName: hk_snow.HK_DB.HK_SCHEMA
+    displayName: HK_SCHEMA
+    deleted: false
+  - id: 18a9165d-e7ab-4485-b2ce-b48d9083e782
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hk_snow.HK_DB.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/rmpftce/eh21932/#/data/databases/HK_DB
+domains: []
+sourceHash: fc96bf11df1647baa4b0b084b1436e2e
+entityStatus: Unprocessed

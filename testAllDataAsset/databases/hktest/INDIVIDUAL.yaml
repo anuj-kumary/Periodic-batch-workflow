@@ -1,0 +1,44 @@
+name: INDIVIDUAL
+fullyQualifiedName: hktest.INDIVIDUAL
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 118dc0e4-d369-4874-8eb8-9109af825940
+    type: databaseSchema
+    name: CURATED
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED
+    displayName: CURATED
+    deleted: false
+  - id: 5f0740ae-0799-48fa-abb1-84336137abee
+    type: databaseSchema
+    name: LANDING
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING
+    displayName: LANDING
+    deleted: false
+  - id: 2597974f-5f96-428d-a12d-1cf50d95a2be
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.INDIVIDUAL.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+  - id: b38429d3-0046-4922-86fc-38dbc4580d86
+    type: databaseSchema
+    name: TRANSIENT
+    fullyQualifiedName: hktest.INDIVIDUAL.TRANSIENT
+    displayName: TRANSIENT
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/INDIVIDUAL
+domains: []
+sourceHash: 26bdd00d0b339edccdfaa0a4a822719d
+entityStatus: Approved

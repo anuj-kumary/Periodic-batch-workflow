@@ -1,0 +1,31 @@
+name: hive_metastore
+fullyQualifiedName: lineage_test.hive_metastore
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bc421419-503c-4213-bd5e-d523b036d74f
+  type: databaseService
+  name: lineage_test
+  fullyQualifiedName: lineage_test
+  description: ""
+  displayName: lineage_test
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 6552b869-eaee-4bd1-a731-e7472ec5c7a4
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: lineage_test.hive_metastore.default
+    displayName: default
+    deleted: false
+  - id: 7009a605-a3da-4dc2-8ab8-5d769e1b9059
+    type: databaseSchema
+    name: omd_lineage_test
+    fullyQualifiedName: lineage_test.hive_metastore.omd_lineage_test
+    displayName: omd_lineage_test
+    deleted: false
+default: false
+domains: []
+sourceHash: 9cc53da5ffb67ef8def6ce6522da610f
+entityStatus: Approved

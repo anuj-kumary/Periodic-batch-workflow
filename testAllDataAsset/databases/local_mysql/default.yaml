@@ -1,0 +1,25 @@
+name: default
+fullyQualifiedName: local_mysql.default
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+databaseSchemas:
+  - id: a122ff6b-96c2-4226-9538-7bcc9533a029
+    type: databaseSchema
+    name: openmetadata_db
+    fullyQualifiedName: local_mysql.default.openmetadata_db
+    displayName: openmetadata_db
+    deleted: false
+default: false
+domains: []
+sourceHash: c3d309b75d6813000223438e32c2f52d
+entityStatus: Approved

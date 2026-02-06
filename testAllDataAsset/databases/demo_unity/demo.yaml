@@ -1,0 +1,49 @@
+name: demo
+fullyQualifiedName: demo_unity.demo
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+databaseSchemas:
+  - id: d41c161d-5e79-4207-8d33-628da9331901
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: demo_unity.demo.default
+    displayName: default
+    deleted: false
+  - id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: demo_unity.demo.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: 69281bac-c4b7-4c0d-bb42-33ebe79ee68a
+    type: databaseSchema
+    name: new_schema
+    fullyQualifiedName: demo_unity.demo.new_schema
+    displayName: new_schema
+    deleted: false
+  - id: 1fc60e2b-5bc6-4e69-ba40-51eef4f1c7d3
+    type: databaseSchema
+    name: reverse_ingestion_test_djvcjlpftpcpxpy
+    fullyQualifiedName: demo_unity.demo.reverse_ingestion_test_djvcjlpftpcpxpy
+    displayName: reverse_ingestion_test_djvcjlpftpcpxpy
+    deleted: false
+  - id: 5c1b0e80-9c9b-47b4-b5f6-271890ce585e
+    type: databaseSchema
+    name: uniform_schema
+    fullyQualifiedName: demo_unity.demo.uniform_schema
+    displayName: uniform_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: 6565e3261436e7849c94ce8e6807955c
+entityStatus: Approved

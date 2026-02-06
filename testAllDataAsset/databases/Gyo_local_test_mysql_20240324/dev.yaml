@@ -1,0 +1,37 @@
+name: dev
+fullyQualifiedName: Gyo local test mysql 20240324.dev
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+databaseSchemas:
+  - id: b489d438-84fc-4a8e-bd10-306565d429b2
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: 46a47ac8-ecec-4832-a500-68963b6e3601
+    type: databaseSchema
+    name: openmetadata_db
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db
+    displayName: openmetadata_db
+    deleted: false
+  - id: 384fcb99-3bad-4203-aa38-7e995c90b022
+    type: databaseSchema
+    name: performance_schema
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.performance_schema
+    displayName: performance_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: 5a9c1f0669e52bf5e88edb6f486799bf
+entityStatus: Approved

@@ -1,0 +1,61 @@
+name: SNOWFLAKE_SAMPLE_DATA
+fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA
+description: Preloaded TPCH Data provided by Snowflake during account provisioning
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 89ad4fb4-b82f-407d-846a-6669b40ab0d6
+  type: databaseService
+  name: hk_snow
+  fullyQualifiedName: hk_snow
+  description: ""
+  displayName: hk_snow
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 30cc8dd8-d469-4a52-a249-96db1e86cb4f
+    type: databaseSchema
+    name: TPCDS_SF100TCL
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL
+    displayName: TPCDS_SF100TCL
+    deleted: false
+  - id: 2d1458d2-4148-4bd2-ae50-2ce40611b971
+    type: databaseSchema
+    name: TPCDS_SF10TCL
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
+    displayName: TPCDS_SF10TCL
+    deleted: false
+  - id: c3d651d1-93a9-4514-851a-38370ad44174
+    type: databaseSchema
+    name: TPCH_SF1
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1
+    description: TPC-H scaling factor 1
+    displayName: TPCH_SF1
+    deleted: false
+  - id: 78ea6b65-1483-4125-b338-d3ad88417e5f
+    type: databaseSchema
+    name: TPCH_SF10
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
+    description: TPC-H scaling factor 10
+    displayName: TPCH_SF10
+    deleted: false
+  - id: 16cc82c8-0fd5-4d53-a69b-95f7f836c098
+    type: databaseSchema
+    name: TPCH_SF100
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100
+    description: TPC-H scaling factor 100
+    displayName: TPCH_SF100
+    deleted: false
+  - id: c8db2cbe-fabb-4aea-acbb-789beb9d8226
+    type: databaseSchema
+    name: TPCH_SF1000
+    fullyQualifiedName: hk_snow.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000
+    description: TPC-H scaling factor 1000
+    displayName: TPCH_SF1000
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/rmpftce/eh21932/#/data/databases/SNOWFLAKE_SAMPLE_DATA
+domains: []
+sourceHash: 451a5d8d63defa2f6cb7e0007b5369c6
+entityStatus: Unprocessed

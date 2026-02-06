@@ -1,0 +1,38 @@
+name: MY_DB
+fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB"
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 98babf70-5762-4c24-b0a9-c423caee1781
+  type: databaseService
+  name: "Snowflake 1.11.6 [Temp]"
+  fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\""
+  description: ""
+  displayName: "Snowflake 1.11.6 [Temp]"
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: a90c4c54-97ed-4fec-91d2-14200e915783
+    type: databaseSchema
+    name: LINEAGE_SCHEMA
+    fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.LINEAGE_SCHEMA"
+    displayName: LINEAGE_SCHEMA
+    deleted: false
+  - id: 1047a162-9838-4bba-9755-52b96c805dee
+    type: databaseSchema
+    name: MY_SCHEMA
+    fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.MY_SCHEMA"
+    displayName: MY_SCHEMA
+    deleted: false
+  - id: f57bd649-2707-4ba8-90d1-5995f36ba7f5
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.PUBLIC"
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/kqxahnu/ya62209/#/data/databases/MY_DB
+domains: []
+sourceHash: 4e89280867018005a4b00fe90d2d0101
+entityStatus: Unprocessed

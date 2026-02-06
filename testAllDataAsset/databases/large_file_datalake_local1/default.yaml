@@ -1,0 +1,30 @@
+name: default
+fullyQualifiedName: large_file_datalake_local1.default
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 90bbf174-5007-47a1-91bb-7917bc210a84
+  type: databaseService
+  name: large_file_datalake_local1
+  fullyQualifiedName: large_file_datalake_local1
+  displayName: large_file_datalake_local1
+  deleted: false
+serviceType: Datalake
+databaseSchemas:
+  - id: 104b1b61-ad1c-466d-a4fd-5f0e2a88fb10
+    type: databaseSchema
+    name: collatesynapsefs
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs
+    displayName: collatesynapsefs
+    deleted: false
+  - id: ee9875ed-7ec9-477e-8599-e407a2a96aca
+    type: databaseSchema
+    name: partitioned-data-container
+    fullyQualifiedName: large_file_datalake_local1.default.partitioned-data-container
+    displayName: partitioned-data-container
+    deleted: false
+default: false
+domains: []
+sourceHash: 8fcb29a08f576578049715ff72d6e00e
+entityStatus: Unprocessed

@@ -1,0 +1,42 @@
+name: default
+fullyQualifiedName: Druid.default
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 604e3478-a6c7-41b9-9c58-0303183dbed1
+  type: databaseService
+  name: Druid
+  fullyQualifiedName: Druid
+  displayName: Druid
+  deleted: false
+serviceType: Druid
+databaseSchemas:
+  - id: f407954f-4012-4fce-ae6b-9289a8d08c85
+    type: databaseSchema
+    name: druid
+    fullyQualifiedName: Druid.default.druid
+    displayName: druid
+    deleted: false
+  - id: f3cb7266-d5f6-444e-9dfc-d917a5b77900
+    type: databaseSchema
+    name: lookup
+    fullyQualifiedName: Druid.default.lookup
+    displayName: lookup
+    deleted: false
+  - id: 8c2762de-226e-483a-9ae4-188a2c8b9015
+    type: databaseSchema
+    name: sys
+    fullyQualifiedName: Druid.default.sys
+    displayName: sys
+    deleted: false
+  - id: ae5d858a-f32c-4e71-8a6e-26d5c2927f23
+    type: databaseSchema
+    name: view
+    fullyQualifiedName: Druid.default.view
+    displayName: view
+    deleted: false
+default: false
+domains: []
+sourceHash: a94338a806708088a2cfc829e8cd0e10
+entityStatus: Approved

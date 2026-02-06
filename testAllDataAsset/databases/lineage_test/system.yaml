@@ -1,0 +1,31 @@
+name: system
+fullyQualifiedName: lineage_test.system
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bc421419-503c-4213-bd5e-d523b036d74f
+  type: databaseService
+  name: lineage_test
+  fullyQualifiedName: lineage_test
+  description: ""
+  displayName: lineage_test
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 6fae8e93-25a2-44c1-8390-5410cca430ee
+    type: databaseSchema
+    name: ai
+    fullyQualifiedName: lineage_test.system.ai
+    displayName: ai
+    deleted: false
+  - id: 8c328e96-b5cf-4da0-a5ce-94697e1420d0
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: lineage_test.system.information_schema
+    displayName: information_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: 3885030c171b7da78b3f930903cf327b
+entityStatus: Approved

@@ -1,0 +1,43 @@
+name: hive_metastore
+fullyQualifiedName: DBX_TEXT.hive_metastore
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 643b3e42-f22d-48f4-99bf-a4f65f70e11d
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: DBX_TEXT.hive_metastore.default
+    displayName: default
+    deleted: false
+  - id: 7b3e8628-df90-4601-a190-630632639265
+    type: databaseSchema
+    name: omd_lineage_test
+    fullyQualifiedName: DBX_TEXT.hive_metastore.omd_lineage_test
+    displayName: omd_lineage_test
+    deleted: false
+  - id: 83cb6499-d44d-429d-8047-e3247007b9c6
+    type: databaseSchema
+    name: test_db
+    fullyQualifiedName: DBX_TEXT.hive_metastore.test_db
+    displayName: test_db
+    deleted: false
+  - id: f6269ed6-0f07-4f13-8fab-120ddbde4b6e
+    type: databaseSchema
+    name: test_schema_name
+    fullyQualifiedName: DBX_TEXT.hive_metastore.test_schema_name
+    displayName: test_schema_name
+    deleted: false
+default: false
+domains: []
+sourceHash: 3eec2d0598f7bd317f443fe2cffb1a80
+entityStatus: Approved

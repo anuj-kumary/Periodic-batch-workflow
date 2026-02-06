@@ -1,0 +1,50 @@
+name: FIVETRAN
+fullyQualifiedName: hktest.FIVETRAN
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 08d5d858-c415-4f8e-bdaf-9ef83415d582
+    type: databaseSchema
+    name: FIVETRAN_RECEIVABLE_CLUBHOUSE_STAGING
+    fullyQualifiedName: hktest.FIVETRAN.FIVETRAN_RECEIVABLE_CLUBHOUSE_STAGING
+    displayName: FIVETRAN_RECEIVABLE_CLUBHOUSE_STAGING
+    deleted: false
+  - id: b83ee459-6a79-4fbe-bb49-726cbb3bf470
+    type: databaseSchema
+    name: MSSQLBANKING_ACCOUNT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT
+    displayName: MSSQLBANKING_ACCOUNT
+    deleted: false
+  - id: d01398d8-f004-4f62-bec6-99122ce8c128
+    type: databaseSchema
+    name: MSSQLBANKING_CUSTOMER
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER
+    displayName: MSSQLBANKING_CUSTOMER
+    deleted: false
+  - id: fd7b29c7-7ccf-4f32-898c-8429afb71c94
+    type: databaseSchema
+    name: MSSQLBANKING_STG
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG
+    displayName: MSSQLBANKING_STG
+    deleted: false
+  - id: 4f72002c-2e12-49d0-9fec-722d9c79d8ba
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.FIVETRAN.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/FIVETRAN
+domains: []
+sourceHash: 7eb3458e8ecae7642eec9aa3bddbfa3a
+entityStatus: Approved

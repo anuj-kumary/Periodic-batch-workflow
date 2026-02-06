@@ -1,0 +1,32 @@
+name: E2E_DB
+fullyQualifiedName: hktest.E2E_DB
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 282ae396-8b85-4ea4-8be0-34882c438a03
+    type: databaseSchema
+    name: E2E_TEST
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST
+    displayName: E2E_TEST
+    deleted: false
+  - id: 951a4dc2-2b5d-4ad6-8040-399c9a08be96
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.E2E_DB.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/E2E_DB
+domains: []
+sourceHash: 806894652ef57effa73d777dafc6dabd
+entityStatus: Approved

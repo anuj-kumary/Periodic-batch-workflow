@@ -1,0 +1,37 @@
+name: samples
+fullyQualifiedName: lineage_test.samples
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bc421419-503c-4213-bd5e-d523b036d74f
+  type: databaseService
+  name: lineage_test
+  fullyQualifiedName: lineage_test
+  description: ""
+  displayName: lineage_test
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: b0a70bc5-0a36-4324-9145-6ce1827f9652
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: lineage_test.samples.default
+    displayName: default
+    deleted: false
+  - id: 0f8ee151-3f2e-4f19-b337-dcc09954df06
+    type: databaseSchema
+    name: nyctaxi
+    fullyQualifiedName: lineage_test.samples.nyctaxi
+    displayName: nyctaxi
+    deleted: false
+  - id: d78b7596-3da3-40e4-93e0-6f07047c96fe
+    type: databaseSchema
+    name: tpch
+    fullyQualifiedName: lineage_test.samples.tpch
+    displayName: tpch
+    deleted: false
+default: false
+domains: []
+sourceHash: 57ba51f8c8d0791c0499aaecccd58bde
+entityStatus: Approved

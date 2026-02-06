@@ -1,0 +1,49 @@
+name: dev
+fullyQualifiedName: '"1.8.7-test".dev'
+dataProducts: []
+tags: []
+owners:
+  - id: fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c
+    type: user
+    name: 23saints23
+    fullyQualifiedName: 23saints23
+    displayName: 23saints23
+    deleted: false
+  - id: 1fec0260-5ad5-4d56-9d2c-48104368bc10
+    type: user
+    name: sonika.s
+    fullyQualifiedName: '"sonika.s"'
+    displayName: sonika.s
+    deleted: false
+service:
+  id: b27756b3-8d33-47c6-b2c5-bd2e1fa35831
+  type: databaseService
+  name: 1.8.7-test
+  fullyQualifiedName: '"1.8.7-test"'
+  description: ""
+  displayName: 1.8.7-test
+  deleted: false
+serviceType: Redshift
+databaseSchemas:
+  - id: bc547047-05f7-4746-9ce3-7388fd77ad8c
+    type: databaseSchema
+    name: dbt_jaffle
+    fullyQualifiedName: '"1.8.7-test".dev.dbt_jaffle'
+    displayName: dbt_jaffle
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c\",\"type\":\"user\"\
+        ,\"name\":\"23saints23\",\"fullyQualifiedName\":\"23saints23\",\"displayName\"\
+        :\"23saints23\",\"deleted\":false},{\"id\":\"1fec0260-5ad5-4d56-9d2c-48104368bc10\"\
+        ,\"type\":\"user\",\"name\":\"sonika.s\",\"fullyQualifiedName\":\"\\\"sonika.s\\\
+        \"\",\"displayName\":\"sonika.s\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+default: false
+domains: []
+sourceHash: 4d37df915bb2de023ec3c6b6986e2bd3
+entityStatus: Approved

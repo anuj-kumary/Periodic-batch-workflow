@@ -1,0 +1,61 @@
+name: SNOWFLAKE_SAMPLE_DATA
+fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA
+description: Preloaded TPCH Data provided by Snowflake during account provisioning
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 88696aa9-dd00-4bf4-b5f2-5d48891b78ef
+    type: databaseSchema
+    name: TPCDS_SF100TCL
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL
+    displayName: TPCDS_SF100TCL
+    deleted: false
+  - id: 1f542ad3-840c-4e87-b86b-2e56f05dfb44
+    type: databaseSchema
+    name: TPCDS_SF10TCL
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL
+    displayName: TPCDS_SF10TCL
+    deleted: false
+  - id: 931baad5-1056-4961-820a-d8fc5b6f9c69
+    type: databaseSchema
+    name: TPCH_SF1
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1
+    description: TPC-H scaling factor 1
+    displayName: TPCH_SF1
+    deleted: false
+  - id: 7deecbcd-e050-4ce0-b822-0ff09b45d09b
+    type: databaseSchema
+    name: TPCH_SF10
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
+    description: TPC-H scaling factor 10
+    displayName: TPCH_SF10
+    deleted: false
+  - id: 530d206e-8372-4ac0-a399-d131442be826
+    type: databaseSchema
+    name: TPCH_SF100
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100
+    description: TPC-H scaling factor 100
+    displayName: TPCH_SF100
+    deleted: false
+  - id: 7a90fcae-711f-4c24-9034-8b2b209349a5
+    type: databaseSchema
+    name: TPCH_SF1000
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000
+    description: TPC-H scaling factor 1000
+    displayName: TPCH_SF1000
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/SNOWFLAKE_SAMPLE_DATA
+domains: []
+sourceHash: 7a93ac529fc70352c00d926a08f188aa
+entityStatus: Approved

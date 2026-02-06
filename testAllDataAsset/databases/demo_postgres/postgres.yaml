@@ -1,0 +1,31 @@
+name: postgres
+fullyQualifiedName: demo_postgres.postgres
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 192b73bd-7729-4f7f-8c86-3f22c4a42609
+  type: databaseService
+  name: demo_postgres
+  fullyQualifiedName: demo_postgres
+  description: ""
+  displayName: demo_postgres
+  deleted: false
+serviceType: Postgres
+databaseSchemas:
+  - id: 73b717bd-e084-41b4-9a13-d5421d1b57cf
+    type: databaseSchema
+    name: test_cli_e2e
+    fullyQualifiedName: demo_postgres.postgres.test_cli_e2e
+    displayName: test_cli_e2e
+    deleted: false
+  - id: ff7595e0-021c-4819-a7a2-489c4b4f4491
+    type: databaseSchema
+    name: test_empty
+    fullyQualifiedName: demo_postgres.postgres.test_empty
+    displayName: test_empty
+    deleted: false
+default: false
+domains: []
+sourceHash: b3034af8f4c44a809b35c6db6dacdc8b
+entityStatus: Approved

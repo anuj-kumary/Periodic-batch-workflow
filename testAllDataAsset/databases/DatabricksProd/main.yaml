@@ -1,0 +1,44 @@
+name: main
+fullyQualifiedName: DatabricksProd.main
+dataProducts: []
+tags:
+  - tagFQN: databricks.catalog_TAGS
+    name: catalog_TAGS
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: f578b6a4-ea37-4161-8524-5de914e228ce
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: DatabricksProd.main.default
+    displayName: default
+    deleted: false
+  - id: 7f351ab4-5b7d-4926-94be-fe250ba04d36
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: DatabricksProd.main.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: e6488ef3-62f9-4597-80fb-624ea24adcfb
+    type: databaseSchema
+    name: sample_schema
+    fullyQualifiedName: DatabricksProd.main.sample_schema
+    displayName: sample_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: 02faca64371aaf9323159fb77a8d233a
+entityStatus: Approved

@@ -1,0 +1,37 @@
+name: cypress_integrations_test_db
+fullyQualifiedName: local_test_akash_mysql_hybrid_runner.cypress_integrations_test_db
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: e0541a7e-df32-43b8-90b2-74c51893be01
+  type: databaseService
+  name: local_test_akash_mysql_hybrid_runner
+  fullyQualifiedName: local_test_akash_mysql_hybrid_runner
+  description: ""
+  displayName: local_test_akash_mysql_hybrid_runner
+  deleted: false
+serviceType: Mysql
+databaseSchemas:
+  - id: bd4cbd8b-cc73-4832-b97a-4e7d75aaa4f7
+    type: databaseSchema
+    name: cypress_integrations_test_db
+    fullyQualifiedName: local_test_akash_mysql_hybrid_runner.cypress_integrations_test_db.cypress_integrations_test_db
+    displayName: cypress_integrations_test_db
+    deleted: false
+  - id: 24776edd-26c0-4e67-bd4d-4b0586210257
+    type: databaseSchema
+    name: mysql
+    fullyQualifiedName: local_test_akash_mysql_hybrid_runner.cypress_integrations_test_db.mysql
+    displayName: mysql
+    deleted: false
+  - id: 0cc561a7-0a5d-4286-98b1-81f092a831b2
+    type: databaseSchema
+    name: openmetadata
+    fullyQualifiedName: local_test_akash_mysql_hybrid_runner.cypress_integrations_test_db.openmetadata
+    displayName: openmetadata
+    deleted: false
+default: false
+domains: []
+sourceHash: b78901533ffd0a356ad1abb0f5b19402
+entityStatus: Unprocessed

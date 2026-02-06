@@ -1,0 +1,46 @@
+name: system
+fullyQualifiedName: Databricks 1.system
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: aed8be03-c783-454d-bae1-0bd8c2680c9e
+  type: databaseService
+  name: Databricks 1
+  fullyQualifiedName: Databricks 1
+  description: ""
+  displayName: DatabricKS
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 09a501c2-b85f-4834-b360-08752d06f007
+    type: databaseSchema
+    name: ai
+    fullyQualifiedName: Databricks 1.system.ai
+    displayName: ai
+    deleted: false
+  - id: 37b20ac1-dcdd-4f07-bb32-4409fe613374
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: Databricks 1.system.information_schema
+    displayName: information_schema
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: true
+      newValue: false
+  fieldsDeleted: []
+  previousVersion: 0.2
+default: false
+domains:
+  - id: c5953260-03a0-47dc-a602-7431689b0a3e
+    type: domain
+    name: testing-rbac-sub-domain
+    fullyQualifiedName: Design.testing-rbac-sub-domain
+    description: Testing RBAC SUB DOMAIN
+    displayName: Testing RBAC SUB DOMAIN
+    inherited: true
+sourceHash: 6056230123e7d5063a9da429c4e87dea
+entityStatus: Approved

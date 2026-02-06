@@ -1,0 +1,48 @@
+name: dev
+fullyQualifiedName: aws_redshift_tableau.dev
+displayName: ""
+description: <p>new description for testing</p>
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: ff5fa04b-7367-4096-8886-0fa928b5cbbb
+  type: databaseService
+  name: aws_redshift_tableau
+  fullyQualifiedName: aws_redshift_tableau
+  description: ""
+  displayName: aws_redshift_tableau
+  deleted: false
+  href: https://sandbox-beta.open-metadata.org/api/v1/services/databaseServices/ff5fa04b-7367-4096-8886-0fa928b5cbbb
+serviceType: Redshift
+databaseSchemas:
+  - id: 14ee3f47-5945-4319-80df-03cad9906189
+    type: databaseSchema
+    name: dbt_ctest
+    fullyQualifiedName: aws_redshift_tableau.dev.dbt_ctest
+    description: ""
+    displayName: dbt_ctest
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: displayName
+      newValue: ""
+    - name: domains
+      newValue: "[{\"id\":\"1f54f7fb-109c-4ae5-997d-1960c41339a4\",\"type\":\"domain\"\
+        ,\"name\":\"domain%.with%.stuff\",\"fullyQualifiedName\":\"\\\"domain%.with%.stuff\\\
+        \"\",\"description\":\"<p>ads</p>\",\"displayName\":\"domain%.with%.stuff\"\
+        }]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+default: false
+domains:
+  - id: 1f54f7fb-109c-4ae5-997d-1960c41339a4
+    type: domain
+    name: domain%.with%.stuff
+    fullyQualifiedName: '"domain%.with%.stuff"'
+    description: <p>ads</p>
+    displayName: domain%.with%.stuff
+sourceHash: 7a5b1a98c1aab461fd45d5438a077ee9
+entityStatus: Approved

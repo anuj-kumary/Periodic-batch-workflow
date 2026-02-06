@@ -1,0 +1,37 @@
+name: default
+fullyQualifiedName: Gyo2.default
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: acb4d7cc-507e-43a0-b287-0127da7c758d
+  type: databaseService
+  name: Gyo2
+  fullyQualifiedName: Gyo2
+  description: ""
+  displayName: Gyo2
+  deleted: false
+serviceType: Mysql
+databaseSchemas:
+  - id: 8f41a651-2e65-4a87-9904-8da7d1d10ed2
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: Gyo2.default.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: 1ae3a711-6b03-48cc-a7de-9a34be516eab
+    type: databaseSchema
+    name: openmetadata_db
+    fullyQualifiedName: Gyo2.default.openmetadata_db
+    displayName: openmetadata_db
+    deleted: false
+  - id: 62a6927f-58ea-4779-83f5-ce2daaf6fa4e
+    type: databaseSchema
+    name: performance_schema
+    fullyQualifiedName: Gyo2.default.performance_schema
+    displayName: performance_schema
+    deleted: false
+default: false
+domains: []
+sourceHash: f743f8f26b9c709cc8c4b09796d81fd3
+entityStatus: Approved

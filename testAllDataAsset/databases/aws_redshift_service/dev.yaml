@@ -1,0 +1,42 @@
+name: dev
+fullyQualifiedName: aws_redshift_service.dev
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: c70847a6-a338-4889-a336-46fd68887898
+  type: databaseService
+  name: aws_redshift_service
+  fullyQualifiedName: aws_redshift_service
+  displayName: aws_redshift_service
+  deleted: false
+serviceType: Redshift
+databaseSchemas:
+  - id: 40a2c940-ed48-4982-a29a-c7cdb4c22fd4
+    type: databaseSchema
+    name: dbt_jaffle
+    fullyQualifiedName: aws_redshift_service.dev.dbt_jaffle
+    displayName: dbt_jaffle
+    deleted: false
+  - id: b071b978-fb35-48ef-b38c-1a84ccb8170c
+    type: databaseSchema
+    name: dbt_production
+    fullyQualifiedName: aws_redshift_service.dev.dbt_production
+    displayName: dbt_production
+    deleted: false
+  - id: 9cf18285-9b6f-4e54-abc6-8fe0f442f721
+    type: databaseSchema
+    name: dbt_production_jaffle_shop
+    fullyQualifiedName: aws_redshift_service.dev.dbt_production_jaffle_shop
+    displayName: dbt_production_jaffle_shop
+    deleted: false
+  - id: 33e8e9a1-1211-4022-9223-f0cf4a658260
+    type: databaseSchema
+    name: dbt_production_marketing
+    fullyQualifiedName: aws_redshift_service.dev.dbt_production_marketing
+    displayName: dbt_production_marketing
+    deleted: false
+default: false
+domains: []
+sourceHash: a6886c0b712acccc219dea07b0c062ba
+entityStatus: Unprocessed

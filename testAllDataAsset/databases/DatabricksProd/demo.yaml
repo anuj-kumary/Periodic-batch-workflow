@@ -1,0 +1,60 @@
+name: demo
+fullyQualifiedName: DatabricksProd.demo
+dataProducts: []
+tags:
+  - tagFQN: classificaion.classificaion-tag-1
+    name: classificaion-tag-1
+    displayName: ""
+    description: classificaion-tag-1
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 70aba29d-0c08-4c85-9ee9-e60bc667f8c2
+  type: databaseService
+  name: DatabricksProd
+  fullyQualifiedName: DatabricksProd
+  displayName: databricksProD
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 5726b397-9e1b-4536-8790-c3217e617134
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: DatabricksProd.demo.default
+    displayName: default
+    deleted: false
+  - id: 4285c650-ad96-4287-92e0-37a0b43f4606
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: DatabricksProd.demo.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: 420834f5-1a71-4745-9447-2f52361c437a
+    type: databaseSchema
+    name: new_schema
+    fullyQualifiedName: DatabricksProd.demo.new_schema
+    displayName: new_schema
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"classificaion.classificaion-tag-1\",\"name\":\"classificaion-tag-1\"\
+        ,\"displayName\":\"\",\"description\":\"classificaion-tag-1\",\"style\":{},\"\
+        source\":\"Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"\
+        },{\"tagFQN\":\"classificaion.classificaion-tag-1\",\"name\":\"classificaion-tag-1\"\
+        ,\"displayName\":\"\",\"description\":\"classificaion-tag-1\",\"style\":{},\"\
+        source\":\"Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"\
+        }]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+default: false
+domains: []
+sourceHash: 693fd0fcbf5b51c75a86658189c35196
+entityStatus: Approved

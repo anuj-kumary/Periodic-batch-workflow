@@ -1,0 +1,45 @@
+name: MT_DB
+fullyQualifiedName: Hybrid Runner snowflake.MT_DB
+description: This is a testing database
+dataProducts: []
+tags:
+  - tagFQN: '`custom`.tag1'
+    name: tag1
+    displayName: tag1
+    description: <p>tag1</p>
+    style:
+      color: "#fd3f3f"
+      iconURL: https://cdn-icons-png.flaticon.com/512/9029/9029931.png
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+  description: ""
+  displayName: Hybrid Runner snowflake
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 0613a5fa-f1b2-4665-a493-3ed5cf158422
+    type: databaseSchema
+    name: ALL_LINAGE_SCHEMA
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA
+    displayName: ALL_LINAGE_SCHEMA
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/MT_DB
+domains:
+  - id: 1f54f7fb-109c-4ae5-997d-1960c41339a4
+    type: domain
+    name: domain%.with%.stuff
+    fullyQualifiedName: '"domain%.with%.stuff"'
+    description: <p>ads</p>
+    displayName: domain%.with%.stuff
+sourceHash: 07b0a6231b9c7ce63b9a2a4909b540c3
+entityStatus: Unprocessed

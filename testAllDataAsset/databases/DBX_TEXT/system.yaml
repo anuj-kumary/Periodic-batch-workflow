@@ -1,0 +1,43 @@
+name: system
+fullyQualifiedName: DBX_TEXT.system
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+databaseSchemas:
+  - id: 354a999f-1c72-4f1f-9157-7d791362a5f3
+    type: databaseSchema
+    name: ai
+    fullyQualifiedName: DBX_TEXT.system.ai
+    displayName: ai
+    deleted: false
+  - id: 24ca5ecf-b132-4408-904b-4ed839557735
+    type: databaseSchema
+    name: billing
+    fullyQualifiedName: DBX_TEXT.system.billing
+    displayName: billing
+    deleted: false
+  - id: 661be91a-d901-4ca6-b6bc-5a4c1a02962d
+    type: databaseSchema
+    name: information_schema
+    fullyQualifiedName: DBX_TEXT.system.information_schema
+    displayName: information_schema
+    deleted: false
+  - id: 44c1ed56-a038-46dc-a2b5-4e9e1558f193
+    type: databaseSchema
+    name: query
+    fullyQualifiedName: DBX_TEXT.system.query
+    displayName: query
+    deleted: false
+default: false
+domains: []
+sourceHash: f5cb66e77ab9314d76c1fbbfd3f911ce
+entityStatus: Approved

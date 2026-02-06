@@ -1,0 +1,54 @@
+name: 118146679784
+fullyQualifiedName: glue_test.118146679784
+dataProducts: []
+tags:
+  - tagFQN: Tier.Tier4
+    name: Tier4
+    description: |-
+      **Team level datasets that are typically non-business and general internal system**
+
+      - Used in product metrics, and dashboards to drive team decisions
+
+      - Used to track operational metrics of internal systems owned by the team
+
+      - Source used to derive other critical Tier-4 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1770015508940
+    appliedBy: anujkumar.yadav
+owners: []
+service:
+  id: e518214a-f845-4790-9cab-1e9e64925968
+  type: databaseService
+  name: glue_test
+  fullyQualifiedName: glue_test
+  description: ""
+  displayName: glue_test
+  deleted: false
+serviceType: Glue
+databaseSchemas:
+  - id: ed3d0711-b5b6-4c25-a07a-f2129670e962
+    type: databaseSchema
+    name: default
+    fullyQualifiedName: glue_test.118146679784.default
+    displayName: default
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"Tier.Tier4\",\"name\":\"Tier4\",\"description\":\"\
+        **Team level datasets that are typically non-business and general internal\
+        \ system**\\n\\n- Used in product metrics, and dashboards to drive team decisions\\\
+        n\\n- Used to track operational metrics of internal systems owned by the team\\\
+        n\\n- Source used to derive other critical Tier-4 datasets\",\"source\":\"\
+        Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\",\"appliedBy\"\
+        :\"anujkumar.yadav\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+default: false
+domains: []
+sourceHash: d67a846b5bb5d2644ca273ea35f745f6
+entityStatus: Approved

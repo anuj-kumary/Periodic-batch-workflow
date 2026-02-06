@@ -1,0 +1,38 @@
+name: DBT_DB
+fullyQualifiedName: hktest1.DBT_DB
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: bac8305b-a253-4ae2-9ca8-6009c7ebcdce
+  type: databaseService
+  name: hktest1
+  fullyQualifiedName: hktest1
+  description: ""
+  displayName: hktest1
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 0ebab8dc-055b-4347-b26f-089d6d9622e6
+    type: databaseSchema
+    name: DBT_SAMPLE
+    fullyQualifiedName: hktest1.DBT_DB.DBT_SAMPLE
+    displayName: DBT_SAMPLE
+    deleted: false
+  - id: 3cbb1476-02db-47d7-82bd-46c3700a3234
+    type: databaseSchema
+    name: DBT_SAMPLE_ELEMENTARY
+    fullyQualifiedName: hktest1.DBT_DB.DBT_SAMPLE_ELEMENTARY
+    displayName: DBT_SAMPLE_ELEMENTARY
+    deleted: false
+  - id: afd81c7b-7e15-4a97-b42a-e84dea1d71b6
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest1.DBT_DB.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/DBT_DB
+domains: []
+sourceHash: 1191a40448dda50ba35847ee19b41d0d
+entityStatus: Approved

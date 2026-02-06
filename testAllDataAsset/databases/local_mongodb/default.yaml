@@ -1,0 +1,36 @@
+name: default
+fullyQualifiedName: local_mongodb.default
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 1dee0d92-bba9-4ff4-95b3-471196980618
+  type: databaseService
+  name: local_mongodb
+  fullyQualifiedName: local_mongodb
+  displayName: local_mongodb
+  deleted: false
+serviceType: MongoDB
+databaseSchemas:
+  - id: eb7ab927-b35d-4d4c-8bd0-5d53e292f2ca
+    type: databaseSchema
+    name: admin
+    fullyQualifiedName: local_mongodb.default.admin
+    displayName: admin
+    deleted: false
+  - id: 979e6071-300e-4659-931a-0882b08f7482
+    type: databaseSchema
+    name: local
+    fullyQualifiedName: local_mongodb.default.local
+    displayName: local
+    deleted: false
+  - id: b1ba411a-359d-4c52-98d2-a5bf2e3455fc
+    type: databaseSchema
+    name: sample_mflix
+    fullyQualifiedName: local_mongodb.default.sample_mflix
+    displayName: sample_mflix
+    deleted: false
+default: false
+domains: []
+sourceHash: fd895ae0c2316687c06ad5fc8478a2d2
+entityStatus: Unprocessed

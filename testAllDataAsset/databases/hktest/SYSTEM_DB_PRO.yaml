@@ -1,0 +1,32 @@
+name: SYSTEM_DB_PRO
+fullyQualifiedName: hktest.SYSTEM_DB_PRO
+dataProducts: []
+tags: []
+owners: []
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
+  description: ""
+  displayName: hktest
+  deleted: false
+serviceType: Snowflake
+databaseSchemas:
+  - id: 08cbaf86-ac87-4351-a96c-dc1760450bc3
+    type: databaseSchema
+    name: DATA_GOVERNANCE_OBJECTS
+    fullyQualifiedName: hktest.SYSTEM_DB_PRO.DATA_GOVERNANCE_OBJECTS
+    displayName: DATA_GOVERNANCE_OBJECTS
+    deleted: false
+  - id: 45ebc3c5-ba00-4af5-9286-ea744cb0269e
+    type: databaseSchema
+    name: PUBLIC
+    fullyQualifiedName: hktest.SYSTEM_DB_PRO.PUBLIC
+    displayName: PUBLIC
+    deleted: false
+default: false
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/SYSTEM_DB_PRO
+domains: []
+sourceHash: ad362bcade1f1b17999426e42407b001
+entityStatus: Approved
