@@ -1,0 +1,45 @@
+name: 0550dbd9925bf784da115920bbfbe19a
+fullyQualifiedName: test_clickhouse.0550dbd9925bf784da115920bbfbe19a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"f054ec2b-b403-447a-996a-5985619ae1e0\",\"type\":\"table\"\
+        ,\"name\":\"processes\",\"fullyQualifiedName\":\"test_clickhouse.default.system.processes\"\
+        ,\"description\":\"Contains a list of currently executing processes (queries)\
+        \ with their progress.\",\"displayName\":\"processes\",\"deleted\":false}]"
+  previousVersion: 7.1
+  changeSummary: {}
+owners: []
+duration: 2.0
+users: []
+query: "SELECT `__table1`.`read_rows` AS `read_rows`, `__table1`.`read_bytes` AS `read_bytes`,\
+  \ `__table1`.`written_rows` AS `written_rows`, `__table1`.`written_bytes` AS `written_bytes`,\
+  \ `__table1`.`total_rows_approx` AS `total_rows_to_read`, `__table1`.`elapsed` AS\
+  \ `elapsed_ns`, `__table1`.`peak_memory_usage` AS `peak_memory_usage` FROM `system`.`processes`\
+  \ AS `__table1` WHERE `__table1`.`query_id` = ?"
+checksum: 0550dbd9925bf784da115920bbfbe19a
+queryDate: 1768521600000
+usedBy:
+  - sql-console:ulixiusthegreat@gmail.com
+tags: []
+queryUsedIn:
+  - id: f054ec2b-b403-447a-996a-5985619ae1e0
+    type: table
+    name: processes
+    fullyQualifiedName: test_clickhouse.default.system.processes
+    description: Contains a list of currently executing processes (queries) with their
+      progress.
+    displayName: processes
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

@@ -1,0 +1,50 @@
+name: 3913aae47a31bc781aa24d306dfc622a
+fullyQualifiedName: test_clickhouse.3913aae47a31bc781aa24d306dfc622a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b7ae43b4-8fff-4043-ad5a-ce7a5f862472\",\"type\":\"table\"\
+        ,\"name\":\"processors_profile_log\",\"fullyQualifiedName\":\"test_clickhouse.default.system.processors_profile_log\"\
+        ,\"description\":\"Contains profiling information on processors level (building\
+        \ blocks for a pipeline for query execution.\\n\\nIt is safe to truncate or\
+        \ drop this table at any time.\",\"displayName\":\"processors_profile_log\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 2.0
+users: []
+query: |-
+  SELECT min(event_time), now() - INTERVAL ? SECOND maxSettlePoint
+  FROM system.processors_profile_log
+  WHERE event_time >= toDateTime32(?)
+  AND event_date >= toDate(toDateTime32(?))
+  AND event_time <= maxSettlePoint
+checksum: 3913aae47a31bc781aa24d306dfc622a
+queryDate: 1768521600000
+usedBy:
+  - observability-internal
+tags: []
+queryUsedIn:
+  - id: b7ae43b4-8fff-4043-ad5a-ce7a5f862472
+    type: table
+    name: processors_profile_log
+    fullyQualifiedName: test_clickhouse.default.system.processors_profile_log
+    description: |-
+      Contains profiling information on processors level (building blocks for a pipeline for query execution.
+
+      It is safe to truncate or drop this table at any time.
+    displayName: processors_profile_log
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

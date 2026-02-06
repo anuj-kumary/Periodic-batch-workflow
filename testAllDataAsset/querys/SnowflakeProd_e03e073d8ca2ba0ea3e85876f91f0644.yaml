@@ -1,0 +1,29 @@
+name: e03e073d8ca2ba0ea3e85876f91f0644
+fullyQualifiedName: SnowflakeProd.e03e073d8ca2ba0ea3e85876f91f0644
+owners: []
+duration: 484.0
+users: []
+query: |-
+  select TABLE_NAME, NULL from information_schema.tables
+  where TABLE_SCHEMA = 'TPCH_SF1000'
+  AND TABLE_TYPE = 'BASE TABLE'
+  AND IS_TRANSIENT != 'YES'
+  AND IS_DYNAMIC != 'YES'
+checksum: e03e073d8ca2ba0ea3e85876f91f0644
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 25137c5d-1028-4b2c-9a8c-1dc9fb33d460
+    type: table
+    name: TABLES
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.TABLES
+    displayName: TABLES
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

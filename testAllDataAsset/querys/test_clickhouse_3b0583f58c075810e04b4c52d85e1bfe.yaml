@@ -1,0 +1,41 @@
+name: 3b0583f58c075810e04b4c52d85e1bfe
+fullyQualifiedName: test_clickhouse.3b0583f58c075810e04b4c52d85e1bfe
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"1e85da5a-e0e1-429d-bd36-b6342be1871a\",\"type\":\"table\"\
+        ,\"name\":\"databases\",\"fullyQualifiedName\":\"test_clickhouse.default.system.databases\"\
+        ,\"description\":\"Lists all databases of the current server.\",\"displayName\"\
+        :\"databases\",\"deleted\":false}]"
+  previousVersion: 0.9
+  changeSummary: {}
+owners: []
+duration: 25.0
+users: []
+query: "SELECT name , engine , engine_full AS \"engineFull\" FROM system . databases\
+  \ SETTINGS show_data_lake_catalogs_in_system_tables = ? , log_comment = ?"
+checksum: 3b0583f58c075810e04b4c52d85e1bfe
+queryDate: 1768521600000
+usedBy:
+  - sql-console:ulixiusthegreat@gmail.com
+tags: []
+queryUsedIn:
+  - id: 1e85da5a-e0e1-429d-bd36-b6342be1871a
+    type: table
+    name: databases
+    fullyQualifiedName: test_clickhouse.default.system.databases
+    description: Lists all databases of the current server.
+    displayName: databases
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

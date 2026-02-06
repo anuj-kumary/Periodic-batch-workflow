@@ -1,0 +1,27 @@
+name: e838351541b4b3d788c82070853a50f3
+fullyQualifiedName: SnowflakeProd.e838351541b4b3d788c82070853a50f3
+owners: []
+duration: 55.0
+users: []
+query: "SELECT percentile_cont(0.50) WITHIN GROUP (ORDER BY LEN(\"REGION_NAME\") ASC)\
+  \ AS median, percentile_cont(0.25) WITHIN GROUP (ORDER BY LEN(\"REGION_NAME\") ASC)\
+  \ AS \"firstQuartile\", percentile_cont(0.75) WITHIN GROUP (ORDER BY LEN(\"REGION_NAME\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"E2E_TEST\".\"REGIONS\"\n LIMIT 1"
+checksum: e838351541b4b3d788c82070853a50f3
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 25f68e6f-812c-4dd8-9143-cfbd6c865532
+    type: table
+    name: REGIONS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.REGIONS
+    displayName: REGIONS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

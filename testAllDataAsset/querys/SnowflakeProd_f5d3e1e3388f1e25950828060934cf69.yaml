@@ -1,0 +1,28 @@
+name: f5d3e1e3388f1e25950828060934cf69
+fullyQualifiedName: SnowflakeProd.f5d3e1e3388f1e25950828060934cf69
+owners: []
+duration: 73.0
+users: []
+query: "SELECT avg(\"E2E_TESTJOB_ID\") AS mean, count(\"E2E_TESTJOB_ID\") AS \"valuesCount\"\
+  , count(DISTINCT \"E2E_TESTJOB_ID\") AS \"distinctCount\", MIN(\"E2E_TESTJOB_ID\"\
+  ) AS min, MAX(\"E2E_TESTJOB_ID\") AS max, SUM(CASE WHEN (\"E2E_TESTJOB_ID\" IS NULL)\
+  \ THEN 1 ELSE 0 END) AS \"nullCount\", STDDEV_POP(\"E2E_TESTJOB_ID\") AS stddev,\
+  \ SUM(\"E2E_TESTJOB_ID\") AS sum \nFROM \"E2E_TEST\".\"JOBS\"\n LIMIT 1"
+checksum: f5d3e1e3388f1e25950828060934cf69
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e8f2b355-62a6-46de-97aa-96738f20bf8e
+    type: table
+    name: JOBS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.JOBS
+    displayName: JOBS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

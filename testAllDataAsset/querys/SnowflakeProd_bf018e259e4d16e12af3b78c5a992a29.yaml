@@ -1,0 +1,28 @@
+name: bf018e259e4d16e12af3b78c5a992a29
+fullyQualifiedName: SnowflakeProd.bf018e259e4d16e12af3b78c5a992a29
+owners: []
+duration: 72.0
+users: []
+query: "SELECT avg(LEN(\"COUNTRY_ID\")) AS mean, count(\"COUNTRY_ID\") AS \"valuesCount\"\
+  , count(DISTINCT \"COUNTRY_ID\") AS \"distinctCount\", MIN(LEN(\"COUNTRY_ID\"))\
+  \ AS min, MAX(LEN(\"COUNTRY_ID\")) AS max, SUM(CASE WHEN (\"COUNTRY_ID\" IS NULL)\
+  \ THEN 1 ELSE 0 END) AS \"nullCount\", STDDEV_POP(LEN(\"COUNTRY_ID\")) AS stddev,\
+  \ SUM(LEN(\"COUNTRY_ID\")) AS sum \nFROM \"E2E_TEST\".\"COUNTRIES\"\n LIMIT 1"
+checksum: bf018e259e4d16e12af3b78c5a992a29
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: ecb620d8-c061-448a-a775-b725f52bc088
+    type: table
+    name: COUNTRIES
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.COUNTRIES
+    displayName: COUNTRIES
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

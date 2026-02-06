@@ -1,0 +1,29 @@
+name: a3de8e5eb2a256ee39d063c6f6fa133a
+fullyQualifiedName: SnowflakeProd.a3de8e5eb2a256ee39d063c6f6fa133a
+owners: []
+duration: 99.0
+users: []
+query: "SELECT avg(LEN(\"E2E_TESTPHONE_NUMBER\")) AS mean, count(\"E2E_TESTPHONE_NUMBER\"\
+  ) AS \"valuesCount\", count(DISTINCT \"E2E_TESTPHONE_NUMBER\") AS \"distinctCount\"\
+  , MIN(LEN(\"E2E_TESTPHONE_NUMBER\")) AS min, MAX(LEN(\"E2E_TESTPHONE_NUMBER\"))\
+  \ AS max, SUM(CASE WHEN (\"E2E_TESTPHONE_NUMBER\" IS NULL) THEN 1 ELSE 0 END) AS\
+  \ \"nullCount\", STDDEV_POP(LEN(\"E2E_TESTPHONE_NUMBER\")) AS stddev, SUM(LEN(\"\
+  E2E_TESTPHONE_NUMBER\")) AS sum \nFROM \"E2E_TEST\".\"TEST_EMPLOYEES\"\n LIMIT 1"
+checksum: a3de8e5eb2a256ee39d063c6f6fa133a
+queryDate: 1723161600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8b64b31a-69b5-4ec1-b01f-a53b165f6e34
+    type: table
+    name: TEST_EMPLOYEES
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.TEST_EMPLOYEES
+    displayName: TEST_EMPLOYEES
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

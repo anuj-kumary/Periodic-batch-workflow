@@ -1,0 +1,26 @@
+name: a7ba34eebd14f40f00b9b8e35931fefa
+fullyQualifiedName: SnowflakeProd.a7ba34eebd14f40f00b9b8e35931fefa
+owners: []
+duration: 61.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"E2E_TESTDEPARTMENT_NAME\"\
+  ) AS count_1 \nFROM \"E2E_TEST\".\"TEST_DEPARTMENTS\" GROUP BY \"E2E_TESTDEPARTMENT_NAME\"\
+  \ \nHAVING count(\"E2E_TESTDEPARTMENT_NAME\") = 1) AS only_once\n LIMIT 1"
+checksum: a7ba34eebd14f40f00b9b8e35931fefa
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 86b90bf8-71af-4aad-b813-1bf5fa19bdfa
+    type: table
+    name: TEST_DEPARTMENTS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.TEST_DEPARTMENTS
+    displayName: TEST_DEPARTMENTS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

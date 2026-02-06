@@ -1,0 +1,26 @@
+name: cfdbffac952eb156566e86c91ef5df43
+fullyQualifiedName: SnowflakeProd.cfdbffac952eb156566e86c91ef5df43
+owners: []
+duration: 45.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"E2E_TESTSTREET_ADDRESS\"\
+  ) AS count_1 \nFROM \"E2E_TEST\".\"LOCATIONS\" GROUP BY \"E2E_TESTSTREET_ADDRESS\"\
+  \ \nHAVING count(\"E2E_TESTSTREET_ADDRESS\") = 1) AS only_once\n LIMIT 1"
+checksum: cfdbffac952eb156566e86c91ef5df43
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6d5d4286-e273-4bad-9939-3e260d8d0906
+    type: table
+    name: LOCATIONS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.LOCATIONS
+    displayName: LOCATIONS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

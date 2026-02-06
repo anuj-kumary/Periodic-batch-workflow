@@ -1,0 +1,45 @@
+name: 0af57b4dc3cd455f17ca77b34bf64b1a
+fullyQualifiedName: test_clickhouse.0af57b4dc3cd455f17ca77b34bf64b1a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"6d9abd82-4d97-4cc7-b805-1341963a4e20\",\"type\":\"table\"\
+        ,\"name\":\"part_log\",\"fullyQualifiedName\":\"test_clickhouse.default.system.part_log\"\
+        ,\"description\":\"This table contains information about events that occurred\
+        \ with data parts in the MergeTree family tables, such as adding or merging\
+        \ data.\\n\\nIt is safe to truncate or drop this table at any time.\",\"displayName\"\
+        :\"part_log\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 1.0
+users: []
+query: SELECT hostname FROM system.part_log LIMIT ?
+checksum: 0af57b4dc3cd455f17ca77b34bf64b1a
+queryDate: 1768521600000
+usedBy:
+  - observability-internal
+tags: []
+queryUsedIn:
+  - id: 6d9abd82-4d97-4cc7-b805-1341963a4e20
+    type: table
+    name: part_log
+    fullyQualifiedName: test_clickhouse.default.system.part_log
+    description: |-
+      This table contains information about events that occurred with data parts in the MergeTree family tables, such as adding or merging data.
+
+      It is safe to truncate or drop this table at any time.
+    displayName: part_log
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

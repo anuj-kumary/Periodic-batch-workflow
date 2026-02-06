@@ -1,0 +1,44 @@
+name: 0b46eb67a69cadc591d18c58f1030e89
+fullyQualifiedName: test_clickhouse.0b46eb67a69cadc591d18c58f1030e89
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"55d3bf99-b3b5-4181-ad92-9dad8dd3747d\",\"type\":\"table\"\
+        ,\"name\":\"warnings\",\"fullyQualifiedName\":\"test_clickhouse.default.system.warnings\"\
+        ,\"description\":\"Contains warnings about server configuration to be displayed\
+        \ by clickhouse-client right after it connects to the server.\",\"displayName\"\
+        :\"warnings\",\"deleted\":false}]"
+  previousVersion: 0.7
+  changeSummary: {}
+owners: []
+duration: 1.0
+users: []
+query: "SELECT CAST(?, ?) AS control_plane_id, CAST(?, ?) AS pod_id, CAST(now64(),\
+  \ ?) AS scrape_ts_microseconds, CAST(message, ?) AS message, CAST(message_format_string,\
+  \ ?) AS message_format_string FROM system.warnings"
+checksum: 0b46eb67a69cadc591d18c58f1030e89
+queryDate: 1768521600000
+usedBy:
+  - monitoring-internal
+tags: []
+queryUsedIn:
+  - id: 55d3bf99-b3b5-4181-ad92-9dad8dd3747d
+    type: table
+    name: warnings
+    fullyQualifiedName: test_clickhouse.default.system.warnings
+    description: Contains warnings about server configuration to be displayed by clickhouse-client
+      right after it connects to the server.
+    displayName: warnings
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

@@ -1,0 +1,42 @@
+name: 1f8ab0ab443c8059ed9e2116f3ba1635
+fullyQualifiedName: test_clickhouse.1f8ab0ab443c8059ed9e2116f3ba1635
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"571f4161-d8c9-4e33-b3f2-8d0e78a4c46f\",\"type\":\"table\"\
+        ,\"name\":\"mutations\",\"fullyQualifiedName\":\"test_clickhouse.default.system.mutations\"\
+        ,\"description\":\"Contains a list of mutations and their progress. Each mutation\
+        \ command is represented by a single row.\",\"displayName\":\"mutations\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 1.0
+users: []
+query: SELECT count(*) FROM system.mutations
+checksum: 1f8ab0ab443c8059ed9e2116f3ba1635
+queryDate: 1768521600000
+usedBy:
+  - observability-internal
+tags: []
+queryUsedIn:
+  - id: 571f4161-d8c9-4e33-b3f2-8d0e78a4c46f
+    type: table
+    name: mutations
+    fullyQualifiedName: test_clickhouse.default.system.mutations
+    description: Contains a list of mutations and their progress. Each mutation command
+      is represented by a single row.
+    displayName: mutations
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

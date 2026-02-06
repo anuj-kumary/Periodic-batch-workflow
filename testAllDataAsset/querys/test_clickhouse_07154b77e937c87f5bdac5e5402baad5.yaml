@@ -1,0 +1,50 @@
+name: 07154b77e937c87f5bdac5e5402baad5
+fullyQualifiedName: test_clickhouse.07154b77e937c87f5bdac5e5402baad5
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"ce291ad1-8e70-4d3c-a1e8-a0d16070afd1\",\"type\":\"table\"\
+        ,\"name\":\"tables\",\"fullyQualifiedName\":\"test_clickhouse.default.system.tables\"\
+        ,\"description\":\"Lists all tables of the current server.\",\"displayName\"\
+        :\"tables\",\"deleted\":false}]"
+  previousVersion: 0.5
+  changeSummary: {}
+owners: []
+duration: 589.0
+users: []
+query: |-
+  SELECT
+              name,
+              uuid,
+              hostname() as h,
+              data_paths[?] as data_path,
+              create_table_query as schema
+          FROM system.tables
+          WHERE database = ?
+          AND (name LIKE ? OR name LIKE ?)
+          AND (storage_policy = ? OR storage_policy LIKE ?)
+checksum: 07154b77e937c87f5bdac5e5402baad5
+queryDate: 1768521600000
+usedBy:
+  - operator-internal
+tags: []
+queryUsedIn:
+  - id: ce291ad1-8e70-4d3c-a1e8-a0d16070afd1
+    type: table
+    name: tables
+    fullyQualifiedName: test_clickhouse.default.system.tables
+    description: Lists all tables of the current server.
+    displayName: tables
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed
