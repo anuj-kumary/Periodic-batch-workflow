@@ -1,0 +1,169 @@
+name: employee_details2
+fullyQualifiedName: dbx - keshav.demo.default.employee_details2
+tableType: Regular
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.default.employee_details2.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_info
+    dataType: STRUCT
+    dataTypeDisplay: "struct<name:string,contact:struct<email:string,phone:string>>"
+    fullyQualifiedName: dbx - keshav.demo.default.employee_details2.customer_info
+    tags: []
+    children:
+      - name: name
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: dbx - keshav.demo.default.employee_details2.customer_info.name
+        tags: []
+        children: []
+      - name: contact
+        dataType: STRUCT
+        dataTypeDisplay: "struct<email:string,phone:string>"
+        fullyQualifiedName: dbx - keshav.demo.default.employee_details2.customer_info.contact
+        tags: []
+        children:
+          - name: email
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.customer_info.contact.email
+            tags: []
+            children: []
+          - name: phone
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.customer_info.contact.phone
+            tags: []
+            children: []
+    customMetrics: []
+  - name: order_details
+    dataType: STRUCT
+    dataTypeDisplay: "struct<order_id:string,items:array<struct<item_id:string,item_name:string,price:double>>,shipping:struct<address:struct<street:string,city:string,country:string>,method:string,delivered:boolean>>"
+    fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details
+    tags: []
+    children:
+      - name: order_id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.order_id
+        tags: []
+        children: []
+      - name: items
+        dataType: ARRAY
+        arrayDataType: STRUCT
+        dataTypeDisplay: "array<struct<item_id:string,item_name:string,price:double>>"
+        fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.items
+        tags: []
+        children:
+          - name: item_id
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.items.item_id
+            tags: []
+            children: []
+          - name: item_name
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.items.item_name
+            tags: []
+            children: []
+          - name: price
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.items.price
+            tags: []
+            children: []
+      - name: shipping
+        dataType: STRUCT
+        dataTypeDisplay: "struct<address:struct<street:string,city:string,country:string>,method:string,delivered:boolean>"
+        fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping
+        tags: []
+        children:
+          - name: address
+            dataType: STRUCT
+            dataTypeDisplay: "struct<street:string,city:string,country:string>"
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping.address
+            tags: []
+            children:
+              - name: street
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping.address.street
+                tags: []
+                children: []
+              - name: city
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping.address.city
+                tags: []
+                children: []
+              - name: country
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping.address.country
+                tags: []
+                children: []
+          - name: method
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping.method
+            tags: []
+            children: []
+          - name: delivered
+            dataType: BOOLEAN
+            dataTypeDisplay: boolean
+            fullyQualifiedName: dbx - keshav.demo.default.employee_details2.order_details.shipping.delivered
+            tags: []
+            children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: d6ba1f2a-58d5-43fd-9074-9e09d44a50a5
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: dbx - keshav.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/ab1a9a4f-c974-43c5-8434-ceac5ad4eb6f
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 0825c81f08d400de0cd19c0800bd9533
+processedLineage: false
+entityStatus: Unprocessed

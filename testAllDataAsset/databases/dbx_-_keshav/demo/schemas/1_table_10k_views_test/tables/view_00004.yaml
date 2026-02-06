@@ -1,0 +1,98 @@
+name: view_00004
+fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00004
+tableType: View
+columns:
+  - name: department
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00004.department
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: employee_count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00004.employee_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: avg_salary
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(14,6)"
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00004.avg_salary
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: avg_performance
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00004.avg_performance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: avg_experience
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00004.avg_experience
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: fd0bd7a8-8b42-461f-b07b-5829e0e9d493
+  type: databaseSchema
+  name: 1_table_10k_views_test
+  fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test
+  displayName: 1_table_10k_views_test
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+schemaDefinition: "SELECT \n                        department,\n                \
+  \        COUNT(*) as employee_count,\n                        AVG(salary) as avg_salary,\n\
+  \                        AVG(performance_score) as avg_performance,\n          \
+  \              AVG(years_experience) as avg_experience\n                    FROM\
+  \ demo.1_table_10k_views_test.master_data_source\n                    WHERE is_active\
+  \ = TRUE\n                    GROUP BY department"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 64b0bac36e21555db0873644c39b9ba8
+processedLineage: false
+entityStatus: Unprocessed

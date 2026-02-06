@@ -1,0 +1,105 @@
+name: view_00003
+fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003
+tableType: View
+columns:
+  - name: employee_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003.employee_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: full_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003.full_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: department
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003.department
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: position
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003.position
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hire_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003.hire_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_remote
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00003.is_remote
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: fd0bd7a8-8b42-461f-b07b-5829e0e9d493
+  type: databaseSchema
+  name: 1_table_10k_views_test
+  fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test
+  displayName: 1_table_10k_views_test
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  SELECT employee_id, full_name, department, position, hire_date, is_remote
+                      FROM demo.1_table_10k_views_test.master_data_source
+                      WHERE is_active = TRUE AND status = 'Active'
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fcf397b6d14ddf452b51ceb0c1b441ef
+processedLineage: false
+entityStatus: Unprocessed

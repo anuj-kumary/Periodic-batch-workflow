@@ -1,0 +1,94 @@
+name: user_events_gold
+fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold
+description: "Gold layer: Aggregated user event metrics"
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: event_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold.event_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: event_count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold.event_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_event
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold.first_event
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_event
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold.last_event
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: cd104f87-47b2-488f-9689-86cfb690c9f5
+  type: databaseSchema
+  name: kafka_ingestion
+  fullyQualifiedName: dbx - keshav.demo.kafka_ingestion
+  displayName: kafka_ingestion
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/befcfc08-00dd-4c46-8e45-99e8581880fd
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3805c18ebdd1c7c7e1da6def9dfc7e11
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,128 @@
+name: user_events_silver
+fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver
+description: "Silver layer: Parsed and cleaned user events"
+tableType: Regular
+columns:
+  - name: kafka_key
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.kafka_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: event_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.event_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: event_timestamp
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.event_timestamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: properties
+    dataType: MAP
+    dataTypeDisplay: "map<string,string>"
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.properties
+    tags: []
+    children: []
+    customMetrics: []
+  - name: topic
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.topic
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.partition
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: offset
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.offset
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: kafka_timestamp
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver.kafka_timestamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: cd104f87-47b2-488f-9689-86cfb690c9f5
+  type: databaseSchema
+  name: kafka_ingestion
+  fullyQualifiedName: dbx - keshav.demo.kafka_ingestion
+  displayName: kafka_ingestion
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/d88f01b4-95c5-4c79-841d-1d457be8891d
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 0128855943e65effb8dc756e0bcdd590
+processedLineage: false
+entityStatus: Unprocessed

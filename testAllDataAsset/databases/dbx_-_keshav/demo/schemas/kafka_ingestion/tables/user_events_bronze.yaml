@@ -1,0 +1,103 @@
+name: user_events_bronze
+fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze
+description: "Bronze layer: Raw Kafka events from Confluent Cloud"
+tableType: Regular
+columns:
+  - name: kafka_key
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze.kafka_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: kafka_value
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze.kafka_value
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: topic
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze.topic
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze.partition
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: offset
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze.offset
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: kafka_timestamp
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze.kafka_timestamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: cd104f87-47b2-488f-9689-86cfb690c9f5
+  type: databaseSchema
+  name: kafka_ingestion
+  fullyQualifiedName: dbx - keshav.demo.kafka_ingestion
+  displayName: kafka_ingestion
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/f6c72251-4583-4888-9991-cd471fbd8dd0
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d5252802fab570626a0119337397307a
+processedLineage: false
+entityStatus: Unprocessed

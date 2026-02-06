@@ -1,0 +1,70 @@
+name: table3
+fullyQualifiedName: dbx - keshav.demo.iceberg_demo.table3
+tableType: Regular
+columns:
+  - name: a
+    dataType: STRUCT
+    dataTypeDisplay: struct<b:string>
+    fullyQualifiedName: dbx - keshav.demo.iceberg_demo.table3.a
+    tags: []
+    children:
+      - name: b
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: dbx - keshav.demo.iceberg_demo.table3.a.b
+        tags: []
+        children: []
+    customMetrics: []
+  - name: b
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.iceberg_demo.table3.b
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: 91893996-1041-4223-8563-9a94f5f70faf
+  type: databaseSchema
+  name: iceberg_demo
+  fullyQualifiedName: dbx - keshav.demo.iceberg_demo
+  displayName: iceberg_demo
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/ad19951c-60d4-48d1-a452-5523272b4cb5
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 34054241fe64e6ffd5f35195d7f8207f
+processedLineage: false
+entityStatus: Unprocessed
