@@ -1,0 +1,160 @@
+name: table_privileges
+fullyQualifiedName: oracle_test.default.sys.table_privileges
+tableType: View
+columns:
+  - name: grantee
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    description: Name of the user to whom access was granted
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.grantee
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    description: Owner of the object
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.owner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    description: Name of the object
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.table_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: grantor
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    description: Name of the user who performed the grant
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.grantor
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: select_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to SELECT from the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.select_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: insert_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to INSERT into the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.insert_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: delete_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to DELETE from the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.delete_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: update_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to UPDATE the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.update_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: references_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to make REFERENCES to the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.references_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: alter_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to ALTER the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.alter_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: index_priv
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    description: Permission to create/drop an INDEX on the object?
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.index_priv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2
+    description: Timestamp for the grant
+    fullyQualifiedName: oracle_test.default.sys.table_privileges.created
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: bbc34649b4c57d33dc236a124b0716dd
+processedLineage: false
+entityStatus: Approved

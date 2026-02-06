@@ -1,0 +1,103 @@
+name: sqlobj$data_datapump
+fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump
+tableType: View
+columns:
+  - name: signature
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.signature
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: category
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.category
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: obj_type
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.obj_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: plan_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.plan_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: comp_data
+    dataType: CLOB
+    dataLength: 1
+    dataTypeDisplay: clob
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.comp_data
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: spare1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.spare1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare2
+    dataType: CLOB
+    dataLength: 1
+    dataTypeDisplay: clob
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$data_datapump.spare2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 394cf6ee15a5d0c0f3ad80d3cc83a49d
+processedLineage: false
+entityStatus: Approved

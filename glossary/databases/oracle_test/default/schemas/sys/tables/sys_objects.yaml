@@ -1,0 +1,103 @@
+name: sys_objects
+fullyQualifiedName: oracle_test.default.sys.sys_objects
+tableType: View
+columns:
+  - name: object_type
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: varchar2(18)
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.object_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: object_type_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.object_type_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_type_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.segment_type_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: object_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.object_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: header_file
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.header_file
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: header_block
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.header_block
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ts_number
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_objects.ts_number
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 375ceb0680685fe488fb66871d9d35b0
+processedLineage: false
+entityStatus: Approved

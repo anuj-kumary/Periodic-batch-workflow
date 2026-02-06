@@ -1,0 +1,123 @@
+name: RULE_SET_PTPDTY$
+fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$
+tableType: Regular
+columns:
+  - name: RS_OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.RS_OBJ#
+    tags: []
+    children: []
+    customMetrics: []
+  - name: EC_OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.EC_OBJ#
+    tags: []
+    children: []
+    customMetrics: []
+  - name: rule_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.rule_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: rule_or_piece
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.rule_or_piece
+    tags: []
+    children: []
+    customMetrics: []
+  - name: rop_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.rop_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: arop_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.arop_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ptpdty_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.ptpdty_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ptp
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.ptp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dtynum
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.RULE_SET_PTPDTY$.dtynum
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - RS_OBJ#
+      - EC_OBJ#
+      - rule_id
+      - rule_or_piece
+      - rop_id
+      - arop_id
+      - ptpdty_id
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 00a64a3111d05af9cf6f2795fd639dbb
+processedLineage: false
+entityStatus: Approved
