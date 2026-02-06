@@ -1,0 +1,26 @@
+name: f2c6ca31416f4b5eefdeaf1cc8d4c80d
+fullyQualifiedName: hktest.f2c6ca31416f4b5eefdeaf1cc8d4c80d
+owners: []
+duration: 46.0
+users: []
+query: "SELECT \"HK_SCHEMA\".\"TEST\".\"ID\" AS \"HK_SCHEMA_TEST_ID\", \"HK_SCHEMA\"\
+  .\"TEST\".\"NAME\" AS \"HK_SCHEMA_TEST_NAME\" \nFROM \"HK_SCHEMA\".\"TEST\"\n LIMIT\
+  \ ?"
+checksum: f2c6ca31416f4b5eefdeaf1cc8d4c80d
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: eaa193c0-e122-4d89-82f4-3140eb8fb838
+    type: table
+    name: TEST
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.TEST
+    displayName: TEST
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

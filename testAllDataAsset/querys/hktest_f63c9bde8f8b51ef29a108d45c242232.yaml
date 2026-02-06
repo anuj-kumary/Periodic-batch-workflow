@@ -1,0 +1,30 @@
+name: f63c9bde8f8b51ef29a108d45c242232
+fullyQualifiedName: hktest.f63c9bde8f8b51ef29a108d45c242232
+owners: []
+duration: 336.0
+users: []
+query: "SELECT avg(\"PS_SUPPLYCOST\") AS mean, count(\"PS_SUPPLYCOST\") AS \"valuesCount\"\
+  , count(DISTINCT \"PS_SUPPLYCOST\") AS \"distinctCount\", MIN(\"PS_SUPPLYCOST\"\
+  ) AS min, MAX(\"PS_SUPPLYCOST\") AS max, coalesce(SUM(CASE WHEN (\"PS_SUPPLYCOST\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"PS_SUPPLYCOST\") AS\
+  \ stddev, SUM(\"PS_SUPPLYCOST\") AS sum \nFROM \"TPCH_SF10\".\"PARTSUPP\"\n LIMIT\
+  \ ?"
+checksum: f63c9bde8f8b51ef29a108d45c242232
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9bbaa7c7-34ce-4cd3-a409-43f685e7074b
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

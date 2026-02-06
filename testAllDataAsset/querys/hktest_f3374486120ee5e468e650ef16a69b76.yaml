@@ -1,0 +1,28 @@
+name: f3374486120ee5e468e650ef16a69b76
+fullyQualifiedName: hktest.f3374486120ee5e468e650ef16a69b76
+owners: []
+duration: 309.0
+users: []
+query: "SELECT avg(LEN(\"EMAIL\")) AS mean, count(\"EMAIL\") AS \"valuesCount\", count(DISTINCT\
+  \ \"EMAIL\") AS \"distinctCount\", MIN(LEN(\"EMAIL\")) AS min, MAX(LEN(\"EMAIL\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"EMAIL\" IS ?) THEN ? ELSE ? END), ?) AS \"\
+  nullCount\", STDDEV_POP(LEN(\"EMAIL\")) AS stddev, SUM(LEN(\"EMAIL\")) AS sum \n\
+  FROM \"MSSQLBANKING_STG\".\"CUSTOMERACCOUNTS\"\n LIMIT ?"
+checksum: f3374486120ee5e468e650ef16a69b76
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d03f73b0-8a36-4cd5-a82f-a07db17fe588
+    type: table
+    name: CUSTOMERACCOUNTS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG.CUSTOMERACCOUNTS
+    displayName: CUSTOMERACCOUNTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,40 @@
+name: f454392422079daa3fa1ecef09828d04
+fullyQualifiedName: hktest.f454392422079daa3fa1ecef09828d04
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d121e49b-a72f-4cb2-a739-b4f79f844a69\",\"type\":\"table\"\
+        ,\"name\":\"NATION\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION\"\
+        ,\"description\":\"Nation data as defined by TPC-H\",\"displayName\":\"NATION\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 223.0
+users: []
+query: "SELECT avg(LEN(\"N_NAME\")) AS mean, count(\"N_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"N_NAME\") AS \"distinctCount\", MIN(LEN(\"N_NAME\")) AS min,\
+  \ MAX(LEN(\"N_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"N_NAME\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"N_NAME\")) AS stddev, SUM(LEN(\"\
+  N_NAME\")) AS sum \nFROM \"TPCH_SF1\".\"NATION\"\n LIMIT ?"
+checksum: f454392422079daa3fa1ecef09828d04
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d121e49b-a72f-4cb2-a739-b4f79f844a69
+    type: table
+    name: NATION
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.NATION
+    description: Nation data as defined by TPC-H
+    displayName: NATION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

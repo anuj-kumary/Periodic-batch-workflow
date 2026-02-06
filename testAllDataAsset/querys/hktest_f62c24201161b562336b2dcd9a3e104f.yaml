@@ -1,0 +1,29 @@
+name: f62c24201161b562336b2dcd9a3e104f
+fullyQualifiedName: hktest.f62c24201161b562336b2dcd9a3e104f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"c6aef17d-6759-4c61-a8b0-80ba9767fc04\",\"type\":\"table\"\
+        ,\"name\":\"RAW_PAYMENTS\",\"fullyQualifiedName\":\"hktest.CUSTOMERS.JAFFLE_SHOP.RAW_PAYMENTS\"\
+        ,\"displayName\":\"RAW_PAYMENTS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 37.0
+users: []
+query: "SELECT \"ID\", \"ORDER_ID\", \"PAYMENT_METHOD\", \"AMOUNT\" FROM CUSTOMERS.JAFFLE_SHOP.RAW_PAYMENTS\
+  \ WHERE ( AMOUNT IS ?)"
+checksum: f62c24201161b562336b2dcd9a3e104f
+queryDate: 1751760000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

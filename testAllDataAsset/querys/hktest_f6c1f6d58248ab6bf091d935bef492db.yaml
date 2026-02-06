@@ -1,0 +1,36 @@
+name: f6c1f6d58248ab6bf091d935bef492db
+fullyQualifiedName: hktest.f6c1f6d58248ab6bf091d935bef492db
+owners: []
+duration: 84.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"SDR_CALENDLY_UTM_C\"\
+  \ AS \"SDR_CALENDLY_UTM_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  SDR_CALENDLY_UTM_C\" AS \"SDR_CALENDLY_UTM_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n\
+  \ SELECT avg(LEN(\"SDR_CALENDLY_UTM_C\")) AS mean, count(\"SDR_CALENDLY_UTM_C\"\
+  ) AS \"valuesCount\", count(DISTINCT \"SDR_CALENDLY_UTM_C\") AS \"distinctCount\"\
+  , MIN(LEN(\"SDR_CALENDLY_UTM_C\")) AS min, MAX(LEN(\"SDR_CALENDLY_UTM_C\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"SDR_CALENDLY_UTM_C\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", STDDEV_POP(LEN(\"SDR_CALENDLY_UTM_C\")) AS stddev, SUM(LEN(\"SDR_CALENDLY_UTM_C\"\
+  )) AS sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n LIMIT ?"
+checksum: f6c1f6d58248ab6bf091d935bef492db
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,28 @@
+name: f6df9ca1aa8e2bb53d2193464b2e7007
+fullyQualifiedName: hktest.f6df9ca1aa8e2bb53d2193464b2e7007
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"3e3e4330-a940-400b-8b51-ca9f72ce7483\",\"type\":\"table\"\
+        ,\"name\":\"RAW_ORDERS\",\"fullyQualifiedName\":\"hktest.CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS\"\
+        ,\"displayName\":\"RAW_ORDERS\",\"deleted\":false}]"
+  previousVersion: 0.8
+  changeSummary: {}
+owners: []
+duration: 25.0
+users: []
+query: SELECT "ID" FROM CUSTOMERS.JAFFLE_SHOP.RAW_ORDERS
+checksum: f6df9ca1aa8e2bb53d2193464b2e7007
+queryDate: 1751760000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

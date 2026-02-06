@@ -1,0 +1,35 @@
+name: f1f6e755aae59c3bf75698c0426dc7ae
+fullyQualifiedName: hktest.f1f6e755aae59c3bf75698c0426dc7ae
+owners: []
+duration: 75.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"ONBOARDING_DECK_C\"\
+  \ AS \"ONBOARDING_DECK_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  ONBOARDING_DECK_C\" AS \"ONBOARDING_DECK_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n\
+  \ SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"ONBOARDING_DECK_C\") ASC)\
+  \ AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"ONBOARDING_DECK_C\"\
+  ) ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"ONBOARDING_DECK_C\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n LIMIT\
+  \ ?"
+checksum: f1f6e755aae59c3bf75698c0426dc7ae
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

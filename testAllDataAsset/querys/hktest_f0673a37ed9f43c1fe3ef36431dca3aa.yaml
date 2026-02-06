@@ -1,0 +1,39 @@
+name: f0673a37ed9f43c1fe3ef36431dca3aa
+fullyQualifiedName: hktest.f0673a37ed9f43c1fe3ef36431dca3aa
+owners: []
+duration: 477.0
+users: []
+query: "WITH \"7e1e38f985be2754c08477ddaebae286_rnd\" AS \n(SELECT \"WEB_SALES_1\"\
+  .\"WS_NET_PAID_INC_TAX\" AS \"WS_NET_PAID_INC_TAX\" \nFROM \"TPCDS_SF100TCL\".\"\
+  WEB_SALES\" AS \"WEB_SALES_1\" TABLESAMPLE ROW(? ROWS)), \n\"7e1e38f985be2754c08477ddaebae286_sample\"\
+  \ AS \n(SELECT \"7e1e38f985be2754c08477ddaebae286_rnd\".\"WS_NET_PAID_INC_TAX\"\
+  \ AS \"WS_NET_PAID_INC_TAX\" \nFROM \"7e1e38f985be2754c08477ddaebae286_rnd\")\n\
+  \ SELECT count(CASE WHEN (\"WS_NET_PAID_INC_TAX\" >= ? AND \"WS_NET_PAID_INC_TAX\"\
+  \ < ?) THEN \"WS_NET_PAID_INC_TAX\" END) AS \"3.720 to 2.366K\", count(CASE WHEN\
+  \ (\"WS_NET_PAID_INC_TAX\" >= ? AND \"WS_NET_PAID_INC_TAX\" < ?) THEN \"WS_NET_PAID_INC_TAX\"\
+  \ END) AS \"2.366K to 4.727K\", count(CASE WHEN (\"WS_NET_PAID_INC_TAX\" >= ? AND\
+  \ \"WS_NET_PAID_INC_TAX\" < ?) THEN \"WS_NET_PAID_INC_TAX\" END) AS \"4.727K to\
+  \ 7.089K\", count(CASE WHEN (\"WS_NET_PAID_INC_TAX\" >= ? AND \"WS_NET_PAID_INC_TAX\"\
+  \ < ?) THEN \"WS_NET_PAID_INC_TAX\" END) AS \"7.089K to 9.451K\", count(CASE WHEN\
+  \ (\"WS_NET_PAID_INC_TAX\" >= ? AND \"WS_NET_PAID_INC_TAX\" < ?) THEN \"WS_NET_PAID_INC_TAX\"\
+  \ END) AS \"9.451K to 11.813K\", count(CASE WHEN (\"WS_NET_PAID_INC_TAX\" >= ?)\
+  \ THEN \"WS_NET_PAID_INC_TAX\" END) AS \"11.813K and up\" \nFROM \"7e1e38f985be2754c08477ddaebae286_sample\"\
+  \n LIMIT ?"
+checksum: f0673a37ed9f43c1fe3ef36431dca3aa
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7f12a8b5-822b-4eb5-97e2-6d3a4cb1ca7e
+    type: table
+    name: WEB_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_SALES
+    displayName: WEB_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

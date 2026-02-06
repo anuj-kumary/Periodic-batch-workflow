@@ -1,0 +1,35 @@
+name: f5c65103e236a553f3aa127d7e6a78bb
+fullyQualifiedName: hktest.f5c65103e236a553f3aa127d7e6a78bb
+owners: []
+duration: 527.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(\"ANOMALY_SCORE\") AS mean, count(\"ANOMALY_SCORE\") AS \"valuesCount\"\
+  , count(DISTINCT \"ANOMALY_SCORE\") AS \"distinctCount\", MIN(\"ANOMALY_SCORE\"\
+  ) AS min, MAX(\"ANOMALY_SCORE\") AS max, coalesce(SUM(CASE WHEN (\"ANOMALY_SCORE\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"ANOMALY_SCORE\") AS\
+  \ stddev, SUM(\"ANOMALY_SCORE\") AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"METRICS_ANOMALY_SCORE\"\
+  \n LIMIT ?"
+checksum: f5c65103e236a553f3aa127d7e6a78bb
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 49ed908c-886f-4af7-bb76-f93d3d974e9b
+    type: table
+    name: METRICS_ANOMALY_SCORE
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.METRICS_ANOMALY_SCORE
+    displayName: METRICS_ANOMALY_SCORE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

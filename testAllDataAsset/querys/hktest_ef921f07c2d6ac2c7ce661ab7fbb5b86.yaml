@@ -1,0 +1,24 @@
+name: ef921f07c2d6ac2c7ce661ab7fbb5b86
+fullyQualifiedName: hktest.ef921f07c2d6ac2c7ce661ab7fbb5b86
+owners: []
+duration: 163.0
+users:
+  - id: 8e01994c-bb2c-4d30-afdb-43fe45dc66b3
+    type: user
+    name: teddy
+    fullyQualifiedName: teddy
+    displayName: Teddy Crépineau
+    deleted: false
+query: "SELECT CONVERT_TIMEZONE(?, MAX(LAST_UPDATE_AT)) FROM CUSTOMERS LIMIT ?;"
+checksum: ef921f07c2d6ac2c7ce661ab7fbb5b86
+queryDate: 1750982400000
+usedBy:
+  - TEDDY
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

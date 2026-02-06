@@ -1,0 +1,36 @@
+name: efa7b9e569067e49364e845159d30057
+fullyQualifiedName: hktest.efa7b9e569067e49364e845159d30057
+owners: []
+duration: 79.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"BILLING_LATITUDE\"\
+  \ AS \"BILLING_LATITUDE\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  BILLING_LATITUDE\" AS \"BILLING_LATITUDE\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n\
+  \ SELECT avg(\"BILLING_LATITUDE\") AS mean, count(\"BILLING_LATITUDE\") AS \"valuesCount\"\
+  , count(DISTINCT \"BILLING_LATITUDE\") AS \"distinctCount\", MIN(\"BILLING_LATITUDE\"\
+  ) AS min, MAX(\"BILLING_LATITUDE\") AS max, coalesce(SUM(CASE WHEN (\"BILLING_LATITUDE\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"BILLING_LATITUDE\"\
+  ) AS stddev, SUM(\"BILLING_LATITUDE\") AS sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n\
+  \ LIMIT ?"
+checksum: efa7b9e569067e49364e845159d30057
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,28 @@
+name: f74d665b98c82f708b763a328014a55b
+fullyQualifiedName: hktest.f74d665b98c82f708b763a328014a55b
+owners: []
+duration: 207.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"S_NAME\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"S_NAME\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"S_NAME\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"TPCH_SF100\".\"SUPPLIER\"\n LIMIT ?"
+checksum: f74d665b98c82f708b763a328014a55b
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b34210ba-5818-4ae4-95a1-4f393705da90
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

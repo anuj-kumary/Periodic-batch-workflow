@@ -1,0 +1,32 @@
+name: f0f9e56c2fcd26bf17eee8f6d5d1c643
+fullyQualifiedName: hktest.f0f9e56c2fcd26bf17eee8f6d5d1c643
+owners: []
+duration: 25.0
+users: []
+query: |-
+  SELECT
+      c.customer_id AS customer_id,
+      c.first_name,
+      c.last_name,
+      COUNT(o.id) AS order_count
+  FROM
+      jaffle_shop.customers c
+  LEFT JOIN
+      jaffle_shop.orders o
+  ON c.id = o.user_id
+  GROUP BY
+      c.id, c.first_name, c.last_name
+  ORDER BY
+      order_count DESC;
+checksum: f0f9e56c2fcd26bf17eee8f6d5d1c643
+queryDate: 1744675200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

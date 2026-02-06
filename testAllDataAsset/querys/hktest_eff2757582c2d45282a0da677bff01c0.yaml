@@ -1,0 +1,34 @@
+name: eff2757582c2d45282a0da677bff01c0
+fullyQualifiedName: hktest.eff2757582c2d45282a0da677bff01c0
+owners: []
+duration: 65.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"DATA_ISSUE_ID\") ASC)\
+  \ AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"DATA_ISSUE_ID\") ASC)\
+  \ AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"DATA_ISSUE_ID\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ELEMENTARY_TEST_RESULTS\"\
+  \n LIMIT ?"
+checksum: eff2757582c2d45282a0da677bff01c0
+queryDate: 1748563200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 25275c7a-6a78-413e-9b68-9105a233d254
+    type: table
+    name: ELEMENTARY_TEST_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ELEMENTARY_TEST_RESULTS
+    displayName: ELEMENTARY_TEST_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

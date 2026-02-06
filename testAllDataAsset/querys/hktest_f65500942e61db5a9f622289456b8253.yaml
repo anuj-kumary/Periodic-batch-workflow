@@ -1,0 +1,32 @@
+name: f65500942e61db5a9f622289456b8253
+fullyQualifiedName: hktest.f65500942e61db5a9f622289456b8253
+owners: []
+duration: 81.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"RUN_COMPLETED_AT\"\
+  ) AS count_1 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"JOB_RUN_RESULTS\" GROUP BY \"RUN_COMPLETED_AT\"\
+  \ \nHAVING count(\"RUN_COMPLETED_AT\") = ?) AS only_once\n LIMIT ?"
+checksum: f65500942e61db5a9f622289456b8253
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: ab6b06ab-8cab-4e61-ac8d-ff7c0703bf40
+    type: table
+    name: JOB_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS
+    displayName: JOB_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,28 @@
+name: f6f954c61b99a492084ebd856560015f
+fullyQualifiedName: hktest.f6f954c61b99a492084ebd856560015f
+owners: []
+duration: 209.0
+users: []
+query: "SELECT avg(\"BALANCE\") AS mean, count(\"BALANCE\") AS \"valuesCount\", count(DISTINCT\
+  \ \"BALANCE\") AS \"distinctCount\", MIN(\"BALANCE\") AS min, MAX(\"BALANCE\") AS\
+  \ max, coalesce(SUM(CASE WHEN (\"BALANCE\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"BALANCE\") AS stddev, SUM(\"BALANCE\") AS sum \nFROM \"MSSQLBANKING_ACCOUNT\"\
+  .\"BANKACCOUNT\"\n LIMIT ?"
+checksum: f6f954c61b99a492084ebd856560015f
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6f76a5d5-3b77-43b8-9af6-d88def60b362
+    type: table
+    name: BANKACCOUNT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.BANKACCOUNT
+    displayName: BANKACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

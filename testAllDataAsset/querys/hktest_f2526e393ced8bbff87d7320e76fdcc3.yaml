@@ -1,0 +1,35 @@
+name: f2526e393ced8bbff87d7320e76fdcc3
+fullyQualifiedName: hktest.f2526e393ced8bbff87d7320e76fdcc3
+owners: []
+duration: 32.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"GENERATED_AT\")) AS mean, count(\"GENERATED_AT\") AS \"valuesCount\"\
+  , count(DISTINCT \"GENERATED_AT\") AS \"distinctCount\", MIN(LEN(\"GENERATED_AT\"\
+  )) AS min, MAX(LEN(\"GENERATED_AT\")) AS max, coalesce(SUM(CASE WHEN (\"GENERATED_AT\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"GENERATED_AT\"\
+  )) AS stddev, SUM(LEN(\"GENERATED_AT\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_EXPOSURES\"\n LIMIT ?"
+checksum: f2526e393ced8bbff87d7320e76fdcc3
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 63c57e4c-b711-41ac-87e8-2bc0b63008df
+    type: table
+    name: DBT_EXPOSURES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES
+    displayName: DBT_EXPOSURES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

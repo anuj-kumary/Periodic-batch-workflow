@@ -1,0 +1,33 @@
+name: f1ce5cbf28d5a5fdbed79bf16f65edce
+fullyQualifiedName: hktest.f1ce5cbf28d5a5fdbed79bf16f65edce
+owners: []
+duration: 70.0
+users: []
+query: "WITH \"4c9e7581028a01fc71dfc3997bd40912_rnd\" AS \n(SELECT \"LOAN_1\".\"LOAN_PREF_AMT\"\
+  \ AS \"LOAN_PREF_AMT\" \nFROM \"TRANSIENT\".\"LOAN\" AS \"LOAN_1\" TABLESAMPLE ROW(?\
+  \ ROWS)), \n\"4c9e7581028a01fc71dfc3997bd40912_sample\" AS \n(SELECT \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  .\"LOAN_PREF_AMT\" AS \"LOAN_PREF_AMT\" \nFROM \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  )\n SELECT avg(\"LOAN_PREF_AMT\") AS mean, count(\"LOAN_PREF_AMT\") AS \"valuesCount\"\
+  , count(DISTINCT \"LOAN_PREF_AMT\") AS \"distinctCount\", MIN(\"LOAN_PREF_AMT\"\
+  ) AS min, MAX(\"LOAN_PREF_AMT\") AS max, coalesce(SUM(CASE WHEN (\"LOAN_PREF_AMT\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"LOAN_PREF_AMT\") AS\
+  \ stddev, SUM(\"LOAN_PREF_AMT\") AS sum \nFROM \"4c9e7581028a01fc71dfc3997bd40912_sample\"\
+  \n LIMIT ?"
+checksum: f1ce5cbf28d5a5fdbed79bf16f65edce
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b5994ca-25ef-4f35-b1f0-67ede52ac3c8
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.TRANSIENT.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

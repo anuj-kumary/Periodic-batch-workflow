@@ -1,0 +1,40 @@
+name: f640f03d401976fad5204c4c5fecce37
+fullyQualifiedName: hktest.f640f03d401976fad5204c4c5fecce37
+owners: []
+duration: 925.0
+users: []
+query: "WITH \"9be203cdfef8628939c9942fb61fdae3_rnd\" AS \n(SELECT \"PART_1\".\"P_NAME\"\
+  \ AS \"P_NAME\" \nFROM \"TPCH_SF100\".\"PART\" AS \"PART_1\" TABLESAMPLE ROW(? ROWS)),\
+  \ \n\"9be203cdfef8628939c9942fb61fdae3_sample\" AS \n(SELECT \"9be203cdfef8628939c9942fb61fdae3_rnd\"\
+  .\"P_NAME\" AS \"P_NAME\" \nFROM \"9be203cdfef8628939c9942fb61fdae3_rnd\")\n SELECT\
+  \ count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\"\
+  ) END) AS \"25.000 to 27.579\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"\
+  P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"27.579 to 30.157\", count(CASE WHEN\
+  \ (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"\
+  30.157 to 32.736\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") <\
+  \ ?) THEN LEN(\"P_NAME\") END) AS \"32.736 to 35.315\", count(CASE WHEN (LEN(\"\
+  P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"35.315 to\
+  \ 37.893\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN\
+  \ LEN(\"P_NAME\") END) AS \"37.893 to 40.472\", count(CASE WHEN (LEN(\"P_NAME\"\
+  ) >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"40.472 to 43.051\"\
+  , count(CASE WHEN (LEN(\"P_NAME\") >= ?) THEN LEN(\"P_NAME\") END) AS \"43.051 and\
+  \ up\" \nFROM \"9be203cdfef8628939c9942fb61fdae3_sample\"\n LIMIT ?"
+checksum: f640f03d401976fad5204c4c5fecce37
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d8f39a9b-4f53-4c0d-acb2-d61f40c5b1ea
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
