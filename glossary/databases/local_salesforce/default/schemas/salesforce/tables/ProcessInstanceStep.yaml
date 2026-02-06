@@ -1,0 +1,192 @@
+name: ProcessInstanceStep
+fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep
+description: Process Instance Step
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Process Instance Step ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ProcessInstanceId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Process Instance ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.ProcessInstanceId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: StepStatus
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Step Status
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.StepStatus
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: OriginalActorId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Original Actor ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.OriginalActorId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: ActorId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Actor ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.ActorId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Comments
+    dataType: UNKNOWN
+    dataLength: 4000
+    dataTypeDisplay: string
+    description: Comments
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.Comments
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: StepNodeId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Process Node ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.StepNodeId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: ElapsedTimeInDays
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Elapsed Time in Days
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.ElapsedTimeInDays
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: ElapsedTimeInHours
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Elapsed Time in Hours
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.ElapsedTimeInHours
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: ElapsedTimeInMinutes
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Elapsed Time in Minutes
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.ElapsedTimeInMinutes
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.ProcessInstanceStep.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/ProcessInstanceStep/list
+domains: []
+dataProducts: []
+sourceHash: f1ddc7758949f0fcabfb6e65aeb6cd9e
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,126 @@
+name: OwnerChangeOptionInfo
+fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo
+description: Change Owner Option Info
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Change Owner Option ID
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: DurableId
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Durable ID
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.DurableId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: EntityDefinitionId
+    dataType: UNKNOWN
+    dataLength: 70
+    dataTypeDisplay: string
+    description: Entity Definition ID
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.EntityDefinitionId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 150
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.Name
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: Label
+    dataType: UNKNOWN
+    dataLength: 150
+    dataTypeDisplay: string
+    description: Label
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.Label
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: IsEditable
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Editable
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.IsEditable
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: DefaultValue
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Default Value
+    fullyQualifiedName: local_salesforce.default.salesforce.OwnerChangeOptionInfo.DefaultValue
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/OwnerChangeOptionInfo/list
+domains: []
+dataProducts: []
+sourceHash: ddb5839be15a37fdf12cfdc913b85443
+processedLineage: false
+entityStatus: Unprocessed

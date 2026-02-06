@@ -1,0 +1,148 @@
+name: ThirdPartyAccountLink
+fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink
+description: Third Party Account Link
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Third Party Account Link ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ThirdPartyAccountLinkKey
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Third Party Account Link Unique Key
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.ThirdPartyAccountLinkKey
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: UserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.UserId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: SsoProviderId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Auth. Provider ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.SsoProviderId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: Handle
+    dataType: UNKNOWN
+    dataLength: 375
+    dataTypeDisplay: string
+    description: External User Handle
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.Handle
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: RemoteIdentifier
+    dataType: UNKNOWN
+    dataLength: 128
+    dataTypeDisplay: string
+    description: External User Id
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.RemoteIdentifier
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Provider
+    dataType: UNKNOWN
+    dataLength: 128
+    dataTypeDisplay: string
+    description: Provider
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.Provider
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: SsoProviderName
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Single Sign-On Provider Name
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.SsoProviderName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: IsNotSsoUsable
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Not SSO Usable
+    fullyQualifiedName: local_salesforce.default.salesforce.ThirdPartyAccountLink.IsNotSsoUsable
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/ThirdPartyAccountLink/list
+domains: []
+dataProducts: []
+sourceHash: 44f478e791fcda910f67334744096c6a
+processedLineage: false
+entityStatus: Unprocessed

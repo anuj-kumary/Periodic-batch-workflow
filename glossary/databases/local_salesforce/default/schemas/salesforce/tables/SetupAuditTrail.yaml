@@ -1,0 +1,137 @@
+name: SetupAuditTrail
+fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail
+description: Setup Audit Trail Entry
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Setup Audit Trail ID
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: Action
+    dataType: UNKNOWN
+    dataLength: 120
+    dataTypeDisplay: string
+    description: Action
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.Action
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Section
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Section
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.Section
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Display
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: Display
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.Display
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: DelegateUser
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Delegate User
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.DelegateUser
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: ResponsibleNamespacePrefix
+    dataType: UNKNOWN
+    dataLength: 15
+    dataTypeDisplay: string
+    description: Source Namespace Prefix
+    fullyQualifiedName: local_salesforce.default.salesforce.SetupAuditTrail.ResponsibleNamespacePrefix
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/SetupAuditTrail/list
+domains: []
+dataProducts: []
+sourceHash: 57f96f4ffa0a1eb163d147531538b5c6
+processedLineage: false
+entityStatus: Unprocessed

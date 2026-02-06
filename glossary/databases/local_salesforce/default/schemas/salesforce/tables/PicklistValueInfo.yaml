@@ -1,0 +1,137 @@
+name: PicklistValueInfo
+fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo
+description: Picklist Value Info
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Picklist Value Info ID
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: DurableId
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Durable ID
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.DurableId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Value
+    dataType: UNKNOWN
+    dataLength: 70
+    dataTypeDisplay: string
+    description: Value
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.Value
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: Label
+    dataType: UNKNOWN
+    dataLength: 70
+    dataTypeDisplay: string
+    description: Label
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.Label
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: IsDefaultValue
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Default Value
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.IsDefaultValue
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: IsActive
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Active
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.IsActive
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: ValidFor
+    dataType: UNKNOWN
+    dataLength: 200
+    dataTypeDisplay: string
+    description: Valid For
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.ValidFor
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: EntityParticleId
+    dataType: UNKNOWN
+    dataLength: 150
+    dataTypeDisplay: string
+    description: Entity Particle ID
+    fullyQualifiedName: local_salesforce.default.salesforce.PicklistValueInfo.EntityParticleId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/PicklistValueInfo/list
+domains: []
+dataProducts: []
+sourceHash: c0338923a6bdc25c1312cedbcf631d0f
+processedLineage: false
+entityStatus: Unprocessed
