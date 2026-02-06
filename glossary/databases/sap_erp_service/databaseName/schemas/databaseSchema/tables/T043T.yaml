@@ -1,0 +1,205 @@
+name: T043T
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T
+description: FI tolerance groups for employees
+tableType: Regular
+columns:
+  - name: BETRH
+    displayName: BETRH
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Payment Difference for Expense
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.BETRH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BETRS
+    displayName: BETRS
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Payment Difference for Revenue
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.BETRS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.BUKRS
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MAXBT
+    displayName: Amount per document
+    dataType: DECIMAL
+    dataLength: 15
+    precision: 15
+    scale: 2
+    dataTypeDisplay: "curr(15,2)"
+    description: Maximum Amount Posted per Document
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.MAXBT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: MAXEB
+    displayName: Amount per customer/vendor item
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Maximum Posting Amount per Line Item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.MAXEB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: MAXSK
+    displayName: Cash discount per line item
+    dataType: DECIMAL
+    dataLength: 5
+    precision: 5
+    scale: 3
+    dataTypeDisplay: "dec(5,3)"
+    description: Maximum Cash Discount Percentage Rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.MAXSK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PROZH
+    displayName: Percent
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Maximum Expense Permitted from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.PROZH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: PROZS
+    displayName: Percent
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Maximum Allowable Revenues from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.PROZS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: RFPRO
+    displayName: User group for tolerance table
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Tolerance Group for Financial Accounting Employees
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.RFPRO
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: SKNTH
+    displayName: Adjust discount by
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Discount Adjust. for Loss from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.SKNTH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SKNTS
+    displayName: Adjust discount by
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Discount Adjust. for Gain from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043T.SKNTS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+      - RFPRO
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 91252aaa74c03fc6c48c5844cd81332b
+processedLineage: false
+entityStatus: Approved

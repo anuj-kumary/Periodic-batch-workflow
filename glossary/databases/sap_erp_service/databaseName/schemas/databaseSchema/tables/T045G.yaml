@@ -1,0 +1,283 @@
+name: T045G
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G
+description: Bank charges table for bill of exchange presentation
+tableType: Regular
+columns:
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CALTY
+    displayName: Rate type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Usage type of the charges rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.CALTY
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: CASES
+    displayName: Charge type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Charge types
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.CASES
+    tags: []
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: GEBTD
+    displayName: Fixed amount (DME)
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Fixed amount (DME)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.GEBTD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: GEBTR
+    displayName: Fixed amount
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Fixed amount
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.GEBTR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: GRBTR
+    displayName: Amount limit
+    dataType: CHAR
+    dataLength: 13
+    dataTypeDisplay: numc(13)
+    description: Minimum amount as from which a charge rate is used
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.GRBTR
+    tags: []
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: GRTAG
+    displayName: Remaining Term
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Remaining term as from which the charge is to be calculated
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.GRTAG
+    tags: []
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: GSATD
+    displayName: Charges rate (DME)
+    dataType: DECIMAL
+    dataLength: 5
+    precision: 5
+    scale: 3
+    dataTypeDisplay: "dec(5,3)"
+    description: Charge in the form of a percentage rate (DME)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.GSATD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: GSATZ
+    displayName: Charge rate
+    dataType: DECIMAL
+    dataLength: 5
+    precision: 5
+    scale: 3
+    dataTypeDisplay: "dec(5,3)"
+    description: Charge in the form of a percentage rate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.GSATZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: HBKID
+    displayName: House bank
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: House bank ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.HBKID
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: HKTID
+    displayName: Bank account ID
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: ID for account details
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.HKTID
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MIBTD
+    displayName: Minimum amount (DME)
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Minimum amount (DME)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.MIBTD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: MIBTR
+    displayName: Minimum amount
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: Minimum amount
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.MIBTR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: MIZIT
+    displayName: Minimum days
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Minimum days for calculating charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.MIZIT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: VALID
+    displayName: Valid from
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Charge is valid as from this date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.VALID
+    tags: []
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.WAERS
+    tags: []
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: WEPRI
+    displayName: Print charge
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Charge is relevant for printing bills of exchange
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.WEPRI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: WVERW
+    displayName: Bill/Exchange Usage
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Bill/exch.usage indicator for the bill/exch.usage posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T045G.WVERW
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - CASES
+      - GRBTR
+      - GRTAG
+      - HBKID
+      - HKTID
+      - MANDT
+      - VALID
+      - WAERS
+      - WVERW
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 08c98b168d945905758917f61bc497d4
+processedLineage: false
+entityStatus: Approved

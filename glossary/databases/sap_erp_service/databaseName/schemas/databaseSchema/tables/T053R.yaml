@@ -1,0 +1,151 @@
+name: T053R
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R
+description: Classification of Payment Differences
+tableType: Regular
+columns:
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: KMRST
+    displayName: Correspondence type
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Correspondence Type for Reason Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.KMRST
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: RSTGR
+    displayName: Reason code
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Reason Code for Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.RSTGR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XAUSB
+    displayName: Charge Off Diff.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Charge off difference via separate account"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.XAUSB
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XAVTL
+    displayName: No Tolerance Limit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Do Not Consider Tol. Limit for Diff to Pymt Advice Note Item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.XAVTL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XSTRP
+    displayName: Disputed item
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Disputed item?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.XSTRP
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XTXCH
+    displayName: Do not Copy Text
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Do not Copy Text
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.XTXCH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XUEPI
+    displayName: Initiate check
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Initiate check"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T053R.XUEPI
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+      - RSTGR
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 249d5a0e1b64dea27bf3054202529974
+processedLineage: false
+entityStatus: Approved

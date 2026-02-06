@@ -1,0 +1,355 @@
+name: T044A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A
+description: Foreign Currency Valuation Methods
+tableType: Regular
+columns:
+  - name: AP_GRUP
+    displayName: Use group definition
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Evaluate Accounts According to Group Definition
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.AP_GRUP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: AR_GRUP
+    displayName: Use group definition
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Evaluate Accounts According to Group Definition
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.AR_GRUP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: BLART
+    displayName: Document Type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.BLART
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: BWMET
+    displayName: Valuation method
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Valuation Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.BWMET
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: GL_GRUP
+    displayName: Use group definition
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Evaluate Accounts According to Group Definition
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.GL_GRUP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: KURSH
+    displayName: Credit bal. E/R type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Exchange Rate Type for Credit Balances
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.KURSH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: KURSS
+    displayName: Debit bal. E/R type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Exchange Rate Type for Debit Balances
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.KURSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: KURS_REM
+    displayName: Exchange Rate Type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Exchange Rate for Translation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.KURS_REM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MINDIFF
+    displayName: Minimum difference
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Minimum Difference for Display in Foreign Currency Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.MINDIFF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: XAUFW
+    displayName: Always evaluate
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Always evaluate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XAUFW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: XBEW1
+    displayName: Local currency type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Local currency type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XBEW1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: XBEW2
+    displayName: Valuation 2
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Valuation area 2 (group)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XBEW2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XFILE
+    displayName: Write extract
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Write Sequential File with the Document Changes
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XFILE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: XKTOD
+    displayName: Display by open item account
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Display at open item level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XKTOD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XKTOM
+    displayName: Display by reconciliation acct
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Display by reconciliation acct
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XKTOM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: XNABW
+    displayName: Revalue only
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Valuation Method: Revalue Only - Do Not Devalue"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XNABW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: XNWPR
+    displayName: Lowest value princple
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Lowest value princple
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XNWPR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XPOSD
+    displayName: Display by line item
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Line item display
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XPOSD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XPOST
+    displayName: Post per line item
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Post per line item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XPOST
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XRESET
+    displayName: Reset Valuation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Reset Valuation Run
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XRESET
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: XSALB
+    displayName: Balance valuation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Balance Valuation for Open Items
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XSALB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: XSALK
+    displayName: Determ.exch.rate type fr.acct bal.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Determine exchange rate type from account balance
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XSALK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XSALR
+    displayName: Exch.rate type from invoice reference
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Exchange rate type from invoice reference balance
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XSALR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XSICH
+    displayName: Exchange hedging
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Use exchange hedging
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XSICH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XSNWP
+    displayName: Strict lowest value principle
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Strict lowest value principle
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044A.XSNWP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BWMET
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6d6b0c198a07f0c91c09d75dc10b4e47
+processedLineage: false
+entityStatus: Approved

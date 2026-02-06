@@ -1,0 +1,223 @@
+name: T047A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A
+description: Account Level Dunning Control
+tableType: Regular
+columns:
+  - name: KALID
+    displayName: Public hol.cal.ID
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Public holiday calendar key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.KALID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: KULEP
+    displayName: Line item grace periods
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Grace periods per line item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.KULEP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: MAHNA
+    displayName: Dunning Procedure
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Dunning Procedure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.MAHNA
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MAHNR
+    displayName: Ref.Dunning Procedure for Texts
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Reference Dunning Procedure for Text Selection
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.MAHNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: MAHNS
+    displayName: Total due items from dunning level
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Dunning level from which all due items are to be totaled
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.MAHNS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MIVRZ
+    displayName: Min.days in arrears (acct)
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Days in arrears after which a dunning notice will be sent
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.MIVRZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: RHYTH
+    displayName: Dunning Interval in Days
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Dunning Interval in Days
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.RHYTH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: UMSKD
+    displayName: Special G/L indicators
+    dataType: CHAR
+    dataLength: 20
+    dataTypeDisplay: char(20)
+    description: List of special G/L indicators to be edited
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.UMSKD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: UMSKK
+    displayName: Special G/L indicators
+    dataType: CHAR
+    dataLength: 20
+    dataTypeDisplay: char(20)
+    description: List of special G/L indicators to be edited
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.UMSKK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: VZSKZ
+    displayName: Interest indicator
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Interest calculation indicator for calc. of dunning interest
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.VZSKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XIGNVZ
+    displayName: Ignore Interest Indictor in Master
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Ignore Interest Indicator in Master Record"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.XIGNVZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: XMGER
+    displayName: Always dun in legal dunning proc.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Always Print Dunning Notice in Legal Dunning Procedure?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.XMGER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: XNUMS
+    displayName: Standard transaction dunning
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Include standard transactions?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.XNUMS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XSALSH
+    displayName: Debit or Credit Balance
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Dunning Notice Even for Credit Account Balance
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T047A.XSALSH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MAHNA
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: cb731e2e31efdb59254c22449f4d15f9
+processedLineage: false
+entityStatus: Approved

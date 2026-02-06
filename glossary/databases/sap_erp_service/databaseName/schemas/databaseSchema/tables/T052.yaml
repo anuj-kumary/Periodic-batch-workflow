@@ -1,0 +1,148 @@
+name: T052
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052
+description: Terms of Payment
+tableType: Regular
+columns:
+  - name: F_OBSOLETE
+    displayName: Hide Entry in Input Help
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Hide Entry in Value Help
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.F_OBSOLETE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: KOART
+    displayName: Account type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Account Type of the Customer/Vendor
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.KOART
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.MANDT
+    tags: []
+    constraint: PRIMARY_KEY
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TXN08
+    displayName: Standard text
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Number of the standard text
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.TXN08
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: XCHPB
+    displayName: Transf. Payment Block for Changes
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Transfer payment block when changing terms of payment?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.XCHPB
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XCHPM
+    displayName: Transf. Pymt Method for Change
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Transfer payment method when changing terms of payment?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.XCHPM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: XSCRC
+    displayName: "Rec. Entries: Supplement fm Master"
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Recurring Entries: Add Terms of Payment from Master Record"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.XSCRC
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: XSPLT
+    displayName: Installment payment
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Term for installment payment"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.XSPLT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: XZBRV
+    displayName: XZBRV
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Print terms of payment in RV papers
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T052.XZBRV
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7ab1f02269d0d99e625647e9c7fb7cbd
+processedLineage: false
+entityStatus: Approved

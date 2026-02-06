@@ -1,0 +1,199 @@
+name: T044AB
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB
+description: Valuation Attributes for OI Valuation By Remaining Term
+tableType: Regular
+columns:
+  - name: BWMET
+    displayName: Valuation method
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Valuation Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.BWMET
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: DUEVL
+    displayName: Minimum Remaining Term
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Minimum Remaining Term
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.DUEVL
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FRKEYDATE
+    displayName: Valid From
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Valid from Valuation Key Date
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.FRKEYDATE
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FYSTDATE
+    displayName: Fiscal Year Starting From
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Valid for Fiscal Year Starting From
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.FYSTDATE
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KURSH
+    displayName: Credit bal. E/R type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Exchange Rate Type for Credit Balances
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.KURSH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: KURSS
+    displayName: Debit bal. E/R type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Exchange Rate Type for Debit Balances
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.KURSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TUNIT
+    displayName: Time unit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Time Unit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.TUNIT
+    tags: []
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XAUFW
+    displayName: Always evaluate
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Always evaluate
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.XAUFW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XINCL
+    displayName: Inclusive
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Inclusive Value
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.XINCL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XNABW
+    displayName: Revalue only
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Valuation Method: Revalue Only - Do Not Devalue"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.XNABW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XNWPR
+    displayName: Lowest value princple
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Lowest value princple
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.XNWPR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: XSNWP
+    displayName: Strict lowest value principle
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Strict lowest value principle
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T044AB.XSNWP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BWMET
+      - DUEVL
+      - FRKEYDATE
+      - FYSTDATE
+      - MANDT
+      - TUNIT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2c2eb65e9ae5f25972a812e4fb58e7fe
+processedLineage: false
+entityStatus: Approved
