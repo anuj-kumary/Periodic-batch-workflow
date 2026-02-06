@@ -1,0 +1,139 @@
+name: ku$_10_2_strmcoltype_view
+fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view
+tableType: View
+columns:
+  - name: obj_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.obj_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: col_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.col_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: intcol_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.intcol_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: owner_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.owner_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: toid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.toid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hashcode
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.hashcode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typidcol_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.typidcol_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: subtype_list
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_strmsubcoltype_list_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_10_2_strmcoltype_view.subtype_list
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2636723265a7b5e79cbd2accec496a3e
+processedLineage: false
+entityStatus: Approved

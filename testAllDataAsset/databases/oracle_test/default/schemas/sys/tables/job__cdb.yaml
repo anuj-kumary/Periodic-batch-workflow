@@ -1,0 +1,212 @@
+name: job$_cdb
+fullyQualifiedName: oracle_test.default.sys.job$_cdb
+tableType: View
+columns:
+  - name: job
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.job
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: lowner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.lowner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: powner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.powner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: cowner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.cowner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: last_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.last_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: this_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.this_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: next_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.next_date
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: total
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.total
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: INTERVAL#
+    dataType: VARCHAR
+    dataLength: 200
+    dataTypeDisplay: varchar2(200)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.INTERVAL#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: failures
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.failures
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flag
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.flag
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: what
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.what
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: nlsenv
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.nlsenv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: env
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.env
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: charenv
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.charenv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: field1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.field1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: scheduler_flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.scheduler_flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xid
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: varchar2(40)
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.xid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: container id
+    fullyQualifiedName: oracle_test.default.sys.job$_cdb.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 24fe4a2aded8a90592534a9c4402ef81
+processedLineage: false
+entityStatus: Approved
