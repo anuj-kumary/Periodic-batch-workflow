@@ -1,0 +1,203 @@
+name: cdb_index_usage
+fullyQualifiedName: oracle_test.default.sys.cdb_index_usage
+tableType: View
+columns:
+  - name: object_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.object_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.owner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: total_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.total_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: total_exec_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.total_exec_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: total_rows_returned
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.total_rows_returned
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_0_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_0_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_1_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_1_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_2_10_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_2_10_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_2_10_rows_returned
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_2_10_rows_returned
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_11_100_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_11_100_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_11_100_rows_returned
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_11_100_rows_returned
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_101_1000_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_101_1000_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_101_1000_rows_returned
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_101_1000_rows_returned
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_1000_plus_access_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_1000_plus_access_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bucket_1000_plus_rows_returned
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.bucket_1000_plus_rows_returned
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_used
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.last_used
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: container id
+    fullyQualifiedName: oracle_test.default.sys.cdb_index_usage.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 876c5ce65e3d7667419edd013bc953af
+processedLineage: false
+entityStatus: Approved
