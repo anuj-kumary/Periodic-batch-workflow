@@ -1,0 +1,178 @@
+name: QRTZ_SIMPROP_TRIGGERS
+fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS
+tableType: Regular
+columns:
+  - name: SCHED_NAME
+    dataType: VARCHAR
+    dataLength: 120
+    dataTypeDisplay: varchar(120)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.SCHED_NAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: TRIGGER_NAME
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.TRIGGER_NAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: TRIGGER_GROUP
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.TRIGGER_GROUP
+    tags: []
+    children: []
+    customMetrics: []
+  - name: STR_PROP_1
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar(512)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.STR_PROP_1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STR_PROP_2
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar(512)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.STR_PROP_2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STR_PROP_3
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar(512)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.STR_PROP_3
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INT_PROP_1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.INT_PROP_1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INT_PROP_2
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.INT_PROP_2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LONG_PROP_1
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.LONG_PROP_1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LONG_PROP_2
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.LONG_PROP_2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEC_PROP_1
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 13
+    scale: 4
+    dataTypeDisplay: "decimal(13,4)"
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.DEC_PROP_1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEC_PROP_2
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 13
+    scale: 4
+    dataTypeDisplay: "decimal(13,4)"
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.DEC_PROP_2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BOOL_PROP_1
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar(1)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.BOOL_PROP_1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BOOL_PROP_2
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar(1)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_SIMPROP_TRIGGERS.BOOL_PROP_2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: FOREIGN_KEY
+    columns:
+      - SCHED_NAME
+      - TRIGGER_GROUP
+      - TRIGGER_NAME
+    referredColumns:
+      - local_mysql.default.openmetadata_db.QRTZ_TRIGGERS.SCHED_NAME
+      - local_mysql.default.openmetadata_db.QRTZ_TRIGGERS.TRIGGER_NAME
+      - local_mysql.default.openmetadata_db.QRTZ_TRIGGERS.TRIGGER_GROUP
+    relationshipType: MANY_TO_MANY
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 35a0d4b1e204ddcaabd9941d37c426d3
+processedLineage: false
+entityStatus: Approved

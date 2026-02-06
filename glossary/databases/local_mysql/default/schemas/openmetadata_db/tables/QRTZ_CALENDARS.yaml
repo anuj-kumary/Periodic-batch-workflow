@@ -1,0 +1,70 @@
+name: QRTZ_CALENDARS
+fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_CALENDARS
+tableType: Regular
+columns:
+  - name: SCHED_NAME
+    dataType: VARCHAR
+    dataLength: 120
+    dataTypeDisplay: varchar(120)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_CALENDARS.SCHED_NAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CALENDAR_NAME
+    dataType: VARCHAR
+    dataLength: 190
+    dataTypeDisplay: varchar(190)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_CALENDARS.CALENDAR_NAME
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CALENDAR
+    dataType: BLOB
+    dataLength: 1
+    dataTypeDisplay: blob
+    fullyQualifiedName: local_mysql.default.openmetadata_db.QRTZ_CALENDARS.CALENDAR
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - SCHED_NAME
+      - CALENDAR_NAME
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7cf14b66f3cdb2250d7a5233db4ba672
+processedLineage: false
+entityStatus: Approved

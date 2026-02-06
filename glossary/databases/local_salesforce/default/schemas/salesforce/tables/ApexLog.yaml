@@ -1,0 +1,181 @@
+name: ApexLog
+fullyQualifiedName: local_salesforce.default.salesforce.ApexLog
+description: Apex Debug Log
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Log ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: LogUserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Log User ID
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.LogUserId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LogLength
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Log Size (bytes)
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.LogLength
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Date
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: Request
+    dataType: UNKNOWN
+    dataLength: 16
+    dataTypeDisplay: string
+    description: Request Type
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.Request
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Operation
+    dataType: UNKNOWN
+    dataLength: 128
+    dataTypeDisplay: string
+    description: Operation
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.Operation
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Application
+    dataType: UNKNOWN
+    dataLength: 64
+    dataTypeDisplay: string
+    description: Application
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.Application
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Status
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.Status
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: DurationMilliseconds
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Duration (ms)
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.DurationMilliseconds
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: StartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Start Time
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.StartTime
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: Location
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Location
+    fullyQualifiedName: local_salesforce.default.salesforce.ApexLog.Location
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/ApexLog/list
+domains: []
+dataProducts: []
+sourceHash: 6f65c98a2f1d08d241778737e1cc2235
+processedLineage: false
+entityStatus: Unprocessed

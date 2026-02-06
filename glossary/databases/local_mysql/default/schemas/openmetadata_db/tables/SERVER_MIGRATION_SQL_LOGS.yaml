@@ -1,0 +1,77 @@
+name: SERVER_MIGRATION_SQL_LOGS
+fullyQualifiedName: local_mysql.default.openmetadata_db.SERVER_MIGRATION_SQL_LOGS
+tableType: Regular
+columns:
+  - name: version
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.SERVER_MIGRATION_SQL_LOGS.version
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: sqlStatement
+    dataType: VARCHAR
+    dataLength: 10000
+    dataTypeDisplay: varchar(10000)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.SERVER_MIGRATION_SQL_LOGS.sqlStatement
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: checksum
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.SERVER_MIGRATION_SQL_LOGS.checksum
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: executedAt
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: local_mysql.default.openmetadata_db.SERVER_MIGRATION_SQL_LOGS.executedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 18b11621afbc47ef1a6d1103342bb65d
+processedLineage: false
+entityStatus: Approved

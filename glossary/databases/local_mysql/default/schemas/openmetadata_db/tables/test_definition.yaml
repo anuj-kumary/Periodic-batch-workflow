@@ -1,0 +1,122 @@
+name: test_definition
+fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar(512)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.json
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: entityType
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.entityType
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.updatedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.updatedBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: deleted
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: supported_data_types
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.supported_data_types
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: nameHash
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: local_mysql.default.openmetadata_db.test_definition.nameHash
+    tags: []
+    constraint: UNIQUE
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a122ff6b-96c2-4226-9538-7bcc9533a029
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: local_mysql.default.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: bc11e171-762a-4933-9a5d-56ad1440c4bd
+  type: database
+  name: default
+  fullyQualifiedName: local_mysql.default
+  displayName: default
+  deleted: false
+service:
+  id: 4e6c8a97-187c-4b33-88a3-353dccaa316c
+  type: databaseService
+  name: local_mysql
+  fullyQualifiedName: local_mysql
+  description: <p>data testing</p>
+  displayName: local_mysql
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d0d3ebb4982c59420cc5bb1b15936f17
+processedLineage: false
+entityStatus: Approved
