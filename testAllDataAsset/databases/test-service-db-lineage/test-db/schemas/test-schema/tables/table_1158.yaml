@@ -1,0 +1,55 @@
+name: table_1158
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1158
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1158.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_PROCESS_REPORT_SUMMARY(\n\tU_CUSTOMER,\n\
+  \tSYS_ID,\n\tSYS_UPDATED_ON,\n\tU_APPROVERS,\n\tSYS_CREATED_ON,\n\tU_INSTANCE_NAME,\n\
+  \tSYS_CREATED_BY,\n\tU_INSTANCE_SERVER,\n\tSYS_TAGS,\n\tSYS_UPDATED_BY,\n\tSYS_MOD_COUNT,\n\
+  \tU_USERS,\n\tU_REPORT_ID,\n\tU_PROCESS_USERS,\n\tU_INSTANCE_PORT,\n\tU_END_USERS,\n\
+  \tPSP_PER_INSERT_DT,\n\tPSP_PER_UPDATE_DT,\n\tPSP_PER_DELETE_DT,\n\tU_LOGGED_IN_365D_USER_COUNT,\n\
+  \tU_LOGGED_IN_90D_USER_COUNT,\n\tU_DISCOVERED_DEVICE_COUNT,\n\tU_LOGGED_IN_USER_COUNT,\n\
+  \tU_DISCOVERED_SERVER_COUNT,\n\tU_ACTIVE_USER_COUNT,\n\tU_DISCOVERED_NODE_COUNT,\n\
+  \tU_ACTIVE_NON_INTEG_NON_WS_USER_COUNT,\n\tU_LOGGED_IN_NON_INTEG_NON_WS_USER_COUNT,\n\
+  \tU_LOGGED_IN_365D_NON_INTEG_NON_WS_USER_COUNT,\n\tU_STATUS,\n\tDV_U_STATUS,\n\t\
+  U_SALES_REQUEST_NUMBER,\n\tU_REPORT_TYPE\n) as\nselect * from rds_share.datacenter.u_process_report_summary;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

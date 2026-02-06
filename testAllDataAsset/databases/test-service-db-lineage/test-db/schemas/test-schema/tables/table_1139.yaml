@@ -1,0 +1,110 @@
+name: table_1139
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1139
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1139.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view CONTACT_B4_062123(\n\t\"ContactID\",\n\t\
+  \"Email Address\",\n\t\"First Name\",\n\t\"Last Name\",\n\t\"Company\",\n\t\"Email\
+  \ Display Name\",\n\t\"Address 1\",\n\t\"Address 2\",\n\t\"ZZ - Address 3\",\n\t\
+  \"City\",\n\t\"State or Province\",\n\t\"Zip or Postal Code\",\n\t\"Country\",\n\
+  \t\"Business Phone\",\n\t\"Mobile Phone\",\n\t\"Fax\",\n\t\"Title\",\n\t\"Salutation\"\
+  ,\n\t\"ZZ - Account\",\n\t\"Territory sfa_leads\",\n\t\"SFDC Contact ID\",\n\t\"\
+  SFDC Lead ID\",\n\t\"ZZ - Website\",\n\t\"Date Created\",\n\t\"Date Modified\",\n\
+  \t\"Opt-In\",\n\t\"Eloqua Contact ID\",\n\t\"SFDC Account ID\",\n\t\"Last Modified\
+  \ by CRM System\",\n\t\"ZZ - Last SFDC Campaign ID\",\n\t\"ZZ - Last SFDC Campaign\
+  \ Status\",\n\t\"Lead Rating - Explicit\",\n\t\"Lead Score - Explicit\",\n\t\"Lead\
+  \ Score - Implicit\",\n\t\"Lead Rating - Implicit\",\n\t\"Buying Horizon\",\n\t\"\
+  ZZ - EmailOptOut\",\n\t\"ZZ - Campaign Type Recent\",\n\t\"IGNORE - Lead Source\"\
+  ,\n\t\"Industry Custom\",\n\t\"ZZ - Annual Revenue\",\n\t\"Lead Status\",\n\t\"\
+  Job Role\",\n\t\"Lead Score - High Value Website Content\",\n\t\"ZZ - D&B DUNS Number\"\
+  ,\n\t\"ZZ - D&B Doing Business As\",\n\t\"ZZ - D&B CEO Name\",\n\t\"D&B Industry\"\
+  ,\n\t\"ZZ - D&B SIC Code\",\n\t\"ZZ - D&B Established In\",\n\t\"ZZ - D&B Annual\
+  \ Sales Indicator\",\n\t\"ZZ - D&B Annual Sales\",\n\t\"ZZ - D&B Total Employees\"\
+  ,\n\t\"ZZ - D&B Total Employees Indicator\",\n\t\"Lead Score Date - Most Recent\"\
+  ,\n\t\"ZZ - Integrated Marketing and Sales Funnel Stage\",\n\t\"Region\",\n\t\"\
+  # of Times Viewed High Value Content - Tier 1\",\n\t\"# of Times Viewed High Value\
+  \ Content - Tier 2\",\n\t\"# of Times Viewed High Value Content - Tier 3\",\n\t\"\
+  Lead Rating - Combined\",\n\t\"# Times Viewed High Value Content - ALL\",\n\t\"\
+  PURL Name (info#service-now#com)\",\n\t\"ITSM Solution\",\n\t\"ITSM Solution Other\"\
+  ,\n\t\"ZZ - I Would Like To\",\n\t\"Learn More About\",\n\t\"I Would Like To Other\"\
+  ,\n\t\"Lead Source Recent\",\n\t\"Job Function\",\n\t\"IGNORE - Promoted Date\"\
+  ,\n\t\"Do Not Email\",\n\t\"Active Contact\",\n\t\"Admin Contact\",\n\t\"Account\
+  \ Type\",\n\t\"ZZ - Inside Sales Rep\",\n\t\"IGNORE - Surf Contact Created Date\"\
+  ,\n\t\"Employees\",\n\t\"Work Notes\",\n\t\"Admin Training Date\",\n\t\"Training\
+  \ Promo Code\",\n\t\"Email Address Domain\",\n\t\"First and Last Name\",\n\t\"Lead\
+  \ Score - Last High Touch Event Date\",\n\t\"Event Engaged\",\n\t\"Gated Form -\
+  \ Check if Registered\",\n\t\"ZZ - Primary Account Executive\",\n\t\"Number of Times\
+  \ Form Submitted - Gated Form\",\n\t\"IGNORE - Lead Source Media\",\n\t\"ZZ - Account\
+  \ Lead Status\",\n\t\"ZZ - Closed Date\",\n\t\"ZZ - Account Marketing Status\",\n\
+  \t\"IGNORE - Lead Source Asset\",\n\t\"IGNORE - Lead Source Detail\",\n\t\"ZZ -\
+  \ Partner Type\",\n\t\"IGNORE - Campaign Type Original\",\n\t\"Lead Source Original\
+  \ Detail\",\n\t\"IGNORE - Surf  Contact Created Date Rev\",\n\t\"Budget\",\n\t\"\
+  Country Normalized\",\n\t\"PURL Name\",\n\t\"IT Employees\",\n\t\"ZZ - Account Country\"\
+  ,\n\t\"Key Contact\",\n\t\"ZZ - Business Phone Extension\",\n\t\"Lead Score (deprecated)\"\
+  ,\n\t\"IGNORE - Lead Source Type\",\n\t\"Territory\",\n\t\"List Source\",\n\t\"\
+  List Source ID\",\n\t\"Registration Date\",\n\t\"Registration Code\",\n\t\"Registration\
+  \ Type\",\n\t\"SIC Code\",\n\t\"SIC Code Description\",\n\t\"Cvent Contact ID\"\
+  ,\n\t\"Cvent Invitee ID\",\n\t\"Cvent Source ID\",\n\t\"Cvent Contact Type\",\n\t\
+  \"Cvent Discount Code\",\n\t\"Cvent Status\",\n\t\"Cvent Participant\",\n\t\"Cvent\
+  \ Registration Date\",\n\t\"CRM Record Type\",\n\t\"Lead Source - Most Recent\"\
+  ,\n\t\"Lead Source - Original\",\n\t\"Test\",\n\t\"Cvent Discount Code Original\"\
+  ,\n\t\"Suppress Email\",\n\t\"CRM Lead Created Date\",\n\t\"CRM Contact Created\
+  \ Date\",\n\t\"Do Not Phone\",\n\t\"Contact Rejection\",\n\t\"Lead Converted On\"\
+  ,\n\t\"Geo\",\n\t\"Area\",\n\t\"Date Last Normalized\",\n\t\"Job Level\",\n\t\"\
+  Primary Sales Rep\",\n\t\"Suspect Since\",\n\t\"Prospect Since\",\n\t\"Customer\
+  \ Since\",\n\t\"Partner Status\",\n\t\"Unknown Since\",\n\t\"Member Status\",\n\t\
+  \"Active Partner\",\n\t\"ZZ - Last Modified\",\n\t\"Hot Lead\",\n\t\"SP - Email\
+  \ Verification Results\",\n\t\"SP - Updated Email\",\n\t\"db_company_name\",\n\t\
+  \"db_marketing_alias\",\n\t\"db_industry\",\n\t\"db_sub_industry\",\n\t\"db_street_address\"\
+  ,\n\t\"db_city\",\n\t\"db_state\",\n\t\"db_zip\",\n\t\"db_demandbase_sid\",\n\t\"\
+  db_data_source\",\n\t\"db_manual_review\",\n\t\"db_phone\",\n\t\"db_employee_count\"\
+  ,\n\t\"db_annual_sales\",\n\t\"db_country\",\n\t\"MD5 Hashed Email Address\",\n\t\
+  \"SHA256 Hashed Email Address\",\n\t\"MD5 Hashed Business Phone\",\n\t\"SHA256 Hashed\
+  \ Business Phone\",\n\t\"MD5 Hashed Mobile Phone\",\n\t\"Campaign Description\"\
+  ,\n\t\"Comments\",\n\t\"SHA256 Hashed Mobile Phone\",\n\t\"Annual Revenue\",\n\t\
+  \"Email Address Status\",\n\t\"Lead Score\",\n\t\"Reason Code\",\n\t\"Contact Geo\"\
+  ,\n\t\"Eloqua Company ID\",\n\t\"Contact Geo Normalized\",\n\tISDELETED,\n\tDELETED_DATE,\n\
+  \t\"NPX jobTitleFunctionTop_name\",\n\t\"NPX jobTitleLevel_names\",\n\t\"NPX Web\
+  \ Address\",\n\t\"NPX Employees\",\n\t\"NPX Revenue Range\",\n\t\"NPX Location Type\"\
+  ,\n\t\"NPX DUNS US Ultimate Parent\",\n\t\"NPX DUNS\",\n\t\"NPX Parent Other Industry\"\
+  \n) as\nselect * from RDS.ELOQUA.CONTACT_B4_0621;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

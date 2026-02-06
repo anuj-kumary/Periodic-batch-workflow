@@ -1,0 +1,299 @@
+name: table_1109
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1109
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1109.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view MVB_COMMON_CALC_COLUMNS_ST(\n\t\"RenewalACV\"\
+  ,\n\t\"CumulativeNetNewACV\",\n\t\"FutureClose\",\n\t\"G2KRanking\",\n\t\"DNBHQBusinessName\"\
+  ,\n\t\"DNBHQDUNSParentName\",\n\t\"DNBHQDUNSNumber\",\n\t\"OptyItemTotalValueAmount\"\
+  ,\n\t\"SFixedDataDocCurrReferralFees\",\n\t\"OptyItemTrainingRevenue\",\n\t\"OptyItemPSRevenue\"\
+  ,\n\t\"OptyOwnerStartDate\",\n\t\"FinanceReportingTerritoryGeo\",\n\t\"ProductBusinessUnitValue\"\
+  ,\n\t\"OptyFlagsSysID\",\n\t\"SFixedDataAcctCountry\",\n\t\"SFixedDataAccountTerritoryGeo\"\
+  ,\n\t\"SFixedDataAccountTerritoryArea\",\n\t\"AcctCountry\",\n\t\"AccountGeo\",\n\
+  \t\"AccountArea\",\n\t\"RelatedPartyName\",\n\t\"OptyItemCurrencyCode\",\n\t\"FixedDataFinanceReportingType\"\
+  ,\n\t\"OptyParentCloseDate\",\n\t\"OptyTerritoryCountryLegacy_CC\",\n\t\"OptyTerritoryGeoLegacy_CC\"\
+  ,\n\t\"OptyTerritoryRegionLegacy_CC\",\n\t\"OptyTerritoryAreaLegacy_CC\",\n\t\"\
+  OptyTerritoryLegacy_CC\",\n\t\"OptyPartnershipType\",\n\t\"OptyCompetition\",\n\t\
+  \"OptyParentType\",\n\t\"OptyParentCreatedOn\",\n\t\"BookingsPipelineFilter_CC\"\
+  ,\n\t\"SFixedDataOptyTerm\",\n\t\"OptyItemAnnualListAmount_USD\",\n\t\"SFixedDataListPrice_USD\"\
+  ,\n\t\"OptyItemNetNewQuantity\",\n\t\"OptyItemTotalTrainingRevenue_USD\",\n\t\"\
+  OptyItemTotalPSRevenue_USD\",\n\t\"FixedDataNetPricePerServer\",\n\t\"FixedDataNetNewServers\"\
+  ,\n\t\"FixedDataNetPricePerSeat_USD\",\n\t\"FixedDataNetNewSeats\",\n\t\"FixedDataNumberOfSeats\"\
+  ,\n\t\"ProductAttribute1Value\",\n\t\"OptyWeightedPercentage\",\n\t\"OptyPartnerPercent\"\
+  ,\n\t\"OptyContractDuration\",\n\t\"OptyActive\",\n\t\"OptyItemSalesAmount_USD\"\
+  ,\n\t\"OptyItemQuantity\",\n\t\"OptyItemDiscountPercent\",\n\t\"OptyItemTerm\",\n\
+  \t\"OptyTerrCountry\",\n\t\"OptyTerrGeo\",\n\t\"OptyTerrArea\",\n\t\"OptyContractSignedDate\"\
+  ,\n\t\"PSTerrPSRegion\",\n\t\"DNBGULTName\",\n\t\"DNBGULTNumber\",\n\t\"DNBName\"\
+  ,\n\t\"DNBDUNSNumber\",\n\t\"PSTerrArea\",\n\t\"OptyItemTotalValue_USD\",\n\t\"\
+  OptyItemContractLineACV\",\n\t\"PSTerrRegion\",\n\t\"PSTerrGeo\",\n\t\"OptyDataCenter\"\
+  ,\n\t\"OptyPSTeaming\",\n\t\"OptyItemTermEndDate\",\n\t\"OptyItemTermStartDate\"\
+  ,\n\t\"FixedDataHQFinanceReportingType\",\n\t\"ProductSKU\",\n\t\"OptyPipelineStatus\"\
+  ,\n\t\"AccountIndustryCategory\",\n\t\"AcctIndustry\",\n\t\"AcctCustomerSince\"\
+  ,\n\t\"ProductFamilyValue\",\n\t\"ProductFullName\",\n\t\"G2KCompanyCountryValue\"\
+  ,\n\t\"G2KCompanyName\",\n\t\"ContractDedicatedServer\",\n\t\"ContractTerminationForConvenience\"\
+  ,\n\t\"ContractEndDate\",\n\t\"ContractStartDate\",\n\t\"ContractActive\",\n\t\"\
+  ContractRenewalStatus\",\n\t\"OptyOwnerName\",\n\t\"OptyOwnerEmployeeNumber\",\n\
+  \t\"OptySalesOrderNumber\",\n\t\"OptyImplementationPartner\",\n\t\"OptyIncumbent\"\
+  ,\n\t\"AcctParent\",\n\t\"AcctType\",\n\t\"AcctEmployees\",\n\t\"AcctName\",\n\t\
+  \"AcctNewSegment\",\n\t\"OptyParentSysID\",\n\t\"OptyParentName\",\n\t\"OptySalesPartner\"\
+  ,\n\t\"OptySysCreatedOn\",\n\t\"OptyRenewalStatus\",\n\t\"OptyRenewalCategory\"\
+  ,\n\t\"OptyContractSysID\",\n\t\"OptyName\",\n\t\"OptyItemNetNewACV\",\n\t\"ProductFamily1Value\"\
+  ,\n\t\"ProductFamily2Value\",\n\t\"ProductName\",\n\t\"ProductCategoryValue\",\n\
+  \t\"ContractNumber\",\n\t\"ContractDataCenter\",\n\t\"ContractSLAPercent\",\n\t\"\
+  OptyItemWeightedNetNewACV_CC\",\n\t\"OptyItemTotalTrainingRevenue_CC\",\n\t\"OptyItemPSRevenue_CC\"\
+  ,\n\t\"AcctG2KParentSysID\",\n\t\"ProductFamily3Value\",\n\t\"AcctNumber\",\n\t\"\
+  OptySalesNext2QuarterKey\",\n\t\"OptySalesNext1QuarterKey\",\n\t\"OptySalesYearKey\"\
+  ,\n\t\"OptySalesQuarterKey\",\n\t\"OptySalesQuarter\",\n\t\"OptyCloseDate\",\n\t\
+  \"OptyParentNumber\",\n\t\"SFixedDataAcquiredNewNewACV\",\n\t\"SFixedDataReferralFees\"\
+  ,\n\t\"OptyItemNetNewACV_USD\",\n\t\"ProductCode\",\n\t\"IsFixed\",\n\t\"OptyItemRenewalACV_USD\"\
+  ,\n\t\"OptyStage\",\n\t\"OptyType\",\n\t\"OptyItemLineItemNumber\",\n\t\"OptyNumber\"\
+  ,\n\t\"PSTerrPSTerritory\",\n\t\"OptyWinLossDeadNotes\",\n\t\"OptyOffsettingSysid\"\
+  ,\n\t\"OptyOffsettingValue\",\n\t\"OptyMSPSalesValue\",\n\t\"OptyOpportunitySourceValue\"\
+  ,\n\t\"OptyFirstClosedByValue\",\n\t\"OptyFirstClosedBy\",\n\t\"OptyFirstClosedOn\"\
+  ,\n\t\"OptySolutionConsultantValue\",\n\t\"OptyTerrRegion\",\n\t\"OptyTerritory\"\
+  ,\n\t\"OptyForeCastTypeValue\",\n\t\"OptyTerritorySysIDLegacy_CC\",\n\t\"OptyAccountSysID\"\
+  ,\n\t\"OptySysID\",\n\t\"AcctSegment\",\n\t\"ContractMasterContractValue\",\n\t\"\
+  AcctMDMID\",\n\t\"AcctMDMCustomerHQ\",\n\t\"AcctCustomeHQAssignmentRule\",\n\t\"\
+  AcctCustomerHQChangeReasonCode\",\n\t\"ReportingTerritoryGeo_CC\",\n\t\"ReportingTerritoryGeoNoBlanks_CC\"\
+  ,\n\t\"OptyOpportunityLinkReason\",\n\t\"OptyOptionSelfHostedWOSigPenalty\",\n\t\
+  \"OptySAPContractIDReqStatus\",\n\t\"OptySAPContractID\",\n\t\"AcctSysMerge\",\n\
+  \t\"OptyNewLogo\",\n\t\"OptyLogoOverrideValue\",\n\t\"OptyPartnerInfluencer\",\n\
+  \t\"SalesActivePipeline_CC\",\n\t\"OptyPriceBook\",\n\t\"OptyItemPriceBookValue\"\
+  ,\n\t\"OptyItemBaseAmount\",\n\t\"OptyItemSalesAmount\",\n\t\"CFXCurrency\",\n\t\
+  \"CFXRate\",\n\t\"OptyBaseCurrencyLabel\",\n\t\"OpportunityItemUsdBaseAmount_CC\"\
+  ,\n\t\"OpportunityItemUsdSalesAmount_CC\",\n\t\"OptyItemDataReferralFees_USD_CC\"\
+  ,\n\t\"OptyTerrDistrict\",\n\t\"AcctEmployeesDB\",\n\t\"AcctCustomerHQNewSegment\"\
+  ,\n\t\"AcctCustomerHQAcctNumber\",\n\t\"AccountIndustrySegment\",\n\t\"OptyEndCustomer\"\
+  ,\n\t\"AcctG2KParentSubsidiary\",\n\t\"DNBSegment\",\n\t\"DNBEmployeesTotal\",\n\
+  \t\"OptyItemProductUnit\",\n\t\"OptyItemListPriceString\",\n\t\"OptyItemSalesPriceString\"\
+  ,\n\t\"OptyItemUnadjustedPriceString_USD\",\n\t\"OptyItemUnadjustedPriceString\"\
+  ,\n\t\"OptyItemUnadjustedAmount_USD\",\n\t\"ProductBaseAmount\",\n\t\"OptyItemUnadjustedAmount\"\
+  ,\n\t\"RenewalStatusFlag_CC\",\n\t\"RenewalStatus_CC\",\n\t\"DNBPrimaryNAICSCode\"\
+  ,\n\t\"AcctCustomerHQIndustrySysID\",\n\t\"AcctCustomerHQAccountSysID\",\n\t\"AcctOverrideSegment\"\
+  ,\n\t\"OptyTerrMajorArea\",\n\t\"ProductCommissionableBU\",\n\t\"OptyItemPartnerDiscount\"\
+  ,\n\t\"OptyPSEngagementManager\",\n\t\"OptyItemUSDTotalTrainingRevenue_CC\",\n\t\
+  \"OptyPrimaryCompetitor\",\n\t\"OptySecondaryCompetitor\",\n\t\"OptyLinkReasonFlag\"\
+  ,\n\t\"OptyEducationISR\",\n\t\"ContractBaseCurrency\",\n\t\"ContractTotalLicenseValueDC\"\
+  ,\n\t\"ContractTotalLicenseValue\",\n\t\"ContractTotalSubscriptionACV_DC\",\n\t\"\
+  ContractTotalSubscriptionACV\",\n\t\"OptyOtherCompetitor\",\n\t\"ContractTotalACV_USD\"\
+  ,\n\t\"OptyItemUSDPSRevenue_CC\",\n\t\"AcctCustomerHQOverrideSegment\",\n\t\"OptyMasterQuoteSysID\"\
+  ,\n\t\"RestatedReportingTerritoryGeo\",\n\t\"OptyContEndDate\",\n\t\"OptyOrderTermStartDate\"\
+  ,\n\t\"OptyOrderTermEndDate\",\n\t\"AcctFieldSalesParentValue\",\n\t\"AcctCustomerHQAccount\"\
+  ,\n\t\"TerrSalesOperationsValue\",\n\t\"OptyItemCSNetNewACV_USD_CC\",\n\t\"OptyItemCSDocCurrNetNewACV_CC\"\
+  ,\n\t\"OptyItemCSDocCurrRenewalACV_CC\",\n\t\"OptyItemCSPSRevenue_USD_CC\",\n\t\"\
+  OptyItemCSTrainingRevenue_USD_CC\",\n\t\"OptyItemCSPSRevenue_USD_FX\",\n\t\"OptyItemCSTrainingRevenue_USD_FX\"\
+  ,\n\t\"OptyItemCSPSRevenue_CC\",\n\t\"OptyItemCSTrainingRevenue_CC\",\n\t\"OptyItemCSPSRevenue_FX\"\
+  ,\n\t\"OptyItemCSTrainingRevenue_FX\",\n\t\"ProductUnit\",\n\t\"OptyCurrentTerritoryGeo\"\
+  ,\n\t\"OptyCurrentTerritoryArea\",\n\t\"OptyCurrentTerritoryRegion\",\n\t\"OptyCurrentAccountGeo\"\
+  ,\n\t\"OptyCurrentAccountArea\",\n\t\"OptyCurrentAccountRegion\",\n\t\"OptyCurrentTerritorySysID\"\
+  ,\n\t\"OptyTerritorySysID\",\n\t\"CurrentGeo_CC\",\n\t\"CurrentArea_CC\",\n\t\"\
+  CurrentRegion_CC\",\n\t\"OptyRenewalDriven\",\n\t\"OptyRenewalRep\",\n\t\"ProductFamily1\"\
+  ,\n\t\"ProductFamily2\",\n\t\"ProductFamily3\",\n\t\"OptyOwnerSysID\",\n\t\"OptyItemFlags\"\
+  ,\n\t\"OptyContractType\",\n\t\"OptyCompititiveReason\",\n\t\"CurrentMajorArea_CC\"\
+  ,\n\t\"OptyLinePriceResetPrimaryLineSysID\",\n\t\"OptyOwnerEmpRegion\",\n\t\"ProductListPriceModelSysID\"\
+  ,\n\t\"ProductListPriceModel\",\n\t\"OptyESADealFlag\",\n\t\"AcctFieldSalesParentSysID\"\
+  ,\n\t\"AcctMSPEndCustSysID\",\n\t\"AcctNewPartnerType\",\n\t\"AcctCountryTier\"\
+  ,\n\t\"OptyOwnerEmail\",\n\t\"OptyMSPSalesSysID\",\n\t\"OptyAdjustedLineItemNetNewQuantity\"\
+  ,\n\t\"OptyAdjustedQuantity\",\n\t\"AccountMajorArea\",\n\t\"AccountRegion\",\n\t\
+  \"AccountDistrict\",\n\t\"AccountTerritory\",\n\t\"OptyMergeAccountParentSysID\"\
+  ,\n\t\"AcctParentSysID\",\n\t\"OptyAcctParentSysid_CC\",\n\t\"OptyItemAdjustmentAmount_USD\"\
+  ,\n\t\"FinNNACV_CC\",\n\t\"FinNNACVDC_CC\",\n\t\"OptyItemAdjustment\",\n\t\"SFixedDataAcquiredNewNewACVDC\"\
+  ,\n\t\"AcctF500ParentAccountName\",\n\t\"CumulativeNetNewACVDC\",\n\t\"Workflow\"\
+  ,\n\t\"ProductNowBuyingProgramFlag\",\n\t\"OptyCurrentAccountDistrict\",\n\t\"OptyCurrentTerritoryDistrict\"\
+  ,\n\t\"OptyMergeAccountDisctrict\",\n\t\"CurrentDistrict_CC\",\n\t\"CommNNACVConstantFXAdjusted_CC\"\
+  ,\n\t\"CommRenewalACVConstantFXAdjusted_CC\",\n\t\"SurvivorOptyAcctNumber\",\n\t\
+  \"OptyParentNumber_CC\",\n\t\"AccountConsolidationFlag_CC\",\n\t\"Workflow_IR\"\
+  ,\n\t\"OptyItemDiscountGuideline\",\n\t\"OptyItemDiscretion\",\n\t\"OptyItemReasonFor100PercentDiscountValue\"\
+  ,\n\t\"OptyItemLineItemNumberSURF_CC\",\n\t\"SalesNNACV_USD_CC\",\n\t\"SalesNNACVDC_CC\"\
+  ,\n\t\"OptyItemRenewalACV\",\n\t\"SalesRenewalACV_USD_CC\",\n\t\"SalesRenewalACV_CC\"\
+  ,\n\t\"OptyRenewalsEngagement\",\n\t\"NonCommissionableProductsFlag_CC\",\n\t\"\
+  EarliesFlag_CC\",\n\t\"BIUCCEarlyExclusionFlag_CC\",\n\t\"IneligibleFilters_CC\"\
+  ,\n\t\"OptyExtension\",\n\t\"OptyMSPTerritory\",\n\t\"OpportunityMSPDistrict\",\n\
+  \t\"OpportunityMSPRegion\",\n\t\"OpportunityMSPArea\",\n\t\"OpportunityMSPGeo\"\
+  ,\n\t\"OpportunityMSPMajorArea\",\n\t\"OptyParentRenewalACVCONST\",\n\t\"OptyParentRollupNetNewACVCONST\"\
+  ,\n\t\"ACE_Field_Flag_CC\",\n\t\"RenewalGEO_CC\",\n\t\"RenewalMajorArea_CC\",\n\t\
+  \"RenewalArea_CC\",\n\t\"RenewalRegion_CC\",\n\t\"RenewalDistrict_CC\",\n\t\"RenewalTerritory_CC\"\
+  ,\n\t\"BUWorkFlow\",\n\t\"OptyParentOrderTermEndDate\",\n\t\"BUGroup\",\n\t\"RenewalGEOReporting_CC\"\
+  ,\n\t\"AcctPartnerType\",\n\t\"OptyItemSource\",\n\t\"PSTerrMajorArea\",\n\t\"OptyDynamicsGUID\"\
+  ,\n\t\"OptyRisk\",\n\t\"OptyTiming\",\n\t\"OptyParentOpportunityLinkReason\",\n\t\
+  \"OptyParentOpportunityLinkReasonFlag\",\n\t\"OptyParentForecastType\",\n\t\"OptyContractStatus\"\
+  ,\n\t\"AccountIndustryRisk\",\n\t\"OptyParentPipelineStatusValue\",\n\t\"GPNumber\"\
+  ,\n\t\"GPOverrideName\",\n\t\"DPNumber\",\n\t\"DPOverrideName\",\n\t\"SFixedDataCSRenewalACV_USD\"\
+  ,\n\t\"CommRenewalOpp_CC\",\n\t\"CB_CommRenewalACV_CC\",\n\t\"OptyItemCSRenewalACV_USD\"\
+  ,\n\t\"AccountTotalRenewalOpportunity_CC\",\n\t\"RenewalACVAC_CC\",\n\t\"SFixedDataCSDocCurrRenewalACV\"\
+  ,\n\t\"CommRenewalOppDC_CC\",\n\t\"OptyItemCSDocCurrRenewalACV\",\n\t\"RenewalACVAC_DC\"\
+  ,\n\t\"AccountTotalRenewalOpportunity_DC\",\n\t\"OptyItemCSRenewalACV_USD_CC\",\n\
+  \t\"AcctCustomerHQ\",\n\t\"DNBBusinessName\",\n\t\"CustomerHQAcct_Segment_Rank_CC\"\
+  ,\n\t\"AccountCustomerHQIndustryCategory\",\n\t\"AccountCustomerHQIndustrySegment\"\
+  ,\n\t\"AcctCustomerHQEmployeesDB\",\n\t\"DNBBusinessName_Old\",\n\t\"OptyMSPEnvironmentType\"\
+  ,\n\t\"OptyMSPUsageType\",\n\t\"NNACVDCConstFX_CC\",\n\tNNACVDC_CC,\n\tNNACVUSD_CC,\n\
+  \t\"LastRunTS\",\n\t\"AcctCustomerHQ_Old\",\n\t\"Account_CMID\",\n\t\"AllocationType\"\
+  ,\n\t\"AcctNonProfit\",\n\t\"AnnualRevenue\",\n\t\"GPOverrideAnnualRevenue\",\n\t\
+  \"DPOverrideAnnualRevenue\",\n\t\"CMOverrideAnnualRevenue\"\n) as\n select\n \t\"\
+  RenewalACV\",\n\t\"CumulativeNetNewACV\",\n\t\"FutureClose\",\n\t\"G2KRanking\"\
+  ,\n\t\"DNBHQBusinessName\",\n\t\"DNBHQDUNSParentName\",\n\t\"DNBHQDUNSNumber\",\n\
+  \t\"OptyItemTotalValueAmount\",\n\t\"SFixedDataDocCurrReferralFees\",\n\t\"OptyItemTrainingRevenue\"\
+  ,\n\t\"OptyItemPSRevenue\",\n\t\"OptyOwnerStartDate\",\n\t\"FinanceReportingTerritoryGeo\"\
+  ,\n\t\"ProductBusinessUnitValue\",\n\t\"OptyFlagsSysID\",\n\t\"SFixedDataAcctCountry\"\
+  ,\n\t\"SFixedDataAccountTerritoryGeo\",\n\t\"SFixedDataAccountTerritoryArea\",\n\
+  \t\"AcctCountry\",\n\t\"AccountGeo\",\n\t\"AccountArea\",\n\t\"RelatedPartyName\"\
+  ,\n\t\"OptyItemCurrencyCode\",\n\t\"FixedDataFinanceReportingType\",\n\t\"OptyParentCloseDate\"\
+  ,\n\t\"OptyTerritoryCountryLegacy_CC\",\n\t\"OptyTerritoryGeoLegacy_CC\",\n\t\"\
+  OptyTerritoryRegionLegacy_CC\",\n\t\"OptyTerritoryAreaLegacy_CC\",\n\t\"OptyTerritoryLegacy_CC\"\
+  ,\n\t\"OptyPartnershipType\",\n\t\"OptyCompetition\",\n\t\"OptyParentType\",\n\t\
+  \"OptyParentCreatedOn\",\n\t\"BookingsPipelineFilter_CC\",\n\t\"SFixedDataOptyTerm\"\
+  ,\n\t\"OptyItemAnnualListAmount_USD\",\n\t\"SFixedDataListPrice_USD\",\n\t\"OptyItemNetNewQuantity\"\
+  ,\n\t\"OptyItemTotalTrainingRevenue_USD\",\n\t\"OptyItemTotalPSRevenue_USD\",\n\t\
+  \"FixedDataNetPricePerServer\",\n\t\"FixedDataNetNewServers\",\n\t\"FixedDataNetPricePerSeat_USD\"\
+  ,\n\t\"FixedDataNetNewSeats\",\n\t\"FixedDataNumberOfSeats\",\n\t\"ProductAttribute1Value\"\
+  ,\n\t\"OptyWeightedPercentage\",\n\t\"OptyPartnerPercent\",\n\t\"OptyContractDuration\"\
+  ,\n\t\"OptyActive\",\n\t\"OptyItemSalesAmount_USD\",\n\t\"OptyItemQuantity\",\n\t\
+  \"OptyItemDiscountPercent\",\n\t\"OptyItemTerm\",\n\t\"OptyTerrCountry\",\n\t\"\
+  OptyTerrGeo\",\n\t\"OptyTerrArea\",\n\t\"OptyContractSignedDate\",\n\t\"PSTerrPSRegion\"\
+  ,\n\t\"DNBGULTName\",\n\t\"DNBGULTNumber\",\n\t\"DNBName\",\n\t\"DNBDUNSNumber\"\
+  ,\n\t\"PSTerrArea\",\n\t\"OptyItemTotalValue_USD\",\n\t\"OptyItemContractLineACV\"\
+  ,\n\t\"PSTerrRegion\",\n\t\"PSTerrGeo\",\n\t\"OptyDataCenter\",\n\t\"OptyPSTeaming\"\
+  ,\n\t\"OptyItemTermEndDate\",\n\t\"OptyItemTermStartDate\",\n\t\"FixedDataHQFinanceReportingType\"\
+  ,\n\t\"ProductSKU\",\n\t\"OptyPipelineStatus\",\n\t\"AccountIndustryCategory\",\n\
+  \t\"AcctIndustry\",\n\t\"AcctCustomerSince\",\n\t\"ProductFamilyValue\",\n\t\"ProductFullName\"\
+  ,\n\t\"G2KCompanyCountryValue\",\n\t\"G2KCompanyName\",\n\t\"ContractDedicatedServer\"\
+  ,\n\t\"ContractTerminationForConvenience\",\n\t\"ContractEndDate\",\n\t\"ContractStartDate\"\
+  ,\n\t\"ContractActive\",\n\t\"ContractRenewalStatus\",\n\t\"OptyOwnerName\",\n\t\
+  \"OptyOwnerEmployeeNumber\",\n\t\"OptySalesOrderNumber\",\n\t\"OptyImplementationPartner\"\
+  ,\n\t\"OptyIncumbent\",\n\t\"AcctParent\",\n\t\"AcctType\",\n\t\"AcctEmployees\"\
+  ,\n\t\"AcctName\",\n\t\"AcctNewSegment\",\n\t\"OptyParentSysID\",\n\t\"OptyParentName\"\
+  ,\n\t\"OptySalesPartner\",\n\t\"OptySysCreatedOn\",\n\t\"OptyRenewalStatus\",\n\t\
+  \"OptyRenewalCategory\",\n\t\"OptyContractSysID\",\n\t\"OptyName\",\n\t\"OptyItemNetNewACV\"\
+  ,\n\t\"ProductFamily1Value\",\n\t\"ProductFamily2Value\",\n\t\"ProductName\",\n\t\
+  \"ProductCategoryValue\",\n\t\"ContractNumber\",\n\t\"ContractDataCenter\",\n\t\"\
+  ContractSLAPercent\",\n\t\"OptyItemWeightedNetNewACV_CC\",\n\t\"OptyItemTotalTrainingRevenue_CC\"\
+  ,\n\t\"OptyItemPSRevenue_CC\",\n\t\"AcctG2KParentSysID\",\n\t\"ProductFamily3Value\"\
+  ,\n\t\"AcctNumber\",\n\t\"OptySalesNext2QuarterKey\",\n\t\"OptySalesNext1QuarterKey\"\
+  ,\n\t\"OptySalesYearKey\",\n\t\"OptySalesQuarterKey\",\n\t\"OptySalesQuarter\",\n\
+  \t\"OptyCloseDate\",\n\t\"OptyParentNumber\",\n\t\"SFixedDataAcquiredNewNewACV\"\
+  ,\n\t\"SFixedDataReferralFees\",\n\t\"OptyItemNetNewACV_USD\",\n\t\"ProductCode\"\
+  ,\n\t\"IsFixed\",\n\t\"OptyItemRenewalACV_USD\",\n\t\"OptyStage\",\n\t\"OptyType\"\
+  ,\n\t\"OptyItemLineItemNumber\",\n\t\"OptyNumber\",\n\t\"PSTerrPSTerritory\",\n\t\
+  \"OptyWinLossDeadNotes\",\n\t\"OptyOffsettingSysid\",\n\t\"OptyOffsettingValue\"\
+  ,\n\t\"OptyMSPSalesValue\",\n\t\"OptyOpportunitySourceValue\",\n\t\"OptyFirstClosedByValue\"\
+  ,\n\t\"OptyFirstClosedBy\",\n\t\"OptyFirstClosedOn\",\n\t\"OptySolutionConsultantValue\"\
+  ,\n\t\"OptyTerrRegion\",\n\t\"OptyTerritory\",\n\t\"OptyForeCastTypeValue\",\n\t\
+  \"OptyTerritorySysIDLegacy_CC\",\n\t\"OptyAccountSysID\",\n\t\"OptySysID\",\n\t\"\
+  AcctSegment\",\n\t\"ContractMasterContractValue\",\n\t\"AcctMDMID\",\n\t\"AcctMDMCustomerHQ\"\
+  ,\n\t\"AcctCustomeHQAssignmentRule\",\n\t\"AcctCustomerHQChangeReasonCode\",\n\t\
+  \"ReportingTerritoryGeo_CC\",\n\t\"ReportingTerritoryGeoNoBlanks_CC\",\n\t\"OptyOpportunityLinkReason\"\
+  ,\n\t\"OptyOptionSelfHostedWOSigPenalty\",\n\t\"OptySAPContractIDReqStatus\",\n\t\
+  \"OptySAPContractID\",\n\t\"AcctSysMerge\",\n\t\"OptyNewLogo\",\n\t\"OptyLogoOverrideValue\"\
+  ,\n\t\"OptyPartnerInfluencer\",\n\t\"SalesActivePipeline_CC\",\n\t\"OptyPriceBook\"\
+  ,\n\t\"OptyItemPriceBookValue\",\n\t\"OptyItemBaseAmount\",\n\t\"OptyItemSalesAmount\"\
+  ,\n\t\"CFXCurrency\",\n\t\"CFXRate\",\n\t\"OptyBaseCurrencyLabel\",\n\t\"OpportunityItemUsdBaseAmount_CC\"\
+  ,\n\t\"OpportunityItemUsdSalesAmount_CC\",\n\t\"OptyItemDataReferralFees_USD_CC\"\
+  ,\n\t\"OptyTerrDistrict\",\n\t\"AcctEmployeesDB\",\n\t\"AcctCustomerHQNewSegment\"\
+  ,\n\t\"AcctCustomerHQAcctNumber\",\n\t\"AccountIndustrySegment\",\n\t\"OptyEndCustomer\"\
+  ,\n\t\"AcctG2KParentSubsidiary\",\n\t\"DNBSegment\",\n\t\"DNBEmployeesTotal\",\n\
+  \t\"OptyItemProductUnit\",\n\t\"OptyItemListPriceString\",\n\t\"OptyItemSalesPriceString\"\
+  ,\n\t\"OptyItemUnadjustedPriceString_USD\",\n\t\"OptyItemUnadjustedPriceString\"\
+  ,\n\t\"OptyItemUnadjustedAmount_USD\",\n\t\"ProductBaseAmount\",\n\t\"OptyItemUnadjustedAmount\"\
+  ,\n\t\"RenewalStatusFlag_CC\",\n\t\"RenewalStatus_CC\",\n\t\"DNBPrimaryNAICSCode\"\
+  ,\n\t\"AcctCustomerHQIndustrySysID\",\n\t\"AcctCustomerHQAccountSysID\",\n\t\"AcctOverrideSegment\"\
+  ,\n\t\"OptyTerrMajorArea\",\n\t\"ProductCommissionableBU\",\n\t\"OptyItemPartnerDiscount\"\
+  ,\n\t\"OptyPSEngagementManager\",\n\t\"OptyItemUSDTotalTrainingRevenue_CC\",\n\t\
+  \"OptyPrimaryCompetitor\",\n\t\"OptySecondaryCompetitor\",\n\t\"OptyLinkReasonFlag\"\
+  ,\n\t\"OptyEducationISR\",\n\t\"ContractBaseCurrency\",\n\t\"ContractTotalLicenseValueDC\"\
+  ,\n\t\"ContractTotalLicenseValue\",\n\t\"ContractTotalSubscriptionACV_DC\",\n\t\"\
+  ContractTotalSubscriptionACV\",\n\t\"OptyOtherCompetitor\",\n\t\"ContractTotalACV_USD\"\
+  ,\n\t\"OptyItemUSDPSRevenue_CC\",\n\t\"AcctCustomerHQOverrideSegment\",\n\t\"OptyMasterQuoteSysID\"\
+  ,\n\t\"RestatedReportingTerritoryGeo\",\n\t\"OptyContEndDate\",\n\t\"OptyOrderTermStartDate\"\
+  ,\n\t\"OptyOrderTermEndDate\",\n\t\"AcctFieldSalesParentValue\",\n\t\"AcctCustomerHQAccount\"\
+  ,\n\t\"TerrSalesOperationsValue\",\n\t\"OptyItemCSNetNewACV_USD_CC\",\n\t\"OptyItemCSDocCurrNetNewACV_CC\"\
+  ,\n\t\"OptyItemCSDocCurrRenewalACV_CC\",\n\t\"OptyItemCSPSRevenue_USD_CC\",\n\t\"\
+  OptyItemCSTrainingRevenue_USD_CC\",\n\t\"OptyItemCSPSRevenue_USD_FX\",\n\t\"OptyItemCSTrainingRevenue_USD_FX\"\
+  ,\n\t\"OptyItemCSPSRevenue_CC\",\n\t\"OptyItemCSTrainingRevenue_CC\",\n\t\"OptyItemCSPSRevenue_FX\"\
+  ,\n\t\"OptyItemCSTrainingRevenue_FX\",\n\t\"ProductUnit\",\n\t\"OptyCurrentTerritoryGeo\"\
+  ,\n\t\"OptyCurrentTerritoryArea\",\n\t\"OptyCurrentTerritoryRegion\",\n\t\"OptyCurrentAccountGeo\"\
+  ,\n\t\"OptyCurrentAccountArea\",\n\t\"OptyCurrentAccountRegion\",\n\t\"OptyCurrentTerritorySysID\"\
+  ,\n\t\"OptyTerritorySysID\",\n\t\"CurrentGeo_CC\",\n\t\"CurrentArea_CC\",\n\t\"\
+  CurrentRegion_CC\",\n\t\"OptyRenewalDriven\",\n\t\"OptyRenewalRep\",\n\t\"ProductFamily1\"\
+  ,\n\t\"ProductFamily2\",\n\t\"ProductFamily3\",\n\t\"OptyOwnerSysID\",\n\t\"OptyItemFlags\"\
+  ,\n\t\"OptyContractType\",\n\t\"OptyCompititiveReason\",\n\t\"CurrentMajorArea_CC\"\
+  ,\n\t\"OptyLinePriceResetPrimaryLineSysID\",\n\t\"OptyOwnerEmpRegion\",\n\t\"ProductListPriceModelSysID\"\
+  ,\n\t\"ProductListPriceModel\",\n\t\"OptyESADealFlag\",\n\t\"AcctFieldSalesParentSysID\"\
+  ,\n\t\"AcctMSPEndCustSysID\",\n\t\"AcctNewPartnerType\",\n\t\"AcctCountryTier\"\
+  ,\n\t\"OptyOwnerEmail\",\n\t\"OptyMSPSalesSysID\",\n\t\"OptyAdjustedLineItemNetNewQuantity\"\
+  ,\n\t\"OptyAdjustedQuantity\",\n\t\"AccountMajorArea\",\n\t\"AccountRegion\",\n\t\
+  \"AccountDistrict\",\n\t\"AccountTerritory\",\n\t\"OptyMergeAccountParentSysID\"\
+  ,\n\t\"AcctParentSysID\",\n\t\"OptyAcctParentSysid_CC\",\n\t\"OptyItemAdjustmentAmount_USD\"\
+  ,\n\t\"FinNNACV_CC\",\n\t\"FinNNACVDC_CC\",\n\t\"OptyItemAdjustment\",\n\t\"SFixedDataAcquiredNewNewACVDC\"\
+  ,\n\t\"AcctF500ParentAccountName\",\n\t\"CumulativeNetNewACVDC\",\n\t\"Workflow\"\
+  ,\n\t\"ProductNowBuyingProgramFlag\",\n\t\"OptyCurrentAccountDistrict\",\n\t\"OptyCurrentTerritoryDistrict\"\
+  ,\n\t\"OptyMergeAccountDisctrict\",\n\t\"CurrentDistrict_CC\",\n\t\"CommNNACVConstantFXAdjusted_CC\"\
+  ,\n\t\"CommRenewalACVConstantFXAdjusted_CC\",\n\t\"SurvivorOptyAcctNumber\",\n\t\
+  \"OptyParentNumber_CC\",\n\t\"AccountConsolidationFlag_CC\",\n\t\"Workflow_IR\"\
+  ,\n\t\"OptyItemDiscountGuideline\",\n\t\"OptyItemDiscretion\",\n\t\"OptyItemReasonFor100PercentDiscountValue\"\
+  ,\n\t\"OptyItemLineItemNumberSURF_CC\",\n\t\"SalesNNACV_USD_CC\",\n\t\"SalesNNACVDC_CC\"\
+  ,\n\t\"OptyItemRenewalACV\",\n\t\"SalesRenewalACV_USD_CC\",\n\t\"SalesRenewalACV_CC\"\
+  ,\n\t\"OptyRenewalsEngagement\",\n\t\"NonCommissionableProductsFlag_CC\",\n\t\"\
+  EarliesFlag_CC\",\n\t\"BIUCCEarlyExclusionFlag_CC\",\n\t\"IneligibleFilters_CC\"\
+  ,\n\t\"OptyExtension\",\n\t\"OptyMSPTerritory\",\n\t\"OpportunityMSPDistrict\",\n\
+  \t\"OpportunityMSPRegion\",\n\t\"OpportunityMSPArea\",\n\t\"OpportunityMSPGeo\"\
+  ,\n\t\"OpportunityMSPMajorArea\",\n\t\"OptyParentRenewalACVCONST\",\n\t\"OptyParentRollupNetNewACVCONST\"\
+  ,\n\t\"ACE_Field_Flag_CC\",\n\t\"RenewalGEO_CC\",\n\t\"RenewalMajorArea_CC\",\n\t\
+  \"RenewalArea_CC\",\n\t\"RenewalRegion_CC\",\n\t\"RenewalDistrict_CC\",\n\t\"RenewalTerritory_CC\"\
+  ,\n\t\"BUWorkFlow\",\n\t\"OptyParentOrderTermEndDate\",\n\t\"BUGroup\",\n\t\"RenewalGEOReporting_CC\"\
+  ,\n\t\"AcctPartnerType\",\n\t\"OptyItemSource\",\n\t\"PSTerrMajorArea\",\n\t\"OptyDynamicsGUID\"\
+  ,\n\t\"OptyRisk\",\n\t\"OptyTiming\",\n\t\"OptyParentOpportunityLinkReason\",\n\t\
+  \"OptyParentOpportunityLinkReasonFlag\",\n\t\"OptyParentForecastType\",\n\t\"OptyContractStatus\"\
+  ,\n\t\"AccountIndustryRisk\",\n\t\"OptyParentPipelineStatusValue\",\n\t\"GPNumber\"\
+  ,\n\t\"GPOverrideName\",\n\t\"DPNumber\",\n\t\"DPOverrideName\",\n\t\"SFixedDataCSRenewalACV_USD\"\
+  ,\n\t\"CommRenewalOpp_CC\",\n\t\"CB_CommRenewalACV_CC\",\n\t\"OptyItemCSRenewalACV_USD\"\
+  ,\n\t\"AccountTotalRenewalOpportunity\" as \"AccountTotalRenewalOpportunity_CC\"\
+  ,\n\t\"RenewalACVAC_CC\",\n\t\"SFixedDataCSDocCurrRenewalACV\",\n\t\"CommRenewalOppDC_CC\"\
+  ,\n\t\"OptyItemCSDocCurrRenewalACV\",\n\t\"RenewalACVAC_DC\",\n\t\"AccountTotalRenewalOpportunity_DC\"\
+  ,\n\t\"OptyItemCSRenewalACV_USD_CC\",\n\t\"AcctCustomerHQ\",\n\t\"DNBBusinessName\"\
+  ,\n\t\"CustomerHQAcct_Segment_Rank_CC\",\n\t\"AccountCustomerHQIndustryCategory\"\
+  ,\n\t\"AccountCustomerHQIndustrySegment\",\n\t\"AcctCustomerHQEmployeesDB\",\n\t\
+  \"DNBBusinessName_Old\",\n\t\"OptyMSPEnvironmentType\",\n\t\"OptyMSPUsageType\"\
+  ,\n\t\"NNACVDCConstFX_CC\",\n\tNNACVDC_CC,\n\tNNACVUSD_CC,\n\t\"LastRunTS\",\n\t\
+  \"AcctCustomerHQ_Old\",\n\t\"Account_CMID\",\n\t\"AllocationType\",\n\t\"AcctNonProfit\"\
+  ,\n\t\"AnnualRevenue\",\n\t\"GPOverrideAnnualRevenue\",\n\t\"DPOverrideAnnualRevenue\"\
+  ,\n\t\"CMOverrideAnnualRevenue\"\n from CDL_LS.FINANCE_FPA_RPT.COMMON_CALC_COLUMNS_LIVE;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

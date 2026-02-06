@@ -1,0 +1,75 @@
+name: table_1116
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1116
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1116.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SYS_USER_ROLE(\n\tSYS_REPLACE_ON_UPGRADE,\n\
+  \tGRANTABLE,\n\tDV_SYS_SCOPE,\n\tSYS_CREATED_ON,\n\tSYS_POLICY,\n\tDESCRIPTION,\n\
+  \tSYS_TAGS,\n\tSYS_UPDATED_BY,\n\tSYS_PACKAGE,\n\tNAME,\n\tSYS_UPDATE_NAME,\n\t\
+  SYS_MOD_COUNT,\n\tSYS_NAME,\n\tDV_SYS_POLICY,\n\tSYS_UPDATED_ON,\n\tSYS_ID,\n\t\
+  SUFFIX,\n\tSYS_CREATED_BY,\n\tDV_SYS_PACKAGE,\n\tDV_SYS_CLASS_NAME,\n\tSYS_CLASS_NAME,\n\
+  \tELEVATED_PRIVILEGE,\n\tU_RESTRICT_IMPERSONATE,\n\tSYS_CUSTOMER_UPDATE,\n\tSYS_SCOPE,\n\
+  \tINCLUDES_ROLES,\n\tPSP_PER_INSERT_DT,\n\tPSP_PER_UPDATE_DT,\n\tPSP_PER_DELETE_DT,\n\
+  \tENCRYPTION_CONTEXT,\n\tDV_ENCRYPTION_CONTEXT,\n\tASSIGNABLE_BY,\n\tDV_ASSIGNABLE_BY,\n\
+  \tSCOPED_ADMIN\n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"SYS_REPLACE_ON_UPGRADE\"\
+  \ as \"SYS_REPLACE_ON_UPGRADE\",\n       \"GRANTABLE\" as \"GRANTABLE\",\n     \
+  \  \"DV_SYS_SCOPE\" as \"DV_SYS_SCOPE\",\n       \"SYS_CREATED_ON\" as \"SYS_CREATED_ON\"\
+  ,\n       \"SYS_POLICY\" as \"SYS_POLICY\",\n       \"DESCRIPTION\" as \"DESCRIPTION\"\
+  ,\n       \"SYS_TAGS\" as \"SYS_TAGS\",\n       \"SYS_UPDATED_BY\" as \"SYS_UPDATED_BY\"\
+  ,\n       \"SYS_PACKAGE\" as \"SYS_PACKAGE\",\n       \"NAME\" as \"NAME\",\n  \
+  \     \"SYS_UPDATE_NAME\" as \"SYS_UPDATE_NAME\",\n       \"SYS_MOD_COUNT\" as \"\
+  SYS_MOD_COUNT\",\n       \"SYS_NAME\" as \"SYS_NAME\",\n       \"DV_SYS_POLICY\"\
+  \ as \"DV_SYS_POLICY\",\n       \"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\",\n    \
+  \   \"SYS_ID\" as \"SYS_ID\",\n       \"SUFFIX\" as \"SUFFIX\",\n       \"SYS_CREATED_BY\"\
+  \ as \"SYS_CREATED_BY\",\n       \"DV_SYS_PACKAGE\" as \"DV_SYS_PACKAGE\",\n   \
+  \    \"DV_SYS_CLASS_NAME\" as \"DV_SYS_CLASS_NAME\",\n       \"SYS_CLASS_NAME\"\
+  \ as \"SYS_CLASS_NAME\",\n       \"ELEVATED_PRIVILEGE\" as \"ELEVATED_PRIVILEGE\"\
+  ,\n       \"U_RESTRICT_IMPERSONATE\" as \"U_RESTRICT_IMPERSONATE\",\n       \"SYS_CUSTOMER_UPDATE\"\
+  \ as \"SYS_CUSTOMER_UPDATE\",\n       \"SYS_SCOPE\" as \"SYS_SCOPE\",\n       \"\
+  INCLUDES_ROLES\" as \"INCLUDES_ROLES\",\n       \"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\"\
+  ,\n       \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n       \"PSP_PER_DELETE_DT\"\
+  \ as \"PSP_PER_DELETE_DT\",\n       \"ENCRYPTION_CONTEXT\" as \"ENCRYPTION_CONTEXT\"\
+  ,\n       \"DV_ENCRYPTION_CONTEXT\" as \"DV_ENCRYPTION_CONTEXT\",\n       \"ASSIGNABLE_BY\"\
+  \ as \"ASSIGNABLE_BY\",\n       \"DV_ASSIGNABLE_BY\" as \"DV_ASSIGNABLE_BY\",\n\
+  \       \"SCOPED_ADMIN\" as \"SCOPED_ADMIN\"\nFROM \"RDS\".\"SURF\".\"SYS_USER_ROLE\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

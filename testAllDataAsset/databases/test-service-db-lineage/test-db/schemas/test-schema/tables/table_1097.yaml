@@ -1,0 +1,66 @@
+name: table_1097
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1097
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1097.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TBL_ACEPIPELINEINSIGHTS(\n\t\"TimestampInsert\"\
+  ,\n\t\"OptyNumber\",\n\t\"OptyParentNumber\",\n\t\"OptySysID\",\n\t\"OptySalesQuarter\"\
+  ,\n\t\"PRMOptyRegistrationNumber\",\n\t\"ACETransactionType\",\n\t\"ACECustomerSegment\"\
+  ,\n\t\"OptyItemNetNewACV_USD\",\n\t\"ZeroACVDeal\",\n\t\"ACESubcategory\",\n\t\"\
+  OpportunityPipelineSourced\",\n\t\"OpportunityParentPipelineSourced\",\n\t\"SourcingPartnerAccount\"\
+  ,\n\t\"SourcingPartnerAccountSysID\",\n\t\"SourcingPartnerUltimateParentAccount\"\
+  \n) as\n/*********************************************************************************\n\
+  * Program Name  : ODS_LS.SURF.TBL_ACEPIPELINEINSIGHTS - New\n* Development Request\
+  \ # : STRY2499519 - Goals: Fields: Add ACE sourced attributes to NCP\n* Usage :\
+  \ Enable holistic view of ACE sourced new created Pipe in Pipeline Insights dashboard.\n\
+  * Date Created  : 15/09/2022\n* Developed By  : Sujata Inaganti\n* --------------------------------------------------------------------------------------------------------------------------\n\
+  * REVISION HISTORY:\n*---------------------------------------------------------------------------------------------------------------------------\n\
+  * CR#                 Date Modified           Modified By        Brief Description\
+  \ of Change\n*---------------------------------------------------------------------------------------------------------------------------*/\n\
+  select\n    \"TimestampInsert\",\n    \"OptyNumber\",\n    \"OptyParentNumber\"\
+  ,\n    \"OptySysID\",\n    \"OptySalesQuarter\",\n    \"PRMOptyRegistrationNumber\"\
+  ,\n    \"ACETransactionType\",\n    \"ACECustomerSegment\",\n    \"OptyItemNetNewACV_USD\"\
+  ,\n    \"ZeroACVDeal\",\n    \"ACESubcategory\",\n    \"OpportunityPipelineSourced\"\
+  ,\n    \"OpportunityParentPipelineSourced\",\n    \"SourcingPartnerAccount\",\n\
+  \    \"SourcingPartnerAccountSysID\",\n    \"SourcingPartnerUltimateParentAccount\"\
+  \nfrom\n    EDW_LS.MARKETING_UPSTREAM.TBL_ACEPIPELINEINSIGHTS;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

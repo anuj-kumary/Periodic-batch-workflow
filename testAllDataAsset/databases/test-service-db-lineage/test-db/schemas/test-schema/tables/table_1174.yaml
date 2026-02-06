@@ -1,0 +1,53 @@
+name: table_1174
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1174
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1174.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view RP_PRODUCTIVITY(\n\tNUMBER,\n\tDATA_SOURCE,\n\
+  \tVOLUME_TYPE,\n\tTIME_GROUP,\n\tSUPPORT_REGION,\n\tMANAGER,\n\tCASE_ASSIGNMENT_GROUP,\n\
+  \tASSIGNMENT_GROUP_PARENT,\n\tPRIMARY_ASSIGNMENT_GROUP,\n\tEU_METRO_TSE,\n\tEMPLOYEE_TYPE,\n\
+  \tDATE_DIM_QTR,\n\tDATE_DIM_MONTH,\n\tDATE_DIM_WEEK,\n\tUSER_DEPARTMENT,\n\tREGULATED_MARKET,\n\
+  \tUSER_DEPT_AT_CLOSURE,\n\tASSIGNED_TO,\n\tHC,\n\tU_DISPATCH_OFFICE,\n\tU_ROLE,\n\
+  \tSUB_TYPE,\n\tP_HC_QTR,\n\tP_HC_MONTH,\n\tP_HC_WEEK,\n\tINCLUDE_DURATION,\n\tINCLUDEEXCLUDE_DURATION,\n\
+  \tSP_NAME,\n\tSP_SYS_ID,\n\tACCT_COUNTRY\n) as\n\nselect *\nfrom\nEDW.UTGA.RP_PRODUCTIVITY_BD_SF_MIGRATION_MVP\n\
+  where data_source!='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

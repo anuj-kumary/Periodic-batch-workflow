@@ -1,0 +1,59 @@
+name: table_1100
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1100
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1100.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TASK_SLA(\n\t\"TaskDVStage\",\n\t\"TaskNumber\"\
+  ,\n\t\"TaskStartTime\",\n\t\"TaskHasBreached\",\n\t\"TaskEndTime\",\n\t\"TaskDVDuration\"\
+  ,\n\t\"TaskDVBusinessDuration\",\n\t\"TaskDVBusinessTimeLeft\",\n\t\"TaskPlannedEndTime\"\
+  ,\n\t\"TaskDVSLAProgress\",\n\t\"TaskSysID\",\n\t\"TaskPercentage\",\n\t\"TaskDvSla\"\
+  ,\n\t\"TaskActive\"\n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"DV_STAGE\" as \"\
+  TaskDVStage\",\n       \"DV_TASK\" as \"TaskNumber\",\n       \"START_TIME\" as\
+  \ \"TaskStartTime\",\n       \"HAS_BREACHED\" as \"TaskHasBreached\",\n       \"\
+  END_TIME\" as \"TaskEndTime\",\n       \"DV_DURATION\" as \"TaskDVDuration\",\n\
+  \       \"DV_BUSINESS_DURATION\" as \"TaskDVBusinessDuration\",\n       \"DV_BUSINESS_TIME_LEFT\"\
+  \ as \"TaskDVBusinessTimeLeft\",\n       \"PLANNED_END_TIME\" as \"TaskPlannedEndTime\"\
+  ,\n       \"DV_U_SLA_PROGRESS\" as \"TaskDVSLAProgress\",\n       \"TASK\" as \"\
+  TaskSysID\",\n       \"PERCENTAGE\" as \"TaskPercentage\",\n       \"DV_SLA\" as\
+  \ \"TaskDvSla\",\n       \"ACTIVE\" as \"TaskActive\"\nFROM \"RDS\".\"SURF\".\"\
+  TASK_SLA\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

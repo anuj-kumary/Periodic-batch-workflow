@@ -1,0 +1,70 @@
+name: table_1154
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1154
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1154.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_PROCESS_USER_REPORT_INTVW_0709(\n\tPORT,\n\
+  \tU_USER_NAME,\n\tSYS_ID,\n\tSYS_UPDATED_ON,\n\tSYS_CREATED_ON,\n\tU_ACTIVE,\n\t\
+  U_INSTANCE_NAME,\n\tSYS_CREATED_BY,\n\tSERVER_NAME,\n\tCATEGORY,\n\tPSP_PER_DELETE_DT,\n\
+  \tU_EMAIL,\n\tSYS_UPDATED_BY,\n\tROLES,\n\tPSP_PER_UPDATE_DT,\n\tU_USER_SYSID,\n\
+  \tREPORT_ID,\n\tUSER_ID,\n\tSYS_MOD_COUNT,\n\tPSP_PER_INSERT_DT,\n\tSYS_TAGS,\n\t\
+  U_INTERNAL_INTEGRATION_USER,\n\tU_WEB_SERVICE_ACCESS_ONLY,\n\tU_APPROVAL_SOURCE_EMAIL,\n\
+  \tU_LAST_APPROVED_DATE,\n\tU_APPROVAL_SOURCE_DESKTOP,\n\tU_APPROVAL_SOURCE_MOBILE,\n\
+  \tU_LAST_LOGIN_TIME,\n\tU_REPORT_TYPE,\n\tU_FEDERATED_ID,\n\tU_CLASS\n) as\nSELECT\
+  \ *,'random' as u_class FROM RDS_SHARE.DATACENTER.\"U_PROCESS_USER_REPORT\"\nunion\n\
+  select port, u_user_name, sys_id, sys_updated_on, sys_created_on ,\ncase when u_active\
+  \ = 'random' then 'random' else 'random' end as u_active,\nu_instance_name, sys_created_by,\
+  \  server_name, category, 'random' as PSP_PER_DELETE_DT, u_email , sys_updated_by,\
+  \ roles, 'random' as PSP_PER_UPDATE_DT,\nu_user_sysid, report_id, user_id, sys_mod_count\
+  \  , 'random' as PSP_PER_INSERT_DT, sys_tags,\ncase when u_internal_integration_user\
+  \ = 'random' then 'random' else 'random' end as u_internal_integration_user,\ncase\
+  \ when u_web_service_access_only = 'random' then 'random' else 'random' end as u_web_service_access_only,\n\
+  case when u_approval_source_email = 'random' then 'random' else 'random' end as\
+  \ u_approval_source_email,\ncast(case when u_last_approved_date = 'random' then\
+  \ 'random' else u_last_approved_date end as DATE) as u_last_approved_date,\ncast(case\
+  \ when u_approval_source_desktop = 'random' then 'random' else u_approval_source_desktop\
+  \ end as NUMBER('random','random') ) as u_approval_source_desktop,\ncast(case when\
+  \ u_approval_source_mobile = 'random' then 'random' else u_approval_source_mobile\
+  \ end as NUMBER('random','random') ) as u_approval_source_mobile,\ncast (case when\
+  \ u_last_login_time = 'random' then 'random' else u_last_login_time end as  TIMESTAMP_NTZ('random'))\
+  \ as u_last_login_time, u_report_type, u_federated_id, u_class\nfrom EDW_LS.DATACENTER.U_PROCESS_USER_REPORT_INT_070923;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

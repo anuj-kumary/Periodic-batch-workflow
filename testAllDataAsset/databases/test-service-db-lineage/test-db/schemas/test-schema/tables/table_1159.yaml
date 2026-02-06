@@ -1,0 +1,163 @@
+name: table_1159
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1159
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1159.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TAXONOMY_MASTER_VIEW(\n\tTAXO_MAP_SYSID,\n\
+  \tTAXO_MAP_ENDINGNODE,\n\tTAXO_MAP_DVENDINGNODE,\n\tTAXO_MAP_ACTIVE,\n\tTAXO_MAP_SYSCREATEDON,\n\
+  \tTAXO_MAP_SYSCREATEDBY,\n\tTAXO_MAP_SYSUPDATEDON,\n\tTAXO_MAP_SYSUPDATEDBY,\n\t\
+  TAXO_MAP_ENDSTARTRELATIONSHIP,\n\tTAXO_MAP_DVENDSTARTRELATIONSHIP,\n\tTAXO_MAP_STARTENDRELATIONSHIP,\n\
+  \tTAXO_MAP_DVSTARTENDRELATIONSHIP,\n\tTAXO_MAP_STARTINGNODE,\n\tTAXO_MAP_DVSTARTINGNODE,\n\
+  \tTAXO_MAP_EXPLICITRELATIONSHIP,\n\tTAXO_MAP_MODEL,\n\tTAXO_MAP_NUMBER,\n\tTAXO_MAP_LEVEL,\n\
+  \tTAXO_MAP_PATH,\n\tTAXO_MAP_RELEASEPROCESSSTATE,\n\tTAXO_MAP_REQUESTITEM,\n\tTAXO_MAP_UUID,\n\
+  \tTAXO_MAP_STATE,\n\tTAXO_MAP_SYSTAGS,\n\tTAXO_MAP_SYSMODCOUNT,\n\tTAXO_MAP_LEVEL1,\n\
+  \tTAXO_MAP_DVLEVEL1,\n\tTAXO_MAP_LEVEL2,\n\tTAXO_MAP_DVLEVEL2,\n\tTAXO_MAP_LEVEL3,\n\
+  \tTAXO_MAP_DVLEVEL3,\n\tTAXO_MAP_LEVEL4,\n\tTAXO_MAP_DVLEVEL4,\n\tTAXO_MAP_LEVEL5,\n\
+  \tTAXO_MAP_DVLEVEL5,\n\tTAXO_MAP_LEVEL6,\n\tTAXO_MAP_DVLEVEL6,\n\tTAXO_MAP_LEVEL7,\n\
+  \tTAXO_MAP_DVLEVEL7,\n\tTAXO_MAP_LEVEL8,\n\tTAXO_MAP_DVLEVEL8,\n\tTAXO_MAP_LEVEL9,\n\
+  \tTAXO_MAP_DVLEVEL9,\n\tTAXO_MAP_LEVEL10,\n\tTAXO_MAP_DVLEVEL10,\n\tTAXO_MAP_NESTEDROLLUP,\n\
+  \tTAXO_MAP_DVNESTEDROLLUP,\n\tTAXO_MAP_APPLICATIONROLLUP,\n\tTAXO_MAP_DVAPPLICATIONROLLUP,\n\
+  \tTAXO_MAP_PRODUCTLINEROLLUP,\n\tTAXO_MAP_DVPRODUCTLINEROLLUP,\n\tTAXO_ACTIVE,\n\
+  \tTAXO_BUILDDATE,\n\tTAXO_CASECOUNT,\n\tTAXO_CASEMANAGEMENT,\n\tTAXO_CHANGEMANAGEMENT,\n\
+  \tTAXO_DEFINITION,\n\tTAXO_INCIDENTCOUNT,\n\tTAXO_INCIDENTMANAGEMENT,\n\tTAXO_IRP,\n\
+  \tTAXO_LEGACYDEPRECATED,\n\tTAXO_LONGDESCRIPTION,\n\tTAXO_MARKETINGAPPROVEDNAME,\n\
+  \tTAXO_NAME,\n\tTAXO_NOTES,\n\tTAXO_NUMBER,\n\tTAXO_PROBLEMMANAGEMENT,\n\tTAXO_PRODDOCSURL,\n\
+  \tTAXO_PRODUCTSTORYCREATEDNOTIFICATION,\n\tTAXO_SELECTABLE,\n\tTAXO_SEMAPHOREGUID,\n\
+  \tTAXO_STOREURL,\n\tTAXO_STORYSTATEACCEPTEDMANDATORY,\n\tTAXO_SURFNAMINGTICKET,\n\
+  \tTAXO_SYNONYMS,\n\tTAXO_SYSCREATEDBY,\n\tTAXO_SYSCREATEDON,\n\tTAXO_SYSID,\n\t\
+  TAXO_SYSMODCOUNT,\n\tTAXO_SYSTAGS,\n\tTAXO_SYSUPDATEDBY,\n\tTAXO_SYSUPDATEDON,\n\
+  \tTAXO_TOPLEVEL,\n\tTAXO_UUID,\n\tTAXO_WHEREREQUESTED,\n\tTAXO_BUSINESSAREA,\n\t\
+  TAXO_DVBUSINESSAREA,\n\tTAXO_CASEMANAGEMENTGROUP,\n\tTAXO_DVCASEMANAGEMENTGROUP,\n\
+  \tTAXO_CLASS,\n\tTAXO_DVCLASS,\n\tTAXO_INCIDENTMANAGEMENTGROUPENTERPRISE,\n\tTAXO_DVINCIDENTMANAGEMENTGROUPENTERPRISE,\n\
+  \tTAXO_INCIDENTMANAGERENTERPRISE,\n\tTAXO_DVINCIDENTMANAGERENTERPRISE,\n\tTAXO_PROBLEMMANAGEMENTGROUP,\n\
+  \tTAXO_DVPROBLEMMANAGEMENTGROUP,\n\tTAXO_PROBLEMMANAGER,\n\tTAXO_DVPROBLEMMANAGER,\n\
+  \tTAXO_QEMANAGER,\n\tTAXO_DVQEMANAGER,\n\tTAXO_RELEASEPROCESSSTATE,\n\tTAXO_DVRELEASEPROCESSSTATE,\n\
+  \tTAXO_RELEASEPROGRAM,\n\tTAXO_DVRELEASEPROGRAM,\n\tTAXO_TAXONOMYSTATE,\n\tTAXO_DVTAXONOMYSTATE,\n\
+  \tTAXO_USGCASEMANAGEMENTGROUP,\n\tTAXO_DVUSGCASEMANAGEMENTGROUP,\n\tTAXO_USGINCIDENTMANAGEMENTGROUP,\n\
+  \tTAXO_DVUSGINCIDENTMANAGEMENTGROUP,\n\tTAXO_MODEL,\n\tTAXO_DVMODEL,\n\tTAXO_NETNEWIN,\n\
+  \tTAXO_DVNETNEWIN,\n\tTAXO_OWNER,\n\tTAXO_DVOWNER,\n\tTAXO_DVUUID,\n\tTAXO_DVWHEREREQUESTED,\n\
+  \tBUS_AREA_U_ENGINEERING_LEADER,\n\tBUS_AREA_DV_U_ENGINEERING_LEADER,\n\tBUS_AREA_LEADER_MANAGER,\n\
+  \tBUS_AREA_LEADER_DV_MANAGER\n) as\nSELECT\n    taxo_map.\"SysId\" AS taxo_map_sysid,\n\
+  \    taxo_map.\"EndingNode\" AS taxo_map_endingnode,\n    taxo_map.\"DvEndingNode\"\
+  \ AS taxo_map_dvendingnode,\n    taxo_map.\"Active\" AS taxo_map_active,\n    taxo_map.\"\
+  SysCreatedOn\" AS taxo_map_syscreatedon,\n    taxo_map.\"SysCreatedBy\" AS taxo_map_syscreatedby,\n\
+  \    taxo_map.\"SysUpdatedOn\" AS taxo_map_sysupdatedon,\n    taxo_map.\"SysUpdatedBy\"\
+  \ AS taxo_map_sysupdatedby,\n    taxo_map.\"EndStartRelationship\" AS taxo_map_endstartrelationship,\n\
+  \    taxo_map.\"DvEndStartRelationship\" AS taxo_map_dvendstartrelationship,\n \
+  \   taxo_map.\"StartEndRelationship\" AS taxo_map_startendrelationship,\n    taxo_map.\"\
+  DvStartEndRelationship\" AS taxo_map_dvstartendrelationship,\n    taxo_map.\"StartingNode\"\
+  \ AS taxo_map_startingnode,\n    taxo_map.\"DvStartingNode\" AS taxo_map_dvstartingnode,\n\
+  \    taxo_map.\"ExplicitRelationship\" AS taxo_map_explicitrelationship,\n    taxo_map.\"\
+  Model\" AS taxo_map_model,\n    taxo_map.\"Number\" AS taxo_map_number,\n    taxo_map.\"\
+  Level\" AS taxo_map_level,\n    taxo_map.\"Path\" AS taxo_map_path,\n    taxo_map.\"\
+  ReleaseProcessState\" AS taxo_map_releaseprocessstate,\n    taxo_map.\"RequestItem\"\
+  \ AS taxo_map_requestitem,\n    taxo_map.\"Uuid\" AS taxo_map_uuid,\n    taxo_map.\"\
+  State\" AS taxo_map_state,\n    taxo_map.\"SysTags\" AS taxo_map_systags,\n    taxo_map.\"\
+  SysModCount\" AS taxo_map_sysmodcount,\n    taxo_map.\"Level1\" AS taxo_map_level1,\n\
+  \    taxo_map.\"DvLevel1\" AS taxo_map_dvlevel1,\n    taxo_map.\"Level2\" AS taxo_map_level2,\n\
+  \    taxo_map.\"DvLevel2\" AS taxo_map_dvlevel2,\n    taxo_map.\"Level3\" AS taxo_map_level3,\n\
+  \    taxo_map.\"DvLevel3\" AS taxo_map_dvlevel3,\n    taxo_map.\"Level4\" AS taxo_map_level4,\n\
+  \    taxo_map.\"DvLevel4\" AS taxo_map_dvlevel4,\n    taxo_map.\"Level5\" AS taxo_map_level5,\n\
+  \    taxo_map.\"DvLevel5\" AS taxo_map_dvlevel5,\n    taxo_map.\"Level6\" AS taxo_map_level6,\n\
+  \    taxo_map.\"DvLevel6\" AS taxo_map_dvlevel6,\n    taxo_map.\"Level7\" AS taxo_map_level7,\n\
+  \    taxo_map.\"DvLevel7\" AS taxo_map_dvlevel7,\n    taxo_map.\"Level8\" AS taxo_map_level8,\n\
+  \    taxo_map.\"DvLevel8\" AS taxo_map_dvlevel8,\n    taxo_map.\"Level9\" AS taxo_map_level9,\n\
+  \    taxo_map.\"DvLevel9\" AS taxo_map_dvlevel9,\n    taxo_map.\"Level10\" AS taxo_map_level10,\n\
+  \    taxo_map.\"DvLevel10\" AS taxo_map_dvlevel10,\n    taxo_map.\"NestedRollUp\"\
+  \ AS taxo_map_nestedrollup,\n    taxo_map.\"DvNestedRollUp\" AS taxo_map_dvnestedrollup,\n\
+  \    taxo_map.\"ApplicationRollUp\" AS taxo_map_applicationrollup,\n    taxo_map.\"\
+  DvApplicationRollUp\" AS taxo_map_dvapplicationrollup,\n    taxo_map.\"ProductLineRollUp\"\
+  \ AS taxo_map_productlinerollup,\n    taxo_map.\"DvProductLineRollUp\" AS taxo_map_dvproductlinerollup,\n\
+  \    taxo_sys.\"Active\" AS taxo_active,\n    taxo_sys.\"BuildDate\" AS taxo_builddate,\n\
+  \    taxo_sys.\"CaseCount\" AS taxo_casecount,\n    taxo_sys.\"CaseManagement\"\
+  \ AS taxo_casemanagement,\n    taxo_sys.\"ChangeManagement\" AS taxo_changemanagement,\n\
+  \    taxo_sys.\"Definition\" AS taxo_definition,\n    taxo_sys.\"IncidentCount\"\
+  \ AS taxo_incidentcount,\n    taxo_sys.\"IncidentManagement\" AS taxo_incidentmanagement,\n\
+  \    taxo_sys.\"Irp\" AS taxo_irp,\n    taxo_sys.\"LegacyDeprecated\" AS taxo_legacydeprecated,\n\
+  \    taxo_sys.\"LongDescription\" AS taxo_longdescription,\n    taxo_sys.\"MarketingApprovedName\"\
+  \ AS taxo_marketingapprovedname,\n    taxo_sys.\"Name\" AS taxo_name,\n    taxo_sys.\"\
+  Notes\" AS taxo_notes,\n    taxo_sys.\"Number\" AS taxo_number,\n    taxo_sys.\"\
+  ProblemManagement\" AS taxo_problemmanagement,\n    taxo_sys.\"ProdDocsUrl\" AS\
+  \ taxo_proddocsurl,\n    taxo_sys.\"ProductStoryCreatedNotification\" AS taxo_productstorycreatednotification,\n\
+  \    taxo_sys.\"Selectable\" AS taxo_selectable,\n    taxo_sys.\"SemaphoreGuid\"\
+  \ AS taxo_semaphoreguid,\n    taxo_sys.\"StoreUrl\" AS taxo_storeurl,\n    taxo_sys.\"\
+  StoryStateAcceptedMandatory\" AS taxo_storystateacceptedmandatory,\n    taxo_sys.\"\
+  SurfNamingTicket\" AS taxo_surfnamingticket,\n    taxo_sys.\"Synonyms\" AS taxo_synonyms,\n\
+  \    taxo_sys.\"SysCreatedBy\" AS taxo_syscreatedby,\n    taxo_sys.\"SysCreatedOn\"\
+  \ AS taxo_syscreatedon,\n    taxo_sys.\"SysId\" AS taxo_sysid,\n    taxo_sys.\"\
+  SysModCount\" AS taxo_sysmodcount,\n    taxo_sys.\"SysTags\" AS taxo_systags,\n\
+  \    taxo_sys.\"SysUpdatedBy\" AS taxo_sysupdatedby,\n    taxo_sys.\"SysUpdatedOn\"\
+  \ AS taxo_sysupdatedon,\n    taxo_sys.\"TopLevel\" AS taxo_toplevel,\n    taxo_sys.\"\
+  Uuid\" AS taxo_uuid,\n    taxo_sys.\"WhereRequested\" AS taxo_whererequested,\n\
+  \    taxo_sys.\"BusinessArea\" AS taxo_businessarea,\n    taxo_sys.\"DvBusinessArea\"\
+  \ AS taxo_dvbusinessarea,\n    taxo_sys.\"CaseManagementGroup\" AS taxo_casemanagementgroup,\n\
+  \    taxo_sys.\"DvCaseManagementGroup\" AS taxo_dvcasemanagementgroup,\n    taxo_sys.\"\
+  Class\" AS taxo_class,\n    taxo_sys.\"DvClass\" AS taxo_dvclass,\n    taxo_sys.\"\
+  IncidentManagementGroupEnterprise\" AS taxo_incidentmanagementgroupenterprise,\n\
+  \    taxo_sys.\"DvIncidentManagementGroupEnterprise\" AS taxo_dvincidentmanagementgroupenterprise,\n\
+  \    taxo_sys.\"IncidentManagerEnterprise\" AS taxo_incidentmanagerenterprise,\n\
+  \    taxo_sys.\"DvIncidentManagerEnterprise\" AS taxo_dvincidentmanagerenterprise,\n\
+  \    taxo_sys.\"ProblemManagementGroup\" AS taxo_problemmanagementgroup,\n    taxo_sys.\"\
+  DvProblemManagementGroup\" AS taxo_dvproblemmanagementgroup,\n    taxo_sys.\"ProblemManager\"\
+  \ AS taxo_problemmanager,\n    taxo_sys.\"DvProblemManager\" AS taxo_dvproblemmanager,\n\
+  \    taxo_sys.\"QeManager\" AS taxo_qemanager,\n    taxo_sys.\"DvQeManager\" AS\
+  \ taxo_dvqemanager,\n    taxo_sys.\"ReleaseProcessState\" AS taxo_releaseprocessstate,\n\
+  \    taxo_sys.\"DvReleaseProcessState\" AS taxo_dvreleaseprocessstate,\n    taxo_sys.\"\
+  ReleaseProgram\" AS taxo_releaseprogram,\n    taxo_sys.\"DvReleaseProgram\" AS taxo_dvreleaseprogram,\n\
+  \    taxo_sys.\"TaxonomyState\" AS taxo_taxonomystate,\n    taxo_sys.\"DvTaxonomyState\"\
+  \ AS taxo_dvtaxonomystate,\n    taxo_sys.\"UsgCaseManagementGroup\" AS taxo_usgcasemanagementgroup,\n\
+  \    taxo_sys.\"DvUsgCaseManagementGroup\" AS taxo_dvusgcasemanagementgroup,\n \
+  \   taxo_sys.\"UsgIncidentManagementGroup\" AS taxo_usgincidentmanagementgroup,\n\
+  \    taxo_sys.\"DvUsgIncidentManagementGroup\" AS taxo_dvusgincidentmanagementgroup,\n\
+  \    taxo_sys.\"Model\" AS taxo_model,\n    taxo_sys.\"DvModel\" AS taxo_dvmodel,\n\
+  \    taxo_sys.\"NetNewIn\" AS taxo_netnewin,\n    taxo_sys.\"DvNetNewIn\" AS taxo_dvnetnewin,\n\
+  \    taxo_sys.\"Owner\" AS taxo_owner,\n    taxo_sys.\"DvOwner\" AS taxo_dvowner,\n\
+  \    taxo_sys.\"DvUuid\" AS taxo_dvuuid,\n    taxo_sys.\"DvWhereRequested\" AS taxo_dvwhererequested,\n\
+  \    ba.u_engineering_leader AS bus_area_u_engineering_leader,\n    ba.dv_u_engineering_leader\
+  \ AS bus_area_dv_u_engineering_leader,\n    -- ba_u_ser.manager AS bus_area_leader_manager,\n\
+  \    -- ba_u_ser.dv_manager AS bus_area_leader_dv_manager\n    'random' AS bus_area_leader_manager,\n\
+  \    'random' AS bus_area_leader_dv_manager\nFROM ODS_LS.HI.X_SNC_TAXONOMY_SYS_MAP\
+  \ taxo_map\n    LEFT OUTER JOIN ODS_LS.HI.X_SNC_TAXONOMY_SYS_TAXONOMY taxo_sys\n\
+  \        ON taxo_map.\"EndingNode\" = taxo_sys.\"SysId\"\n    --Replace it with\
+  \ the business_area table from HI once its available\n    LEFT OUTER JOIN ODS_LS.BUILDTOOLS.U_BUSINESS_AREA\
+  \ ba\n        ON taxo_sys.\"BusinessArea\" = ba.sys_id;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

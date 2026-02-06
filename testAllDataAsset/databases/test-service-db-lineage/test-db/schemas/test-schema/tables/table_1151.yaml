@@ -1,0 +1,57 @@
+name: table_1151
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1151
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1151.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_PU_INSTANCE_APPLICATION_MODULE_INTVW_0709(\n\
+  \tU_INSTANCE_NAME,\n\tPSP_PER_UPDATE_DT,\n\tSYS_TAGS,\n\tSYS_ID,\n\tU_APPLICATION,\n\
+  \tPSP_PER_INSERT_DT,\n\tSYS_CREATED_BY,\n\tSYS_UPDATED_ON,\n\tU_REPORT_ID,\n\tU_TITLE,\n\
+  \tSYS_MOD_COUNT,\n\tU_TABLE,\n\tPSP_PER_DELETE_DT,\n\tU_ACTIVE,\n\tSYS_UPDATED_BY,\n\
+  \tU_UPDATED_ON,\n\tSYS_CREATED_ON,\n\tU_SYS_ID,\n\tU_APPLICATION_MENU_CREATED_BY,\n\
+  \tU_APPLICATION_MODULE_CREATED_BY,\n\tU_APP_CREATED_ON\n) as\nSELECT * FROM RDS_SHARE.DATACENTER.\"\
+  U_PU_INSTANCE_APPLICATION_MODULE\"\nunion\nselect u_instance_name, 'random' as PSP_PER_UPDATE_DT,\
+  \ sys_tags, sys_id, u_application, 'random' as PSP_PER_INSERT_DT,\nsys_created_by,\
+  \ sys_updated_on, u_report_id, u_title, sys_mod_count, u_table, 'random' as PSP_PER_DELETE_DT,\n\
+  case when u_active = 'random' then 'random' else 'random' end as u_active, sys_updated_by,\
+  \ u_updated_on, sys_created_on,  u_sys_id,\nu_application_menu_created_by, u_application_module_created_by,\
+  \  u_app_created_on\nfrom EDW_LS.DATACENTER.U_PU_INSTANCE_APPLICATION_MODULE_INT_070923;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

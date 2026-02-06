@@ -1,0 +1,55 @@
+name: table_1132
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1132
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1132.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_FORECASTCOMMIT_Q_TEST(\n\t\
+  \"SalesQuarter\",\n\t\"TerritorySysID_CC\",\n\t\"BUGroup\",\n\t\"CommitType\",\n\
+  \t\"CommitWeekNumber\",\n\t\"CommitWeekDate\",\n\t\"CommitOwner\",\n\t\"CommitOwnerSysID\"\
+  ,\n\t\"CommitSysUpdatedOn\",\n\t\"Commit\",\n\t\"CommitExpect\",\n\t\"CommitUpside\"\
+  ,\n\t\"CommitMonth_CRM\",\n\t\"CommitMonthExpect_CRM\",\n\t\"CommitMonthUpside_CRM\"\
+  ,\n\t\"Commit_CRM\",\n\t\"CommitExpect_CRM\",\n\t\"CommitUpside_CRM\",\n\t\"CommitDirectorsQuota\"\
+  ,\n\t\"CommitACVCloseToDate\",\n\t\"CommitClosedToQuota\",\n\t\"CommitACVExpectedToCloseThisWeek\"\
+  ,\n\t\"CommitExpectedNewLogosQuarter\",\n\t\"CommitPSRevenueExpectMonth\",\n\t\"\
+  CommitPSRevenueExpectQuarter\",\n\t\"WeekRank\"\n) as\nselect * from EDW_LS.SALES_SS_EM.UNIFIEDSS_FACT_FORECASTCOMMIT_TEST\n\
+  where \"WeekRank\" = 'random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

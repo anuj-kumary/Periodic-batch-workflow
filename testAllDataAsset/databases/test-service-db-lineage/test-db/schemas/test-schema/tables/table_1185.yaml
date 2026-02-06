@@ -1,0 +1,495 @@
+name: table_1185
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1185
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1185.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_FIXEDDATA_COMBINED(\n\t\"\
+  OpportunitySysID_CRM\",\n\t\"OpportunityContractSysID_CRM\",\n\t\"AccountSysID_Key\"\
+  ,\n\t\"AccountSysID_FDCRM\",\n\t\"OpportunityOwnerSysID_CRM\",\n\t\"OpportunityItemProductSysID_CRM\"\
+  ,\n\t\"OpportunityLeadNumber_CRM\",\n\t\"OpportunityMasterQuoteSysID_CRM\",\n\t\"\
+  ContractKey_CRM\",\n\t\"BUGroup_CRM\",\n\t\"BUWorkFlow_CRM\",\n\t\"ProductCode_CRM\"\
+  ,\n\t\"OpportunityItemSourceSystem_CRM\",\n\t\"LineItemNumber_CRM\",\n\t\"TerritorySysID_CC\"\
+  ,\n\t\"SalesQuarter\",\n\t\"OpportunityName\",\n\t\"OpportunityNumber\",\n\t\"OpportunityCloseDate\"\
+  ,\n\t\"OpportunityCloseMonth\",\n\t\"OpportunityType\",\n\t\"OpportunityForecastCategory\"\
+  ,\n\t\"OpportunityForecastStage\",\n\t\"OpportunitySysCreatedOn\",\n\t\"OpportunityOwnerName\"\
+  ,\n\t\"OpportunityParentNumber\",\n\t\"OpportunityParentName\",\n\t\"OpportunityParentAccountNumber\"\
+  ,\n\t\"OpportunityParentCloseDate\",\n\t\"OpportunityParentCloseMonth\",\n\t\"OpportunityParentCloseQuarter\"\
+  ,\n\t\"OpportunityParentForecastCategory\",\n\t\"OpportunityParentForecastStage\"\
+  ,\n\t\"OpportunityParentType\",\n\t\"AccountNumber_FD\",\n\t\"OpportunityParentReportingGeo\"\
+  ,\n\t\"OpportunityParentMajorArea\",\n\t\"OpportunityParentArea\",\n\t\"OpportunityParentRegion\"\
+  ,\n\t\"OpportunityParentDistrict\",\n\t\"OpportunityParentTerritory\",\n\t\"PSGeo\"\
+  ,\n\t\"PSMajorArea\",\n\t\"PSArea\",\n\t\"PSRegion\",\n\t\"PSTerritory\",\n\t\"\
+  RenewalGeo\",\n\t\"RenewalMajorArea\",\n\t\"RenewalArea\",\n\t\"RenewalRegion\"\
+  ,\n\t\"RenewalDistrict\",\n\t\"RenewalTerritory\",\n\t\"OpportunityACEGeo\",\n\t\
+  \"OpportunityACEMajorArea\",\n\t\"OpportunityACEArea\",\n\t\"OpportunityACERegion\"\
+  ,\n\t\"OpportunityACEDistrict\",\n\t\"OpportunityACETerritory\",\n\t\"IsFixed\"\
+  ,\n\t\"LineItemNumber\",\n\t\"ProductCode\",\n\t\"BUGroup_FD\",\n\t\"BUWorkFlow_FD\"\
+  ,\n\t\"SalesActivePipeline\",\n\t\"FlagsFilter\",\n\t\"RenewalEarlyOntimeLateStatus\"\
+  ,\n\t\"LineItemNetNewQuantity\",\n\t\"LineItemQuantity\",\n\t\"LineItemTerm\",\n\
+  \t\"USDNetNewACV\",\n\t\"NetNewACV\",\n\t\"NetNewACV_FX\",\n\t\"USDWeightedACV\"\
+  ,\n\t\"WeightedACV_FX\",\n\t\"USDUpside+\",\n\t\"Upside_FX\",\n\t\"USDExpect+\"\
+  ,\n\t\"Expect_FX\",\n\t\"USDCommit+\",\n\t\"Commit_FX\",\n\t\"USDSubmitted+\",\n\
+  \t\"Submitted_FX\",\n\t\"USDClosed\",\n\t\"Closed_FX\",\n\t\"USDLostACV\",\n\t\"\
+  LostACV_FX\",\n\t\"USDOpenPipeline\",\n\t\"OpenPipeline_FX\",\n\t\"USDMaturedPipeline\"\
+  ,\n\t\"MaturedPipeline_FX\",\n\t\"TotalValueAmount\",\n\t\"TotalValueAmount_FX\"\
+  ,\n\t\"USDTotalACV\",\n\t\"USDRenewalACV\",\n\t\"RenewalACV\",\n\t\"RenewalACV_FX\"\
+  ,\n\t\"USDClosedRenewalACV\",\n\t\"ClosedRenewalACV_FX\",\n\t\"USDClosedWonRenewalACV\"\
+  ,\n\t\"ClosedWonRenewalACV_FX\",\n\t\"USDClosedLostRenewalACV\",\n\t\"ClosedLostRenewalACV_FX\"\
+  ,\n\t\"USDOpenRenewalACV\",\n\t\"USDPartnerOptySourcedACV\",\n\t\"USDPartnerSourcedACV\"\
+  ,\n\t\"USDPartnerTouchedACV\",\n\t\"USDACESourcedNetNewACV\",\n\t\"USDMKTSourcedNetNewACV\"\
+  ,\n\t\"USDServices\",\n\t\"ServicesACV\",\n\t\"ServicesACV_FX\",\n\t\"USDPSRevenue\"\
+  ,\n\t\"PSRevenue\",\n\t\"PSRevenue_FX\",\n\t\"TotalTrainingRevenue\",\n\t\"USDTotalTrainingRevenue\"\
+  ,\n\t\"TotalTrainingRevenue_FX\",\n\t\"USDTrainingClosedACV\",\n\t\"USDExpertServicesClosedACV\"\
+  ,\n\t\"USDCustomerSucessClosedACV\",\n\t\"USDTotalServicesClosedACV\",\n\t\"Quantity_CRM\"\
+  ,\n\t\"NetNewQuantity_CRM\",\n\t\"USDRenewalACV_CRM\",\n\t\"USDNetNewACV_CRM\",\n\
+  \t\"USDListPrice_CRM\",\n\t\"USDTotalValue_CRM\",\n\t\"USDSalesPrice_CRM\",\n\t\"\
+  USDAnnualContractValue_CRM\",\n\t\"RenewalACV_CRM\",\n\t\"USDBasePrice_CRM\",\n\t\
+  \"ProductSysID\",\n\t\"USDAcquiredNetNewACV\",\n\t\"AllocationType\",\n\t\"OpportunityCloseDateWeekofQuarter\"\
+  ,\n\t\"OpportunityCloseDateQuarterBeginDate\",\n\t\"OpportunityCloseDateLinearWeekOfQuarter\"\
+  ,\n\t\"OpportunityCloseDateWeekNumOfYear\",\n\t\"OpportunityCloseDateQuarterEndDate\"\
+  ,\n\t\"NetNewACV_CRM\",\n\t\"OptyItemLineCreatedByRole\"\n) as\n\n\n/* Comments\
+  \ retained from HANA input file */\n\n--\t\t,\"OpportunityItemCreatedOn_CRM\"\t\t\
+  \t\t\t\t\tTIMESTAMP\n\n\n--\t\t,\"OpportunityItemDiscountPercent_CRM\"\t\t\t\t\t\
+  DOUBLE\n\n\n /*****************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Unified SelfServer Project\n \t\t* Project\
+  \ \t\t\t\t\t :\n \t\t* Object Name \t\t\t\t :     \"SURF_ST\".\"ANALYTICS_SELFSERVICE.TABLEFUNCTIONS::UNIFIEDSS_FACT_FIXEDDATA_COMBINED\"\
+  \n \t\t* Development Request # \t :\n \t\t* Brief Description          : \t   Fixed\
+  \ Data Fact\n \t\t* Developed By               :     Venkata Ravi Kadali\n \t\t\
+  * Date Created               : \t   May 20th 2021\n \t\t* --------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:\n \t\t*----------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* 20-Sep-2021   Swetha Bobba  Added Allocation Type\n \t\t* 25-Oct-2021  \
+  \ Swetha Bobba  Replaced SalesSelfServiceMat\" () with RPT_FIXEDDATAPLUSQUOTA_RT\n\
+  \ \t\t* 06-Dec-2021   Manan Khungar Added Opportunity Legacy Fields and Net New\
+  \ ACV_CRM field\n ********************************************************************************************************************************/\n\
+  \n\n\n\n\nselect\n \"OpportunitySysID_CRM\"\n ,\"OpportunityContractSysID_CRM\"\n\
+  \ ,IFNULL(\"AccountSysID_FDCRM\",sa.\"AcctSysID\") \t\tas \"AccountSysID_Key\"\n\
+  \ ,\"AccountSysID_FDCRM\"\n ,\"OpportunityOwnerSysID_CRM\"\n ,\"OpportunityItemProductSysID_CRM\"\
+  \n ,\"OpportunityLeadNumber_CRM\"\n ,\"OpportunityMasterQuoteSysID_CRM\"\n ,\"ContractKey_CRM\"\
+  \n ,\"BUGroup_CRM\"\n ,\"BUWorkFlow_CRM\"\n ,\"ProductCode_CRM\"\n ,\"OpportunityItemSourceSystem_CRM\"\
+  \n\n--,\"LineItemNumber_FDKey\"\n\n ,\"LineItemNumber_CRM\"\n /*,case when (fd.\"\
+  TerritorySysID_CC\" = '' or  fd.\"TerritorySysID_CC\" is null)\n then IFNULL(sa.\"\
+  AcctTerritorySysID\",'-99')\n  else fd.\"TerritorySysID_CC\"\n   end \tas \"TerritorySysID_CC\"\
+  */\n ,case when (fd.\"TerritorySysID_CC\" = 'random' or  fd.\"TerritorySysID_CC\"\
+  \ IS NULL)\n    then 'random'\n  end as \"TerritorySysID_CC\"\n ,IFNULL(\"SalesQuarter\"\
+  ,'random')\t                            as \"SalesQuarter\"\n ,\"OpportunityName\"\
+  \n ,\"OpportunityNumber\"\n ,\"OpportunityCloseDate\"\n ,\"OpportunityCloseMonth\"\
+  \n ,\"OpportunityType\"\n ,\"OpportunityForecastCategory\"\n ,\"OpportunityForecastStage\"\
+  \n ,\"OpportunitySysCreatedOn\" as \"OpportunitySysCreatedOn\"\n ,\"OpportunityOwnerName\"\
+  \n ,\"OpportunityParentNumber\"\n ,\"OpportunityParentName\"\n ,\"OpportunityParentAccountNumber\"\
+  \n ,\"OpportunityParentCloseDate\"\n ,\"OpportunityParentCloseMonth\"\n ,\"OpportunityParentCloseQuarter\"\
+  \n ,\"OpportunityParentForecastCategory\"\n ,\"OpportunityParentForecastStage\"\n\
+  \ ,\"OpportunityParentType\"\n ,sa.\"AcctNumber\"\t\t\t\t\t\t\t\t\t\t\tas \"AccountNumber_FD\"\
+  \n ,\"OpportunityParentReportingGeo\"\n ,\"OpportunityParentMajorArea\"\n ,\"OpportunityParentArea\"\
+  \n ,\"OpportunityParentRegion\"\n ,\"OpportunityParentDistrict\"\n ,\"OpportunityParentTerritory\"\
+  \n ,\"PSGeo\"\n ,\"PSMajorArea\"\n ,\"PSArea\"\n ,\"PSRegion\"\n ,\"PSTerritory\"\
+  \n ,\"RenewalGeo\"\n ,\"RenewalMajorArea\"\n ,\"RenewalArea\"\n ,\"RenewalRegion\"\
+  \n ,\"RenewalDistrict\"\n ,\"RenewalTerritory\"\n ,\"OpportunityACEGeo\"\n ,\"OpportunityACEMajorArea\"\
+  \n ,\"OpportunityACEArea\"\n ,\"OpportunityACERegion\"\n ,\"OpportunityACEDistrict\"\
+  \n ,\"OpportunityACETerritory\"\n ,\"IsFixed\"\n ,\"LineItemNumber\"\n ,\"ProductCode\"\
+  \n ,fd.\"BUGroup\"\t\t\t\t\t\t\t\t\t\t\t\tas \"BUGroup_FD\"\n ,pr.\"BUWorkFlow\"\
+  \t\t\t\t\t\t\t\t\t\t\tas \"BUWorkFlow_FD\"\n ,\"SalesActivePipeline\"\n ,\"FlagsFilter\"\
+  \n ,\"RenewalEarlyOntimeLateStatus\"\n ,\"LineItemNetNewQuantity\"\n ,\"LineItemQuantity\"\
+  \n ,\"LineItemTerm\"\n ,SUM(\"USDNetNewACV\") as \"USDNetNewACV\"\n ,SUM(\"NetNewACV\"\
+  ) AS \"NetNewACV\"\n ,SUM(\"NetNewACV_FX\") AS \"NetNewACV_FX\"\n ,SUM(\"USDWeightedACV\"\
+  ) AS \"USDWeightedACV\"\n ,SUM(\"WeightedACV_FX\") as \"WeightedACV_FX\"\n ,SUM(\"\
+  USDUpside+\") as \"USDUpside+\"\n ,SUM(\"Upside_FX\") as \"Upside_FX\"\n ,SUM(\"\
+  USDExpect+\") as \"USDExpect+\"\n ,SUM(\"Expect_FX\") as \"Expect_FX\"\n ,SUM(\"\
+  USDCommit+\") as \"USDCommit+\"\n ,SUM(\"Commit_FX\") as \"Commit_FX\"\n ,SUM(\"\
+  USDSubmitted+\") as \"USDSubmitted+\"\n ,SUM(\"Submitted_FX\") as \"Submitted_FX\"\
+  \n ,SUM(\"USDClosed\") AS \"USDClosed\"\n ,SUM(\"Closed_FX\") as \"Closed_FX\"\n\
+  \ ,SUM(\"USDLostACV\") as \"USDLostACV\"\n ,SUM(\"LostACV_FX\") as \"LostACV_FX\"\
+  \n ,SUM(\"USDOpenPipeline\") as \"USDOpenPipeline\"\n ,SUM(\"OpenPipeline_FX\")\
+  \ as \"OpenPipeline_FX\"\n ,SUM(\"USDMaturedPipeline\") as \"USDMaturedPipeline\"\
+  \n ,SUM(\"MaturedPipeline_FX\") as \"MaturedPipeline_FX\"\n ,SUM(\"TotalValueAmount\"\
+  ) as \"TotalValueAmount\"\n ,SUM(\"TotalValueAmount_FX\") as \"TotalValueAmount_FX\"\
+  \n ,SUM(\"USDTotalACV\") as \"USDTotalACV\"\n ,SUM(\"USDRenewalACV\") as \"USDRenewalACV\"\
+  \n ,SUM(\"RenewalACV\") as \"RenewalACV\"\n ,SUM(\"RenewalACV_FX\") as \"RenewalACV_FX\"\
+  \n ,SUM(\"USDClosedRenewalACV\") as \"USDClosedRenewalACV\"\n ,SUM(\"ClosedRenewalACV_FX\"\
+  ) as \"ClosedRenewalACV_FX\"\n ,SUM(\"USDClosedWonRenewalACV\") as \"USDClosedWonRenewalACV\"\
+  \n ,SUM(\"ClosedWonRenewalACV_FX\") as \"ClosedWonRenewalACV_FX\"\n ,SUM(\"USDClosedLostRenewalACV\"\
+  ) as \"USDClosedLostRenewalACV\"\n ,SUM(\"ClosedLostRenewalACV_FX\") as \"ClosedLostRenewalACV_FX\"\
+  \n ,SUM(\"USDOpenRenewalACV\") as \"USDOpenRenewalACV\"\n ,SUM(\"USDPartnerOptySourcedACV\"\
+  ) as \"USDPartnerOptySourcedACV\"\n ,SUM(\"USDPartnerSourcedACV\") as \"USDPartnerSourcedACV\"\
+  \n ,SUM(\"USDPartnerTouchedACV\") as \"USDPartnerTouchedACV\"\n ,SUM(\"USDACESourcedNetNewACV\"\
+  ) as \"USDACESourcedNetNewACV\"\n ,SUM(\"USDMKTSourcedNetNewACV\") as \"USDMKTSourcedNetNewACV\"\
+  \n ,SUM(\"USDServices\") as \"USDServices\"\n ,SUM(\"ServicesACV\") As \"ServicesACV\"\
+  \n ,SUM(\"ServicesACV_FX\") as \"ServicesACV_FX\"\n ,SUM(\"USDPSRevenue\") as \"\
+  USDPSRevenue\"\n ,SUM(\"PSRevenue\") as \"PSRevenue\"\n ,SUM(\"PSRevenue_FX\") as\
+  \ \"PSRevenue_FX\"\n ,SUM(\"TotalTrainingRevenue\") as \"TotalTrainingRevenue\"\n\
+  \ ,SUM(\"USDTotalTrainingRevenue\") as \"USDTotalTrainingRevenue\"\n ,SUM(\"TotalTrainingRevenue_FX\"\
+  ) as \"TotalTrainingRevenue_FX\"\n ,SUM(\"USDTrainingClosedACV\") as \"USDTrainingClosedACV\"\
+  \n ,SUM(\"USDExpertServicesClosedACV\") as \"USDExpertServicesClosedACV\"\n ,SUM(\"\
+  USDCustomerSucessClosedACV\") as \"USDCustomerSucessClosedACV\"\n ,SUM(\"USDTrainingClosedACV\"\
+  \ + \"USDExpertServicesClosedACV\"+ \"USDCustomerSucessClosedACV\") as \"USDTotalServicesClosedACV\"\
+  \n\n--,\"OpportunityItemCreatedOn_CRM\"\n\n\n--,\"OpportunityItemDiscountPercent_CRM\"\
+  \n\n ,SUM(\"Quantity_CRM\")  as \"Quantity_CRM\"\n ,\"NetNewQuantity_CRM\"\n ,SUM(\"\
+  USDRenewalACV_CRM\") as \"USDRenewalACV_CRM\"\n ,SUM(\"USDNetNewACV_CRM\") as \"\
+  USDNetNewACV_CRM\"\n ,SUM(\"USDListPrice_CRM\") as \"USDListPrice_CRM\"\n ,SUM(\"\
+  USDTotalValue_CRM\") as \"USDTotalValue_CRM\"\n ,SUM(\"USDSalesPrice_CRM\") as \"\
+  USDSalesPrice_CRM\"\n ,SUM(\"USDAnnualContractValue_CRM\") as \"USDAnnualContractValue_CRM\"\
+  \n ,SUM(\"RenewalACV_CRM\") as \"RenewalACV_CRM\"\n ,SUM(\"USDBasePrice_CRM\") as\
+  \ \"USDBasePrice_CRM\"\n ,\"ProductSysID\"\n ,SUM(\"USDAcquiredNetNewACV\") as \"\
+  USDAcquiredNetNewACV\"\n ,\"AllocationType\"\n ,\"DateDimWeekOfQuarter\"       \
+  \              as \"OpportunityCloseDateWeekofQuarter\"\n ,\"DateDimQuarterBeginDate\"\
+  \t\t\t\t    as \"OpportunityCloseDateQuarterBeginDate\"\n ,\"DateDimLinearWeekOfQuarter\"\
+  \               as \"OpportunityCloseDateLinearWeekOfQuarter\"\n ,\"DateDimWeekNumYear\"\
+  \                       as \"OpportunityCloseDateWeekNumOfYear\"\n ,\"DateDimQuarterEndDate\"\
+  \                    as \"OpportunityCloseDateQuarterEndDate\"\n ,SUM(\"NetNewACV_CRM\"\
+  )                       as \"NetNewACV_CRM\"\n ,fd.\"OptyItemLineCreatedByRole\"\
+  \n from \"ODS_LS\".\"SURF\".\"SALES_ACCOUNT\" sa\n LEFT outer join\n (\n SELECT\
+  \ DISTINCT\n fd.\"OpportunitySysID\" \t\t\t\t\t\tas \"OpportunitySysID_CRM\"\n ,so.\"\
+  OpportunityContractSysID\"\t\t\t    as \"OpportunityContractSysID_CRM\",\n fd.\"\
+  OpportunityAccountSysID\"\t\t\t\tas \"AccountSysID_FDCRM\",\n so.\"OpportunityOwnerSysID\"\
+  \ \t\t\t\t\tas \"OpportunityOwnerSysID_CRM\",\n oli.\"OpportunityItemProductSysID\"\
+  \t\t\tas \"OpportunityItemProductSysID_CRM\",\n so.\"OpportunityLeadNumber\" \t\t\
+  \t\t\tas \"OpportunityLeadNumber_CRM\",\n so.\"OpportunityMasterQuoteSysID\" \t\t\
+  \tas \"OpportunityMasterQuoteSysID_CRM\"\n ,CONCAT(so.\"OpportunityContractSysID\"\
+  ,sp.\"ProductSysID\")\n \t\t\t\t\t\t\t\t\t\t\tas \"ContractKey_CRM\",\n sp.\"BUGroup\"\
+  \t\t\t\t\t\t\t\tas \"BUGroup_CRM\",\n sp.\"BUWorkFlow\"\t\t\t\t\t\t\t\tas \"BUWorkFlow_CRM\"\
+  ,\n sp.\"ProductCode\"\t\t\t\t\t\t\tas \"ProductCode_CRM\",\n oli.\"OpportunityItemSourceSystem\"\
+  \t\t\tas \"OpportunityItemSourceSystem_CRM\",\n fd.\"LineItemNumber_CRM\"\t\t\t\t\
+  \tas \"LineItemNumber_CRM\"\n ,fd.\"TerritorySysID_CC\"\n ,fd.\"SalesQuarter\"\n\
+  \ ,so.\"OpportunityName\"\n ,fd.\"OpportunityNumber\"\n ,fd.\"OpportunityCloseDate\"\
+  \n ,fd.\"OpportunityCloseMonth\"\n ,fd.\"OpportunityType\"\n ,fd.\"PipelineStatus\"\
+  \ \t\t\t\t\t\tas \"OpportunityForecastCategory\"\n ,fd.\"OpportunityStage\"\t\t\t\
+  \t\t\tas \"OpportunityForecastStage\"\n ,so.\"OpportunityCreatedOn\"           \
+  \       as \"OpportunitySysCreatedOn\"\n ,fd.\"OpportunityOwnerName\"\n ,fd.\"OpportunityParentNumber\"\
+  \n ,fd.\"OpportunityParentName\"\n ,fd.\"OptyParentAccountNumber\"\t\t\t    as \"\
+  OpportunityParentAccountNumber\"\n ,fd.\"OpportunityParentCloseDate\"\n ,to_char(fd.\"\
+  OpportunityParentCloseDate\",'random')         as \"OpportunityParentCloseMonth\"\
+  \n ,RIGHT(YEAR(fd.\"OpportunityParentCloseDate\") ||'random'|| QUARTER(fd.\"OpportunityParentCloseDate\"\
+  ),'random') as \"OpportunityParentCloseQuarter\"\n ,fd.\"OpportunityParentPipelineStatus\"\
+  \t\tas \"OpportunityParentForecastCategory\"\n ,fd.\"OpportunityParentStage\"\t\t\
+  \t\tas \"OpportunityParentForecastStage\"\n ,fd.\"OpportunityParentType\"\n ,IFNULL(sta.\"\
+  TerrReportingTerritoryGeo\",fd.\"OptyParentReportingGeo\")                as \"\
+  OpportunityParentReportingGeo\"\n ,IFNULL(sta.\"TerrMajorArea\",fd.\"OptyParentMajorArea\"\
+  ) as \"OpportunityParentMajorArea\"\n ,IFNULL(sta.\"TerrArea\",fd.\"OptyParentArea\"\
+  ) as \"OpportunityParentArea\"\n ,IFNULL(sta.\"TerrRegion\",fd.\"OpportunityParentRegion\"\
+  ) as \"OpportunityParentRegion\"\n ,IFNULL(sta.\"TerrDistrict\",fd.\"OptyParentDistrict\"\
+  )   as \"OpportunityParentDistrict\"\n ,IFNULL(sta.\"TerrName\",fd.\"OptyParentTerrName\"\
+  )\t\t\tas \"OpportunityParentTerritory\"\n ,fd.\"PSGeo\"\n ,fd.\"PSTerrMajorArea\"\
+  \ as \"PSMajorArea\"\n ,fd.\"PSArea\"\n ,fd.\"PSRegion\"\n , 'random' \t\t\t\t\t\
+  \t\t\t\tas \"PSTerritory\"\n , case when fd.\"OpportunityForeCastType\" IS NULL\
+  \ then 'random'\n        when fd.\"OpportunityForeCastType\" in ('random','random')\n\
+  \        then fd.\"OpportunityMSPGeo\"\n        else fd.\"ReportingTerritoryGeo\"\
+  \n   end as \"RenewalGeo\"\n ,case when fd.\"OpportunityForeCastType\" IS NULL then\
+  \ 'random'\n \t  when fd.\"OpportunityForeCastType\" in ('random','random')\n  \
+  \     then fd.\"OpportunityMSPMajorArea\"\n       else fd.\"OpportunityMajorArea\"\
+  \n   end as \"RenewalMajorArea\"\n ,case when fd.\"OpportunityForeCastType\" IS\
+  \ NULL then 'random'\n \t  when fd.\"OpportunityForeCastType\" in ('random','random')\n\
+  \       then fd.\"OpportunityMSPArea\"\n       else fd.\"OpportunityArea\"\n   end\
+  \ as \"RenewalArea\"\n ,case when fd.\"OpportunityForeCastType\" IS NULL then 'random'\n\
+  \ when fd.\"OpportunityForeCastType\" in ('random','random')\n       then fd.\"\
+  OpportunityMSPRegion\"\n       else fd.\"OpportunityRegion\"\n   end as \"RenewalRegion\"\
+  \n ,case when fd.\"OpportunityForeCastType\" IS NULL then 'random'\n when fd.\"\
+  OpportunityForeCastType\" in ('random','random')\n       then fd.\"OpportunityMSPDistrict\"\
+  \n       else fd.\"OpportunityDistrict\"\n   end as \"RenewalDistrict\"\n ,case\
+  \ when fd.\"OpportunityForeCastType\" IS NULL then 'random'\n when fd.\"OpportunityForeCastType\"\
+  \ in ('random','random')\n       then fd.\"OpportunityMSPTerritory\"\n       else\
+  \ fd.\"OpportunityTerritory\"\n   end as \"RenewalTerritory\"\n ,so.\"OpportunityACETerritoryGeo\"\
+  \t\t\t\t\tas \"OpportunityACEGeo\"\n ,so.\"OpportunityACETerritoryMajorArea\"\t\t\
+  \t\tas \"OpportunityACEMajorArea\"\n ,so.\"OpportunityACETerritoryArea\"\t\t\t\t\
+  \tas \"OpportunityACEArea\"\n ,so.\"OpportunityACETerritoryRegion\"\t\t\t\t\tas\
+  \ \"OpportunityACERegion\"\n ,so.\"OpportunityACETerritoryDistrict\"\t\t\t\tas \"\
+  OpportunityACEDistrict\"\n ,so.\"OpportunityACETerritory\"\t\t\t\t        as \"\
+  OpportunityACETerritory\"\n ,fd.\"IsFixed\"\n ,fd.\"LineItemNumber\"\n ,fd.\"ProductCode\"\
+  \n ,fd.\"BUGroup\"\t\t\t\t\t\t\t\tas \"BUGroup\"\n ,fd.\"SalesActivePipeline\"\n\
+  \ ,fd.\"FlagsFilter\"\n ,fd.\"RenewalStatusSubCategoryFlagMode\"     \tas \"RenewalEarlyOntimeLateStatus\"\
+  \n ,fd.\"LineItemNetNewQuantity\"\n ,fd.\"LineItemQuantity\"\n ,fd.\"LineItemTerm\"\
+  \n ,fd.\"USDNetNewACV\"\n ,fd.\"NetNewACV\"\n ,fd.\"NetNewACV_FX\"\n ,fd.\"USDWeightedACV\"\
+  \n ,fd.\"WeightedNetNewACV_FX\"\t\t\t\t\tas \"WeightedACV_FX\"\n ,\"Upside\"\t\t\
+  \t\t\t\t\t\tas \"USDUpside+\"\n ,\"Upside_FX\"\n ,\"Expect\"\t\t\t\t\t\t\t\tas \"\
+  USDExpect+\"\n ,\"Expect_FX\"\n ,\"Commit\"  \t\t\t\t\t\t\t\tas \"USDCommit+\"\n\
+  \ ,\"Commit_FX\"\n ,\"Submitted\"\t\t\t\t\t\t\tas \"USDSubmitted+\"\n ,\"Submitted_FX\"\
+  \n ,\"Closed\" \t\t\t\t\t\t\t\tas \"USDClosed\"\n ,\"Closed_FX\"\n ,\"LostACV\"\
+  \ \t\t\t\t\t\t\t\tas \"USDLostACV\"\n ,\"LostACV_FX\"\n ,\"OpenPipeline\" \t\t\t\
+  \t\t\tas \"USDOpenPipeline\"\n ,\"OpenPipeline_FX\"\n ,\"MaturedPipeline\" \t\t\t\
+  \t\t\tas \"USDMaturedPipeline\"\n ,\"MaturedPipeline_FX\"\n ,\"TotalValueAmount\"\
+  \n ,\"TotalValueAmount_FX\"\n ,\"USDTotalACV\"\n ,\"USDRenewalACV\"\n ,\"RenewalACV\"\
+  \n ,\"RenewalACV_FX\"\n ,\"ClosedRenewals\"                       as \"USDClosedRenewalACV\"\
+  \n ,\"ClosedRenewals_FX\"                    as \"ClosedRenewalACV_FX\"\n ,\"ClosedWonRenewal\"\
+  \                     as \"USDClosedWonRenewalACV\"\n ,\"ClosedWonRenewal_FX\" \
+  \                 as \"ClosedWonRenewalACV_FX\"\n ,\"ClosedLostRenewal\"       \
+  \             as \"USDClosedLostRenewalACV\"\n ,\"ClosedLostRenewal_FX\"\t\t\t\t\
+  \tas \"ClosedLostRenewalACV_FX\"\n ,ROUND(\"OpenRenewals\")     \t\t           \
+  \ as \"USDOpenRenewalACV\"\n ,pdq.\"OptySourcedACV\"\t\t\t\t\tas \"USDPartnerOptySourcedACV\"\
+  \n ,pdq.\"PartnerSourcedACV\" \t\t\t    as \"USDPartnerSourcedACV\"\n ,pdq.\"PartnerTouchedACV\"\
+  \ \t\t\t\tas \"USDPartnerTouchedACV\"\n ,\"ACESourcedUSDNetNewACV\" \t\t\t\tas \"\
+  USDACESourcedNetNewACV\"\n ,\"MKTSourcedUSDNetNewACV\"\t\t\t\tas \"USDMKTSourcedNetNewACV\"\
+  \n ,\"USDServices\" \t\t\t\t\t\t\tas \"USDServices\"\n ,\"Services\" \t\t\t\t\t\t\
+  \tas \"ServicesACV\"\n ,\"Services_FX\" \t\t\t\t\t\t\tas \"ServicesACV_FX\"\n ,\"\
+  USDPSRevenue\" \t\t\t\t\t\tas \"USDPSRevenue\"\n ,\"PSRevenue\" \t\t\t\t\t\t\tas\
+  \ \"PSRevenue\"\n ,\"TotalPSRevenue_FX\" \t\t\t\t\tas \"PSRevenue_FX\"\n ,'random'\t\
+  \t\t\t\t\t\t\t\t\tas \"TotalTrainingRevenue\"\n ,\"USDTotalTrainingRevenue\" \t\t\
+  \t\tas \"USDTotalTrainingRevenue\"\n ,'random'\t\t\t\t\t\t \t\t\t\tas \"TotalTrainingRevenue_FX\"\
+  \n , case when fd.\"PipelineStatus\" = 'random'\n   then (fd.\"USDTotalTrainingRevenue\"\
+  ) else 'random' end as \"USDTrainingClosedACV\"\n , case when fd.\"PipelineStatus\"\
+  \ = 'random'\n   then (fd.\"USDPSRevenue\") else 'random' end as \"USDExpertServicesClosedACV\"\
+  \n , case when fd.\"BUGroup\" = 'random'\n   then (\"Closed\") else 'random' end\
+  \ as \"USDCustomerSucessClosedACV\"\n\n\n-- adding the below logic because of line\
+  \ item split during allocations\n\n ,case when (MIN(fd.\"LineItemNumber\") OVER\
+  \ (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\") =\n       \
+  \      fd.\"LineItemNumber\" )\n       then oli.\"OpportunityItemQuantity\"\n  \
+  \     else 'random'\n  end as \"Quantity_CRM\"\n ,case when (MIN(fd.\"LineItemNumber\"\
+  ) OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\") =\n  \
+  \           fd.\"LineItemNumber\" )\n       then oli.\"OpportunityItemNetNewQuantity\"\
+  \n       else 'random'\n  end as \"NetNewQuantity_CRM\"\n ,case when (MIN(fd.\"\
+  LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\"\
+  ) =\n             fd.\"LineItemNumber\" )\n       then oli.\"OpportunityItemUSDRenewalACV\"\
+  \n       else 'random'\n  end as \"USDRenewalACV_CRM\"\n\n ,case when (MIN(fd.\"\
+  LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\"\
+  ) =\n             fd.\"LineItemNumber\" )\n       then \"OpportunityItemUSDNetNewACV\"\
+  \n       else 'random'\n  end \t\t\tas \"USDNetNewACV_CRM\"\n\n ,case when (MIN(fd.\"\
+  LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\"\
+  ) =\n             fd.\"LineItemNumber\" )\n       then \"OpportunityItemUSDPriceList\"\
+  \n       else 'random'\n  end  \t\t\t\tas \"USDListPrice_CRM\"\n\n ,case when (MIN(fd.\"\
+  LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\"\
+  ) =\n             fd.\"LineItemNumber\" )\n       then \"OpportunityItemUSDTotalValue\"\
+  \n       else 'random'\n  end \t\t\tas \"USDTotalValue_CRM\"\n\n ,case when (MIN(fd.\"\
+  LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\"\
+  ) =\n             fd.\"LineItemNumber\" )\n       then \"OpportunityItemUSDSalesPrice\"\
+  \n       else 'random'\n end\t\t\t\tas \"USDSalesPrice_CRM\"\n\n ,case when (MIN(fd.\"\
+  LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\", fd.\"LineItemNumber_CRM\"\
+  ) =\n             fd.\"LineItemNumber\" )\n        then \"OpportunityItemUSDAnnualContractValue\"\
+  \n        else 'random'\n  end           as \"USDAnnualContractValue_CRM\"\n\n ,case\
+  \ when (MIN(fd.\"LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\",\
+  \ fd.\"LineItemNumber_CRM\") =\n             fd.\"LineItemNumber\" )\n        then\
+  \ \"OpportunityItemRenewalACV\"\n        else 'random'\n  end       as \"RenewalACV_CRM\"\
+  \n\n ,case when (MIN(fd.\"LineItemNumber\") OVER (PARTITION BY fd.\"OpportunityNumber\"\
+  , fd.\"LineItemNumber_CRM\") =\n             fd.\"LineItemNumber\" )\n       then\
+  \ \"OpportunityItemUSDBasePrice\"\n       else 'random'\n  end       as \"USDBasePrice_CRM\"\
+  \n\n ,fd.\"ProductSysID\"\n --,ofd.\"SFixedDataAcquiredNewNewACV\"          as \"\
+  USDAcquiredNetNewACV\"\n ,ofd.\"SFixedDataAcquiredNewNewACVDC\"/\"Projection_4\"\
+  .\"CFXRate\"          as \"USDAcquiredNetNewACV\" --FX changes by Avantika\n ,fd.\"\
+  AllocationType\"\n ,case when (MIN(fd.\"LineItemNumber\") OVER (PARTITION BY fd.\"\
+  OpportunityNumber\", fd.\"LineItemNumber_CRM\") =\n             fd.\"LineItemNumber\"\
+  \ )\n       then oli.\"OpportunityItemNetNewACV\"\n       else 'random'\n  end \t\
+  \   as \"NetNewACV_CRM\"  ,\n     fd.\"OptyItemLineCreatedBy\" as \"OptyItemLineCreatedByRole\"\
+  \n from \"CDL_LS\".\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\" fd\n\n--\"SURF_ST\"\
+  .\"REAL-TIME-SALES.TABLEFUNCTIONS::SalesSelfServiceMat\" () fd\n\n\n--Start of New\
+  \ Joins to replace Self Service\n\n LEFT outer join (SELECT \"OptyItemLineItemNumber\"\
+  ,\n                          SUM(\"OptySourcedACV\") AS \"OptySourcedACV\",\n  \
+  \                        SUM(\"PartnerSourcedACV\") AS \"PartnerSourcedACV\",\n\
+  \                          SUM(\"PartnerTouchedACV\") AS \"PartnerTouchedACV\"\n\
+  \ FROM \"CDL_LS\".\"PARTNER_RPT\".\"RPT_PARTNERDEALQUOTA\"\n WHERE \"RecordType\"\
+  \ ='random'\n GROUP BY \"OptyItemLineItemNumber\") pdq\n on fd.\"LineItemNumber\"\
+  \ = pdq.\"OptyItemLineItemNumber\"\n LEFT outer join (SELECT MAX(\"SFixedDataRestatedTerritorySysID\"\
+  ) as \"SFixedDataRestatedTerritorySysID\", \"SFixedDataOptySysID\"\n           \
+  \       from  \"ODS_LS\".\"FILES\".\"SALES_OPPTY_FIXEDDATA\"\n                 \
+  \    group by \"SFixedDataOptySysID\") ofdo\n              on ofdo.\"SFixedDataOptySysID\"\
+  \ = fd.\"OptyParentSysID\"\n Left outer join \"ODS_LS\".\"SURF\".\"SALES_TERRITORY_ALL\"\
+  \ sta\n              on sta.\"TerrSysID\" =  ofdo.\"SFixedDataRestatedTerritorySysID\"\
+  \n\n--End of New Joins to replace Self Service\n\n LEFT outer join \"EDW_LS\".\"\
+  SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_OPPORTUNITY\" so\n   on so.\"OpportunitySysID\"\
+  \ = fd.\"OpportunitySysID\"\n LEFT outer join \"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_OPPORTUNITY_ITEM\"\
+  \ oli\n \t\t\t on oli.\"OpportunityItemLineItemNumber\" =  fd.\"LineItemNumber_CRM\"\
+  \n   and so.\"OpportunitySysID\" = oli.\"OpportunityItemOpportunitySysID\"\n LEFT\
+  \ outer join\n \t\t\t\t(SELECT DISTINCT \"BUWorkFlow\",\"BUGroup\",\"ProductSysID\"\
+  ,\"ProductCode\"\n--,\"ProductFamily3Value\"\n\n \t\t\t\t\t\tFROM \"EDW_LS\".\"\
+  SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_PRODUCT\"\n \t\t\t\t)sp on sp.\"ProductSysID\"\
+  =oli.\"OpportunityItemProductSysID\"\n LEFT outer join \"ODS_LS\".\"FILES\".\"SALES_OPPTY_FIXEDDATA\"\
+  \ ofd\n              on fd.\"LineItemNumber\" = ofd.\"SFixedDataOptyItemNumber\"\
+  \n LEFT JOIN (\n                SELECT \"CFXRate\" as \"CFXRate\",\n           \
+  \     \"CFXCurrency\" as \"CFXCurrency\",\n                \"U_FX_RATE_START\" as\
+  \ \"U_FX_RATE_START\",\n                YEAR(\"U_FX_RATE_START\") as \"FXRateStartYear\"\
+  \n                FROM EDW_LS.\"SALES_EM\".\"EM_CONSTANT_FX_RATE_RT\"\n        \
+  \        where YEAR(\"U_FX_RATE_START\") = YEAR(convert_timezone('random',CURRENT_TIMESTAMP()))\n\
+  \            )\"Projection_4\" ON ofd.\"SFixedDataDocumentCurrency\" = \"Projection_4\"\
+  .\"CFXCurrency\"\n where \"RecordType\" = 'random'\n\n\n-------------------------------------------------------------------------------------------------------------------------------------------------\n\
+  \n union all\n/* below union gets inactive optys or in active line items or both\
+  \ */\n\n\n------------------------------------------------------------------------------------------------------------------------------------------------\n\
+  \n SELECT DISTINCT\n so.\"OpportunitySysID\" \t\t\t\t\t\tas \"OpportunitySysID_CRM\"\
+  ,\n so.\"OpportunityContractSysID\"\t\t\t    as \"OpportunityContractSysID_CRM\"\
+  ,\n so.\"OpportunityAccountSysID\" \t\t\t\tas \"AccountSysID_FDCRM\",\n so.\"OpportunityOwnerSysID\"\
+  \ \t\t\t\t\tas \"OpportunityOwnerSysID_CRM\",\n oli.\"OpportunityItemProductSysID\"\
+  \t\t\tas \"OpportunityItemProductSysID_CRM\",\n so.\"OpportunityLeadNumber\" \t\t\
+  \t\t\tas \"OpportunityLeadNumber_CRM\",\n so.\"OpportunityMasterQuoteSysID\" \t\t\
+  \tas \"OpportunityMasterQuoteSysID_CRM\",\n CONCAT(so.\"OpportunityContractSysID\"\
+  ,sp.\"ProductSysID\")\n \t\t\t\t\t\t\t\t\t\t\tas \"ContractKey_CRM\",\n sp.\"BUGroup\"\
+  \t\t\t\t\t\t\t\tas \"BUGroup_CRM\",\n sp.\"BUWorkFlow\"\t\t\t\t\t\t\t\tas \"BUWorkFlow_CRM\"\
+  ,\n sp.\"ProductCode\"\t\t\t\t\t\t\tas \"ProductCode_CRM\",\n oli.\"OpportunityItemSourceSystem\"\
+  \t\t\tas \"OpportunityItemSourceSystem_CRM\"\n\n--,oli.\"OpportunityItemLineItemNumber\"\
+  \tas \"LineItemNumber_FDKey\"\n\n ,oli.\"OpportunityItemLineItemNumber\"\tas \"\
+  LineItemNumber_CRM\"\n ,IFNULL(so.\"OpportunityTerritorySysID\",'random')\t\t\t\
+  as \"TerritorySysID_CC\"\n-- Mapped legacy for now check if it has to be -99 for\
+  \ close quarters\"\n\n ,so.\"OpportunitySalesQuarter\" \t\t\tas \"SalesQuarter\"\
+  \n ,so.\"OpportunityName\"\n ,so.\"OpportunityNumber\"\n ,so.\"OpportunityCloseDate\"\
+  \n ,so.\"OpportunityCloseMonth\"\n ,so.\"OpportunityType\"\n ,so.\"OpportunityForecastCategory\"\
+  \ \t\tas \"OpportunityForecastCategory\"\n ,so.\"OpportunityForecastStage\"\t\t\t\
+  as \"OpportunityForecastStage\"\n ,so.\"OpportunityCreatedOn\"\n ,so.\"OpportunityOwnerName\"\
+  \n ,sop.\"OpportunityNumber\"\t\t\t\tas \"OpportunityParentNumber\"\n ,sop.\"OpportunityName\"\
+  \t\t\t\t\tas \"OpportunityParentName\"\n ,sap.\"AcctNumber\"\t\t\t\t\t\tas \"OpportunityParentAccountNumber\"\
+  \n ,sop.\"OpportunityCloseDate\"\t\t\t\tas \"OpportunityParentCloseDate\"\n ,to_char(sop.\"\
+  OpportunityCloseDate\",'random')\t as \"OpportunityParentCloseMonth\"\n ,sop.\"\
+  OpportunitySalesQuarter\"          as \"OpportunityParentCloseQuarter\"\n ,sop.\"\
+  OpportunityForecastCategory\"\t\tas \"OpportunityParentForecastCategory\"\n ,sop.\"\
+  OpportunityForecastStage\"\t\t\tas \"OpportunityParentForecastStage\"\n ,sop.\"\
+  OpportunityType\"\t\t\t\t\tas \"OpportunityParentType\"\n ,OPST.\"TerrGeo\" \t\t\
+  \t\t\t\tas \"OpportunityParentReportingGeo\"\n ,OPST.\"TerrMajorArea\" \t\t\t\t\t\
+  as \"OpportunityParentMajorArea\"\n ,OPST.\"TerrArea\" \t\t\t\t\t\tas \"OpportunityParentArea\"\
+  \n ,OPST.\"TerrRegion\" \t\t\t\t\t\tas \"OpportunityParentRegion\"\n ,OPST.\"TerrDistrict\"\
+  \ \t\t\t\t\tas \"OpportunityParentDistrict\"\n ,OPST.\"TerrName\" \t\t\t\t\t\tas\
+  \ \"OpportunityParentTerritory\"\n ,PST.\"TerrGeo\" \t\t\t\t\t\t\tas \"PSGeo\"\n\
+  \ ,PST.\"TerrMajorArea\" \t\t\t\t\tas \"PSMajorArea\"\n ,PST.\"TerrArea\" \t\t\t\
+  \t\t\tas \"PSArea\"\n ,PST.\"TerrRegion\" \t\t\t\t\t\tas \"PSRegion\"\n ,PST.\"\
+  TerrName\" \t\t\t\t\t\tas \"PSTerritory\"\n ,'random'\t\t\t\t\t\t\t\t\tas \"RenewalGeo\"\
+  \n ,'random'\t\t\t\t\t\t\t\t\tas \"RenewalMajorArea\"\n ,'random'\t\t\t\t\t\t\t\t\
+  \tas \"RenewalArea\"\n ,'random'\t\t\t\t\t\t\t\t\tas \"RenewalRegion\"\n ,'random'\t\
+  \t\t\t\t\t\t\t\tas \"RenewalDistrict\"\n ,'random'\t\t\t\t\t\t\t\t\tas \"RenewalTerritory\"\
+  \n ,'random'\t\t\t\t\t\t\t\t\tas \"OpportunityACEGeo\"\n ,'random'\t\t\t\t\t\t\t\
+  \t\tas \"OpportunityACEMajorArea\"\n ,'random'\t\t\t\t\t\t\t\t\tas \"OpportunityACEArea\"\
+  \n ,'random'\t\t\t\t\t\t\t\t\tas \"OpportunityACERegion\"\n ,'random'\t\t\t\t\t\t\
+  \t\t\tas \"OpportunityACEDistrict\"\n ,'random'\t\t\t\t\t\t\t\t\tas \"OpportunityACETerritory\"\
+  \n ,'random'\t\t\t\t\t\t\t\t\tas \"IsFixed\"\n ,oli.\"OpportunityItemLineItemNumber\"\
+  \tas \"LineItemNumber\"\n ,sp.\"ProductCode\"\n ,sp.\"BUGroup\"\t\t\t\t\t\t\tas\
+  \ \"BUGroup\"\n ,'random'\t\t\t\t\t\t\t\t\t\tas \"SalesActivePipeline\"\n ,'random'\t\
+  \t\t\t\t\t\t\t\t\tas \"FlagsFilter\"\n ,'random' \t \t                         \
+  \   as \"RenewalEarlyOntimeLateStatus\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"LineItemNetNewQuantity\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"LineItemQuantity\"\n ,'random' \t\t\t\t\t\t\
+  \t\t\t\tas \"LineItemTerm\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDNetNewACV\"\n\
+  \ ,'random' \t\t\t\t\t\t\t\t\t\tas \"NetNewACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\t\
+  as \"NetNewACV_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDWeightedACV\"\n ,'random'\
+  \ \t\t\t\t\t\t\t\t\t\tas \"WeightedACV_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"\
+  USDUpside+\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"Upside_FX\"\n ,'random' \t\t\t\
+  \t\t\t\t\t\t\tas \"USDExpect+\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"Expect_FX\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDCommit+\"\n ,'random' \t\t\t\t\t\t\t\t\t\
+  \tas \"Commit_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDSubmitted+\"\n ,'random'\
+  \ \t\t\t\t\t\t\t\t\t\tas \"Submitted_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"\
+  USDClosed\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"Closed_FX\"\n ,'random' \t\t\t\t\
+  \t\t\t\t\t\tas \"USDLostACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"LostACV_FX\"\n\
+  \ ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDOpenPipeline\"\n ,'random' \t\t\t\t\t\t\t\
+  \t\t\tas \"OpenPipeline_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDMaturedPipeline\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"MaturedPipeline_FX\"\n ,'random' \t\t\t\t\t\
+  \t\t\t\t\tas \"TotalValueAmount\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"TotalValueAmount_FX\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDTotalACV\"\n ,'random' \t\t\t\t\t\t\t\t\
+  \t\tas \"USDRenewalACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"RenewalACV\"\n ,'random'\
+  \ \t\t\t\t\t\t\t\t\t\tas \"RenewalACV_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"\
+  USDClosedRenewalACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"ClosedRenewalACV_FX\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDClosedWonRenewalACV\"\n ,'random' \t\t\t\
+  \t\t\t\t\t\t\tas \"ClosedWonRenewalACV_FX\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"\
+  USDClosedLostRenewalACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"ClosedLostRenewalACV_FX\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDOpenRenewalACV\"\n ,'random'\t\t\t\t\t\t\
+  \t\t\t\tas \"USDPartnerOptySourcedACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDPartnerSourcedACV\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDPartnerTouchedACV\"\n ,'random' \t\t\t\t\
+  \t\t\t\t\t\tas \"USDACESourcedNetNewACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"\
+  USDMKTSourcedNetNewACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDServices\"\n ,'random'\
+  \ \t\t\t\t\t\t\t\t\t\tas \"ServicesACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"ServicesACV_FX\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDPSRevenue\"\n ,'random' \t\t\t\t\t\t\t\t\
+  \t\tas \"PSRevenue\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"PSRevenue_FX\"\n ,'random'\
+  \ \t\t\t\t\t\t\t\t\t\tas \"TotalTrainingRevenue\"\n ,'random' \t\t\t\t\t\t\t\t\t\
+  \tas \"USDTotalTrainingRevenue\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas \"TotalTrainingRevenue_FX\"\
+  \n ,'random' \t\t\t\t\t\t\t\t\t\tas \"USDTrainingClosedACV\"\n ,'random' \t\t\t\t\
+  \t\t\t\t\t\tas \"USDExpertServicesClosedACV\"\n ,'random' \t\t\t\t\t\t\t\t\t\tas\
+  \ \"USDCustomerSucessClosedACV\"\n\n--,oli.\"OpportunityItemCreatedOn\"\t\t\tas\
+  \ \"OpportunityItemCreatedOn_CRM\"\n\n\n--,oli.\"OpportunityItemDiscountPercent\"\
+  \tas \"OpportunityItemDiscountPercent_CRM\"\n\n ,oli.\"OpportunityItemQuantity\"\
+  \ \t\t\t\tas \"Quantity_CRM\"\n ,oli.\"OpportunityItemNetNewQuantity\" \t\tas \"\
+  NetNewQuantity_CRM\"\n ,oli.\"OpportunityItemUSDRenewalACV\"  \t\tas \"USDRenewalACV_CRM\"\
+  \n ,oli.\"OpportunityItemUSDNetNewACV\" \t\t\tas \"USDNetNewACV_CRM\"\n ,\"OpportunityItemUSDPriceList\"\
+  \ \t\t\t\tas \"USDListPrice_CRM\"\n ,\"OpportunityItemUSDTotalValue\" \t\t\tas \"\
+  USDTotalValue_CRM\"\n ,\"OpportunityItemUSDSalesPrice\"\t\t\t\tas \"USDSalesPrice_CRM\"\
+  \n ,\"OpportunityItemUSDAnnualContractValue\" \tas \"USDAnnualContractValue_CRM\"\
+  \n ,\"OpportunityItemRenewalACV\" \t\t\t\tas \"RenewalACV_CRM\"\n ,\"OpportunityItemUSDBasePrice\"\
+  \ \t\t\t\tas \"USDBasePrice_CRM\"\n ,sp.\"ProductSysID\"                       \
+  \   as \"ProductSysID\"\n ,'random'                                          as\
+  \ \"USDAcquiredNetNewACV\"\n ,'random'                                       as\
+  \ \"AllocationType\"\n ,oli.\"OpportunityItemNetNewACV\" \t\t\tas \"NetNewACV_CRM\"\
+  ,\n 'random'                                       as \"OptyItemLineCreatedByRole\"\
+  \n FROM\t\"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_OPPORTUNITY\" so\n LEFT\
+  \ outer join \"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_OPPORTUNITY\" sop\t\
+  on  sop.\"OpportunitySysID\" = so.\"OpportunityParentSysID\"\n LEFT outer join \"\
+  EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_OPPORTUNITY_ITEM\" oli on oli.\"OpportunityItemOpportunitySysID\"\
+  =so.\"OpportunitySysID\"\n LEFT outer join (SELECT DISTINCT \"BUWorkFlow\",\"BUGroup\"\
+  ,\"ProductSysID\",\"ProductCode\"\n--,\"ProductFamily3Value\"\n\n \t\t\t\t   FROM\
+  \ \"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_PRODUCT\")sp  on sp.\"ProductSysID\"\
+  =oli.\"OpportunityItemProductSysID\"\n LEFT outer join \"ODS_LS\".\"SURF\".\"SALES_TERRITORY_ALL\"\
+  \ PST ON SO.\"OpportunityPSTerritorySysID\" = PST.\"TerrSysID\"\n LEFT outer join\
+  \ \"ODS_LS\".\"SURF\".\"SALES_TERRITORY_ALL\" OPST ON sop.\"OpportunityTerritorySysID\"\
+  \ = OPST.\"TerrSysID\"\n LEFT outer join \"ODS_LS\".\"SURF\".\"SALES_ACCOUNT\" sap\
+  \ ON IFNULL(sop.\"OpportunityAccountSysID\",'random') = IFNULL(sap.\"AcctSysID\"\
+  ,'random')\n where (IFNULL(so.\"OpportunityNumber\",'random')|| IFNULL(oli.\"OpportunityItemLineItemNumber\"\
+  ,'random'))\n \t\t      not in\n \t\t\t\t\t(select distinct IFNULL(\"OpportunityNumber\"\
+  ,'random')||IFNULL(\"LineItemNumber_CRM\",'random')\n \t\t\t\t\t\t\t\t\t   from\
+  \ \"CDL_LS\".\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\n\n--\"SURF_ST\".\"REAL-TIME-SALES.TABLEFUNCTIONS::SalesSelfServiceMat\"\
+  \ ()\n\n \t\t\t\t\t\t\t\t\t  where \"RecordType\" = 'random'\n\n--and \"DataSet\"\
+  \ = 'Opportunity'\n\n \t\t\t\t\t\t\t\t\t\t)\n and so.\"OpportunitySysID\" IS not\
+  \ NULL\n\n--and (so.\"OpportunityType\" <> 'Training' or so.\"OpportunityType\"\
+  \ is null)\n\n )fd\n--on fd.\"OpportunityAccountSysID_CRM\" = sa.\"AcctSysID\" and\
+  \ fd.\"BUGroup\"=pr.\"BUGroup\"\n\n \t   on IFNULL(fd.\"AccountSysID_FDCRM\",'random')\
+  \ = IFNULL(sa.\"AcctSysID\",'random')\n LEFT outer join\n \t\t\t\t(select distinct\
+  \ \"BUGroup\",\"BUWorkFlow\"\n \t\t\t\t\t\t\tfrom \"ODS_LS\".\"SURF\".\"SALES_PRODUCT\"\
+  \n \t\t\t\t)pr on IFNULL(fd.\"BUGroup\",'random') = IFNULL(pr.\"BUGroup\",'random')\n\
+  \n LEFT outer join\n (SELECT \"DateDimDate\", \"DateDimWeekOfQuarter\", \"DateDimQuarterBeginDate\"\
+  ,\"DateDimLinearWeekOfQuarter\",\"DateDimWeekNumYear\",\"DateDimQuarterEndDate\"\
+  \n FROM \"ODS_LS\".\"SURF\".\"DATE_DIMENSION\" ) dd on fd.\"OpportunityCloseDate\"\
+  \ =dd.\"DateDimDate\"\n\n--inner join \"_SYS_BIC\".\"REAL-TIME-SALES.SECURITY/SALES_USER_TERRITORY_SECURITY\"\
+  \ ts ON ts.\"TerrSysID\"= ifnull(ifnull(fd.\"TerritorySysID_CC\",\"AcctTerritorySysID\"\
+  ),'-99')\n\n GROUP BY\n \"OpportunitySysID_CRM\"\n ,\"OpportunityContractSysID_CRM\"\
+  \n ,IFNULL(\"AccountSysID_FDCRM\",sa.\"AcctSysID\")\n ,\"AccountSysID_FDCRM\"\n\
+  \ ,\"OpportunityOwnerSysID_CRM\"\n ,\"OpportunityItemProductSysID_CRM\"\n ,\"OpportunityLeadNumber_CRM\"\
+  \n ,\"OpportunityMasterQuoteSysID_CRM\"\n ,\"ContractKey_CRM\"\n ,\"BUGroup_CRM\"\
+  \n ,\"BUWorkFlow_CRM\"\n ,\"ProductCode_CRM\"\n ,\"OpportunityItemSourceSystem_CRM\"\
+  \n\n--,\"LineItemNumber_FDKey\"\n\n ,\"LineItemNumber_CRM\"\n /*,case when (fd.\"\
+  TerritorySysID_CC\" = '' or  fd.\"TerritorySysID_CC\" is null)\n then IFNULL(sa.\"\
+  AcctTerritorySysID\",'-99')\n  else fd.\"TerritorySysID_CC\"\n   end \t*/\n ,case\
+  \ when (fd.\"TerritorySysID_CC\" = 'random' or  fd.\"TerritorySysID_CC\" IS NULL)\n\
+  \    then 'random'\n    end\n ,\"SalesQuarter\"\n ,\"OpportunityName\"\n ,\"OpportunityNumber\"\
+  \n ,\"OpportunityCloseDate\"\n ,\"OpportunityCloseMonth\"\n ,\"OpportunityType\"\
+  \n ,\"OpportunityForecastCategory\"\n ,\"OpportunityForecastStage\"\n ,\"OpportunitySysCreatedOn\"\
+  \n ,\"OpportunityOwnerName\"\n ,\"OpportunityParentNumber\"\n ,\"OpportunityParentName\"\
+  \n ,\"OpportunityParentAccountNumber\"\n ,\"OpportunityParentCloseDate\"\n ,\"OpportunityParentCloseMonth\"\
+  \n ,\"OpportunityParentCloseQuarter\"\n ,\"OpportunityParentForecastCategory\"\n\
+  \ ,\"OpportunityParentForecastStage\"\n ,\"OpportunityParentType\"\n ,sa.\"AcctNumber\"\
+  \n ,\"OpportunityParentReportingGeo\"\n ,\"OpportunityParentMajorArea\"\n ,\"OpportunityParentArea\"\
+  \n ,\"OpportunityParentRegion\"\n ,\"OpportunityParentDistrict\"\n ,\"OpportunityParentTerritory\"\
+  \n ,\"PSGeo\"\n ,\"PSMajorArea\"\n ,\"PSArea\"\n ,\"PSRegion\"\n ,\"PSTerritory\"\
+  \n ,\"RenewalGeo\"\n ,\"RenewalMajorArea\"\n ,\"RenewalArea\"\n ,\"RenewalRegion\"\
+  \n ,\"RenewalDistrict\"\n ,\"RenewalTerritory\"\n ,\"OpportunityACEGeo\"\n ,\"OpportunityACEMajorArea\"\
+  \n ,\"OpportunityACEArea\"\n ,\"OpportunityACERegion\"\n ,\"OpportunityACEDistrict\"\
+  \n ,\"OpportunityACETerritory\"\n ,\"IsFixed\"\n ,\"LineItemNumber\"\n ,\"ProductCode\"\
+  \n ,fd.\"BUGroup\"\n ,pr.\"BUWorkFlow\"\n ,\"SalesActivePipeline\"\n ,\"FlagsFilter\"\
+  \n ,\"RenewalEarlyOntimeLateStatus\"\n ,\"LineItemNetNewQuantity\"\n ,\"LineItemQuantity\"\
+  \n ,\"LineItemTerm\"\n ,\"NetNewQuantity_CRM\"\n ,\"ProductSysID\"\n ,\"AllocationType\"\
+  \n ,\"DateDimWeekOfQuarter\"\n ,\"DateDimQuarterBeginDate\"\n ,\"DateDimLinearWeekOfQuarter\"\
+  \n ,\"DateDimWeekNumYear\"\n ,\"DateDimQuarterEndDate\"\n ,fd.\"OptyItemLineCreatedByRole\"\
+  \n ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

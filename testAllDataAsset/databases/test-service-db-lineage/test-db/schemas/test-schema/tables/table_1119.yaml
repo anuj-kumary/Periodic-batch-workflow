@@ -1,0 +1,71 @@
+name: table_1119
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1119
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1119.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TTRF_DATASET_VIEW_DE(\n\tSOURCE,\n\tU_PRINCIPAL_AGENT,\n\
+  \tU_PRINCIPAL_AGENT_SYSID,\n\tMANAGER,\n\t_LOCATION,\n\t_SUPPORT_REGION,\n\tSTATE,\n\
+  \tSYS_ID,\n\tPARENT,\n\tASSIGNMENT_GROUP,\n\tDATE,\n\tSYS_CREATED_ON,\n\tU_OUTAGE_START_TIME,\n\
+  \tU_OUTAGE_END_TIME,\n\tRESOLVED_AT,\n\tNUMBER_,\n\tPSC_U_BUSINESS_AREA,\n\tCASE_PRIORITY,\n\
+  \tUG_PARENT,\n\t_KB_COUNT,\n\tCOMPANY,\n\tPROBLEM,\n\tU_CASE_TYPE,\n\tREGULATED_MARKET,\n\
+  \tPARENT_ASSIGNMENT_GROUP,\n\tSERVICE_LEVEL,\n\t_SUPPORT_CASE,\n\t_SUPPORT_CASE_ALL_RESOLUTION_CODE,\n\
+  \tPRB_ASSIGNED_TO,\n\tU_MGMT_LEVEL4,\n\tACCT_COUNTRY,\n\tCASE_CSAT_SCORE,\n\tTREND_DATE,\n\
+  \tCASES_CLOSED_WITH_KB,\n\tCASES_CLOSED\n) as\n\nselect DISTINCT 'random' as Source,\
+  \ U_PRINCIPAL_AGENT, U_PRINCIPAL_AGENT_SYSID, MANAGER, _LOCATION, _SUPPORT_REGION,\
+  \ STATE, SYS_ID, PARENT, ASSIGNMENT_GROUP, CLOSED_AT as DATE, SYS_CREATED_ON, U_OUTAGE_START_TIME,\
+  \ U_OUTAGE_END_TIME, RESOLVED_AT, NUMBER_,  PSC_U_BUSINESS_AREA, CASE_PRIORITY,\
+  \ UG_PARENT,  _KB_COUNT, COMPANY, PROBLEM,  U_CASE_TYPE, REGULATED_MARKET, PARENT_ASSIGNMENT_GROUP,\
+  \ SERVICE_LEVEL, _SUPPORT_CASE, _SUPPORT_CASE_ALL_RESOLUTION_CODE, PRB_ASSIGNED_TO,\
+  \ U_MGMT_LEVEL4,ACCT_COUNTRY,\n'random' AS CASE_CSAT_SCORE , 'random' AS trend_date,\n\
+  CASE\nWHEN STATE='random' and _kb_count>'random'\n    THEN number_\n    ELSE 'random'\n\
+  END as Cases_Closed_with_KB,\nCase\n    when state='random'\n        THEN number_\n\
+  \        ELSE 'random'\n        END as Cases_Closed\nfrom EDW.UTGA.TEST_TTRF_CASES_MIGRATION_MVP\n\
+  \nUNION ALL\n\nselect DISTINCT 'random' as Source,U_PRINCIPAL_AGENT, U_PRINCIPAL_AGENT_SYSID,\
+  \ MANAGER, _LOCATION, _SUPPORT_REGION, STATE, SYS_ID, PARENT, ASSIGNMENT_GROUP,\
+  \ 'random' AS CLOSED_AT, SYS_CREATED_ON, U_OUTAGE_START_TIME, U_OUTAGE_END_TIME,\
+  \ RESOLVED_AT, 'random' AS NUMBER_,  PSC_U_BUSINESS_AREA, CASE_PRIORITY, UG_PARENT,\
+  \  'random' AS _KB_COUNT, COMPANY, PROBLEM,  U_CASE_TYPE, REGULATED_MARKET, PARENT_ASSIGNMENT_GROUP,\
+  \ SERVICE_LEVEL, _SUPPORT_CASE, _SUPPORT_CASE_ALL_RESOLUTION_CODE, PRB_ASSIGNED_TO,\
+  \ U_MGMT_LEVEL4,ACCT_COUNTRY,CASE_CSAT_SCORE, CASE_CSAT_SURVEY_DATE as trend_date,\n\
+  'random' as Cases_Closed_with_KB, 'random' as Cases_Closed\nfrom EDW.UTGA.TEST_TTRF_CASES_MIGRATION_MVP\n\
+  where CASE_CSAT_SCORE >='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

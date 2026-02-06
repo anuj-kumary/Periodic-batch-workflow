@@ -1,0 +1,141 @@
+name: table_1182
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1182
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1182.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view PPR_RPT_PARTNER_PROGRAM_UNIFIED(\n\t\"ParentPartnerSysID\"\
+  ,\n\t\"ParentPartner\",\n\t\"ParentPartnerNumber\",\n\t\"ProgramType\",\n\t\"ParentPartnerType\"\
+  ,\n\t\"ParentPartnerCreditLimitStatus\",\n\t\"ParentPartnerPaymentStatus\",\n\t\"\
+  ParentPartnerPublicSectorFlagFuture\",\n\t\"Category_3C\",\n\t\"Criteria\",\n\t\"\
+  CriteriaValCompletedDaily\",\n\t\"PSCriteriaValCompletedDaily\",\n\t\"PotentialCriteriaSegment\"\
+  ,\n\t\"CriteriaThresholdLowerLimit\",\n\t\"FutureGap\",\n\t\"PSGap\",\n\t\"CriteriaValCompleted12Months_Actual\"\
+  ,\n\t\"PSCriteriaValCompleted12Months_Actual\",\n\t\"CriteriaValCompleted12Months\"\
+  ,\n\t\"PSCriteriaValCompleted12Months\",\n\t\"Gap\",\n\t\"PSFutureGap\",\n\t\"CurrentProgramSegment\"\
+  ,\n\t\"CalculatedProgramSegment\",\n\t\"ParentPartnerGeo\",\n\t\"ParentPartnerPublicSectorFlag\"\
+  ,\n\t\"Upward/DownwardChangeinSegmentFlag\",\n\t\"DataType\",\n\t\"GlobalTerrSysID\"\
+  \n) as\n WITH  PAR_PARTNERS AS (SELECT * FROM \"EDW_LS\".\"PARTNER_EM\".\"PARENTPARTNERS\"\
+  \  )\n SELECT DATA.\"ParentPartnerSysID\",\n\tDATA.\"ParentPartner\",\n\tDATA.\"\
+  ParentPartnerNumber\",\n\tDATA.\"ProgramType\",\n    PP.\"ParentPartnerType\",\n\
+  \    PP.\"ParentPartnerCreditLimitStatus\",\n    PP.\"ParentPartnerPaymentStatus\"\
+  ,\n\t--EVAL.\"ParentPartnerPublicSectorFlag\",\n\tDATA.\"ParentPartnerPublicSectorFlagFuture\"\
+  ,\n\tDATA.\"Category_3C\",\n   /* CASE WHEN DATA.\"Criteria\"='Cumulative Contract\
+  \ ACV (CACV)' OR DATA.\"Criteria\"='Impacted NNACV' OR DATA.\"Criteria\"='Impacted\
+  \ Resale NNACV' OR DATA.\"Criteria\"='Impacted Build NNACV' OR DATA.\"Criteria\"\
+  ='Sourced Resale ACV' OR DATA.\"Criteria\"='Impacted SP NNACV' OR DATA.\"Criteria\"\
+  ='Sourced Resale NNACV' OR DATA.\"Criteria\"='Sourced Store NNACV (Rev Share)' OR\
+  \ DATA.\"Criteria\"='Sourced ACV'  THEN DATA.\"Criteria\" ||' '||'($M)'\n   */\n\
+  \   CASE WHEN DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"\
+  Criteria\"='random'\n    or DATA.\"Criteria\"='random' THEN DATA.\"Criteria\" ||'random'\n\
+  \    WHEN  DATA.\"Criteria\"='random' THEN DATA.\"Criteria\" ||'random'||'random'\n\
+  \    else DATA.\"Criteria\" end  AS\n\t\"Criteria\",\n\tDATA.\"CriteriaValCompletedDaily\"\
+  ,\n\tDATA.\"PSCriteriaValCompletedDaily\",\n\tDATA.\"PotentialCriteriaSegment\"\
+  ,\n\t\"CriteriaThresholdLowerLimit\",\n\tDATA.\"FutureGap\",\n\tDATA.\"PSGap\",\n\
+  \    CASE WHEN DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"\
+  Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random'\
+  \ OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"\
+  ='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' THEN ROUND(DATA.\"\
+  CriteriaValCompleted12Months_Actual\"::VARCHAR('random')/ 'random', 'random')::VARCHAR('random')\n\
+  \    WHEN DATA.\"Criteria\"='random' THEN ROUND(DATA.\"CriteriaValCompleted12Months_Actual\"\
+  , 'random')::VARCHAR('random')\n    ELSE DATA.\"CriteriaValCompleted12Months_Actual\"\
+  \ ::VARCHAR('random') END\n    AS \"CriteriaValCompleted12Months_Actual\",\n\t--\"\
+  CriteriaValCompleted12Months_Actual\",\n     CASE WHEN DATA.\"Criteria\"='random'\
+  \ OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"\
+  ='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"\
+  Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random'\
+  \ OR DATA.\"Criteria\"='random' THEN ROUND(DATA.\"PSCriteriaValCompleted12Months_Actual\"\
+  ::VARCHAR('random')/ 'random', 'random')::VARCHAR('random')\n     WHEN DATA.\"Criteria\"\
+  ='random' THEN ROUND(DATA.\"PSCriteriaValCompleted12Months_Actual\", 'random')::VARCHAR('random')\n\
+  \     ELSE DATA.\"PSCriteriaValCompleted12Months_Actual\"::VARCHAR('random') END\n\
+  \     AS \"PSCriteriaValCompleted12Months_Actual\",\n\t--\"PSCriteriaValCompleted12Months_Actual\"\
+  ,\n    CASE WHEN DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"\
+  Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random'\
+  \ OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"\
+  ='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' THEN ROUND(DATA.\"\
+  CriteriaValCompleted12Months\"::VARCHAR('random')/ 'random', 'random')::VARCHAR('random')\n\
+  \    WHEN DATA.\"Criteria\"='random' THEN ROUND(DATA.\"CriteriaValCompleted12Months\"\
+  , 'random')::VARCHAR('random')\n    ELSE DATA.\"CriteriaValCompleted12Months\"::VARCHAR('random')\
+  \ END\n    AS \"CriteriaValCompleted12Months\",\n\t--\"CriteriaValCompleted12Months\"\
+  ,\n     CASE WHEN DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"\
+  Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random'\
+  \ OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"\
+  ='random' OR DATA.\"Criteria\"='random' OR DATA.\"Criteria\"='random' THEN ROUND(DATA.\"\
+  PSCriteriaValCompleted12Months\"::VARCHAR('random')/ 'random', 'random')::VARCHAR('random')\n\
+  \     WHEN DATA.\"Criteria\"='random' THEN ROUND(DATA.\"PSCriteriaValCompleted12Months\"\
+  , 'random')::VARCHAR('random')\n      ELSE DATA.\"PSCriteriaValCompleted12Months\"\
+  ::VARCHAR('random') END\n     AS \"PSCriteriaValCompleted12Months\",\n\t--\"PSCriteriaValCompleted12Months\"\
+  ,\n\tDATA.\"Gap\",\n\tDATA.\"PSFutureGap\",\n    DATA.\"CurrentProgramSegment\"\
+  ,\n\tDATA.\"CalculatedProgramSegment\",\n    DATA.\"ParentPartnerGeo\",\n\tDATA.\"\
+  ParentPartnerPublicSectorFlag\",\n\tDATA.\"Upward/DownwardChangeinSegmentFlag\"\
+  ,\n    DATA.\"DataType\",\n    DATA.\"GlobalTerrSysID\"\n\n   from\n(SELECT\n  \
+  \  EVAL.\"ParentPartnerSysID\",\n\tEVAL.\"ParentPartner\",\n\tEVAL.\"ParentPartnerNumber\"\
+  ,\n\tEVAL.\"ProgramType\",\n\t--EVAL.\"ParentPartnerPublicSectorFlag\",\n\tEVAL.\"\
+  ParentPartnerPublicSectorFlagFuture\",\n\tEVAL.\"Category_3C\",\n\tEVAL.\"Criteria\"\
+  ,\n\tEVAL.\"CriteriaValCompletedDaily\",\n\tEVAL.\"PSCriteriaValCompletedDaily\"\
+  ,\n\tEVAL.\"PotentialCriteriaSegment\",\n\tEVAL.\"CriteriaThresholdLowerLimit\"\
+  ,\n\tEVAL.\"FutureGap\",\n\tEVAL.\"PSGap\",\n\tEVAL.\"CriteriaValCompleted12Months_Actual\"\
+  ,\n\tEVAL.\"PSCriteriaValCompleted12Months_Actual\",\n\tEVAL.\"CriteriaValCompleted12Months\"\
+  ,\n\tEVAL.\"PSCriteriaValCompleted12Months\",\n\t--\"CurrentCriteriaSegment\",\n\
+  \tEVAL.\"Gap\",\n\tEVAL.\"PSFutureGap\",\n    SUMMARY.\"CurrentProgramSegment\"\
+  ,\n\tSUMMARY.\"CalculatedProgramSegment\",\n    SUMMARY.\"ParentPartnerGeo\",\n\t\
+  SUMMARY.\"ParentPartnerPublicSectorFlag\",\n\tSUMMARY.\"Upward/DownwardChangeinSegmentFlag\"\
+  ,\n    'random'AS \"DataType\",\n   'random'::VARCHAR('random') as \"GlobalTerrSysID\"\
+  \n\n FROM CDL_LS.PARTNER_DATA_OUT.PPR_RPT_PARTNER_PROGRAM_SUMMARY_UNIFIED AS SUMMARY\n\
+  \    INNER JOIN CDL_LS.PARTNER_DATA_OUT.PPR_RPT_PARTNER_PROGRAM_EVALUATION_UNIFIED\
+  \ AS EVAL ON EVAL.\"ParentPartnerNumber\"=SUMMARY.\"ParentPartnerNumber\" and EVAL.\"\
+  ProgramType\"=SUMMARY.\"ProgramType\"\n\nUNION ALL\n\n SELECT\n    EVAL.\"ParentPartnerSysID\"\
+  ,\n\tEVAL.\"ParentPartner\",\n\tEVAL.\"ParentPartnerNumber\",\n\tEVAL.\"ProgramType\"\
+  ,\n\t--EVAL.\"ParentPartnerPublicSectorFlag\",\n\tEVAL.\"ParentPartnerPublicSectorFlagFuture\"\
+  ,\n\tEVAL.\"Category_3C\",\n\tEVAL.\"Criteria\",\n\tEVAL.\"CriteriaValCompletedDaily\"\
+  ,\n\tEVAL.\"PSCriteriaValCompletedDaily\",\n\tEVAL.\"PotentialCriteriaSegment\"\
+  ,\n\tEVAL.\"CriteriaThresholdLowerLimit\",\n\tEVAL.\"FutureGap\",\n\tEVAL.\"PSGap\"\
+  ,\n\tEVAL.\"CriteriaValCompleted12Months_Actual\",\n\tEVAL.\"PSCriteriaValCompleted12Months_Actual\"\
+  ,\n\tEVAL.\"CriteriaValCompleted12Months\",\n\tEVAL.\"PSCriteriaValCompleted12Months\"\
+  ,\n\t--\"CurrentCriteriaSegment\",\n\tEVAL.\"Gap\",\n\tEVAL.\"PSFutureGap\",\n \
+  \   SUMMARY.\"CurrentProgramSegment\",\n\tSUMMARY.\"CalculatedProgramSegment\",\n\
+  \    SUMMARY.\"ParentPartnerGeo\",\n\tSUMMARY.\"ParentPartnerPublicSectorFlag\"\
+  ,\n\tSUMMARY.\"Upward/DownwardChangeinSegmentFlag\",\n    'random' AS \"DataType\"\
+  ,\n   'random'::VARCHAR('random') as \"GlobalTerrSysID\"\n\n FROM CDL_LS.PARTNER_DATA_OUT.PPR_RPT_PARTNER_PROGRAM_SUMMARY_UNIFIED\
+  \ AS SUMMARY\n    INNER JOIN CDL_LS.PARTNER_DATA_OUT.PPR_RPT_PARTNER_PROGRAM_EVALUATION_UNIFIED\
+  \ AS EVAL ON EVAL.\"ParentPartnerNumber\"=SUMMARY.\"ParentPartnerNumber\" and EVAL.\"\
+  ProgramType\"=SUMMARY.\"ProgramType\"\n\n) DATA\n    LEFT JOIN\n    PAR_PARTNERS\
+  \ PP\n    ON PP.\"ParentPartnerNumber\"=DATA.\"ParentPartnerNumber\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

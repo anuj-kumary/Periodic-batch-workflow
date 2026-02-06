@@ -1,0 +1,62 @@
+name: table_1125
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1125
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1125.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SYS_SEARCH_SIGNAL_EVENT(\n\tFACET_FILTERS,\n\
+  \tDV_FACET_FILTERS,\n\tSORT_BY_FIELD,\n\tSPELL_CHECK_CORRECTED_TERM,\n\tLATITUDE,\n\
+  \tSYS_MOD_COUNT,\n\tSPELL_CHECK_ENABLED,\n\tQUERY_FILTERS,\n\tDV_QUERY_FILTERS,\n\
+  \tSYS_UPDATED_ON,\n\tSYS_TAGS,\n\tQUERY_MODE,\n\tDV_QUERY_MODE,\n\tSYS_ID,\n\tUSER_QUERY_LANGUAGE,\n\
+  \tSYS_UPDATED_BY,\n\tMATCHED_QUERY_INTENTS,\n\tSEARCH_RESULTS,\n\tSYS_CREATED_ON,\n\
+  \tFIELD_RESTRICTIONS,\n\tDV_FIELD_RESTRICTIONS,\n\tSEARCH_EVENT,\n\tDV_SEARCH_EVENT,\n\
+  \tBROWSER,\n\tRESPONSE_TIME,\n\tSYS_CREATED_BY,\n\tSORT_DESCENDING,\n\tLONGITUDE,\n\
+  \tPSP_PER_INSERT_DT,\n\tPSP_PER_DELETE_DT,\n\tPSP_PER_UPDATE_DT,\n\tGENIUS_RESULTS\n\
+  ) as\nSELECT\n\"FACET_FILTERS\",\n\"DV_FACET_FILTERS\",\n\"SORT_BY_FIELD\",\n\"\
+  SPELL_CHECK_CORRECTED_TERM\",\n\"LATITUDE\",\n\"SYS_MOD_COUNT\",\n\"SPELL_CHECK_ENABLED\"\
+  ,\n\"QUERY_FILTERS\",\n\"DV_QUERY_FILTERS\",\n\"SYS_UPDATED_ON\",\n\"SYS_TAGS\"\
+  ,\n\"QUERY_MODE\",\n\"DV_QUERY_MODE\",\n\"SYS_ID\",\n\"USER_QUERY_LANGUAGE\",\n\"\
+  SYS_UPDATED_BY\",\n\"MATCHED_QUERY_INTENTS\",\n\"SEARCH_RESULTS\",\n\"SYS_CREATED_ON\"\
+  ,\n\"FIELD_RESTRICTIONS\",\n\"DV_FIELD_RESTRICTIONS\",\n\"SEARCH_EVENT\",\n\"DV_SEARCH_EVENT\"\
+  ,\n\"BROWSER\",\n\"RESPONSE_TIME\",\n\"SYS_CREATED_BY\",\n\"SORT_DESCENDING\",\n\
+  \"LONGITUDE\",\n\"PSP_PER_INSERT_DT\",\n\"PSP_PER_DELETE_DT\",\n\"PSP_PER_UPDATE_DT\"\
+  ,\n\"GENIUS_RESULTS\"\nFROM  \"RDS\".\"SURF\".\"SYS_SEARCH_SIGNAL_EVENT\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

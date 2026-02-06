@@ -1,0 +1,56 @@
+name: table_1176
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1176
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1176.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view PPR_RPT_PARTNER_SP_CONTRACT_ACV_DETAILS(\n\
+  \t\"HashKey\",\n\t\"HashRow\",\n\t\"ParentPartnerNumber\",\n\t\"ParentPartner\"\
+  ,\n\t\"PartnerNumber\",\n\t\"Partner\",\n\t\"AcctMSPEndCust\",\n\t\"AcctMSPEndCustNumber\"\
+  ,\n\t\"ConItemACV_USD\",\n\t\"EvaluationMonth\",\n\t\"EvaluationDate\",\n\t\"UpdateDate\"\
+  ,\n\t\"InsertDate\",\n\t\"DeleteDate\",\n\t\"CDC_Flag\"\n) as\n  SELECT\n\t\"HashKey\"\
+  ,\n\t\"HashRow\",\n\t\"ParentPartnerNumber\",\n\t\"ParentPartner\",\n\t\"PartnerNumber\"\
+  ,\n\t\"Partner\",\n\t\"AcctMSPEndCust\",\n\t\"AcctMSPEndCustNumber\",\n\t\"ConItemACV_USD\"\
+  ,\n     monthname(\"EvaluationDate\") AS \"EvaluationMonth\",\n\t\"EvaluationDate\"\
+  ,\n\t\"UpdateDate\",\n\t\"InsertDate\",\n\t \"DeleteDate\",\n\t \"CDC_Flag\"\n \
+  \     from  EDW_LS.PARTNER_EM.PPR_PARTNER_SP_CONTRACT_ACV_DETAILS_HIST WHERE \"\
+  CDC_Flag\" in ('random','random','random','random');"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

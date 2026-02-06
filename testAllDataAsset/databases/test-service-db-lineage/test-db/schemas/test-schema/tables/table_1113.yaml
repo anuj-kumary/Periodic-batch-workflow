@@ -1,0 +1,76 @@
+name: table_1113
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1113
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1113.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view EM_FF_SALES_CONTRACT_ITEM(\n\t\"OptyNumber\"\
+  ,\n\t\"Acv\",\n\t\"Acv usd\",\n\t\"Annual list value\",\n\t\"Annual list value usd\"\
+  ,\n\t\"Contract\",\n\t\"Notes\",\n\t\"Product price\",\n\t\"Quantity\",\n\t\"Aales\
+  \ price\",\n\t\"Account\",\n\t\"Adjustment a\",\n\t\"Constant fx rate\",\n\t\"Constant\
+  \ fiscal year\",\n\t\"Sys created on\",\n\t\"Sys created by\",\n\t\"Ems entitlement\"\
+  ,\n\t\"Latest opportunity\",\n\t\"Opportunity item\",\n\t\"Sales price usd\",\n\t\
+  \"Supported app\",\n\t\"Sys tags\",\n\t\"Total value\",\n\t\"Total value usd\",\n\
+  \t\"Usd adjustment a\",\n\t\"Acv usd c li const\",\n\t\"Usd adjustment a c li const\"\
+  ,\n\t\"Annual list value usd c li const\",\n\t\"Sales price usd c li const\",\n\t\
+  \"Total value usd c li const\",\n\t\"Sys updated on\",\n\t\"Sys updated by\",\n\t\
+  \"Sys mod count\",\n\t\"Variable price acv calc\",\n\t\"Usd variable price acv calc\"\
+  \n) as\n\nSELECT \"NUMBER\" as \"OptyNumber\",\n\"ACV\" as \"Acv\",\n\"ACV_USD\"\
+  \ as \"Acv usd\",\n\"ANNUAL_LIST_VALUE\" as \"Annual list value\",\n\"ANNUAL_LIST_VALUE_USD\"\
+  \ as \"Annual list value usd\",\n\"CONTRACT\" as \"Contract\",\n\"NOTES\" as \"\
+  Notes\",\n\"PRODUCT_PRICE\" as \"Product price\",\n\"QUANTITY\" as \"Quantity\"\
+  ,\n\"SALES_PRICE\" as \"Aales price\",\n\"U_ACCOUNT\" as \"Account\",\n\"U_ADJUSTMENT_A\"\
+  \ as \"Adjustment a\",\n\"U_CONSTANT_FX_RATE\" as \"Constant fx rate\",\n\"U_CONSTANT_FISCAL_YEAR\"\
+  \ as \"Constant fiscal year\",\n\"SYS_CREATED_ON\" as \"Sys created on\",\n\"SYS_CREATED_BY\"\
+  \ as \"Sys created by\",\n\"U_EMS_ENTITLEMENT\" as \"Ems entitlement\",\n\"U_LATEST_OPPORTUNITY\"\
+  \ as \"Latest opportunity\",\n\"U_OPPORTUNITY_ITEM\" as \"Opportunity item\",\n\"\
+  SALES_PRICE_USD\" as \"Sales price usd\",\n\"U_SUPPORTED_APP\" as \"Supported app\"\
+  ,\n\"SYS_TAGS\" as \"Sys tags\",\n\"TOTAL_VALUE\" as \"Total value\",\n\"TOTAL_VALUE_USD\"\
+  \ as \"Total value usd\",\n\"U_USD_ADJUSTMENT_A\" as \"Usd adjustment a\",\n\"U_ACV_USD_C_LI_CONST\"\
+  \ as \"Acv usd c li const\",\n\"U_USD_ADJUSTMENT_A_C_LI_CONST\" as \"Usd adjustment\
+  \ a c li const\",\n\"U_ANNUAL_LIST_VALUE_USD_C_LI_CONST\" as \"Annual list value\
+  \ usd c li const\",\n\"U_SALES_PRICE_USD_C_LI_CONST\" as \"Sales price usd c li\
+  \ const\",\n\"U_TOTAL_VALUE_USD_C_LI_CONST\" as \"Total value usd c li const\",\n\
+  \"SYS_UPDATED_ON\" as \"Sys updated on\",\n\"SYS_UPDATED_BY\" as \"Sys updated by\"\
+  ,\n\"SYS_MOD_COUNT\" as \"Sys mod count\",\n\"U_VARIABLE_PRICE_ACV_CALC\" as \"\
+  Variable price acv calc\",\n\"U_USD_VARIABLE_PRICE_ACV_CALC\" as \"Usd variable\
+  \ price acv calc\"\nfrom RDS.FLATFILESOURCE.FF_SALES_CONTRACT_ITEM;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

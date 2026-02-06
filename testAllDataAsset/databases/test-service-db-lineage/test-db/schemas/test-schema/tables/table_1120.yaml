@@ -1,0 +1,313 @@
+name: table_1120
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1120
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1120.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view VW_DIM_ACCOUNT_TSK(\n\tACCOUNT_ID,\n\tACCOUNT_NUMBER,\n\
+  \tACCOUNT_NAME,\n\tACCOUNT_COMPANY,\n\tDUNS_NUMBER,\n\tPARENT_ACCOUNT_ID,\n\tACCOUNT_CHANNEL_PARENT_NUMBER,\n\
+  \tACCOUNT_CHANNEL_PARENT_NAME,\n\tCUSTOMER_SINCE,\n\tINDUSTRY_SUBCATEGORY,\n\tINDUSTRY_CATEGORY,\n\
+  \tIS_INDUSTRY_ACTIVE,\n\tINDUSTRY_RISK,\n\tINDUSTRY_SEGMENT,\n\tPARENT_ACCOUNT_INDUSTRY_SEGMENT,\n\
+  \tACCOUNT_SEGMENT,\n\tSEGMENT_OVERRIDE,\n\tSEGMENT_OVERRIDE_REASON,\n\tPARTNER_AGREEMENT,\n\
+  \tPARTNER_STATUS,\n\tPAYMENT_STATUS,\n\tCOUNTRY_TERRITORY,\n\tACCOUNT_GRADE,\n\t\
+  IS_TOP_ACCOUNT,\n\tIS_ACTIVE,\n\tACCOUNT_TYPE,\n\tACCOUNT_VERTICAL,\n\tACCOUNT_CHANNEL,\n\
+  \tACCOUNT_STATUS,\n\tACCOUNT_CITY,\n\tACCOUNT_STATE,\n\tACCOUNT_COUNTRY,\n\tCUSTOMER_OUTCOMES_CONTACT,\n\
+  \tDYNAMICS_GUID,\n\tEXECUTIVE_SPONSOR,\n\tEXECUTIVE_SPONSOR_NAME,\n\tF500_PARENT_NAME,\n\
+  \tCUSTOMER_HQ_ID,\n\tGP_FIELD_SALES_PARENT_NAME,\n\tGP_INDUSTRY_SEGMENT_OVERRIDE,\n\
+  \tGP_INDUSTRY_CATEGORY_OVERRIDE,\n\tGP_NAME,\n\tGP_NUMBER,\n\tGP_SEGMENT_OVERRIDE,\n\
+  \tGP_ACCOUNT_SEGMENT,\n\tGP_EMPLOYEE_COUNT_OVERRIDE,\n\tGP_ASSIGNMENT_RULE,\n\t\
+  DP_G2K_COUNTRY,\n\tDP_G2K_NAME,\n\tDP_G2K_PENETRATION_FLAG,\n\tDP_SEGMENT,\n\tDP_EMPLOYEE_COUNT_OVERRIDE,\n\
+  \tDP_INDUSTRY_CATEGORY_OVERRIDE,\n\tDP_INDUSTRY_SEGMENT_OVERRIDE,\n\tDP_NAME,\n\t\
+  DP_NUMBER,\n\tDP_SEGMENT_OVERRIDE,\n\tDP_ANNUAL_REVENUE_OVERRIDE,\n\tG2K_PARENT_COUNTRY,\n\
+  \tG2K_PARENT_NAME,\n\tG2K_PARENT_RANKING,\n\tG2K_TERRITORY_ID,\n\tG2K_TERRITORY_GEO,\n\
+  \tG2K_AUDIT,\n\tG2K_PARENT_PENETRATION_FLAG,\n\tG2K_PARENT_SUBSIDIARY,\n\tG2K_NAME,\n\
+  \tG2K_RANK,\n\tACCOUNT_TERRITORY_ID,\n\tPS_TERRITORY_ID,\n\tADR_ID,\n\tADR_NAME,\n\
+  \tADR_MANAGER,\n\tCHANNEL_MANAGER_ID,\n\tCHANNEL_MANAGER,\n\tSOLUTION_CONSULTANT_ID,\n\
+  \tSOLUTION_CONSULTANT,\n\tPRIMARY_SALESREP,\n\tPRIMARY_SALESREP_ID,\n\tPRIMARY_SALESREP_SN_EMAIL,\n\
+  \tPRIMARY_SALESREP_MANAGER,\n\tRENEWALREP_ID,\n\tRENEWALREP_NAME,\n\tSUCCESS_LEAD_ID,\n\
+  \tSUCCESS_LEAD_USER_NAME,\n\tSUPPORT_MANAGER_ID,\n\tSUPPORT_MANAGER,\n\tSUPPORT_CHAMPION_ID,\n\
+  \tSUPPORT_CHAMPION,\n\tSUPPORT_CONSULTANT_ID,\n\tSUPPORT_CONSULTANT,\n\tSERVICE_PROVIDER_STATUS,\n\
+  \tSP_TERRITORY_ID,\n\tSP_END_CUSTOMER,\n\tSP_END_CUSTOMER_NUMBER,\n\tSALES_PARTNER,\n\
+  \tSALES_PROGRAM_MAP,\n\tSCORE_SEVERITY,\n\tHQ_PENETRATION,\n\tINSIDE_SALESREP,\n\
+  \tLEAD_ID,\n\tLEAD_NUMBER,\n\tLEAD_SOURCE,\n\tLEAD_SOURCE_PROGRAM_NAME,\n\tLEGACY_SEGMENT,\n\
+  \tACCOUNT_MAINTENANCE,\n\tMERGED_ACCOUNT_NUMBER,\n\tACCOUNT_MERGED_WITH,\n\tIS_ACCOUNT_MERGED,\n\
+  \tMERGED_ACCOUNT_NAME,\n\tACCOUNT_NPS,\n\tACCOUNT_URL,\n\tRECOMMENDED_BU,\n\tANNUAL_REVENUE,\n\
+  \tACE_PROGRAM_CACV_USD,\n\tTOTAL_ACV_USD,\n\tAPP_STORE_VENDOR,\n\tEMPLOYEE_DB,\n\
+  \tNUMBER_OF_EMPLOYEES,\n\tIS_NON_PROFIT_ACCOUNT,\n\tNUMBER_OF_IT_EMPLOYEES,\n\t\
+  IS_TARGET_ACCOUNT,\n\tIS_TERRITORY_LOCK,\n\tACCOUNT_USG,\n\tIS_PUBLIC_SECTOR_COMPANY,\n\
+  \tRENEWAL_GUIDELINE,\n\tPRODUCT_CLASSIFICATION,\n\tCHANNEL_PARENT_SERVICE_PROVIDER_STATUS,\n\
+  \tSUPPORT_PARTNER,\n\tACCOUNT_AREA,\n\tACCOUNT_GEO,\n\tACCOUNT_DISTRICT,\n\tACCOUNT_MAJOR_AREA,\n\
+  \tACCOUNT_REGION,\n\tACCOUNT_TERRITORY_RULE_DESCRIPTION,\n\tACCOUNT_TERRITORY_SOURCE,\n\
+  \tACCOUNT_TERRITORY_TYPE,\n\tACCOUNT_REPORT_GEO,\n\tACCOUNT_REPORT_MAJOR_AREA,\n\
+  \tACCOUNT_REPORT_AREA,\n\tACCOUNT_REPORT_REGION,\n\tACCOUNT_REPORT_DISTRICT,\n\t\
+  ACCOUNT_REPORT_TERRITORY,\n\tACCOUNT_REPORTING_TYPE,\n\tMARQUEE_PROGRAM_NAME,\n\t\
+  IS_MARQUEE_ACCOUNT,\n\tACCOUNT_RISK_SCORE_SEVERITY,\n\tRISK_CONFIRMED_STATUS,\n\t\
+  RISK_REASON_CODE1,\n\tRISK_REASON_CODE2,\n\tRISK_REASON_CODE3,\n\tRISK_REASON_CODE4,\n\
+  \tACCOUNT_SYSID,\n\tACCOUNT_TERRITORY_SYSID,\n\tACCOUNT_MDM_ID,\n\tADR_SYSID,\n\t\
+  PARENT_ACCOUNT_SYSID,\n\tCHANNEL_MANAGER_SYSID,\n\tSOLUTION_CONSULTANT_SYSID,\n\t\
+  PS_TERRITORY_SYSID,\n\tPRIMARY_SALESREP_SYSID,\n\tRENEWALREP_SYSID,\n\tSUCCESS_LEAD_SYSID,\n\
+  \tSUPPORT_MANAGER_SYSID,\n\tSUPPORT_CHAMPION_SYSID,\n\tCUSTOMER_HQ_SYSID,\n\tG2K_TERRITORY_SYSID,\n\
+  \tSP_TERRITORY_SYSID,\n\tLEAD_SYSID,\n\tSUPPORT_CONSULTANT_SYSID,\n\tPARTNER_AGREEMENT_SYSID,\n\
+  \tIS_CUSTOMER_SUCCESS,\n\tIS_ESCALATION,\n\tACCOUNT_UPDATED_TS,\n\tACCOUNT_UPDATED_BY,\n\
+  \tACCOUNT_CREATED_BY,\n\tACCOUNT_CREATED_TS,\n\tML_RECOMMENDED_BU,\n\tMARKETING_ENGAGEMENT_SCORE,\n\
+  \tPARENT_ACCOUNT_RISK_SCORE_SEVERITY,\n\tPROPENSITY_SCORE,\n\tCACV_USD_DAILY\n)\
+  \ as  --SEMANTIC LAYER BEGINS\nselect\nHASH(ACCT.\"AcctSysID\") as \"ACCOUNT_ID\"\
+  ,\nACCT.\"AcctNumber\" as \"ACCOUNT_NUMBER\",\nACCT.\"AcctName\" as \"ACCOUNT_NAME\"\
+  ,\nACCT_SURF.\"AcctCompany\" as \"ACCOUNT_COMPANY\",\nACCT_SURF.\"AcctDNB\" as \"\
+  DUNS_NUMBER\",\nHASH(ACCT.\"AcctParentSysID\") as \"PARENT_ACCOUNT_ID\",\nACCT.\"\
+  AcctParentNumber\" as \"ACCOUNT_CHANNEL_PARENT_NUMBER\",\nACCT.\"AcctParent\" as\
+  \ \"ACCOUNT_CHANNEL_PARENT_NAME\",\nACCT.\"AcctCustomerSince\" as \"CUSTOMER_SINCE\"\
+  ,\nIND.\"IndustryName\" as \"INDUSTRY_SUBCATEGORY\",\nACCT.\"AccountIndustryCategory\"\
+  \ as \"INDUSTRY_CATEGORY\",\nIND.\"IndustryActive\" as \"IS_INDUSTRY_ACTIVE\",\n\
+  IND.\"IndustryRisk\" as \"INDUSTRY_RISK\",\nIND.\"IndustryName\" as \"INDUSTRY_SEGMENT\"\
+  ,\nIND_PAR.\"IndustryName\" as \"PARENT_ACCOUNT_INDUSTRY_SEGMENT\",\nACCT.\"AcctNewSegment\"\
+  \ as \"ACCOUNT_SEGMENT\",\nACCT.\"AcctOverrideSegment\" as \"SEGMENT_OVERRIDE\"\
+  ,\nACCT_SURF.\"AcctOverrideSegmentReason\" as \"SEGMENT_OVERRIDE_REASON\",\nACCT_SURF.\"\
+  AcctPartnerAgreementValue\" as \"PARTNER_AGREEMENT\",\nACCT.\"AcctPartnerType\"\
+  \ as \"PARTNER_STATUS\",\nACCT.\"AcctPaymentStatus\" as \"PAYMENT_STATUS\",\nACCT.\"\
+  AccountCountry\" as \"COUNTRY_TERRITORY\",\nACCT.\"AcctMarketingStatus\" as \"ACCOUNT_GRADE\"\
+  ,\nACCT.\"AcctTopAccount\" as \"IS_TOP_ACCOUNT\",\nACCT.\"AcctActiveFlag\" as \"\
+  IS_ACTIVE\",\nACCT.\"AcctType\" as \"ACCOUNT_TYPE\",\nACCT.\"AcctVertical\" as \"\
+  ACCOUNT_VERTICAL\",\nACCT.\"AccountChannel\" as \"ACCOUNT_CHANNEL\",\nACCT_SURF.\"\
+  AcctAccountStatus\" as \"ACCOUNT_STATUS\",\nACCT.\"AcctCity\" as \"ACCOUNT_CITY\"\
+  ,\nACCT.\"AcctState\" as \"ACCOUNT_STATE\",\nACCT.\"AcctCountry\" as \"ACCOUNT_COUNTRY\"\
+  ,\nACCT.\"AcctPSChampion\" as \"CUSTOMER_OUTCOMES_CONTACT\",\nACCT.\"AcctDynamicsGUID\"\
+  \ as \"DYNAMICS_GUID\",\nACCT.\"AcctExecutiveSponser\" as \"EXECUTIVE_SPONSOR\"\
+  ,\nACCT_SURF.\"AcctExecutiveSponsorName\" as \"EXECUTIVE_SPONSOR_NAME\",\nACCT.\"\
+  AcctF500ParentAccountName\" as \"F500_PARENT_NAME\",\nHASH(ACCT.\"AcctCustomerHQAccountSysID\"\
+  ) as \"CUSTOMER_HQ_ID\",\nACCT.\"AcctGPFieldSalesParent\" as \"GP_FIELD_SALES_PARENT_NAME\"\
+  ,\nACCT.\"AcctCustomerHQIndustrySegment\" as \"GP_INDUSTRY_SEGMENT_OVERRIDE\",\n\
+  ACCT.\"AcctCustomerHQIndustryCategory\" as \"GP_INDUSTRY_CATEGORY_OVERRIDE\",\n\
+  ACCT.\"AcctCustomerHQName\" as \"GP_NAME\",\nACCT.\"AcctCustomerHQAcctNumber\" as\
+  \ \"GP_NUMBER\",\nACCT.\"AcctCustomerHQOverrideSegment\" as \"GP_SEGMENT_OVERRIDE\"\
+  ,\nACCT.\"AcctCustomerHQSegment\" as \"GP_ACCOUNT_SEGMENT\",\nACCT_SURF.\"AcctCustomerHQEmployeeUsed\"\
+  \ as \"GP_EMPLOYEE_COUNT_OVERRIDE\",\nACCT.\"AcctCustomeHQAssignmentRule\" as \"\
+  GP_ASSIGNMENT_RULE\",\nACCT_KEY.\"G2KCompanyCountryValue\" as \"DP_G2K_COUNTRY\"\
+  ,\nACCT_KEY.\"G2KCompanyName\" as \"DP_G2K_NAME\",\nACCT_KEY.\"G2KPenetration\"\
+  \ as \"DP_G2K_PENETRATION_FLAG\",\nACCT.\"AcctFieldSalesParentSegmentValue\" as\
+  \ \"DP_SEGMENT\",\nACCT.\"DomesticParentEmployeeDB\" as \"DP_EMPLOYEE_COUNT_OVERRIDE\"\
+  ,\nACCT_SURF.\"FieldSalesParentAccountIndustrySegmentCategory\" as \"DP_INDUSTRY_CATEGORY_OVERRIDE\"\
+  ,\nACCT.\"DomesticParentAccountIndustrySegment\" as \"DP_INDUSTRY_SEGMENT_OVERRIDE\"\
+  ,\nACCT_SURF.\"AcctDVFieldSalesParent\" as \"DP_NAME\",\nACCT.\"DomesticParentNumber\"\
+  \ as \"DP_NUMBER\",\nACCT.\"AcctFieldSalesParentSegmentValue\" as \"DP_SEGMENT_OVERRIDE\"\
+  ,\nACCT_SURF.\"DomesticAnnualRevenue\" as \"DP_ANNUAL_REVENUE_OVERRIDE\",\nACCT.\"\
+  G2KCompanyCountryValue\" as \"G2K_PARENT_COUNTRY\",\nACCT_KEY.\"G2KCompanyName\"\
+  \ as \"G2K_PARENT_NAME\",\nACCT_KEY.\"G2KRanking\" as \"G2K_PARENT_RANKING\",\n\
+  HASH(ACCT_G2K.\"AcctTerritorySysID\") as \"G2K_TERRITORY_ID\",\nTERR_G2K.\"TerrGeo\"\
+  \ as \"G2K_TERRITORY_GEO\",\nACCT_SURF.\"AcctG2KAudit\" as \"G2K_AUDIT\",\nACCT_KEY.\"\
+  G2KPenetration\" as \"G2K_PARENT_PENETRATION_FLAG\",\nACCT.\"AcctG2KParentSubsidiary\"\
+  \ as \"G2K_PARENT_SUBSIDIARY\",\nACCT.\"G2KCompanyName\" as \"G2K_NAME\",\nACCT.\"\
+  G2KRanking\"  as \"G2K_RANK\",\nHASH(ACCT.\"AcctTerritorySysID\") as \"ACCOUNT_TERRITORY_ID\"\
+  ,\nHASH(ACCT_SURF.\"AcctPSTerritorySysID\") as \"PS_TERRITORY_ID\",\nHASH(ACCT_SURF.\"\
+  AcctInsideSalesRepSysID\") as\"ADR_ID\",\nACCT.\"AcctInsideSalesRep\" as \"ADR_NAME\"\
+  ,\nEMP_INSIDE_SALES_REP.\"EmpManagerName\" as \"ADR_MANAGER\",\nHASH(ACCT.\"AcctChannelManagerSysID\"\
+  ) as \"CHANNEL_MANAGER_ID\",\nACCT.\"AcctChannelManager\" as \"CHANNEL_MANAGER\"\
+  ,\nhash(ACCT.\"AcctSolutionConsultantSysID\") as \"SOLUTION_CONSULTANT_ID\",\nACCT.\"\
+  AcctSolutionConsultant\" as \"SOLUTION_CONSULTANT\",\nACCT.\"AcctPrimarySalesRep\"\
+  \ as \"PRIMARY_SALESREP\",\nHASH(ACCT.\"AcctPrimarySalesRepSysID\") as \"PRIMARY_SALESREP_ID\"\
+  ,\nEMP_PRI_SALES_REP.\"EmpSNEmail\" as \"PRIMARY_SALESREP_SN_EMAIL\",\nEMP_PRI_SALES_REP.\"\
+  EmpManagerName\" as \"PRIMARY_SALESREP_MANAGER\",\nHASH(ACCT.\"AcctRenewalRep\"\
+  ) as \"RENEWALREP_ID\",\nACCT.\"AcctRenewalRepValue\" as \"RENEWALREP_NAME\",\n\
+  HASH(ACCT.\"AcctSuccessLead\")  as \"SUCCESS_LEAD_ID\",\nEMP_SUCC_LEAD.\"EmpUserName\"\
+  \ as \"SUCCESS_LEAD_USER_NAME\",\nhash(ACCT_SURF.\"AcctCustomerSuccessManagerSysID\"\
+  ) as \"SUPPORT_MANAGER_ID\",\nACCT.\"AcctCustomerSuccessManager\" as \"SUPPORT_MANAGER\"\
+  ,\nhash(ACCT_SURF.\"AcctSupportChampionSysID\") as \"SUPPORT_CHAMPION_ID\",\nACCT.\"\
+  AcctSupportChampion\" as \"SUPPORT_CHAMPION\",\nhash(ACCT.\"AcctSolutionConsultantSysID\"\
+  ) as \"SUPPORT_CONSULTANT_ID\",\nACCT.\"AcctSolutionConsultant\" as \"SUPPORT_CONSULTANT\"\
+  ,\nACCT.\"AcctNewPartnerType\" as \"SERVICE_PROVIDER_STATUS\",\nhash(END_CUST_ACCT.\"\
+  AcctTerritorySysID\") as \"SP_TERRITORY_ID\",\nACCT.\"AcctMSPEndCust\" as \"SP_END_CUSTOMER\"\
+  ,\nEND_CUST_ACCT.\"AcctNumber\"  as \"SP_END_CUSTOMER_NUMBER\",\nACCT.\"AcctSalesPartner\"\
+  \ as \"SALES_PARTNER\",\nACCT.\"AcctSalesProgram\" as \"SALES_PROGRAM_MAP\",\nNPS.\"\
+  Score_Severity_CC\"  as \"SCORE_SEVERITY\",\n--NPS.\"Score_Severity_CC\"  as \"\
+  SCORE_SEVERITY\",\nACCT.\"DNBCustomerType\" as \"HQ_PENETRATION\",\nACCT_SURF.\"\
+  AcctInsideSalesRepNew\" as \"INSIDE_SALESREP\",\nhash(ACCT_SURF.\"AcctLeadSysID\"\
+  ) as \"LEAD_ID\",\nACCT_SURF.\"AcctLead\" as \"LEAD_NUMBER\",\nACCT.\"AcctCampaignSysID\"\
+  \ as \"LEAD_SOURCE\",\nACCT_SURF.\"AcctCampaign\" as \"LEAD_SOURCE_PROGRAM_NAME\"\
+  ,\nACCT.\"AcctSegment\" as \"LEGACY_SEGMENT\",\nACCT.\"AcctMaintenance\" as \"ACCOUNT_MAINTENANCE\"\
+  ,\nACCT.\"MergeAccountNumber\" as \"MERGED_ACCOUNT_NUMBER\",\nACCT_SURF.\"AcctMergeWith\"\
+  \ as \"ACCOUNT_MERGED_WITH\",\nACCT.\"AcctSysMerge\" as \"IS_ACCOUNT_MERGED\",\n\
+  ACCT_SURF.\"AcctSysMergeValue\" as \"MERGED_ACCOUNT_NAME\",\nCAST(NPS.\"NPS\" AS\
+  \ INTEGER) as \"ACCOUNT_NPS\",\nACCT.\"AcctWebsite\" as \"ACCOUNT_URL\",\nRECOMMENDED_BU.\"\
+  OverallRecommended_BU\" as \"RECOMMENDED_BU\",\nACCT.\"AcctAnnualRevenue\" as \"\
+  ANNUAL_REVENUE\",\nACCT_SURF.\"AcctACEProgramCACV\" as \"ACE_PROGRAM_CACV_USD\"\
+  ,\nACCT.\"AcctTotalACV\" as \"TOTAL_ACV_USD\",\nACCT_SURF.\"AcctAppStoreVendor\"\
+  \ as \"APP_STORE_VENDOR\",\nACCT.\"AcctEmployeesDB\" as \"EMPLOYEE_DB\",\nACCT.\"\
+  AcctEmployees\" as \"NUMBER_OF_EMPLOYEES\",\nACCT.\"AcctNonProfit\" as \"IS_NON_PROFIT_ACCOUNT\"\
+  ,\nACCT_SURF.\"AcctNumberOfITEmployees\" as \"NUMBER_OF_IT_EMPLOYEES\",\nACCT.\"\
+  AcctTargetAccount\" as \"IS_TARGET_ACCOUNT\",\nACCT_SURF.\"AcctTerritoryLock\" as\
+  \ \"IS_TERRITORY_LOCK\",\nACCT_SURF.\"AcctUSG\" as \"ACCOUNT_USG\",\nACCT_SURF.\"\
+  AcctPublicSectorCompany\" as \"IS_PUBLIC_SECTOR_COMPANY\",\nACCT.\"AcctRenewalGuideline\"\
+  \ as \"RENEWAL_GUIDELINE\",\nACCT.\"AcctCustomerType\" as \"PRODUCT_CLASSIFICATION\"\
+  ,\nACCT.\"AcctChannelParentNewPartnerType\" as \"CHANNEL_PARENT_SERVICE_PROVIDER_STATUS\"\
+  ,\nACCT_SURF.\"AcctSupportPartner\" as \"SUPPORT_PARTNER\",\nACCT.\"AccountArea\"\
+  \ as \"ACCOUNT_AREA\",\nACCT.\"AccountGeo\" as \"ACCOUNT_GEO\",\nACCT.\"AccountDistrict\"\
+  \ as \"ACCOUNT_DISTRICT\",\nACCT.\"AccountMajorArea\" as \"ACCOUNT_MAJOR_AREA\"\
+  ,\nACCT.\"AccountRegion\" as \"ACCOUNT_REGION\",\nACCT_SURF.\"AcctTerritoryAssignmentReason\"\
+  \ as \"ACCOUNT_TERRITORY_RULE_DESCRIPTION\",\nACCT_SURF.\"AcctTerritorySource\"\
+  \ as \"ACCOUNT_TERRITORY_SOURCE\",\nACCT.\"TerrTypeValue\" as \"ACCOUNT_TERRITORY_TYPE\"\
+  ,\nIFF(ACCT.\"AccountGeo\"='random', IFF(END_CUST_ACCT.\"AccountGeo\"='random' or\
+  \ (ACCT.\"AcctMSPEndCust\") IS NULL\n                                ,TERR_COUNTRY.\"\
+  CountryGeo\"\n                                ,END_CUST_ACCT.\"AccountGeo\"\n  \
+  \                              )\n                            ,ACCT.\"AccountGeo\"\
+  \n   ) as \"ACCOUNT_REPORT_GEO\" ,\nIFF(ACCT.\"AccountGeo\"='random', IFF (END_CUST_ACCT.\"\
+  AccountGeo\"='random' or (ACCT.\"AcctMSPEndCust\") IS NULL\n                   \
+  \             ,TERR_COUNTRY.\"CountryMajorArea\"\n                             \
+  \   ,END_CUST_ACCT.\"AccountMajorArea\"\n                                )\n   \
+  \                         ,ACCT.\"AccountMajorArea\"\n    ) as \"ACCOUNT_REPORT_MAJOR_AREA\"\
+  \ ,\nIFF(ACCT.\"AccountGeo\"='random', IFF (END_CUST_ACCT.\"AccountGeo\" = 'random'\
+  \ OR (ACCT.\"AcctMSPEndCust\") IS NULL\n                                ,TERR_COUNTRY.\"\
+  CountryArea\"\n                                ,END_CUST_ACCT.\"AccountArea\"\n\
+  \                                )\n                            ,ACCT.\"AccountArea\"\
+  \n    ) as \"ACCOUNT_REPORT_AREA\",\nIFF(ACCT.\"AccountGeo\"='random', IFF (END_CUST_ACCT.\"\
+  AccountGeo\" = 'random' OR (ACCT.\"AcctMSPEndCust\") IS NULL\n                 \
+  \               ,TERR_COUNTRY.\"CountryRegion\"\n                              \
+  \  ,END_CUST_ACCT.\"AccountRegion\"\n                                )\n       \
+  \                     ,ACCT.\"AccountRegion\"\n    ) as \"ACCOUNT_REPORT_REGION\"\
+  ,\nIFF(ACCT.\"AccountGeo\"='random', IFF (END_CUST_ACCT.\"AccountGeo\" = 'random'\
+  \ OR (ACCT.\"AcctMSPEndCust\") IS NULL\n                                ,ACCT.\"\
+  AccountDistrict\"\n                                ,END_CUST_ACCT.\"AccountDistrict\"\
+  \n                                )\n                            ,ACCT.\"AccountDistrict\"\
+  \n    ) as \"ACCOUNT_REPORT_DISTRICT\",\nIFF(ACCT.\"AccountGeo\" IS NULL, 'random',\
+  \ IFF(ACCT.\"AccountGeo\"='random', IFF (END_CUST_ACCT.\"AccountGeo\" = 'random'\
+  \ OR (ACCT.\"AcctMSPEndCust\") IS NULL\n                                       \
+  \                               ,ACCT.\"AccountTerritory\"\n                   \
+  \                                                   ,END_CUST_ACCT.\"AccountTerritory\"\
+  \n                                                                      )\n    \
+  \                                    ,ACCT.\"AccountTerritory\"\n              \
+  \                          )\n    ) as \"ACCOUNT_REPORT_TERRITORY\",\nIFF(ACCT.\"\
+  AccountGeo\" IS NULL, 'random', IFF(ACCT.\"AccountGeo\"='random', IFF (END_CUST_ACCT.\"\
+  AccountGeo\"='random' or (ACCT.\"AcctMSPEndCust\") IS NULL\n                   \
+  \                                                   ,'random'\n                \
+  \                                                      ,'random'\n             \
+  \                                                         ) , 'random'\n       \
+  \                                 )\n    ) as \"ACCOUNT_REPORTING_TYPE\",\nMRQ.\"\
+  ProgramName\" as MARQUEE_PROGRAM_NAME,\ncase when \"ProgramName\" IS not NULL  then\
+  \ 'random' else 'random' end as IS_MARQUEE_ACCOUNT,\nRISK.\"RiskScoreSeverity\"\
+  \ as ACCOUNT_RISK_SCORE_SEVERITY,\nRISK.\"RiskConfirmedStatus\" as RISK_CONFIRMED_STATUS,\n\
+  RISK.\"ReasonCode1\" as RISK_REASON_CODE1,\nRISK.\"ReasonCode2\" as RISK_REASON_CODE2,\n\
+  RISK.\"ReasonCode3\" as RISK_REASON_CODE3,\nRISK.\"ReasonCode4\" as RISK_REASON_CODE4,\n\
+  ACCT.\"AcctSysID\" as \"ACCOUNT_SYSID\",\nACCT.\"AcctTerritorySysID\" as \"ACCOUNT_TERRITORY_SYSID\"\
+  ,\nACCT.\"AcctMDMID\" as \"ACCOUNT_MDM_ID\",\nACCT_SURF.\"AcctInsideSalesRepSysID\"\
+  \ as \"ADR_SYSID\",\nACCT.\"AcctParentSysID\" as \"PARENT_ACCOUNT_SYSID\",\nACCT.\"\
+  AcctChannelManagerSysID\" as \"CHANNEL_MANAGER_SYSID\",\nACCT.\"AcctSolutionConsultantSysID\"\
+  \ as \"SOLUTION_CONSULTANT_SYSID\",\nACCT_SURF.\"AcctPSTerritorySysID\" as \"PS_TERRITORY_SYSID\"\
+  ,\nACCT.\"AcctPrimarySalesRepSysID\" as \"PRIMARY_SALESREP_SYSID\",\nACCT.\"AcctRenewalRep\"\
+  \ as \"RENEWALREP_SYSID\",\nACCT.\"AcctSuccessLead\" as \"SUCCESS_LEAD_SYSID\",\n\
+  ACCT_SURF.\"AcctCustomerSuccessManagerSysID\" as \"SUPPORT_MANAGER_SYSID\",\nACCT_SURF.\"\
+  AcctSupportChampionSysID\" as \"SUPPORT_CHAMPION_SYSID\",\nACCT.\"AcctCustomerHQAccountSysID\"\
+  \ as \"CUSTOMER_HQ_SYSID\",\nACCT_G2K.\"AcctTerritorySysID\" as \"G2K_TERRITORY_SYSID\"\
+  ,\nEND_CUST_ACCT.\"AcctTerritorySysID\" as \"SP_TERRITORY_SYSID\",\nACCT_SURF.\"\
+  AcctLeadSysID\" as \"LEAD_SYSID\",\nACCT.\"AcctSolutionConsultantSysID\" as \"SUPPORT_CONSULTANT_SYSID\"\
+  ,\nACCT_SURF.\"AcctPartnerAgreement\" as \"PARTNER_AGREEMENT_SYSID\",\nACCT_SURF.\"\
+  AcctSysUpdatedOn\" as \"ACCOUNT_UPDATED_TS\",\nACCT_SURF.\"AcctSysUpdatedBy\" as\
+  \ \"ACCOUNT_UPDATED_BY\",\nACCT_SURF.\"AcctSysCreatedBy\" as \"ACCOUNT_CREATED_BY\"\
+  ,\nACCT_SURF.\"AcctSysCreatedOn\" as \"ACCOUNT_CREATED_TS\",\nACC.IS_CUSTOMER_SUCCESS,\n\
+  case when ESCL.\"AccountNumber\" IS NULL THEN 'random' ELSE 'random' end as IS_ESCALATION,\n\
+  RECOMMENDED_BU.\"OverallRecommendedBU_ReasonCode\" AS ML_RECOMMENDED_BU,\nrecommended_bu.\"\
+  MarketingEngagementScore\" as MARKETING_ENGAGEMENT_SCORE,\nNPS.\"Score_Severity_CC\"\
+  \ AS PARENT_ACCOUNT_RISK_SCORE_SEVERITY,\nDS.\"PROPENSITY_SCORE\" AS PROPENSITY_SCORE,\n\
+  CACV.CACV_USD_DAILY AS CACV_USD_DAILY\nfrom EDW_LS.SALES_EM.EM_SALES_ACCOUNT_RT\
+  \ ACCT\nleft outer join ODS_LS.SURF.SALES_ACCOUNT ACCT_SURF on ACCT.\"AcctSysID\"\
+  \ = ACCT_SURF.\"AcctSysID\"\nleft outer join ODS_LS.SURF.SALES_ACCOUNT ACCT_SURF_PAR\
+  \ on ACCT_SURF_PAR.\"AcctSysID\" = ACCT_SURF.\"AcctParentSysID\"\nleft outer join\
+  \ ODS_LS.SURF.SALES_INDUSTRY IND_PAR on ACCT_SURF_PAR.\"AcctIndustrySysID\"=IND_PAR.\"\
+  IndustrySysID\"\nleft outer join ODS_LS.\"SURF\".\"KEY_ACCOUNTS\" ACCT_KEY ON ACCT.\"\
+  AcctG2KParentSysID\" = ACCT_KEY.\"G2KSysID\"\nleft outer join ODS_LS.SURF.EMPLOYEE\
+  \ EMP_INSIDE_SALES_REP on ACCT_SURF.\"AcctInsideSalesRepSysID\" = EMP_INSIDE_SALES_REP.\"\
+  EmpSysID\"\nleft outer join ODS_LS.SURF.EMPLOYEE EMP_PRI_SALES_REP on ACCT.\"AcctPrimarySalesRepSysID\"\
+  \ = EMP_PRI_SALES_REP.\"EmpSysID\"\nleft outer join ODS_LS.SURF.EMPLOYEE EMP_SUCC_LEAD\
+  \ on ACCT.\"AcctSuccessLead\" = EMP_SUCC_LEAD.\"EmpSysID\"\nleft outer join EDW_LS.SALES_EM.EM_SALES_ACCOUNT_RT\
+  \ ACCT_G2K on ACCT.\"AcctCustomerHQAccountSysID\" = ACCT_G2K.\"AcctSysID\"\nleft\
+  \ outer join ODS_LS.SURF.SALES_TERRITORY TERR_G2K on ACCT_G2K.\"AcctTerritorySysID\"\
+  \ = TERR_G2K.\"TerrSysID\"\nLEFT JOIN (SELECT \"AccountNumber\" as \"AccountNumber\"\
+  ,\n                  \"NPS\" as \"NPS\",\n                  \"Score_Severity_CC\"\
+  \ as \"Score_Severity_CC\"\n            FROM CDL_LS.\"CUSTOMER_ER\".\"CDP_CUSTOMER_DATA_FEATURESET_NON_SEC\"\
+  \n            WHERE (\"NPS\") IS not NULL or (\"Score_Severity_CC\") IS not NULL\n\
+  \            GROUP BY \"AccountNumber\",\"NPS\",\"Score_Severity_CC\"\n        \
+  \   )NPS ON ACCT.\"AcctNumber\" = NPS.\"AccountNumber\"\nLEFT JOIN (SELECT \"AccountNumber\"\
+  \ as \"AccountNumber\",\n                  \"OverallRecommended_BU\" as \"OverallRecommended_BU\"\
+  ,\n\t\t\t\t  \"OverallRecommendedBU_ReasonCode\" AS \"OverallRecommendedBU_ReasonCode\"\
+  ,\n\t\t\t\t  \"MarketingEngagementScore\" as \"MarketingEngagementScore\"\n    \
+  \       FROM EDW_LS.\"DATASCIENCE\".\"ABM_PRODUCTBU_OVERALL_RECOMMENDATIONS\"\n\
+  \          )RECOMMENDED_BU ON ACCT.\"AcctNumber\" = RECOMMENDED_BU.\"AccountNumber\"\
+  \nleft outer join EDW_LS.\"SALES_EM\".\"EM_SALES_ACCOUNT_RT\" END_CUST_ACCT ON ACCT.\"\
+  AcctMSPEndCustSysID\" = END_CUST_ACCT.\"AcctSysID\"\nleft outer join ODS_LS.\"SURF\"\
+  .\"ACCOUNT_COUNTRY_TERR_HIERARCHY\" TERR_COUNTRY ON ACCT.\"AcctCountry\" = TERR_COUNTRY.\"\
+  AccountCountry\"\nleft outer join ODS_LS.SURF.SALES_INDUSTRY IND on ACCT_SURF.\"\
+  AcctIndustrySysID\" = IND.\"IndustrySysID\"\nleft outer join (select distinct \"\
+  ProgramName\",\"AcctSysID\"\n                 from EDW_LS.\"SALES_D365_EM\".\"EM_PROGRAMS\"\
+  \n                 where Upper(\"ProgramName\") like 'random'\n                )\
+  \ MRQ ON ACCT.\"AcctSysID\" = MRQ.\"AcctSysID\"\nleft outer join (\n           \
+  \      SELECT DISTINCT\n                 \t\"AcctNumber\"\n                 \t,MAX(\"\
+  Score_Severity_CC\")      as \"RiskScoreSeverity\"\n                    ,MAX(\"\
+  RiskConfirmedStatus\")    as \"RiskConfirmedStatus\"\n                 \t,MAX(\"\
+  REASON_CODE_CATEGORY_1\") as \"ReasonCode1\"\n                 \t,MAX(\"REASON_CODE_CATEGORY_2\"\
+  ) as \"ReasonCode2\"\n                 \t,MAX(\"REASON_CODE_CATEGORY_3\") as \"\
+  ReasonCode3\"\n                 \t,MAX(\"REASON_CODE_CATEGORY_4\") as \"ReasonCode4\"\
+  \n                    ,MAX(\"AccountOwnerName\") as \"AccountOwnerName\"\n     \
+  \               FROM  CDL_LS.\"SALES_RPT\".\"RPT_ACCOUNTS_ATRISK_BUDOWNSELL\"\n\
+  \                    WHERE \"RecordType\" = 'random'\n                    and \"\
+  MetricName\" = 'random'\n                    group by \"AcctNumber\"\n         \
+  \        ) RISK on ACCT.\"AcctNumber\"=RISK.\"AcctNumber\"\n--TSK ADDITION OF NEW\
+  \ FIELDS\n LEFT outer join\n               (SELECT DISTINCT \"AcctNumber\",\n\t\
+  \       'random' as \"IS_CUSTOMER_SUCCESS\"\n               FROM EDW_LS.\"CUSTOMER_EM\"\
+  .\"EM_CUSTOMER_BASE\"\n                WHERE \"ProductBusinessUnitSysID\" = 'random'\n\
+  \                AND \"RecordType\" = 'random') acc on ACCT.\"AcctNumber\"= acc.\"\
+  AcctNumber\"\nLEFT outer join (\n    select distinct \"AccountNumber\"\n    FROM\
+  \ EDW_LS.\"PRODUCT_GTS_EM\".\"CS_EM_ACCOUNT_ESCALATIONS_NEW\" esc\n    where\n \
+  \     \"EscalationState\" in ('random', 'random', 'random')\n      and \"Severity\"\
+  \ in ('random', 'random')\n  ) ESCL on ESCL.\"AccountNumber\" = ACCT.\"AcctNumber\"\
+  \nLEFT OUTER JOIN (\n\t select distinct PROPENSITY_SCORE, ACCOUNT_NUMBER from EDW_LS.\"\
+  DATASCIENCE\".\"ACCOUNT_PROPENSITY_SCORES\") DS\n\tON acct.\"AcctNumber\" = DS.ACCOUNT_NUMBER\n\
+  LEFT OUTER JOIN (SELECT DISTINCT AB.\"AcctCustomerHQ\",\nAB.\"OptySalesQuarter\"\
+  ,\n AB.\"CumulativeNetNewACV\" AS CACV_USD_DAILY\n FROM (\n SELECT\na.\"AcctCustomerHQ\"\
+  ,\na.\"OptySalesQuarter\",\n Sum(a.\"CumulativeNetNewACV\") as \"CumulativeNetNewACV\"\
+  \nFROM (SELECT cc.\"AcctCustomerHQ\" as \"AcctCustomerHQ\",\n                \"\
+  OptySalesQuarter\" as \"OptySalesQuarter\",\n               \"CumulativeNetNewACV\"\
+  \ as \"CumulativeNetNewACV\",\n                \"OptyNumber\" as \"OptyNumber\"\
+  ,\n                \"OptyStage\" as \"OptyStage\"\nFROM CDL_LS.\"FINANCE_FPA_RPT\"\
+  .\"COMMON_CALC_COLUMNS\" cc\n     WHERE CC.\"OptyStage\" IN ('random','random')\n\
+  \     )A\n     group by \"AcctCustomerHQ\",\n                \"OptySalesQuarter\"\
+  \n                ORDER BY 'random'\n    )AB\n    LEFT OUTER JOIN EDW_LS.SALES_EM.EM_SALES_ACCOUNT_RT\
+  \ ESART ON ESART.\"AcctCustomerHQ\" = AB.\"AcctCustomerHQ\"\nORDER BY 'random')\
+  \ CACV\nLEFT OUTER JOIN EDW_LS.SALES_EM.EM_SALES_ACCOUNT_RT ES ON ACCT.\"AcctCustomerHQ\"\
+  \ = ES.\"AcctCustomerHQ\"\nwhere ACCT.\"AcctName\" IS not NULL\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

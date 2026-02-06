@@ -1,0 +1,175 @@
+name: table_1128
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1128
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1128.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_FORECASTCOMMIT_TEST(\n\t\"\
+  SalesQuarter\",\n\t\"TerritorySysID_CC\",\n\t\"BUGroup\",\n\t\"CommitType\",\n\t\
+  \"CommitWeekNumber\",\n\t\"CommitWeekDate\",\n\t\"CommitOwner\",\n\t\"CommitOwnerSysID\"\
+  ,\n\t\"CommitSysUpdatedOn\",\n\t\"Commit\",\n\t\"CommitExpect\",\n\t\"CommitUpside\"\
+  ,\n\t\"CommitMonth_CRM\",\n\t\"CommitMonthExpect_CRM\",\n\t\"CommitMonthUpside_CRM\"\
+  ,\n\t\"Commit_CRM\",\n\t\"CommitExpect_CRM\",\n\t\"CommitUpside_CRM\",\n\t\"CommitDirectorsQuota\"\
+  ,\n\t\"CommitACVCloseToDate\",\n\t\"CommitClosedToQuota\",\n\t\"CommitACVExpectedToCloseThisWeek\"\
+  ,\n\t\"CommitExpectedNewLogosQuarter\",\n\t\"CommitPSRevenueExpectMonth\",\n\t\"\
+  CommitPSRevenueExpectQuarter\",\n\t\"WeekRank\"\n) as\n\n\n/* Comments retained\
+  \ from HANA input file */\n\n /*****************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Unified SelfServer Project\n \t\t* Project\
+  \ \t\t\t\t\t :\n \t\t* Object Name \t\t\t\t :     \"ANALYTICS_SELFSERVICE\".\"ANALYTICS_SELFSERVICE.TABLEFUNCTIONS::UnifiedSSForecastCommit\"\
+  \n \t\t* Development Request # \t :\n \t\t* Brief Description          : \t   Unified\
+  \ Self Service Forecast Commit data\n \t\t* Developed By               :     Venkata\
+  \ Ravi Kadali\n \t\t* Date Created               : \t   May 20th 2021\n \t\t* --------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:\n \t\t*----------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t*Swetha Bobba : Added BU Commits\n \t\t*Swetha Bobba : Replacement of SalesSelfServiceMat\
+  \ table function with the logic\n ********************************************************************************************************************************/\n\
+  \n\n\n\n\n\n/* Latest Commit entered with uplift logic */\n\n \t\t   \tSELECT\t\"\
+  CommitQuarter\"             as \"SalesQuarter\",\n \t\t   \t \t\ttc.\"TerrSysID\"\
+  \                 as \"TerritorySysID_CC\",\n \t\t   \t \t\t'random'           \
+  \    \t \t    as \"BUGroup\",\n \t\t   \t \t\t'random'\t\t\t\t\tas \"CommitType\"\
+  ,\n \t\t\t\t\t'random'\t\t\t\t\t\tas \"CommitWeekNumber\",\n \t\t\t\t\t'random'\t\
+  \t\t\t\t\tas \"CommitWeekDate\",\n \t\t\t\t\t'random'\t\t \t\t\t\tas \"CommitOwner\"\
+  ,\n \t\t\t\t\t'random'                        as \"CommitOwnerSysID\",\n \t\t\t\t\
+  \t'random'                    \tas \"CommitSysUpdatedOn\",\n \t\t\t\t\tSUM(\"CommitValue\"\
+  ) \t\t \tas \"Commit\",\n \t\t\t\t\tSUM(\"CommitExpectValue\") \tas \"CommitExpect\"\
+  ,\n \t\t\t\t\tSUM(\"CommitUpsideValue\") \tas \"CommitUpside\",\n \t\t\t\t\t'random'\t\
+  \t\t\t\t\t\tas \"CommitMonth_CRM\",\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitMonthExpect_CRM\"\
+  ,\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitMonthUpside_CRM\",\n \t\t\t\t\t'random'\t\
+  \t\t\t\t\t\tas \"Commit_CRM\",\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitExpect_CRM\"\
+  ,\n \t\t\t\t\t'random' \t\t\t\t\t\t\tas \"CommitUpside_CRM\",\n \t\t\t\t\t'random'\
+  \                           as \"CommitDirectorsQuota\",\n \t\t\t\t\t'random'  \
+  \                         as \"CommitACVCloseToDate\",\n \t\t\t\t\t'random'    \
+  \                       as \"CommitClosedToQuota\",\n \t\t\t\t\t'random'       \
+  \                    as \"CommitACVExpectedToCloseThisWeek\",\n \t\t\t\t\t'random'\
+  \                           as \"CommitExpectedNewLogosQuarter\",\n \t\t\t\t\t'random'\
+  \                           as \"CommitPSRevenueExpectMonth\",\n \t\t\t\t\t'random'\
+  \                           as \"CommitPSRevenueExpectQuarter\",\n\t\t\t\t\t'random'\
+  \                           as \"WeekRank\"\n \t\t\tFROM \"EDW_LS\".\"SALES_EM\"\
+  .\"EM_SALES_TERRITORY_RT\" st\n \t\t\tLEFT outer join \"EDW_LS\".\"SALES_EM\".\"\
+  EM_SALES_TERRITORY_COMMIT_RT\" tc\n \t\t\t\t\t\t on tc.\"CommitQuarter\" =  st.\"\
+  DateDimQuarterByYearSURF\"\n \t\t\t\t\t\t and tc.\"TerrSysID\"=st.\"TerrSysID\"\n\
+  \n--\"SURF_ST\".\"REAL-TIME-SALES.TABLEFUNCTIONS::SalesSelfServiceMat\"() so on\
+  \ so.\"SalesQuarter\" = st.\"DateDimQuarterByYearSURF\" and so.\"TerritorySysID_CC\"\
+  =st.\"TerrSysID\"\n\n\n--\tINNER JOIN \"_SYS_BIC\".\"REAL-TIME-SALES.SECURITY/SALES_USER_TERRITORY_SECURITY\"\
+  \ ts on ts.\"TerrSysID\"=so.\"TerritorySysID_CC\"\n\n \t\t\tWHERE \"CommitType\"\
+  \ IN ('random')\n\n--AND \"DataSet\" = 'Opportunity'\n\n \t\t\tand LEFT(\"CommitQuarter\"\
+  ,'random') = SUBSTR(convert_timezone('random',current_timestamp),'random','random')\n\
+  \ \t\t\tand tc.\"TerrSysID\" not in ('random','random')\n/* this condition is to\
+  \ handle bad data in cpq qa environment */\n\n \t\t\tGROUP BY\n \t\t    tc.\"TerrSysID\"\
+  ,\n \t\t\ttc.\"CommitQuarter\"\n\n\n \t\t\tunion all\n/* commits from Surf for Rep,\
+  \ Directore etc */\n\n\n \t\t\tSELECT\n \t\t\t\t\t\"CommitQuarter\"\t\t\t\tas \"\
+  SalesQuarter\",\n \t\t\t\t\t\"CommitTerritorySysID\"\t\tas \"TerritorySysID_CC\"\
+  ,\n \t\t\t\t\t'random'               \t \t    as \"BUGroup\",\n \t\t\t\t\t\"CommitType\"\
+  ,\n \t\t\t\t\t\"CommitWeekNum\"\t\t\t\tas \"CommitWeekNumber\",\n \t\t\t\t\t\"CommitWeekDate\"\
+  ,\n \t\t\t\t\t\"CommitSalesRep\"\t\t\tas \"CommitOwner\",\n \t\t\t\t\t\"CommitSalesRepSysID\"\
+  \       as \"CommitOwnerSysID\",\n \t\t\t\t\t\"CommitSysUpdatedOn\",\n \t\t\t\t\t\
+  'random'\t\t\t\t\t\t\tas \"Commit\",\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitExpect\"\
+  ,\n \t\t\t\t\t'random' \t\t\t\t\t\t\tas \"CommitUpside\",\n \t\t\t\t\t\"CommitMonth\"\
+  \t\t\t\tas \"CommitMonth_CRM\",\n \t\t\t\t\t\"CommitMonthExpect\"\t\t\tas \"CommitMonthExpect_CRM\"\
+  ,\n \t\t\t\t\t\"CommitMonthUpside\"\t\t\tas \"CommitMonthUpside_CRM\",\n \t\t\t\t\
+  \t\"CommitValue\"\t\t\t\tas \"Commit_CRM\",\n \t\t\t\t\t\"CommitExpectValue\"\t\t\
+  \tas \"CommitExpect_CRM\",\n \t\t\t\t\t\"CommitUpsideValue\" \t\tas \"CommitUpside_CRM\"\
+  ,\n \t\t\t\t\t\"CommitDirectorsQuota\"      as \"CommitDirectorsQuota\",\n \t\t\t\
+  \t\t\"CommitACVCloseToDate\"      as \"CommitACVCloseToDate\",\n \t\t\t\t\t\"CommitClosedToQuota\"\
+  \       as \"CommitClosedToQuota\",\n \t\t\t\t\t\"CommitACVExpectedToCloseThisWeek\"\
+  \  as \"CommitACVExpectedToCloseThisWeek\",\n \t\t\t\t\t\"CommitExpectedNewLogosQuarter\"\
+  \     as \"CommitExpectedNewLogosQuarter\",\n \t\t\t\t\t\"CommitPSRevenueExpectMonth\"\
+  \        as \"CommitPSRevenueExpectMonth\",\n \t\t\t\t\t\"CommitPSRevenueExpectQuarter\"\
+  \      as \"CommitPSRevenueExpectQuarter\",\n\t\t\t\t\trank() over (partition by\
+  \ \"CommitType\",\"CommitQuarter\",\"CommitTerritorySysID\",\"CommitSalesRepSysID\"\
+  \ order by \"CommitWeekNum\" desc ) as \"WeekRank\"\n \t\t\t\tFROM \"ODS_LS\".\"\
+  SURF\".\"SALES_COMMIT\"\n\n \t\t\tunion all\n\n \t\t\tSELECT\n \t\t\t\t\t\"CommitQuarter\"\
+  \t\t\t\tas \"SalesQuarter\",\n \t\t\t \t\tIFNULL(st.\"TerritorySysID\",'random')\n\
+  \ \t\t\t \t\t\t\t\t\t\t\t\tas \"TerritorySysID_CC\",\n \t\t\t \t\t'random'     \
+  \          \t \t    as \"BUGroup\",\n \t\t\t\t\t\"CommitOwnerType\"\t\t\tas \"CommitType\"\
+  ,\n \t\t\t\t\t\"CommitWeekNumber\"\t\t\tas \"CommitWeekNumber\",\n \t\t\t\t\t\"\
+  CommitWeekDate\",\n \t\t \t\t\t\"CommitOwnerName\"\t\t\tas \"CommitOwner\",\n \t\
+  \t \t\t\temp.\"EmpSysID\"              as  \"CommitOwnerSysID\",\n \t\t \t\t\t\"\
+  CommitModifiedOn\"\t\t\tas \"CommitSysUpdatedOn\",\n \t\t \t\t\t'random'\t\t\t\t\
+  \t\t\tas \"Commit\",\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitExpect\",\n \t\
+  \t\t\t\t'random' \t\t\t\t\t\t\tas \"CommitUpside\",\n \t\t\t\t\t\"CommitMonth\"\t\
+  \t\t\tas \"CommitMonth_CRM\",\n \t\t\t\t\t\"CommitMonthExpect\"\t\t\tas \"CommitMonthExpect_CRM\"\
+  ,\n \t\t\t\t\t\"CommitMonthUpside\"\t\t\tas \"CommitMonthUpside_CRM\",\n \t\t\t\t\
+  \t\"CommitValue\"\t\t\t\tas \"Commit_CRM\",\n \t\t\t\t\t\"CommitExpectValue\"\t\t\
+  \tas \"CommitExpect_CRM\",\n \t\t\t\t\t\"CommitUpsideValue\" \t\tas \"CommitUpside_CRM\"\
+  ,\n \t\t\t\t\t'random'                           as \"CommitDirectorsQuota\",\n\
+  \ \t\t\t\t\t'random'                           as \"CommitACVCloseToDate\",\n \t\
+  \t\t\t\t'random'                           as \"CommitClosedToQuota\",\n \t\t\t\t\
+  \t'random'                           as \"CommitACVExpectedToCloseThisWeek\",\n\
+  \ \t\t\t\t\t'random'                           as \"CommitExpectedNewLogosQuarter\"\
+  ,\n \t\t\t\t\t'random'                           as \"CommitPSRevenueExpectMonth\"\
+  ,\n \t\t\t\t\t'random'                           as \"CommitPSRevenueExpectQuarter\"\
+  \ ,\n\t\t\t\t\t rank() over (partition by \"CommitOwnerType\",\"CommitQuarter\"\
+  ,IFNULL(st.\"TerritorySysID\",'random'),emp.\"EmpSysID\" order by \"CommitWeekNumber\"\
+  \ desc, \"CommitModifiedOn\" desc) as \"WeekRank\"\n \t\t\t\tFROM \"ODS_LS\".\"\
+  DYNAMICS365\".\"SN_COMMITS\" co\n \t\t\t\tLEFT outer join \"EDW_LS\".\"SALES_SS_EM\"\
+  .\"EM_UNIFIEDSS_SALES_TERRITORY\" st on LOWER(st.\"TerritoryName\") = LOWER(co.\"\
+  CommitTerritoryName\")\n \t\t\t\tLEFT outer join \"ODS_LS\".\"DYNAMICS365\".\"SYSTEMUSERS\"\
+  \ su on LOWER(su.\"UserSysID\")  = LOWER(co.\"CommitOwnerGUID\")\n \t\t\t\tLEFT\
+  \ outer join \"ODS_LS\".\"SURF\".\"EMPLOYEE\" emp on LOWER(emp.\"EmpUserName\")\
+  \ = LOWER(su.\"UserName\")\n \t\t\t\twhere \"CommitOwnerType\" = 'random'\n\n \t\
+  \t\tunion all\n\n\n-- Solution Sales BU Commits\n\n \t\t\tSELECT DISTINCT \"ForecastQuarter\"\
+  \t\t\t\tas \"SalesQuarter\",\n \t\t\t \t\tIFNULL(\"TerritorySysID\",'random')\n\
+  \ \t\t\t \t\t\t\t\t\t\t\t\tas \"TerritorySysID_CC\",\n \t\t\t \t\t\"BUGroup\"  \
+  \                 as \"BUGroup\",\n \t\t\t\t\t'random'\t \t \t\t\tas \"CommitType\"\
+  ,\n \t\t\t\t\t'random'\t \t \t\t \t\tas \"CommitWeekNumber\",\n \t\t\t\t\t'random'\
+  \                        as \"CommitWeekDate\",\n \t\t \t\t\t\"ForecastOwnerID\"\
+  \t\t\tas \"CommitOwner\",\n \t\t \t\t\temp.\"EmpSysID\"              as  \"CommitOwnerSysID\"\
+  ,\n \t\t \t\t\t'random'\t \t \t \t\t\t\tas \"CommitSysUpdatedOn\",\n \t\t \t\t\t\
+  'random'\t\t\t\t\t\t\tas \"Commit\",\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitExpect\"\
+  ,\n \t\t\t\t\t'random' \t\t\t\t\t\t\tas \"CommitUpside\",\n \t\t\t\t\t'random'\t\
+  \t\t\t\t\t\tas \"CommitMonth_CRM\",\n \t\t\t\t\t'random'\t\t\t\t\t\t\tas \"CommitMonthExpect_CRM\"\
+  ,\n \t\t\t\t\t'random'\t\t\t \t \t\t\tas \"CommitMonthUpside_CRM\",\n \t\t\t\t\t\
+  \"Commit\"\t\t\t\t    as \"Commit_CRM\",\n \t\t\t\t\t\"Expect\"\t\t\t        as\
+  \ \"CommitExpect_CRM\",\n \t\t\t\t\t\"Upside\" \t\t            as \"CommitUpside_CRM\"\
+  ,\n \t\t\t\t\t'random'                           as \"CommitDirectorsQuota\",\n\
+  \ \t\t\t\t\t'random'                           as \"CommitACVCloseToDate\",\n \t\
+  \t\t\t\t'random'                           as \"CommitClosedToQuota\",\n \t\t\t\t\
+  \t'random'                           as \"CommitACVExpectedToCloseThisWeek\",\n\
+  \ \t\t\t\t\t'random'                           as \"CommitExpectedNewLogosQuarter\"\
+  ,\n \t\t\t\t\t'random'                           as \"CommitPSRevenueExpectMonth\"\
+  ,\n \t\t\t\t\t'random'                           as \"CommitPSRevenueExpectQuarter\"\
+  ,\n\t\t\t\t\t'random'                           as \"WeekRank\"\n \t\t\tFROM \"\
+  EDW_LS\".\"SALES_D365_EM\".\"EM_TERRITORY_BUSINESSUNIT_COMMIT\" buc\n \t\t\tLEFT\
+  \ outer join \"ODS_LS\".\"SURF\".\"EMPLOYEE\" emp on LOWER(emp.\"EmpUserName\")\
+  \ = LOWER(buc.\"ForecastOwnerID\")\n            where \"ForecastQuarter\" >= RIGHT(YEAR(convert_timezone('random',CURRENT_TIMESTAMP))\
+  \ ||'random'|| QUARTER(convert_timezone('random',CURRENT_TIMESTAMP)), 'random')\n\
+  \n ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

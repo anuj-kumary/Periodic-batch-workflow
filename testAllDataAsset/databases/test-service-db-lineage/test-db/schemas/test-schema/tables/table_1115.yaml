@@ -1,0 +1,135 @@
+name: table_1115
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1115
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1115.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_REPQUOTACOMMIT(\n\t\"EmployeeSysID_Rep\"\
+  ,\n\t\"TerritorySysID_Rep\",\n\t\"SalesQuarter_Rep\",\n\t\"EmployeeName_Rep\",\n\
+  \t\"RepQuotaComponent\",\n\t\"RepPlanType\",\n\t\"RepQuota\",\n\t\"RepCommit\",\n\
+  \t\"RepCommitUpside\",\n\t\"RepCommitExpect\",\n\t\"VaricentQuota\",\n\t\"VaricentActuals\"\
+  ,\n\t\"VaricentAttainment\"\n) as\n\n\n/* Comments retained from HANA input file\
+  \ */\n\n /****************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Unified SelfServer Project\n \t\t* Project\
+  \ \t\t\t\t\t :\n \t\t* Object Name \t\t\t\t :     \"ANALYTICS_SELFSERVICE\".\"ANALYTICS_SELFSERVICE.TABLEFUNCTIONS::UNIFIEDSS_FACT_REPQUOTACOMMIT\"\
+  \ ( )\n \t\t* Development Request # \t :\n \t\t* Brief Description          : \t\
+  \   Rep Quota and Commit Attributes and Measures\n \t\t* Developed By          \
+  \     :     Venkata Ravi Kadali\n \t\t* Date Created               : \t   May 18th\
+  \ 2021\n \t\t* --------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:\n \t\t*----------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t*\n \t\t*\n ********************************************************************************************************************************/\n\
+  \n\n\n\n\nSELECT\n     dim.\"EmpSysID\" as \"EmployeeSysID_Rep\"\n    ,dim.\"TerrUserRecSysID\"\
+  \ as \"TerritorySysID_Rep\"\n \t,rep.\"SalesQuarter_Rep\"\n \t,dim.\"EmpName\" as\
+  \ \"EmployeeName_Rep\",\n     rep.\"RepQuotaComponent\",\n\t rep.\"RepPlanType\"\
+  \n \t,MAX(\"RepQuota\")\t\t\tas \"RepQuota\"\n \t,MAX(\"RepCommit\")\t\t\tas \"\
+  RepCommit\"\n \t,MAX(\"RepCommitUpside\")\t\tas \"RepCommitUpside\"\n \t,MAX(\"\
+  RepCommitExpect\")\t\tas \"RepCommitExpect\"\n \t,MAX(\"VaricentQuota\")\t\tas \"\
+  VaricentQuota\"\n \t,MAX(\"VaricentActuals\")   \tas \"VaricentActuals\"\n \t,MAX(\"\
+  VaricentAttainment\")  as \"VaricentAttainment\"\n  from\n  ((\n        SELECT\n\
+  \ \t       distinct\n \t        e.\"EmpSysID\"\n \t\t    ,st.\"TerrUserRecSysID\"\
+  \n \t\t\t,e.\"EmpName\"\n \t   from \"ODS_LS\".\"ANAPLAN\".\"SALES_EMPLOYEE_TERRITORY_MAPPING\"\
+  \ as ana\n--Added by Mani\n\n        LEFT join \"ODS_LS\".\"SURF\".\"EMPLOYEE\"\
+  \ as e\n \t   \t   on e.\"EmpSysID\" = ana.\"STEmpTerrEmployeeSysId\"\n--Added by\
+  \ Mani\n\n        LEFT outer join \"ODS_LS\".\"SURF\".\"U_ST_TERRITORY\" as st\n\
+  \        \t   on st.\"TerrUserSysID\"=e.\"EmpSysID\"\n        LEFT outer join \"\
+  ODS_LS\".\"SURF\".\"SALES_TERRITORY\" as stt\n        \t   on st.\"TerrUserRecSysID\"\
+  =stt.\"TerrSysID\"\n         Where e.\"EmpDepartment\" in (SELECT \"Deptname\" FROM\
+  \ \"ODS_LS\".\"SURF\".\"CMN_DEPARTMENT\"   where \"DeptCostCenter\" in('random','random','random','random'))\n\
+  -- Removed 3600 and added 3650,3600 Department Code by Yash\n\n \t       and e.\"\
+  EmpActive\"='random'\n \t       and st.\"TerrUserDirectAssignment\"='random'\n \t\
+  \       and st.\"TerrUserPrimaryAssignment\"='random'\n \t       and st.\"TerrUserEndDate\"\
+  \ IS NULL\n \t       and st.\"TerrUserActive\"='random'\n \t       and stt.\"TerrTypeValue\"\
+  ='random'\n \t       and ana.\"STEmpTerrQuarter\" = RIGHT(YEAR(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP()))\
+  \ ||'random'|| QUARTER(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP())),'random')\n     --\
+  \ and ana.\"STEmpTerrQuarter\" = '21-Q4'\n--Added by Mani\n\n \t   )dim\n\n LEFT\
+  \ outer join\n (\n\n /*select\n \"EmployeeSysID_Rep\"\n ,\"TerritorySysID_Rep\"\n\
+  \ ,\"SalesQuarter_Rep\"\n ,\"EmpName\" as \"EmployeeName_Rep\"\n ,max(\"RepQuota\"\
+  )\t\t\tas \"RepQuota\"\n ,max(\"RepCommit\")\t\t\tas \"RepCommit\"\n ,max(\"RepCommitUpside\"\
+  )\t\tas \"RepCommitUpside\"\n ,max(\"RepCommitExpect\")\t\tas \"RepCommitExpect\"\
+  \n ,max(\"VaricentQuota\")\t\tas \"VaricentQuota\"\n ,max(\"VaricentActuals\") \
+  \  \tas \"VaricentActuals\"\n ,max(\"VaricentAttainment\")  as \"VaricentAttainment\"\
+  \n from*/\n\n /*SELECT\n \"SRepEmpSysID\"\t\t\tas \"EmployeeSysID_Rep\"\n ,\"SRepTerritorySysID\"\
+  \tas \"TerritorySysID_Rep\"\n ,\"SRepQuarter\"\t\t\tas \"SalesQuarter_Rep\"\n ,SUM(\"\
+  RepQuota\")\t\tas \"RepQuota\"\n ,0 \t\t\t\t\t\tas \"RepCommit\"\n ,0 \t\t\t\t\t\
+  \tas \"RepCommitUpside\"\n ,0 \t\t\t\t\t\tas \"RepCommitExpect\"\n ,0\t\t\t\t\t\t\
+  as \"VaricentQuota\"\n ,0\t\t\t\t\t\tas \"VaricentActuals\"\n ,0\t\t\t\t\t\tas \"\
+  VaricentAttainment\"\n FROM \"EDW_LS\".\"SALES_EM\".\"EM_SALES_REPS_QUOTA_RT\"\n\
+  \ group by\n \"SRepEmpSysID\"\n ,\"SRepTerritorySysID\"\n ,\"SRepQuarter\"\n */\n\
+  \ -----Added by Yash As per requirement by Vinay------\n SELECT\n \"EmpSysID\"\t\
+  \t\t    as \"EmployeeSysID_Rep\"\n,\"TerrSysID\"\t        as \"TerritorySysID_Rep\"\
+  \n,\"SRepQuarter\"\t\t\tas \"SalesQuarter_Rep\"\n,\"SRepQuotaComponent\"   as \"\
+  RepQuotaComponent\"\n,\"SRepPlanType\"\t        as \"RepPlanType\"\n,sum(\"SRepQuotaValue\"\
+  )  as \"RepQuota\"\n,'random' \t\t\t\t\t\tas \"RepCommit\"\n,'random' \t\t\t\t\t\
+  \tas \"RepCommitUpside\"\n,'random' \t\t\t\t\t\tas \"RepCommitExpect\"\n,'random'\t\
+  \t\t\t\t\tas \"VaricentQuota\"\n,'random'\t\t\t\t\t\tas \"VaricentActuals\"\n,'random'\t\
+  \t\t\t\t\tas \"VaricentAttainment\"\nFROM \"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALESREPQUOTA_RT\"\
+  \ngroup by\n\"EmpSysID\"\n,\"TerrSysID\"\n,\"SRepQuarter\"\n,\"SRepQuotaComponent\"\
+  \n,\"SRepPlanType\"\n ------Code end as per requirement by Yash---------\n union\
+  \ all\n SELECT\n \"EmpSysID\"\t\t\t\tas \"EmployeeSysID_Rep\"\n ,\"CommitTerritorySysID\"\
+  \ as \"TerritorySysID_Rep\"\n ,\"CommitQuarter\"\t\tas \"SalesQuarter_Rep\"\n ,\
+  \ 'random'                 as \"RepQuotaComponent\"\n , 'random'               \
+  \  as \"RepPlanType\"\n ,'random'\t\t\t\t\t\tas \"RepQuota\"\n ,\"CommitValue\"\t\
+  \t\tas \"RepCommit\"\n ,\"CommitUpsideValue\"\tas \"RepCommitUpside\"\n ,\"CommitExpectValue\"\
+  \tas \"RepCommitExpect\"\n ,'random'\t\t\t\t\t\tas \"VaricentQuota\"\n ,'random'\t\
+  \t\t\t\t\tas \"VaricentActuals\"\n ,'random'\t\t\t\t\t\tas \"VaricentAttainment\"\
+  \n FROM \"EDW_LS\".\"SALES_EM\".\"EM_SALES_REP_COMMIT_RT\"\n union all\n SELECT\
+  \ DISTINCT\n \"SPerfRankEmployeeSysID\"\t\tas \"EmployeeSysID_Rep\"\n ,tr.\"RestatedTerritorySYSID\"\
+  \tas \"TerritorySysID_Rep\"\n ,\"SPerfRankQuarter\"\t\t\t\tas \"SalesQuarter_Rep\"\
+  \n , 'random'                             as \"RepQuotaComponent\"\n , 'random'\
+  \                             as \"RepPlanType\"\n ,'random' \t\t\t\t\t\t\t\tas\
+  \ \"RepQuota\"\n ,'random' \t\t\t\t\t\t\t\tas \"RepCommit\"\n ,'random' \t\t\t\t\
+  \t\t\t\tas \"RepCommitUpside\"\n ,'random' \t\t\t\t\t\t\t\tas \"RepCommitExpect\"\
+  \n ,\"SPerfRankQuota_USD\"\t\t\tas \"VaricentQuota\"\n ,\"SPerfRankClosedNetNewACV_USD\"\
+  \tas \"VaricentActuals\"\n ,\"SPerfRankAttainmentPercentage\" as \"VaricentAttainment\"\
+  \n FROM \"EDW_LS\".\"SALES_EM\".\"EM_ST_TBLPERFORMANCERANKING\" pr\n LEFT outer\
+  \ join\n \t(\tselect distinct QUARTER,EMPLOYEENUMBER,\"RestatedTerritorySYSID\"\n\
+  \ \t\tfrom \"EDW_LS\".\"SALES_EM\".\"TF_SALES_EMP_TERRSNAPSHOT\"\n \t)tr on tr.QUARTER\
+  \ = pr.\"SPerfRankQuarter\"  and tr.EMPLOYEENUMBER = pr.\"SPerfRankEmployeeNumber\"\
+  \n where \"SPerRankDataType\" = 'random'\n )rep\n\n--left outer join \"_SYS_BIC\"\
+  .\"BASE_MODELS.SURF/EMPLOYEE\" em on em.\"EmpSysID\" =rep.\"EmployeeSysID_Rep\"\n\
+  \n\n--inner join \"_SYS_BIC\".\"REAL-TIME-SALES.SECURITY/SALES_USER_TERRITORY_SECURITY\"\
+  \ TS on TS.\"TerrSysID\"= rep.\"TerritorySysID_Rep\"\n\n\n--inner join \"_SYS_BIC\"\
+  .\"BASE_MODELS.SURF/EMPLOYEE\" em on em.\"EmpUserName\" = TS.\"UserName\"\n\n\n\
+  --WHERE em.\"EmpCostCenterValue\" IN ('3000','3050','3110','3111','3140','3150','3160','3165','3190','3610','3620','3650','5010','5499','5430')\n\
+  \n on dim.\"TerrUserRecSysID\" = rep.\"TerritorySysID_Rep\"\n )\n group by\n  dim.\"\
+  EmpSysID\"\n  ,dim.\"TerrUserRecSysID\"\n  ,rep.\"SalesQuarter_Rep\"\n  ,dim.\"\
+  EmpName\"\n  ,rep.\"RepQuotaComponent\"\n  , rep.\"RepPlanType\"\n \t\t;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

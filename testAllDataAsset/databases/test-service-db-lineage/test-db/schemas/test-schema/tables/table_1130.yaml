@@ -1,0 +1,72 @@
+name: table_1130
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1130
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1130.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_RLS_TERRITORY_TEST4(\n\tTERRITORY_ID,\n\
+  \tTERRITORY_TYPE,\n\tUSER_NAME,\n\tLVL,\n\tEMAIL,\n\tTERRITORY_SYSID\n) as\nSELECT\
+  \ Hash(TERRITORYSYSID) TERRITORY_ID,\n       case when LVL = 'random' then 'random'\
+  \ when LVL = 'random' then 'random' else TERR.\"TerrTypeValue\" end  AS TERRITORY_TYPE,\n\
+  \       USERID as USER_NAME,\n       LVL,\n       UPPER(\"EmpEmail\") as EMAIL,\n\
+  \       TERRITORYSYSID as TERRITORY_SYSID\nFROM  ( SELECT TERRITORYSYSID, USERID,\
+  \ LVL FROM EDW_LS.SALES_SEC_EM.SALES_TERRITORY_SECURITY_NE where LVL in ('random','random','random','random','random')\n\
+  \n        UNION\n\n        select  distinct 'random', USERID, LVL from EDW_LS.SALES_SEC_EM.TF_ALL_USER_TERRITORY_SECURITY_WITH_LVL\
+  \ where LVL = 'random'\n\n        UNION\n\n        select distinct UST.GEO_SYSID\
+  \  as TERRITORYSYSID, TERR_SEC.USERID, TERR_SEC.LVL\n        from EDW_LS.SALES_SEC_EM.TF_ALL_USER_TERRITORY_SECURITY_WITH_LVL\
+  \ TERR_SEC\n        left outer join RDS.SURF.U_EMPLOYEE EMP On Lower(EMP.user_name)=lower(TERR_SEC.userid\
+  \ )\n        left outer join (select UST.u_user,UST.dv_u_rec_sys_id,UST.U_REC_SYS_ID\
+  \ ,U_GEO GEO_SYSID\n                         from EDW_LS.SALES_EM.SYN_TBL_U_ST_TERRITORY\
+  \ UST\n                         INNER JOIN RDS.SURF.U_SALES_TERRITORY ST ON UST.U_REC_SYS_ID\
+  \ = ST.sys_id AND ST.DV_U_TYPE = 'random'\n                         inner join (select\
+  \ UST.u_user,max(UST.sys_created_on) sys_created_on\n                          \
+  \           from EDW_LS.SALES_EM.SYN_TBL_U_ST_TERRITORY UST\n                  \
+  \                   INNER JOIN RDS.SURF.U_SALES_TERRITORY ST ON UST.U_REC_SYS_ID\
+  \ = ST.sys_id AND ST.DV_U_TYPE = 'random'\n                                    \
+  \ where UST.U_END_DATE IS NULL\n                                     AND UST.U_ACTIVE\
+  \ = 'random'\n                                     group by UST.u_user\n       \
+  \                             ) UST_MAX on UST.u_user = UST_MAX.u_user and UST.sys_created_on\
+  \ = UST_MAX.sys_created_on\n                        ) UST ON UST.U_USER = EMP.sys_id\n\
+  \        where TERR_SEC.LVL = 'random'\n     ) TERR_SECURITY\n     LEFT OUTER JOIN\
+  \ ODS_LS.SURF.EMPLOYEE EMP ON TERR_SECURITY.USERID = lower(EMP.\"EmpUserName\")\n\
+  \     LEFT OUTER JOIN ODS_LS.SURF.SALES_TERRITORY_ALL TERR ON TERR_SECURITY.TERRITORYSYSID\
+  \ = TERR.\"TerrSysID\"\nORDER by LVL\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

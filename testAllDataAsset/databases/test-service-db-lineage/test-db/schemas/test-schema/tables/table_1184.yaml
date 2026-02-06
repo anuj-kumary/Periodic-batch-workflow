@@ -1,0 +1,177 @@
+name: table_1184
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1184
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1184.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view OKR_2024_VIEW(\n\tNUMBER,\n\tCASE_CSAT_SCORE,\n\
+  \tCASE_CSAT_SURVEY_DATE,\n\tRESOLVED_AT,\n\tCREATED_ON,\n\tPRIORITY,\n\tCLOSED_AT,\n\
+  \tMETRIC,\n\t_RED_LINE_CASE,\n\tASSIGNMENT_GROUP,\n\tSUPPORT_REGION,\n\tCASE_TYPE,\n\
+  \tSUPPORT_CASE,\n\tU_OUTAGE_START_TIME,\n\tU_OUTAGE_END_TIME,\n\tPARENT_ASSIGNMENT_GROUP,\n\
+  \tSTATE,\n\tPARENT,\n\tACCT_COUNTRY,\n\tREGULATED_MARKET,\n\tMANAGER,\n\tEXTRACT_DATE,\n\
+  \tPARENT_CASE_ASSIGNMENT_GROUP_BACKLOG,\n\tASSIGNED_TO,\n\tU_LAST_UPDATE_TO_CUSTOMER,\n\
+  \tPROBLEM,\n\tU_PRIMARY_BLOCKER,\n\tSYS_UPDATED_ON,\n\tDUE_DATE,\n\tU_TEMPORARY_RELIEF,\n\
+  \tDEPARTMENT,\n\tTREND_DATE,\n\tTREND_YEAR,\n\tTREND_MONTH,\n\tTREND_QUARTER,\n\t\
+  PARENT_NULL_ASSIGNMENT_GRP,\n\tRELIEF_TIME_HRS,\n\tRELIEF_TIME_DAYS\n) as\n\nselect\n\
+  \ NUMBER,CASE_CSAT_SCORE, CASE_CSAT_SURVEY_DATE, 'random' RESOLVED_AT, 'random'\
+  \ CREATED_ON, PRIORITY, CLOSED_AT, 'random' as METRIC, _RED_LINE_CASE, ASSIGNMENT_GROUP,\
+  \ SUPPORT_REGION, CASE_TYPE, SUPPORT_CASE, 'random' U_OUTAGE_START_TIME, 'random'\
+  \ U_OUTAGE_END_TIME, PARENT_ASSIGNMENT_GROUP, STATE, PARENT, ACCT_COUNTRY, REGULATED_MARKET,\
+  \ MANAGER,'random' EXTRACT_DATE, 'random' PARENT_CASE_ASSIGNMENT_GROUP_BACKLOG,\
+  \ ASSIGNED_TO, 'random' U_LAST_UPDATE_TO_CUSTOMER, PROBLEM, U_PRIMARY_BLOCKER, SYS_UPDATED_ON,\
+  \ 'random' DUE_DATE, 'random' U_TEMPORARY_RELIEF,  DEPARTMENT,\nCASE_CSAT_SURVEY_DATE\
+  \ as TREND_DATE,\nyear(CASE_CSAT_SURVEY_DATE) as TREND_YEAR,\nTO_DATE(DATE_TRUNC('random',\
+  \ CASE_CSAT_SURVEY_DATE)) as TREND_MONTH,\n'random'||quarter(CASE_CSAT_SURVEY_DATE)||'random'||year(CASE_CSAT_SURVEY_DATE)\
+  \ as TREND_QUARTER,\nCASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  'random' RELIEF_TIME_HRS, 'random' RELIEF_TIME_DAYS\n    from edw.utga.test_master_okr_snapshot_2024_bd_to_sf_migration_mvp\n\
+  \    where case_csat_survey_date IS not NULL\n   and CASE_CSAT_SURVEY_DATE>='random'\n\
+  \nUNION ALL\n\nselect\n NUMBER, 'random' as CASE_CSAT_SCORE, 'random' CASE_CSAT_SURVEY_DATE,\
+  \  RESOLVED_AT,  CREATED_ON, PRIORITY, CLOSED_AT, 'random' as METRIC, _RED_LINE_CASE,\
+  \ ASSIGNMENT_GROUP, SUPPORT_REGION, CASE_TYPE, SUPPORT_CASE,  U_OUTAGE_START_TIME,\
+  \  U_OUTAGE_END_TIME, PARENT_ASSIGNMENT_GROUP, STATE, PARENT, ACCT_COUNTRY, REGULATED_MARKET,\
+  \ MANAGER,'random' EXTRACT_DATE, 'random' PARENT_CASE_ASSIGNMENT_GROUP_BACKLOG,\
+  \ ASSIGNED_TO, 'random' U_LAST_UPDATE_TO_CUSTOMER, PROBLEM, U_PRIMARY_BLOCKER, SYS_UPDATED_ON,\
+  \ 'random' DUE_DATE, 'random' U_TEMPORARY_RELIEF,  DEPARTMENT,\nCLOSED_AT as TREND_DATE,\n\
+  year(CLOSED_AT) as TREND_YEAR,\nTO_DATE(DATE_TRUNC('random', CLOSED_AT)) as TREND_MONTH,\n\
+  'random'||quarter(CLOSED_AT)||'random'||year(CLOSED_AT) as TREND_QUARTER,\nCASE\
+  \ WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP NOT LIKE 'random')\n\
+  \        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  \nNVL(\n\n    CASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP NOT\
+  \ LIKE 'random')\n    AND SUPPORT_CASe = 'random'\n    THEN\n\nCASE WHEN ASSIGNMENT_GROUP\
+  \ LIKE 'random'\n        THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ NVL(RESOLVED_AT, SYSDATE()))/'random'\n            ELSE DATEDIFF('random', U_OUTAGE_START_TIME,\
+  \ U_OUTAGE_END_TIME)/'random'\n            END\n        WHEN PRIORITY = 'random'\
+  \ AND CLOSED_AT >= 'random'\n         THEN\n            CASE WHEN U_OUTAGE_START_TIME\
+  \ IS NULL OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ RESOLVED_AT)/'random'\n            ELSE\n            CASE WHEN (DATEDIFF('random',\
+  \ (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN CREATED_ON ELSE U_OUTAGE_START_TIME\
+  \ END), NVL(U_OUTAGE_END_TIME, SYSDATE()))/'random') > 'random' THEN\n         \
+  \   (DATEDIFF('random', (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN CREATED_ON\
+  \ ELSE U_OUTAGE_START_TIME END), NVL(U_OUTAGE_END_TIME, SYSDATE()))/'random')\n\
+  \            ELSE 'random' END\n            END\n    ELSE\n    DATEDIFF('random',\
+  \ CREATED_ON, RESOLVED_AT)/'random'\n    END\n\n    END\n    , 'random') AS RELIEF_TIME_HRS,\n\
+  \n NVL(\n\n     CASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n    AND support_case = 'random'\n    THEN\n\n CASE WHEN ASSIGNMENT_GROUP\
+  \ LIKE 'random'\n        THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ NVL(RESOLVED_AT, SYSDATE()))\n            ELSE DATEDIFF('random', U_OUTAGE_START_TIME,\
+  \ U_OUTAGE_END_TIME)\n            END\n        WHEN PRIORITY = 'random' AND CLOSED_AT\
+  \ >= 'random'\n         THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ RESOLVED_AT)\n            ELSE\n            CASE WHEN\n            (DATEDIFF('random',\
+  \ (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN CREATED_ON ELSE U_OUTAGE_START_TIME\
+  \ END), NVL(NVL(U_OUTAGE_END_TIME, RESOLVED_AT), SYSDATE()))) > 'random' THEN\n\
+  \            (DATEDIFF('random', (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN\
+  \ CREATED_ON ELSE U_OUTAGE_START_TIME END), NVL(NVL(U_OUTAGE_END_TIME, RESOLVED_AT),\
+  \ SYSDATE()))) ELSE 'random' END\n            END\n    ELSE\n    DATEDIFF('random',\
+  \ CREATED_ON, RESOLVED_AT)\n    END\n\n    END\n    , 'random')/'random' AS RELIEF_TIME_DAYS\n\
+  \    from edw.utga.test_master_okr_snapshot_2024_bd_to_sf_migration_mvp\n      \
+  \  where closed_at IS not NULL\n           and closed_at>='random'\n\n\n\n\nUNION\
+  \ ALL\n\nselect\n NUMBER,'random' CASE_CSAT_SCORE, 'random' CASE_CSAT_SURVEY_DATE,\
+  \  RESOLVED_AT,  CREATED_ON, PRIORITY, CLOSED_AT, 'random' as METRIC, _RED_LINE_CASE,\
+  \ ASSIGNMENT_GROUP, SUPPORT_REGION, CASE_TYPE, SUPPORT_CASE,  U_OUTAGE_START_TIME,\
+  \  U_OUTAGE_END_TIME, PARENT_ASSIGNMENT_GROUP, STATE, PARENT, ACCT_COUNTRY, REGULATED_MARKET,\
+  \ MANAGER,'random' EXTRACT_DATE, 'random' PARENT_CASE_ASSIGNMENT_GROUP_BACKLOG,\
+  \ ASSIGNED_TO, 'random' U_LAST_UPDATE_TO_CUSTOMER, PROBLEM, U_PRIMARY_BLOCKER, SYS_UPDATED_ON,\
+  \ 'random' DUE_DATE, 'random' U_TEMPORARY_RELIEF,  DEPARTMENT,\nCLOSED_AT as TREND_DATE,\n\
+  year(CLOSED_AT) as TREND_YEAR,\nTO_DATE(DATE_TRUNC('random', CLOSED_AT)) as TREND_MONTH,\n\
+  'random'||quarter(CLOSED_AT)||'random'||year(CLOSED_AT) as TREND_QUARTER,\nCASE\
+  \ WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP NOT LIKE 'random')\n\
+  \        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  \nNVL(\n\n    CASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP NOT\
+  \ LIKE 'random')\n    AND SUPPORT_CASe = 'random'\n    THEN\n\nCASE WHEN ASSIGNMENT_GROUP\
+  \ LIKE 'random'\n        THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ NVL(RESOLVED_AT, SYSDATE()))/'random'\n            ELSE DATEDIFF('random', U_OUTAGE_START_TIME,\
+  \ U_OUTAGE_END_TIME)/'random'\n            END\n        WHEN PRIORITY = 'random'\
+  \ AND CLOSED_AT >= 'random'\n         THEN\n            CASE WHEN U_OUTAGE_START_TIME\
+  \ IS NULL OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ RESOLVED_AT)/'random'\n            ELSE\n            CASE WHEN (DATEDIFF('random',\
+  \ (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN CREATED_ON ELSE U_OUTAGE_START_TIME\
+  \ END), NVL(U_OUTAGE_END_TIME, SYSDATE()))/'random') > 'random' THEN\n         \
+  \   (DATEDIFF('random', (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN CREATED_ON\
+  \ ELSE U_OUTAGE_START_TIME END), NVL(U_OUTAGE_END_TIME, SYSDATE()))/'random')\n\
+  \            ELSE 'random' END\n            END\n    ELSE\n    DATEDIFF('random',\
+  \ CREATED_ON, RESOLVED_AT)/'random'\n    END\n\n    END\n    , 'random') AS RELIEF_TIME_HRS,\n\
+  \n NVL(\n\n     CASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n    AND support_case = 'random'\n    THEN\n\n CASE WHEN ASSIGNMENT_GROUP\
+  \ LIKE 'random'\n        THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ NVL(RESOLVED_AT, SYSDATE()))\n            ELSE DATEDIFF('random', U_OUTAGE_START_TIME,\
+  \ U_OUTAGE_END_TIME)\n            END\n        WHEN PRIORITY = 'random' AND CLOSED_AT\
+  \ >= 'random'\n         THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', CREATED_ON,\
+  \ RESOLVED_AT)\n            ELSE\n            CASE WHEN\n            (DATEDIFF('random',\
+  \ (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN CREATED_ON ELSE U_OUTAGE_START_TIME\
+  \ END), NVL(NVL(U_OUTAGE_END_TIME, RESOLVED_AT), SYSDATE()))) > 'random' THEN\n\
+  \            (DATEDIFF('random', (CASE WHEN CREATED_ON > U_OUTAGE_START_TIME THEN\
+  \ CREATED_ON ELSE U_OUTAGE_START_TIME END), NVL(NVL(U_OUTAGE_END_TIME, RESOLVED_AT),\
+  \ SYSDATE()))) ELSE 'random' END\n            END\n    ELSE\n    DATEDIFF('random',\
+  \ CREATED_ON, RESOLVED_AT)\n    END\n\n    END\n    , 'random')/'random' AS RELIEF_TIME_DAYS\n\
+  \n\n    from edw.utga.test_master_okr_snapshot_2024_bd_to_sf_migration_mvp\n   \
+  \ where closed_at IS not NULL\n     and closed_at>='random'\n\n\nunion all\n\nselect\n\
+  \ NUMBER,'random' CASE_CSAT_SCORE, 'random' CASE_CSAT_SURVEY_DATE, RESOLVED_AT,\
+  \  CREATED_ON, PRIORITY, CLOSED_AT, 'random' as METRIC, _RED_LINE_CASE, ASSIGNMENT_GROUP,\
+  \ SUPPORT_REGION, CASE_TYPE, SUPPORT_CASE,  U_OUTAGE_START_TIME,  U_OUTAGE_END_TIME,\
+  \ PARENT_ASSIGNMENT_GROUP, STATE, PARENT, ACCT_COUNTRY, REGULATED_MARKET, MANAGER,\
+  \ EXTRACT_DATE,  PARENT_CASE_ASSIGNMENT_GROUP_BACKLOG, ASSIGNED_TO,  U_LAST_UPDATE_TO_CUSTOMER,\
+  \ PROBLEM, U_PRIMARY_BLOCKER, SYS_UPDATED_ON, DUE_DATE,  U_TEMPORARY_RELIEF,  DEPARTMENT,\n\
+  EXTRACT_DATE as TREND_DATE,\nyear(to_date(EXTRACT_DATE)) as TREND_YEAR,\n(DATE_TRUNC('random',to_date(EXTRACT_DATE)))\
+  \ as TREND_MONTH,\n'random'||quarter(to_date(EXTRACT_DATE))||'random'||year(to_date(EXTRACT_DATE))\
+  \ as TREND_QUARTER,\nCASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  'random' RELIEF_TIME_HRS, 'random' RELIEF_TIME_DAYS\n    from edw.utga.test_master_okr_snapshot_2024_bd_to_sf_migration_mvp\n\
+  \    where metric='random'\n\n\n/*select\n NUMBER,NULL CASE_CSAT_SCORE, NULL CASE_CSAT_SURVEY_DATE,\
+  \ RESOLVED_AT,  CREATED_ON, PRIORITY, CLOSED_AT, 'KCI' as METRIC, _RED_LINE_CASE,\
+  \ ASSIGNMENT_GROUP, SUPPORT_REGION, CASE_TYPE, SUPPORT_CASE, NULL U_OUTAGE_START_TIME,\
+  \ NULL U_OUTAGE_END_TIME, PARENT_ASSIGNMENT_GROUP, STATE, PARENT, ACCT_COUNTRY,\
+  \ REGULATED_MARKET, MANAGER, EXTRACT_DATE, NULL PARENT_CASE_ASSIGNMENT_GROUP_BACKLOG,\
+  \ ASSIGNED_TO, NULL U_LAST_UPDATE_TO_CUSTOMER, PROBLEM, U_PRIMARY_BLOCKER, SYS_UPDATED_ON,\
+  \ NULL DUE_DATE, NULL U_TEMPORARY_RELIEF,  DEPARTMENT,\nEXTRACT_DATE as TREND_DATE,\n\
+  year(EXTRACT_DATE) as TREND_YEAR,\nTO_DATE(DATE_TRUNC('MONTH', EXTRACT_DATE)) as\
+  \ TREND_MONTH,\n'Q'||quarter(EXTRACT_DATE)||' '||year(EXTRACT_DATE) as TREND_QUARTER,\n\
+  CASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP NOT LIKE '%Mass%')\n\
+  \        THEN TRUE ELSE\n        FALSE END AS PARENT_NULL_ASSIGNMENT_GRP,\nNULL\
+  \ RELIEF_TIME_HRS, NULL RELIEF_TIME_DAYS,\n--KCI_P1\n\n\n    from edw.utga.test_master_okr_snapshot_2024_bd_to_sf_migration_mvp\n\
+  \    where EXTRACT_DATE is not null\n */\n\n    ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
