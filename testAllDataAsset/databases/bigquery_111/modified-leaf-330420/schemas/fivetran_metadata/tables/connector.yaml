@@ -1,0 +1,141 @@
+name: connector
+fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector
+tableType: Regular
+columns:
+  - name: connector_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.connector_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connecting_user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.connecting_user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connector_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.connector_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connector_type_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.connector_type_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: destination_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.destination_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: paused
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.paused
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: signed_up
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.signed_up
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sync_frequency
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.connector.sync_frequency
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d0340d6b-5932-4688-9bf8-4d4b43431d6d
+  type: databaseSchema
+  name: fivetran_metadata
+  fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata
+  description: ""
+  displayName: fivetran_metadata
+  deleted: false
+database:
+  id: fb3a207a-4029-4635-817c-ad4bc5251bc7
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: bigquery 111.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: c721902a-455f-433b-8bdc-958e82710043
+  type: databaseService
+  name: bigquery 111
+  fullyQualifiedName: bigquery 111
+  description: ""
+  displayName: bigquery 111
+  deleted: false
+serviceType: BigQuery
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2sfivetran_metadata!3sconnector
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1721810206771
+sourceHash: befb1c6f07b6ac9e981ff55962ddfd74
+processedLineage: false
+entityStatus: Unprocessed

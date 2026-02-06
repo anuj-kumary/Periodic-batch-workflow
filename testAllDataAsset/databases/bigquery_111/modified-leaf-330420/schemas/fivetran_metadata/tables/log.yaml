@@ -1,0 +1,123 @@
+name: log
+fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log
+tableType: Regular
+columns:
+  - name: id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: time_stamp
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.time_stamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connector_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.connector_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: event
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.event
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: message_data
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.message_data
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: message_event
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.message_event
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sync_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata.log.sync_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d0340d6b-5932-4688-9bf8-4d4b43431d6d
+  type: databaseSchema
+  name: fivetran_metadata
+  fullyQualifiedName: bigquery 111.modified-leaf-330420.fivetran_metadata
+  description: ""
+  displayName: fivetran_metadata
+  deleted: false
+database:
+  id: fb3a207a-4029-4635-817c-ad4bc5251bc7
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: bigquery 111.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: c721902a-455f-433b-8bdc-958e82710043
+  type: databaseService
+  name: bigquery 111
+  fullyQualifiedName: bigquery 111
+  description: ""
+  displayName: bigquery 111
+  deleted: false
+serviceType: BigQuery
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2sfivetran_metadata!3slog
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1721810205591
+sourceHash: 4e0caa91207adbd12bb58d1352e1e924
+processedLineage: false
+entityStatus: Unprocessed

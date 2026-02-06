@@ -1,0 +1,309 @@
+name: struct_table
+fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table
+tableType: Regular
+columns:
+  - name: transaction_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.transaction_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: addresses
+    dataType: STRUCT
+    dataTypeDisplay: "struct<status:string,address:string,city:string,state:string,zip:string,numberofyears:string>"
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses
+    tags: []
+    children:
+      - name: status
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses.status
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: address
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses.address
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: city
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses.city
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: state
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses.state
+        tags: []
+        constraint: "NULL"
+        children: []
+      - name: zip
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses.zip
+        tags: []
+        constraint: "NULL"
+        children: []
+      - name: numberOfYears
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.addresses.numberOfYears
+        tags: []
+        constraint: "NULL"
+        children: []
+    customMetrics: []
+  - name: test_json
+    dataType: STRUCT
+    dataTypeDisplay: struct<nested_string:array<string>>
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_json
+    tags: []
+    children:
+      - name: nested_string
+        dataType: ARRAY
+        arrayDataType: STRING
+        dataTypeDisplay: array<string<length:15>>
+        description: test_nested_string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_json.nested_string
+        tags: []
+        children: []
+    customMetrics: []
+  - name: new_addresses
+    dataType: STRUCT
+    dataTypeDisplay: "struct<status:string,city:string>"
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.new_addresses
+    tags: []
+    children:
+      - name: status
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.new_addresses.status
+        tags: []
+        constraint: "NULL"
+        children: []
+      - name: city
+        dataType: STRING
+        dataLength: 1
+        dataTypeDisplay: string
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.new_addresses.city
+        tags: []
+        constraint: "NULL"
+        children: []
+    customMetrics: []
+  - name: test_time_nested
+    dataType: ARRAY
+    arrayDataType: STRUCT
+    dataTypeDisplay: "array<struct<test_datetime:datetime,test_timestamp:timestamp,test_date:date,test_time:time>>"
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nested
+    tags: []
+    children:
+      - name: test_datetime
+        dataType: DATETIME
+        dataLength: 1
+        dataTypeDisplay: DATETIME
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nested.test_datetime
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: test_timestamp
+        dataType: TIMESTAMP
+        dataLength: 1
+        dataTypeDisplay: TIMESTAMP
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nested.test_timestamp
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: test_date
+        dataType: DATE
+        dataLength: 1
+        dataTypeDisplay: DATE
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nested.test_date
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: test_time
+        dataType: TIME
+        dataLength: 1
+        dataTypeDisplay: TIME
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nested.test_time
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+    customMetrics: []
+  - name: test_time_nullable
+    dataType: STRUCT
+    dataTypeDisplay: "struct<test_datetime:datetime,test_timestamp:timestamp,test_date:date,test_time:time>"
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nullable
+    tags: []
+    children:
+      - name: test_datetime
+        dataType: DATETIME
+        dataLength: 1
+        dataTypeDisplay: DATETIME
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nullable.test_datetime
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: test_timestamp
+        dataType: TIMESTAMP
+        dataLength: 1
+        dataTypeDisplay: TIMESTAMP
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nullable.test_timestamp
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: test_date
+        dataType: DATE
+        dataLength: 1
+        dataTypeDisplay: DATE
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nullable.test_date
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+      - name: test_time
+        dataType: TIME
+        dataLength: 1
+        dataTypeDisplay: TIME
+        fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.struct_table.test_time_nullable.test_time
+        tags:
+          - tagFQN: test_2_policy_tag.test_2_policy_tag
+            name: test_2_policy_tag
+            description: Bigquery Policy Tag
+            source: Classification
+            labelType: Automated
+            state: Suggested
+            appliedAt: 1769104528000
+        constraint: "NULL"
+        children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 52885d78-8272-4a5b-9878-72ce01f29639
+  type: databaseSchema
+  name: sdoh_cms_dual_eligible_enrollment
+  fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment
+  description: ""
+  displayName: sdoh_cms_dual_eligible_enrollment
+  deleted: false
+database:
+  id: fb3a207a-4029-4635-817c-ad4bc5251bc7
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: bigquery 111.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: c721902a-455f-433b-8bdc-958e82710043
+  type: databaseService
+  name: bigquery 111
+  fullyQualifiedName: bigquery 111
+  description: ""
+  displayName: bigquery 111
+  deleted: false
+serviceType: BigQuery
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2ssdoh_cms_dual_eligible_enrollment!3sstruct_table
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1657523203946
+sourceHash: 41638bbd7f72d7d577315714a9973e42
+processedLineage: false
+entityStatus: Unprocessed

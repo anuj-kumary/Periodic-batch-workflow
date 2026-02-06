@@ -1,0 +1,143 @@
+name: new_cities_zeroeleven_view
+fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view
+tableType: View
+columns:
+  - name: LatD
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.LatD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LatM
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.LatM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LatS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.LatS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NS
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.NS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LonD
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.LonD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LonM
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.LonM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LonS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.LonS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EW
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.EW
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: City
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.City
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: State
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view.State
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 52885d78-8272-4a5b-9878-72ce01f29639
+  type: databaseSchema
+  name: sdoh_cms_dual_eligible_enrollment
+  fullyQualifiedName: bigquery 111.modified-leaf-330420.sdoh_cms_dual_eligible_enrollment
+  description: ""
+  displayName: sdoh_cms_dual_eligible_enrollment
+  deleted: false
+database:
+  id: fb3a207a-4029-4635-817c-ad4bc5251bc7
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: bigquery 111.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: c721902a-455f-433b-8bdc-958e82710043
+  type: databaseService
+  name: bigquery 111
+  fullyQualifiedName: bigquery 111
+  description: ""
+  displayName: bigquery 111
+  deleted: false
+serviceType: BigQuery
+schemaDefinition: CREATE VIEW sdoh_cms_dual_eligible_enrollment.new_cities_zeroeleven_view
+  AS select * from `modified-leaf-330420.sdoh_cms_dual_eligible_enrollment.new_cities_zero_eleven`
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2ssdoh_cms_dual_eligible_enrollment!3snew_cities_zeroeleven_view
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1656425436588
+sourceHash: be84a84a221c0aa7896fe07e9a61727a
+processedLineage: false
+entityStatus: Unprocessed
