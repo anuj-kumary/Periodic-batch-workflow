@@ -1,0 +1,32 @@
+name: 9668b8da85c2a66de5e2bbdf4d42cedd
+fullyQualifiedName: hktest.9668b8da85c2a66de5e2bbdf4d42cedd
+owners: []
+duration: 191.0
+users: []
+query: "WITH c9a70e63510b664d91c87d56c823d0ce_rnd AS \n(SELECT \"WEB_SITE_1\".\"WEB_MKT_ID\"\
+  \ AS \"WEB_MKT_ID\" \nFROM \"TPCDS_SF10TCL\".\"WEB_SITE\" AS \"WEB_SITE_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc9a70e63510b664d91c87d56c823d0ce_sample AS \n(SELECT c9a70e63510b664d91c87d56c823d0ce_rnd.\"\
+  WEB_MKT_ID\" AS \"WEB_MKT_ID\" \nFROM c9a70e63510b664d91c87d56c823d0ce_rnd)\n SELECT\
+  \ avg(\"WEB_MKT_ID\") AS mean, count(\"WEB_MKT_ID\") AS \"valuesCount\", count(DISTINCT\
+  \ \"WEB_MKT_ID\") AS \"distinctCount\", MIN(\"WEB_MKT_ID\") AS min, MAX(\"WEB_MKT_ID\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"WEB_MKT_ID\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", STDDEV_POP(\"WEB_MKT_ID\") AS stddev, SUM(\"WEB_MKT_ID\") AS sum\
+  \ \nFROM c9a70e63510b664d91c87d56c823d0ce_sample\n LIMIT ?"
+checksum: 9668b8da85c2a66de5e2bbdf4d42cedd
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e4199ccc-b84a-40a4-a4e3-6b5c5adae08a
+    type: table
+    name: WEB_SITE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_SITE
+    displayName: WEB_SITE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

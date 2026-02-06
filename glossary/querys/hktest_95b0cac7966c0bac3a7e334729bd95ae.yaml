@@ -1,0 +1,34 @@
+name: 95b0cac7966c0bac3a7e334729bd95ae
+fullyQualifiedName: hktest.95b0cac7966c0bac3a7e334729bd95ae
+owners: []
+duration: 124.0
+users: []
+query: "WITH \"979ee13f032c02b4652a4e3c3928d90b_rnd\" AS \n(SELECT \"CUSTOMER_1\"\
+  .\"C_NATIONKEY\" AS \"C_NATIONKEY\" \nFROM \"TPCH_SF1\".\"CUSTOMER\" AS \"CUSTOMER_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"979ee13f032c02b4652a4e3c3928d90b_sample\" AS \n\
+  (SELECT \"979ee13f032c02b4652a4e3c3928d90b_rnd\".\"C_NATIONKEY\" AS \"C_NATIONKEY\"\
+  \ \nFROM \"979ee13f032c02b4652a4e3c3928d90b_rnd\")\n SELECT avg(\"C_NATIONKEY\"\
+  ) AS mean, count(\"C_NATIONKEY\") AS \"valuesCount\", count(DISTINCT \"C_NATIONKEY\"\
+  ) AS \"distinctCount\", MIN(\"C_NATIONKEY\") AS min, MAX(\"C_NATIONKEY\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"C_NATIONKEY\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"C_NATIONKEY\") AS stddev, SUM(\"C_NATIONKEY\") AS sum \nFROM \"979ee13f032c02b4652a4e3c3928d90b_sample\"\
+  \n LIMIT ?"
+checksum: 95b0cac7966c0bac3a7e334729bd95ae
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b61c5123-d022-4b6e-810b-f35b41e4ab82
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

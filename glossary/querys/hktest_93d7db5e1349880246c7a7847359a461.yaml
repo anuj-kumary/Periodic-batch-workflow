@@ -1,0 +1,33 @@
+name: 93d7db5e1349880246c7a7847359a461
+fullyQualifiedName: hktest.93d7db5e1349880246c7a7847359a461
+owners: []
+duration: 422.0
+users: []
+query: "WITH bb70fc319f31ef506fc099f8db12e70f_rnd AS \n(SELECT \"CATALOG_SALES_1\"\
+  .\"CS_SHIP_ADDR_SK\" AS \"CS_SHIP_ADDR_SK\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_SALES\"\
+  \ AS \"CATALOG_SALES_1\" TABLESAMPLE ROW(? ROWS)), \nbb70fc319f31ef506fc099f8db12e70f_sample\
+  \ AS \n(SELECT bb70fc319f31ef506fc099f8db12e70f_rnd.\"CS_SHIP_ADDR_SK\" AS \"CS_SHIP_ADDR_SK\"\
+  \ \nFROM bb70fc319f31ef506fc099f8db12e70f_rnd)\n SELECT avg(\"CS_SHIP_ADDR_SK\"\
+  ) AS mean, count(\"CS_SHIP_ADDR_SK\") AS \"valuesCount\", count(DISTINCT \"CS_SHIP_ADDR_SK\"\
+  ) AS \"distinctCount\", MIN(\"CS_SHIP_ADDR_SK\") AS min, MAX(\"CS_SHIP_ADDR_SK\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"CS_SHIP_ADDR_SK\" IS ?) THEN ? ELSE ? END),\
+  \ ?) AS \"nullCount\", STDDEV_POP(\"CS_SHIP_ADDR_SK\") AS stddev, SUM(\"CS_SHIP_ADDR_SK\"\
+  ) AS sum \nFROM bb70fc319f31ef506fc099f8db12e70f_sample\n LIMIT ?"
+checksum: 93d7db5e1349880246c7a7847359a461
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7d2a9000-fb5f-4a65-a92b-5c3940bde9c1
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

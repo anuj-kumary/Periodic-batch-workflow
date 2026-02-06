@@ -1,0 +1,27 @@
+name: 97cae95f87094ed2a00e06e99ef1f993
+fullyQualifiedName: hktest.97cae95f87094ed2a00e06e99ef1f993
+owners: []
+duration: 604.0
+users: []
+query: "SELECT count(\"EMAIL\") AS \"valuesCount\", (SELECT count(*) AS \"uniqueCount\"\
+  \ \nFROM (SELECT count(\"EMAIL\") AS count_1 \nFROM \"MSSQLBANKING_STG\".\"CUSTOMERACCOUNTS\"\
+  \ GROUP BY \"EMAIL\" \nHAVING count(\"EMAIL\") = ?) AS only_once) AS \"uniqueCount\"\
+  \ \nFROM \"MSSQLBANKING_STG\".\"CUSTOMERACCOUNTS\"\n LIMIT ?"
+checksum: 97cae95f87094ed2a00e06e99ef1f993
+queryDate: 1752192000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d03f73b0-8a36-4cd5-a82f-a07db17fe588
+    type: table
+    name: CUSTOMERACCOUNTS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG.CUSTOMERACCOUNTS
+    displayName: CUSTOMERACCOUNTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

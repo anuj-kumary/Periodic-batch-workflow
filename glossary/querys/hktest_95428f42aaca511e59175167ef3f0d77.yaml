@@ -1,0 +1,22 @@
+name: 95428f42aaca511e59175167ef3f0d77
+fullyQualifiedName: hktest.95428f42aaca511e59175167ef3f0d77
+owners: []
+duration: 54.0
+users: []
+query: |-
+  SELECT "CUSTOMERS"."CUSTOMER_ID" AS "CUSTOMER_ID",
+    SUM("CUSTOMERS"."NUMBER_OF_ORDERS") AS "sum:NUMBER_OF_ORDERS:ok"
+  FROM "CUSTOMERS"."JAFFLE_SHOP"."CUSTOMERS" "CUSTOMERS"
+  GROUP BY ?
+checksum: 95428f42aaca511e59175167ef3f0d77
+queryDate: 1744588800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,47 @@
+name: 95a5914f7830e455574dc9383a536a83
+fullyQualifiedName: hktest.95a5914f7830e455574dc9383a536a83
+owners: []
+duration: 84.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"DEPENDS_ON_NODES\"\
+  ) < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS \"2.000 to 28.188\", count(CASE WHEN\
+  \ (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"DEPENDS_ON_NODES\") < ?) THEN LEN(\"\
+  DEPENDS_ON_NODES\") END) AS \"28.188 to 54.377\", count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\"\
+  ) >= ? AND LEN(\"DEPENDS_ON_NODES\") < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS\
+  \ \"54.377 to 80.565\", count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"\
+  DEPENDS_ON_NODES\") < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS \"80.565 to 106.753\"\
+  , count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"DEPENDS_ON_NODES\")\
+  \ < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS \"106.753 to 132.942\", count(CASE\
+  \ WHEN (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"DEPENDS_ON_NODES\") < ?) THEN LEN(\"\
+  DEPENDS_ON_NODES\") END) AS \"132.942 to 159.130\", count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\"\
+  ) >= ? AND LEN(\"DEPENDS_ON_NODES\") < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS\
+  \ \"159.130 to 185.318\", count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"\
+  DEPENDS_ON_NODES\") < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS \"185.318 to 211.507\"\
+  , count(CASE WHEN (LEN(\"DEPENDS_ON_NODES\") >= ? AND LEN(\"DEPENDS_ON_NODES\")\
+  \ < ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS \"211.507 to 237.695\", count(CASE\
+  \ WHEN (LEN(\"DEPENDS_ON_NODES\") >= ?) THEN LEN(\"DEPENDS_ON_NODES\") END) AS \"\
+  237.695 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_MODELS\"\n LIMIT ?"
+checksum: 95a5914f7830e455574dc9383a536a83
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: ae833c0b-5dc6-41d8-ab5d-f0c043a45959
+    type: table
+    name: DBT_MODELS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS
+    displayName: DBT_MODELS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

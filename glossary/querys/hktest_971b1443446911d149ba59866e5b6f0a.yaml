@@ -1,0 +1,30 @@
+name: 971b1443446911d149ba59866e5b6f0a
+fullyQualifiedName: hktest.971b1443446911d149ba59866e5b6f0a
+owners: []
+duration: 82.0
+users: []
+query: "SELECT avg(LEN(\"CONT_TOTAL_NET_WITHDRAWAL\")) AS mean, count(\"CONT_TOTAL_NET_WITHDRAWAL\"\
+  ) AS \"valuesCount\", count(DISTINCT \"CONT_TOTAL_NET_WITHDRAWAL\") AS \"distinctCount\"\
+  , MIN(LEN(\"CONT_TOTAL_NET_WITHDRAWAL\")) AS min, MAX(LEN(\"CONT_TOTAL_NET_WITHDRAWAL\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"CONT_TOTAL_NET_WITHDRAWAL\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"CONT_TOTAL_NET_WITHDRAWAL\")) AS\
+  \ stddev, SUM(LEN(\"CONT_TOTAL_NET_WITHDRAWAL\")) AS sum \nFROM \"CURATED\".\"CONT\"\
+  \n LIMIT ?"
+checksum: 971b1443446911d149ba59866e5b6f0a
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,65 @@
+name: 966c9cccf1be9160ca4c8cfcece77f61
+fullyQualifiedName: hktest.966c9cccf1be9160ca4c8cfcece77f61
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"ae833c0b-5dc6-41d8-ab5d-f0c043a45959\",\"type\":\"table\"\
+        ,\"name\":\"DBT_MODELS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS\"\
+        ,\"displayName\":\"DBT_MODELS\",\"deleted\":false}]"
+  previousVersion: 1.1
+  changeSummary: {}
+owners: []
+duration: 236.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "create or replace   view dbt_db.DBT_SAMPLE_elementary.model_run_results\n\
+  \  \n   as (\n    \n\nwith dbt_run_results as (\n    select * from dbt_db.DBT_SAMPLE_elementary.dbt_run_results\n\
+  ),\n\ndbt_models as (\n    select * from dbt_db.DBT_SAMPLE_elementary.dbt_models\n\
+  )\n\nSELECT\n    run_results.model_execution_id,\n    run_results.unique_id,\n \
+  \   run_results.invocation_id,\n    run_results.query_id,\n    run_results.name,\n\
+  \    run_results.generated_at,\n    run_results.status,\n    run_results.full_refresh,\n\
+  \    run_results.message,\n    run_results.execution_time,\n    run_results.execute_started_at,\n\
+  \    run_results.execute_completed_at,\n    run_results.compile_started_at,\n  \
+  \  run_results.compile_completed_at,\n    run_results.compiled_code,\n    run_results.adapter_response,\n\
+  \    run_results.thread_id,\n    models.database_name,\n    models.schema_name,\n\
+  \    coalesce(run_results.materialization, models.materialization) as materialization,\n\
+  \    models.tags,\n    models.package_name,\n    models.path,\n    models.original_path,\n\
+  \    models.owner,\n    models.alias,\n    ROW_NUMBER() OVER (PARTITION BY run_results.unique_id\
+  \ ORDER BY run_results.generated_at DESC) AS model_invocation_reverse_index,\n \
+  \   CASE WHEN FIRST_VALUE(invocation_id) OVER (PARTITION BY \n    date_trunc(?,\
+  \ cast(run_results.generated_at as timestamp))\n ORDER BY run_results.generated_at\
+  \ ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) = invocation_id\n\
+  \              THEN ?\n              ELSE ? \n         END                     \
+  \                                          AS is_the_first_invocation_of_the_day,\n\
+  \    CASE WHEN LAST_VALUE(invocation_id) OVER (PARTITION BY \n    date_trunc(?,\
+  \ cast(run_results.generated_at as timestamp))\n ORDER BY run_results.generated_at\
+  \ ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) = invocation_id\n\
+  \              THEN ?\n              ELSE ? \n         END                     \
+  \                                          AS is_the_last_invocation_of_the_day\n\
+  \    \nFROM dbt_run_results run_results\nJOIN dbt_models models ON run_results.unique_id\
+  \ = models.unique_id\n  );"
+checksum: 966c9cccf1be9160ca4c8cfcece77f61
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,33 @@
+name: 9818fd52d938d5e26e7223e42bc450ec
+fullyQualifiedName: hktest.9818fd52d938d5e26e7223e42bc450ec
+owners: []
+duration: 421.0
+users: []
+query: "WITH \"2b911c015ed17a423c74ab9987330e60_rnd\" AS \n(SELECT \"ITEM_1\".\"I_ITEM_ID\"\
+  \ AS \"I_ITEM_ID\" \nFROM \"TPCDS_SF10TCL\".\"ITEM\" AS \"ITEM_1\" TABLESAMPLE ROW(?\
+  \ ROWS)), \n\"2b911c015ed17a423c74ab9987330e60_sample\" AS \n(SELECT \"2b911c015ed17a423c74ab9987330e60_rnd\"\
+  .\"I_ITEM_ID\" AS \"I_ITEM_ID\" \nFROM \"2b911c015ed17a423c74ab9987330e60_rnd\"\
+  )\n SELECT avg(LEN(\"I_ITEM_ID\")) AS mean, count(\"I_ITEM_ID\") AS \"valuesCount\"\
+  , count(DISTINCT \"I_ITEM_ID\") AS \"distinctCount\", MIN(LEN(\"I_ITEM_ID\")) AS\
+  \ min, MAX(LEN(\"I_ITEM_ID\")) AS max, coalesce(SUM(CASE WHEN (\"I_ITEM_ID\" IS\
+  \ ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"I_ITEM_ID\")) AS\
+  \ stddev, SUM(LEN(\"I_ITEM_ID\")) AS sum \nFROM \"2b911c015ed17a423c74ab9987330e60_sample\"\
+  \n LIMIT ?"
+checksum: 9818fd52d938d5e26e7223e42bc450ec
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7fa3f404-d523-4604-a631-15abcfd7ae31
+    type: table
+    name: ITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.ITEM
+    displayName: ITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

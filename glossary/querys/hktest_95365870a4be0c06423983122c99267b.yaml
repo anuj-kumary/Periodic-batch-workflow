@@ -1,0 +1,27 @@
+name: 95365870a4be0c06423983122c99267b
+fullyQualifiedName: hktest.95365870a4be0c06423983122c99267b
+owners: []
+duration: 103.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"PUBLIC\".\"T2\"\n LIMIT ?"
+checksum: 95365870a4be0c06423983122c99267b
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8e7c1f2a-0e7b-43f7-9976-d381789e63c5
+    type: table
+    name: T2
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.T2
+    displayName: T2
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,36 @@
+name: 9353e3e3e05685f7961e064001ea41ef
+fullyQualifiedName: hktest.9353e3e3e05685f7961e064001ea41ef
+owners: []
+duration: 429.0
+users: []
+query: "WITH bb70fc319f31ef506fc099f8db12e70f_rnd AS \n(SELECT \"CATALOG_SALES_1\"\
+  .\"CS_SALES_PRICE\" AS \"CS_SALES_PRICE\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_SALES\"\
+  \ AS \"CATALOG_SALES_1\" TABLESAMPLE ROW(? ROWS)), \nbb70fc319f31ef506fc099f8db12e70f_sample\
+  \ AS \n(SELECT bb70fc319f31ef506fc099f8db12e70f_rnd.\"CS_SALES_PRICE\" AS \"CS_SALES_PRICE\"\
+  \ \nFROM bb70fc319f31ef506fc099f8db12e70f_rnd)\n SELECT count(CASE WHEN (\"CS_SALES_PRICE\"\
+  \ >= ? AND \"CS_SALES_PRICE\" < ?) THEN \"CS_SALES_PRICE\" END) AS \"640.000T to\
+  \ 34.498\", count(CASE WHEN (\"CS_SALES_PRICE\" >= ? AND \"CS_SALES_PRICE\" < ?)\
+  \ THEN \"CS_SALES_PRICE\" END) AS \"34.498 to 68.357\", count(CASE WHEN (\"CS_SALES_PRICE\"\
+  \ >= ? AND \"CS_SALES_PRICE\" < ?) THEN \"CS_SALES_PRICE\" END) AS \"68.357 to 102.215\"\
+  , count(CASE WHEN (\"CS_SALES_PRICE\" >= ? AND \"CS_SALES_PRICE\" < ?) THEN \"CS_SALES_PRICE\"\
+  \ END) AS \"102.215 to 136.073\", count(CASE WHEN (\"CS_SALES_PRICE\" >= ?) THEN\
+  \ \"CS_SALES_PRICE\" END) AS \"136.073 and up\" \nFROM bb70fc319f31ef506fc099f8db12e70f_sample\n\
+  \ LIMIT ?"
+checksum: 9353e3e3e05685f7961e064001ea41ef
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7d2a9000-fb5f-4a65-a92b-5c3940bde9c1
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
