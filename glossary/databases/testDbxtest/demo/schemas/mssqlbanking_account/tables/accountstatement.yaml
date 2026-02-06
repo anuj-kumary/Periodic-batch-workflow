@@ -1,0 +1,112 @@
+name: accountstatement
+fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement
+tableType: Regular
+columns:
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement.accountid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: totaldebits
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement.totaldebits
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: statementid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement.statementid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: totalcredits
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(10,2)"
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement.totalcredits
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: statementdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement.statementdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d719c2b9-0813-4ac2-846d-c69acd9ede3b
+  type: databaseSchema
+  name: mssqlbanking_account
+  fullyQualifiedName: testDbxtest.demo.mssqlbanking_account
+  displayName: mssqlbanking_account
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/2e0c9e01-72b8-46dc-8e3c-1ffe081af049
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: e006c88c-69ff-4e41-b745-9662a33b0d58
+  type: testSuite
+  name: testDbxtest.demo.mssqlbanking_account.accountstatement.testSuite
+  fullyQualifiedName: testDbxtest.demo.mssqlbanking_account.accountstatement.testSuite
+  displayName: testDbxtest.demo.mssqlbanking_account.accountstatement.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 512e51639cb3ccdd7fbd7ec9c714fdab
+processedLineage: false
+entityStatus: Approved

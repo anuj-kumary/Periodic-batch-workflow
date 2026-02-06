@@ -1,0 +1,83 @@
+name: new_cts
+fullyQualifiedName: testDbxtest.demo.default.new_cts
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.new_cts.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.new_cts.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.new_cts.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+databaseSchema:
+  id: 756f97f9-d316-48a7-9bdd-acfb3ccda7fa
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: testDbxtest.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/7c1c94c6-4ff0-4fbb-b018-414df5dc9425
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: e390484b-46da-48d5-b80f-de1d1c71b7c7
+  type: testSuite
+  name: testDbxtest.demo.default.new_cts.testSuite
+  fullyQualifiedName: testDbxtest.demo.default.new_cts.testSuite
+  displayName: testDbxtest.demo.default.new_cts.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: d8624026291de5c21e31423dd4b2678c
+processedLineage: false
+entityStatus: Approved

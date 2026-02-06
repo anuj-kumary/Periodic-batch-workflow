@@ -1,0 +1,112 @@
+name: transact
+fullyQualifiedName: testDbxtest.demo.account.transact
+tableType: Regular
+columns:
+  - name: transactiontype
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.account.transact.transactiontype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.account.transact.accountid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testDbxtest.demo.account.transact.amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: transactionid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.account.transact.transactionid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: transactiondate
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.account.transact.transactiondate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.account.transact._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.account.transact._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7777f426-5fcc-4d05-84b5-56ded1bb0f9e
+  type: databaseSchema
+  name: account
+  fullyQualifiedName: testDbxtest.demo.account
+  displayName: account
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/27f7aa11-90a5-4544-be88-8eef36e88681
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 2be6d5db-d9cd-4180-bc09-7c7ab15c622c
+  type: testSuite
+  name: testDbxtest.demo.account.transact.testSuite
+  fullyQualifiedName: testDbxtest.demo.account.transact.testSuite
+  displayName: testDbxtest.demo.account.transact.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 48b46acf5765f2038461ea89a44d5edc
+processedLineage: false
+entityStatus: Approved

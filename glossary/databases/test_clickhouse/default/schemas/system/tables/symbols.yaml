@@ -1,0 +1,74 @@
+name: symbols
+fullyQualifiedName: test_clickhouse.default.system.symbols
+description: Contains information for introspection of ClickHouse binary. This table
+  is only useful for C++ experts and ClickHouse engineers.
+tableType: Regular
+columns:
+  - name: symbol
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Symbol name in the binary. It is mangled. You can apply demangle(symbol)
+      to obtain a readable name.
+    fullyQualifiedName: test_clickhouse.default.system.symbols.symbol
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: address_begin
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Start address of the symbol in the binary.
+    fullyQualifiedName: test_clickhouse.default.system.symbols.address_begin
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: address_end
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: End address of the symbol in the binary.
+    fullyQualifiedName: test_clickhouse.default.system.symbols.address_end
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: bc4e269657781ba58bc711d287695674
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,90 @@
+name: comments_test
+fullyQualifiedName: testDbxtest.demo.new_schema.comments_test
+description: "The 'comments_test' table is designed to hold data related to user comments\
+  \ on various test items. It includes information such as the unique identifier of\
+  \ each comment and a complex column that stores additional data related to the comment.\
+  \ This table can be useful for analyzing user feedback on tests, identifying common\
+  \ issues or areas of improvement, and tracking changes over time in user comments."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: new comm
+    fullyQualifiedName: testDbxtest.demo.new_schema.comments_test.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: complex_col
+    dataType: STRUCT
+    dataTypeDisplay: "struct<b1:int,b2:struct<b11:int>>"
+    description: demo com
+    fullyQualifiedName: testDbxtest.demo.new_schema.comments_test.complex_col
+    tags: []
+    children:
+      - name: b1
+        dataType: INT
+        dataTypeDisplay: int
+        fullyQualifiedName: testDbxtest.demo.new_schema.comments_test.complex_col.b1
+        tags: []
+        children: []
+      - name: b2
+        dataType: STRUCT
+        dataTypeDisplay: struct<b11:int>
+        fullyQualifiedName: testDbxtest.demo.new_schema.comments_test.complex_col.b2
+        tags: []
+        children:
+          - name: b11
+            dataType: INT
+            dataTypeDisplay: int
+            fullyQualifiedName: testDbxtest.demo.new_schema.comments_test.complex_col.b2.b11
+            tags: []
+            children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b321d745-640e-4bff-80ed-11f959c0d343
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: testDbxtest.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/e1a7250c-1d90-4503-8117-2b46e501ab86
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 1895b1a6-6d45-46f1-9cc4-944c090cf830
+  type: testSuite
+  name: testDbxtest.demo.new_schema.comments_test.testSuite
+  fullyQualifiedName: testDbxtest.demo.new_schema.comments_test.testSuite
+  displayName: testDbxtest.demo.new_schema.comments_test.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 390f698f377bc4a114fa4cde97cc9a0f
+processedLineage: false
+entityStatus: Approved

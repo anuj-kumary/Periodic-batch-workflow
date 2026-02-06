@@ -1,0 +1,147 @@
+name: storage_policies
+fullyQualifiedName: test_clickhouse.default.system.storage_policies
+description: Contains information about storage policies and volumes defined in the
+  server configuration.
+tableType: Regular
+columns:
+  - name: policy_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the storage policy.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.policy_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: volume_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the volume.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.volume_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: volume_priority
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: The priority of the volume.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.volume_priority
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: disks
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: The list of all disks names which are a part of this storage policy.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.disks
+    tags: []
+    children: []
+    customMetrics: []
+  - name: volume_type
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: "enum8<'jbod' = 0, 'single_disk' = 1, 'unknown' = 2>"
+    description: The type of the volume - JBOD or a single disk.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.volume_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: max_data_part_size
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: the maximum size of a part that can be stored on any of the volumes
+      disks.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.max_data_part_size
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: move_factor
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float32
+    description: "When the amount of available space gets lower than this factor,\
+      \ data automatically starts to move on the next volume if any (by default, 0.1)."
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.move_factor
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: prefer_not_to_merge
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: You should not use this setting. Disables merging of data parts on
+      this volume (this is harmful and leads to performance degradation).
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.prefer_not_to_merge
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: perform_ttl_move_on_insert
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: Disables TTL move on data part INSERT. By default (if enabled) if
+      we insert a data part that already expired by the TTL move rule it immediately
+      goes to a volume/disk declared in move rule.
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.perform_ttl_move_on_insert
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: load_balancing
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: "enum8<'round_robin' = 0, 'least_used' = 1>"
+    description: "Policy for disk balancing, `round_robin` or `least_used`."
+    fullyQualifiedName: test_clickhouse.default.system.storage_policies.load_balancing
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9bbaf403ea8b9a8ed22c79e1bf3f1e10
+processedLineage: false
+entityStatus: Unprocessed

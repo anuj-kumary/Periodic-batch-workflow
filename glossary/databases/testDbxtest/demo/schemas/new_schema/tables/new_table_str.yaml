@@ -1,0 +1,56 @@
+name: new_table_str
+fullyQualifiedName: testDbxtest.demo.new_schema.new_table_str
+tableType: Regular
+columns:
+  - name: id
+    dataType: STRUCT
+    dataTypeDisplay: struct<unknown>
+    fullyQualifiedName: testDbxtest.demo.new_schema.new_table_str.id
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b321d745-640e-4bff-80ed-11f959c0d343
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: testDbxtest.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/ed36e1b9-6234-462e-86cc-77ffd6433ef5
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: cb5e769c-6458-4645-961e-13abc8321f15
+  type: testSuite
+  name: testDbxtest.demo.new_schema.new_table_str.testSuite
+  fullyQualifiedName: testDbxtest.demo.new_schema.new_table_str.testSuite
+  displayName: testDbxtest.demo.new_schema.new_table_str.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 46ad1ae6704a072030c0cce48bf62a97
+processedLineage: false
+entityStatus: Approved

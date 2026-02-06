@@ -1,0 +1,92 @@
+name: snapshot_locks
+fullyQualifiedName: test_clickhouse.default.system.snapshot_locks
+description: Shows the snapshot locks and unlocking status
+tableType: Regular
+columns:
+  - name: id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: id of the snapshot
+    fullyQualifiedName: test_clickhouse.default.system.snapshot_locks.id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: info
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "info of the snapshot, like s3(...)"
+    fullyQualifiedName: test_clickhouse.default.system.snapshot_locks.info
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: "enum8<'snapshot_locked' = 0, 'snapshot_unlocking' = 1>"
+    description: Indicates the snapshot is locking or locked
+    fullyQualifiedName: test_clickhouse.default.system.snapshot_locks.status
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ctime
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    description: creation time of this lock or unlocking path
+    fullyQualifiedName: test_clickhouse.default.system.snapshot_locks.ctime
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: lock_path
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: lock path in keeper
+    fullyQualifiedName: test_clickhouse.default.system.snapshot_locks.lock_path
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 55c3e8634b4aaf64c35f376d90b5957d
+processedLineage: false
+entityStatus: Unprocessed

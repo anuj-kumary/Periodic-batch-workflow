@@ -1,0 +1,77 @@
+name: demo_data_ext_tbl2
+fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl2
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl2.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl2.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl2.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 756f97f9-d316-48a7-9bdd-acfb3ccda7fa
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: testDbxtest.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/test.csv
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 580a3870-df7a-44eb-9786-b1e1dce86a59
+  type: testSuite
+  name: testDbxtest.demo.default.demo_data_ext_tbl2.testSuite
+  fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl2.testSuite
+  displayName: testDbxtest.demo.default.demo_data_ext_tbl2.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: b1f433424c398dfb52da64d386d1bb0b
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,103 @@
+name: customercontacthistory
+fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory
+tableType: Regular
+columns:
+  - name: contactreason
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory.contactreason
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory.contactid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactdate
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory.contactdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1f3ff40e-47b9-45ae-9527-e555d7a22277
+  type: databaseSchema
+  name: customer
+  fullyQualifiedName: testDbxtest.demo.customer
+  displayName: customer
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/bf750f11-9d01-401f-a634-05102ba3deda
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: ceb1dcd6-df09-443b-a630-b75bc718f226
+  type: testSuite
+  name: testDbxtest.demo.customer.customercontacthistory.testSuite
+  fullyQualifiedName: testDbxtest.demo.customer.customercontacthistory.testSuite
+  displayName: testDbxtest.demo.customer.customercontacthistory.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 18819abd5a345939322cab39abb826bb
+processedLineage: false
+entityStatus: Approved

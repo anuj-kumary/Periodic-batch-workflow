@@ -1,0 +1,224 @@
+name: view_refreshes
+fullyQualifiedName: test_clickhouse.default.system.view_refreshes
+description: Lists all Refreshable Materialized Views of current server.
+tableType: Regular
+columns:
+  - name: database
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the database the table is in.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.database
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: view
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Table name.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.view
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: uuid
+    dataType: UUID
+    dataLength: 1
+    dataTypeDisplay: uuid
+    description: Table uuid (Atomic database).
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.uuid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Current state of the refresh.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.status
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: last_success_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: nullable<datetime>
+    description: Time when the latest successful refresh started. NULL if no successful
+      refreshes happened since server startup or table creation.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.last_success_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_success_duration_ms
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<uint64>
+    description: How long the latest refresh took.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.last_success_duration_ms
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_refresh_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: nullable<datetime>
+    description: Time when the latest refresh attempt finished (if known) or started
+      (if unknown or still running). NULL if no refresh attempts happened since server
+      startup or table creation.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.last_refresh_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_refresh_replica
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "If coordination is enabled, name of the replica that made the current\
+      \ (if running) or previous (if not running) refresh attempt."
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.last_refresh_replica
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: next_refresh_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: nullable<datetime>
+    description: "Time at which the next refresh is scheduled to start, if status\
+      \ = Scheduled."
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.next_refresh_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: exception
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Error message from previous attempt if it failed.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.exception
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: retry
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: "How many failed attempts there were so far, for the current refresh.\
+      \ Not available if status is `RunningOnAnotherReplica`."
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.retry
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: progress
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: float64
+    description: "Progress of the current refresh, between 0 and 1. Not available\
+      \ if status is RunningOnAnotherReplica."
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.progress
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: read_rows
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Number of rows read by the current refresh so far. Not available
+      if status is RunningOnAnotherReplica.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.read_rows
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: read_bytes
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Number of bytes read during the current refresh. Not available if
+      status is `RunningOnAnotherReplica`.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.read_bytes
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: total_rows
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Estimated total number of rows that need to be read by the current
+      refresh. Not available if status is RunningOnAnotherReplica.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.total_rows
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: written_rows
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Number of rows written during the current refresh. Not available
+      if status is `RunningOnAnotherReplica`.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.written_rows
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: written_bytes
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Number rof bytes written during the current refresh. Not available
+      if status is `RunningOnAnotherReplica`.
+    fullyQualifiedName: test_clickhouse.default.system.view_refreshes.written_bytes
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 0514c7069e6e17c25a870c48edc2a622
+processedLineage: false
+entityStatus: Unprocessed

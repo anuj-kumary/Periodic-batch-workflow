@@ -1,0 +1,127 @@
+name: my_table
+fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table
+tableType: Regular
+columns:
+  - name: First Name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.First
+      Name
+    tags:
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.last_name
+    tags:
+      - tagFQN: General.Address
+        name: Address
+        displayName: Address new
+        description: Address of a Person.
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Date of Birth
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.Date
+      of Birth
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: 3961b5f7-dd17-457f-b2be-d9d8e10c394e
+  type: databaseSchema
+  name: reverse_ingestion_test_djvcjlpftpcpxpy
+  fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy
+  displayName: reverse_ingestion_test_djvcjlpftpcpxpy
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/3a686a15-0101-4efb-baee-bfd9a270b8d8
+tags:
+  - tagFQN: PII.Sensitive
+    name: Sensitive
+    description: "PII which if lost, compromised, or disclosed without authorization,\
+      \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+      \ to an individual."
+    style:
+      color: "#ff0000"
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 93daecd3-98f9-4dcc-8a3d-66c84eed455e
+  type: testSuite
+  name: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.testSuite
+  fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.testSuite
+  displayName: testDbxtest.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 61839f365b8faf9e4edba2cec50eae99
+processedLineage: false
+entityStatus: Approved

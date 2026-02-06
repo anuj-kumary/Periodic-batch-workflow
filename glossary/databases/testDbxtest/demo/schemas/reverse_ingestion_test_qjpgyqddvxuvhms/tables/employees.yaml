@@ -1,0 +1,105 @@
+name: employees
+fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees
+description: Updated table description
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Updated column description
+    fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees.id
+    tags:
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees.created_at
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: bc0b9455-894b-4463-ac4c-afcb493a3c43
+  type: databaseSchema
+  name: reverse_ingestion_test_qjpgyqddvxuvhms
+  fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms
+  description: Updated schema description
+  displayName: reverse_ingestion_test_qjpgyqddvxuvhms
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/6f390d5d-8493-4c40-8e2d-74795ed7aaee
+tags:
+  - tagFQN: PII.NonSensitive
+    name: NonSensitive
+    description: "PII which is easily accessible from public sources and can include\
+      \ zip code, race, gender, and date of birth."
+    style: {}
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: a5c25631-5e9b-4721-b022-44d446a1e011
+  type: testSuite
+  name: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees.testSuite
+  fullyQualifiedName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees.testSuite
+  displayName: testDbxtest.demo.reverse_ingestion_test_qjpgyqddvxuvhms.employees.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: f0a7bf110397a286d7070b2df34c0944
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,202 @@
+name: users
+fullyQualifiedName: test_clickhouse.default.system.users
+description: Contains a list of all users profiles either configured at the server
+  through a configuration file or created via SQL.
+tableType: Regular
+columns:
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: User name.
+    fullyQualifiedName: test_clickhouse.default.system.users.name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: id
+    dataType: UUID
+    dataLength: 1
+    dataTypeDisplay: uuid
+    description: User ID.
+    fullyQualifiedName: test_clickhouse.default.system.users.id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: storage
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Path to the storage of users. Configured in the access_control_path
+      parameter.
+    fullyQualifiedName: test_clickhouse.default.system.users.storage
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: auth_type
+    dataType: ARRAY
+    arrayDataType: UNKNOWN
+    dataTypeDisplay: "array<enum8<'no_password'=0,'plaintext_password'=1,'sha256_password'=2,'double_sha1_password'=3,'ldap'=4,'kerberos'=5,'ssl_certificate'=6,'bcrypt_password'=7,'ssh_key'=8,'http'=9,'jwt'=10,'scram_sha256_password'=11,'no_authentication'=12>>"
+    description: "Shows the authentication types. There are multiple ways of user\
+      \ identification: with no password, with plain text password, with SHA256-encoded\
+      \ password, with double SHA-1-encoded password or with bcrypt-encoded password."
+    fullyQualifiedName: test_clickhouse.default.system.users.auth_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: auth_params
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: Authentication parameters in the JSON format depending on the auth_type.
+    fullyQualifiedName: test_clickhouse.default.system.users.auth_params
+    tags: []
+    children: []
+    customMetrics: []
+  - name: host_ip
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: IP addresses of hosts that are allowed to connect to the ClickHouse
+      server.
+    fullyQualifiedName: test_clickhouse.default.system.users.host_ip
+    tags: []
+    children: []
+    customMetrics: []
+  - name: host_names
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: Names of hosts that are allowed to connect to the ClickHouse server.
+    fullyQualifiedName: test_clickhouse.default.system.users.host_names
+    tags: []
+    children: []
+    customMetrics: []
+  - name: host_names_regexp
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: Regular expression for host names that are allowed to connect to
+      the ClickHouse server.
+    fullyQualifiedName: test_clickhouse.default.system.users.host_names_regexp
+    tags: []
+    children: []
+    customMetrics: []
+  - name: host_names_like
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: "Names of hosts that are allowed to connect to the ClickHouse server,\
+      \ set using the LIKE predicate."
+    fullyQualifiedName: test_clickhouse.default.system.users.host_names_like
+    tags: []
+    children: []
+    customMetrics: []
+  - name: default_roles_all
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: Shows that all granted roles set for user by default.
+    fullyQualifiedName: test_clickhouse.default.system.users.default_roles_all
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: default_roles_list
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: List of granted roles provided by default.
+    fullyQualifiedName: test_clickhouse.default.system.users.default_roles_list
+    tags: []
+    children: []
+    customMetrics: []
+  - name: default_roles_except
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: All the granted roles set as default excepting of the listed ones.
+    fullyQualifiedName: test_clickhouse.default.system.users.default_roles_except
+    tags: []
+    children: []
+    customMetrics: []
+  - name: grantees_any
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: The flag that indicates whether a user with any grant option can
+      grant it to anyone.
+    fullyQualifiedName: test_clickhouse.default.system.users.grantees_any
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: grantees_list
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: The list of users or roles to which this user is allowed to grant
+      options to.
+    fullyQualifiedName: test_clickhouse.default.system.users.grantees_list
+    tags: []
+    children: []
+    customMetrics: []
+  - name: grantees_except
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: The list of users or roles to which this user is forbidden from grant
+      options to.
+    fullyQualifiedName: test_clickhouse.default.system.users.grantees_except
+    tags: []
+    children: []
+    customMetrics: []
+  - name: default_database
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the default database for this user.
+    fullyQualifiedName: test_clickhouse.default.system.users.default_database
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 70541856e4626e8308548e93549d16f6
+processedLineage: false
+entityStatus: Unprocessed

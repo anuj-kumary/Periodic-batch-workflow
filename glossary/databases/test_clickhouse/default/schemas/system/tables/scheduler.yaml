@@ -1,0 +1,334 @@
+name: scheduler
+fullyQualifiedName: test_clickhouse.default.system.scheduler
+description: Contains information and status for scheduling nodes residing on the
+  local server.
+tableType: Regular
+columns:
+  - name: resource
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Resource name
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.resource
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: path
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Path to a scheduling node within this resource scheduling hierarchy
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.path
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Type of a scheduling node.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: weight
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: float64
+    description: "Weight of a node, used by a parent node of `fair` type."
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.weight
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: priority
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: "Priority of a node, used by a parent node of 'priority' type (Lower\
+      \ value means higher priority)."
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.priority
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_active
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: Whether this node is currently active - has resource requests to
+      be dequeued and constraints satisfied.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.is_active
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: active_children
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: The number of children in active state.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.active_children
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: dequeued_requests
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: The total number of resource requests dequeued from this node.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.dequeued_requests
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: canceled_requests
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: The total number of resource requests canceled from this node.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.canceled_requests
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: dequeued_cost
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: The sum of costs (e.g. size in bytes) of all requests dequeued from
+      this node.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.dequeued_cost
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: throughput
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: float64
+    description: Current average throughput (dequeued cost per second).
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.throughput
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: canceled_cost
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: The sum of costs (e.g. size in bytes) of all requests canceled from
+      this node.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.canceled_cost
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: busy_periods
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: The total number of deactivations of this node.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.busy_periods
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: vruntime
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: nullable<float64>
+    description: For children of `fair` nodes only. Virtual runtime of a node used
+      by SFQ algorithm to select the next child to process in a max-min fair manner.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.vruntime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: system_vruntime
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: nullable<float64>
+    description: For `fair` nodes only. Virtual runtime showing `vruntime` of the
+      last processed resource request. Used during child activation as the new value
+      of `vruntime`.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.system_vruntime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: queue_length
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<uint64>
+    description: For `fifo` nodes only. Current number of resource requests residing
+      in the queue.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.queue_length
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: queue_cost
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: For fifo nodes only. Sum of costs (e.g. size in bytes) of all requests
+      residing in the queue.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.queue_cost
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: budget
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: For fifo nodes only. The number of available 'cost units' for new
+      resource requests. Can appear in case of discrepancy of estimated and real costs
+      of resource requests (e.g. after read/write failure)
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.budget
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_satisfied
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: nullable<uint8>
+    description: For constraint nodes only (e.g. `inflight_limit`). Equals to `1`
+      if all the constraint of this node are satisfied.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.is_satisfied
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inflight_requests
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: "For `inflight_limit` nodes only. The number of resource requests\
+      \ dequeued from this node, that are currently in consumption state."
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.inflight_requests
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inflight_cost
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: "For `inflight_limit` nodes only. The sum of costs (e.g. bytes) of\
+      \ all resource requests dequeued from this node, that are currently in consumption\
+      \ state."
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.inflight_cost
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_requests
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: For `inflight_limit` nodes only. Upper limit for inflight_requests
+      leading to constraint violation.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.max_requests
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_cost
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: For `inflight_limit` nodes only. Upper limit for inflight_cost leading
+      to constraint violation.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.max_cost
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_speed
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: nullable<float64>
+    description: For `bandwidth_limit` nodes only. Upper limit for bandwidth in tokens
+      per second.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.max_speed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_burst
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: nullable<float64>
+    description: For `bandwidth_limit` nodes only. Upper limit for tokens available
+      in token-bucket throttler.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.max_burst
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: throttling_us
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<int64>
+    description: For `bandwidth_limit` nodes only. Total number of microseconds this
+      node was in throttling state.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.throttling_us
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tokens
+    dataType: DOUBLE
+    dataLength: 1
+    dataTypeDisplay: nullable<float64>
+    description: For `bandwidth_limit` nodes only. Number of tokens currently available
+      in token-bucket throttler.
+    fullyQualifiedName: test_clickhouse.default.system.scheduler.tokens
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 47a710329f385b75c43cc85c3654b306
+processedLineage: false
+entityStatus: Unprocessed

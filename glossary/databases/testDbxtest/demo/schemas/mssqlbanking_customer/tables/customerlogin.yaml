@@ -1,0 +1,103 @@
+name: customerlogin
+fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin
+tableType: Regular
+columns:
+  - name: loginid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin.loginid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: passwordhash
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin.passwordhash
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 44f13822-98b8-4341-847c-8941cceff033
+  type: databaseSchema
+  name: mssqlbanking_customer
+  fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer
+  displayName: mssqlbanking_customer
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/4524a9bd-926f-4acc-b146-68100c792a78
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 04c7367b-3b44-4d28-8771-4541f06d07fe
+  type: testSuite
+  name: testDbxtest.demo.mssqlbanking_customer.customerlogin.testSuite
+  fullyQualifiedName: testDbxtest.demo.mssqlbanking_customer.customerlogin.testSuite
+  displayName: testDbxtest.demo.mssqlbanking_customer.customerlogin.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 0d008d724ed01f9fdd5fdab6d3226b96
+processedLineage: false
+entityStatus: Approved

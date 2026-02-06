@@ -1,0 +1,112 @@
+name: shared_merge_tree_outdated_parts
+fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts
+description: Contains information about all outdated (not active) parts for all SharedMergeTree
+  tables.
+tableType: Regular
+columns:
+  - name: database
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The database name where table lives in.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.database
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: table
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The table name the fetch operation was executed for.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.table
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: part_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the part fetched.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.part_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: partition_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The partition id the part belongs to.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.partition_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: outdated_since
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    description: The timestamp since which the part is considered outdated.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.outdated_since
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: replica_created_entry
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the replica which created an entry about this part.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.replica_created_entry
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: replicas_to_confirm
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: The list of replicas which need to confirm part deletion.
+    fullyQualifiedName: test_clickhouse.default.system.shared_merge_tree_outdated_parts.replicas_to_confirm
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 22ae2b7efad3decb98a0f4990e4f87ca
+processedLineage: false
+entityStatus: Unprocessed

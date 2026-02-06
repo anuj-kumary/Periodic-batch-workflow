@@ -1,0 +1,105 @@
+name: virtual_parts
+fullyQualifiedName: test_clickhouse.default.system.virtual_parts
+description: Contains information about all virtual parts for all SharedMergeTree
+  tables.
+tableType: Regular
+columns:
+  - name: database
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The database name.
+    fullyQualifiedName: test_clickhouse.default.system.virtual_parts.database
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: table
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The table name.
+    fullyQualifiedName: test_clickhouse.default.system.virtual_parts.table
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: part_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The name of the part.
+    fullyQualifiedName: test_clickhouse.default.system.virtual_parts.part_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: partition_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The identifier of the partition.
+    fullyQualifiedName: test_clickhouse.default.system.virtual_parts.partition_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: part_type
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: "enum8<'merge' = 0, 'mutation' = 1, 'current' = 2, 'drop' = 3,\
+      \ 'detach' = 4>"
+    description: The name of the operation which will produce the current part as
+      a result.
+    fullyQualifiedName: test_clickhouse.default.system.virtual_parts.part_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: part_version
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: The corresponding Keeper node version.
+    fullyQualifiedName: test_clickhouse.default.system.virtual_parts.part_version
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fda4f925b0dc6c496e3c36670414579a
+processedLineage: false
+entityStatus: Unprocessed
