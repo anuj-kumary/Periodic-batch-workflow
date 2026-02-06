@@ -1,0 +1,301 @@
+name: table_1262
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1262
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1262.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view RPT_PRD360_PARTNER_ACCREDITATION(\n\t\"\
+  BusinessUnit\",\n\t\"SysUserEmail\",\n\t\"FirstName\",\n\t\"LastName\",\n\t\"Manager\"\
+  ,\n\t\"UserCity\",\n\t\"UserLocation\",\n\t\"SysUserName\",\n\t\"UserCompany\",\n\
+  \t\"AccountSegment\",\n\t\"AccountNumber\",\n\t\"GeoCountry\",\n\t\"TerrReportingTerritoryGeo\"\
+  ,\n\t\"SysUserCompany\",\n\t\"PartnerType\",\n\t\"AccountSysID\",\n\t\"State\",\n\
+  \t\"PartnerAgreeTechnologyPartner\",\n\t\"PartnerAgreeSalesTierValue\",\n\t\"PartnerAgreePartnerServicesTierValue\"\
+  ,\n\t\"PartnerAgreePartnerSalesTierValue\",\n\t\"NumOfRows_C\",\n\t\"AcctNewPartnerType\"\
+  ,\n\t\"PartTypeResale_C\",\n\t\"PartnerTypeMSP_C\",\n\t\"PartnerTypeReferral_C\"\
+  ,\n\t\"PartnerTypeServ_C\",\n\t\"CourseType\",\n\t\"CurriculumPath\",\n\t\"CurriculumName\"\
+  ,\n\t\"LearningItemName\",\n\t\"CurriculumStatus\",\n\t\"PercentageCompletion\"\
+  ,\n\t\"UserName\",\n\t\"PersonDomain\",\n\t\"CourseDate\"\n) as -- SEMANTIC LAYER\
+  \ BEGINS\n\nSELECT \"BusinessUnit\" as \"BusinessUnit\",\n       \"SysUserEmail\"\
+  \ as \"SysUserEmail\",\n       \"SysUserFirstName\" as \"FirstName\",\n       \"\
+  SysUserLastName\" as \"LastName\",\n       \"SysUserManager\" as \"Manager\",\n\
+  \       \"SysUserCity\" as \"UserCity\",\n       \"SysUserLocation\" as \"UserLocation\"\
+  ,\n       \"SysUserName\" as \"SysUserName\",\n       \"AcctName\" as \"UserCompany\"\
+  ,\n       \"AcctNewSegment\" as \"AccountSegment\",\n       \"AcctNumber\" as \"\
+  AccountNumber\",\n       \"AcctCountry\" as \"GeoCountry\",\n       \"TerrReportingTerritoryGeo\"\
+  \ as \"TerrReportingTerritoryGeo\",\n       \"SysUserCompany\" as \"SysUserCompany\"\
+  ,\n       \"AcctPartnerType\" as \"PartnerType\",\n       \"AcctSysID\" as \"AccountSysID\"\
+  ,\n       \"SysUserState\" as \"State\",\n       \"PartnerAgreeTechnologyPartner\"\
+  \ as \"PartnerAgreeTechnologyPartner\",\n       \"PartnerAgreeSalesTierValue\" as\
+  \ \"PartnerAgreeSalesTierValue\",\n       \"PartnerAgreePartnerServicesTierValue\"\
+  \ as \"PartnerAgreePartnerServicesTierValue\",\n       \"PartnerAgreePartnerSalesTierValue\"\
+  \ as \"PartnerAgreePartnerSalesTierValue\",\n       SUM(\"NumOfRows_C\") as \"NumOfRows_C\"\
+  ,\n       \"AcctNewPartnerType\" as \"AcctNewPartnerType\",\n       \"PartTypeResale_C\"\
+  \ as \"PartTypeResale_C\",\n       \"PartnerTypeMSP_C\" as \"PartnerTypeMSP_C\"\
+  ,\n       \"PartnerTypeReferral_C\" as \"PartnerTypeReferral_C\",\n       \"PartnerTypeServ_C\"\
+  \ as \"PartnerTypeServ_C\",\n       \"CourseType\" as \"CourseType\",\n       \"\
+  CurriculumPath\" as \"CurriculumPath\",\n       \"CurriculumName\" as \"CurriculumName\"\
+  ,\n       \"LearningItemName\" as \"LearningItemName\",\n       \"CurriculumStatus\"\
+  \ as \"CurriculumStatus\",\n       \"PercentageCompletion\" as \"PercentageCompletion\"\
+  ,\n       \"UserName\" as \"UserName\",\n       \"PersonDomain\" as \"PersonDomain\"\
+  ,\n       \"CourseDate\" as \"CourseDate\"\nFROM\n  (SELECT \"Join_4\".\"BusinessUnit\"\
+  \ as \"BusinessUnit\",\n          \"Join_4\".\"SysUserEmail\" as \"SysUserEmail\"\
+  ,\n          \"Join_4\".\"SysUserFirstName\" as \"SysUserFirstName\",\n        \
+  \  \"Join_4\".\"SysUserLastName\" as \"SysUserLastName\",\n          \"Join_4\"\
+  .\"SysUserManager\" as \"SysUserManager\",\n          \"Join_4\".\"SysUserCity\"\
+  \ as \"SysUserCity\",\n          \"Join_4\".\"SysUserLocation\" as \"SysUserLocation\"\
+  ,\n          \"Join_4\".\"SysUserName\" as \"SysUserName\",\n          \"Join_4\"\
+  .\"AcctName\" as \"AcctName\",\n          \"Join_4\".\"AcctNewSegment\" as \"AcctNewSegment\"\
+  ,\n          \"Join_4\".\"AcctNumber\" as \"AcctNumber\",\n          \"Join_4\"\
+  .\"AcctCountry\" as \"AcctCountry\",\n          \"Join_4\".\"TerrReportingTerritoryGeo\"\
+  \ as \"TerrReportingTerritoryGeo\",\n          \"Join_4\".\"SysUserCompany\" as\
+  \ \"SysUserCompany\",\n          \"Join_4\".\"AcctPartnerType\" as \"AcctPartnerType\"\
+  ,\n          \"Join_4\".\"AcctSysID\" as \"AcctSysID\",\n          \"Join_4\".\"\
+  SysUserState\" as \"SysUserState\",\n          \"Join_4\".\"NumOfRows_C\" as \"\
+  NumOfRows_C\",\n          \"Projection_3\".\"PartnerAgreeTechnologyPartner\" as\
+  \ \"PartnerAgreeTechnologyPartner\",\n          \"Projection_3\".\"PartnerAgreeSalesTierValue\"\
+  \ as \"PartnerAgreeSalesTierValue\",\n          \"Projection_3\".\"PartnerAgreePartnerServicesTierValue\"\
+  \ as \"PartnerAgreePartnerServicesTierValue\",\n          \"Projection_3\".\"PartnerAgreePartnerSalesTierValue\"\
+  \ as \"PartnerAgreePartnerSalesTierValue\",\n          \"Join_4\".\"AcctNewPartnerType\"\
+  \ as \"AcctNewPartnerType\",\n          \"Projection_3\".\"PartnerAgreeReSales\"\
+  \ as \"PartnerAgreeReSales\",\n          \"Projection_3\".\"PartnerAgreeMSP\" as\
+  \ \"PartnerAgreeMSP\",\n          \"Projection_3\".\"PartnerAgreeReferral\" as \"\
+  PartnerAgreeReferral\",\n          \"Projection_3\".\"PartnerAgreeServImplemnt\"\
+  \ as \"PartnerAgreeServImplemnt\",\n          \"Projection_3\".\"PartnerAgreeServSubContrct\"\
+  \ as \"PartnerAgreeServSubContrct\",\n          \"Join_4\".\"LMSCurriType\" as \"\
+  CourseType\",\n          \"Join_4\".\"LMSCurriPathName\" as \"CurriculumPath\",\n\
+  \          \"Join_4\".\"LMSCurriName\" as \"CurriculumName\",\n          \"Join_4\"\
+  .\"LMSCarriLearningItemName\" as \"LearningItemName\",\n          \"Join_4\".\"\
+  LMSStudentCurriStatus\" as \"CurriculumStatus\",\n          \"Join_4\".\"LMSCurriCompletionPercentage\"\
+  \ as \"PercentageCompletion\",\n          \"Join_4\".\"LMSCurriUserName\" as \"\
+  UserName\",\n          \"Join_4\".\"LMSCurriPersonDomain\" as \"PersonDomain\",\n\
+  \          \"Join_4\".\"LMSCurriItemDate\" as \"CourseDate\",\n          IFF(\"\
+  PartnerAgreeReSales\" = 'random', 'random', 'random') as \"PartTypeResale_C\",\n\
+  \          IFF(\"PartnerAgreeMSP\" = 'random', 'random', 'random') as \"PartnerTypeMSP_C\"\
+  ,\n          IFF(\"PartnerAgreeReferral\" = 'random', 'random', 'random') as \"\
+  PartnerTypeReferral_C\",\n          IFF(\"PartnerAgreeServSubContrct\" = 'random',\
+  \ 'random', 'random') as \"PartnerTypeServ_C\"\n   FROM\n     (SELECT \"Join_3\"\
+  .\"BusinessUnit\" as \"BusinessUnit\",\n             \"Join_3\".\"SysUserEmail\"\
+  \ as \"SysUserEmail\",\n             \"Join_3\".\"SysUserFirstName\" as \"SysUserFirstName\"\
+  ,\n             \"Join_3\".\"SysUserLastName\" as \"SysUserLastName\",\n       \
+  \      \"Join_3\".\"SysUserManager\" as \"SysUserManager\",\n             \"Join_3\"\
+  .\"SysUserCity\" as \"SysUserCity\",\n             \"Join_3\".\"SysUserLocation\"\
+  \ as \"SysUserLocation\",\n             \"Join_3\".\"SysUserName\" as \"SysUserName\"\
+  ,\n             \"Join_3\".\"AcctName\" as \"AcctName\",\n             \"Join_3\"\
+  .\"AcctNewSegment\" as \"AcctNewSegment\",\n             \"Join_3\".\"AcctNumber\"\
+  \ as \"AcctNumber\",\n             \"Join_3\".\"AcctCountry\" as \"AcctCountry\"\
+  ,\n             \"Projection_2\".\"TerrReportingTerritoryGeo\" as \"TerrReportingTerritoryGeo\"\
+  ,\n             \"Join_3\".\"SysUserCompany\" as \"SysUserCompany\",\n         \
+  \    \"Join_3\".\"AcctPartnerType\" as \"AcctPartnerType\",\n             \"Join_3\"\
+  .\"AcctSysID\" as \"AcctSysID\",\n             \"Join_3\".\"SysUserState\" as \"\
+  SysUserState\",\n             \"Join_3\".\"AcctPartnerAgreement\" as \"AcctPartnerAgreement\"\
+  ,\n             \"Join_3\".\"AcctNewPartnerType\" as \"AcctNewPartnerType\",\n \
+  \            \"Join_3\".\"LMSCurriType\" as \"LMSCurriType\",\n             \"Join_3\"\
+  .\"LMSCurriPathName\" as \"LMSCurriPathName\",\n             \"Join_3\".\"LMSCurriName\"\
+  \ as \"LMSCurriName\",\n             \"Join_3\".\"LMSCarriLearningItemName\" as\
+  \ \"LMSCarriLearningItemName\",\n             \"Join_3\".\"LMSStudentCurriStatus\"\
+  \ as \"LMSStudentCurriStatus\",\n             \"Join_3\".\"LMSCurriCompletionPercentage\"\
+  \ as \"LMSCurriCompletionPercentage\",\n             \"Join_3\".\"LMSCurriUserName\"\
+  \ as \"LMSCurriUserName\",\n             \"Join_3\".\"LMSCurriPersonDomain\" as\
+  \ \"LMSCurriPersonDomain\",\n             \"Join_3\".\"LMSCurriItemDate\" as \"\
+  LMSCurriItemDate\",\n             'random' as \"NumOfRows_C\"\n      FROM\n    \
+  \    (SELECT \"Join_2\".\"BusinessUnit\" as \"BusinessUnit\",\n                \"\
+  Join_2\".\"SysUserEmail\" as \"SysUserEmail\",\n                \"Join_2\".\"SysUserFirstName\"\
+  \ as \"SysUserFirstName\",\n                \"Join_2\".\"SysUserLastName\" as \"\
+  SysUserLastName\",\n                \"Join_2\".\"SysUserManager\" as \"SysUserManager\"\
+  ,\n                \"Join_2\".\"SysUserCity\" as \"SysUserCity\",\n            \
+  \    \"Join_2\".\"SysUserLocation\" as \"SysUserLocation\",\n                \"\
+  Join_2\".\"SysUserName\" as \"SysUserName\",\n                \"Projection_1\".\"\
+  AcctName\" as \"AcctName\",\n                \"Projection_1\".\"AcctNewSegment\"\
+  \ as \"AcctNewSegment\",\n                \"Projection_1\".\"AcctNumber\" as \"\
+  AcctNumber\",\n                \"Projection_1\".\"AcctTerritorySysID\" as \"AcctTerritorySysID\"\
+  ,\n                \"Projection_1\".\"AcctCountry\" as \"AcctCountry\",\n      \
+  \          \"Join_2\".\"SysUserSalesAccount\" as \"SysUserSalesAccount\",\n    \
+  \            \"Join_2\".\"SysUserCompany\" as \"SysUserCompany\",\n            \
+  \    \"Projection_1\".\"AcctPartnerType\" as \"AcctPartnerType\",\n            \
+  \    \"Projection_1\".\"AcctSysID\" as \"AcctSysID\",\n                \"Join_2\"\
+  .\"SysUserState\" as \"SysUserState\",\n                \"Projection_1\".\"AcctPartnerAgreement\"\
+  \ as \"AcctPartnerAgreement\",\n                \"Projection_1\".\"AcctNewPartnerType\"\
+  \ as \"AcctNewPartnerType\",\n                \"Join_2\".\"LMSCurriType\" as \"\
+  LMSCurriType\",\n                \"Join_2\".\"LMSCurriPathName\" as \"LMSCurriPathName\"\
+  ,\n                \"Join_2\".\"LMSCurriName\" as \"LMSCurriName\",\n          \
+  \      \"Join_2\".\"LMSCarriLearningItemName\" as \"LMSCarriLearningItemName\",\n\
+  \                \"Join_2\".\"LMSStudentCurriStatus\" as \"LMSStudentCurriStatus\"\
+  ,\n                \"Join_2\".\"LMSCurriCompletionPercentage\" as \"LMSCurriCompletionPercentage\"\
+  ,\n                \"Join_2\".\"LMSCurriUserName\" as \"LMSCurriUserName\",\n  \
+  \              \"Join_2\".\"LMSCurriPersonDomain\" as \"LMSCurriPersonDomain\",\n\
+  \                \"Join_2\".\"LMSCurriItemDate\" as \"LMSCurriItemDate\"\n     \
+  \    FROM\n           (SELECT \"MappingTable\".\"BU\" as \"BusinessUnit\",\n   \
+  \                \"Join_1\".\"SysUserEmail\" as \"SysUserEmail\",\n            \
+  \       \"Join_1\".\"SysUserFirstName\" as \"SysUserFirstName\",\n             \
+  \      \"Join_1\".\"SysUserLastName\" as \"SysUserLastName\",\n                \
+  \   \"Join_1\".\"SysUserManager\" as \"SysUserManager\",\n                   \"\
+  Join_1\".\"SysUserCity\" as \"SysUserCity\",\n                   \"Join_1\".\"SysUserLocation\"\
+  \ as \"SysUserLocation\",\n                   \"Join_1\".\"SysUserName\" as \"SysUserName\"\
+  ,\n                   \"Join_1\".\"SysUserSalesAccount\" as \"SysUserSalesAccount\"\
+  ,\n                   \"Join_1\".\"SysUserCompany\" as \"SysUserCompany\",\n   \
+  \                \"Join_1\".\"SysUserState\" as \"SysUserState\",\n            \
+  \       \"Join_1\".\"LMSCurriType\" as \"LMSCurriType\",\n                   \"\
+  Join_1\".\"LMSCurriPathName\" as \"LMSCurriPathName\",\n                   \"Join_1\"\
+  .\"LMSCurriName\" as \"LMSCurriName\",\n                   \"Join_1\".\"LMSCarriLearningItemName\"\
+  \ as \"LMSCarriLearningItemName\",\n                   \"Join_1\".\"LMSStudentCurriStatus\"\
+  \ as \"LMSStudentCurriStatus\",\n                   \"Join_1\".\"LMSCurriCompletionPercentage\"\
+  \ as \"LMSCurriCompletionPercentage\",\n                   \"Join_1\".\"LMSCurriUserName\"\
+  \ as \"LMSCurriUserName\",\n                   \"Join_1\".\"LMSCurriPersonDomain\"\
+  \ as \"LMSCurriPersonDomain\",\n                   \"Join_1\".\"LMSCurriItemDate\"\
+  \ as \"LMSCurriItemDate\"\n            FROM\n              (SELECT \"SYSUSER\".\"\
+  SysUserEmail\" as \"SysUserEmail\",\n                      \"SYSUSER\".\"SysUserFirstName\"\
+  \ as \"SysUserFirstName\",\n                      \"SYSUSER\".\"SysUserLastName\"\
+  \ as \"SysUserLastName\",\n                      \"SYSUSER\".\"SysUserManager\"\
+  \ as \"SysUserManager\",\n                      \"SYSUSER\".\"SysUserCity\" as \"\
+  SysUserCity\",\n                      \"SYSUSER\".\"SysUserLocation\" as \"SysUserLocation\"\
+  ,\n                      \"SYSUSER\".\"SysUserName\" as \"SysUserName\",\n     \
+  \                 \"SYSUSER\".\"SysUserSalesAccount\" as \"SysUserSalesAccount\"\
+  ,\n                      \"SYSUSER\".\"SysUserCompany\" as \"SysUserCompany\",\n\
+  \                      \"SYSUSER\".\"SysUserState\" as \"SysUserState\",\n     \
+  \                 \"Union_1\".\"LMSCurriType\" as \"LMSCurriType\",\n          \
+  \            \"Union_1\".\"LMSCurriPathName\" as \"LMSCurriPathName\",\n       \
+  \               \"Union_1\".\"LMSCurriName\" as \"LMSCurriName\",\n            \
+  \          \"Union_1\".\"LMSCarriLearningItemName\" as \"LMSCarriLearningItemName\"\
+  ,\n                      \"Union_1\".\"LMSStudentCurriStatus\" as \"LMSStudentCurriStatus\"\
+  ,\n                      \"Union_1\".\"LMSCurriCompletionPercentage\" as \"LMSCurriCompletionPercentage\"\
+  ,\n                      \"Union_1\".\"LMSCurriUserName\" as \"LMSCurriUserName\"\
+  ,\n                      \"Union_1\".\"LMSCurriPersonDomain\" as \"LMSCurriPersonDomain\"\
+  ,\n                      \"Union_1\".\"LMSCurriItemDate\" as \"LMSCurriItemDate\"\
+  \n               FROM\n                 (SELECT \"SysUserEmail\" as \"SysUserEmail\"\
+  ,\n                         \"SysUserFirstName\" as \"SysUserFirstName\",\n    \
+  \                     \"SysUserLastName\" as \"SysUserLastName\",\n            \
+  \             \"SysUserManager\" as \"SysUserManager\",\n                      \
+  \   \"SysUserCity\" as \"SysUserCity\",\n                         \"SysUserLocation\"\
+  \ as \"SysUserLocation\",\n                         \"SysUserName\" as \"SysUserName\"\
+  ,\n                         \"SysUserSalesAccount\" as \"SysUserSalesAccount\",\n\
+  \                         \"SysUserCompany\" as \"SysUserCompany\",\n          \
+  \               \"SysUserState\" as \"SysUserState\",\n                        \
+  \ UPPER(\"SysUserEmail\") as \"UserNameCC\"\n                  FROM \"ODS_LS\".\"\
+  SURF\".\"SYS_USER\")\"SYSUSER\"\n               RIGHT JOIN\n                 (SELECT\
+  \ *\n                  FROM\n                    (SELECT \"LMSCurriType\" as \"\
+  LMSCurriType\",\n                            \"LMSCurriPathName\" as \"LMSCurriPathName\"\
+  ,\n                            \"LMSCurriName\" as \"LMSCurriName\",\n         \
+  \                   \"LMSCarriLearningItemName\" as \"LMSCarriLearningItemName\"\
+  ,\n                            \"LMSStudentCurriStatus\" as \"LMSStudentCurriStatus\"\
+  ,\n                            \"LMSCurriCompletionPercentage\" as \"LMSCurriCompletionPercentage\"\
+  ,\n                            \"LMSCurriUserName\" as \"LMSCurriUserName\",\n \
+  \                           \"LMSCurriPersonDomain\" as \"LMSCurriPersonDomain\"\
+  ,\n                            \"LMSCurriItemDate\" as \"LMSCurriItemDate\"\n  \
+  \                   FROM\n                       (SELECT \"LMSCurriType\" as \"\
+  LMSCurriType\",\n                               \"LMSCurriPathName\" as \"LMSCurriPathName\"\
+  ,\n                               \"LMSCurriName\" as \"LMSCurriName\",\n      \
+  \                         \"LMSCarriLearningItemName\" as \"LMSCarriLearningItemName\"\
+  ,\n                               \"LMSStudentCurriStatus\" as \"LMSStudentCurriStatus\"\
+  ,\n                               \"LMSCurriCompletionPercentage\" as \"LMSCurriCompletionPercentage\"\
+  ,\n                               \"LMSCurriUserName\" as \"LMSCurriUserName\",\n\
+  \                               \"LMSCurriPersonDomain\" as \"LMSCurriPersonDomain\"\
+  ,\n                               \"LMSCurriItemDate\" as \"LMSCurriItemDate\"\n\
+  \                        FROM \"ODS_LS\".\"SURF\".\"U_LMS_CURRICULUM_DATA\"\n  \
+  \                      WHERE \"LMSCurriPathName\" = 'random' )\"LMS\"\n        \
+  \             UNION ALL SELECT distinct \"CurrTypeSaleSolve\" as \"LMSCurriType\"\
+  ,\n                                      \"Path_C\" as \"LMSCurriPathName\",\n \
+  \                                     \"CurrNameSellSolve\" as \"LMSCurriName\"\
+  ,\n                                      \"LMSRegisCourseTitle\" as \"LMSCarriLearningItemName\"\
+  ,\n                                      'random' as \"LMSStudentCurriStatus\",\n\
+  \                                      'random' as \"LMSCurriCompletionPercentage\"\
+  ,\n                                      \"LMSRegisPersUserName\" as \"LMSCurriUserName\"\
+  ,\n                                      \"LMSPersonDomain\" as \"LMSCurriPersonDomain\"\
+  ,\n                                      \"LMSCurrAcquiredOn\" as \"LMSCurriItemDate\"\
+  \n                     FROM\n                       (SELECT \"Path_C\" as \"Path_C\"\
+  ,\n                               \"LMSRegisCourseID\" as \"LMSRegisCourseID\",\n\
+  \                               \"LMSRegisCourseTitle\" as \"LMSRegisCourseTitle\"\
+  ,\n                               \"LMSRegisPerOrganizationName\" as \"LMSRegisPerOrganizationName\"\
+  ,\n                               \"LMSRegisPerFullName\" as \"LMSRegisPerFullName\"\
+  ,\n                               \"LMSRegisPersUserName\" as \"LMSRegisPersUserName\"\
+  ,\n                               \"LMSRegisCountry\" as \"LMSRegisCountry\",\n\
+  \                               \"LMSCurrAcquiredOn\" as \"LMSCurrAcquiredOn\",\n\
+  \                               \"LMSPersonDomain\" as \"LMSPersonDomain\",\n  \
+  \                             'random' as \"CurrTypeSaleSolve\",\n             \
+  \                  'random' as \"CurrNameSellSolve\"\n                        FROM\
+  \ \"CDL_LS\".\"PARTNER_RPT\".\"RPT_PRD360_SELL_PRESALES_ACCREDITATION\")\"SELL_SOLVE\"\
+  ))\"Union_1\" ON \"SYSUSER\".\"UserNameCC\" = \"Union_1\".\"LMSCurriUserName\")\"\
+  Join_1\"\n            LEFT JOIN\n              (SELECT \"DV_U_TYPE\" as \"DV_U_TYPE\"\
+  ,\n                      \"U_CURRICULUM_PATH_NAME\" as \"U_CURRICULUM_PATH_NAME\"\
+  ,\n                      \"U_CURRICULUM_NAME\" as \"U_CURRICULUM_NAME\",\n     \
+  \                 \"U_CURRICULA_LEARNING_ITEM_NAME\" as \"U_CURRICULA_LEARNING_ITEM_NAME\"\
+  ,\n                      \"BU\" as \"BU\"\n               FROM \"RDS\".\"SURF\"\
+  .\"TBLLMS_SURF_BU_MAPPING\")\"MappingTable\" ON \"Join_1\".\"LMSCurriType\" = \"\
+  MappingTable\".\"DV_U_TYPE\"\n            AND \"Join_1\".\"LMSCurriPathName\" =\
+  \ \"MappingTable\".\"U_CURRICULUM_PATH_NAME\"\n            AND \"Join_1\".\"LMSCurriName\"\
+  \ = \"MappingTable\".\"U_CURRICULUM_NAME\"\n            AND \"Join_1\".\"LMSCarriLearningItemName\"\
+  \ = \"MappingTable\".\"U_CURRICULA_LEARNING_ITEM_NAME\")\"Join_2\"\n         LEFT\
+  \ JOIN\n           (SELECT \"AcctName\" as \"AcctName\",\n                   \"\
+  AcctNewSegment\" as \"AcctNewSegment\",\n                   \"AcctNumber\" as \"\
+  AcctNumber\",\n                   \"AcctTerritorySysID\" as \"AcctTerritorySysID\"\
+  ,\n                   \"AcctCountry\" as \"AcctCountry\",\n                   \"\
+  AcctSysID\" as \"AcctSysID\",\n                   \"AcctPartnerType\" as \"AcctPartnerType\"\
+  ,\n                   \"AcctPartnerAgreement\" as \"AcctPartnerAgreement\",\n  \
+  \                 \"AcctNewPartnerType\" as \"AcctNewPartnerType\"\n           \
+  \ FROM \"ODS_LS\".\"SURF\".\"SALES_ACCOUNT\")\"Projection_1\" ON \"Join_2\".\"SysUserSalesAccount\"\
+  \ = \"Projection_1\".\"AcctSysID\")\"Join_3\"\n      LEFT JOIN\n        (SELECT\
+  \ \"TerrSysID\" as \"TerrSysID\",\n                \"TerrReportingTerritoryGeo\"\
+  \ as \"TerrReportingTerritoryGeo\"\n         FROM \"EDW_LS\".\"PRODUCT_EM\".\"EM_SALES_TERRITORY\"\
+  )\"Projection_2\" ON \"Join_3\".\"AcctTerritorySysID\" = \"Projection_2\".\"TerrSysID\"\
+  )\"Join_4\"\n   INNER JOIN\n     (SELECT \"PartnerAgreeTechnologyPartner\" as \"\
+  PartnerAgreeTechnologyPartner\",\n             \"PartnerAgreeSysID\" as \"PartnerAgreeSysID\"\
+  ,\n             \"PartnerAgreeSalesTierValue\" as \"PartnerAgreeSalesTierValue\"\
+  ,\n             \"PartnerAgreePartnerServicesTierValue\" as \"PartnerAgreePartnerServicesTierValue\"\
+  ,\n             \"PartnerAgreePartnerSalesTierValue\" as \"PartnerAgreePartnerSalesTierValue\"\
+  ,\n             \"PartnerAgreeReSales\" as \"PartnerAgreeReSales\",\n          \
+  \   \"PartnerAgreeMSP\" as \"PartnerAgreeMSP\",\n             \"PartnerAgreeReferral\"\
+  \ as \"PartnerAgreeReferral\",\n             \"PartnerAgreeServImplemnt\" as \"\
+  PartnerAgreeServImplemnt\",\n             \"PartnerAgreeServSubContrct\" as \"PartnerAgreeServSubContrct\"\
+  \n      FROM \"ODS_LS\".\"SURF\".\"U_PARTNER_AGREEMENT\")\"Projection_3\" ON \"\
+  Join_4\".\"AcctPartnerAgreement\" = \"Projection_3\".\"PartnerAgreeSysID\")Join_5\n\
+  GROUP BY \"BusinessUnit\",\n         \"SysUserEmail\",\n         \"FirstName\",\n\
+  \         \"LastName\",\n         \"Manager\",\n         \"UserCity\",\n       \
+  \  \"UserLocation\",\n         \"SysUserName\",\n         \"UserCompany\",\n   \
+  \      \"AccountSegment\",\n         \"AccountNumber\",\n         \"GeoCountry\"\
+  ,\n         \"TerrReportingTerritoryGeo\",\n         \"SysUserCompany\",\n     \
+  \    \"PartnerType\",\n         \"AccountSysID\",\n         \"State\",\n       \
+  \  \"PartnerAgreeTechnologyPartner\",\n         \"PartnerAgreeSalesTierValue\",\n\
+  \         \"PartnerAgreePartnerServicesTierValue\",\n         \"PartnerAgreePartnerSalesTierValue\"\
+  ,\n         \"AcctNewPartnerType\",\n         \"PartTypeResale_C\",\n         \"\
+  PartnerTypeMSP_C\",\n         \"PartnerTypeReferral_C\",\n         \"PartnerTypeServ_C\"\
+  ,\n         \"CourseType\",\n         \"CurriculumPath\",\n         \"CurriculumName\"\
+  ,\n         \"LearningItemName\",\n         \"CurriculumStatus\",\n         \"PercentageCompletion\"\
+  ,\n         \"UserName\",\n         \"PersonDomain\",\n         \"CourseDate\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

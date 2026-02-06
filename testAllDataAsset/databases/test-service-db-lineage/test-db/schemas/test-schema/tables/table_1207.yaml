@@ -1,0 +1,893 @@
+name: table_1207
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1207
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1207.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view V_PRODUCT_GEN_AI(\n\t\"RecordType\",\n\t\
+  \"SalesQuarter\",\n\t\"BUGroup\",\n\t\"BUWorkFlow\",\n\t\"AccountNumber\",\n\t\"\
+  AccountName\",\n\t\"LineItemNumber\",\n\t\"OpportunityNumber\",\n\t\"OpportunityName\"\
+  ,\n\t\"OpportunityStage\",\n\t\"OpportunityType\",\n\t\"OpportunityCloseDate\",\n\
+  \t\"PipelineStatus\",\n\t\"OpportunityParentName\",\n\t\"OpportunityParentNumber\"\
+  ,\n\t\"OpportunityParentAccount\",\n\t\"ProductFamily3\",\n\t\"ProductCode\",\n\t\
+  \"ReportingTerritoryGeo\",\n\t\"OpportunityMajorArea\",\n\t\"OpportunityArea\",\n\
+  \t\"OpportunityRegion\",\n\t\"OpportunityDistrict\",\n\t\"OpportunityTerritory\"\
+  ,\n\t\"AccountIndustryCategory\",\n\t\"AcctIndustry\",\n\t\"TerritorySysID\",\n\t\
+  \"OpportunityPipelineSourced\",\n\t\"OpportunityParentPipelineSourced\",\n\t\"OpportunityParentStage\"\
+  ,\n\t\"MarqueeAccount\",\n\t\"ParentMarqueeAccount\",\n\t\"OpportunityForeCastType\"\
+  ,\n\t\"OpportunityParentType\",\n\t\"OpportunityParentCloseDate\",\n\t\"ProductProgramType\"\
+  ,\n\t\"ProductDescription\",\n\t\"Stage\",\n\t\"OptyParentStage\",\n\t\"UserBin\"\
+  ,\n\t\"UserID\",\n\t\"QuarterFlag\",\n\t\"PipelineNNACV\",\n\t\"ClosedNNACV\",\n\
+  \t\"WeightedNNACV\",\n\tTAM,\n\t\"RenewalDate\",\n\t\"RenewalQuarter\",\n\t\"USDRenewalACV\"\
+  ,\n\t\"AcctSalesProgram\",\n\tCACV,\n\tCACV_FX,\n\t\"PTProgramName\",\n\t\"PTSubProgramName\"\
+  ,\n\t\"No of Optys\",\n\t\"Gen AI PipelineNNACV\",\n\t\"Expect\",\n\t\"Upside\"\
+  ,\n\t\"Commit\",\n\t\"Submitted\",\n\t\"AccountNewSegment\",\n\t\"SalesRep\",\n\t\
+  \"Solution Consultant\",\n\t\"MaturePipeline\",\n\t\"DealPackageType\",\n\t\"OpportunityParentPipelineStatus\"\
+  ,\n\t\"AccountGeo\",\n\t\"AccountMajorArea\",\n\t\"AccountArea\",\n\t\"AccountRegion\"\
+  ,\n\t\"AccountDistrict\",\n\t\"AccountTerritory\",\n\t\"4RQFlag\",\n\t\"ParentCOManaged\"\
+  ,\n\t\"ParentDynamicsGUID\",\n\t\"OptyParentSysID\",\n\t\"AcctKey\",\n\t\"ExistingCustomer\"\
+  ,\n\t\"PipelineNNACV_FX\",\n\t\"ClosedNNACV_FX\",\n\t\"WeightedNNACV_FX\",\n\t\"\
+  CommitNNACV_FX\",\n\t\"ExpectNNACV_FX\",\n\t\"UpsideNNACV_FX\",\n\t\"SubmittedNNACV_FX\"\
+  ,\n\t\"RenewalACV_FX\",\n\t\"Account_closed_NNACV\",\n\tCL_FLAG,\n\t\"Gen AI ClosedNNACV\"\
+  ,\n\t\"Gen AI OpenPipeline\",\n\t\"Product Package\",\n\t\"ClosedAccountFlag\",\n\
+  \t\"TotalAccountFlag\",\n\t\"OpenAccountFlag\",\n\t\"Geo_MajorArea\",\n\t\"OptyParentCreatedOnQuarter\"\
+  ,\n\tTERRITORY_ID,\n\tGEO_ID,\n\t\"Source\",\n\t\"Target\",\n\t\"GenAITarget\",\n\
+  \t\"DSR_Flag\",\n\t\"GenAI Searches\",\n\t\"GenAI Summarizations\",\n\t\"Resolution\
+  \ Notes Generated\",\n\t\"Code/Flow Assists\",\n\t\"#LLM Executions\",\n\t\"GenAI\
+  \ Searches_Value\",\n\t\"GenAI Summarizations_Value\",\n\t\"Resolution Notes Generated_Value\"\
+  ,\n\t\"Code/Flow Assists_Value\",\n\t\"#LLM Executions_Value\",\n\tMONTH_FLAG,\n\
+  \tSNAPSHOT_DATE,\n\t\"K24_Registered\",\n\t\"Now_Assist_Certified\",\n\t\"Now_Assist_Engaged\"\
+  ,\n\t\"AcctACVBanding\",\n\t\"OptyParentCreatedOn\",\n\t\"AcctACVRange\",\n\t\"\
+  EarlyForecastFlag\",\n\t\"ContractDataCenter\",\n\t\"ProductName\"\n) as\n/*\nREVISION\
+  \ HISTORY:\n* 2023-10-30 - Usha Vedantham - Create view EM_PRODUCT_GEN_AI for Gen\
+  \ AI\n* 2023-10-31 - Usha Vedantham - Added \"OpportunityParentPipelineSourced\"\
+  \ logic\n* 2023-11-01 - Usha Vedantham - Added Territory Level Security UserBin\
+  \ , UserID\n*/\nWITH\nCTE_PRODUCT_A AS (SELECT * FROM EDW_LS.\"PRODUCT_EM\".\"PRODUCT_DASHBOARD_SUMMARY_A\"\
+  ),\nCTE_PRODUCT_B AS (SELECT * FROM EDW_LS.\"PRODUCT_EM\".\"PRODUCT_DASHBOARD_SUMMARY_B\"\
+  ),\nGEN_AI_CORE_DATA AS (\nSELECT fd.*,\"ProductProgramType\",\"ProductDescription\"\
+  \nFROM\n    CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\" fd\nLEFT JOIN\n \
+  \   ODS_LS.\"SURF\".\"SALES_PRODUCT\" sp ON sp.\"ProductSysID\" = fd.\"ProductSysID\"\
+  \nWHERE\n    \"RecordType\" = 'random'\n    AND ( \"ProductProgramType\" = 'random'\n\
+  \        OR LOWER(\"ProductDescription\") LIKE 'random'\n        OR LOWER(\"ProductDescription\"\
+  ) LIKE 'random'\n        OR LOWER(\"ProductDescription\") LIKE 'random'\n      \
+  \  OR LOWER(\"ProductDescription\") LIKE 'random'\n        OR LOWER(\"ProductDescription\"\
+  ) LIKE 'random'\n        OR LOWER(\"ProductDescription\") LIKE 'random' ))\n\nSELECT\n\
+  \    'random' AS \"RecordType\",\n    \"SalesQuarter\",\n    \"BUGroup\",\n    \"\
+  BUWorkFlow\",\n    \"AccountNumber\",\n    \"AccountName\",\n    \"LineItemNumber\"\
+  ,\n    \"OpportunityNumber\",\n    \"OpportunityName\",\n    \"OpportunityStage\"\
+  ,\n    \"OpportunityType\",\n    \"OpportunityCloseDate\",\n    \"PipelineStatus\"\
+  ,\n    CASE\n        WHEN \"Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentName\"\
+  \n        ELSE \"OpportunityName\"\n    END AS \"OpportunityParentName\",\n    CASE\n\
+  \        WHEN \"Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentNumber\"\n\
+  \        ELSE \"OpportunityNumber\"\n    END AS \"OpportunityParentNumber\",\n \
+  \   CASE\n        WHEN \"Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentAccount\"\
+  \n        ELSE \"AccountName\"\n    END AS \"OpportunityParentAccount\",\n    \"\
+  ProductFamily3\",\n    \"ProductCode\",\n    \"ReportingTerritoryGeo\",\n    \"\
+  OpportunityMajorArea\",\n    \"OpportunityArea\",\n    \"OpportunityRegion\",\n\
+  \    \"OpportunityDistrict\",\n    \"OpportunityTerritory\",\n    \"AccountIndustryCategory\"\
+  ,\n    \"AcctIndustry\",\n    \"TerritorySysID\",\n    \"OpportunityPipelineSourced\"\
+  ,\n    'random' as  \"OpportunityParentPipelineSourced\",\n    CASE\n        WHEN\
+  \ \"Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentStage\"\n        ELSE\
+  \ \"OpportunityStage\"\n    END AS \"OpportunityParentStage\",\n    \"MarqueeAccount\"\
+  ,\n    CASE\n        WHEN \"Quarter\" = \"ParentQuarter\" THEN \"ParentMarqueeAccount\"\
+  \n        ELSE \"MarqueeAccount\"\n    END AS \"ParentMarqueeAccount\",\n    \"\
+  OpportunityForeCastType\",\n    CASE\n        WHEN \"Quarter\" = \"ParentQuarter\"\
+  \ THEN \"OpportunityParentType\"\n        ELSE \"OpportunityType\"\n    END AS \"\
+  OpportunityParentType\",\n    CASE\n        WHEN \"Quarter\" = \"ParentQuarter\"\
+  \ THEN \"OpportunityParentCloseDate\"\n        ELSE \"OpportunityCloseDate\"\n \
+  \   END AS \"OpportunityParentCloseDate\",\n    \"ProductProgramType\",\n    \"\
+  ProductDescription\",\n    CASE\n        WHEN \"Quarter\" = \"ParentQuarter\" THEN\n\
+  \            (CASE\n                WHEN LEFT(\"OpportunityParentStage\", 'random')\
+  \ = 'random' THEN 'random'\n                ELSE 'random'\n            END)\n  \
+  \      WHEN LEFT(\"OpportunityStage\", 'random') = 'random' THEN 'random'\n    \
+  \    ELSE 'random'\n    END AS \"Stage\",\n    CASE\n        WHEN \"Quarter\" =\
+  \ \"ParentQuarter\" THEN\n            (CASE\n                WHEN LEFT(\"OpportunityParentStage\"\
+  , 'random') = 'random' THEN LEFT(\"OpportunityParentStage\", 'random') || RIGHT(\"\
+  OpportunityParentStage\", 'random')\n                WHEN LEFT(\"OpportunityParentStage\"\
+  , 'random') = 'random' THEN LEFT(\"OpportunityParentStage\", 'random') || RIGHT(\"\
+  OpportunityParentStage\", 'random')\n                ELSE LEFT(\"OpportunityParentStage\"\
+  , 'random') || RIGHT(\"OpportunityParentStage\", 'random')\n            END)\n \
+  \       WHEN LEFT(\"OpportunityStage\", 'random') = 'random' THEN LEFT(\"OpportunityStage\"\
+  , 'random') || RIGHT(\"OpportunityStage\", 'random')\n        WHEN LEFT(\"OpportunityStage\"\
+  , 'random') = 'random' THEN LEFT(\"OpportunityStage\", 'random') || RIGHT(\"OpportunityStage\"\
+  , 'random')\n        ELSE LEFT(\"OpportunityStage\", 'random') || RIGHT(\"OpportunityStage\"\
+  , 'random')\n    END AS \"OptyParentStage\",\n    \"UserBin\",\n    \"UserID\",\n\
+  \    \"QuarterFlag\",\n    \"PipelineNNACV\",\n    \"ClosedNNACV\",\n    \"WeightedNNACV\"\
+  ,\n    \"TAM\",\n    \"RenewalDate\",\n    \"RenewalQuarter\",\n    \"USDRenewalACV\"\
+  ,\n    'random' AS \"AcctSalesProgram\",\n    'random' AS CACV,\n    'random' AS\
+  \ CACV_FX,\n    'random' AS \"PTProgramName\",\n    'random' AS \"PTSubProgramName\"\
+  ,\n    'random' AS \"No of Optys\",\n    'random' AS \"Gen AI PipelineNNACV\",\n\
+  \    \"Expect\", -- Build\n    \"Upside\",\n    \"Commit\",\n    \"Submitted\",\n\
+  \    \"AccountNewSegment\",\n    \"SalesRep\",\n    \"Solution Consultant\",\n \
+  \   \"MaturePipeline\",\n    'random' AS \"DealPackageType\",\n    CASE\n      \
+  \  WHEN \"Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentPipelineStatus\"\
+  \n        ELSE \"PipelineStatus\"\n    END AS \"OpportunityParentPipelineStatus\"\
+  ,\n    \"AccountGeo\",\n    \"AccountMajorArea\",\n    \"AccountArea\",\n    \"\
+  AccountRegion\",\n    \"AccountDistrict\",\n    \"AccountTerritory\",\n    \"4RQFlag\"\
+  ,\n    CASE\n        WHEN \"SalesQuarter\" = \"ParentQuarter\" THEN \"ParentCOManaged\"\
+  \n        ELSE \"COManaged\"\n    END AS \"ParentCOManaged\",\n    CASE\n      \
+  \  WHEN \"SalesQuarter\" = \"ParentQuarter\" THEN \"ParentDynamicsGUID\"\n     \
+  \   ELSE \"DynamicsGUID\"\n    END AS \"ParentDynamicsGUID\",\n    CASE\n      \
+  \  WHEN \"SalesQuarter\" = \"ParentQuarter\" THEN \"OptyParentSysID\"\n        ELSE\
+  \ \"OpportunitySysID\"\n    END AS \"OptyParentSysID\",\n    \"AcctKey\",\n    \"\
+  ExistingCustomer\",\n    \"PipelineNNACV_FX\",\n    \"ClosedNNACV_FX\",\n    \"\
+  WeightedNNACV_FX\",\n    \"CommitNNACV_FX\",\n    \"ExpectNNACV_FX\",\n    \"UpsideNNACV_FX\"\
+  ,\n    \"SubmittedNNACV_FX\",\n    \"RenewalACV_FX\",\n    \"Account_closed_NNACV\"\
+  ,\n     CASE\n       --  WHEN \"Account_closed_NNACV\" > 0 THEN 'Yes'  --commened\
+  \ to calculate flag at  BU level instead of Total NNACV\n           WHEN \"ClosedNNACV\"\
+  \ > 'random'    THEN 'random'\n        ELSE 'random'\n    END AS \"CL_FLAG\",\n\
+  \    'random' AS \"Gen AI ClosedNNACV\",\n    'random' AS \"Gen AI OpenPipeline\"\
+  ,\n    \"Product Package\",\n    'random' AS \"ClosedAccountFlag\",\n    'random'\
+  \ AS \"TotalAccountFlag\",\n    'random' AS \"OpenAccountFlag\",\n    CONCAT(\"\
+  ReportingTerritoryGeo\", 'random', \"OpportunityMajorArea\") AS \"Geo_MajorArea\"\
+  ,\n    'random' \"OptyParentCreatedOnQuarter\",\n\tTERRITORY_ID,\n\tGEO_ID,\n  \
+  \     'random' as  \"Source\",\n 'random' as \"Target\",\n 'random' as \"GenAITarget\"\
+  ,\n 'random' as \"DSR_Flag\",\n\"GenAI Searches\",\n\"GenAI Summarizations\",\n\"\
+  Resolution Notes Generated\",\n\"Code/Flow Assists\",\n\"#LLM Executions\",\n 'random'\
+  \ as \"GenAI Searches_Value\",\n 'random' as \"GenAI Summarizations_Value\",\n 'random'\
+  \ as \"Resolution Notes Generated_Value\",\n 'random' as \"Code/Flow Assists_Value\"\
+  ,\n 'random' AS  \"#LLM Executions_Value\",\n'random' as  MONTH_FLAG,\n'random'\
+  \ as \"SNAPSHOT_DATE\",\n\"K24_Registered\",\n  \"Now_Assist_Certified\",\n  \"\
+  Now_Assist_Engaged\",\n   \"AcctACVBanding\",\n   \"OptyParentCreatedOn\",\n   CASE\
+  \ WHEN \t\"AcctACVBanding\"='random' THEN 'random'\n            WHEN \t\"AcctACVBanding\"\
+  ='random' THEN 'random'\n            WHEN \t\"AcctACVBanding\"='random' THEN 'random'\n\
+  \            WHEN    \"AcctACVBanding\"='random' THEN 'random'\n   END AS \"AcctACVRange\"\
+  \    ,\n   CASE WHEN UPPER(\"ProductFamily3\") like 'random' THEN 'random' ELSE\
+  \ 'random' END AS \"EarlyForecastFlag\",\n   \"ContractDataCenter\",\n   \"ProductName\"\
+  \nFROM\n    (SELECT\n        fd.\"SalesQuarter\",\n        fd.\"SalesQuarter\" AS\
+  \ \"Quarter\",\n        CASE\n            WHEN \"OpportunityParentStage\" IN ('random',\
+  \ 'random', 'random')\n                 OR (\"OpportunityParentStage\" = 'random'\
+  \ AND \"OpportunityParentType\" IN ('random', 'random'))\n            THEN 'random'\n\
+  \            ELSE RIGHT(YEAR(\"OpportunityParentCloseDate\") || 'random' || QUARTER(\"\
+  OpportunityParentCloseDate\"), 'random')\n        END AS \"ParentQuarter\",\n  \
+  \      fd.\"BUGroup\",\n        fd.\"BUWorkFlow\",\n        fd.\"AccountNumber\"\
+  ,\n        \"AccountName\",\n        \"LineItemNumber\",\n        \"OpportunityNumber\"\
+  ,\n        \"OpportunityName\",\n        \"OpportunityStage\",\n        \"OpportunityType\"\
+  ,\n        \"OpportunityCloseDate\",\n        \"PipelineStatus\",\n        fd.\"\
+  ProductBusinessUnit\",\n        fd.\"OpportunityParentName\",\n        fd.\"OpportunityParentNumber\"\
+  ,\n        fd.\"OpportunityParentAccount\",\n        \"ProductFamily3\",\n     \
+  \   fd.\"ProductCode\",\n        fd.\"ReportingTerritoryGeo\",\n        fd.\"OpportunityMajorArea\"\
+  ,\n        fd.\"OpportunityArea\",\n        fd.\"OpportunityRegion\",\n        fd.\"\
+  OpportunityDistrict\",\n        fd.\"OpportunityTerritory\",\n        fd.\"AccountIndustryCategory\"\
+  ,\n        fd.\"AccountIndustry\" AS \"AcctIndustry\",\n        fd.\"TerritorySysID_CC\"\
+  \ AS \"TerritorySysID\",\n        fd.\"OptyItemLineCreatedBy\" as \"OpportunityPipelineSourced\"\
+  ,\n        fd.\"OptyItemLineCreatedBy\" AS \"OpportunityPipelineSourced_CC\",\n\
+  \        fd.\"OpportunityParentStage\",\n        fd.\"MarqueeAccount\",\n      \
+  \  fd.\"ParentMarqueeAccount\",\n        fd.\"OpportunityForeCastType\",\n     \
+  \   fd.\"OpportunityParentType\",\n        fd.\"OpportunityParentCloseDate\",\n\
+  \        fd.\"OptyParentCOManaged\" AS \"ParentCOManaged\",\n         fd.\"OptyCOManaged\"\
+  \ AS \"COManaged\",\n         fd.\"OptyParentDynamicsGUID\" AS \"ParentDynamicsGUID\"\
+  ,\n         fd.\"OptyDynamicsGUID\" AS \"DynamicsGUID\",\n         fd.\"OptyParentSysID\"\
+  ,\n         fd.\"OpportunitySysID\",\n        'random'  AS \"OpportunityParentPipelineSourced\"\
+  ,\n        \"ProductProgramType\",\n       \"ProductDescription\",\n        si.\"\
+  UserBin\",\n        si.\"UserID\",\n         CASE\n          WHEN fd.\"SalesQuarter\"\
+  \ = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()), 'random'))\
+  \ ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(convert_timezone('random',CURRENT_TIMESTAMP()))\
+  \ ||'random'|| QUARTER(convert_timezone('random',CURRENT_TIMESTAMP())), 'random')\
+  \ THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN fd.\"SalesQuarter\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           ELSE 'random'\n       END AS \"\
+  QuarterFlag\",\n        SUM(\"USDNetNewACV\") AS \"PipelineNNACV\",\n        SUM(\"\
+  Closed\") AS \"ClosedNNACV\",\n        SUM(\"USDWeightedACV\") AS \"WeightedNNACV\"\
+  ,\n        SUM(\"TAM\") AS \"TAM\",\n         \"RenewalDate\",\n     CONCAT(\n \
+  \           RIGHT(YEAR( \"RenewalDate\" ),'random'),\n            'random',\n  \
+  \          CEIL(EXTRACT(MONTH FROM  \"RenewalDate\" ) / 'random')\n        ) AS\
+  \  \"RenewalQuarter\",\n     SUM(ar.\"RenewalACV\") AS  \"USDRenewalACV\",\n   \
+  \  SUM(fd.\"Expect\") AS \"Expect\", -- Build\n     SUM(fd.\"Upside\") AS \"Upside\"\
+  ,\n     SUM(fd.\"Commit\") AS \"Commit\",\n    SUM(fd.\"Submitted\") AS \"Submitted\"\
+  ,\n     \"AccountNewSegment\",\n      sa.\"AcctPrimarySalesRep\" AS \"SalesRep\"\
+  ,\n          sa.\"AcctSolutionConsultant\" AS \"Solution Consultant\",\n       \
+  \       SUM( CASE\n    WHEN (\"OpportunityStage\" IN ('random',\n          'random',\n\
+  \          'random',\n          'random',\n          'random')) THEN \"FINNNACV_CC\"\
+  \n    ELSE 'random'\n         END) AS \"MaturePipeline\",\n     fd.\"OpportunityParentPipelineStatus\"\
+  ,\n     fd.\"AccountGeo\",\n       fd.\"AccountMajorArea\",\n        fd.\"AccountArea\"\
+  ,\n        fd.\"AccountRegion\",\n        fd.\"AccountDistrict\",\n        fd.\"\
+  AccountTerritory\",\n CASE\n  WHEN fd.\"SalesQuarter\" BETWEEN RIGHT(YEAR(CONVERT_TIMEZONE('random',\
+  \ CURRENT_DATE)) || 'random' || QUARTER(CONVERT_TIMEZONE('random', CURRENT_DATE)),\
+  \ 'random')\n  AND RIGHT(YEAR(DATEADD(QUARTER, 'random', CONVERT_TIMEZONE('random',\
+  \ CURRENT_DATE))) || 'random' || QUARTER(DATEADD(QUARTER, 'random', CONVERT_TIMEZONE('random',\
+  \ CURRENT_DATE))), 'random')\n  THEN 'random' ELSE 'random'  END AS \"4RQFlag\"\
+  ,\n sa.\"AcctMDMID\"||sa.\"AcctNumber\" \"AcctKey\" ,\n SUM(\"NetNewACV_FX\") as\
+  \ \"PipelineNNACV_FX\" ,\n SUM(\"Closed_FX\") as \"ClosedNNACV_FX\" ,\n SUM(\"WeightedNetNewACV_FX\"\
+  ) as \"WeightedNNACV_FX\",\n\t--\"RenewalACV_FX\" as \"RenewalACV_FX\" ,\n SUM(\"\
+  Commit_FX\") \"CommitNNACV_FX\",\n SUM(\"Expect_FX\") \"ExpectNNACV_FX\",\n SUM(\"\
+  Upside_FX\") \"UpsideNNACV_FX\",\n SUM(\"Submitted_FX\") \"SubmittedNNACV_FX\",\n\
+  \ SUM(ar.\"RenewalACV_FX\") as \"RenewalACV_FX\",\n MAX(\"Account_closed_NNACV\"\
+  ) as \"Account_closed_NNACV\",\n Case when  LOWER(fd.\"ProductFamily3\") LIKE 'random'\
+  \ then 'random'\n      when  LOWER(fd.\"ProductFamily3\") LIKE 'random' then 'random'\n\
+  \      else  'random' end as \"Product Package\",\n HASH(fd.\"TerritorySysID\")\
+  \ as TERRITORY_ID,\n IFNULL(TERR.GEO_ID, HASH(TERR.GEO_ID)) as GEO_ID,\n      \"\
+  ExistingCustomer\",\n     \"GenAI Searches\",\n\"GenAI Summarizations\",\n\"Resolution\
+  \ Notes Generated\",\n\"Code/Flow Assists\",\n \"#LLM Executions\",\n K24_Registered\
+  \  as \"K24_Registered\",\n       \"Now_Assist_Certified\",\n  \"Now_Assist_Engaged\"\
+  ,\n  \"AcctACVBanding\",\n  \"OptyParentCreatedOn\",\n  CASE WHEN \t\"AcctACVBanding\"\
+  ='random' THEN 'random'\n            WHEN \t\"AcctACVBanding\"='random' THEN 'random'\n\
+  \            WHEN \t\"AcctACVBanding\"='random' THEN 'random'\n            WHEN\
+  \    \"AcctACVBanding\"='random' THEN 'random'\n  END AS \"AcctACVRange\"  ,\n \
+  \ fd.\"ContractDataCenter\" ,\n  fd.\"ProductName\"\nFROM GEN_AI_CORE_DATA fd\n\
+  LEFT JOIN EDW_LS.\"SALES_EM\".\"EM_SALES_ACCOUNT_RT\" sa on sa.\"AcctNumber\" =\
+  \ fd.\"AccountNumber\"\nLEFT JOIN ODS_LS.SURF.SALES_ACCOUNT osa on osa.\"AcctNumber\"\
+  \ = fd.\"AccountNumber\"\nLEFT JOIN (SELECT\n    ACCOUNT_NO,\n    MAX(CASE WHEN\
+  \ METRIC_NAME = 'random' THEN ADOPTION_STATUS END) AS \"GenAI Searches\",\n    MAX(CASE\
+  \ WHEN METRIC_NAME = 'random' THEN ADOPTION_STATUS END) AS \"GenAI Summarizations\"\
+  ,\n    MAX(CASE WHEN METRIC_NAME = 'random' THEN ADOPTION_STATUS END) AS \"Resolution\
+  \ Notes Generated\",\n    MAX(CASE WHEN METRIC_NAME = 'random' THEN ADOPTION_STATUS\
+  \ END) AS \"Code/Flow Assists\",\n    MAX(CASE WHEN METRIC_NAME = 'random' THEN\
+  \ U_VALUE  END) AS \"#LLM Executions\",\n    SNAPSHOT_DATE,\n    LATEST_MTH_FLAG\n\
+  FROM\n    (Select ACCOUNT_NO ,LATEST_MTH_FLAG , METRIC_NAME ,SNAPSHOT_DATE,U_VALUE,\n\
+  \    CASE WHEN ADOPTION_STATUS = 'random' THEN 'random'\n         WHEN ADOPTION_STATUS\
+  \ = 'random'    THEN 'random'\n         ELSE ADOPTION_STATUS END AS ADOPTION_STATUS\n\
+  \    FROM  EDW_LS.PRODUCT_USAGE_EM.EM_GEN_AI_APP_ADOPTION )\nWHERE LATEST_MTH_FLAG\
+  \ = 'random'\nGROUP BY ALL)us  on us.\"ACCOUNT_NO\" = fd.\"AccountNumber\"\n LEFT\
+  \ JOIN\n (SELECT Distinct \"AccountNumber\", 'random' as  \"ExistingCustomer\" FROM\
+  \ GEN_AI_CORE_DATA where LEFT(\"OpportunityStage\", 'random') = 'random' GROUP BY\
+  \ ALL) ex on  fd.\"AccountNumber\" = ex.\"AccountNumber\"\n LEFT JOIN\n (SELECT\n\
+  \"AccountNumber\",\nSUM(\"Closed\") AS \"Account_closed_NNACV\"\nFROM GEN_AI_CORE_DATA\n\
+  GROUP BY ALL) an on fd.\"AccountNumber\" = an.\"AccountNumber\"\n LEFT join\n  (select\
+  \ \"AccountNumber\" ,\n          MIN(\"OpportunityCloseDate\") \"RenewalDate\"\n\
+  --ROUND(SUM(\"USDRenewalACV\")) \"USDRenewalACV\"\n   from CDL_LS.\"SALES_RPT\"\
+  .\"RPT_FIXEDDATAPLUSQUOTA_RT\"\n   where \"OpportunityType\" = 'random'\n     and\
+  \ \"SalesQuarter\" >= RIGHT(YEAR(convert_timezone( 'random',CURRENT_TIMESTAMP))\
+  \ ||'random'|| QUARTER(convert_timezone( 'random',CURRENT_TIMESTAMP)), 'random')\n\
+  \     and \"OpportunityStage\" not in ('random',\n                             \
+  \       'random')\n   group by \"AccountNumber\") rd on rd.\"AccountNumber\" = fd.\"\
+  AccountNumber\"\n LEFT JOIN\n (select \"AccountNumber\",\n          \"ProductBusinessUnit\"\
+  ,\n          \"SalesQuarter\",\n          \"RenewalACV\",\n\t\t  \"RenewalACV_FX\"\
+  \n   from\n  (select \"AccountNumber\",\n             \"ProductBusinessUnit\",\n\
+  \             \"SalesQuarter\",\n             SUM(\"USDRenewalACV\") \"RenewalACV\"\
+  \ ,\n\t\t\t SUM(\"RenewalACV_FX\") \"RenewalACV_FX\",\n             RANK() over\
+  \ (partition by \"AccountNumber\",\n                                       \"ProductBusinessUnit\"\
+  \n                          order by \"SalesQuarter\") rnk\n      from CDL_LS.\"\
+  SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\n      where \"RecordType\"='random'\n\
+  \        and \"SalesQuarter\" >= RIGHT(YEAR(convert_timezone( 'random',CURRENT_TIMESTAMP()))\
+  \ ||'random'|| QUARTER(convert_timezone( 'random',CURRENT_TIMESTAMP())), 'random')\n\
+  \        and \"SalesQuarter\" <= RIGHT(YEAR(ADD_MONTHS(convert_timezone( 'random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone( 'random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random')\n        and \"ProductBusinessUnit\" <> 'random'\n     \
+  \ group by \"AccountNumber\",\n               \"ProductBusinessUnit\",\n       \
+  \        \"SalesQuarter\"\n      having SUM(\"USDRenewalACV\") <> 'random')\n  \
+  \ where rnk = 'random' )ar on ar.\"AccountNumber\" = fd.\"AccountNumber\"\nand ar.\"\
+  ProductBusinessUnit\" = fd.\"ProductBusinessUnit\"\n\n     LEFT join (\n       \
+  \ SELECT\n            \"ACCOUNT_NUMBER\" As \"AccountNumber\",\n            \"BU\"\
+  ,\n            SUM(\"TAM\") AS \"TAM\"\n        FROM\n            ODS_LS.\"BI_APPS\"\
+  .\"WALLETSHARE_INFO\"\n        GROUP BY All\n\n    ) tam on tam.\"AccountNumber\"\
+  \ = fd.\"AccountNumber\" and tam.\"BU\" = fd.\"ProductBusinessUnit\"\nLEFT JOIN\
+  \ (SELECT DISTINCT \"AcctNumber\" ,\nENGAGED_COUNT  as \"Now_Assist_Engaged\",\n\
+  CERTIFIED_COUNT as \"Now_Assist_Certified\"\nFROM\n(\nSELECT\n    DISTINCT\n   \
+  \ \"AcctNumber\" ,\n    \"AcctName\",\n    \"AcctType\",\n    \"AcctNewSegment\"\
+  \ AS Segment ,\n    \"RegisteredFlag\" AS K24_Registered,\n    \"Marquee_Account\"\
+  ,\n    \"NewLogoFlag\" New_Logo,\n    --FUNNEL_STAGE,\n     --RISE_UP.USER_TYPE\
+  \ as RISE_UP.USER_TYPE,\n    COUNT (DISTINCT CASE WHEN FUNNEL_STAGE='random' THEN\
+  \ USER_SYS_ID END) ENGAGED_COUNT,\n     COUNT (DISTINCT CASE WHEN FUNNEL_STAGE='random'\
+  \ THEN USER_SYS_ID END) AS CERTIFIED_COUNT,\n    COUNT (DISTINCT USER_SYS_ID) AS\
+  \ USER_COUNT\nFROM\n(select DISTINCT * from CDL_LS.CUSTOMER_CD_RPT.RPT_CD_ACCOUNT_INDEX_ALL\n\
+  where UPPER(USERID) LIKE 'random'\n)CD\nLEFT JOIN\n(\nSELECT DISTINCT FUNNEL_STAGE\
+  \ , USER_SYS_ID,ACCOUNT_NUMBER,USER_TYPE FROM CDL_LS.GTM_RISEUP.RPT_ALL_FUNNEL_WISE_ACTUAL_USER_DETAILS\n\
+  WHERE\nSNAPSHOT_DATE =  ( SELECT MAX(SNAPSHOT_DATE) FROM CDL_LS.GTM_RISEUP.RPT_ALL_FUNNEL_WISE_ACTUAL_USER_DETAILS\
+  \ )\nAND FUNNEL_SUB_STAGE_RANK = 'random' AND FUNNEL_STAGE_RANK = 'random'\nAND\
+  \ TRIM (LOWER(ACHIEVEMENT_TYPE)) IN ('random','random')\nAND LOWER(FUNNEL_STAGE)\
+  \ IN ('random' , 'random')\nAND TRIM (LOWER(ACHIEVEMENT_NAME)) LIKE 'random'\n)\
+  \ RISE_UP\nON TRIM(RISE_UP.ACCOUNT_NUMBER) = TRIM(CD.\"AcctNumber\")\nGROUP BY ALL\n\
+  ORDER BY \"AcctNumber\"\n) tr\nWHERE \"AcctType\" IN ('random') ) cer on cer.\"\
+  AcctNumber\" = fd.\"AccountNumber\" -- and fd.\"ProductBusinessUnit\" = cer.BU_NAME\n\
+  LEFT JOIN (Select Distinct \"AccountNumber\" , 'random' as K24_Registered from CDL_LS.MARKETING_ER.KNOWLEDGE_REGISTRATION_EXT\n\
+  WHERE \"EventName\" = 'random' AND  \"Registration_Status\" =  'random'AND  \"AccountNumber\"\
+  \ Is Not  'random' AND  \"TestFlag\" = 'random' ) k24 on  k24.\"AccountNumber\"\
+  \ = fd.\"AccountNumber\"\nLEFT JOIN\n    (SELECT DISTINCT \"TerritorySysID\", \"\
+  UserBin\", \"UserID\"\n     FROM CTE_PRODUCT_A a\n     INNER JOIN EDW_LS.\"CUSTOMER_EM\"\
+  .\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\" = 'random'\n     WHERE a.\"Metric\"\
+  \ = 'random' AND dsa.\"DATA_SWITCH_FLAG\" = 'random'\n     UNION\n     SELECT DISTINCT\
+  \ \"TerritorySysID\", \"UserBin\", \"UserID\"\n     FROM CTE_PRODUCT_B a\n     INNER\
+  \ JOIN EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\" = 'random'\n\
+  \     WHERE a.\"Metric\" = 'random' AND dsa.\"DATA_SWITCH_FLAG\" = 'random') si\
+  \ ON si.\"TerritorySysID\" = fd.\"TerritorySysID_CC\"\n\n\t --Added code to get\
+  \ Territory ID and GEO_ID for Row Level security\n\nLEFT OUTER JOIN EDW.ENTERPRISE.DIM_TERRITORY\
+  \ TERR ON TERR.TERRITORY_SYSID = fd.\"TerritorySysID\"\n\nGROUP BY ALL)\n\nUNION\
+  \ ALL\n\n\nSelect\n    'random' as \"RecordType\",\n     'random' as \"SalesQuarter\"\
+  ,\n    \"BUGroup\",\n    \"BUWorkFlow\",\n    \"AccountNumber\",\n    \"AccountName\"\
+  ,\n   'random' AS  \"LineItemNumber\",\n   'random' AS  \"OpportunityNumber\",\n\
+  \   'random' AS  \"OpportunityName\",\n   'random' AS  \"OpportunityStage\",\n \
+  \  'random' AS  \"OpportunityType\",\n   'random' AS  \"OpportunityCloseDate\",\n\
+  \   'random' AS  \"PipelineStatus\",\n   'random' AS  \"OpportunityParentName\"\
+  ,\n   'random' AS  \"OpportunityParentNumber\",\n   'random' AS  \"OpportunityParentAccount\"\
+  ,\n    \"ProductFamily3\",\n    \"ProductCode\",\n    \"AccountGeo\" as \"ReportingTerritoryGeo\"\
+  ,\n    \"AccountMajorArea\" as \"OpportunityMajorArea\",\n    \"AccountArea\" as\
+  \ \"OpportunityArea\",\n    \"AccountRegion\"as \"OpportunityRegion\",\n    \"AccountDistrict\"\
+  as \"OpportunityDistrict\",\n   \"AccountTerritory\" as \"OpportunityTerritory\"\
+  ,\n   \"AccountIndustryCategory\",\n\t\"AcctIndustry\",\n   \"TerrSysID\" AS \"\
+  TerritorySysID\",\n    'random' AS \"OpportunityPipelineSourced\",\n    'random'\
+  \ AS \"OpportunityParentPipelineSourced\",\n    'random' AS \"OpportunityParentStage\"\
+  ,\n    'random' AS \"MarqueeAccount\",\n    'random' AS \"ParentMarqueeAccount\"\
+  ,\n   'random' AS  \"OpportunityForeCastType\",\n   'random' AS  \"OpportunityParentType\"\
+  ,\n   'random' AS  \"OpportunityParentCloseDate\",\n    'random' AS  \"ProductProgramType\"\
+  ,\n    'random' AS  \"ProductDescription\" ,\n   'random' AS  \"Stage\",\n   'random'\
+  \ AS  \"OptyParentStage\",\n    \"UserBin\",\n    \"UserID\",\n    'random' as \"\
+  QuarterFlag\",\n    \"PipelineNNACV\",\n    \"ClosedNNACV\",\n    \"WeightedNNACV\"\
+  ,\n    'random' AS \"TAM\",\n    \"RenewalDate\" ,\n  CONCAT(\n        Right(YEAR(\
+  \ \"RenewalDate\" ),'random'),\n        'random',\n        CEIL(EXTRACT(MONTH FROM\
+  \  \"RenewalDate\" ) / 'random')\n    ) AS  \"RenewalQuarter\" ,\n    \"RenewalACV\"\
+  ,\n    'random' AS \"AcctSalesProgram\",\n    CACV,\n    CACV_FX,\n    \"PTProgramName\"\
+  ,\n    \"PTSubProgramName\",\n     \"No of Optys\",\n     'random' as \"Gen AI PipelineNNACV\"\
+  ,\n      'random' AS \"Expect\", -- Build\n    'random' AS \"Upside\",\n    'random'\
+  \ AS \"Commit\",\n    'random' AS \"Submitted\",\n    \"AccountNewSegment\",\n \
+  \    \"SalesRep\",\n    'random' as  \"Solution Consultant\",\n    'random' as \"\
+  MaturePipeline\" ,\n    \"DealPackageType\",\n    'random' as \"OpportunityParentPipelineStatus\"\
+  ,\n    \"AccountGeo\" ,\n    \"AccountMajorArea\",\n    \"AccountArea\",\n    \"\
+  AccountRegion\" ,\n    \"AccountDistrict\",\n    \"AccountTerritory\",\n    'random'\
+  \ as \"4RQFlag\",\n'random'   \"ParentCOManaged\" ,\n'random' \"ParentDynamicsGUID\"\
+  \ ,\n'random'  \"OptyParentSysID\" ,\n      \"AcctKey\" ,\n      'random' \"ExistingCustomer\"\
+  ,\n    'random'   \"PipelineNNACV_FX\" ,\n'random' \"ClosedNNACV_FX\" ,\n'random'\
+  \ \"WeightedNNACV_FX\",\n'random'  \"CommitNNACV_FX\",\n'random' \"ExpectNNACV_FX\"\
+  ,\n'random'  \"UpsideNNACV_FX\",\n'random'  \"SubmittedNNACV_FX\",\n'random' \"\
+  RenewalACV_FX\",\n'random' as \"Account_closed_NNACV\",\n'random' AS \"CL_FLAG\"\
+  \ ,\n'random' as \"Gen AI ClosedNNACV\",\n\"Gen AI OpenPipeline\",\n\"Product Package\"\
+  ,\n\"ClosedAccountFlag\",\n\"TotalAccountFlag\",\n\"OpenAccountFlag\",\nCONCAT(\"\
+  AccountGeo\", 'random', \"AccountMajorArea\") AS \"Geo_MajorArea\",\nCONCAT(RIGHT(EXTRACT(YEAR\
+  \ FROM CURRENT_DATE),'random'), 'random', EXTRACT(QUARTER FROM CURRENT_DATE)) AS\
+  \    \"OptyParentCreatedOnQuarter\",\nTERRITORY_ID,\nGEO_ID,\n   'random' as  \"\
+  Source\",\n 'random' as \"Target\",\n 'random' as \"GenAITarget\",\n CASE WHEN \
+  \ lower(\"AccountTerritory\") like 'random' then 'random' else 'random' end as \"\
+  DSR_Flag\",\n'random' as \"GenAI Searches\",\n'random' as  \"GenAI Summarizations\"\
+  ,\n'random' as  \"Resolution Notes Generated\",\n'random' as  \"Code/Flow Assists\"\
+  ,\n'random' as  \"#LLM Executions\",\n 'random' as \"GenAI Searches_Value\",\n 'random'\
+  \ as \"GenAI Summarizations_Value\",\n 'random' as \"Resolution Notes Generated_Value\"\
+  ,\n 'random' as \"Code/Flow Assists_Value\",\n 'random' AS  \"#LLM Executions_Value\"\
+  ,\n'random' as  MONTH_FLAG,\n'random' as \"SNAPSHOT_DATE\",\n\"K24_Registered\"\
+  ,\n'random' as  \"Now_Assist_Certified\",\n'random' as  \"Now_Assist_Engaged\",\n\
+  'random' AS  \"AcctACVBanding\",\n'random' AS \"OptyParentCreatedOn\",\n'random'\
+  \ AS \"AcctACVRange\",\nCASE WHEN UPPER(\"ProductFamily3\") like 'random' THEN 'random'\
+  \ ELSE 'random' END AS \"EarlyForecastFlag\",\n\"ContractDataCenter\",\n'random'\
+  \ AS \"ProductName\"\nFrom\n(SELECT\n\n    fd.\"BUGroup\",\n    fd.\"BUWorkFlow\"\
+  ,\n    fd.\"AccountNumber\",\n    \"AccountName\",\n    fd.\"ProductBusinessUnit\"\
+  ,\n    fd.\"ProductFamily3\",\n    fd.\"ProductCode\",\n    fd.\"AccountGeo\" ,\n\
+  \    fd.\"AccountMajorArea\",\n    fd.\"AccountArea\",\n    fd.\"AccountRegion\"\
+  \ ,\n    fd.\"AccountDistrict\",\n    fd.\"AccountTerritory\",\n    fd.\"AccountIndustryCategory\"\
+  ,\n\tfd.\"AccountIndustry\" AS \"AcctIndustry\",\n\n    si.\"UserBin\",\n    si.\"\
+  UserID\",\n    SUM(\"USDNetNewACV\") AS \"PipelineNNACV\",\n    SUM(\"Closed\")\
+  \ AS \"ClosedNNACV\",\n    SUM(\"USDWeightedACV\") AS \"WeightedNNACV\",\n    --sa.\"\
+  AcctSalesProgram\",\n   CACV,\n   CACV_FX,\n    \"PTProgramName\",\n    \"PTSubProgramName\"\
+  ,\n     \"RenewalDate\" ,\n     ar.\"RenewalACV\",\n      \"DealPackageType\",\n\
+  \      \"No of Optys\",\n      \"Gen AI PipelineNNACV\" as \"Gen AI PipelineNNACV\"\
+  ,\n      \"AccountNewSegment\",\n      sa.\"AcctMDMID\"||sa.\"AcctNumber\" \"AcctKey\"\
+  \ ,\n\n  CASE\n        WHEN \"OpportunityParentStage\" IN ('random', 'random', 'random')\n\
+  \             OR (\"OpportunityParentStage\" = 'random' AND \"OpportunityParentType\"\
+  \ IN ('random', 'random'))\n        THEN 'random'\n        ELSE RIGHT(YEAR(\"OpportunityParentCloseDate\"\
+  ) || 'random' || QUARTER(\"OpportunityParentCloseDate\"), 'random')\n    END as\
+  \ \"ParentQuarter\",\n   \"Gen AI ClosedNNACV\" as \"Gen AI ClosedNNACV\",\n   \
+  \ \"Gen AI OpenPipeline\" as  \"Gen AI OpenPipeline\",\n  Case when  LOWER(fd.\"\
+  ProductFamily3\") LIKE 'random' then 'random'\n      when  LOWER(fd.\"ProductFamily3\"\
+  ) LIKE 'random' then 'random'\n      else  'random' end as \"Product Package\",\n\
+  \"ClosedAccountFlag\",\n\"TotalAccountFlag\",\n \"OpenAccountFlag\",\n \"TerrSysID\"\
+  ,\n  HASH(fd.\"TerritorySysID\") as TERRITORY_ID,\n IFNULL(TERR.GEO_ID, HASH(TERR.GEO_ID))\
+  \ as GEO_ID,\n sa.\"AcctPrimarySalesRep\" AS \"SalesRep\",\n \"K24_Registered\"\
+  ,\n fd.\"ContractDataCenter\" ,  --\n fd.\"ProductName\"\nFROM\n\n\n (SELECT distinct\
+  \ da.\"AccountNumber\",\n\"PTAccountGUID\",\n\"PTProgramName\",\n\"PTSubProgramName\"\
+  \nFROM ODS_LS.\"DYNAMICS365\".\"SN_PROGRAMTAGGINGS\" pt\nLEFT join ODS_LS.\"DYNAMICS365\"\
+  .\"ACCOUNTS\" da on da.\"AccountSydID\" = pt.\"PTAccountGUID\"\nWHERE \"PTTaggedEntityCodeName\"\
+  \ = 'random'\n   AND \"PTStatusCodeName\" = 'random'\n   and\"PTProgramName\" in\
+  \ ('random')\n\nGROUP BY all) pt\nLEFT JOIN CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\
+  \ fd on fd.\"AccountNumber\" = pt.\"AccountNumber\"\nLEFT JOIN ODS_LS.\"SURF\".\"\
+  SALES_PRODUCT\" sp ON sp.\"ProductSysID\" = fd.\"ProductSysID\"\nLEFT JOIN ODS_LS.\"\
+  SURF\".\"SALES_ACCOUNT\" sa ON sa.\"AcctNumber\" = fd.\"AccountNumber\"\n--LEFT\
+  \ join EDW_LS.\"SALES_EM\".\"EM_SALES_ACCOUNT_RT\" sa on sa.\"AcctNumber\" = fd.\"\
+  AccountNumber\"\nLEFT JOIN\n (   SELECT\n\n    \"BUGroup\",\n    \"AccountNumber\"\
+  ,\n    \"ProductFamily3\",\n    \"ProductCode\",\n    SUM(\"USDNetNewACV\") AS \"\
+  Gen AI PipelineNNACV\",\n    SUM(\"Closed\") AS \"Gen AI ClosedNNACV\",\n    SUM(\"\
+  OpenPipeline\") as  \"Gen AI OpenPipeline\"\nFROM\nGEN_AI_CORE_DATA\n--AND \"OptyParentCreatedOn\"\
+  \ >= '2024-01-01 00:00:00.000'\nGROUP BY ALL\n) ga on fd.\"AccountNumber\"= ga.\"\
+  AccountNumber\" AND   fd.\"BUGroup\"= ga.\"BUGroup\" AND fd.\"ProductFamily3\" =\
+  \ ga.\"ProductFamily3\" and\n    fd.\"ProductCode\" = ga.\"ProductCode\"\nLEFT JOIN\
+  \ ( Select Distinct \"AccountNumber\" ,'random' as \"K24_Registered\"\nfrom CDL_LS.MARKETING_ER.KNOWLEDGE_REGISTRATION_EXT\n\
+  WHERE \"EventName\" = 'random'\nAND  \"Registration_Status\" =  'random'\nAND  \"\
+  AccountNumber\" Is Not  'random'\nAND  \"TestFlag\" = 'random' ) k24 on k24.\"AccountNumber\"\
+  = fd.\"AccountNumber\"\n\nLEFT JOIN (\n SELECT\n\n    \"AccountNumber\",\n\n   \
+  \ Count (distinct  \"OpportunityNumber\") as \"No of Optys\"\nFROM\nGEN_AI_CORE_DATA\n\
+  GROUP BY ALL\n) na on fd.\"AccountNumber\"= na.\"AccountNumber\"\n\nLEFT JOIN (SELECT\n\
+  \    \"AccountNumber\",\n    CASE WHEN \"USDNetNewACV\" > 'random'  AND \"OpportunityParentStage\"\
+  \ IN ('random','random') THEN 'random' ELSE 'random' END AS \"ClosedAccountFlag\"\
+  ,\n    CASE WHEN \"USDNetNewACV\" > 'random'  AND \"OpportunityParentStage\" NOT\
+  \ IN ('random','random') THEN 'random' ELSE 'random' END AS \"OpenAccountFlag\"\
+  ,\n    CASE WHEN \"USDNetNewACV\" > 'random'   THEN 'random' ELSE 'random' END AS\
+  \ \"TotalAccountFlag\"\nFROM\nGEN_AI_CORE_DATA\nGROUP BY ALL) f on  fd.\"AccountNumber\"\
+  = f.\"AccountNumber\"\nLEFT join\n  (select \"AccountNumber\" ,\"ProductBusinessUnit\"\
+  ,\n          MIN(\"OpportunityCloseDate\") \"RenewalDate\"\n--ROUND(SUM(\"USDRenewalACV\"\
+  )) \"USDRenewalACV\"\n   from CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\
+  \n   where \"OpportunityType\" = 'random'\n     and \"SalesQuarter\" >= RIGHT(YEAR(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP)) ||'random'|| QUARTER(convert_timezone( 'random',CURRENT_TIMESTAMP)),\
+  \ 'random')\n     and \"OpportunityStage\" not in ('random',\n                 \
+  \                   'random')\n   group by \"AccountNumber\" ,\"ProductBusinessUnit\"\
+  ) rd on rd.\"AccountNumber\" = fd.\"AccountNumber\" and rd.\"ProductBusinessUnit\"\
+  \ = fd.\"ProductBusinessUnit\"\n  LEFT JOIN\n (select \"AccountNumber\",\n     \
+  \     \"ProductBusinessUnit\",\n          \"SalesQuarter\",\n          \"RenewalACV\"\
+  ,\n\t\t  \"RenewalACV_FX\"\n   from\n  (select \"AccountNumber\",\n            \
+  \ \"ProductBusinessUnit\",\n             \"SalesQuarter\",\n             SUM(\"\
+  USDRenewalACV\") \"RenewalACV\" ,\n\t\t\t SUM(\"RenewalACV_FX\") \"RenewalACV_FX\"\
+  ,\n             RANK() over (partition by \"AccountNumber\",\n                 \
+  \                      \"ProductBusinessUnit\"\n                          order\
+  \ by \"SalesQuarter\") rnk\n      from CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\
+  \n      where \"RecordType\"='random'\n        and \"SalesQuarter\" >= RIGHT(YEAR(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP())) ||'random'|| QUARTER(convert_timezone( 'random',CURRENT_TIMESTAMP())),\
+  \ 'random')\n        and \"SalesQuarter\" <= RIGHT(YEAR(ADD_MONTHS(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP()), 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP()), 'random')), 'random')\n        and \"ProductBusinessUnit\"\
+  \ <> 'random'\n      group by \"AccountNumber\",\n               \"ProductBusinessUnit\"\
+  ,\n               \"SalesQuarter\"\n      having SUM(\"USDRenewalACV\") <> 'random')\n\
+  \   where rnk = 'random' )ar on ar.\"AccountNumber\" = fd.\"AccountNumber\"\nand\
+  \ ar.\"ProductBusinessUnit\" = fd.\"ProductBusinessUnit\"\nLEFT JOIN\n (SELECT\n\
+  \    \"AcctNumber\",\n    \"BusinessUnit\",\n    CASE\n        WHEN \"Deal_Number\"\
+  \ = 'random' THEN 'random'\n        WHEN \"Deal_Number\" = 'random' THEN 'random'\n\
+  \        ELSE 'random'\n    END AS \"DealPackageType\"\nFROM\n    (\n        --\
+  \ Subquery to calculate the Deal_Number based on DealPackageType\n        SELECT\n\
+  \            DISTINCT\n            \"AcctNumber\",\n            \"BusinessUnit\"\
+  ,\n            -- Using MAX with a CASE statement to determine Deal_Number\n   \
+  \         MAX(\n                CASE\n                    WHEN \"DealPackageType\"\
+  \ = 'random' THEN 'random'\n                    WHEN \"DealPackageType\" = 'random'\
+  \ THEN 'random'\n                    ELSE 'random'\n                END\n      \
+  \      ) AS \"Deal_Number\"\n        FROM\n            CDL_LS.\"PRODUCT_ER\".\"\
+  PRODUCT_PBR_METRICS\"\n        WHERE\n            \"DealPackageType\" IS not NULL\n\
+  \        GROUP BY ALL\n    )\n) dp on  fd.\"AccountNumber\"= dp.\"AcctNumber\" AND\
+  \  fd.\"ProductBusinessUnit\" = dp.\"BusinessUnit\"\n\nLEFT JOIN\n(select \"AcctNumber\"\
+  ,\n\"ProductBusinessUnitValue\",\nSUM(\"CumulativeNetNewACV\") \"CACV\",\nSUM(\"\
+  CumulativeNetNewACV_FX\") \"CACV_FX\"\nfrom EDW_LS.\"PRODUCT_EM\".\"EM_PRODUCT_PRO_VIEW\"\
+  \ngroup by all\n) pro on fd.\"AccountNumber\"= pro.\"AcctNumber\" AND  fd.\"ProductBusinessUnit\"\
+  \ = pro.\"ProductBusinessUnitValue\"\nLEFT JOIN ODS_LS.\"SURF\".\"SALES_TERRITORY\"\
+  st on fd.\"AccountTerritory\" = st.\"TerrName\"\nLEFT JOIN\n    (SELECT DISTINCT\
+  \ \"TerritorySysID\", \"UserBin\", \"UserID\"\n     FROM CTE_PRODUCT_A a\n     INNER\
+  \ JOIN EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\" = 'random'\n\
+  \     WHERE a.\"Metric\" = 'random' AND dsa.\"DATA_SWITCH_FLAG\" = 'random'\n  \
+  \   UNION\n     SELECT DISTINCT \"TerritorySysID\", \"UserBin\", \"UserID\"\n  \
+  \   FROM CTE_PRODUCT_B a\n     INNER JOIN EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\"\
+  \ dsa ON dsa.\"TABLE_NAME\" = 'random'\n     WHERE a.\"Metric\" = 'random' AND dsa.\"\
+  DATA_SWITCH_FLAG\" = 'random') si ON si.\"TerritorySysID\" = fd.\"TerritorySysID_CC\"\
+  \nLEFT OUTER JOIN EDW.ENTERPRISE.DIM_TERRITORY TERR ON TERR.TERRITORY_SYSID = fd.\"\
+  TerritorySysID\"\nWHERE\n\"RecordType\" IN ('random')\n AND fd.\"ProductBusinessUnit\"\
+  \ NOT IN ('random','random','random','random')\n AND fd.\"ProductFamily3\" <> 'random'\n\
+  \ and  \"PTSubProgramName\"IS not NULL\nGROUP BY ALL)\n\nUNION ALL\n\nSELECT\n \
+  \   'random' AS \"RecordType\",\n    'random' AS \"SalesQuarter\",\n    \"BUGroup\"\
+  ,\n    \"BUWorkFlow\",\n    \"AccountNumber\",\n    \"AccountName\",\n    \"LineItemNumber\"\
+  ,\n    \"OpportunityNumber\",\n    'random' AS \"OpportunityName\",\n    \"OpportunityStage\"\
+  ,\n    'random' AS \"OpportunityType\",\n    'random' AS \"OpportunityCloseDate\"\
+  ,\n    'random' AS \"PipelineStatus\",\n    \"OpportunityParentName\",\n   \"OpportunityParentNumber\"\
+  ,\n   \"OpportunityParentAccount\",\n    \"ProductFamily3\",\n    \"ProductCode\"\
+  ,\n    \"ReportingTerritoryGeo\",\n    \"OpportunityMajorArea\",\n    \"OpportunityArea\"\
+  ,\n    \"OpportunityRegion\",\n    \"OpportunityDistrict\",\n    \"OpportunityTerritory\"\
+  ,\n    \"AccountIndustryCategory\",\n    \"AcctIndustry\",\n    \"TerrSysID\" AS\
+  \ \"TerritorySysID\",\n    \"OptyItemLineCreatedBy\" as \"OpportunityPipelineSourced\"\
+  ,\n    'random' AS \"OpportunityParentPipelineSourced\",\n     CASE\n        WHEN\
+  \ \"Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentStage\"\n        ELSE\
+  \ \"OpportunityStage\"\n    END AS \"OpportunityParentStage\",\n    'random' AS\
+  \ \"MarqueeAccount\",\n    'random' AS \"ParentMarqueeAccount\",\n    'random' AS\
+  \ \"OpportunityForeCastType\",\n        CASE  WHEN \"Quarter\" = \"ParentQuarter\"\
+  \ THEN \"OpportunityParentType\"\n        ELSE \"OpportunityType\" END AS \"OpportunityParentType\"\
+  ,\n  \"OpportunityParentCloseDate\",\n    'random' AS \"ProductProgramType\",\n\
+  \    'random' AS \"ProductDescription\",\n    'random' AS \"Stage\",\n     CASE\n\
+  \        WHEN \"Quarter\" = \"ParentQuarter\" THEN\n            (CASE\n        \
+  \        WHEN LEFT(\"OpportunityParentStage\", 'random') = 'random' THEN LEFT(\"\
+  OpportunityParentStage\", 'random') || RIGHT(\"OpportunityParentStage\", 'random')\n\
+  \                WHEN LEFT(\"OpportunityParentStage\", 'random') = 'random' THEN\
+  \ LEFT(\"OpportunityParentStage\", 'random') || RIGHT(\"OpportunityParentStage\"\
+  , 'random')\n                ELSE LEFT(\"OpportunityParentStage\", 'random') ||\
+  \ RIGHT(\"OpportunityParentStage\", 'random')\n            END)\n        WHEN LEFT(\"\
+  OpportunityStage\", 'random') = 'random' THEN LEFT(\"OpportunityStage\", 'random')\
+  \ || RIGHT(\"OpportunityStage\", 'random')\n        WHEN LEFT(\"OpportunityStage\"\
+  , 'random') = 'random' THEN LEFT(\"OpportunityStage\", 'random') || RIGHT(\"OpportunityStage\"\
+  , 'random')\n        ELSE LEFT(\"OpportunityStage\", 'random') || RIGHT(\"OpportunityStage\"\
+  , 'random')\n    END AS \"OptyParentStage\",\n    \"UserBin\",\n    \"UserID\",\n\
+  \    'random' AS \"QuarterFlag\",\n    'random' \"PipelineNNACV\",\n    'random'\
+  \ \"ClosedNNACV\",\n    'random' \"WeightedNNACV\",\n    'random' AS \"TAM\",\n\
+  \    'random' \"RenewalDate\",\n    'random' AS \"RenewalQuarter\",\n    'random'\
+  \ \"RenewalACV\",\n    'random' AS \"AcctSalesProgram\",\n    'random' \"CACV\"\
+  ,\n    'random' \"CACV_FX\",\n    \"PTProgramName\",\n    \"PTSubProgramName\",\n\
+  \    'random' AS \"No of Optys\",\n    \"PipelineNNACV\" AS \"Gen AI PipelineNNACV\"\
+  ,\n    'random' AS \"Expect\", -- Build\n    'random' AS \"Upside\",\n    'random'\
+  \ AS \"Commit\",\n    'random' AS \"Submitted\",\n    \"AccountNewSegment\",\n \
+  \   \"SalesRep\",\n    'random' AS \"Solution Consultant\",\n    'random' AS \"\
+  MaturePipeline\",\n    'random' \"DealPackageType\",\n     CASE\n        WHEN \"\
+  Quarter\" = \"ParentQuarter\" THEN \"OpportunityParentPipelineStatus\"\n       \
+  \ ELSE \"PipelineStatus\"\n    END AS \"OpportunityParentPipelineStatus\",\n   \
+  \ \"AccountGeo\",\n    \"AccountMajorArea\",\n    \"AccountArea\",\n    \"AccountRegion\"\
+  ,\n    \"AccountDistrict\",\n    \"AccountTerritory\",\n    'random' AS \"4RQFlag\"\
+  ,\n    'random' AS \"ParentCOManaged\",\n    'random' AS \"ParentDynamicsGUID\"\
+  ,\n    'random' AS \"OptyParentSysID\",\n    'random' AS \"AcctKey\",\n    'random'\
+  \ AS \"ExistingCustomer\",\n    'random' AS \"PipelineNNACV_FX\",\n    'random'\
+  \ AS \"ClosedNNACV_FX\",\n    'random' AS \"WeightedNNACV_FX\",\n    'random' AS\
+  \ \"CommitNNACV_FX\",\n    'random' AS \"ExpectNNACV_FX\",\n    'random' AS \"UpsideNNACV_FX\"\
+  ,\n    'random' AS \"SubmittedNNACV_FX\",\n    'random' AS \"RenewalACV_FX\",\n\
+  \    'random' AS \"Account_closed_NNACV\",\n    'random' AS \"CL_FLAG\",\n    \"\
+  Submitted\" AS \"Gen AI ClosedNNACV\",\n    \"OpenPipeline\" AS \"Gen AI OpenPipeline\"\
+  ,\n     CASE\n                WHEN LOWER(\"ProductFamily3\") LIKE 'random' THEN\
+  \ 'random'\n                WHEN LOWER(\"ProductFamily3\") LIKE 'random' THEN 'random'\n\
+  \                ELSE 'random'\n            END AS \"Product Package\",\n    'random'\
+  \ \"ClosedAccountFlag\",\n    'random' \"TotalAccountFlag\",\n    'random' \"OpenAccountFlag\"\
+  ,\n    CONCAT(\"AccountGeo\", 'random', \"AccountMajorArea\") AS \"Geo_MajorArea\"\
+  ,\n    \"OptyParentCreatedOnQuarter\",\n\tTERRITORY_ID,\n\tGEO_ID,\n   'random'\
+  \ as  \"Source\",\n 'random' as \"Target\",\n 'random' as \"GenAITarget\",\n CASE\
+  \ WHEN  lower(\"AccountTerritory\") like 'random' then 'random' else 'random' end\
+  \ as \"DSR_Flag\",\n'random' as \"GenAI Searches\",\n'random' as  \"GenAI Summarizations\"\
+  ,\n'random' as  \"Resolution Notes Generated\",\n'random' as  \"Code/Flow Assists\"\
+  ,\n'random' AS  \"#LLM Executions\",\n 'random' as \"GenAI Searches_Value\",\n 'random'\
+  \ as \"GenAI Summarizations_Value\",\n 'random' as \"Resolution Notes Generated_Value\"\
+  ,\n 'random' as \"Code/Flow Assists_Value\",\n 'random' as  \"#LLM Executions_Value\"\
+  ,\n'random' as  MONTH_FLAG,\n'random' as \"SNAPSHOT_DATE\",\n'random' as \"K24_Registered\"\
+  ,\n'random' as \"Now_Assist_Certified\",\n'random' as \"Now_Assist_Engaged\",\n\
+  'random' AS  \"AcctACVBanding\",\n'random' AS \"OptyParentCreatedOn\",\n'random'\
+  \ AS \"AcctACVRange\",\nCASE WHEN UPPER(\"ProductFamily3\") like 'random' THEN 'random'\
+  \ ELSE 'random' END AS \"EarlyForecastFlag\",\n\"ContractDataCenter\" ,\n\"ProductName\"\
+  \n    FROM (\nSELECT\n    fd.\"SalesQuarter\",\n    fd.\"BUGroup\",\n    fd.\"BUWorkFlow\"\
+  ,\n    fd.\"AccountNumber\",\n    \"AccountName\",\n    \"LineItemNumber\",\n  \
+  \  \"OpportunityNumber\",\n    \"OptyParentCreatedOn\",\n    \"OpportunityName\"\
+  ,\n    \"OpportunityStage\",\n    \"OpportunityParentStage\",\n    \"OpportunityType\"\
+  ,\n    \"OpportunityCloseDate\",\n    \"PipelineStatus\",\n    \"OpportunityParentName\"\
+  ,\n    \"OpportunityParentNumber\",\n    fd.\"ProductCode\",\n    \"ProductFamily3\"\
+  ,\n    \"PTProgramName\",\n    \"PTSubProgramName\",\n    fd.\"AccountGeo\",\n \
+  \   fd.\"AccountMajorArea\",\n    fd.\"AccountArea\",\n    fd.\"AccountRegion\"\
+  ,\n    fd.\"AccountDistrict\",\n    fd.\"AccountTerritory\",\n    fd.\"AccountIndustryCategory\"\
+  ,\n    \"OptyItemLineCreatedBy\" ,\n    fd.\"AccountIndustry\" AS \"AcctIndustry\"\
+  ,\n    SUM(\"USDNetNewACV\") AS \"PipelineNNACV\",\n    SUM(\"Closed\") AS \"ClosedNNACV\"\
+  ,\n    SUM(\"OpenPipeline\") AS \"OpenPipeline\",\n    SUM(\"USDWeightedACV\") AS\
+  \ \"WeightedNNACV\",\n   \"UserBin\",\n   \"UserID\",\n\"AccountNewSegment\",\n\"\
+  OpportunityParentAccount\",\n       fd.\"ReportingTerritoryGeo\",\n        fd.\"\
+  OpportunityMajorArea\",\n      fd.\"SalesQuarter\" AS \"Quarter\",\n      \"Submitted\"\
+  ,\n        CASE\n            WHEN \"OpportunityParentStage\" IN ('random', 'random',\
+  \ 'random')\n                 OR (\"OpportunityParentStage\" = 'random' AND \"OpportunityParentType\"\
+  \ IN ('random', 'random'))\n            THEN 'random'\n            ELSE RIGHT(YEAR(\"\
+  OpportunityParentCloseDate\") || 'random' || QUARTER(\"OpportunityParentCloseDate\"\
+  ), 'random')\n        END AS \"ParentQuarter\",\n       fd.\"OpportunityParentType\"\
+  ,\n        fd.\"OpportunityParentCloseDate\",\n       \"TerrSysID\",\n      sa.\"\
+  AcctPrimarySalesRep\" AS \"SalesRep\",\n RIGHT(EXTRACT(YEAR FROM TO_DATE(fd.\"OptyParentCreatedOn\"\
+  )), 'random') || 'random' || EXTRACT(QUARTER FROM TO_DATE(fd.\"OptyParentCreatedOn\"\
+  ))  as \"OptyParentCreatedOnQuarter\"\n,\"OpportunityParentPipelineStatus\"\n  \
+  \    ,\"OpportunityArea\"\n    ,\"OpportunityRegion\"\n   , \"OpportunityDistrict\"\
+  \n   , \"OpportunityTerritory\"\n   ,  HASH(fd.\"TerritorySysID\") as TERRITORY_ID\n\
+  \t, IFNULL(TERR.GEO_ID, HASH(TERR.GEO_ID)) as GEO_ID\n    ,fd.\"ContractDataCenter\"\
+  ,\n     fd.\"ProductName\"\nFROM\n(\n    SELECT DISTINCT\n        da.\"AccountNumber\"\
+  ,\n        \"PTAccountGUID\",\n        \"PTProgramName\",\n        \"PTSubProgramName\"\
+  \n    FROM\n        ODS_LS.\"DYNAMICS365\".\"SN_PROGRAMTAGGINGS\" pt\n    LEFT JOIN\n\
+  \        ODS_LS.\"DYNAMICS365\".\"ACCOUNTS\" da ON da.\"AccountSydID\" = pt.\"PTAccountGUID\"\
+  \n    WHERE\n        \"PTTaggedEntityCodeName\" = 'random'\n        AND \"PTStatusCodeName\"\
+  \ = 'random'\n        AND \"PTProgramName\" IN ('random')\n    GROUP BY ALL\n) pt\n\
+  LEFT JOIN  (SELECT  * FROM GEN_AI_CORE_DATA -- Where \"OptyParentCreatedOn\" >=\
+  \ '2024-01-01 00:00:00.000'\n           ) fd ON fd.\"AccountNumber\" = pt.\"AccountNumber\"\
+  \nLEFT JOIN EDW_LS.\"SALES_EM\".\"EM_SALES_ACCOUNT_RT\" sa on sa.\"AcctNumber\"\
+  \ = fd.\"AccountNumber\"\n  LEFT join\n  (select \"AccountNumber\" ,\n         \
+  \ MIN(\"OpportunityCloseDate\") \"RenewalDate\"\n--ROUND(SUM(\"USDRenewalACV\"))\
+  \ \"USDRenewalACV\"\n   from CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\n\
+  \   where \"OpportunityType\" = 'random'\n     and \"SalesQuarter\" >= RIGHT(YEAR(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP)) ||'random'|| QUARTER(convert_timezone( 'random',CURRENT_TIMESTAMP)),\
+  \ 'random')\n     and \"OpportunityStage\" not in ('random',\n                 \
+  \                   'random')\n   group by \"AccountNumber\") rd on rd.\"AccountNumber\"\
+  \ = fd.\"AccountNumber\"\n LEFT JOIN\n (select \"AccountNumber\",\n          \"\
+  ProductBusinessUnit\",\n          \"SalesQuarter\",\n          \"RenewalACV\",\n\
+  \t\t  \"RenewalACV_FX\"\n   from\n  (select \"AccountNumber\",\n             \"\
+  ProductBusinessUnit\",\n             \"SalesQuarter\",\n             SUM(\"USDRenewalACV\"\
+  ) \"RenewalACV\" ,\n\t\t\t SUM(\"RenewalACV_FX\") \"RenewalACV_FX\",\n         \
+  \    RANK() over (partition by \"AccountNumber\",\n                            \
+  \           \"ProductBusinessUnit\"\n                          order by \"SalesQuarter\"\
+  ) rnk\n      from CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\n      where\
+  \ \"RecordType\"='random'\n        and \"SalesQuarter\" >= RIGHT(YEAR(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP())) ||'random'|| QUARTER(convert_timezone( 'random',CURRENT_TIMESTAMP())),\
+  \ 'random')\n        and \"SalesQuarter\" <= RIGHT(YEAR(ADD_MONTHS(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP()), 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP()), 'random')), 'random')\n        and \"ProductBusinessUnit\"\
+  \ <> 'random'\n      group by \"AccountNumber\",\n               \"ProductBusinessUnit\"\
+  ,\n               \"SalesQuarter\"\n      having SUM(\"USDRenewalACV\") <> 'random')\n\
+  \   where rnk = 'random' )ar on ar.\"AccountNumber\" = fd.\"AccountNumber\"\nand\
+  \ ar.\"ProductBusinessUnit\" = fd.\"ProductBusinessUnit\"\nLEFT JOIN ODS_LS.\"SURF\"\
+  .\"SALES_TERRITORY\"st on fd.\"AccountTerritory\" = st.\"TerrName\"\n  LEFT JOIN\n\
+  \            (\n                SELECT DISTINCT\n                    \"TerritorySysID\"\
+  ,\n                    \"UserBin\",\n                    \"UserID\"\n          \
+  \      FROM\n                    CTE_PRODUCT_A a\n                INNER JOIN\n \
+  \                   EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\"\
+  \ = 'random'\n                WHERE\n                    a.\"Metric\" = 'random'\
+  \ AND dsa.\"DATA_SWITCH_FLAG\" = 'random'\n                UNION\n             \
+  \   SELECT DISTINCT\n                    \"TerritorySysID\",\n                 \
+  \   \"UserBin\",\n                    \"UserID\"\n                FROM\n       \
+  \             CTE_PRODUCT_B a\n                INNER JOIN\n                    EDW_LS.\"\
+  CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\" = 'random'\n      \
+  \          WHERE\n                    a.\"Metric\" = 'random' AND dsa.\"DATA_SWITCH_FLAG\"\
+  \ = 'random'\n            ) si ON si.\"TerritorySysID\" = fd.\"TerritorySysID_CC\"\
+  \nLEFT OUTER JOIN EDW.ENTERPRISE.DIM_TERRITORY TERR ON TERR.TERRITORY_SYSID = fd.\"\
+  TerritorySysID\"\nGROUP BY ALL)\nUNION ALL\nSELECT\n'random' \"RecordType\",\n \
+  \   \"SALES_QUARTER\" as \t\"SalesQuarter\",\nCase when  \"BU_GROUP\" = 'random'\
+  \ then 'random' else   \"BU_GROUP\" END as \t\"BUGroup\",\n'random' as \t\"BUWorkFlow\"\
+  ,\n'random' as \t\"AccountNumber\",\n'random' as \t\"AccountName\",\n'random' as\
+  \ \t\"LineItemNumber\",\n'random' as \t\"OpportunityNumber\",\n'random' as \t\"\
+  OpportunityName\",\n'random' as \t\"OpportunityStage\",\n'random' as \t\"OpportunityType\"\
+  ,\n'random' as \t\"OpportunityCloseDate\",\n'random' as \t\"PipelineStatus\",\n\
+  'random' as \t\"OpportunityParentName\",\n'random' as \t\"OpportunityParentNumber\"\
+  ,\n'random' as \t\"OpportunityParentAccount\",\n'random' as \t\"ProductFamily3\"\
+  ,\n'random' as \t\"ProductCode\",\n \"GEO\" as \t\"ReportingTerritoryGeo\",\n \"\
+  MAJOR_AREA\" as \t\"OpportunityMajorArea\",\n  \"AREA\" as \t\"OpportunityArea\"\
+  ,\n\"REGION\" as \t\"OpportunityRegion\",\n \"DISTRICT\" as \t\"OpportunityDistrict\"\
+  ,\n \"TERRITORY\" as \t\"OpportunityTerritory\",\n'random' as \t\"AccountIndustryCategory\"\
+  ,\n'random' as \t\"AcctIndustry\",\n'random' as \t\"TerritorySysID\",\n \"SOURCE\"\
+  \ as \t\"OpportunityPipelineSourced\",\n'random' as \t\"OpportunityParentPipelineSourced\"\
+  ,\n'random' as \t\"OpportunityParentStage\",\n'random' as \t\"MarqueeAccount\",\n\
+  'random' as \t\"ParentMarqueeAccount\",\n'random' as \t\"OpportunityForeCastType\"\
+  ,\n'random' as \t\"OpportunityParentType\",\n'random' as \t\"OpportunityParentCloseDate\"\
+  ,\n'random' as \t\"ProductProgramType\",\n'random' as \t\"ProductDescription\",\n\
+  'random' as \t\"Stage\",\n'random' as \t\"OptyParentStage\",\n'random' as \t\"UserBin\"\
+  ,\n'random' as \t\"UserID\",\n'random' as \t\"QuarterFlag\",\n'random' as \t\"PipelineNNACV\"\
+  ,\n'random' as \t\"ClosedNNACV\",\n'random' as \t\"WeightedNNACV\",\n'random' as\
+  \ \tTAM,\n'random' as \t\"RenewalDate\",\n'random' as \t\"RenewalQuarter\",\n'random'\
+  \ as \t\"USDRenewalACV\",\n'random' as \t\"AcctSalesProgram\",\n'random' as \tCACV,\n\
+  'random' as \tCACV_FX,\n'random' as \t\"PTProgramName\",\n'random' as \t\"PTSubProgramName\"\
+  ,\n'random' as \t\"No of Optys\",\n'random' as \t\"Gen AI PipelineNNACV\",\n'random'\
+  \ as \t\"Expect\",\n'random' as \t\"Upside\",\n'random' as \t\"Commit\",\n'random'\
+  \ as \t\"Submitted\",\n'random' as \t\"AccountNewSegment\",\n'random' as \t\"SalesRep\"\
+  ,\n'random' as \t\"Solution Consultant\",\n'random' as \t\"MaturePipeline\",\n'random'\
+  \ as \t\"DealPackageType\",\n'random' as \t\"OpportunityParentPipelineStatus\",\n\
+  'random' as \t\"AccountGeo\",\n'random' as \t\"AccountMajorArea\",\n'random' as\
+  \ \t\"AccountArea\",\n'random' as \t\"AccountRegion\",\n'random' as \t\"AccountDistrict\"\
+  ,\n'random' as \t\"AccountTerritory\",\n'random' as \t\"4RQFlag\",\n'random' as\
+  \ \t\"ParentCOManaged\",\n'random' as \t\"ParentDynamicsGUID\",\n'random' as \t\"\
+  OptyParentSysID\",\n'random' as \t\"AcctKey\",\n'random' as \t\"ExistingCustomer\"\
+  ,\n'random' as \t\"PipelineNNACV_FX\",\n'random' as \t\"ClosedNNACV_FX\",\n'random'\
+  \ as \t\"WeightedNNACV_FX\",\n'random' as \t\"CommitNNACV_FX\",\n'random' as \t\"\
+  ExpectNNACV_FX\",\n'random' as \t\"UpsideNNACV_FX\",\n'random' as \t\"SubmittedNNACV_FX\"\
+  ,\n'random' as \t\"RenewalACV_FX\",\n'random' as \t\"Account_closed_NNACV\",\n'random'\
+  \ as \tCL_FLAG,\n'random' as \t\"Gen AI ClosedNNACV\",\n'random' as \t\"Gen AI OpenPipeline\"\
+  ,\n'random' as \t\"Product Package\",\n'random' as \t\"ClosedAccountFlag\",\n'random'\
+  \ as \t\"TotalAccountFlag\",\n'random' as \t\"OpenAccountFlag\",\n'random' as \t\
+  \"Geo_MajorArea\",\n\"SALES_QUARTER\" as \t\"OptyParentCreatedOnQuarter\",\n'random'\
+  \ as \tTERRITORY_ID,\n'random' as \tGEO_ID,\n \"SOURCE\",\n\"TARGET\",\n \"GEN_AI_TARGET\"\
+  ,\n'random' as \"DSR_Flag\",\n'random' as \"GenAI Searches\",\n'random' as  \"GenAI\
+  \ Summarizations\",\n'random' as  \"Resolution Notes Generated\",\n'random' as \
+  \ \"Code/Flow Assists\",\n'random' AS  \"#LLM Executions\",\n 'random' as \"GenAI\
+  \ Searches_Value\",\n 'random' as \"GenAI Summarizations_Value\",\n 'random' as\
+  \ \"Resolution Notes Generated_Value\",\n 'random' as \"Code/Flow Assists_Value\"\
+  ,\n 'random' AS  \"#LLM Executions_Value\",\n'random' as  MONTH_FLAG,\n'random'\
+  \ as \"SNAPSHOT_DATE\",\n'random' as \"K24_Registered\",\n'random' as \"Now_Assist_Certified\"\
+  ,\n'random' as \"Now_Assist_Engaged\",\n'random' AS  \"AcctACVBanding\",\n'random'\
+  \ AS \"OptyParentCreatedOn\",\n'random' AS \"AcctACVRange\",\nCASE WHEN UPPER(\"\
+  ProductFamily3\") like 'random' THEN 'random' ELSE 'random' END AS \"EarlyForecastFlag\"\
+  ,\n'random' AS  \"ContractDataCenter\" ,\n'random' AS  \"ProductName\"\nFROM\nODS_LS.SURF.NCP_TARGET_GEN_AI\n\
+  WHERE \"TARGET_TYPE\" = 'random'\n\nUNION ALL\n\nSELECT\n'random' \"RecordType\"\
+  ,\n    \"SALES_QUARTER\" as \t\"SalesQuarter\",\nCase when  \"BU_GROUP\" = 'random'\
+  \ then 'random' else   \"BU_GROUP\" END as \t\"BUGroup\",\n'random' as \t\"BUWorkFlow\"\
+  ,\n'random' as \t\"AccountNumber\",\n'random' as \t\"AccountName\",\n'random' as\
+  \ \t\"LineItemNumber\",\n'random' as \t\"OpportunityNumber\",\n'random' as \t\"\
+  OpportunityName\",\n'random' as \t\"OpportunityStage\",\n'random' as \t\"OpportunityType\"\
+  ,\n'random' as \t\"OpportunityCloseDate\",\n'random' as \t\"PipelineStatus\",\n\
+  'random' as \t\"OpportunityParentName\",\n'random' as \t\"OpportunityParentNumber\"\
+  ,\n'random' as \t\"OpportunityParentAccount\",\n'random' as \t\"ProductFamily3\"\
+  ,\n'random' as \t\"ProductCode\",\n \"GEO\" as \t\"ReportingTerritoryGeo\",\n \"\
+  MAJOR_AREA\" as \t\"OpportunityMajorArea\",\n  \"AREA\" as \t\"OpportunityArea\"\
+  ,\n\"REGION\" as \t\"OpportunityRegion\",\n \"DISTRICT\" as \t\"OpportunityDistrict\"\
+  ,\n \"TERRITORY\" as \t\"OpportunityTerritory\",\n'random' as \t\"AccountIndustryCategory\"\
+  ,\n'random' as \t\"AcctIndustry\",\n'random' as \t\"TerritorySysID\",\n \"SOURCE\"\
+  \ as \t\"OpportunityPipelineSourced\",\n'random' as \t\"OpportunityParentPipelineSourced\"\
+  ,\n'random' as \t\"OpportunityParentStage\",\n'random' as \t\"MarqueeAccount\",\n\
+  'random' as \t\"ParentMarqueeAccount\",\n'random' as \t\"OpportunityForeCastType\"\
+  ,\n'random' as \t\"OpportunityParentType\",\n'random' as \t\"OpportunityParentCloseDate\"\
+  ,\n'random' as \t\"ProductProgramType\",\n'random' as \t\"ProductDescription\",\n\
+  'random' as \t\"Stage\",\n'random' as \t\"OptyParentStage\",\n\n'random' as \t\"\
+  UserBin\",\n'random' as \t\"UserID\",\n       CASE\n          WHEN \"SALES_QUARTER\"\
+  \ = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()), 'random'))\
+  \ ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(convert_timezone('random',CURRENT_TIMESTAMP()))\
+  \ ||'random'|| QUARTER(convert_timezone('random',CURRENT_TIMESTAMP())), 'random')\
+  \ THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           WHEN \"SALES_QUARTER\" = RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random') THEN 'random'\n           ELSE 'random'\n       END AS \"\
+  QuarterFlag\",\n'random' as \t\"PipelineNNACV\",\n'random' as \t\"ClosedNNACV\"\
+  ,\n'random' as \t\"WeightedNNACV\",\n'random' as \tTAM,\n'random' as \t\"RenewalDate\"\
+  ,\n'random' as \t\"RenewalQuarter\",\n'random' as \t\"USDRenewalACV\",\n'random'\
+  \ as \t\"AcctSalesProgram\",\n'random' as \tCACV,\n'random' as \tCACV_FX,\n'random'\
+  \ as \t\"PTProgramName\",\n'random' as \t\"PTSubProgramName\",\n'random' as \t\"\
+  No of Optys\",\n'random' as \t\"Gen AI PipelineNNACV\",\n'random' as \t\"Expect\"\
+  ,\n'random' as \t\"Upside\",\n'random' as \t\"Commit\",\n'random' as \t\"Submitted\"\
+  ,\n'random' as \t\"AccountNewSegment\",\n'random' as \t\"SalesRep\",\n'random' as\
+  \ \t\"Solution Consultant\",\n'random' as \t\"MaturePipeline\",\n'random' as \t\"\
+  DealPackageType\",\n'random' as \t\"OpportunityParentPipelineStatus\",\n'random'\
+  \ as \t\"AccountGeo\",\n'random' as \t\"AccountMajorArea\",\n'random' as \t\"AccountArea\"\
+  ,\n'random' as \t\"AccountRegion\",\n'random' as \t\"AccountDistrict\",\n'random'\
+  \ as \t\"AccountTerritory\",\n'random' as \t\"4RQFlag\",\n'random' as \t\"ParentCOManaged\"\
+  ,\n'random' as \t\"ParentDynamicsGUID\",\n'random' as \t\"OptyParentSysID\",\n'random'\
+  \ as \t\"AcctKey\",\n'random' as \t\"ExistingCustomer\",\n'random' as \t\"PipelineNNACV_FX\"\
+  ,\n'random' as \t\"ClosedNNACV_FX\",\n'random' as \t\"WeightedNNACV_FX\",\n'random'\
+  \ as \t\"CommitNNACV_FX\",\n'random' as \t\"ExpectNNACV_FX\",\n'random' as \t\"\
+  UpsideNNACV_FX\",\n'random' as \t\"SubmittedNNACV_FX\",\n'random' as \t\"RenewalACV_FX\"\
+  ,\n'random' as \t\"Account_closed_NNACV\",\n'random' as \tCL_FLAG,\n'random' as\
+  \ \t\"Gen AI ClosedNNACV\",\n'random' as \t\"Gen AI OpenPipeline\",\n'random' as\
+  \ \t\"Product Package\",\n'random' as \t\"ClosedAccountFlag\",\n'random' as \t\"\
+  TotalAccountFlag\",\n'random' as \t\"OpenAccountFlag\",\n'random' as \t\"Geo_MajorArea\"\
+  ,\n\"SALES_QUARTER\" as \t\"OptyParentCreatedOnQuarter\",\n'random' as \tTERRITORY_ID,\n\
+  'random' as \tGEO_ID,\n \"SOURCE\",\n\"TARGET\",\n-- \"TARGET\" AS   \"GEN_AI_TARGET\"\
+  ,  -- Production\n--CASE WHEN \"MAJOR_AREA\" IS NULL THEN \"TARGET\" ELSE \"GEN_AI_TARGET\"\
+  \ END AS   \"GEN_AI_TARGET\",\n \"GEN_AI_TARGET\" AS   \"GEN_AI_TARGET\", -- commented\
+  \ for July 10 release and keeping existing  production logic for GEN_AI_TARGET column\n\
+  'random' as \"DSR_Flag\",\n'random' as \"GenAI Searches\",\n'random' as  \"GenAI\
+  \ Summarizations\",\n'random' as  \"Resolution Notes Generated\",\n'random' as \
+  \ \"Code/Flow Assists\",\n'random' as  \"#LLM Executions\",\n 'random' as \"GenAI\
+  \ Searches_Value\",\n 'random' as \"GenAI Summarizations_Value\",\n 'random' as\
+  \ \"Resolution Notes Generated_Value\",\n 'random' as \"Code/Flow Assists_Value\"\
+  ,\n 'random' AS  \"#LLM Executions_Value\",\n'random' as  MONTH_FLAG,\n'random'\
+  \ as \"SNAPSHOT_DATE\",\n'random' as \"K24_Registered\",\n'random' as \"Now_Assist_Certified\"\
+  ,\n'random' as \"Now_Assist_Engaged\",\n'random' AS  \"AcctACVBanding\",\n'random'\
+  \ AS \"OptyParentCreatedOn\",\n'random' AS \"AcctACVRange\",\n'random' AS \"EarlyForecastFlag\"\
+  ,\n'random' AS  \"ContractDataCenter\" ,\n'random' AS  \"ProductName\"\n\nFROM\n\
+  ODS_LS.SURF.NCP_TARGET_GEN_AI\nWHERE \"TARGET_TYPE\" = 'random'\n\nUNION ALL\n\n\
+  SELECT\n    'random' AS \"RecordType\",\n    'random' AS \"SalesQuarter\",\n   \
+  \ 'random' AS \"BUGroup\",\n    'random' AS \"BUWorkFlow\",\n    \"AccountNumber\"\
+  ,\n    'random' AS \"AccountName\",\n    'random' AS \"LineItemNumber\",\n    'random'\
+  \ AS \"OpportunityNumber\",\n    'random' AS \"OpportunityName\",\n    'random'\
+  \ AS \"OpportunityStage\",\n    'random' AS \"OpportunityType\",\n    'random' AS\
+  \ \"OpportunityCloseDate\",\n    'random' AS \"PipelineStatus\",\n    'random' AS\
+  \ \"OpportunityParentName\",\n    'random' AS \"OpportunityParentNumber\",\n   \
+  \ 'random' AS \"OpportunityParentAccount\",\n    'random' AS \"ProductFamily3\"\
+  ,\n    'random' AS \"ProductCode\",\n    'random' AS \"ReportingTerritoryGeo\",\n\
+  \    'random' AS \"OpportunityMajorArea\",\n    'random' AS \"OpportunityArea\"\
+  ,\n    'random' AS \"OpportunityRegion\",\n    'random' AS \"OpportunityDistrict\"\
+  ,\n    'random' AS \"OpportunityTerritory\",\n    \"AccountIndustryCategory\",\n\
+  \    \"AcctIndustry\",\n    \"TerritorySysID\",\n    'random' AS \"OpportunityPipelineSourced\"\
+  ,\n    'random' AS \"OpportunityParentPipelineSourced\",\n    'random' AS \"OpportunityParentStage\"\
+  ,\n    'random' AS \"MarqueeAccount\",\n    'random' AS \"ParentMarqueeAccount\"\
+  ,\n    'random' AS \"OpportunityForeCastType\",\n    'random' AS \"OpportunityParentType\"\
+  ,\n    'random' AS \"OpportunityParentCloseDate\",\n    'random' AS \"ProductProgramType\"\
+  ,\n    'random' AS \"ProductDescription\",\n    'random' AS \"Stage\",\n    'random'\
+  \ AS \"OptyParentStage\",\n    \"UserBin\",\n    \"UserID\",\n    'random' AS \"\
+  QuarterFlag\",\n    'random' AS \"PipelineNNACV\",\n    'random' AS \"ClosedNNACV\"\
+  ,\n    'random' AS \"WeightedNNACV\",\n    'random' AS \"TAM\",\n    'random' AS\
+  \ \"RenewalDate\",\n    'random' AS \"RenewalQuarter\",\n    'random' AS \"USDRenewalACV\"\
+  ,\n    'random' AS \"AcctSalesProgram\",\n    'random' AS \"CACV\",\n    'random'\
+  \ AS \"CACV_FX\",\n    'random' AS \"PTProgramName\",\n    'random' AS \"PTSubProgramName\"\
+  ,\n    'random' AS \"No of Optys\",\n    'random' AS \"Gen AI PipelineNNACV\",\n\
+  \    'random' AS \"Expect\",\n    'random' AS \"Upside\",\n    'random' AS \"Commit\"\
+  ,\n    'random' AS \"Submitted\",\n    'random' AS \"AccountNewSegment\",\n    'random'\
+  \ AS \"SalesRep\",\n    'random' AS \"Solution Consultant\",\n    'random' AS \"\
+  MaturePipeline\",\n    'random' AS \"DealPackageType\",\n    'random' AS \"OpportunityParentPipelineStatus\"\
+  ,\n    \"AccountGeo\",\n    \"AccountMajorArea\",\n    \"AccountArea\",\n    \"\
+  AccountRegion\",\n    \"AccountDistrict\",\n    \"AccountTerritory\",\n    'random'\
+  \ AS \"4RQFlag\",\n    'random' AS \"ParentCOManaged\",\n    'random' AS \"ParentDynamicsGUID\"\
+  ,\n    'random' AS \"OptyParentSysID\",\n    'random' AS \"AcctKey\",\n    \"ExistingCustomer\"\
+  ,\n    'random' AS \"PipelineNNACV_FX\",\n    'random' AS \"ClosedNNACV_FX\",\n\
+  \    'random' AS \"WeightedNNACV_FX\",\n    'random' AS \"CommitNNACV_FX\",\n  \
+  \  'random' AS \"ExpectNNACV_FX\",\n    'random' AS \"UpsideNNACV_FX\",\n    'random'\
+  \ AS \"SubmittedNNACV_FX\",\n    'random' AS \"RenewalACV_FX\",\n    'random' AS\
+  \ \"Account_closed_NNACV\",\n    \"CL_FLAG\",\n    'random' AS \"Gen AI ClosedNNACV\"\
+  ,\n    'random' AS \"Gen AI OpenPipeline\",\n    'random' AS \"Product Package\"\
+  ,\n    'random' AS \"ClosedAccountFlag\",\n    'random' AS \"TotalAccountFlag\"\
+  ,\n    'random' AS \"OpenAccountFlag\",\n    'random' AS \"Geo_MajorArea\",\n  \
+  \  'random' AS \"OptyParentCreatedOnQuarter\",\n    TERRITORY_ID,\n    GEO_ID,\n\
+  \    'random' AS \"Source\",\n    'random' AS \"Target\",\n    'random' AS \"GenAITarget\"\
+  ,\n    'random' AS \"DSR_Flag\",\n    'random' AS \"GenAI Searches\",\n    'random'\
+  \ AS \"GenAI Summarizations\",\n    'random' AS \"Resolution Notes Generated\",\n\
+  \    'random' AS \"Code/Flow Assists\",\n    'random' AS  \"#LLM Executions\",\n\
+  \ \"GenAI Searches_Value\",\n \"GenAI Summarizations_Value\",\n \"Resolution Notes\
+  \ Generated_Value\",\n \"Code/Flow Assists_Value\",\n  \"#LLM Executions_Value\"\
+  ,\nMONTH_FLAG,\n SNAPSHOT_DATE AS \"SNAPSHOT_DATE\",\n 'random' as \"K24_Registered\"\
+  ,\n 'random' as \"Now_Assist_Certified\",\n'random' as \"Now_Assist_Engaged\"  ,\n\
+  'random' AS  \"AcctACVBanding\",\n'random' AS \"OptyParentCreatedOn\",\n'random'\
+  \ AS \"AcctACVRange\",\n'random' AS \"EarlyForecastFlag\",\n'random' AS  \"ContractDataCenter\"\
+  \ ,\n'random' AS \"ProductName\"\n\nFROM\n    (  SELECT\n           DISTINCT fd.\"\
+  AccountNumber\",\n            fd.\"AccountGeo\",\n            fd.\"AccountMajorArea\"\
+  ,\n            fd.\"AccountArea\",\n            fd.\"AccountRegion\",\n        \
+  \    fd.\"AccountDistrict\",\n            fd.\"AccountTerritory\",\n           \
+  \ fd.\"AccountIndustryCategory\",\n            fd.\"AccountIndustry\" AS \"AcctIndustry\"\
+  ,\n            fd.\"AccountNewSegment\",\n            \"ExistingCustomer\",\n  \
+  \          \"GenAI Searches_Value\",\n            \"GenAI Summarizations_Value\"\
+  ,\n            \"Resolution Notes Generated_Value\",\n            \"Code/Flow Assists_Value\"\
+  ,\n            \"#LLM Executions_Value\",\n            CASE\n              WHEN\
+  \ \"Account_closed_NNACV\" > 'random' THEN 'random' --commened to calculate flag\
+  \ at  BU level instead of Total NNACV\n           -- WHEN \"ClosedNNACV\" > 0  \
+  \  THEN 'Yes'\n\n                ELSE 'random'\n            END AS \"CL_FLAG\",\n\
+  \n            HASH(fd.\"TerritorySysID\") AS TERRITORY_ID,\n            IFNULL(TERR.GEO_ID,\
+  \ HASH(TERR.GEO_ID)) AS GEO_ID,\n            \"UserBin\",\n            \"UserID\"\
+  ,\n            fd.\"TerritorySysID\",\n            \"SNAPSHOT_DATE\",\n        \
+  \     MONTH_FLAG\n        FROM\n            GEN_AI_CORE_DATA fd\n        LEFT JOIN\n\
+  \            (SELECT\n                    ACCOUNT_NO,\n                    \"SNAPSHOT_DATE\"\
+  ,\n                    MAX(CASE WHEN METRIC_NAME = 'random' THEN U_VALUE END) AS\
+  \ \"GenAI Searches_Value\",\n                    MAX(CASE WHEN METRIC_NAME = 'random'\
+  \ THEN U_VALUE END) AS \"GenAI Summarizations_Value\",\n                    MAX(CASE\
+  \ WHEN METRIC_NAME = 'random' THEN U_VALUE END) AS \"Resolution Notes Generated_Value\"\
+  ,\n                    MAX(CASE WHEN METRIC_NAME = 'random' THEN U_VALUE END) AS\
+  \ \"Code/Flow Assists_Value\",\n                    MAX(CASE WHEN METRIC_NAME =\
+  \ 'random' THEN U_VALUE END) AS  \"#LLM Executions_Value\",\n                  \
+  \  TO_CHAR(MONTH::DATE, 'random') MONTH_FLAG\n                FROM\n           \
+  \         ( SELECT\n                            *,\n                           \
+  \ CASE\n                                WHEN DATE_TRUNC('random', SNAPSHOT_DATE)\
+  \ = DATE_TRUNC('random', CURRENT_DATE()) THEN 'random'\n                       \
+  \         WHEN DATE_TRUNC('random', SNAPSHOT_DATE) = DATE_TRUNC('random', DATEADD(MONTH,\
+  \ 'random', CURRENT_DATE())) THEN 'random'\n                                WHEN\
+  \ DATE_TRUNC('random', SNAPSHOT_DATE) = DATE_TRUNC('random', DATEADD(MONTH, 'random',\
+  \ CURRENT_DATE())) THEN 'random'\n                                WHEN DATE_TRUNC('random',\
+  \ SNAPSHOT_DATE) = DATE_TRUNC('random', DATEADD(MONTH, 'random', CURRENT_DATE()))\
+  \ THEN 'random'\n                                ELSE 'random'\n               \
+  \             END AS MONTH_FLAG,\n                            DATE_TRUNC('random',\
+  \ SNAPSHOT_DATE) AS MONTH\n                        FROM\n                      \
+  \      EDW_LS.PRODUCT_USAGE_EM.EM_GEN_AI_APP_ADOPTION )\n                WHERE MONTH_FLAG\
+  \ IS not NULL\n                GROUP BY\n                    ACCOUNT_NO,\n     \
+  \              \"SNAPSHOT_DATE\",\n                    MONTH_FLAG,\n           \
+  \         MONTH) us ON us.ACCOUNT_NO = fd.\"AccountNumber\"\n        LEFT JOIN (\
+  \ SELECT DISTINCT \"AccountNumber\", 'random' AS \"ExistingCustomer\" FROM GEN_AI_CORE_DATA\
+  \ WHERE LEFT(\"OpportunityStage\", 'random') = 'random' GROUP BY ALL ) ex ON fd.\"\
+  AccountNumber\" = ex.\"AccountNumber\"\n        LEFT JOIN\n            ( SELECT\
+  \ \"AccountNumber\", SUM(\"Closed\") AS \"Account_closed_NNACV\"  FROM GEN_AI_CORE_DATA\
+  \ GROUP BY ALL) an ON fd.\"AccountNumber\" = an.\"AccountNumber\"\nLEFT JOIN\n \
+  \   (\n        SELECT DISTINCT \"TerritorySysID\", \"UserBin\", \"UserID\"\n   \
+  \     FROM CTE_PRODUCT_A a\n        INNER JOIN EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\"\
+  \ dsa ON dsa.\"TABLE_NAME\" = 'random'\n        WHERE a.\"Metric\" = 'random' AND\
+  \ dsa.\"DATA_SWITCH_FLAG\" = 'random'\n        UNION\n        SELECT DISTINCT \"\
+  TerritorySysID\", \"UserBin\", \"UserID\"\n        FROM CTE_PRODUCT_B a\n      \
+  \  INNER JOIN EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\"\
+  \ = 'random'\n        WHERE a.\"Metric\" = 'random' AND dsa.\"DATA_SWITCH_FLAG\"\
+  \ = 'random'\n    ) si ON si.\"TerritorySysID\" = fd.\"TerritorySysID_CC\"\nLEFT\
+  \ OUTER JOIN EDW.ENTERPRISE.DIM_TERRITORY TERR ON TERR.TERRITORY_SYSID = fd.\"TerritorySysID\"\
+  );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

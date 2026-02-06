@@ -1,0 +1,219 @@
+name: table_1219
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1219
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1219.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_DIM_TERRITORY_TEST(\n\tTERRITORY_ID,\n\
+  \tTERRITORY_NAME,\n\tDISTRICT_ID,\n\tDISTRICT,\n\tREGION_ID,\n\tREGION,\n\tAREA_ID,\n\
+  \tAREA,\n\tMAJOR_AREA_ID,\n\tMAJOR_AREA,\n\tGEO_ID,\n\tGEO,\n\tTERRITORY_TYPE,\n\
+  \tCOUNTRY,\n\tREPORTING_GEO,\n\tSALES_GEO,\n\tFINANCE_GEO,\n\tGLOBAL,\n\tSRM_CATEGORY,\n\
+  \tSRM_SUB_CATEGORY,\n\tIS_ACTIVE,\n\tMARKET_SEGMENTATION,\n\tMARKETING_TERRITORY,\n\
+  \tCHANNEL_VALUE,\n\tLEGAL_SUPPORT,\n\tMDM_TERRITORY_ID,\n\tPRICE_BAND_APPROVER_ID,\n\
+  \tPRICE_BAND_APPROVER,\n\tSALES_OPS_CONTACT_ID,\n\tSALES_OPS_CONTACT,\n\tRENEWALS_CONTACT_ID,\n\
+  \tRENEWALS_CONTACT,\n\tDEAL_DESK_CONTACT_ID,\n\tDEAL_DESK_CONTACT,\n\tFINANCE_CONTACT_ID,\n\
+  \tFINANCE_CONTACT,\n\tCONTRACT_OWNER_ID,\n\tCONTRACT_OWNER,\n\tTRAINING_OPS_CONTACT_ID,\n\
+  \tCONTRACT_OWNER_CONTACT,\n\tTRAINING_OPS_APPROVER_ID,\n\tTRAINING_OPS_APPROVER,\n\
+  \tREVENUE_CONTACT_ID,\n\tREVENUE_CONTACT,\n\tSOLUTION_CONSULTANT_GROUP,\n\tDISTRICT_PRICE_BAND_APPROVER_ID,\n\
+  \tDISTRICT_PRICE_BAND_APPROVER,\n\tDISTRICT_SALES_OPS_CONTACT_ID,\n\tDISTRICT_SALES_OPS_CONTACT,\n\
+  \tDISTRICT_RENEWALS_CONTACT_ID,\n\tDISTRICT_RENEWALS_CONTACT,\n\tDISTRICT_DEAL_DESK_CONTACT_ID,\n\
+  \tDISTRICT_DEAL_DESK_CONTACT,\n\tDISTRICT_FINANCE_CONTACT_ID,\n\tDISTRICT_FINANCE_CONTACT,\n\
+  \tDISTRICT_CONTRACT_OWNER_ID,\n\tDISTRICT_CONTRACT_OWNER,\n\tDISTRICT_TRAINING_OPS_CONTACT_ID,\n\
+  \tDISTRICT_CONTRACT_OWNER_CONTACT,\n\tDISTRICT_TRAINING_OPS_APPROVER_ID,\n\tDISTRICT_TRAINING_OPS_APPROVER,\n\
+  \tDISTRICT_REVENUE_CONTACT_ID,\n\tDISTRICT_REVENUE_CONTACT,\n\tDISTRICT_SOLUTION_CONSULTANT_GROUP,\n\
+  \tREGION_PRICE_BAND_APPROVER_ID,\n\tREGION_PRICE_BAND_APPROVER,\n\tREGION_SALES_OPS_CONTACT_ID,\n\
+  \tREGION_SALES_OPS_CONTACT,\n\tREGION_RENEWALS_CONTACT_ID,\n\tREGION_RENEWALS_CONTACT,\n\
+  \tREGION_DEAL_DESK_CONTACT_ID,\n\tREGION_DEAL_DESK_CONTACT,\n\tREGION_FINANCE_CONTACT_ID,\n\
+  \tREGION_FINANCE_CONTACT,\n\tREGION_CONTRACT_OWNER_ID,\n\tREGION_CONTRACT_OWNER,\n\
+  \tREGION_TRAINING_OPS_CONTACT_ID,\n\tREGION_CONTRACT_OWNER_CONTACT,\n\tREGION_TRAINING_OPS_APPROVER_ID,\n\
+  \tREGION_TRAINING_OPS_APPROVER,\n\tREGION_REVENUE_CONTACT_ID,\n\tREGION_REVENUE_CONTACT,\n\
+  \tREGION_SOLUTION_CONSULTANT_GROUP,\n\tAREA_PRICE_BAND_APPROVER_ID,\n\tAREA_PRICE_BAND_APPROVER,\n\
+  \tAREA_SALES_OPS_CONTACT_ID,\n\tAREA_SALES_OPS_CONTACT,\n\tAREA_RENEWALS_CONTACT_ID,\n\
+  \tAREA_RENEWALS_CONTACT,\n\tAREA_DEAL_DESK_CONTACT_ID,\n\tAREA_DEAL_DESK_CONTACT,\n\
+  \tAREA_FINANCE_CONTACT_ID,\n\tAREA_FINANCE_CONTACT,\n\tAREA_CONTRACT_OWNER_ID,\n\
+  \tAREA_CONTRACT_OWNER,\n\tAREA_TRAINING_OPS_CONTACT_ID,\n\tAREA_CONTRACT_OWNER_CONTACT,\n\
+  \tAREA_TRAINING_OPS_APPROVER_ID,\n\tAREA_TRAINING_OPS_APPROVER,\n\tAREA_REVENUE_CONTACT_ID,\n\
+  \tAREA_REVENUE_CONTACT,\n\tAREA_SOLUTION_CONSULTANT_GROUP,\n\tMAJORAREA_PRICE_BAND_APPROVER_ID,\n\
+  \tMAJORAREA_PRICE_BAND_APPROVER,\n\tMAJORAREA_SALES_OPS_CONTACT_ID,\n\tMAJORAREA_SALES_OPS_CONTACT,\n\
+  \tMAJORAREA_RENEWALS_CONTACT_ID,\n\tMAJORAREA_RENEWALS_CONTACT,\n\tMAJORAREA_DEAL_DESK_CONTACT_ID,\n\
+  \tMAJORAREA_DEAL_DESK_CONTACT,\n\tMAJORAREA_FINANCE_CONTACT_ID,\n\tMAJORAREA_FINANCE_CONTACT,\n\
+  \tMAJORAREA_CONTRACT_OWNER_ID,\n\tMAJORAREA_CONTRACT_OWNER,\n\tMAJORAREA_TRAINING_OPS_CONTACT_ID,\n\
+  \tMAJORAREA_CONTRACT_OWNER_CONTACT,\n\tMAJORAREA_TRAINING_OPS_APPROVER_ID,\n\tMAJORAREA_TRAINING_OPS_APPROVER,\n\
+  \tMAJORAREA_REVENUE_CONTACT_ID,\n\tMAJORAREA_REVENUE_CONTACT,\n\tMAJORAREA_SOLUTION_CONSULTANT_GROUP,\n\
+  \tGEO_PRICE_BAND_APPROVER_ID,\n\tGEO_PRICE_BAND_APPROVER,\n\tGEO_SALES_OPS_CONTACT_ID,\n\
+  \tGEO_SALES_OPS_CONTACT,\n\tGEO_RENEWALS_CONTACT_ID,\n\tGEO_RENEWALS_CONTACT,\n\t\
+  GEO_DEAL_DESK_CONTACT_ID,\n\tGEO_DEAL_DESK_CONTACT,\n\tGEO_FINANCE_CONTACT_ID,\n\
+  \tGEO_FINANCE_CONTACT,\n\tGEO_CONTRACT_OWNER_ID,\n\tGEO_CONTRACT_OWNER,\n\tGEO_TRAINING_OPS_CONTACT_ID,\n\
+  \tGEO_CONTRACT_OWNER_CONTACT,\n\tGEO_TRAINING_OPS_APPROVER_ID,\n\tGEO_TRAINING_OPS_APPROVER,\n\
+  \tGEO_REVENUE_CONTACT_ID,\n\tGEO_REVENUE_CONTACT,\n\tGEO_SOLUTION_CONSULTANT_GROUP,\n\
+  \tTERRITORY_SYSID,\n\tDISTRICT_SYSID,\n\tREGION_SYSID,\n\tAREA_SYSID,\n\tMAJOR_AREA_SYSID,\n\
+  \tGEO_SYSID,\n\tCOUNTRY_SYSID,\n\tGLOBAL_SYSID,\n\tPARENT_TERRITORY_SYSID\n) as\n\
+  SELECT\n         hash(terr.\"TerrSysID\") AS TERRITORY_ID\n\t\t,terr.\"TerrName\"\
+  \ AS TERRITORY_NAME\n        ,hash(terr.\"TerrDistrictSysID\") AS DISTRICT_ID\n\
+  \        ,terr.\"TerrDistrict\" AS DISTRICT\n\t\t,hash(terr.\"TerrRegionSysID\"\
+  )  AS REGION_ID\n\t\t,terr.\"TerrRegion\" AS REGION\n        ,hash(terr.\"TerrAreaSysID\"\
+  )  AS AREA_ID\n\t\t,terr.\"TerrArea\" AS AREA\n        ,hash(terr.\"TerrMajorAreaSysID\"\
+  ) AS MAJOR_AREA_ID\n\t\t,terr.\"TerrMajorArea\" AS MAJOR_AREA\n\t\t,hash(terr.\"\
+  TerrGeoSysID\") AS GEO_ID\n\t\t,terr.\"TerrGeo\" AS GEO\n        ,terr.\"TerrTypeValue\"\
+  \ as TERRITORY_TYPE\n        ,terr.\"TerrCountry\" AS COUNTRY\n\t\t,terr.\"TerrReportingTerritoryGeo\"\
+  \ AS REPORTING_GEO\n        ,terr.\"TerrGeo\" AS SALES_GEO\n        ,CAST ('random'\
+  \ AS VARCHAR('random')) AS FINANCE_GEO\n        ,terr.\"TerrGlobal\" AS GLOBAL\n\
+  \t\t,terr.\"TerrSRMCategory\" AS \"SRM_CATEGORY\"\n        ,terr.\"TerrSRMSUBCategory\"\
+  \ AS \"SRM_SUB_CATEGORY\"\n        ,terr.\"TerrActive\" AS \"IS_ACTIVE\"\n     \
+  \   ,terr.\"TerrMarketSegmentation\" AS \"MARKET_SEGMENTATION\"\n        ,terr.\"\
+  TerrMarketingTerritory\" AS \"MARKETING_TERRITORY\"\n        ,terr.\"TerrChannelValue\"\
+  \ as \"CHANNEL_VALUE\"\n        ,terr.\"TerrLegalSupport\" AS \"LEGAL_SUPPORT\"\n\
+  \        ,terr1.\"TerrMDMTerritoryID\" AS \"MDM_TERRITORY_ID\"\n\t\t,hash(terr.\"\
+  TerrPriceBandApprover\") AS PRICE_BAND_APPROVER_ID\n        ,terr.\"TerrPriceBandApprover\"\
+  \ AS PRICE_BAND_APPROVER\n        ,hash(terr.\"TerrSalesOperationsValue\" ) AS SALES_OPS_CONTACT_ID\n\
+  \        ,terr.\"TerrSalesOperationsValue\" AS SALES_OPS_CONTACT\n        ,hash(terr.\"\
+  TerrRenewalsValue\") AS RENEWALS_CONTACT_ID\n        ,terr.\"TerrRenewalsValue\"\
+  \ AS RENEWALS_CONTACT\n        ,hash(terr.\"TerrDealDesk\" ) AS DEAL_DESK_CONTACT_ID\n\
+  \        ,terr.\"TerrDealDesk\" AS DEAL_DESK_CONTACT\n        ,hash(terr.\"TerrFinanceContact\"\
+  ) AS FINANCE_CONTACT_ID\n        ,terr.\"TerrFinanceContact\" AS FINANCE_CONTACT\n\
+  \        ,hash(terr.\"TerrContractOwner\") AS CONTRACT_OWNER_ID\n        ,terr.\"\
+  TerrContractOwner\" AS CONTRACT_OWNER\n        ,hash(terr.\"TerrContractOwner\"\
+  ) AS TRAINING_OPS_CONTACT_ID\n        ,terr.\"TerrContractOwner\" AS CONTRACT_OWNER_CONTACT\n\
+  \        ,hash(terr.\"TerrTraningsOPSApprover\") AS TRAINING_OPS_APPROVER_ID\n \
+  \       ,terr.\"TerrTraningsOPSApprover\" AS TRAINING_OPS_APPROVER\n        ,hash(terr.\"\
+  TerrRevenueContact\") AS REVENUE_CONTACT_ID\n        ,terr.\"TerrRevenueContact\"\
+  \ AS REVENUE_CONTACT\n\t\t,terr.\"TerrSCGroup\" AS SOLUTION_CONSULTANT_GROUP\n \
+  \       ,hash(terr_district.\"TerrPriceBandApprover\") AS DISTRICT_PRICE_BAND_APPROVER_ID\n\
+  \        ,terr_district.\"TerrPriceBandApprover\" AS DISTICT_PRICE_BAND_APPROVER\n\
+  \        ,hash(terr_district.\"TerrSalesOperationsValue\") AS DISTRICT_SALES_OPS_CONTACT_ID\n\
+  \        ,terr_district.\"TerrSalesOperationsValue\" AS DISTRICT_SALES_OPS_CONTACT\n\
+  \        ,hash(terr_district.\"TerrRenewalsValue\") AS DISTRICT_RENEWALS_CONTACT_ID\n\
+  \        ,terr_district.\"TerrRenewalsValue\" AS DISTRICT_RENEWALS_CONTACT\n   \
+  \     ,hash(terr_district.\"TerrDealDesk\") AS DISTRICT_DEAL_DESK_CONTACT_ID\n \
+  \       ,terr_district.\"TerrDealDesk\" AS DISTRICT_DEAL_DESK_CONTACT\n        ,hash(terr_district.\"\
+  TerrFinanceContact\") AS DISTRICT_FINANCE_CONTACT_ID\n        ,terr_district.\"\
+  TerrFinanceContact\" AS DISTRICT_FINANCE_CONTACT\n        ,hash(terr_district.\"\
+  TerrContractOwner\") AS DISTRICT_CONTRACT_OWNER_ID\n        ,terr_district.\"TerrContractOwner\"\
+  \ AS DISTRICT_CONTRACT_OWNER\n        ,hash(terr_district.\"TerrContractOwner\"\
+  ) AS DISTRICT_TRAINING_OPS_CONTACT_ID\n        ,terr_district.\"TerrContractOwner\"\
+  \ AS DISTRICT_CONTRACT_OWNER_CONTACT\n        ,hash(terr_district.\"TerrTraningsOPSApprover\"\
+  ) AS DISTRICT_TRAINING_OPS_APPROVER_ID\n        ,terr_district.\"TerrTraningsOPSApprover\"\
+  \ AS DISTRICT_TRAINING_OPS_APPROVER\n        ,hash(terr_district.\"TerrRevenueContact\"\
+  ) AS DISTRICT_REVENUE_CONTACT_ID\n        ,terr_district.\"TerrRevenueContact\"\
+  \ AS DISTRICT_REVENUE_CONTACT\n\t\t,terr_district.\"TerrSCGroup\" AS DISTRICT_SOLUTION_CONSULTANT_GROUP\n\
+  \        ,hash(terr_region.\"TerrPriceBandApprover\") AS REGION_PRICE_BAND_APPROVER_ID\n\
+  \        ,terr_region.\"TerrPriceBandApprover\" AS REGION_PRICE_BAND_APPROVER\n\
+  \        ,hash(terr_region.\"TerrSalesOperationsValue\") AS REGION_SALES_OPS_CONTACT_ID\n\
+  \        ,terr_region.\"TerrSalesOperationsValue\" AS REGION_SALES_OPS_CONTACT\n\
+  \        ,hash(terr_region.\"TerrRenewalsValue\") AS REGION_RENEWALS_CONTACT_ID\n\
+  \        ,terr_region.\"TerrRenewalsValue\" AS REGION_RENEWALS_CONTACT\n       \
+  \ ,hash(terr_region.\"TerrDealDesk\") AS REGION_DEAL_DESK_CONTACT_ID\n        ,terr_region.\"\
+  TerrDealDesk\" AS REGION_DEAL_DESK_CONTACT\n        ,hash(terr_region.\"TerrFinanceContact\"\
+  ) AS REGION_FINANCE_CONTACT_ID\n        ,terr_region.\"TerrFinanceContact\" AS REGION_FINANCE_CONTACT\n\
+  \        ,hash(terr_region.\"TerrContractOwner\") AS REGION_CONTRACT_OWNER_ID\n\
+  \        ,terr_region.\"TerrContractOwner\" AS REGION_CONTRACT_OWNER\n        ,hash(terr_region.\"\
+  TerrContractOwner\") AS REGION_TRAINING_OPS_CONTACT_ID\n        ,terr_region.\"\
+  TerrContractOwner\" AS REGION_CONTRACT_OWNER_CONTACT\n        ,hash(terr_region.\"\
+  TerrTraningsOPSApprover\") AS REGION_TRAINING_OPS_APPROVER_ID\n        ,terr_region.\"\
+  TerrTraningsOPSApprover\" AS REGION_TRAINING_OPS_APPROVER\n        ,hash(terr_region.\"\
+  TerrRevenueContact\") AS REGION_REVENUE_CONTACT_ID\n        ,terr_region.\"TerrRevenueContact\"\
+  \ AS REGION_REVENUE_CONTACT\n\t\t,terr_region.\"TerrSCGroup\" AS REGION_SOLUTION_CONSULTANT_GROUP\n\
+  \        ,hash(terr_area.\"TerrPriceBandApprover\") AS AREA_PRICE_BAND_APPROVER_ID\n\
+  \        ,terr_area.\"TerrPriceBandApprover\" AS AREA_PRICE_BAND_APPROVER\n    \
+  \    ,hash(terr_area.\"TerrSalesOperationsValue\") AS AREA_SALES_OPS_CONTACT_ID\n\
+  \        ,terr_area.\"TerrSalesOperationsValue\" AS AREA_SALES_OPS_CONTACT\n   \
+  \     ,hash(terr_area.\"TerrRenewalsValue\") AS AREA_RENEWALS_CONTACT_ID\n     \
+  \   ,terr_area.\"TerrRenewalsValue\" AS AREA_RENEWALS_CONTACT\n        ,hash(terr_area.\"\
+  TerrDealDesk\") AS AREA_DEAL_DESK_CONTACT_ID\n        ,terr_area.\"TerrDealDesk\"\
+  \ AS AREA_DEAL_DESK_CONTACT\n        ,hash(terr_area.\"TerrFinanceContact\") AS\
+  \ AREA_FINANCE_CONTACT_ID\n        ,terr_area.\"TerrFinanceContact\" AS AREA_FINANCE_CONTACT\n\
+  \        ,hash(terr_area.\"TerrContractOwner\") AS AREA_CONTRACT_OWNER_ID\n    \
+  \    ,terr_area.\"TerrContractOwner\" AS AREA_CONTRACT_OWNER\n        ,hash(terr_area.\"\
+  TerrContractOwner\") AS AREA_TRAINING_OPS_CONTACT_ID\n        ,terr_area.\"TerrContractOwner\"\
+  \ AS AREA_CONTRACT_OWNER_CONTACT\n        ,hash(terr_area.\"TerrTraningsOPSApprover\"\
+  ) AS AREA_TRAINING_OPS_APPROVER_ID\n        ,terr_area.\"TerrTraningsOPSApprover\"\
+  \ AS AREA_TRAINING_OPS_APPROVER\n        ,hash(terr_area.\"TerrRevenueContact\"\
+  ) AS AREA_REVENUE_CONTACT_ID\n        ,terr_area.\"TerrRevenueContact\" AS AREA_REVENUE_CONTACT\n\
+  \        ,terr_area.\"TerrSCGroup\" AS AREA_SOLUTION_CONSULTANT_GROUP\n        ,hash(terr_maj_area.\"\
+  TerrPriceBandApprover\") AS MAJORAREA_PRICE_BAND_APPROVER_ID\n        ,terr_maj_area.\"\
+  TerrPriceBandApprover\" AS MAJORAREA_PRICE_BAND_APPROVER\n        ,hash(terr_maj_area.\"\
+  TerrSalesOperationsValue\") AS MAJORAREA_SALES_OPS_CONTACT_ID\n        ,terr_maj_area.\"\
+  TerrSalesOperationsValue\" AS MAJORAREA_SALES_OPS_CONTACT\n        ,hash(terr_maj_area.\"\
+  TerrRenewalsValue\") AS MAJORAREA_RENEWALS_CONTACT_ID\n        ,terr_maj_area.\"\
+  TerrRenewalsValue\" AS MAJORAREA_RENEWALS_CONTACT\n        ,hash(terr_maj_area.\"\
+  TerrDealDesk\") AS MAJORAREA_DEAL_DESK_CONTACT_ID\n        ,terr_maj_area.\"TerrDealDesk\"\
+  \ AS MAJORAREA_DEAL_DESK_CONTACT\n        ,hash(terr_maj_area.\"TerrFinanceContact\"\
+  ) AS MAJORAREA_FINANCE_CONTACT_ID\n        ,terr_maj_area.\"TerrFinanceContact\"\
+  \ AS MAJORAREA_FINANCE_CONTACT\n        ,hash(terr_maj_area.\"TerrContractOwner\"\
+  ) AS MAJORAREA_CONTRACT_OWNER_ID\n        ,terr_maj_area.\"TerrContractOwner\" AS\
+  \ MAJORAREA_CONTRACT_OWNER\n        ,hash(terr_maj_area.\"TerrContractOwner\") AS\
+  \ MAJORAREA_TRAINING_OPS_CONTACT_ID\n        ,terr_maj_area.\"TerrContractOwner\"\
+  \ AS MAJORAREA_CONTRACT_OWNER_CONTACT\n        ,hash(terr_maj_area.\"TerrTraningsOPSApprover\"\
+  ) AS MAJORAREA_TRAINING_OPS_APPROVER_ID\n        ,terr_maj_area.\"TerrTraningsOPSApprover\"\
+  \ AS MAJORAREA_TRAINING_OPS_APPROVER\n        ,hash(terr_maj_area.\"TerrRevenueContact\"\
+  ) AS MAJORAREA_REVENUE_CONTACT_ID\n        ,terr_maj_area.\"TerrRevenueContact\"\
+  \ AS MAJORAREA_REVENUE_CONTACT\n        ,terr_maj_area.\"TerrSCGroup\" AS MAJORAREA_SOLUTION_CONSULTANT_GROUP\n\
+  \        ,hash(terr_geo.\"TerrPriceBandApprover\") AS GEO_PRICE_BAND_APPROVER_ID\n\
+  \        ,terr_geo.\"TerrPriceBandApprover\" AS GEO_PRICE_BAND_APPROVER\n      \
+  \  ,hash(terr_geo.\"TerrSalesOperationsValue\") AS GEO_SALES_OPS_CONTACT_ID\n  \
+  \      ,terr_geo.\"TerrSalesOperationsValue\" AS GEO_SALES_OPS_CONTACT\n       \
+  \ ,hash(terr_geo.\"TerrRenewalsValue\") AS GEO_RENEWALS_CONTACT_ID\n        ,terr_geo.\"\
+  TerrRenewalsValue\" AS GEO_RENEWALS_CONTACT\n        ,hash(terr_geo.\"TerrDealDesk\"\
+  ) AS GEO_DEAL_DESK_CONTACT_ID\n        ,terr_geo.\"TerrDealDesk\" AS GEO_DEAL_DESK_CONTACT\n\
+  \        ,hash(terr_geo.\"TerrFinanceContact\") AS GEO_FINANCE_CONTACT_ID\n    \
+  \    ,terr_geo.\"TerrFinanceContact\" AS GEO_FINANCE_CONTACT\n        ,hash(terr_geo.\"\
+  TerrContractOwner\") AS GEO_CONTRACT_OWNER_ID\n        ,terr_geo.\"TerrContractOwner\"\
+  \ AS GEO_CONTRACT_OWNER\n        ,hash(terr_geo.\"TerrContractOwner\") AS GEO_TRAINING_OPS_CONTACT_ID\n\
+  \        ,terr_geo.\"TerrContractOwner\" AS GEO_CONTRACT_OWNER_CONTACT\n       \
+  \ ,hash(terr_geo.\"TerrTraningsOPSApprover\") AS GEO_TRAINING_OPS_APPROVER_ID\n\
+  \        ,terr_geo.\"TerrTraningsOPSApprover\" AS GEO_TRAINING_OPS_APPROVER\n  \
+  \      ,hash(terr_geo.\"TerrRevenueContact\") AS GEO_REVENUE_CONTACT_ID\n      \
+  \  ,terr_geo.\"TerrRevenueContact\" AS GEO_REVENUE_CONTACT\n        ,terr_geo.\"\
+  TerrSCGroup\" AS GEO_SOLUTION_CONSULTANT_GROUP\n\t\t,terr.\"TerrSysID\" AS TERRITORY_SYSID\n\
+  \t\t,terr.\"TerrDistrictSysID\" AS DISTRICT_SYSID\n\t\t,terr.\"TerrRegionSysID\"\
+  \ AS REGION_SYSID\n\t\t,terr.\"TerrAreaSysID\" AS AREA_SYSID\n\t\t,terr.\"TerrMajorAreaSysID\"\
+  \ AS MAJOR_AREA_SYSID\n\t\t,terr.\"TerrGeoSysID\" AS \"GEO_SYSID\"\n\t\t,terr.\"\
+  TerrCountrySysID\" AS \"COUNTRY_SYSID\"\n\t\t,terr.\"TerrGlobalSysID\" AS \"GLOBAL_SYSID\"\
+  \n\t\t,terr.\"TerrParentSysID\" AS \"PARENT_TERRITORY_SYSID\"\nFROM ODS_LS.SURF.SALES_TERRITORY_ALL\
+  \ terr\nLEFT JOIN ODS_LS.SURF.SALES_TERRITORY terr1 ON terr.\"TerrSysID\" = terr1.\"\
+  TerrSysID\"\nLEFT  OUTER JOIN ODS_LS.SURF.SALES_TERRITORY_ALL terr_district ON terr.\"\
+  TerrDistrictSysID\" = terr_district.\"TerrSysID\"\nLEFT  OUTER JOIN ODS_LS.SURF.SALES_TERRITORY_ALL\
+  \ terr_region ON terr.\"TerrRegionSysID\" = terr_region.\"TerrSysID\"\nLEFT  OUTER\
+  \ JOIN ODS_LS.SURF.SALES_TERRITORY_ALL terr_area ON terr.\"TerrAreaSysID\" = terr_area.\"\
+  TerrSysID\"\nLEFT  OUTER JOIN ODS_LS.SURF.SALES_TERRITORY_ALL terr_maj_area ON terr.\"\
+  TerrMajorAreaSysID\" = terr_maj_area.\"TerrSysID\"\nLEFT  OUTER JOIN ODS_LS.SURF.SALES_TERRITORY_ALL\
+  \ terr_geo ON terr.\"TerrGeoSysID\" = terr_geo.\"TerrSysID\"\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

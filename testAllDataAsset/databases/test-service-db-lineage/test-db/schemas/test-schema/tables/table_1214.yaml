@@ -1,0 +1,71 @@
+name: table_1214
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1214
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1214.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_REF_PQ_OPTY_15DAY_SNAPSHOTS(\n\tST_OPTY_NUMBER,\n\
+  \tST_OPTY_ID,\n\tST_OPTY_SYSID\n) as\n/*Created by Matt Accenture on 28-May-2024*/\n\
+  (select\n    \"STOptyNumber\",\n    hash(\"STOptySysID\") as STOPTYID,\n    \"STOptySysID\"\
+  \nfrom\n    ODS_LS.\"SURF\".\"ST_SALES_OPPORTUNITY\" opp\n    LEFT outer join ODS_LS.\"\
+  SURF\".\"ST_SALES_OPPORTUNITY_ITEM\" oli on opp.\"STOptySysID\" = oli.\"SOptyItemOptySysID\"\
+  \n    and opp.\"STExtractDate\" = oli.\"SOptyItemExtractDate\"\n    LEFT outer join\
+  \ ODS_LS.\"SURF\".\"SALES_PRODUCT\" sp on oli.\"SOptyItemProductSysID\" = sp.\"\
+  ProductSysID\"\nWHERE\n    oli.\"SOptyItemBIFlags\" = 'random'\n    AND opp.\"STSalesActivePipeline\"\
+  \ = 'random'\n    AND oli.\"SOptyPriceRestPrimaryLine\" = 'random'\n    AND IFNULL(\"\
+  ProductFamily3Value\", 'random') <> 'random'\n    AND IFNULL(\"ProductFamily1Value\"\
+  , 'random') != 'random'\n    AND IFNULL(opp.\"STOptyContractType\", 'random') not\
+  \ like ('random')\n    AND (\n        \"ProductBusinessUnitValue\" != 'random'\n\
+  \        or \"ProductBusinessUnitValue\" IS NULL\n    )\n    AND \"STOptySalesQuarter\"\
+  \ = RIGHT(\n        YEAR(\n            ADD_MONTHS(\n                convert_timezone('random',\
+  \ CURRENT_TIMESTAMP()),\n                'random'\n            )\n        ) || 'random'\
+  \ || QUARTER(\n            ADD_MONTHS(\n                convert_timezone('random',\
+  \ CURRENT_TIMESTAMP()),\n                'random'\n            )\n        ),\n \
+  \       'random'\n    )\n    AND IFNULL(opp.\"STOptyStage\", 'random') not in (\n\
+  \        'random',\n        'random',\n        'random',\n        'random',\n  \
+  \      'random'\n    )\n    and \"STOptyPipelineStatus\" in ('random', 'random')\n\
+  \    AND \"STExtractDate\" <= dateadd(\n        day,\n        'random',\n      \
+  \  date_trunc(\n            quarter,\n            to_date(\n                convert_timezone('random',\
+  \ CURRENT_TIMESTAMP ())\n            )\n        )\n    )\n    AND \"STExtractDate\"\
+  \ >= dateadd(\n        day,\n        'random',\n        date_trunc(\n          \
+  \  quarter,\n            to_date(\n                convert_timezone('random', CURRENT_TIMESTAMP\
+  \ ())\n            )\n        )\n    )\ngroup by\n    all);"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

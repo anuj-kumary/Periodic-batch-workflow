@@ -1,0 +1,69 @@
+name: table_1236
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1236
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1236.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_PROJECT_REVENUE(\n\tPROJECT_REVENUE_ID,\n\
+  \tUSER_ID,\n\tPROJECT_ID,\n\tJOB_CODE_ID,\n\tDEPLOYMENT_NUMBER,\n\tTIME_CARD_WEEK_STARTS_ON_DT,\n\
+  \tPROJECT_ENGAGEMENT_MANAGER,\n\tCLOSED_QUARTER_YYQQ,\n\tTIME_CARD_HOURS,\n\tTASK_CUSTOMER_SATISFACTION_HOURS,\n\
+  \tDELIVERED_TO_DATE_OR_PLANNED_FLAG,\n\tREVENUE_LC,\n\tDELIVERED_TO_DATE_BUDGET_LC,\n\
+  \tPLANNED_BUDGET_LC,\n\tPROJECT_BUDGET_LC,\n\tPROJECT_BUDGET_TIME,\n\tPROJECT_BUDGET_USD,\n\
+  \tDELIVERED_TO_DATE_HOURS,\n\tBOOKING_BY_DAY_HOURS,\n\tPROJECT_RATE,\n\tPLANNED_HOURS,\n\
+  \tJOB_CODE_NAME,\n\tPROJECT_NAME,\n\tPROJECT_NUMBER,\n\tPROJECT_STAGE_NAME,\n\t\
+  JOB_CODE_SYSID\n) as\n\nselect\nHASH(ifnull(\"PrjID\",'random')||ifnull(\"UserID\"\
+  ,'random')||ifnull(\"JobCodeID\",'random')||ifnull(\"TimeCardWeekStartsOn\",'random'))\
+  \ as PROJECT_REVENUE_ID,\n    HASH(\"UserID\") AS USER_ID,\n\tHASH(\"PrjID\") AS\
+  \ PROJECT_ID,\n\tHASH(\"JobCodeID\") AS JOB_CODE_ID,\n\t\"DeploymentNumber\" AS\
+  \ DEPLOYMENT_NUMBER,\n\t\"TimeCardWeekStartsOn\" as TIME_CARD_WEEK_STARTS_ON_DT,\n\
+  \    PRJ.PROJECT_ENGAGEMENT_MANAGER AS PROJECT_ENGAGEMENT_MANAGER,\n    right(year(PRJ.CLOSE_DT),'random')||'random'||quarter(PRJ.CLOSE_DT)\
+  \ AS CLOSED_QUARTER_YYQQ,\n\t\"TimeCardHours\" AS TIME_CARD_HOURS,\n\t\"TaskCSATHours\"\
+  \ as TASK_CUSTOMER_SATISFACTION_HOURS,\n\t\"DeliveredToDateorPlanned\" as DELIVERED_TO_DATE_OR_PLANNED_FLAG,\n\
+  \t\"Revenue\" as REVENUE_LC,\n\t\"DeliveredToDateBudget\" as DELIVERED_TO_DATE_BUDGET_LC,\n\
+  \t\"PlannedBudget\" as PLANNED_BUDGET_LC,\n\t\"PrjBudget\" as PROJECT_BUDGET_LC,\n\
+  \t\"PrjBudgetTime\" as PROJECT_BUDGET_TIME,\n\t\"PrjBudget_USD\" as PROJECT_BUDGET_USD,\n\
+  \t\"DeliveredToDateHours\" as DELIVERED_TO_DATE_HOURS,\n\t\"BkgByDayHours\" as BOOKING_BY_DAY_HOURS,\n\
+  \t\"Project_Rate\" as PROJECT_RATE,\n\t\"PlannedHours\" as PLANNED_HOURS,\n\t\"\
+  JobCodeName\" AS JOB_CODE_NAME,\n\t PRJ.PROJECT_NAME AS PROJECT_NAME,\n\t PRJ.PROJECT_NUMBER\
+  \ AS PROJECT_NUMBER,\n\t PRJ.PROJECT_STAGE_NAME AS PROJECT_STAGE_NAME,\n\t\"JobCodeID\"\
+  \ as JOB_CODE_SYSID\nFROM EDW_LS.CUSTOMER_PSANEW_EM.EM_PROJECT_REVENUE AS RVNU\n\
+  left join EDW.CUSTOMER_OUTCOMES.DIM_PROJECT PRJ ON RVNU.\"PrjID\" =PRJ.PROJECT_SYSID;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,104 @@
+name: table_1194
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1194
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1194.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view PPR_RPT_PARTNER_PROGRAM_SUMMARY_GLOBALELITE(\n\
+  \t\"ParentPartner\",\n\t\"ParentPartnerNumber\",\n\t\"ProgramType\",\n\t\"ParentPartnerGeo\"\
+  ,\n\t\"ParentPartnerPublicSectorFlag\",\n\t\"CurrentProgramSegment\",\n\t\"CalculatedProgramSegment\"\
+  ,\n\t\"Upward/DownwardChangeinSegmentFlag\",\n\t\"ChangeInSegmentDate\",\n\t\"DailyChangeFlag\"\
+  ,\n\t\"DeleteFlagMonthly\"\n) as\n/*********************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Partner Program Redesign\n \t\t* Project\
+  \ \t\t\t\t\t :\n \t\t* Object Name \t\t\t\t :     PPR_RPT_PARTNER_PROGRAM_SUMMARY_GLOBALELITE\n\
+  \ \t\t* Development Request # \t :\n \t\t* Brief Description          :\n \t\t*\
+  \ Developed By               :     Vaidehi\n \t\t* Date Created               :\
+  \ \t   2023-02-10\n \t\t* ---------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:SFSTRY0091234 -  01-06-2023     Vaidehi         Data Fix\
+  \ for missing parentpartner due to null parentpartnercategory\n          -- Data\
+  \ fix for ChangeInSegmentDate\n\n \t\t*\tSFSTRY0091234  -  17-01-2023     Pruthviraj\
+  \      Change Current Segment logic for respective Program module\n        *   SFSTRY0102990\t\
+  \    Dec-06-2023\t   Pruthviraj      Added Current Program Segments for all programs\
+  \ : SP/CIPP/Resale/GE/Build\n \t\t*----------------------------------------------------------------------------------------------------------------\n\
+  \n ********************************************************************************************************************************/\n\
+  \n(\n SELECT DISTINCT\n    \"ParentPartner\",\n    \"ParentPartnerNumber\",\n  \
+  \  \"ProgramType\",\n    \"ParentPartnerGeo\",\n    \"ParentPartnerPublicSectorFlag\"\
+  ,\n    \"CurrentProgramSegment\",\n    \"CalculatedProgramSegment\",\n   \"Upward/DownwardChangeinSegmentFlag\"\
+  ,\n    \"ChangeInSegmentDate\",\n    \"DailyChangeFlag\",\n    \"DeleteFlagMonthly\"\
+  \n    FROM (SELECT DISTINCT P.\"ParentPartner\",P.\"ParentPartnerNumber\", R.\"\
+  ProgramType\",PP.\"ParentPartnerGeo\",A.\"ParentPartnerPublicSectorFlag\", PP.\"\
+  GE_Segment\" AS \"CurrentProgramSegment\", NVL(\"CalculatedProgramSegment\",'random')\
+  \ AS \"CalculatedProgramSegment\",\n   CASE WHEN \"CurrentProgramSegment\"='random'\
+  \ THEN 'random'\n    WHEN \"CurrentProgramSegment\"='random' THEN 'random' ELSE\
+  \ 'random' END AS \"CurrentProgramSegmentnum\"\n    ,\n      CASE WHEN \"CalculatedProgramSegment\"\
+  ='random' THEN 'random'\n          WHEN \"CalculatedProgramSegment\"='random' THEN\
+  \ 'random'\n    WHEN \"CalculatedProgramSegment\"='random' THEN 'random' ELSE 'random'\
+  \ END AS \"CalculatedProgramSegmentnum\"\n    ,\n     CASE WHEN \"CurrentProgramSegmentnum\"\
+  <\"CalculatedProgramSegmentnum\" THEN 'random'\n    WHEN \"CurrentProgramSegmentnum\"\
+  >\"CalculatedProgramSegmentnum\" THEN 'random'\n    WHEN \"CurrentProgramSegmentnum\"\
+  =\"CalculatedProgramSegmentnum\" THEN 'random'\n    ELSE 'random' end\n    AS \"\
+  Upward/DownwardChangeinSegmentFlag\",\n     TO_DATE(convert_timezone('random', current_timestamp()))\n\
+  \    AS \"ChangeInSegmentDate\"\n    , 'random' AS \"DailyChangeFlag\", 'random'\
+  \ AS \"DeleteFlagMonthly\"\n    FROM (SELECT DISTINCT P.* FROM EDW_LS.PARTNER_EM.PARTNERS\
+  \ P\n    INNER JOIN EDW_LS.\"PARTNER_EM\".\"PARENTPARTNERS\" PP  ON P.\"ParentPartnerNumber\"\
+  =PP.\"ParentPartnerNumber\" AND\n   PP.\"ParentPartnerCategory\" = 'random') P\n\
+  \    LEFT JOIN\n (\nSELECT DISTINCT \"ParentPartner\",\"ParentPartnerNumber\",\"\
+  ProgramType\",\"ParentPartnerPublicSectorFlag\", \"DERIVED_SEGMENT_2\" AS \"CalculatedProgramSegment\"\
+  ,\"WINDOW_COUNT\"\nFROM (SELECT *,\nmin(\"RANKING\")   over (partition by \"ParentPartner\"\
+  ,\"ParentPartnerNumber\",\"ProgramType\" order by \"ParentPartner\",\"ParentPartnerNumber\"\
+  ,\"ProgramType\") AS \"WINDOW_RANKING\",\nCOUNT(\"RANKING\")   over (partition by\
+  \ \"ParentPartner\",\"ParentPartnerNumber\",\"ProgramType\" order by \"ParentPartner\"\
+  ,\"ParentPartnerNumber\",\"ProgramType\") AS \"WINDOW_COUNT\",\nIFF(\"WINDOW_COUNT\"\
+  =\"Criteria_Count\",CASE WHEN \"WINDOW_RANKING\"='random' THEN 'random' WHEN \"\
+  WINDOW_RANKING\"='random' THEN 'random' END,'random')\n    AS \"DERIVED_SEGMENT_2\"\
+  \nFROM\n(SELECT *,CASE WHEN \"WaivedUntil\" IS NULL THEN  CASE WHEN \"CurrentCriteriaSegment\"\
+  ='random' THEN 'random'\n  WHEN \"CriteriaThresholdLowerLimit\"=-'random' THEN 'random'\n\
+  ELSE 'random' END END AS \"RANKING\"\nFROM (\nSELECT * FROM CDL_LS.PARTNER_RPT.PPR_RPT_PARTNER_PROGRAM_EVALUATION_UNIFIED\
+  \ WHERE \"ProgramType\" = 'random'\n))\n--WHERE \"ParentPartnerNumber\"= 'ACCT0095343'\n\
+  INNER JOIN\n(SELECT  COUNT(DISTINCT \"CriteriaName\")  AS \"Criteria_Count\" FROM\
+  \  ODS_LS.PARTNER.X_SNC_4C_PARTNER_F_3C_RULES WHERE \"ProgramType\" = 'random' AND\
+  \ \"Active\" = 'random' AND  \"WaivedUntil\" IS NULL\n--AND \"CriteriaCreatedDate\"\
+  \ <= DATEADD(MONTH,-12,CURRENT_DATE)\n) RULES\nON  \"ProgramType\"='random'\n  \
+  \   )\n      ) A\n    ON P.\"ParentPartnerNumber\" = A.\"ParentPartnerNumber\"\n\
+  \  LEFT JOIN ODS_LS.PARTNER.X_SNC_4C_PARTNER_F_3C_RULES R\n  ON  R.\"ProgramType\"\
+  \ = 'random' AND \"Active\" = 'random'\n  LEFT JOIN EDW_LS.PARTNER_EM.PARENTPARTNERS\
+  \ PP\n  ON P.\"ParentPartnerNumber\" = PP.\"ParentPartnerNumber\"\n ));"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

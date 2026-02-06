@@ -1,0 +1,99 @@
+name: table_1218
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1218
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1218.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FIELD_SALESREP_TERRITORY_MAP_BKP01032024(\n\
+  \tSALES_REP_ID,\n\tTERRITORY_ID,\n\tQUARTER_ID,\n\tQUARTER_YYQQ,\n\tEMPLOYEE_ID,\n\
+  \tTERRITORY_SYSID,\n\tEMPLOYEE_SYSID,\n\tREP_NAME,\n\tIS_ACTIVE,\n\tDEPARTMENT_NAME,\n\
+  \tSTART_DT,\n\tEND_DT,\n\tTENURE_IN_MONTHS,\n\tIS_RAMPED,\n\tTERRITORY_NAME,\n\t\
+  SALESREP_TITLE,\n\tQUOTA_COMPONENT,\n\tNEWLOGO_REPNAME\n) as\nWITH   TabSalesRepDetails\
+  \ as(\n SELECT  distinct\n\t\t\t\te.\"EmpName\" as \"EmployeeName\",\n\t\t\t\tana.\"\
+  STEmpTerrTerritorySysId\" as \"TerritorySysID\",\n\t\t\t\tana.\"STEmpTerrRamped\"\
+  \ as \"Ramped\",\n\t\t\t\tcount( ana.\"STEmpTerrEmployeeSysId\") over (partition\
+  \ by ana.\"STEmpTerrTerritorySysId\" order by 'random') \"Cnt\"\nFROM ODS_LS.\"\
+  ANAPLAN\".\"SALES_EMPLOYEE_TERRITORY_MAPPING\" as ana\nLEFT JOIN ODS_LS.\"SURF\"\
+  .\"EMPLOYEE\" as e\n        on e.\"EmpSysID\" = ana.\"STEmpTerrEmployeeSysId\"\n\
+  WHERE EXISTS (\n\t\t\t\tSELECT 'random'\n\t\t\t\tFROM ODS_LS.\"SURF\".\"CMN_DEPARTMENT\"\
+  \   cmn\n\t\t\t\tWHERE \"DeptCostCenter\" in('random','random','random','random')\n\
+  \t\t\t\tAND  e.\"EmpDepartment\"= cmn.\"Deptname\"\n                           )\n\
+  \    AND \"STEmpTerrRepType\"='random'\n    AND e.\"EmpActive\"='random'\n    AND\
+  \ ana.\"STEmpQuotaComponent\"='random'\n    AND \"STEmpPlanEndDate\"> CURRENT_DATE()\n\
+  \    AND \"STEmpTerrActive\" = 'random'\n    AND ana.\"STEmpTerrQuarter\" = RIGHT(YEAR(convert_timezone('random',CURRENT_DATE))\
+  \ ||'random'||QUARTER(convert_timezone('random',CURRENT_DATE)),'random')\n   ),\n\
+  \n  SalesRepDetails as(\n  SELECT\n\t\t  \"TerritorySysID\" as \"TerritorySysIDRep\"\
+  \ ,\n\t\t  \"EmployeeName\"  as \"SalesRepName\"\n  FROM    TabSalesRepDetails\n\
+  \  WHERE \"Cnt\"='random'\n  UNION\nSELECT\n\"TerritorySysIDRep\",\n \"SalesRepName\"\
+  \n FROM\n(SELECT DISTINCT\n\t\t\"TerrUserRecSysID\" as \"TerritorySysIDRep\",\n\t\
+  \t\"TerrUserName\" as \"SalesRepName\",\n\t\tRANK() OVER (PARTITION  BY  \"TerrUserRecSysID\"\
+  \  ORDER BY \"TerrUserRecSysID\" ) RANK\n  FROM  ODS_LS.SURF.U_ST_TERRITORY t, TabSalesRepDetails\
+  \ x\n  WHERE t.\"TerrUserJobFunctionName\" in ('random')\n  AND  t.\"TerrUserPrimaryAssignment\"\
+  ='random'\n  AND  t.\"TerrUserActive\"='random'\n  AND \"TerrUserRecSysID\"=x.\"\
+  TerritorySysID\"\n  AND \"Cnt\"='random')   WHERE RANK='random'),\nFieldSalesRep1\
+  \ as\n(SELECT\n'random' AS SALES_REP_ID,\nHASH(ST.\"STEmpTerrTerritorySysId\") AS\
+  \ TERRITORY_ID,\nqtr.QUARTER_ID,\nqtr.QUARTER_YYQQ,\nHASH(\"STEmpTerrEmployeeSysId\"\
+  ) AS EMPLOYEE_ID ,\nST.\"STEmpTerrTerritorySysId\" AS TERRITORY_SYSID,\nST.\"STEmpTerrEmployeeSysId\"\
+  \ AS EMPLOYEE_SYSID,\n\"STEmpTerrEmployeeName\" AS REP_NAME,\nST.\"STEmpTerrActive\"\
+  \ AS  IS_ACTIVE,\nD.DEPARTMENT_NAME AS DEPARTMENT_NAME,\nST.\"STEmpPlanStartDate\"\
+  \ AS START_DT,\nST.\"STEmpPlanEndDate\" AS END_DT,\nMAX(ST.\"STEmpTerrTenure\")\
+  \ over(partition by ST.\"STEmpTerrEmployeeSysId\") as \"STEmpTerrTenure\" ,\nST.\"\
+  STEmpTerrRamped\" AS IS_RAMPED,\nST.\"STEmpTerrTerritoy\" AS TERRITORY_NAME,\nST.\"\
+  STEmpTerrEmpTitle\" AS SALESREP_TITLE,\nST.\"STEmpQuotaComponent\" AS QUOTA_COMPONENT\n\
+  FROM ODS_LS.ANAPLAN.SALES_EMPLOYEE_TERRITORY_MAPPING ST\nleft outer join\n(select\
+  \ distinct QUARTER_ID, QUARTER_DT, QUARTER_YYQQ from EDW.ENTERPRISE.DIM_QUARTER)\
+  \ qtr on qtr.QUARTER_YYQQ=ST.\"STEmpTerrQuarter\"\nleft outer join\nEDW.ENTERPRISE.DIM_DEPARTMENT\
+  \ D ON D.DEPARTMENT_SYSID = ST.\"STEmpTerrTerritorySysId\"),\nFieldSalesRep2 as\n\
+  (\nSELECT\nHASH(TERRITORY_ID,QUARTER_ID) AS SALES_REP_ID,\nTERRITORY_ID ,\nQUARTER_ID,\n\
+  QUARTER_YYQQ,\nEMPLOYEE_ID,\nTERRITORY_SYSID,\nEMPLOYEE_SYSID,\nREP_NAME,\nIS_ACTIVE\
+  \ ,\nDEPARTMENT_NAME ,\nSTART_DT ,\nEND_DT,\ncase\n                    when \"STEmpTerrTenure\"\
+  \ >'random' then 'random'\n                    when \"STEmpTerrTenure\" >='random'\
+  \ then 'random'\n                    when \"STEmpTerrTenure\">='random' then 'random'\n\
+  \                    when \"STEmpTerrTenure\">='random' then 'random'\n        \
+  \            when \"STEmpTerrTenure\">='random' then 'random'\n                \
+  \    else 'random'\n                end as TENURE_IN_MONTHS,\nIS_RAMPED,\nTERRITORY_NAME,\n\
+  SALESREP_TITLE ,\nQUOTA_COMPONENT\nFROM FieldSalesRep1)\nselect DISTINCT SALES_REP_ID,\n\
+  TERRITORY_ID ,\nQUARTER_ID,\nQUARTER_YYQQ,\nEMPLOYEE_ID,\nTERRITORY_SYSID,\nEMPLOYEE_SYSID,\n\
+  REP_NAME,\nIS_ACTIVE ,\nDEPARTMENT_NAME ,\nSTART_DT ,\nEND_DT,\nTENURE_IN_MONTHS,\n\
+  IS_RAMPED,\nTERRITORY_NAME,\nSALESREP_TITLE,\nQUOTA_COMPONENT,\nSR.\"SalesRepName\"\
+  \ AS NEWLOGO_REPNAME\nfrom FieldSalesRep2 FSR LEFT OUTER join SalesRepDetails SR\
+  \ ON SR.\"TerritorySysIDRep\" = FSR.TERRITORY_SYSID;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

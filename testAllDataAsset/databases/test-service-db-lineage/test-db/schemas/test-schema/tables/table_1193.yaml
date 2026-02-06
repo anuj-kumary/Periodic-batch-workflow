@@ -1,0 +1,68 @@
+name: table_1193
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1193
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1193.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view V_FIXEDDATA_PIPELINE_ALL(\n\tOPTY_ID,\n\t\
+  QUARTER_ID,\n\tTERRITORY_ID,\n\tGEO_ID,\n\tACCOUNT_ID,\n\tPRODUCT_ID,\n\tLINE_ITEM_ID,\n\
+  \tIS_SALES_ACTIVE_PIPELINE,\n\tNNACV_LC,\n\tNNACV_USD_CFX,\n\tRENEWAL_ACV_USD_CFX,\n\
+  \tRENEWAL_ACV_LC,\n\tOPTY_NUMBER,\n\tOPTY_NAME,\n\tOPTY_FORECAST_CATEGORY,\n\tOPTY_TYPE,\n\
+  \tTERRITORY_SYSID,\n\tOPTY_SYSID,\n\tOPTY_ITEM_NUMBER_CRM,\n\tOPTY_STAGE,\n\tQUARTER_YYQQ,\n\
+  \tOPTY_CREATED_DT,\n\tOPTY_OWNER,\n\tACCOUNT_SYSID,\n\tOPTY_CLOSE_DT,\n\tOPTY_ITEM_CREATED_DT,\n\
+  \tIS_COMANAGED,\n\tDYNAMICS_GUID,\n\tPRICE_RESET_PRIMARY_LINE,\n\tOPTY_ITEM_FLAGGED_AS,\n\
+  \tOPTY_ITEM_CREATED_BY,\n\tPIPELINE_SOURCE,\n\tBU,\n\tOPTY_ITEM_NUMBER,\n\tIS_PARTNERED\n\
+  ) as select\nOPTY_ID,\nQUARTER_ID,\nTERRITORY_ID,\nGEO_ID,\nACCOUNT_ID,\nPRODUCT_ID,\n\
+  LINE_ITEM_ID,\nIS_SALES_ACTIVE_PIPELINE,\nNNACV_LC,\nNNACV_USD_CFX,\nRENEWAL_ACV_USD_CFX,\n\
+  RENEWAL_ACV_LC,\nOPTY_NUMBER,\nOPTY_NAME,\nOPTY_FORECAST_CATEGORY,\nOPTY_TYPE,\n\
+  TERRITORY_SYSID,\nOPTY_SYSID,\nOPTY_ITEM_NUMBER_CRM,\nOPTY_STAGE,\nQUARTER_YYQQ,\n\
+  OPTY_CREATED_DT,\nOPTY_OWNER,\nACCOUNT_SYSID,\nOPTY_CLOSE_DT,\nOPTY_ITEM_CREATED_DT,\n\
+  IS_COMANAGED,\nDYNAMICS_GUID,\nPRICE_RESET_PRIMARY_LINE,\nOPTY_ITEM_FLAGGED_AS,\n\
+  OPTY_ITEM_CREATED_BY,\nPIPELINE_SOURCE,\nBU,\nOPTY_ITEM_NUMBER,\nIS_PARTNERED\n\
+  from EDW.SALES.FACT_FIXEDDATA_PIPELINE_INACTIVE\nunion all\nselect OPTY_ID,\nQUARTER_ID,\n\
+  TERRITORY_ID,\nGEO_ID,\nACCOUNT_ID,\nPRODUCT_ID,\nLINE_ITEM_ID,\nIS_SALES_ACTIVE_PIPELINE,\n\
+  NNACV_LC,\nNNACV_USD_CFX,\nRENEWAL_ACV_USD_CFX,\nRENEWAL_ACV_LC,\nOPTY_NUMBER,\n\
+  OPTY_NAME,\nOPTY_FORECAST_CATEGORY,\nOPTY_TYPE,\nTERRITORY_SYSID,\nOPTY_SYSID,\n\
+  OPTY_ITEM_NUMBER_CRM,\nOPTY_STAGE,\nQUARTER_YYQQ,\nOPTY_CREATED_DT,\nOPTY_OWNER,\n\
+  ACCOUNT_SYSID,\nOPTY_CLOSE_DT,\nOPTY_ITEM_CREATED_DT,\nIS_COMANAGED,\nDYNAMICS_GUID,\n\
+  PRICE_RESET_PRIMARY_LINE,\nOPTY_ITEM_FLAGGED_AS,\nOPTY_ITEM_CREATED_BY,\nPIPELINE_SOURCE,\n\
+  BU,\nOPTY_ITEM_NUMBER,\nIS_PARTNERED\nfrom EDW.SALES.SRC_V_FIXEDDATAPLUSQUOTA_ACTIVE_RT;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

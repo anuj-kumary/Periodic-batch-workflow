@@ -1,0 +1,131 @@
+name: table_1255
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1255
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1255.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view RPT_PRD360_SELL_PRESALES_ACCREDITATION(\n\
+  \t\"Path_C\",\n\t\"LMSRegisCourseID\",\n\t\"LMSRegisCourseTitle\",\n\t\"LMSRegisPerOrganizationName\"\
+  ,\n\t\"LMSRegisPerFullName\",\n\t\"LMSRegisPersUserName\",\n\t\"LMSRegisCountry\"\
+  ,\n\t\"LMSCurrAcquiredOn\",\n\t\"LMSPersonDomain\",\n\t\"LMSRegisCourceActivityStatus\"\
+  \n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"Path_C\" as \"Path_C\",\n       \"LMSRegisCourseID\"\
+  \ as \"LMSRegisCourseID\",\n       \"LMSRegisCourseTitle\" as \"LMSRegisCourseTitle\"\
+  ,\n       \"LMSRegisPerOrganizationName\" as \"LMSRegisPerOrganizationName\",\n\
+  \       \"LMSRegisPerFullName\" as \"LMSRegisPerFullName\",\n       \"LMSRegisPersUserName\"\
+  \ as \"LMSRegisPersUserName\",\n       \"LMSRegisCountry\" as \"LMSRegisCountry\"\
+  ,\n       \"LMSCurrAcquiredOn\" as \"LMSCurrAcquiredOn\",\n       \"LMSPersonDomain\"\
+  \ as \"LMSPersonDomain\",\n       \"LMSRegisCourceActivityStatus\" as \"LMSRegisCourceActivityStatus\"\
+  \nFROM\n  (SELECT \"Path_C\" as \"Path_C\",\n          \"LMSRegisCourseID\" as \"\
+  LMSRegisCourseID\",\n          \"LMSRegisCourseTitle\" as \"LMSRegisCourseTitle\"\
+  ,\n          \"LMSRegisPerOrganizationName\" as \"LMSRegisPerOrganizationName\"\
+  ,\n          \"LMSRegisPerFullName\" as \"LMSRegisPerFullName\",\n          \"LMSRegisPersUserName\"\
+  \ as \"LMSRegisPersUserName\",\n          \"LMSRegisCountry\" as \"LMSRegisCountry\"\
+  ,\n          \"LMSCurrAcquiredOn\" as \"LMSCurrAcquiredOn\",\n          \"LMSPersonDomain\"\
+  \ as \"LMSPersonDomain\",\n          \"LMSRegisCourceActivityStatus\" as \"LMSRegisCourceActivityStatus\"\
+  \n   FROM\n     (SELECT \"Union_1\".\"Path_C\" as \"Path_C\",\n             \"Union_1\"\
+  .\"LMSRegisCourseID\" as \"LMSRegisCourseID\",\n             \"Union_1\".\"LMSRegisCourseTitle\"\
+  \ as \"LMSRegisCourseTitle\",\n             \"Union_1\".\"LMSRegisPerOrganizationName\"\
+  \ as \"LMSRegisPerOrganizationName\",\n             \"Union_1\".\"LMSRegisPerFullName\"\
+  \ as \"LMSRegisPerFullName\",\n             \"Union_1\".\"LMSRegisPersUserName\"\
+  \ as \"LMSRegisPersUserName\",\n             \"Union_1\".\"LMSRegisCountry\" as\
+  \ \"LMSRegisCountry\",\n             \"Union_1\".\"LMSRegisCompletedCourceMarkedComplete\"\
+  \ as \"LMSRegisCompletedCourceMarkedComplete\",\n             \"CURRI\".\"LMSCurrAcquiredOn\"\
+  \ as \"LMSCurrAcquiredOn\",\n             \"Union_1\".\"LMSPersonDomain\" as \"\
+  LMSPersonDomain\",\n             \"Union_1\".\"LMSRegisCourceActivityStatus\" as\
+  \ \"LMSRegisCourceActivityStatus\"\n      FROM\n        (SELECT *\n         FROM\n\
+  \           (SELECT \"Path_C\" as \"Path_C\",\n                   \"LMSRegisCourseID\"\
+  \ as \"LMSRegisCourseID\",\n                   \"LMSRegisCourseTitle\" as \"LMSRegisCourseTitle\"\
+  ,\n                   \"LMSRegisPerOrganizationName\" as \"LMSRegisPerOrganizationName\"\
+  ,\n                   \"LMSRegisPerFullName\" as \"LMSRegisPerFullName\",\n    \
+  \               \"LMSRegisPersUserName\" as \"LMSRegisPersUserName\",\n        \
+  \           \"LMSRegisCountry\" as \"LMSRegisCountry\",\n                   \"LMSRegisCompletedCourceMarkedComplete\"\
+  \ as \"LMSRegisCompletedCourceMarkedComplete\",\n                   \"LMSRegisCourceActivityStatus\"\
+  \ as \"LMSRegisCourceActivityStatus\",\n                   \"LMSPersonDomain\" as\
+  \ \"LMSPersonDomain\"\n            FROM\n              (SELECT \"LMSRegisCourseID\"\
+  \ as \"LMSRegisCourseID\",\n                      \"LMSRegisCourseTitle\" as \"\
+  LMSRegisCourseTitle\",\n                      \"LMSRegisPerOrganizationName\" as\
+  \ \"LMSRegisPerOrganizationName\",\n                      \"LMSRegisPerFullName\"\
+  \ as \"LMSRegisPerFullName\",\n                      \"LMSRegisPersUserName\" as\
+  \ \"LMSRegisPersUserName\",\n                      \"LMSRegisCountry\" as \"LMSRegisCountry\"\
+  ,\n                      \"LMSRegisCompletedCourceMarkedComplete\" as \"LMSRegisCompletedCourceMarkedComplete\"\
+  ,\n                      \"LMSRegisCourceActivityStatus\" as \"LMSRegisCourceActivityStatus\"\
+  ,\n                      \"LMSPersonDomain\" as \"LMSPersonDomain\",\n         \
+  \             'random' as \"Path_C\"\n               FROM \"ODS_LS\".\"SURF\".\"\
+  U_LMS_REGISTRATION\"\n               WHERE (REGEXP_LIKE(\"LMSRegisCourseID\", 'random'))\n\
+  \                 AND (\"LMSRegisCourceActivityStatus\" ='random')\n           \
+  \      AND (REGEXP_LIKE(\"LMSPersonDomain\", 'random')) )\"SELL\"\n            UNION\
+  \ ALL SELECT \"Path_C\" as \"Path_C\",\n                             \"LMSRegisCourseID\"\
+  \ as \"LMSRegisCourseID\",\n                             \"LMSRegisCourseTitle\"\
+  \ as \"LMSRegisCourseTitle\",\n                             \"LMSRegisPerOrganizationName\"\
+  \ as \"LMSRegisPerOrganizationName\",\n                             \"LMSRegisPerFullName\"\
+  \ as \"LMSRegisPerFullName\",\n                             \"LMSRegisPersUserName\"\
+  \ as \"LMSRegisPersUserName\",\n                             \"LMSRegisCountry\"\
+  \ as \"LMSRegisCountry\",\n                             \"LMSRegisCompletedCourceMarkedComplete\"\
+  \ as \"LMSRegisCompletedCourceMarkedComplete\",\n                             \"\
+  LMSRegisCourceActivityStatus\" as \"LMSRegisCourceActivityStatus\",\n          \
+  \                   \"LMSPersonDomain\" as \"LMSPersonDomain\"\n            FROM\n\
+  \              (SELECT \"LMSRegisCourseID\" as \"LMSRegisCourseID\",\n         \
+  \             \"LMSRegisCourseTitle\" as \"LMSRegisCourseTitle\",\n            \
+  \          \"LMSRegisPerOrganizationName\" as \"LMSRegisPerOrganizationName\",\n\
+  \                      \"LMSRegisPerFullName\" as \"LMSRegisPerFullName\",\n   \
+  \                   \"LMSRegisPersUserName\" as \"LMSRegisPersUserName\",\n    \
+  \                  \"LMSRegisCountry\" as \"LMSRegisCountry\",\n               \
+  \       \"LMSRegisCompletedCourceMarkedComplete\" as \"LMSRegisCompletedCourceMarkedComplete\"\
+  ,\n                      \"LMSRegisCourceActivityStatus\" as \"LMSRegisCourceActivityStatus\"\
+  ,\n                      \"LMSPersonDomain\" as \"LMSPersonDomain\",\n         \
+  \             'random' as \"Path_C\"\n               FROM \"ODS_LS\".\"SURF\".\"\
+  U_LMS_REGISTRATION\"\n               WHERE REGEXP_LIKE(\"LMSRegisCourseTitle\",\
+  \ 'random')\n                 AND \"LMSRegisCourceActivityStatus\" = 'random'\n\
+  \                 AND REGEXP_LIKE(\"LMSPersonDomain\", 'random') )\"SOLVE\"))\"\
+  Union_1\"\n      LEFT JOIN\n        (SELECT \"LMSCurriUserName\" as \"LMSCurriUserName\"\
+  ,\n                \"LMSCurriPathName\" as \"LMSCurriPathName\",\n             \
+  \   \"LMSCurriName\" as \"LMSCurriName\",\n                \"LMSCurrAcquiredOn\"\
+  \ as \"LMSCurrAcquiredOn\",\n                IFF(\"LMSCurriName\" = 'random', 'random',\
+  \ IFF(\"LMSCurriName\" = 'random', 'random', 'random')) as \"SellAndSoilveFlg_C\"\
+  \n         FROM \"ODS_LS\".\"SURF\".\"U_LMS_CURRICULUM_DATA\")\"CURRI\" ON \"Union_1\"\
+  .\"Path_C\" = \"CURRI\".\"SellAndSoilveFlg_C\"\n      AND \"Union_1\".\"LMSRegisPersUserName\"\
+  \ = \"CURRI\".\"LMSCurriUserName\")\"Join_1\"\n   GROUP BY \"Path_C\",\n       \
+  \     \"LMSRegisCourseID\",\n            \"LMSRegisCourseTitle\",\n            \"\
+  LMSRegisPerOrganizationName\",\n            \"LMSRegisPerFullName\",\n         \
+  \   \"LMSRegisPersUserName\",\n            \"LMSRegisCountry\",\n            \"\
+  LMSCurrAcquiredOn\",\n            \"LMSPersonDomain\",\n            \"LMSRegisCourceActivityStatus\"\
+  )Aggregation_1;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

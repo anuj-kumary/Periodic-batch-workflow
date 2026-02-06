@@ -1,0 +1,81 @@
+name: table_1230
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1230
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1230.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_TERRITORY_QUOTA(\n\tQUARTER_ID,\n\
+  \tTERRITORY_ID,\n\tGEO_ID,\n\tQUARTER_DT,\n\tQUARTER_YYQQ,\n\tTERRITORY_QUOTA_USD,\n\
+  \tTERRITORY_QUOTA_UPLIFT_USD,\n\tTERRITORY_MARQUEE_QUOTA_USD,\n\tTERRITORY_MARQUEE_QUOTA_UPLIFT_USD,\n\
+  \tTERRITORY_SYSID,\n\tACE_TERRITORY_QUOTA_USD,\n\tACE_TERRITORY_QUOTA_UPLIFT_USD\n\
+  ) as\nSELECT\n    QUARTER_ID,\n    HASH(TERR_QUOTA_UPLIFT.\"TerrSysID\") AS TERRITORY_ID,\n\
+  \    TERR.GEO_ID,\n    QUARTER_DT,\n    QUARTER_YYQQ,\n    TERR_QUOTA.\"GblQuotaValue\"\
+  \ as TERRITORY_QUOTA_USD,\n    TERR_QUOTA_UPLIFT.\"GlobalQuota\" as TERRITORY_QUOTA_UPLIFT_USD,\n\
+  \    TERR_MARQUEE_QUOTA.\"GblQuotaValue\" as TERRITORY_MARQUEE_QUOTA_USD,\n    TERR_MARQUEE_QUOTA_UPLIFT.\"\
+  GblQuotaValue\" as TERRITORY_MARQUEE_QUOTA_UPLIFT_USD,\n    TERR_QUOTA_UPLIFT.\"\
+  TerrSysID\" as TERRITORY_SYSID,\n    ---------------------Start code by Matt(Accenture)\
+  \ 05/24/2024------------------------------------------------------------\n    CHANNEL_QUOTA.\"\
+  GblQuotaValue\" AS ACE_TERRITORY_QUOTA_USD,\n    SALES_CHANNEL_QUOTA.\"GlobalQuotaSourced\"\
+  \ AS ACE_TERRITORY_QUOTA_UPLIFT_USD\n    ---------------------End code by Matt(Accenture)\
+  \ 05/24/2024------------------------------------------------------------\n\nFROM\n\
+  \    EDW_LS.SALES_EM.EM_SALES_TERRITORY_QUOTA_RT TERR_QUOTA_UPLIFT\n    LEFT JOIN\
+  \ EDW_LS.SALES_EM.EM_TERRITORY_QUOTA_RT TERR_QUOTA ON(\n        TERR_QUOTA_UPLIFT.\"\
+  TerrSysID\" = TERR_QUOTA.\"GblQuotaTerritorySysID\"\n        AND TERR_QUOTA_UPLIFT.\"\
+  GblQuotaQuarter\" = TERR_QUOTA.\"GblQuotaQuarter\"\n    )\n    LEFT JOIN (\n   \
+  \     SELECT\n            DISTINCT QUARTER_ID,\n            QUARTER_DT,\n      \
+  \      QUARTER_YYQQ\n        from\n            EDW.ENTERPRISE.DIM_QUARTER\n    )\
+  \ qtr ON TERR_QUOTA_UPLIFT.\"GblQuotaQuarter\" = qtr.QUARTER_YYQQ\n    LEFT OUTER\
+  \ JOIN EDW.ENTERPRISE.DIM_TERRITORY TERR ON TERR_QUOTA_UPLIFT.\"TerrSysID\" = TERR.TERRITORY_SYSID\
+  \ ---------------Added by Santhosh(Accenture) on 20-May-2024 for MARQUEE QUOTA change-----------------------------\n\
+  \    LEFT JOIN EDW_LS.SALES_EM.EM_TERRITORY_QUOTA_RT_MARQUEE TERR_MARQUEE_QUOTA_UPLIFT\
+  \ ON TERR_QUOTA_UPLIFT.\"TerrSysID\" = TERR_MARQUEE_QUOTA_UPLIFT.\"GblQuotaTerritorySysID\"\
+  \n    AND TERR_QUOTA_UPLIFT.\"GblQuotaQuarter\" = TERR_MARQUEE_QUOTA_UPLIFT.\"GblQuotaQuarter\"\
+  \n\tLEFT JOIN ODS_LS.ANAPLAN.SALES_TERRITORY_QUOTA_MARQUEE TERR_MARQUEE_QUOTA ON\
+  \ TERR_MARQUEE_QUOTA_UPLIFT.\"GblQuotaTerritorySysID\" = TERR_MARQUEE_QUOTA.\"GblQuotaTerritorySysID\"\
+  \n    AND TERR_MARQUEE_QUOTA_UPLIFT.\"GblQuotaQuarter\" = TERR_MARQUEE_QUOTA.\"\
+  GblQuotaQuarter\"\n    LEFT OUTER JOIN EDW_LS.PARTNER_EM.EM_SALES_CHANNEL_QUOTA_RT\
+  \ SALES_CHANNEL_QUOTA\n    ON TERR_QUOTA_UPLIFT.\"TerrSysID\" = SALES_CHANNEL_QUOTA.\"\
+  TerrSysID\"\n    AND TERR_QUOTA_UPLIFT.\"GblQuotaQuarter\" = SALES_CHANNEL_QUOTA.\"\
+  GblQuotaQuarter\"\n    LEFT OUTER JOIN EDW_LS.PARTNER_EM.EM_CHANNEL_QUOTA_RT CHANNEL_QUOTA\n\
+  \    ON TERR_QUOTA_UPLIFT.\"TerrSysID\" = CHANNEL_QUOTA.\"GblQuotaTerritorySysID\"\
+  \n    AND TERR_QUOTA_UPLIFT.\"GblQuotaQuarter\" = CHANNEL_QUOTA.\"GblQuotaQuarter\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

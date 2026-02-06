@@ -1,0 +1,73 @@
+name: table_1191
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1191
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1191.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view VW_DEPLOYMENT_ALTER_SCRIPTS(\n\tROW_ID,\n\
+  \tTABLE_SCHEMA,\n\tTABLE_NAME,\n\tOBJECT_TYPE,\n\tCOLUMN_NAME,\n\tCOLUMN_EXISTS,\n\
+  \tALTER_STMNT,\n\tALTER_EACH_ROW\n) as\n\n\nSELECT DEV.ROW_ID, DEV.TABLE_SCHEMA,\
+  \ DEV.TABLE_NAME, DEV.OBJECT_TYPE, DEV.COLUMN_NAME,\n    CASE WHEN PROD.PROD_COLUMN_NAME\
+  \ IS NULL THEN 'random'\n    ELSE 'random' END AS COLUMN_EXISTS,\n    CASE WHEN\
+  \ PROD.PROD_COLUMN_NAME IS NULL THEN\n    CONCAT(DEV.COLUMN_NAME,'random',DEV.COL_DEF,'random')\
+  \ END AS ALTER_STMNT,\n    CONCAT('random',DEV.TABLE_SCHEMA,'random',DEV.TABLE_NAME,'random',DEV.COLUMN_NAME,'random',DEV.COL_DEF,'random')\
+  \ ALTER_EACH_ROW\nFROM\n(\n    SELECT DH.ROW_ID, I.TABLE_SCHEMA, I.TABLE_NAME, DH.OBJECT_TYPE,\
+  \ I.COLUMN_NAME,\n    CASE I.DATA_TYPE\n        WHEN 'random' THEN CONCAT(I.DATA_TYPE,CASE\
+  \ WHEN I.IS_NULLABLE = 'random' THEN 'random' ELSE 'random' END)\n        WHEN 'random'\
+  \ THEN CONCAT('random',I.CHARACTER_MAXIMUM_LENGTH,'random',CASE WHEN I.IS_NULLABLE\
+  \ = 'random' THEN 'random' ELSE 'random' END)\n        WHEN 'random' THEN CONCAT(I.DATA_TYPE,CASE\
+  \ WHEN I.IS_NULLABLE = 'random' THEN 'random' ELSE 'random' END)\n        WHEN 'random'\
+  \ THEN CONCAT(I.DATA_TYPE,'random',I.NUMERIC_PRECISION,'random',I.NUMERIC_SCALE,'random',CASE\
+  \ WHEN I.IS_NULLABLE = 'random' THEN 'random' ELSE 'random' END)\n        WHEN 'random'\
+  \ THEN CONCAT(I.DATA_TYPE,'random',I.DATETIME_PRECISION,'random',CASE WHEN I.IS_NULLABLE\
+  \ = 'random' THEN 'random' ELSE 'random' END)\n        WHEN 'random' THEN CONCAT(I.DATA_TYPE,'random',I.DATETIME_PRECISION,'random',CASE\
+  \ WHEN I.IS_NULLABLE = 'random' THEN 'random' ELSE 'random' END)\n    END COL_DEF\n\
+  \    FROM INFORMATION_SCHEMA.COLUMNS I\n    INNER JOIN SALES.ACN_DH_CONTROL DH\n\
+  \    ON\n        I.TABLE_SCHEMA = DH.OBJECT_SCHEMA\n    AND I.TABLE_NAME = DH.OBJECT_NAME\n\
+  \    WHERE DH.IN_PROD = 'random' AND DH.IN_SCOPE = 'random'\n) AS DEV\nLEFT JOIN\n\
+  (\n    SELECT DH.ROW_ID, P.TABLE_SCHEMA AS PROD_TABLE_SCHEMA, P.TABLE_NAME AS PROD_TABLE_NAME,\
+  \ DH.OBJECT_TYPE, P.COLUMN_NAME AS PROD_COLUMN_NAME\n    FROM SALES.ACN_DH_CONTROL\
+  \ DH\n    INNER JOIN SALES.DEPLOYMENT_HELPER_PROD_COLUMNS P\n    ON\n        DH.OBJECT_SCHEMA\
+  \ = P.TABLE_SCHEMA\n    AND DH.OBJECT_NAME = P.TABLE_NAME\n    WHERE DH.IN_PROD\
+  \ = 'random' AND DH.IN_SCOPE = 'random'\n) AS PROD\nON\n    DEV.TABLE_SCHEMA = PROD.PROD_TABLE_SCHEMA\n\
+  AND DEV.TABLE_NAME = PROD.PROD_TABLE_NAME\nAND DEV.COLUMN_NAME = PROD.PROD_COLUMN_NAME\n\
+  AND DEV.OBJECT_TYPE = PROD.OBJECT_TYPE;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

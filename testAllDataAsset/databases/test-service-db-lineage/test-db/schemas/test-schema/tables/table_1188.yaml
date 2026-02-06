@@ -1,0 +1,80 @@
+name: table_1188
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1188
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1188.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view VW_FACT_REP_ATTAINMENT(\n\tEMPLOYEE_ID,\n\
+  \tTERRITORY_ID,\n\tQUARTER_YYQQ,\n\tQUARTER_ID,\n\tQUARTER_DT,\n\tVARICENT_QUOTA,\n\
+  \tVARICENT_ACTUALS,\n\tVARICENT_ATTAINMENT,\n\tEMPLOYEE_SYSID,\n\tTERRITORY_SYSID\n\
+  ) as\nSELECT\n     HASH(dim.\"EmpSysID\")      AS EMPLOYEE_ID\n    ,HASH(\"TerrUserRecSysID\"\
+  )  AS TERRITORY_ID\n    ,rep.\"SalesQuarter_Rep\"    AS QUARTER_YYQQ\n    ,QUARTER_ID\
+  \                AS QUARTER_ID\n    ,QUARTER_DT                AS QUARTER_DT\n \t\
+  ,MAX(\"VaricentQuota\")\t   AS VARICENT_QUOTA\n \t,MAX(\"VaricentActuals\")    AS\
+  \  VARICENT_ACTUALS\n \t,MAX(\"VaricentAttainment\") AS VARICENT_ATTAINMENT\n  \
+  \  ,dim.\"EmpSysID\"            AS EMPLOYEE_SYSID\n    ,dim.\"TerrUserRecSysID\"\
+  \    AS TERRITORY_SYSID\n  from\n  ((\n        SELECT distinct e.\"EmpSysID\",st.\"\
+  TerrUserRecSysID\",e.\"EmpName\"\n \t           from \"ODS_LS\".\"ANAPLAN\".\"SALES_EMPLOYEE_TERRITORY_MAPPING\"\
+  \ as ana\n        LEFT join \"ODS_LS\".\"SURF\".\"EMPLOYEE\" as e  on e.\"EmpSysID\"\
+  \ = ana.\"STEmpTerrEmployeeSysId\"\n        LEFT outer join \"ODS_LS\".\"SURF\"\
+  .\"U_ST_TERRITORY\" as st on st.\"TerrUserSysID\"=e.\"EmpSysID\"\n        LEFT outer\
+  \ join \"ODS_LS\".\"SURF\".\"SALES_TERRITORY\" as stt on st.\"TerrUserRecSysID\"\
+  =stt.\"TerrSysID\"\n         Where e.\"EmpDepartment\" in (SELECT \"Deptname\" FROM\
+  \ \"ODS_LS\".\"SURF\".\"CMN_DEPARTMENT\"   where \"DeptCostCenter\" in('random','random','random','random'))\n\
+  \t\t\tand e.\"EmpActive\"='random'\n            and st.\"TerrUserDirectAssignment\"\
+  ='random'\n            and st.\"TerrUserPrimaryAssignment\"='random'\n \t      \
+  \ and st.\"TerrUserEndDate\" IS NULL\n \t       and st.\"TerrUserActive\"='random'\n\
+  \ \t       and stt.\"TerrTypeValue\"='random'\n \t       and ana.\"STEmpTerrQuarter\"\
+  \ = RIGHT(YEAR(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP())) ||'random'|| QUARTER(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP())),'random')\n\
+  \           )dim\n  LEFT outer join(\n SELECT DISTINCT  \"employee_sys_id\" as \"\
+  EmployeeSysID_Rep\"\n ,tr.\"RestatedTerritorySYSID\"\tas \"TerritorySysID_Rep\"\n\
+  \ ,\"quarter\"\t\t\t\tas \"SalesQuarter_Rep\"\n ,\"quota\"\t\t\tas \"VaricentQuota\"\
+  \n ,\"net_new_acv_closed\"\tas \"VaricentActuals\"\n ,\"attainment_perc\" as \"\
+  VaricentAttainment\"\n FROM \"EDW_LS\".\"SALES_EM\".\"TBLPERFORMANCERANKING\" pr\n\
+  \ LEFT outer join\n \t(\tselect distinct QUARTER,EMPLOYEENUMBER,\"RestatedTerritorySYSID\"\
+  \n \t\tfrom \"EDW_LS\".\"SALES_EM\".\"TF_SALES_EMP_TERRSNAPSHOT\"\n \t)tr on tr.QUARTER\
+  \ = pr.\"quarter\"  and tr.EMPLOYEENUMBER = pr.\"employee_number\") rep\n      on\
+  \ dim.\"TerrUserRecSysID\" = rep.\"TerritorySysID_Rep\" )\nleft outer join (select\
+  \ distinct QUARTER_ID, QUARTER_DT, QUARTER_YYQQ from EDW.ENTERPRISE.DIM_QUARTER)\
+  \ QTR on rep.\"SalesQuarter_Rep\" = QTR.QUARTER_YYQQ\n group by\n   EMPLOYEE_ID\n\
+  \  ,TERRITORY_ID\n ,rep.\"SalesQuarter_Rep\"\n  ,QUARTER_ID\n  ,QUARTER_DT\n  ,EMPLOYEE_SYSID\n\
+  \  ,TERRITORY_SYSID;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,93 @@
+name: table_1209
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1209
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1209.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view ST_SALES_OPPORTUNITY_BKPOCT3022(\n\t\"STOptyNumber\"\
+  ,\n\t\"STOptyName\",\n\t\"STOptySalesQuarter\",\n\t\"STOptySysID\",\n\t\"STOptyCloseDate\"\
+  ,\n\t\"STExtractDate\",\n\t\"STSnapshotQuarter\",\n\t\"STSalesActivePipeline\",\n\
+  \t\"STOpportunityType\",\n\t\"STOptyStage\",\n\t\"STOptyCreatedon\",\n\t\"STOptySAPContractID\"\
+  ,\n\t\"STOptyTerritorySysID\",\n\t\"STOptyTerritory\",\n\t\"STOptyAccountSysID\"\
+  ,\n\t\"STOptyOwner\",\n\t\"STOptyPipelineStatus\",\n\t\"STOptyContractSysID\",\n\
+  \t\"STOptyContEndDate\",\n\t\"STOptyWeightedPercentage\",\n\t\"STOptyNetNewACV\"\
+  ,\n\t\"STOptyLeadSource\",\n\t\"STOptyFlags\",\n\t\"STOptyNetNewACVUSD\",\n\t\"\
+  STOptyParentSysID\",\n\t\"STOptyRenewalStatus\",\n\t\"STOptyOwnerSysID\",\n\t\"\
+  STOptyProduct\",\n\t\"STOptyStartDate\",\n\t\"STOptyPrimaryCompetitor\",\n\t\"STOptySecondaryCompetitor\"\
+  ,\n\t\"STOptyCompetitiveStatus\",\n\t\"STOptyCompetitiveReason\",\n\t\"STOptyISRInteraction\"\
+  ,\n\t\"STOptyContractStatus\",\n\t\"STOptyLeadSourceValue\",\n\t\"STOptyPriceBand\"\
+  ,\n\t\"STOptyPriceBook\",\n\t\"STOptyContractType\",\n\t\"STOptyPartnered\",\n\t\
+  \"STOptySourced\",\n\t\"STOptyNewLogo\",\n\t\"STOptyBusinessUnitList\",\n\t\"STOptyUpdatedOn\"\
+  ,\n\t\"STOptySnapshotYear\",\n\t\"STOptyBaseCurrencyLabel\",\n\t\"STOptyCloseMonth\"\
+  ,\n\t\"STOptyCreatedBy\",\n\t\"STOptyDataCenter\",\n\t\"STOptyEndCustomer\",\n\t\
+  \"STOptyFinalOrderFormOutput\",\n\t\"STOptyForeCastType\",\n\t\"STOptyImplementationPartner\"\
+  ,\n\t\"STOptyIncumbent\",\n\t\"STOptyLogoOverride\",\n\t\"STOptySourceValue\",\n\
+  \t\"STOptyOtherCompetitor\",\n\t\"STOptySupportPartner\",\n\t\"STOptyUpdatedBy\"\
+  ,\n\t\"STOptySalesPartner\",\n\t\"STOptyMSPTerritorySysID\",\n\t\"STOptyProductSysID\"\
+  ,\n\t\"STOptyMSPSalesSysID\",\n\t\"STOptyMSPSalesValue\",\n\t\"STOptyTerritoryLegacySysID\"\
+  ,\n\t\"STOptySalesOrderNumber\",\n\t\"STOptyImplementationPartnerPS\",\n\t\"STOptyValuePromterMasterSysID\"\
+  ,\n\t\"STOptyValuePromterMaster\",\n\t\"STOptyLeadNumber\",\n\t\"STOptyCOManaged\"\
+  ,\n\t\"STOptyDynamicsGUID\",\n\t\"STOptyAccountName\",\n\t\"STOptyACEAllocationPercentage\"\
+  ,\n\t\"STOptyMKTAllocationPercentage\",\n\t\"STOptyPipelineSourced\",\n\t\"STOptySalesAllocationPercentage\"\
+  ,\n\t\"STOptyMSPTerritory\",\n\t\"STOptyMSPEnvironmentType\",\n\t\"STOptyMSPUsageType\"\
+  ,\n\t\"STOptyMSPPartner\",\n\t\"STOPtyMSPPartnerSysID\",\n\t\"STOptyLinkReason\"\
+  ,\n\t\"STOptyRenewalACVUSD\",\n\t\"STOptyRenewalCategory\",\n\t\"STOptyRenewalsEngagement\"\
+  ,\n\t\"STOptyRenewalRep\",\n\t\"STOptyRenewalRepSysID\",\n\t\"STOptyPartnerInfluencer\"\
+  ,\n\t\"STOptyOppCompetition\",\n\t\"STOptyNextSteps\",\n\t\"STOptyDidMarketingHelp\"\
+  ,\n\t\"STOptyDidMarketingHelpID\",\n\t\"STOptyLead\",\n\t\"STOptyDoubleCompensationOverlayID\"\
+  ,\n\t\"STOptyOverlayISRID\",\n\t\"STOptySpecialistOverlayID\",\n\t\"STOptyIsrDriven\"\
+  ,\n\t\"STOptyCampaignHistorySysID\",\n\t\"STOptyCampaignHistory\",\n\t\"STOptyMeetingIdSysID\"\
+  ,\n\t\"STOptyMeetingId\",\n\t\"STOptyReasonCode\",\n\t\"STOptyRenewalCategorySysID\"\
+  ,\n\t\"STOptyOverlayIsr\",\n\t\"STOptyisrInteraction\",\n\t\"STOptyLogoOverrideValue\"\
+  ,\n\t\"STOptyWinLossDeadNotes\",\n\t\"STOptyTermStartDate\",\n\t\"STOptyTermEndDate\"\
+  ,\n\t\"STOptyTerm\",\n\t\"STOptyTermMonthsDays\",\n\t\"STOptyMasterQuote\",\n\t\"\
+  STOptySource\",\n\t\"STOptyQuotedInSystem\",\n\t\"STOptySalesOperationsNotes\",\n\
+  \t\"STOptyForecastTypeOverride\",\n\t\"STOptyMarketingProgramEvent\",\n\t\"STOptyFlagsSysID\"\
+  ,\n\t\"STOptyIncumbentSysId\",\n\t\"STOptyCloseDateDateDimensionSysID\",\n\t\"STOptyPSEngagementManagerSysID\"\
+  ,\n\t\"STOptyPSEngagementManager\",\n\t\"STOptyUSDTotalACV\",\n\t\"STOptyEndCustomerSysID\"\
+  ,\n\t\"STOptyDidMarketingHelpSysID\",\n\t\"STOptyLeadNumberSysID\",\n\t\"STOptyDoubleCompensationOverlay\"\
+  ,\n\t\"STOptyOverlayISR\",\n\t\"STOptySpecialistOverlay\",\n\t\"STOptyRenewalCategoryValue\"\
+  ,\n\t\"STOptyWeightedACVUSD\",\n\t\"STOptyUSDPSRevenue\",\n\t\"STOptySSARollupServAmount\"\
+  ,\n\t\"STOptySSARolupNetNewAcvA\",\n\t\"STOptyNetNewSeats\",\n\t\"STOptyActive\"\
+  ,\n\t\"STOptyBaseCurrency\",\n\t\"STOptyQuoteNumber\",\n\t\"STOptyPSTerritorySysID\"\
+  ,\n\t\"STOptyPSTerritory\",\n\t\"STACESubCategory\",\n\t\"STACECustomerSegment\"\
+  \n) as \tselect * from \tODS_LS.SURF.ST_SALES_OPPORTUNITY;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

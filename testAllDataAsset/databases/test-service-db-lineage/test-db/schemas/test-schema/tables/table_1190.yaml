@@ -1,0 +1,110 @@
+name: table_1190
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1190
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1190.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_CONTRACT_UNION(\n\t\"AccountSysID\"\
+  ,\n\t\"AccountNumber\",\n\t\"AccountTerritorySysID\",\n\t\"AccountEndCustTerritorySysID\"\
+  ,\n\t\"ContractSysID\",\n\t\"USDContractACV\",\n\t\"ContractItemLineItemNumber\"\
+  ,\n\t\"ContractItemQuantity\",\n\t\"ContractACV_FX\",\n\t\"ContractACV\",\n\t\"\
+  USDContractACV_CRM\",\n\t\"ContractACV_CRM\",\n\t\"ProductCode\",\n\t\"ProductSysID\"\
+  ,\n\t\"BUGroup\",\n\t\"BUWorkFlow\",\n\t\"ContractKey\",\n\t\"AcctMSPEndCust\",\n\
+  \t\"USDContractSalesPrice\",\n\t\"USDContractSalesPrice_CRM\",\n\t\"ContractAnnualListValue\"\
+  ,\n\t\"ContractAnnualListValue_CRM\",\n\t\"USDContractAnnualListValue\",\n\t\"USDContractAnnualListValue_CRM\"\
+  ,\n\t\"USDContractTotalValue\",\n\t\"USDContractTotalValue_CRM\",\n\t\"ContractSalesPrice\"\
+  ,\n\t\"ContractSalesPrice_CRM\"\n) as\n\n\n/* Comments retained from HANA input\
+  \ file */\n\n /****************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Unified SelfServer Project\n \t\t* Project\
+  \ \t\t\t\t\t :\n \t\t* Object Name \t\t\t\t :     \"ANALYTICS_SELFSERVICE\".\"ANALYTICS_SELFSERVICE.TABLEFUNCTIONS::UnifiedSSContract\"\
+  \ ( )\n \t\t* Development Request # \t :\n \t\t* Brief Description          : \t\
+  \   Self Service Contract fact details\n \t\t* Developed By               :    \
+  \ Venkata Ravi Kadali\n \t\t* Date Created               : \t   May 20th 2021\n\
+  \ \t\t* --------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:\n \t\t*----------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t*\n \t\t*\n ********************************************************************************************************************************/\n\
+  \n\n\n\n\nSELECT\n \t\t\t\t\tsa.\"AcctSysID\"\tas \"AccountSysID\",\n \t\t\t\t\t\
+  sa.\"AcctNumber\"\tas \"AccountNumber\",\n \t\t\t\t\tIFNULL(sa.\"AcctTerritorySysID\"\
+  ,'random') as \"AccountTerritorySysID\",\n \t\t\t\t\teca.\"AcctTerritorySysID\"\
+  \ as \"AccountEndCustTerritorySysID\",\n \t\t\t\t\tsc.\"ContractSysID\",\n \t\t\t\
+  \t\t--case when sc.\"ContractActive\" = 1 and sc.\"ContractRenewalStatus\" != 'Inactive'\
+  \  then sci.\"ContractItemACV_USD\" end as \"USDContractACV\",\n               \
+  \     case when sc.\"ContractActive\" = 'random' and sc.\"ContractRenewalStatus\"\
+  \ != 'random'  then sci.\"ConItemACV_FX\" end as \"USDContractACV\",\n \t\t\t\t\t\
+  sci.\"ContractItemLineItemNumber\",\n \t\t\t\t\tsci.\"ContractItemQuantity\" as\
+  \ \"ContractItemQuantity\",\n \t\t\t\t\t--case when sc.\"ContractActive\" = 1 and\
+  \ sc.\"ContractRenewalStatus\" != 'Inactive' then sci.\"ContractItemUSDConstantFXACV\"\
+  \ end as \"ContractACV_FX\",\n                    case when sc.\"ContractActive\"\
+  \ = 'random' and sc.\"ContractRenewalStatus\" != 'random' then sci.\"ContractItemACV_USD\"\
+  \ end as \"ContractACV_FX\",\n \t\t\t\t\tcase when sc.\"ContractActive\" = 'random'\
+  \ and sc.\"ContractRenewalStatus\" != 'random' then sci.\"ContractItemACV\"end\t\
+  as \"ContractACV\",\n \t\t\t\t\tsci.\"ContractItemACV_USD\" \t\t\tas \"USDContractACV_CRM\"\
+  ,\n \t\t\t\t\tsci.\"ContractItemACV\" \t\t\t\tas \"ContractACV_CRM\",\n \t\t\t\t\
+  \tsp.\"ProductCode\",\n \t\t\t\t\tsp.\"ProductSysID\",\n \t\t\t\t\tsp.\"BUGroup\"\
+  ,\n \t\t\t\t\tsp.\"BUWorkFlow\",\n\n--\tconcat(sc.\"ContractSysID\",sp.\"ProductSysID\"\
+  ) as \"ContractKey\"\n\n \t\t\t\t\tCONCAT(IFNULL(sc.\"ContractAccountSysID\",'random'),CONCAT(IFNULL(sc.\"\
+  ContractSysID\",'random'),IFNULL(sp.\"ProductSysID\",'random'))) as \"ContractKey\"\
+  ,\n \t\t\t\t\tsa.\"AcctMSPEndCust\" as \"AcctMSPEndCust\",\n \t\t\t\t\tcase when\
+  \ sc.\"ContractActive\" = 'random' and sc.\"ContractRenewalStatus\" != 'random'\
+  \ then sci.\"ContractItemSalesPriceUSD\" end\tas \"USDContractSalesPrice\",\n \t\
+  \t\t\t\t\"ContractItemSalesPriceUSD\" as \"USDContractSalesPrice_CRM\",\n \t\t\t\
+  \t\tcase when sc.\"ContractActive\" = 'random' and sc.\"ContractRenewalStatus\"\
+  \ != 'random' then sci.\"ContractItemAnnualListValue\" end\tas \"ContractAnnualListValue\"\
+  ,\n \t\t\t\t\t\"ContractItemAnnualListValue\" as \"ContractAnnualListValue_CRM\"\
+  ,\n \t\t\t\t\tcase when sc.\"ContractActive\" = 'random' and sc.\"ContractRenewalStatus\"\
+  \ != 'random' then sci.\"ContractItemAnnualListValueUSD\" end\tas \"USDContractAnnualListValue\"\
+  ,\n \t\t\t\t\t\"ContractItemAnnualListValueUSD\" as \"USDContractAnnualListValue_CRM\"\
+  ,\n \t\t\t\t\tcase when sc.\"ContractActive\" = 'random' and sc.\"ContractRenewalStatus\"\
+  \ != 'random' then sci.\"ContractItemUSDTotalValue\" end\tas \"USDContractTotalValue\"\
+  ,\n \t\t\t\t\t\"ContractItemUSDTotalValue\" as \"USDContractTotalValue_CRM\",\n\
+  \ \t\t\t\t\tcase when sc.\"ContractActive\" = 'random' and sc.\"ContractRenewalStatus\"\
+  \ != 'random' then sci.\"ContractItemSalesPrice\" end as \"ContractSalesPrice\"\
+  ,\n \t\t\t\t\t\"ContractItemSalesPrice\" as \"ContractSalesPrice_CRM\"\n \t\t\t\t\
+  \t   FROM \"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_CONTRACT\" sc\n \t\t\t\
+  LEFT OUTER JOIN \"EDW_LS\".\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_CONTRACT_ITEMS\"\
+  \ sci on sci.\"ContractItemContractSysID\"=sc.\"ContractSysID\"\n \t\t\tLEFT OUTER\
+  \ JOIN \"ODS_LS\".\"SURF\".\"SALES_PRODUCT_PRICE\" spp  on sci.\"ContractItemProductPriceSysID\"\
+  =spp.\"ProductPriceSysID\"\n \t\t\tLEFT OUTER JOIN \"EDW_LS\".\"SALES_SS_EM\".\"\
+  EM_UNIFIEDSS_SALES_PRODUCT\" sp on sp.\"ProductSysID\"=spp.\"ProductSysID\"\n \t\
+  \t\tLEFT OUTER JOIN \"ODS_LS\".\"SURF\".\"SALES_ACCOUNT\" sa on sc.\"ContractAccountSysID\"\
+  \ = sa.\"AcctSysID\"\n \t\t\tLEFT OUTER JOIN \"ODS_LS\".\"SURF\".\"SALES_ACCOUNT\"\
+  \ eca on sa.\"AcctMSPEndCustSysID\" = eca.\"AcctSysID\"\n ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

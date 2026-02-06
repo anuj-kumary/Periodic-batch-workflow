@@ -1,0 +1,384 @@
+name: table_1227
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1227
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1227.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view EM_CS_ALL_FLIP_FLOP(\n\t\"AccountNumber\"\
+  ,\n\t\"AccountSysID\",\n\t\"AccountName\",\n\t\"AcctMDMID\",\n\t\"ContractNumber\"\
+  ,\n\t\"ContractInstance\",\n\t\"ContractItemNumber\",\n\t\"ProductBusinessUnit\"\
+  ,\n\t\"ProductCode\",\n\t\"ProductSysID\",\n\t\"ProductFullName\",\n\t\"Definition\"\
+  ,\n\t\"ContractItemQuantity\",\n\t\"RecordSource\",\n\t\"RecordType\",\n\t\"RecordGranularity\"\
+  ,\n\t\"EffectiveContractQuantity\",\n\t\"ActualQuantity\",\n\t\"TimeStamp\",\n\t\
+  \"Min\",\n\t\"Max\",\n\t\"Overage\",\n\t\"SalesRep\",\n\t\"SalesRepSysID\",\n\t\"\
+  PlatformVersion\",\n\t\"USGFlag\",\n\t\"USSoilSupportFlag\",\n\t\"SNCAccessControlFlag\"\
+  ,\n\t\"Territory\",\n\t\"Country\",\n\t\"District\",\n\t\"Region\",\n\t\"Area\"\
+  ,\n\t\"MajorArea\",\n\t\"Geo\",\n\t\"OnPrem\",\n\t\"InstancePurpose\",\n\t\"OperationalStatus\"\
+  ,\n\t\"ActualUsageValue($)\",\n\t\"SalesPriceUSD\",\n\t\"Effective_Contract_Quantity_(_)\"\
+  ,\n\t\"Overage_(_)\",\n\t\"Overage_($)\",\n\t\"Sales_Operations\",\n\t\"Solution_Consultant\"\
+  ,\n\t\"Potential_NNACV_(USD)\",\n\t\"Undersubscribed_(USD)\",\n\t\"Un-deployed_(USD)\"\
+  ,\n\t\"ErrorCode\",\n\t\"Note\",\n\t\"MostRecent\",\n\tDATA_SWITCH_FLAG,\n\tDATE_UPDATE,\n\
+  \t\"Attribute1\",\n\t\"ContractMultiplierValue\",\n\t\"Legal_Support\",\n\t\"Customer_Outcomes\"\
+  ,\n\t\"XOverage\",\n\t\"XOverageProduct\",\n\tCAPPED_OVERAGE_2X,\n\tCAPPED_CACV_3X,\n\
+  \tCAPPED_OVERAGE\n) as\nwith cte as(\nSELECT \"AccountNumber\" as \"AccountNumber\"\
+  ,\n       \"AccountSysID\" as \"AccountSysID\",\n       \"AccountName\" as \"AccountName\"\
+  ,\n       \"AcctMDMID\" as \"AcctMDMID\",\n       \"ContractNumber\" as \"ContractNumber\"\
+  ,\n       \"ContractInstance\" as \"ContractInstance\",\n       \"ContractItemNumber\"\
+  \ as \"ContractItemNumber\",\n       \"ProductBusinessUnit\" as \"ProductBusinessUnit\"\
+  ,\n       \"ProductCode\" as \"ProductCode\",\n       \"ProductSysID\" as \"ProductSysID\"\
+  ,\n       \"ProductFullName\" as \"ProductFullName\",\n       \"Definition\" as\
+  \ \"Definition\",\n       \"ContractItemQuantity\" as \"ContractItemQuantity\",\n\
+  \       \"RecordSource\" as \"RecordSource\",\n       \"RecordType\" as \"RecordType\"\
+  ,\n       \"RecordGranularity\" as \"RecordGranularity\",\n       \"EffectiveContractQuantity\"\
+  \ as \"EffectiveContractQuantity\",\n       \"ActualQuantity\" as \"ActualQuantity\"\
+  ,\n       \"TimeStamp\" as \"TimeStamp\",\n       \"Min\" as \"Min\",\n       \"\
+  Max\" as \"Max\",\n       \"Overage\" as \"Overage\",\n       \"SalesRep\" as \"\
+  SalesRep\",\n       \"SalesRepSysID\" as \"SalesRepSysID\",\n       \"PlatformVersion\"\
+  \ as \"PlatformVersion\",\n       \"USGFlag\" as \"USGFlag\",\n       \"USSoilSupportFlag\"\
+  \ as \"USSoilSupportFlag\",\n       \"SNCAccessControlFlag\" as \"SNCAccessControlFlag\"\
+  ,\n       \"Territory\" as \"Territory\",\n       \"Country\" as \"Country\",\n\
+  \       \"District\" as \"District\",\n       \"Region\" as \"Region\",\n      \
+  \ \"Area\" as \"Area\",\n       \"MajorArea\" as \"MajorArea\",\n       \"Geo\"\
+  \ as \"Geo\",\n       \"OnPrem\" as \"OnPrem\",\n       \"InstancePurpose\" as \"\
+  InstancePurpose\",\n       \"OperationalStatus\" as \"OperationalStatus\",\n   \
+  \    \"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n       \"SalesPriceUSD\"\
+  \ as \"SalesPriceUSD\",\n       \"Effective_Contract_Quantity_(_)\" as \"Effective_Contract_Quantity_(_)\"\
+  ,\n       \"Overage_(_)\" as \"Overage_(_)\",\n       \"Overage_($)\" as \"Overage_($)\"\
+  ,\n       \"Sales_Operations\" as \"Sales_Operations\",\n       \"Solution_Consultant\"\
+  \ as \"Solution_Consultant\",\n       \"Potential_NNACV_(USD)\" as \"Potential_NNACV_(USD)\"\
+  ,\n       \"Undersubscribed_(USD)\" as \"Undersubscribed_(USD)\",\n       \"Un-deployed_(USD)\"\
+  \ as \"Un-deployed_(USD)\",\n       \"ErrorCode\" as \"ErrorCode\",\n       \"Note\"\
+  \ as \"Note\",\n       \"MostRecent\" as \"MostRecent\",\n       \"DATA_SWITCH_FLAG\"\
+  \ as \"DATA_SWITCH_FLAG\",\n       \"DATE_UPDATE\" as \"DATE_UPDATE\",\n       \"\
+  Attribute1\" as \"Attribute1\",\n       \"ContractMultiplierValue\" as \"ContractMultiplierValue\"\
+  ,\n       \"Legal_Support\" as \"Legal_Support\",\n       \"Customer_Outcomes\"\
+  \ as \"Customer_Outcomes\",\n       \"XOVERAGE\" as \"XOverage\",\n       \"XOVERAGEPRODUCT\"\
+  \ as \"XOverageProduct\",\n\t   b.CACV*'random' as CAPPED_OVERAGE_2X,\n\t   b.CACV_PRODUCT*'random'\
+  \ as CAPPED_CACV_3X\nFROM\n  (SELECT *\n   FROM\n     (SELECT \"AccountNumber\"\
+  \ as \"AccountNumber\",\n             \"AccountSysID\" as \"AccountSysID\",\n  \
+  \           \"AccountName\" as \"AccountName\",\n             \"AcctMDMID\" as \"\
+  AcctMDMID\",\n             \"ContractNumber\" as \"ContractNumber\",\n         \
+  \    \"ContractInstance\" as \"ContractInstance\",\n             \"ContractItemNumber\"\
+  \ as \"ContractItemNumber\",\n             \"ProductBusinessUnit\" as \"ProductBusinessUnit\"\
+  ,\n             \"ProductCode\" as \"ProductCode\",\n             \"ProductSysID\"\
+  \ as \"ProductSysID\",\n             \"ProductFullName\" as \"ProductFullName\"\
+  ,\n             \"Definition\" as \"Definition\",\n             \"ContractItemQuantity\"\
+  \ as \"ContractItemQuantity\",\n             \"RecordSource\" as \"RecordSource\"\
+  ,\n             \"RecordType\" as \"RecordType\",\n             \"RecordGranularity\"\
+  \ as \"RecordGranularity\",\n             \"EffectiveContractQuantity\" as \"EffectiveContractQuantity\"\
+  ,\n             \"ActualQuantity\" as \"ActualQuantity\",\n             \"TimeStamp\"\
+  \ as \"TimeStamp\",\n             \"Min\" as \"Min\",\n             \"Max\" as \"\
+  Max\",\n             \"Overage\" as \"Overage\",\n             \"SalesRep\" as \"\
+  SalesRep\",\n             \"SalesRepSysID\" as \"SalesRepSysID\",\n            \
+  \ \"PlatformVersion\" as \"PlatformVersion\",\n             \"USGFlag\" as \"USGFlag\"\
+  ,\n             \"USSoilSupportFlag\" as \"USSoilSupportFlag\",\n             \"\
+  SNCAccessControlFlag\" as \"SNCAccessControlFlag\",\n             \"Territory\"\
+  \ as \"Territory\",\n             \"Country\" as \"Country\",\n             \"District\"\
+  \ as \"District\",\n             \"Region\" as \"Region\",\n             \"Area\"\
+  \ as \"Area\",\n             \"MajorArea\" as \"MajorArea\",\n             \"Geo\"\
+  \ as \"Geo\",\n             \"OnPrem\" as \"OnPrem\",\n             \"InstancePurpose\"\
+  \ as \"InstancePurpose\",\n             \"OperationalStatus\" as \"OperationalStatus\"\
+  ,\n             \"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n          \
+  \   \"SalesPriceUSD\" as \"SalesPriceUSD\",\n             \"Effective_Contract_Quantity_(_)\"\
+  \ as \"Effective_Contract_Quantity_(_)\",\n             \"Overage_(_)\" as \"Overage_(_)\"\
+  ,\n             \"Overage_($)\" as \"Overage_($)\",\n             \"Sales_Operations\"\
+  \ as \"Sales_Operations\",\n             \"Solution_Consultant\" as \"Solution_Consultant\"\
+  ,\n             \"Potential_NNACV_(USD)\" as \"Potential_NNACV_(USD)\",\n      \
+  \       \"Undersubscribed_(USD)\" as \"Undersubscribed_(USD)\",\n             \"\
+  Un-deployed_(USD)\" as \"Un-deployed_(USD)\",\n             \"ErrorCode\" as \"\
+  ErrorCode\",\n             \"Note\" as \"Note\",\n             \"MostRecent\" as\
+  \ \"MostRecent\",\n             \"DATA_SWITCH_FLAG\" as \"DATA_SWITCH_FLAG\",\n\
+  \             \"DATE_UPDATE\" as \"DATE_UPDATE\",\n             \"Attribute1\" as\
+  \ \"Attribute1\",\n             \"ContractMultiplierValue\" as \"ContractMultiplierValue\"\
+  ,\n             \"Legal_Support\" as \"Legal_Support\",\n             \"Customer_Outcomes\"\
+  \ as \"Customer_Outcomes\",\n             \"XOverage\" as \"XOVERAGE\",\n      \
+  \       \"XOverageProduct\" as \"XOVERAGEPRODUCT\"\n      FROM\n        (SELECT\
+  \ Projection_1.\"AccountNumber\" as \"AccountNumber\",\n                Projection_1.\"\
+  AccountSysID\" as \"AccountSysID\",\n                Projection_1.\"AccountName\"\
+  \ as \"AccountName\",\n                Projection_1.\"AcctMDMID\" as \"AcctMDMID\"\
+  ,\n                Projection_1.\"ContractNumber\" as \"ContractNumber\",\n    \
+  \            Projection_1.\"ContractInstance\" as \"ContractInstance\",\n      \
+  \          Projection_1.\"ContractItemNumber\" as \"ContractItemNumber\",\n    \
+  \            Projection_1.\"ProductBusinessUnit\" as \"ProductBusinessUnit\",\n\
+  \                Projection_1.\"ProductCode\" as \"ProductCode\",\n            \
+  \    Projection_1.\"ProductSysID\" as \"ProductSysID\",\n                Projection_1.\"\
+  ProductFullName\" as \"ProductFullName\",\n                Projection_1.\"Definition\"\
+  \ as \"Definition\",\n                Projection_1.\"ContractItemQuantity\" as \"\
+  ContractItemQuantity\",\n                Projection_1.\"RecordSource\" as \"RecordSource\"\
+  ,\n                Projection_1.\"RecordType\" as \"RecordType\",\n            \
+  \    Projection_1.\"RecordGranularity\" as \"RecordGranularity\",\n            \
+  \    Projection_1.\"EffectiveContractQuantity\" as \"EffectiveContractQuantity\"\
+  ,\n                Projection_1.\"ActualQuantity\" as \"ActualQuantity\",\n    \
+  \            Projection_1.\"TimeStamp\" as \"TimeStamp\",\n                Projection_1.\"\
+  Min\" as \"Min\",\n                Projection_1.\"Max\" as \"Max\",\n          \
+  \      Projection_1.\"Overage\" as \"Overage\",\n                Projection_1.\"\
+  SalesRep\" as \"SalesRep\",\n                Projection_1.\"SalesRepSysID\" as \"\
+  SalesRepSysID\",\n                Projection_1.\"PlatformVersion\" as \"PlatformVersion\"\
+  ,\n                Projection_1.\"USGFlag\" as \"USGFlag\",\n                Projection_1.\"\
+  USSoilSupportFlag\" as \"USSoilSupportFlag\",\n                Projection_1.\"SNCAccessControlFlag\"\
+  \ as \"SNCAccessControlFlag\",\n                Projection_1.\"Territory\" as \"\
+  Territory\",\n                Projection_1.\"Country\" as \"Country\",\n       \
+  \         Projection_1.\"District\" as \"District\",\n                Projection_1.\"\
+  Region\" as \"Region\",\n                Projection_1.\"Area\" as \"Area\",\n  \
+  \              Projection_1.\"MajorArea\" as \"MajorArea\",\n                Projection_1.\"\
+  Geo\" as \"Geo\",\n                Projection_1.\"OnPrem\" as \"OnPrem\",\n    \
+  \            Projection_1.\"InstancePurpose\" as \"InstancePurpose\",\n        \
+  \        Projection_1.\"OperationalStatus\" as \"OperationalStatus\",\n        \
+  \        Projection_1.\"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n    \
+  \            Projection_1.\"SalesPriceUSD\" as \"SalesPriceUSD\",\n            \
+  \    Projection_1.\"Effective_Contract_Quantity_(_)\" as \"Effective_Contract_Quantity_(_)\"\
+  ,\n                Projection_1.\"Overage_(_)\" as \"Overage_(_)\",\n          \
+  \      Projection_1.\"Overage_($)\" as \"Overage_($)\",\n                Projection_1.\"\
+  Sales_Operations\" as \"Sales_Operations\",\n                Projection_1.\"Solution_Consultant\"\
+  \ as \"Solution_Consultant\",\n                Projection_1.\"Potential_NNACV_(USD)\"\
+  \ as \"Potential_NNACV_(USD)\",\n                Projection_1.\"Undersubscribed_(USD)\"\
+  \ as \"Undersubscribed_(USD)\",\n                Projection_1.\"Un-deployed_(USD)\"\
+  \ as \"Un-deployed_(USD)\",\n                Projection_1.\"ErrorCode\" as \"ErrorCode\"\
+  ,\n                Projection_1.\"Note\" as \"Note\",\n                Projection_1.\"\
+  MostRecent\" as \"MostRecent\",\n                Projection_2.\"DATA_SWITCH_FLAG\"\
+  \ as \"DATA_SWITCH_FLAG\",\n                Projection_1.\"DATE_UPDATE\" as \"DATE_UPDATE\"\
+  ,\n                Projection_1.\"Attribute1\" as \"Attribute1\",\n            \
+  \    Projection_1.\"ContractMultiplierValue\" as \"ContractMultiplierValue\",\n\
+  \                Projection_1.\"Legal_Support\" as \"Legal_Support\",\n        \
+  \        Projection_1.\"Customer_Outcomes\" as \"Customer_Outcomes\",\n        \
+  \        Projection_1.\"XOverage\" as \"XOverage\",\n                Projection_1.\"\
+  XOverageProduct\" as \"XOverageProduct\"\n         FROM\n           (SELECT \"AccountNumber\"\
+  \ as \"AccountNumber\",\n                   \"AccountSysID\" as \"AccountSysID\"\
+  ,\n                   \"AccountName\" as \"AccountName\",\n                   \"\
+  AcctMDMID\" as \"AcctMDMID\",\n                   \"ContractNumber\" as \"ContractNumber\"\
+  ,\n                   \"ContractInstance\" as \"ContractInstance\",\n          \
+  \         \"ContractItemNumber\" as \"ContractItemNumber\",\n                  \
+  \ \"ProductBusinessUnit\" as \"ProductBusinessUnit\",\n                   \"ProductCode\"\
+  \ as \"ProductCode\",\n                   \"ProductSysID\" as \"ProductSysID\",\n\
+  \                   \"ProductFullName\" as \"ProductFullName\",\n              \
+  \     \"Definition\" as \"Definition\",\n                   \"ContractItemQuantity\"\
+  \ as \"ContractItemQuantity\",\n                   \"RecordSource\" as \"RecordSource\"\
+  ,\n                   \"RecordType\" as \"RecordType\",\n                   \"RecordGranularity\"\
+  \ as \"RecordGranularity\",\n                   \"EffectiveContractQuantity\" as\
+  \ \"EffectiveContractQuantity\",\n                   \"ActualQuantity\" as \"ActualQuantity\"\
+  ,\n                   \"TimeStamp\" as \"TimeStamp\",\n                   \"Min\"\
+  \ as \"Min\",\n                   \"Max\" as \"Max\",\n                   \"Overage\"\
+  \ as \"Overage\",\n                   \"SalesRep\" as \"SalesRep\",\n          \
+  \         \"SalesRepSysID\" as \"SalesRepSysID\",\n                   \"PlatformVersion\"\
+  \ as \"PlatformVersion\",\n                   \"USGFlag\" as \"USGFlag\",\n    \
+  \               \"USSoilSupportFlag\" as \"USSoilSupportFlag\",\n              \
+  \     \"SNCAccessControlFlag\" as \"SNCAccessControlFlag\",\n                  \
+  \ \"Territory\" as \"Territory\",\n                   \"Country\" as \"Country\"\
+  ,\n                   \"District\" as \"District\",\n                   \"Region\"\
+  \ as \"Region\",\n                   \"Area\" as \"Area\",\n                   \"\
+  MajorArea\" as \"MajorArea\",\n                   \"Geo\" as \"Geo\",\n        \
+  \           \"OnPrem\" as \"OnPrem\",\n                   \"InstancePurpose\" as\
+  \ \"InstancePurpose\",\n                   \"OperationalStatus\" as \"OperationalStatus\"\
+  ,\n                   \"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n    \
+  \               \"SalesPriceUSD\" as \"SalesPriceUSD\",\n                   \"Effective\
+  \ Contract Quantity (#)\" as \"Effective_Contract_Quantity_(_)\",\n            \
+  \       \"Overage (#)\" as \"Overage_(_)\",\n                   \"Overage ($)\"\
+  \ as \"Overage_($)\",\n                   \"Sales Operations\" as \"Sales_Operations\"\
+  ,\n                   \"Solution Consultant\" as \"Solution_Consultant\",\n    \
+  \               \"Potential NNACV (USD)\" as \"Potential_NNACV_(USD)\",\n      \
+  \             \"Undersubscribed (USD)\" as \"Undersubscribed_(USD)\",\n        \
+  \           \"Un-deployed (USD)\" as \"Un-deployed_(USD)\",\n                  \
+  \ \"ErrorCode\" as \"ErrorCode\",\n                   \"Note\" as \"Note\",\n  \
+  \                 \"MostRecent\" as \"MostRecent\",\n                   \"DATA_SWITCH_FLAG\"\
+  \ as \"DATA_SWITCH_FLAG\",\n                   \"DATE_UPDATE\" as \"DATE_UPDATE\"\
+  ,\n                   \"Attribute1\" as \"Attribute1\",\n                   \"ContractMultiplierValue\"\
+  \ as \"ContractMultiplierValue\",\n                   \"Legal Support\" as \"Legal_Support\"\
+  ,\n                   \"Customer Outcomes\" as \"Customer_Outcomes\",\n        \
+  \           \"XOverage\" as \"XOverage\",\n                   \"XOverageProduct\"\
+  \ as \"XOverageProduct\"\n            FROM EDW_LS.\"PRODUCT_COMPLIANCE_EM\".\"CS_ALL_A\"\
+  ) Projection_1\n         INNER JOIN\n           (SELECT \"TABLE_NAME\" as \"TABLE_NAME\"\
+  ,\n                   \"DATA_SWITCH_FLAG\" as \"DATA_SWITCH_FLAG\"\n           \
+  \ FROM EDW_LS.\"PRODUCT_COMPLIANCE_EM\".\"DATA_SWITCH_FLAG\"\n            WHERE\
+  \ (\"TABLE_NAME\" ='random') ) Projection_2 ON Projection_1.\"DATA_SWITCH_FLAG\"\
+  \ = Projection_2.\"DATA_SWITCH_FLAG\") Join_1\n      UNION ALL SELECT \"AccountNumber\"\
+  \ as \"AccountNumber\",\n                       \"AccountSysID\" as \"AccountSysID\"\
+  ,\n                       \"AccountName\" as \"AccountName\",\n                \
+  \       \"AcctMDMID\" as \"AcctMDMID\",\n                       \"ContractNumber\"\
+  \ as \"ContractNumber\",\n                       \"ContractInstance\" as \"ContractInstance\"\
+  ,\n                       \"ContractItemNumber\" as \"ContractItemNumber\",\n  \
+  \                     \"ProductBusinessUnit\" as \"ProductBusinessUnit\",\n    \
+  \                   \"ProductCode\" as \"ProductCode\",\n                      \
+  \ \"ProductSysID\" as \"ProductSysID\",\n                       \"ProductFullName\"\
+  \ as \"ProductFullName\",\n                       \"Definition\" as \"Definition\"\
+  ,\n                       \"ContractItemQuantity\" as \"ContractItemQuantity\",\n\
+  \                       \"RecordSource\" as \"RecordSource\",\n                \
+  \       \"RecordType\" as \"RecordType\",\n                       \"RecordGranularity\"\
+  \ as \"RecordGranularity\",\n                       \"EffectiveContractQuantity\"\
+  \ as \"EffectiveContractQuantity\",\n                       \"ActualQuantity\" as\
+  \ \"ActualQuantity\",\n                       \"TimeStamp\" as \"TimeStamp\",\n\
+  \                       \"Min\" as \"Min\",\n                       \"Max\" as \"\
+  Max\",\n                       \"Overage\" as \"Overage\",\n                   \
+  \    \"SalesRep\" as \"SalesRep\",\n                       \"SalesRepSysID\" as\
+  \ \"SalesRepSysID\",\n                       \"PlatformVersion\" as \"PlatformVersion\"\
+  ,\n                       \"USGFlag\" as \"USGFlag\",\n                       \"\
+  USSoilSupportFlag\" as \"USSoilSupportFlag\",\n                       \"SNCAccessControlFlag\"\
+  \ as \"SNCAccessControlFlag\",\n                       \"Territory\" as \"Territory\"\
+  ,\n                       \"Country\" as \"Country\",\n                       \"\
+  District\" as \"District\",\n                       \"Region\" as \"Region\",\n\
+  \                       \"Area\" as \"Area\",\n                       \"MajorArea\"\
+  \ as \"MajorArea\",\n                       \"Geo\" as \"Geo\",\n              \
+  \         \"OnPrem\" as \"OnPrem\",\n                       \"InstancePurpose\"\
+  \ as \"InstancePurpose\",\n                       \"OperationalStatus\" as \"OperationalStatus\"\
+  ,\n                       \"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n\
+  \                       \"SalesPriceUSD\" as \"SalesPriceUSD\",\n              \
+  \         \"Effective_Contract_Quantity_(_)\" as \"Effective_Contract_Quantity_(_)\"\
+  ,\n                       \"Overage_(_)\" as \"Overage_(_)\",\n                \
+  \       \"Overage_($)\" as \"Overage_($)\",\n                       \"Sales_Operations\"\
+  \ as \"Sales_Operations\",\n                       \"Solution_Consultant\" as \"\
+  Solution_Consultant\",\n                       \"Potential_NNACV_(USD)\" as \"Potential_NNACV_(USD)\"\
+  ,\n                       \"Undersubscribed_(USD)\" as \"Undersubscribed_(USD)\"\
+  ,\n                       \"Un-deployed_(USD)\" as \"Un-deployed_(USD)\",\n    \
+  \                   \"ErrorCode\" as \"ErrorCode\",\n                       \"Note\"\
+  \ as \"Note\",\n                       \"MostRecent\" as \"MostRecent\",\n     \
+  \                  \"DATA_SWITCH_FLAG\" as \"DATA_SWITCH_FLAG\",\n             \
+  \          \"DATE_UPDATE\" as \"DATE_UPDATE\",\n                       \"Attribute1\"\
+  \ as \"Attribute1\",\n                       \"ContractMultiplierValue\" as \"ContractMultiplierValue\"\
+  ,\n                       \"Legal_Support\" as \"Legal_Support\",\n            \
+  \           \"Customer_Outcomes\" as \"Customer_Outcomes\",\n                  \
+  \     \"XOverage\" as \"XOVERAGE\",\n                       \"XOverageProduct\"\
+  \ as \"XOVERAGEPRODUCT\"\n      FROM\n        (SELECT Projection_3.\"AccountNumber\"\
+  \ as \"AccountNumber\",\n                Projection_3.\"AccountSysID\" as \"AccountSysID\"\
+  ,\n                Projection_3.\"AccountName\" as \"AccountName\",\n          \
+  \      Projection_3.\"AcctMDMID\" as \"AcctMDMID\",\n                Projection_3.\"\
+  ContractNumber\" as \"ContractNumber\",\n                Projection_3.\"ContractInstance\"\
+  \ as \"ContractInstance\",\n                Projection_3.\"ContractItemNumber\"\
+  \ as \"ContractItemNumber\",\n                Projection_3.\"ProductBusinessUnit\"\
+  \ as \"ProductBusinessUnit\",\n                Projection_3.\"ProductCode\" as \"\
+  ProductCode\",\n                Projection_3.\"ProductSysID\" as \"ProductSysID\"\
+  ,\n                Projection_3.\"ProductFullName\" as \"ProductFullName\",\n  \
+  \              Projection_3.\"Definition\" as \"Definition\",\n                Projection_3.\"\
+  ContractItemQuantity\" as \"ContractItemQuantity\",\n                Projection_3.\"\
+  RecordSource\" as \"RecordSource\",\n                Projection_3.\"RecordType\"\
+  \ as \"RecordType\",\n                Projection_3.\"RecordGranularity\" as \"RecordGranularity\"\
+  ,\n                Projection_3.\"EffectiveContractQuantity\" as \"EffectiveContractQuantity\"\
+  ,\n                Projection_3.\"ActualQuantity\" as \"ActualQuantity\",\n    \
+  \            Projection_3.\"TimeStamp\" as \"TimeStamp\",\n                Projection_3.\"\
+  Min\" as \"Min\",\n                Projection_3.\"Max\" as \"Max\",\n          \
+  \      Projection_3.\"Overage\" as \"Overage\",\n                Projection_3.\"\
+  SalesRep\" as \"SalesRep\",\n                Projection_3.\"SalesRepSysID\" as \"\
+  SalesRepSysID\",\n                Projection_3.\"PlatformVersion\" as \"PlatformVersion\"\
+  ,\n                Projection_3.\"USGFlag\" as \"USGFlag\",\n                Projection_3.\"\
+  USSoilSupportFlag\" as \"USSoilSupportFlag\",\n                Projection_3.\"SNCAccessControlFlag\"\
+  \ as \"SNCAccessControlFlag\",\n                Projection_3.\"Territory\" as \"\
+  Territory\",\n                Projection_3.\"Country\" as \"Country\",\n       \
+  \         Projection_3.\"District\" as \"District\",\n                Projection_3.\"\
+  Region\" as \"Region\",\n                Projection_3.\"Area\" as \"Area\",\n  \
+  \              Projection_3.\"MajorArea\" as \"MajorArea\",\n                Projection_3.\"\
+  Geo\" as \"Geo\",\n                Projection_3.\"OnPrem\" as \"OnPrem\",\n    \
+  \            Projection_3.\"InstancePurpose\" as \"InstancePurpose\",\n        \
+  \        Projection_3.\"OperationalStatus\" as \"OperationalStatus\",\n        \
+  \        Projection_3.\"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n    \
+  \            Projection_3.\"SalesPriceUSD\" as \"SalesPriceUSD\",\n            \
+  \    Projection_3.\"Effective_Contract_Quantity_(_)\" as \"Effective_Contract_Quantity_(_)\"\
+  ,\n                Projection_3.\"Overage_(_)\" as \"Overage_(_)\",\n          \
+  \      Projection_3.\"Overage_($)\" as \"Overage_($)\",\n                Projection_3.\"\
+  Sales_Operations\" as \"Sales_Operations\",\n                Projection_3.\"Solution_Consultant\"\
+  \ as \"Solution_Consultant\",\n                Projection_3.\"Potential_NNACV_(USD)\"\
+  \ as \"Potential_NNACV_(USD)\",\n                Projection_3.\"Undersubscribed_(USD)\"\
+  \ as \"Undersubscribed_(USD)\",\n                Projection_3.\"Un-deployed_(USD)\"\
+  \ as \"Un-deployed_(USD)\",\n                Projection_3.\"ErrorCode\" as \"ErrorCode\"\
+  ,\n                Projection_3.\"Note\" as \"Note\",\n                Projection_3.\"\
+  MostRecent\" as \"MostRecent\",\n                Projection_4.\"DATA_SWITCH_FLAG\"\
+  \ as \"DATA_SWITCH_FLAG\",\n                Projection_3.\"DATE_UPDATE\" as \"DATE_UPDATE\"\
+  ,\n                Projection_3.\"Attribute1\" as \"Attribute1\",\n            \
+  \    Projection_3.\"ContractMultiplierValue\" as \"ContractMultiplierValue\",\n\
+  \                Projection_3.\"Legal_Support\" as \"Legal_Support\",\n        \
+  \        Projection_3.\"Customer_Outcomes\" as \"Customer_Outcomes\",\n        \
+  \        Projection_3.\"XOverage\" as \"XOverage\",\n                Projection_3.\"\
+  XOverageProduct\" as \"XOverageProduct\"\n         FROM\n           (SELECT \"AccountNumber\"\
+  \ as \"AccountNumber\",\n                   \"AccountSysID\" as \"AccountSysID\"\
+  ,\n                   \"AccountName\" as \"AccountName\",\n                   \"\
+  AcctMDMID\" as \"AcctMDMID\",\n                   \"ContractNumber\" as \"ContractNumber\"\
+  ,\n                   \"ContractInstance\" as \"ContractInstance\",\n          \
+  \         \"ContractItemNumber\" as \"ContractItemNumber\",\n                  \
+  \ \"ProductBusinessUnit\" as \"ProductBusinessUnit\",\n                   \"ProductCode\"\
+  \ as \"ProductCode\",\n                   \"ProductSysID\" as \"ProductSysID\",\n\
+  \                   \"ProductFullName\" as \"ProductFullName\",\n              \
+  \     \"Definition\" as \"Definition\",\n                   \"ContractItemQuantity\"\
+  \ as \"ContractItemQuantity\",\n                   \"RecordSource\" as \"RecordSource\"\
+  ,\n                   \"RecordType\" as \"RecordType\",\n                   \"RecordGranularity\"\
+  \ as \"RecordGranularity\",\n                   \"EffectiveContractQuantity\" as\
+  \ \"EffectiveContractQuantity\",\n                   \"ActualQuantity\" as \"ActualQuantity\"\
+  ,\n                   \"TimeStamp\" as \"TimeStamp\",\n                   \"Min\"\
+  \ as \"Min\",\n                   \"Max\" as \"Max\",\n                   \"Overage\"\
+  \ as \"Overage\",\n                   \"SalesRep\" as \"SalesRep\",\n          \
+  \         \"SalesRepSysID\" as \"SalesRepSysID\",\n                   \"PlatformVersion\"\
+  \ as \"PlatformVersion\",\n                   \"USGFlag\" as \"USGFlag\",\n    \
+  \               \"USSoilSupportFlag\" as \"USSoilSupportFlag\",\n              \
+  \     \"SNCAccessControlFlag\" as \"SNCAccessControlFlag\",\n                  \
+  \ \"Territory\" as \"Territory\",\n                   \"Country\" as \"Country\"\
+  ,\n                   \"District\" as \"District\",\n                   \"Region\"\
+  \ as \"Region\",\n                   \"Area\" as \"Area\",\n                   \"\
+  MajorArea\" as \"MajorArea\",\n                   \"Geo\" as \"Geo\",\n        \
+  \           \"OnPrem\" as \"OnPrem\",\n                   \"InstancePurpose\" as\
+  \ \"InstancePurpose\",\n                   \"OperationalStatus\" as \"OperationalStatus\"\
+  ,\n                   \"ActualUsageValue($)\" as \"ActualUsageValue($)\",\n    \
+  \               \"SalesPriceUSD\" as \"SalesPriceUSD\",\n                   \"Effective\
+  \ Contract Quantity (#)\" as \"Effective_Contract_Quantity_(_)\",\n            \
+  \       \"Overage (#)\" as \"Overage_(_)\",\n                   \"Overage ($)\"\
+  \ as \"Overage_($)\",\n                   \"Sales Operations\" as \"Sales_Operations\"\
+  ,\n                   \"Solution Consultant\" as \"Solution_Consultant\",\n    \
+  \               \"Potential NNACV (USD)\" as \"Potential_NNACV_(USD)\",\n      \
+  \             \"Undersubscribed (USD)\" as \"Undersubscribed_(USD)\",\n        \
+  \           \"Un-deployed (USD)\" as \"Un-deployed_(USD)\",\n                  \
+  \ \"ErrorCode\" as \"ErrorCode\",\n                   \"Note\" as \"Note\",\n  \
+  \                 \"MostRecent\" as \"MostRecent\",\n                   \"DATA_SWITCH_FLAG\"\
+  \ as \"DATA_SWITCH_FLAG\",\n                   \"DATE_UPDATE\" as \"DATE_UPDATE\"\
+  ,\n                   \"Attribute1\" as \"Attribute1\",\n                   \"ContractMultiplierValue\"\
+  \ as \"ContractMultiplierValue\",\n                   \"Legal Support\" as \"Legal_Support\"\
+  ,\n                   \"Customer Outcomes\" as \"Customer_Outcomes\",\n        \
+  \           \"XOverage\" as \"XOverage\",\n                   \"XOverageProduct\"\
+  \ as \"XOverageProduct\"\n            FROM EDW_LS.\"PRODUCT_COMPLIANCE_EM\".\"CS_ALL_B\"\
+  ) Projection_3\n         INNER JOIN\n           (SELECT \"TABLE_NAME\" as \"TABLE_NAME\"\
+  ,\n                   \"DATA_SWITCH_FLAG\" as \"DATA_SWITCH_FLAG\"\n           \
+  \ FROM EDW_LS.\"PRODUCT_COMPLIANCE_EM\".\"DATA_SWITCH_FLAG\"\n            WHERE\
+  \ (\"TABLE_NAME\" ='random') ) Projection_4 ON Projection_3.\"DATA_SWITCH_FLAG\"\
+  \ = Projection_4.\"DATA_SWITCH_FLAG\") Join_2)) Union_1\n\t\t\tLEFT OUTER JOIN (select\
+  \ \"AcctNumber\",\"ProductCd\",nvl(CACV,'random') as CACV, nvl(CACV_PRODUCT,'random')\
+  \ as CACV_PRODUCT\n            from ( SELECT distinct  A.\"AcctNumber\",A.\"ProductCode\"\
+  \ as \"ProductCd\",\n    Sum(A.\"ConItemACV_USD\") over(Partition by A.\"AcctNumber\"\
+  \  order by A.\"AcctNumber\" ) as CACV,\n    Sum(A.\"ConItemACV_USD\")  over(Partition\
+  \ by A.\"AcctNumber\",A.\"ProductCode\"  order by A.\"AcctNumber\" ) as CACV_PRODUCT\n\
+  \    FROM EDW_LS.\"CUSTOMER_EM\".\"EM_CUSTOMER_BASE\" A WHERE \"RecordType\" = 'random'\n\
+  \            ))b on Union_1.\"AccountNumber\" = b.\"AcctNumber\" and nvl(Union_1.\"\
+  ProductCode\",'random')=nvl(b.\"ProductCd\",'random')\n\t\t) select distinct*, LEAST(\"\
+  Overage\",CAPPED_OVERAGE_2X,CAPPED_CACV_3X) as \"CAPPED_OVERAGE\"\nfrom cte;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

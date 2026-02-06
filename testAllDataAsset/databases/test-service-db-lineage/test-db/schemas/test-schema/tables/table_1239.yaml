@@ -1,0 +1,71 @@
+name: table_1239
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1239
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1239.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_SALES_RENEWAL_D(\n\tSALES_RENEWAL_ID,\n\
+  \tDATE_ID,\n\tQUARTER_YYQQ,\n\tOPTY_TERRITORY_ID,\n\tCONTRACT_TYPE,\n\tOPTY_TERRITORY_GEO_ID,\n\
+  \tRENEWAL_TERRITORY_ID,\n\tRENEWAL_GEO_ID,\n\tRENEWAL_ACV_USD_CY_FX,\n\tRENEWAL_ACV_CQ_LATE_USD_CY_FX,\n\
+  \tRENEWAL_ACV_PUSHED_LATE_USD_CY_FX,\n\tRENEWAL_ACV_PQ_OVERDUE_USD_CY_FX,\n\tRENEWAL_ACV_EARLY_USD_CY_FX,\n\
+  \tST_EXTRACT_DATE,\n\tTERRITORY_SYSID,\n\tRENEWAL_TERRITORY_SYSID\n) as\n/* New\
+  \ View created by Jyoti(Accenture) on 13.05.24*/\nSELECT\nSALES_RENEWAL_ID,\nDATE_ID,\n\
+  QUARTER_YYQQ,\nOPTY_TERRITORY_ID,\nCONTRACT_TYPE,\nOPTY_TERRITORY_GEO_ID,\nRENEWAL_TERRITORY_ID,\n\
+  RENEWAL_GEO_ID,\nSUM(RENEWAL_ACV_USD_CY_FX) AS RENEWAL_ACV_USD_CY_FX,\nSUM(RENEWAL_ACV_CQ_LATE_USD_CY_FX)\
+  \ AS RENEWAL_ACV_CQ_LATE_USD_CY_FX,\nSUM(RENEWAL_ACV_PUSHED_LATE_USD_CY_FX) AS RENEWAL_ACV_PUSHED_LATE_USD_CY_FX,\n\
+  SUM(RENEWAL_ACV_PQ_OVERDUE_USD_CY_FX) AS RENEWAL_ACV_PQ_OVERDUE_USD_CY_FX,\nSUM(RENEWAL_ACV_EARLY_USD_CY_FX)\
+  \ AS RENEWAL_ACV_EARLY_USD_CY_FX,\nST_EXTRACT_DATE,\nTERRITORY_SYSID,\nRENEWAL_TERRITORY_SYSID\
+  \ FROM (\nSELECT\nHASH(IFNULL(\"STExtractDate\", 'random') || IFNULL(\"TerritorySysID\"\
+  , 'random') || IFNULL(\"RenewalTerritorySysID\", 'random') ||\nIFNULL(\"OptyContractType\"\
+  , 'random')) AS SALES_RENEWAL_ID,\n\"STExtractDate\" AS DATE_ID,\nQ.QUARTER_YYQQ\
+  \ AS QUARTER_YYQQ,\n\"QuarterFlag\" AS QUARTER_FLAG,\nHASH(\"TerritorySysID\") AS\
+  \ OPTY_TERRITORY_ID,\n\"OptyContractType\" AS CONTRACT_TYPE,\nIFNULL(TERR1.GEO_ID,\
+  \ HASH(TERR1.GEO_ID)) AS OPTY_TERRITORY_GEO_ID,\nHASH(\"RenewalTerritorySysID\"\
+  ) AS RENEWAL_TERRITORY_ID,\nIFNULL(TERR2.GEO_ID, HASH(TERR2.GEO_ID)) as RENEWAL_GEO_ID,\n\
+  \"RenewalACV\" AS RENEWAL_ACV_USD_CY_FX,\n\"CQLate_USD\" AS RENEWAL_ACV_CQ_LATE_USD_CY_FX,\n\
+  \"PushedLate_USD\" AS RENEWAL_ACV_PUSHED_LATE_USD_CY_FX,\n\"PQOverDue_USD\" AS RENEWAL_ACV_PQ_OVERDUE_USD_CY_FX,\n\
+  \"EarlyRenewalACV_USD\" AS RENEWAL_ACV_EARLY_USD_CY_FX,\n\"STExtractDate\" AS ST_EXTRACT_DATE,\n\
+  \"TerritorySysID\" AS TERRITORY_SYSID,\n\"RenewalTerritorySysID\" AS RENEWAL_TERRITORY_SYSID\n\
+  FROM EDW_LS.SALES_EM.SALES_DAILY_RENEWAL_METRICS RM\nLEFT JOIN EDW.ENTERPRISE.DIM_QUARTER\
+  \ Q ON RM.\"SnapshotQuarter\" = Q.QUARTER_YYQQ\nLEFT JOIN EDW.ENTERPRISE.DIM_TERRITORY\
+  \ TERR1 ON TERR1.TERRITORY_SYSID = RM.\"TerritorySysID\"\nLEFT JOIN EDW.ENTERPRISE.DIM_TERRITORY\
+  \ TERR2 ON TERR2.TERRITORY_SYSID = RM.\"RenewalTerritorySysID\"\n)\nGROUP BY ALL;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
