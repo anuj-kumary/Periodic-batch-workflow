@@ -1,0 +1,96 @@
+name: DR$STOPWORD
+fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD
+tableType: Regular
+columns:
+  - name: spw_spl_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD.spw_spl_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: spw_type
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD.spw_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: spw_language
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar2(30)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD.spw_language
+    tags: []
+    children: []
+    customMetrics: []
+  - name: spw_word
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar2(255)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD.spw_word
+    tags: []
+    children: []
+    customMetrics: []
+  - name: spw_lang_dependent
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD.spw_lang_dependent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spw_pattern
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar2(512)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$STOPWORD.spw_pattern
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - spw_spl_id
+      - spw_type
+      - spw_language
+      - spw_word
+owners: []
+databaseSchema:
+  id: 5e47000e-823d-436f-9638-5b6ec8cedf56
+  type: databaseSchema
+  name: ctxsys
+  fullyQualifiedName: oracle_test.default.ctxsys
+  displayName: ctxsys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 125344f781eafb8578be2b5955178a7f
+processedLineage: false
+entityStatus: Approved

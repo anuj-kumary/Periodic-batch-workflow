@@ -1,0 +1,230 @@
+name: mgmt_bsln_statistics
+fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics
+description: Database Metric Baseline Statistics (10.2)
+tableType: View
+columns:
+  - name: bsln_guid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.bsln_guid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: datasource_guid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.datasource_guid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: compute_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.compute_date
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: subinterval_code
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.subinterval_code
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: sample_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.sample_count
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: average
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.average
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: minimum
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.minimum
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: maximum
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.maximum
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sdev
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.sdev
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pctile_25
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.pctile_25
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pctile_50
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.pctile_50
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pctile_75
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.pctile_75
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pctile_90
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.pctile_90
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pctile_95
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.pctile_95
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_sample_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_sample_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_slope
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_slope
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_intercept
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_intercept
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_fit_quality
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_fit_quality
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_pctile_99
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_pctile_99
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_pctile_999
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_pctile_999
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: est_pctile_9999
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_statistics.est_pctile_9999
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 456c1329-65cb-4a23-ae5d-ffe945897b97
+  type: databaseSchema
+  name: dbsnmp
+  fullyQualifiedName: oracle_test.default.dbsnmp
+  displayName: dbsnmp
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7e779e4c4a9bea2d648b05f34e8158b4
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,166 @@
+name: local_chunks
+fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks
+tableType: View
+columns:
+  - name: chunk_name
+    dataType: VARCHAR
+    dataLength: 87
+    dataTypeDisplay: varchar2(87)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.chunk_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shard_key_low
+    dataType: BLOB
+    dataLength: 1
+    dataTypeDisplay: blob
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.shard_key_low
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shard_key_high
+    dataType: BLOB
+    dataLength: 1
+    dataTypeDisplay: blob
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.shard_key_high
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: group_key_low
+    dataType: BLOB
+    dataLength: 1
+    dataTypeDisplay: blob
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.group_key_low
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: group_key_high
+    dataType: BLOB
+    dataLength: 1
+    dataTypeDisplay: blob
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.group_key_high
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: priority
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.priority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tabfam_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.tabfam_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: grp_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.grp_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: chunk_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.chunk_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: state
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.state
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shard_name
+    dataType: VARCHAR
+    dataLength: 159
+    dataTypeDisplay: varchar2(159)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.shard_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shardspace_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.shardspace_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: inst_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.inst_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: chunk_unique_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunks.chunk_unique_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f8e90d5f-96cc-4df9-ab89-635591a57f08
+  type: databaseSchema
+  name: gsmadmin_internal
+  fullyQualifiedName: oracle_test.default.gsmadmin_internal
+  displayName: gsmadmin_internal
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e4e9dbebfa845d243f44317a42ab1f41
+processedLineage: false
+entityStatus: Approved

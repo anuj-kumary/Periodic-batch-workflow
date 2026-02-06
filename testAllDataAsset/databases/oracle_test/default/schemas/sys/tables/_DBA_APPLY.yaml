@@ -1,0 +1,301 @@
+name: _DBA_APPLY
+fullyQualifiedName: oracle_test.default.sys._DBA_APPLY
+tableType: View
+columns:
+  - name: APPLY#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.APPLY#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: apply_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.apply_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: queue_oid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.queue_oid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: queue_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.queue_owner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: queue_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.queue_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ruleset_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.ruleset_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ruleset_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.ruleset_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: message_handler
+    dataType: VARCHAR
+    dataLength: 392
+    dataTypeDisplay: varchar2(392)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.message_handler
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ddl_handler
+    dataType: VARCHAR
+    dataLength: 392
+    dataTypeDisplay: varchar2(392)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.ddl_handler
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: precommit_handler
+    dataType: VARCHAR
+    dataLength: 392
+    dataTypeDisplay: varchar2(392)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.precommit_handler
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: apply_userid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.apply_userid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: apply_dblink
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.apply_dblink
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: apply_tag
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.apply_tag
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: start_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.end_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: negative_ruleset_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.negative_ruleset_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: negative_ruleset_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.negative_ruleset_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.spare1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare2
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.spare2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare3
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.spare3
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status_change_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.status_change_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: error_number
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.error_number
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: error_message
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.error_message
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ua_notification_handler
+    dataType: VARCHAR
+    dataLength: 392
+    dataTypeDisplay: varchar2(392)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.ua_notification_handler
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ua_ruleset_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.ua_ruleset_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ua_ruleset_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.ua_ruleset_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lcrid_version
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._DBA_APPLY.lcrid_version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 8021d925b05db4b83f2f174b3619c94b
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,130 @@
+name: _ALL_FILE_GROUP_EXPORT_INFO
+fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO
+tableType: View
+columns:
+  - name: file_group_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.file_group_owner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: file_group_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.file_group_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: version_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.version_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: version_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.version_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: version_guid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.version_guid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: export_version
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.export_version
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: platform_name
+    dataType: VARCHAR
+    dataLength: 101
+    dataTypeDisplay: varchar2(101)
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.platform_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: export_time
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.export_time
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: export_scn
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.export_scn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: source_global_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._ALL_FILE_GROUP_EXPORT_INFO.source_global_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 027f8310a9ce716996b503baa0c9809f
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,193 @@
+name: sha_databases
+fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases
+tableType: View
+columns:
+  - name: db_unique_name
+    dataType: VARCHAR
+    dataLength: 159
+    dataTypeDisplay: varchar2(159)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.db_unique_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: region_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.region_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connect_string
+    dataType: VARCHAR
+    dataLength: 512
+    dataTypeDisplay: varchar2(512)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.connect_string
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: db_created
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.db_created
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 21
+    dataTypeDisplay: varchar2(21)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rac_type
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar2(10)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.rac_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shardgroup
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.shardgroup
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_ddl
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.last_ddl
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ddl_error
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.ddl_error
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: deployment_state
+    dataType: VARCHAR
+    dataLength: 22
+    dataTypeDisplay: varchar2(22)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.deployment_state
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dg_broker_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.dg_broker_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shardspace
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.shardspace
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: db_up
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.db_up
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_primary
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.is_primary
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: db_host
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar2(256)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.db_host
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: oracle_home
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.sha_databases.oracle_home
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f8e90d5f-96cc-4df9-ab89-635591a57f08
+  type: databaseSchema
+  name: gsmadmin_internal
+  fullyQualifiedName: oracle_test.default.gsmadmin_internal
+  displayName: gsmadmin_internal
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 33c187764e33fe116743ae5140adc9a1
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,229 @@
+name: _BASE_USER
+fullyQualifiedName: oracle_test.default.sys._BASE_USER
+tableType: View
+columns:
+  - name: USER#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.USER#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TYPE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.TYPE#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DATATS#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.DATATS#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TEMPTS#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.TEMPTS#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ctime
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.ctime
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ptime
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.ptime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: exptime
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.exptime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ltime
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.ltime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: resource$
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.resource$
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: audit$
+    dataType: VARCHAR
+    dataLength: 38
+    dataTypeDisplay: varchar2(38)
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.audit$
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: defrole
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.defrole
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DEFGRP#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.DEFGRP#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFGRP_SEQ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.DEFGRP_SEQ#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: astatus
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.astatus
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: lcount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.lcount
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: defschclass
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.defschclass
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ext_username
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.ext_username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.spare1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare2
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.spare2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare6
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.spare6
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys._BASE_USER.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9c5f09f29aad17edb12f7850f61ebddf
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,85 @@
+name: drv$pending
+fullyQualifiedName: oracle_test.default.ctxsys.drv$pending
+tableType: View
+columns:
+  - name: pnd_cid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.drv$pending.pnd_cid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pnd_pid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.drv$pending.pnd_pid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pnd_rowid
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: rowid
+    fullyQualifiedName: oracle_test.default.ctxsys.drv$pending.pnd_rowid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pnd_timestamp
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.ctxsys.drv$pending.pnd_timestamp
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pnd_lock_failed
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    fullyQualifiedName: oracle_test.default.ctxsys.drv$pending.pnd_lock_failed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 5e47000e-823d-436f-9638-5b6ec8cedf56
+  type: databaseSchema
+  name: ctxsys
+  fullyQualifiedName: oracle_test.default.ctxsys
+  displayName: ctxsys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fa9db5866e6b688450c17ab19df7f881
+processedLineage: false
+entityStatus: Approved
