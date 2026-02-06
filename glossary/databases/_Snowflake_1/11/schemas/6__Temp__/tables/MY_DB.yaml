@@ -1,0 +1,64 @@
+name: MY_1ST_TABLE
+fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.MY_SCHEMA.MY_1ST_TABLE"
+tableType: Regular
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.MY_SCHEMA.MY_1ST_TABLE.NAME"
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.MY_SCHEMA.MY_1ST_TABLE.ID"
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 1047a162-9838-4bba-9755-52b96c805dee
+  type: databaseSchema
+  name: MY_SCHEMA
+  fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB.MY_SCHEMA"
+  displayName: MY_SCHEMA
+  deleted: false
+database:
+  id: 6d8ce703-9a98-4c51-bdca-587b88ab00b6
+  type: database
+  name: MY_DB
+  fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\".MY_DB"
+  displayName: MY_DB
+  deleted: false
+service:
+  id: 98babf70-5762-4c24-b0a9-c423caee1781
+  type: databaseService
+  name: "Snowflake 1.11.6 [Temp]"
+  fullyQualifiedName: "\"Snowflake 1.11.6 [Temp]\""
+  description: ""
+  displayName: "Snowflake 1.11.6 [Temp]"
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/kqxahnu/ya62209/#/data/databases/MY_DB/schemas/MY_SCHEMA/table/MY_1ST_TABLE
+domains: []
+dataProducts: []
+sourceHash: 9565de41b401fce2df19f83704416588
+processedLineage: false
+entityStatus: Unprocessed

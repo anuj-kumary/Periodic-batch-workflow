@@ -1,0 +1,161 @@
+name: awsdatalake-testing/sales/sales.parquet
+fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet"
+tableType: Regular
+columns:
+  - name: ORDERNUMBER
+    displayName: ORDERNUMBER
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".ORDERNUMBER
+    tags: []
+    children: []
+    customMetrics: []
+  - name: QUANTITYORDERED
+    displayName: QUANTITYORDERED
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".QUANTITYORDERED
+    tags: []
+    children: []
+    customMetrics: []
+  - name: PRICEEACH
+    displayName: PRICEEACH
+    dataType: FLOAT
+    dataTypeDisplay: double
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".PRICEEACH
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ORDERLINENUMBER
+    displayName: ORDERLINENUMBER
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".ORDERLINENUMBER
+    tags: []
+    children: []
+    customMetrics: []
+  - name: SALES
+    displayName: SALES
+    dataType: FLOAT
+    dataTypeDisplay: double
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".SALES
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ORDERDATE
+    displayName: ORDERDATE
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".ORDERDATE
+    tags: []
+    children: []
+    customMetrics: []
+  - name: STATUS
+    displayName: STATUS
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".STATUS
+    tags: []
+    children: []
+    customMetrics: []
+  - name: QTR_ID
+    displayName: QTR_ID
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".QTR_ID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: MONTH_ID
+    displayName: MONTH_ID
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".MONTH_ID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: YEAR_ID
+    displayName: YEAR_ID
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".YEAR_ID
+    tags: []
+    children: []
+    customMetrics: []
+  - name: PRODUCTLINE
+    displayName: PRODUCTLINE
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".PRODUCTLINE
+    tags: []
+    children: []
+    customMetrics: []
+  - name: MSRP
+    displayName: MSRP
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".MSRP
+    tags: []
+    children: []
+    customMetrics: []
+  - name: PRODUCTCODE
+    displayName: PRODUCTCODE
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".PRODUCTCODE
+    tags: []
+    children: []
+    customMetrics: []
+  - name: DEALSIZE
+    displayName: DEALSIZE
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".DEALSIZE
+    tags: []
+    children: []
+    customMetrics: []
+  - name: CUSTOMERID
+    displayName: CUSTOMERID
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."awsdatalake-testing/sales/sales.parquet".CUSTOMERID
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: b7bb62d9-5ce4-4da8-a0bd-56aa291fb4f9
+  type: databaseSchema
+  name: awsdatalake-testing
+  fullyQualifiedName: abc.default.awsdatalake-testing
+  displayName: awsdatalake-testing
+  deleted: false
+database:
+  id: 21b2a19d-78f7-45bc-8b85-e7cedccfac79
+  type: database
+  name: default
+  fullyQualifiedName: abc.default
+  displayName: default
+  deleted: false
+service:
+  id: d9609609-83c5-46dc-b2a7-ea2b261be6d7
+  type: databaseService
+  name: abc
+  fullyQualifiedName: abc
+  description: ""
+  displayName: abc
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: 68a64c4621c27671daf5ef7a9a309a13
+processedLineage: false
+entityStatus: Unprocessed

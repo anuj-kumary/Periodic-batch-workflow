@@ -1,0 +1,169 @@
+name: data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet
+fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet"
+tableType: Regular
+columns:
+  - name: updatedAt
+    displayName: updatedAt
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".updatedAt
+    tags: []
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    displayName: updatedBy
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".updatedBy
+    tags: []
+    children: []
+    customMetrics: []
+  - name: nameHash
+    displayName: nameHash
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".nameHash
+    tags: []
+    children: []
+    customMetrics: []
+  - name: id
+    displayName: id
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: name
+    displayName: name
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: json
+    displayName: json
+    dataType: STRUCT
+    dataTypeDisplay: "struct<deleted: bool, description: string, fullyqualifiedname:\
+      \ string, id: string, mutuallyexclusive: bool, name: string, provider: string,\
+      \ updatedat: int64, updatedby: string, version: double>"
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json
+    tags: []
+    children:
+      - name: deleted
+        displayName: deleted
+        dataType: BOOLEAN
+        dataTypeDisplay: bool
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.deleted
+        tags: []
+        children: []
+      - name: description
+        displayName: description
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.description
+        tags: []
+        children: []
+      - name: fullyQualifiedName
+        displayName: fullyQualifiedName
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.fullyQualifiedName
+        tags: []
+        children: []
+      - name: id
+        displayName: id
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.id
+        tags: []
+        children: []
+      - name: mutuallyExclusive
+        displayName: mutuallyExclusive
+        dataType: BOOLEAN
+        dataTypeDisplay: bool
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.mutuallyExclusive
+        tags: []
+        children: []
+      - name: name
+        displayName: name
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.name
+        tags: []
+        children: []
+      - name: provider
+        displayName: provider
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.provider
+        tags: []
+        children: []
+      - name: updatedAt
+        displayName: updatedAt
+        dataType: INT
+        dataTypeDisplay: int64
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.updatedAt
+        tags: []
+        children: []
+      - name: updatedBy
+        displayName: updatedBy
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.updatedBy
+        tags: []
+        children: []
+      - name: version
+        displayName: version
+        dataType: FLOAT
+        dataTypeDisplay: double
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".json.version
+        tags: []
+        children: []
+    customMetrics: []
+  - name: deleted
+    displayName: deleted
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default/openmetadata_db/classification/sample_data.parquet".deleted
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: b7bb62d9-5ce4-4da8-a0bd-56aa291fb4f9
+  type: databaseSchema
+  name: awsdatalake-testing
+  fullyQualifiedName: abc.default.awsdatalake-testing
+  displayName: awsdatalake-testing
+  deleted: false
+database:
+  id: 21b2a19d-78f7-45bc-8b85-e7cedccfac79
+  type: database
+  name: default
+  fullyQualifiedName: abc.default
+  displayName: default
+  deleted: false
+service:
+  id: d9609609-83c5-46dc-b2a7-ea2b261be6d7
+  type: databaseService
+  name: abc
+  fullyQualifiedName: abc
+  description: ""
+  displayName: abc
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: da388ff9f1562fd828a5fe7ba2cc69cd
+processedLineage: false
+entityStatus: Unprocessed

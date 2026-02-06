@@ -1,0 +1,84 @@
+name: timestamp_table
+fullyQualifiedName: '"1.8.7-test".dev.dbt_jaffle.timestamp_table'
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: '"1.8.7-test".dev.dbt_jaffle.timestamp_table.id'
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inserted_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp without time zone
+    fullyQualifiedName: '"1.8.7-test".dev.dbt_jaffle.timestamp_table.inserted_at'
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: fb8e44c9-b9c5-45bc-9691-b3343b5d5b7c
+    type: user
+    name: 23saints23
+    fullyQualifiedName: 23saints23
+    displayName: 23saints23
+    deleted: false
+    inherited: true
+  - id: 1fec0260-5ad5-4d56-9d2c-48104368bc10
+    type: user
+    name: sonika.s
+    fullyQualifiedName: '"sonika.s"'
+    displayName: sonika.s
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: bc547047-05f7-4746-9ce3-7388fd77ad8c
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: '"1.8.7-test".dev.dbt_jaffle'
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: 0a7d8aae-ea17-4dc4-96d0-2d8979ac5963
+  type: database
+  name: dev
+  fullyQualifiedName: '"1.8.7-test".dev'
+  displayName: dev
+  deleted: false
+service:
+  id: b27756b3-8d33-47c6-b2c5-bd2e1fa35831
+  type: databaseService
+  name: 1.8.7-test
+  fullyQualifiedName: '"1.8.7-test"'
+  description: ""
+  displayName: 1.8.7-test
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"created\":{\"timestamp\":1679912937651}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1679912937651
+sourceHash: 1461c1bfafd5be54cc0ac180e695b93a
+processedLineage: false
+entityStatus: Unprocessed

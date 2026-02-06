@@ -1,0 +1,1423 @@
+name: data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet
+fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet"
+tableType: Regular
+columns:
+  - name: appId
+    displayName: appId
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".appId
+    tags: []
+    children: []
+    customMetrics: []
+  - name: json
+    displayName: json
+    dataType: STRUCT
+    dataTypeDisplay: "struct<appid: string, endtime: int64, failurecontext: struct<failure:\
+      \ struct<errorsource: string, failedcount: double, failedentities: list<item:\
+      \ null>, message: string, stacktrace: string, submittedcount: double, successcount:\
+      \ double>>, runtype: string, scheduleinfo: struct<cronexpression: string, scheduletype:\
+      \ string>, starttime: int64, status: string, successcontext: struct<stats: struct<entitystats:\
+      \ struct<chart: struct<failedrecords: int64, successrecords: int64, totalrecords:\
+      \ int64>, classification: struct<failedrecords: int64, successrecords: int64,\
+      \ totalrecords: int64>, container: struct<failedrecords: int64, successrecords:\
+      \ int64, totalrecords: int64>, dashboard: struct<failedrecords: int64, successrecords:\
+      \ int64, totalrecords: int64>, dashboarddatamodel: struct<failedrecords: int64,\
+      \ successrecords: int64, totalrecords: int64>, dashboardservice: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, dataproduct: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, database: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, databaseschema: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, databaseservice: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, domain: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, entityreportdata: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, failedrecords: int64,\
+      \ glossary: struct<failedrecords: int64, successrecords: int64, totalrecords:\
+      \ int64>, glossaryterm: struct<failedrecords: int64, successrecords: int64,\
+      \ totalrecords: int64>, ingestionpipeline: struct<failedrecords: int64, successrecords:\
+      \ int64, totalrecords: int64>, messagingservice: struct<failedrecords: int64,\
+      \ successrecords: int64, totalrecords: int64>, mlmodel: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, mlmodelservice: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, pipeline: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, pipelineservice: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, query: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, searchindex: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, searchservice: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, storageservice: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, storedprocedure: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, successrecords: int64,\
+      \ table: struct<failedrecords: int64, successrecords: int64, totalrecords: int64>,\
+      \ tag: struct<failedrecords: int64, successrecords: int64, totalrecords: int64>,\
+      \ team: struct<failedrecords: int64, successrecords: int64, totalrecords: int64>,\
+      \ testcase: struct<failedrecords: int64, successrecords: int64, totalrecords:\
+      \ int64>, testsuite: struct<failedrecords: int64, successrecords: int64, totalrecords:\
+      \ int64>, topic: struct<failedrecords: int64, successrecords: int64, totalrecords:\
+      \ int64>, totalrecords: int64, user: struct<failedrecords: int64, successrecords:\
+      \ int64, totalrecords: int64>, webanalyticentityviewreportdata: struct<failedrecords:\
+      \ int64, successrecords: int64, totalrecords: int64>, webanalyticuseractivityreportdata:\
+      \ struct<failedrecords: int64, successrecords: int64, totalrecords: int64>>,\
+      \ jobstats: struct<failedrecords: int64, successrecords: int64, totalrecords:\
+      \ int64>>>, timestamp: int64>"
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json
+    tags: []
+    children:
+      - name: appId
+        displayName: appId
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.appId
+        tags: []
+        children: []
+      - name: endTime
+        displayName: endTime
+        dataType: INT
+        dataTypeDisplay: int64
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.endTime
+        tags: []
+        children: []
+      - name: failureContext
+        displayName: failureContext
+        dataType: STRUCT
+        dataTypeDisplay: "struct<failure: struct<errorSource: string, failedCount:\
+          \ double, failedEntities: list<item: null>, message: string, stackTrace:\
+          \ string, submittedCount: double, successCount: double>>"
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext
+        tags: []
+        children:
+          - name: failure
+            displayName: failure
+            dataType: STRUCT
+            dataTypeDisplay: "struct<errorSource: string, failedCount: double, failedEntities:\
+              \ list<item: null>, message: string, stackTrace: string, submittedCount:\
+              \ double, successCount: double>"
+            fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure
+            tags: []
+            children:
+              - name: errorSource
+                displayName: errorSource
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.errorSource
+                tags: []
+                children: []
+              - name: failedCount
+                displayName: failedCount
+                dataType: FLOAT
+                dataTypeDisplay: double
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.failedCount
+                tags: []
+                children: []
+              - name: failedEntities
+                displayName: failedEntities
+                dataType: ARRAY
+                dataTypeDisplay: "list<item: null>"
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.failedEntities
+                tags: []
+                children: []
+              - name: message
+                displayName: message
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.message
+                tags: []
+                children: []
+              - name: stackTrace
+                displayName: stackTrace
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.stackTrace
+                tags: []
+                children: []
+              - name: submittedCount
+                displayName: submittedCount
+                dataType: FLOAT
+                dataTypeDisplay: double
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.submittedCount
+                tags: []
+                children: []
+              - name: successCount
+                displayName: successCount
+                dataType: FLOAT
+                dataTypeDisplay: double
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.failureContext.failure.successCount
+                tags: []
+                children: []
+      - name: runType
+        displayName: runType
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.runType
+        tags: []
+        children: []
+      - name: scheduleInfo
+        displayName: scheduleInfo
+        dataType: STRUCT
+        dataTypeDisplay: "struct<cronExpression: string, scheduleType: string>"
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.scheduleInfo
+        tags: []
+        children:
+          - name: cronExpression
+            displayName: cronExpression
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.scheduleInfo.cronExpression
+            tags: []
+            children: []
+          - name: scheduleType
+            displayName: scheduleType
+            dataType: STRING
+            dataTypeDisplay: string
+            fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.scheduleInfo.scheduleType
+            tags: []
+            children: []
+      - name: startTime
+        displayName: startTime
+        dataType: INT
+        dataTypeDisplay: int64
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.startTime
+        tags: []
+        children: []
+      - name: status
+        displayName: status
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.status
+        tags: []
+        children: []
+      - name: successContext
+        displayName: successContext
+        dataType: STRUCT
+        dataTypeDisplay: "struct<stats: struct<entityStats: struct<chart: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, classification: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, container: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, dashboard: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, dashboardDataModel:\
+          \ struct<failedRecords: int64, successRecords: int64, totalRecords: int64>,\
+          \ dashboardService: struct<failedRecords: int64, successRecords: int64,\
+          \ totalRecords: int64>, dataProduct: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>, database: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>, databaseSchema: struct<failedRecords: int64,\
+          \ successRecords: int64, totalRecords: int64>, databaseService: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, domain: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, entityReportData:\
+          \ struct<failedRecords: int64, successRecords: int64, totalRecords: int64>,\
+          \ failedRecords: int64, glossary: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>, glossaryTerm: struct<failedRecords: int64,\
+          \ successRecords: int64, totalRecords: int64>, ingestionPipeline: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, messagingService:\
+          \ struct<failedRecords: int64, successRecords: int64, totalRecords: int64>,\
+          \ mlmodel: struct<failedRecords: int64, successRecords: int64, totalRecords:\
+          \ int64>, mlmodelService: struct<failedRecords: int64, successRecords: int64,\
+          \ totalRecords: int64>, pipeline: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>, pipelineService: struct<failedRecords: int64,\
+          \ successRecords: int64, totalRecords: int64>, query: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, searchIndex: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, searchService: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, storageService: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, storedProcedure: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, successRecords: int64,\
+          \ table: struct<failedRecords: int64, successRecords: int64, totalRecords:\
+          \ int64>, tag: struct<failedRecords: int64, successRecords: int64, totalRecords:\
+          \ int64>, team: struct<failedRecords: int64, successRecords: int64, totalRecords:\
+          \ int64>, testCase: struct<failedRecords: int64, successRecords: int64,\
+          \ totalRecords: int64>, testSuite: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>, topic: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>, totalRecords: int64, user: struct<failedRecords:\
+          \ int64, successRecords: int64, totalRecords: int64>, webAnalyticEntityViewReportData:\
+          \ struct<failedRecords: int64, successRecords: int64, totalRecords: int64>,\
+          \ webAnalyticUserActivityReportData: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>>, jobStats: struct<failedRecords: int64, successRecords:\
+          \ int64, totalRecords: int64>>>"
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext
+        tags: []
+        children:
+          - name: stats
+            displayName: stats
+            dataType: STRUCT
+            dataTypeDisplay: "struct<entityStats: struct<chart: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, classification:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, container: struct<failedRecords: int64, successRecords: int64,\
+              \ totalRecords: int64>, dashboard: struct<failedRecords: int64, successRecords:\
+              \ int64, totalRecords: int64>, dashboardDataModel: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, dashboardService:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, dataProduct: struct<failedRecords: int64, successRecords:\
+              \ int64, totalRecords: int64>, database: struct<failedRecords: int64,\
+              \ successRecords: int64, totalRecords: int64>, databaseSchema: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, databaseService:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, domain: struct<failedRecords: int64, successRecords: int64,\
+              \ totalRecords: int64>, entityReportData: struct<failedRecords: int64,\
+              \ successRecords: int64, totalRecords: int64>, failedRecords: int64,\
+              \ glossary: struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, glossaryTerm: struct<failedRecords: int64, successRecords:\
+              \ int64, totalRecords: int64>, ingestionPipeline: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, messagingService:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, mlmodel: struct<failedRecords: int64, successRecords: int64,\
+              \ totalRecords: int64>, mlmodelService: struct<failedRecords: int64,\
+              \ successRecords: int64, totalRecords: int64>, pipeline: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, pipelineService:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, query: struct<failedRecords: int64, successRecords: int64,\
+              \ totalRecords: int64>, searchIndex: struct<failedRecords: int64, successRecords:\
+              \ int64, totalRecords: int64>, searchService: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, storageService:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, storedProcedure: struct<failedRecords: int64, successRecords:\
+              \ int64, totalRecords: int64>, successRecords: int64, table: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, tag: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, team: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, testCase: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, testSuite: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, topic: struct<failedRecords:\
+              \ int64, successRecords: int64, totalRecords: int64>, totalRecords:\
+              \ int64, user: struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>, webAnalyticEntityViewReportData: struct<failedRecords: int64,\
+              \ successRecords: int64, totalRecords: int64>, webAnalyticUserActivityReportData:\
+              \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+              \ int64>>, jobStats: struct<failedRecords: int64, successRecords: int64,\
+              \ totalRecords: int64>>"
+            fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats
+            tags: []
+            children:
+              - name: entityStats
+                displayName: entityStats
+                dataType: STRUCT
+                dataTypeDisplay: "struct<chart: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, classification: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, container:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, dashboard: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, dashboardDataModel: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, dashboardService:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, dataProduct: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, database: struct<failedRecords: int64,\
+                  \ successRecords: int64, totalRecords: int64>, databaseSchema: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, databaseService:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, domain: struct<failedRecords: int64, successRecords: int64,\
+                  \ totalRecords: int64>, entityReportData: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, failedRecords:\
+                  \ int64, glossary: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, glossaryTerm: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, ingestionPipeline:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, messagingService: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, mlmodel: struct<failedRecords: int64,\
+                  \ successRecords: int64, totalRecords: int64>, mlmodelService: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, pipeline:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, pipelineService: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, query: struct<failedRecords: int64,\
+                  \ successRecords: int64, totalRecords: int64>, searchIndex: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, searchService:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, storageService: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, storedProcedure: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, successRecords:\
+                  \ int64, table: struct<failedRecords: int64, successRecords: int64,\
+                  \ totalRecords: int64>, tag: struct<failedRecords: int64, successRecords:\
+                  \ int64, totalRecords: int64>, team: struct<failedRecords: int64,\
+                  \ successRecords: int64, totalRecords: int64>, testCase: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, testSuite:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, topic: struct<failedRecords: int64, successRecords: int64,\
+                  \ totalRecords: int64>, totalRecords: int64, user: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>, webAnalyticEntityViewReportData:\
+                  \ struct<failedRecords: int64, successRecords: int64, totalRecords:\
+                  \ int64>, webAnalyticUserActivityReportData: struct<failedRecords:\
+                  \ int64, successRecords: int64, totalRecords: int64>>"
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats
+                tags: []
+                children:
+                  - name: chart
+                    displayName: chart
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.chart
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.chart.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.chart.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.chart.totalRecords
+                        tags: []
+                        children: []
+                  - name: classification
+                    displayName: classification
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.classification
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.classification.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.classification.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.classification.totalRecords
+                        tags: []
+                        children: []
+                  - name: container
+                    displayName: container
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.container
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.container.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.container.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.container.totalRecords
+                        tags: []
+                        children: []
+                  - name: dashboard
+                    displayName: dashboard
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboard
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboard.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboard.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboard.totalRecords
+                        tags: []
+                        children: []
+                  - name: dashboardDataModel
+                    displayName: dashboardDataModel
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardDataModel
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardDataModel.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardDataModel.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardDataModel.totalRecords
+                        tags: []
+                        children: []
+                  - name: dashboardService
+                    displayName: dashboardService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dashboardService.totalRecords
+                        tags: []
+                        children: []
+                  - name: dataProduct
+                    displayName: dataProduct
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dataProduct
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dataProduct.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dataProduct.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.dataProduct.totalRecords
+                        tags: []
+                        children: []
+                  - name: database
+                    displayName: database
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.database
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.database.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.database.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.database.totalRecords
+                        tags: []
+                        children: []
+                  - name: databaseSchema
+                    displayName: databaseSchema
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseSchema
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseSchema.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseSchema.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseSchema.totalRecords
+                        tags: []
+                        children: []
+                  - name: databaseService
+                    displayName: databaseService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.databaseService.totalRecords
+                        tags: []
+                        children: []
+                  - name: domain
+                    displayName: domain
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.domain
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.domain.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.domain.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.domain.totalRecords
+                        tags: []
+                        children: []
+                  - name: entityReportData
+                    displayName: entityReportData
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.entityReportData
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.entityReportData.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.entityReportData.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.entityReportData.totalRecords
+                        tags: []
+                        children: []
+                  - name: failedRecords
+                    displayName: failedRecords
+                    dataType: INT
+                    dataTypeDisplay: int64
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.failedRecords
+                    tags: []
+                    children: []
+                  - name: glossary
+                    displayName: glossary
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossary
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossary.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossary.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossary.totalRecords
+                        tags: []
+                        children: []
+                  - name: glossaryTerm
+                    displayName: glossaryTerm
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossaryTerm
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossaryTerm.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossaryTerm.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.glossaryTerm.totalRecords
+                        tags: []
+                        children: []
+                  - name: ingestionPipeline
+                    displayName: ingestionPipeline
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.ingestionPipeline
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.ingestionPipeline.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.ingestionPipeline.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.ingestionPipeline.totalRecords
+                        tags: []
+                        children: []
+                  - name: messagingService
+                    displayName: messagingService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.messagingService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.messagingService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.messagingService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.messagingService.totalRecords
+                        tags: []
+                        children: []
+                  - name: mlmodel
+                    displayName: mlmodel
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodel
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodel.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodel.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodel.totalRecords
+                        tags: []
+                        children: []
+                  - name: mlmodelService
+                    displayName: mlmodelService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodelService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodelService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodelService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.mlmodelService.totalRecords
+                        tags: []
+                        children: []
+                  - name: pipeline
+                    displayName: pipeline
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipeline
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipeline.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipeline.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipeline.totalRecords
+                        tags: []
+                        children: []
+                  - name: pipelineService
+                    displayName: pipelineService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipelineService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipelineService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipelineService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.pipelineService.totalRecords
+                        tags: []
+                        children: []
+                  - name: query
+                    displayName: query
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.query
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.query.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.query.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.query.totalRecords
+                        tags: []
+                        children: []
+                  - name: searchIndex
+                    displayName: searchIndex
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchIndex
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchIndex.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchIndex.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchIndex.totalRecords
+                        tags: []
+                        children: []
+                  - name: searchService
+                    displayName: searchService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.searchService.totalRecords
+                        tags: []
+                        children: []
+                  - name: storageService
+                    displayName: storageService
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storageService
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storageService.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storageService.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storageService.totalRecords
+                        tags: []
+                        children: []
+                  - name: storedProcedure
+                    displayName: storedProcedure
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storedProcedure
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storedProcedure.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storedProcedure.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.storedProcedure.totalRecords
+                        tags: []
+                        children: []
+                  - name: successRecords
+                    displayName: successRecords
+                    dataType: INT
+                    dataTypeDisplay: int64
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.successRecords
+                    tags: []
+                    children: []
+                  - name: table
+                    displayName: table
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.table
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.table.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.table.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.table.totalRecords
+                        tags: []
+                        children: []
+                  - name: tag
+                    displayName: tag
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.tag
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.tag.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.tag.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.tag.totalRecords
+                        tags: []
+                        children: []
+                  - name: team
+                    displayName: team
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.team
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.team.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.team.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.team.totalRecords
+                        tags: []
+                        children: []
+                  - name: testCase
+                    displayName: testCase
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testCase
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testCase.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testCase.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testCase.totalRecords
+                        tags: []
+                        children: []
+                  - name: testSuite
+                    displayName: testSuite
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testSuite
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testSuite.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testSuite.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.testSuite.totalRecords
+                        tags: []
+                        children: []
+                  - name: topic
+                    displayName: topic
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.topic
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.topic.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.topic.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.topic.totalRecords
+                        tags: []
+                        children: []
+                  - name: totalRecords
+                    displayName: totalRecords
+                    dataType: INT
+                    dataTypeDisplay: int64
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.totalRecords
+                    tags: []
+                    children: []
+                  - name: user
+                    displayName: user
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.user
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.user.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.user.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.user.totalRecords
+                        tags: []
+                        children: []
+                  - name: webAnalyticEntityViewReportData
+                    displayName: webAnalyticEntityViewReportData
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticEntityViewReportData
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticEntityViewReportData.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticEntityViewReportData.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticEntityViewReportData.totalRecords
+                        tags: []
+                        children: []
+                  - name: webAnalyticUserActivityReportData
+                    displayName: webAnalyticUserActivityReportData
+                    dataType: STRUCT
+                    dataTypeDisplay: "struct<failedRecords: int64, successRecords:\
+                      \ int64, totalRecords: int64>"
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticUserActivityReportData
+                    tags: []
+                    children:
+                      - name: failedRecords
+                        displayName: failedRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticUserActivityReportData.failedRecords
+                        tags: []
+                        children: []
+                      - name: successRecords
+                        displayName: successRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticUserActivityReportData.successRecords
+                        tags: []
+                        children: []
+                      - name: totalRecords
+                        displayName: totalRecords
+                        dataType: INT
+                        dataTypeDisplay: int64
+                        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.entityStats.webAnalyticUserActivityReportData.totalRecords
+                        tags: []
+                        children: []
+              - name: jobStats
+                displayName: jobStats
+                dataType: STRUCT
+                dataTypeDisplay: "struct<failedRecords: int64, successRecords: int64,\
+                  \ totalRecords: int64>"
+                fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.jobStats
+                tags: []
+                children:
+                  - name: failedRecords
+                    displayName: failedRecords
+                    dataType: INT
+                    dataTypeDisplay: int64
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.jobStats.failedRecords
+                    tags: []
+                    children: []
+                  - name: successRecords
+                    displayName: successRecords
+                    dataType: INT
+                    dataTypeDisplay: int64
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.jobStats.successRecords
+                    tags: []
+                    children: []
+                  - name: totalRecords
+                    displayName: totalRecords
+                    dataType: INT
+                    dataTypeDisplay: int64
+                    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.successContext.stats.jobStats.totalRecords
+                    tags: []
+                    children: []
+      - name: timestamp
+        displayName: timestamp
+        dataType: INT
+        dataTypeDisplay: int64
+        fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".json.timestamp
+        tags: []
+        children: []
+    customMetrics: []
+  - name: timestamp
+    displayName: timestamp
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: abc.default.awsdatalake-testing."data/demo-path/demo_s3_test/default_openmetadata_db_apps_extension_time_series_2024_03_07.parquet".timestamp
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: b7bb62d9-5ce4-4da8-a0bd-56aa291fb4f9
+  type: databaseSchema
+  name: awsdatalake-testing
+  fullyQualifiedName: abc.default.awsdatalake-testing
+  displayName: awsdatalake-testing
+  deleted: false
+database:
+  id: 21b2a19d-78f7-45bc-8b85-e7cedccfac79
+  type: database
+  name: default
+  fullyQualifiedName: abc.default
+  displayName: default
+  deleted: false
+service:
+  id: d9609609-83c5-46dc-b2a7-ea2b261be6d7
+  type: databaseService
+  name: abc
+  fullyQualifiedName: abc
+  description: ""
+  displayName: abc
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: 545cf7aaca826fa7c9e7a9834a94cb08
+processedLineage: false
+entityStatus: Unprocessed
