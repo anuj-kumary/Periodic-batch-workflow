@@ -1,0 +1,59 @@
+name: mytable
+fullyQualifiedName: synapse_prod.synapse_collate_dedicated.dbo.mytable
+tableType: Regular
+columns:
+  - name: c1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.dbo.mytable.c1
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: c2
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.dbo.mytable.c2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: aa5e4208-84f7-4077-bf42-02cfd487d14e
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: synapse_prod.synapse_collate_dedicated.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: 4f5f5b8b-4d6e-4151-b99a-646de86bc298
+  type: database
+  name: synapse_collate_dedicated
+  fullyQualifiedName: synapse_prod.synapse_collate_dedicated
+  displayName: synapse_collate_dedicated
+  deleted: false
+service:
+  id: cabb8781-4876-4f96-a6d2-557f753b94f1
+  type: databaseService
+  name: synapse_prod
+  fullyQualifiedName: synapse_prod
+  description: ""
+  displayName: synapse_prod
+  deleted: false
+serviceType: Synapse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6683a5a28f8e429f1434752ec1031cf1
+processedLineage: false
+entityStatus: Approved

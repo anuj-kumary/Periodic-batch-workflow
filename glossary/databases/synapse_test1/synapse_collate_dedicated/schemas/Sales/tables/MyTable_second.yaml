@@ -1,0 +1,59 @@
+name: MyTable_second
+fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.MyTable_second
+tableType: Regular
+columns:
+  - name: col1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.MyTable_second.col1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: col2
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.MyTable_second.col2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ec413574-8fee-439c-b1d9-856d6928a637
+  type: databaseSchema
+  name: Sales
+  fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales
+  displayName: Sales
+  deleted: false
+database:
+  id: e91d5c91-769c-4231-9f8f-aabaeced6a7c
+  type: database
+  name: synapse_collate_dedicated
+  fullyQualifiedName: synapse_test1.synapse_collate_dedicated
+  displayName: synapse_collate_dedicated
+  deleted: false
+service:
+  id: 32fbc36d-980a-495c-a1aa-7dd6ac0b092b
+  type: databaseService
+  name: synapse_test1
+  fullyQualifiedName: synapse_test1
+  description: ""
+  displayName: synapse_test1
+  deleted: false
+serviceType: Synapse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a564769b4219da39f2b5395aadbf3350
+processedLineage: false
+entityStatus: Approved

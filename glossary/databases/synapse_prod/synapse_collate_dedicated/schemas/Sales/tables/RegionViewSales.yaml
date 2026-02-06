@@ -1,0 +1,61 @@
+name: RegionViewSales
+fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.RegionViewSales
+tableType: View
+columns:
+  - name: Region_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.RegionViewSales.Region_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: Region_Name
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales.RegionViewSales.Region_Name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 3f350f89-086c-410e-902a-3e00d62b3a6b
+  type: databaseSchema
+  name: Sales
+  fullyQualifiedName: synapse_prod.synapse_collate_dedicated.Sales
+  displayName: Sales
+  deleted: false
+database:
+  id: 4f5f5b8b-4d6e-4151-b99a-646de86bc298
+  type: database
+  name: synapse_collate_dedicated
+  fullyQualifiedName: synapse_prod.synapse_collate_dedicated
+  displayName: synapse_collate_dedicated
+  deleted: false
+service:
+  id: cabb8781-4876-4f96-a6d2-557f753b94f1
+  type: databaseService
+  name: synapse_prod
+  fullyQualifiedName: synapse_prod
+  description: ""
+  displayName: synapse_prod
+  deleted: false
+serviceType: Synapse
+schemaDefinition: "CREATE VIEW [Sales].[RegionViewSales]\r\nAS SELECT Region_id, Region_Name\
+  \   \nFROM synapse_collate_dedicated.Sales.Region;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b1ee39fd48a09075b9c22ad9a28ecdf8
+processedLineage: false
+entityStatus: Approved

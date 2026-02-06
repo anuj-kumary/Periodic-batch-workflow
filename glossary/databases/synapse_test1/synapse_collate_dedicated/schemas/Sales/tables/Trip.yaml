@@ -1,0 +1,248 @@
+name: Trip
+fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip
+tableType: Regular
+columns:
+  - name: DateID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.DateID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MedallionID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.MedallionID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: HackneyLicenseID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.HackneyLicenseID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PickupTimeID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PickupTimeID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DropoffTimeID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.DropoffTimeID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PickupGeographyID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PickupGeographyID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffGeographyID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.DropoffGeographyID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PickupLatitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PickupLatitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PickupLongitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PickupLongitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PickupLatLong
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PickupLatLong
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffLatitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.DropoffLatitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffLongitude
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.DropoffLongitude
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DropoffLatLong
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.DropoffLatLong
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PassengerCount
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PassengerCount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TripDurationSeconds
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.TripDurationSeconds
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TripDistanceMiles
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float(none)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.TripDistanceMiles
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PaymentType
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.PaymentType
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FareAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.FareAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SurchargeAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.SurchargeAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TaxAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.TaxAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TipAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.TipAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TollsAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.TollsAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TotalAmount
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: money
+    fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales.Trip.TotalAmount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ec413574-8fee-439c-b1d9-856d6928a637
+  type: databaseSchema
+  name: Sales
+  fullyQualifiedName: synapse_test1.synapse_collate_dedicated.Sales
+  displayName: Sales
+  deleted: false
+database:
+  id: e91d5c91-769c-4231-9f8f-aabaeced6a7c
+  type: database
+  name: synapse_collate_dedicated
+  fullyQualifiedName: synapse_test1.synapse_collate_dedicated
+  displayName: synapse_collate_dedicated
+  deleted: false
+service:
+  id: 32fbc36d-980a-495c-a1aa-7dd6ac0b092b
+  type: databaseService
+  name: synapse_test1
+  fullyQualifiedName: synapse_test1
+  description: ""
+  displayName: synapse_test1
+  deleted: false
+serviceType: Synapse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6aa615e04f6b06a4ecec4a79d1dbb74f
+processedLineage: false
+entityStatus: Approved

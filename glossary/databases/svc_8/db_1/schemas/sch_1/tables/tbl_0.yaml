@@ -1,0 +1,93 @@
+name: tbl_0
+fullyQualifiedName: svc_8.db_1.sch_1.tbl_0
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.email
+    tags: []
+    children: []
+    customMetrics: []
+  - name: created_at
+    dataType: TIMESTAMP
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.created_at
+    tags: []
+    children: []
+    customMetrics: []
+  - name: updated_at
+    dataType: TIMESTAMP
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.updated_at
+    tags: []
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.status
+    tags: []
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: DECIMAL
+    dataTypeDisplay: decimal
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.amount
+    tags: []
+    children: []
+    customMetrics: []
+  - name: details
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: svc_8.db_1.sch_1.tbl_0.details
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: bde1b449-f7d3-4ee4-8b3e-37d83a7922c6
+  type: databaseSchema
+  name: sch_1
+  fullyQualifiedName: svc_8.db_1.sch_1
+  displayName: sch_1
+  deleted: false
+database:
+  id: 02210302-71f4-489a-8220-c9983a9e10fc
+  type: database
+  name: db_1
+  fullyQualifiedName: svc_8.db_1
+  displayName: db_1
+  deleted: false
+service:
+  id: f40c50be-f268-4880-a925-13c5863d6a69
+  type: databaseService
+  name: svc_8
+  fullyQualifiedName: svc_8
+  displayName: svc_8
+  deleted: false
+serviceType: Postgres
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Unprocessed

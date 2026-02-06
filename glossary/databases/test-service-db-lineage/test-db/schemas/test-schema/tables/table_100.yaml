@@ -1,0 +1,72 @@
+name: table_100
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_100
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_100.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view ZFARR_WFR_HDR(\n\tMANDT,\n\tPOB_ID,\n\t\
+  VKORG,\n\tVBELN,\n\tPOSNR,\n\tCONTRACT_ID,\n\tKUNNR_AG,\n\tVBEGDAT,\n\tVUNTDAT,\n\
+  \tMATNR,\n\tMATKL,\n\tFULFILL_TYPE,\n\tACCT_PRINCIPLE,\n\tSTART_DATE,\n\tEND_DATE,\n\
+  \tVENDDAT,\n\tVBEGDAT_I,\n\tVENDDAT_I,\n\tPOB_NAME,\n\tUEPOS,\n\tUPMAT,\n\tAUART,\n\
+  \tABGRU,\n\tAUDAT,\n\tPSTYV,\n\tWAERS,\n\tHWAER,\n\tHWAE2,\n\tUPRICE_DC,\n\tUPRICE_LC,\n\
+  \tUPRICE_GC,\n\tEPRICE_DC,\n\tEPRICE_LC,\n\tEPRICE_GC,\n\tALLOC_AMT_DC,\n\tALLOC_AMT_LC,\n\
+  \tALLOC_AMT_GC,\n\tDEF_AMT_DC,\n\tDEF_AMT_LC,\n\tDEF_AMT_GC,\n\tUNBILL_AMT_DC,\n\
+  \tUNBILL_AMT_LC,\n\tUNBILL_AMT_GC,\n\tTOTAL_REC_DC,\n\tTOTAL_REC_LC,\n\tTOTAL_REC_GC,\n\
+  \tED_LC,\n\tED_GC,\n\tLAST_INV_DATE,\n\tLAST_INV_KURSF,\n\tLAST_INV_KURS2,\n\tNEXT_INV_DATE,\n\
+  \tLAST_INV_FROM_DATE,\n\tLAST_INV_TO_DATE,\n\tSETTLE_FROM,\n\tSETTLE_TO,\n\tNEXT_INV_FROM_DATE,\n\
+  \tNEXT_INV_TO_DATE,\n\tPRSDT,\n\tPRSDT_KURSF,\n\tPRSDT_DC_LC,\n\tPRSDT_LC_USD,\n\
+  \tBLENDED_KURSF,\n\tBLENDED_KURS2,\n\tBLENDED_KURS3,\n\tIS_T4C,\n\tERNAM,\n\tERDAT,\n\
+  \tERZET\n) as select\n\t\tMANDT,\n\t\tPOB_ID,\n\t\tVKORG,\n\t\tVBELN,\n\t\tPOSNR,\n\
+  \t\tCONTRACT_ID,\n\t\tKUNNR_AG,\n\t\tVBEGDAT,\n\t\tVUNTDAT,\n\t\tMATNR,\n\t\tMATKL,\n\
+  \t\tFULFILL_TYPE,\n\t\tACCT_PRINCIPLE,\n\t\tSTART_DATE,\n\t\tEND_DATE,\n\t\tVENDDAT,\n\
+  \t\tVBEGDAT_I,\n\t\tVENDDAT_I,\n\t\tPOB_NAME,\n\t\tUEPOS,\n\t\tUPMAT,\n\t\tAUART,\n\
+  \t\tABGRU,\n\t\tAUDAT,\n\t\tPSTYV,\n\t\tWAERS,\n\t\tHWAER,\n\t\tHWAE2,\n\t\tUPRICE_DC,\n\
+  \t\tUPRICE_LC,\n\t\tUPRICE_GC,\n\t\tEPRICE_DC,\n\t\tEPRICE_LC,\n\t\tEPRICE_GC,\n\
+  \t\tALLOC_AMT_DC,\n\t\tALLOC_AMT_LC,\n\t\tALLOC_AMT_GC,\n\t\tDEF_AMT_DC,\n\t\tDEF_AMT_LC,\n\
+  \t\tDEF_AMT_GC,\n\t\tUNBILL_AMT_DC,\n\t\tUNBILL_AMT_LC,\n\t\tUNBILL_AMT_GC,\n\t\t\
+  TOTAL_REC_DC,\n\t\tTOTAL_REC_LC,\n\t\tTOTAL_REC_GC,\n\t\tED_LC,\n\t\tED_GC,\n\t\t\
+  LAST_INV_DATE,\n\t\tLAST_INV_KURSF,\n\t\tLAST_INV_KURS2,\n\t\tNEXT_INV_DATE,\n\t\
+  \tLAST_INV_FROM_DATE,\n\t\tLAST_INV_TO_DATE,\n\t\tSETTLE_FROM,\n\t\tSETTLE_TO,\n\
+  \t\tNEXT_INV_FROM_DATE,\n\t\tNEXT_INV_TO_DATE,\n\t\tPRSDT,\n\t\tPRSDT_KURSF,\n\t\
+  \tPRSDT_DC_LC,\n\t\tPRSDT_LC_USD,\n\t\tBLENDED_KURSF,\n\t\tBLENDED_KURS2,\n\t\t\
+  BLENDED_KURS3,\n\t\tIS_T4C,\n\t\tERNAM,\n\t\tERDAT,\n\t\tERZET\n from RDS.S4HANA.ZFARR_WFR_HDR\
+  \ where MANDT='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,57 @@
+name: table_1003
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1003
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1003.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_BILLING_RATE(\n\t\"BRDeployment\",\n\t\
+  \"BRDeploymentSysID\",\n\t\"BRResourceRoleValue\",\n\t\"BRAssignedTo\",\n\t\"BRCustomerSatResource\"\
+  ,\n\t\"BRResourceCompanyValue\",\n\t\"BRNumber\",\n\t\"BRSysID\",\n\t\"BRAssignedToSysID\"\
+  ,\n\t\"BRRpRate_USD\",\n\t\"BRResourceRole\"\n) as -- SEMANTIC LAYER BEGINS\n\n\
+  SELECT \"DV_U_DEPLOYMENT\" as \"BRDeployment\",\n       \"U_DEPLOYMENT\" as \"BRDeploymentSysID\"\
+  ,\n       \"DV_U_RESOURCE_ROLE\" as \"BRResourceRoleValue\",\n       \"DV_ASSIGNED_TO\"\
+  \ as \"BRAssignedTo\",\n       \"U_CUSTOMER_SAT_RESOURCE\" as \"BRCustomerSatResource\"\
+  ,\n       \"DV_U_RESOURCE_COMPANY\" as \"BRResourceCompanyValue\",\n       \"NUMBER\"\
+  \ as \"BRNumber\",\n       \"SYS_ID\" as \"BRSysID\",\n       \"ASSIGNED_TO\" as\
+  \ \"BRAssignedToSysID\",\n       \"U_RP_RATE_IN_USD\" as \"BRRpRate_USD\",\n   \
+  \    \"U_RESOURCE_ROLE\" as \"BRResourceRole\"\nFROM \"RDS\".\"SURF\".\"U_BILLING_RATES\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
