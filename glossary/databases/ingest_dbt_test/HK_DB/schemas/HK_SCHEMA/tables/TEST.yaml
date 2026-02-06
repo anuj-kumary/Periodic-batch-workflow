@@ -1,0 +1,110 @@
+name: TEST
+fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.TEST
+description: "This table stores unique identifiers and names, allowing users to manage\
+  \ and reference entities efficiently. It can be utilized for various applications,\
+  \ such as tracking records or organizing data related to specific items or individuals."
+tableType: View
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 1
+    scale: 0
+    dataTypeDisplay: "number(1,0)"
+    description: "The ID column serves as a unique identifier for each record in the\
+      \ table, ensuring that every entry can be distinctly recognized and referenced."
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.TEST.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 4
+    dataTypeDisplay: text(4)
+    description: "The NAME column contains textual information representing the name\
+      \ associated with each record, providing a descriptive label for identification."
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.TEST.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 8fc4ec4e-2ef5-4587-a9be-a9bc2022934d
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: df8ef1a1-2462-4388-93d6-af01578defb4
+  type: database
+  name: HK_DB
+  fullyQualifiedName: ingest_dbt_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 47ed96e3-fb2c-4f8e-adeb-7bec14c6a308
+  type: databaseService
+  name: ingest_dbt_test
+  fullyQualifiedName: ingest_dbt_test
+  description: ""
+  displayName: ingest_dbt_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+dataModel:
+  modelType: DBT
+  resourceType: model
+  path: models/example/test.sql
+  rawSql: |-
+    -- models/example.sql
+    select 1 as id, 'test' as name
+  sql: |-
+    -- models/example.sql
+    select 1 as id, 'test' as name
+  upstream: []
+  tags: []
+  columns: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: "The ID column serves as a unique identifier for each record in the\
+        \ table, ensuring that every entry can be distinctly recognized and referenced."
+    - name: columns.NAME.description
+      newValue: "The NAME column contains textual information representing the name\
+        \ associated with each record, providing a descriptive label for identification."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1751998885201
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998885470
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998885470
+sourceUrl: https://app.snowflake.com/xropqkk/eq96782/#/data/databases/HK_DB/schemas/HK_SCHEMA/view/TEST
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1751932800000
+    accessedBy:
+      id: d32d383f-071b-4aa8-8de7-241b3493453c
+      type: user
+      fullyQualifiedName: himanshu
+      href: https://sandbox-beta.open-metadata.org/v1/users/d32d383f-071b-4aa8-8de7-241b3493453c
+sourceHash: 9264347d06cd28c1095c87a7c1d15e3b
+processedLineage: false
+entityStatus: Approved

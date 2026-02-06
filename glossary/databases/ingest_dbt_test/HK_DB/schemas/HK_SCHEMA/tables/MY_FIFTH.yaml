@@ -1,0 +1,72 @@
+name: MY_FIFTH
+fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.MY_FIFTH
+tableType: Transient
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 1
+    scale: 0
+    dataTypeDisplay: "number(1,0)"
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.MY_FIFTH.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 8fc4ec4e-2ef5-4587-a9be-a9bc2022934d
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: df8ef1a1-2462-4388-93d6-af01578defb4
+  type: database
+  name: HK_DB
+  fullyQualifiedName: ingest_dbt_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 47ed96e3-fb2c-4f8e-adeb-7bec14c6a308
+  type: databaseService
+  name: ingest_dbt_test
+  fullyQualifiedName: ingest_dbt_test
+  description: ""
+  displayName: ingest_dbt_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+dataModel:
+  modelType: DBT
+  resourceType: model
+  path: models\example\my_fifth.sql
+  rawSql: |-
+    -- Use the `ref` function to select from other models
+
+    select *
+    from {{ ref('my_first_dbt_model') }}
+    where id = 1
+  sql: |-
+    -- Use the `ref` function to select from other models
+
+    select *
+    from hk_db.HK_SCHEMA.my_first_dbt_model
+    where id = 1
+  upstream:
+    - ingest_dbt_test.HK_DB.HK_SCHEMA.MY_FIRST_DBT_MODEL
+  tags: []
+  columns: []
+sourceUrl: https://app.snowflake.com/xropqkk/eq96782/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/MY_FIFTH
+domains: []
+dataProducts: []
+sourceHash: c475e94bf37952bed18c031dd4c0afc4
+processedLineage: false
+entityStatus: Approved

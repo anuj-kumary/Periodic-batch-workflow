@@ -1,0 +1,56 @@
+name: year=2023/month=05/day=02/test_mf4_output.csv
+fullyQualifiedName: large_file_datalake_local.default.partitioned-data-container."year=2023/month=05/day=02/test_mf4_output.csv"
+tableType: Regular
+columns:
+  - name: timestamps
+    displayName: timestamps
+    dataType: FLOAT
+    dataTypeDisplay: float
+    fullyQualifiedName: large_file_datalake_local.default.partitioned-data-container."year=2023/month=05/day=02/test_mf4_output.csv".timestamps
+    tags: []
+    children: []
+    customMetrics: []
+  - name: AcPosCoilSplyEn
+    displayName: AcPosCoilSplyEn
+    dataType: INT
+    dataTypeDisplay: int
+    fullyQualifiedName: large_file_datalake_local.default.partitioned-data-container."year=2023/month=05/day=02/test_mf4_output.csv".AcPosCoilSplyEn
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 79742db4-7370-4eea-8676-fa3be6255998
+  type: databaseSchema
+  name: partitioned-data-container
+  fullyQualifiedName: large_file_datalake_local.default.partitioned-data-container
+  displayName: partitioned-data-container
+  deleted: false
+database:
+  id: 8592ce5a-5aa5-4ba2-a065-653cef834972
+  type: database
+  name: default
+  fullyQualifiedName: large_file_datalake_local.default
+  displayName: default
+  deleted: false
+service:
+  id: 257b3c07-60f9-484f-81ca-b487cdb72356
+  type: databaseService
+  name: large_file_datalake_local
+  fullyQualifiedName: large_file_datalake_local
+  displayName: large_file_datalake_local
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: csv
+sourceHash: 20aa451871ffeeba5707909f976fcfd0
+processedLineage: false
+entityStatus: Unprocessed

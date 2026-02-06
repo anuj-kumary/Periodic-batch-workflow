@@ -1,0 +1,89 @@
+name: WILL_BE_DELETED_STREAM
+fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB.ALL_LINAGE_SCHEMA.WILL_BE_DELETED_STREAM
+tableType: Stream
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB.ALL_LINAGE_SCHEMA.WILL_BE_DELETED_STREAM.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA$ACTION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB.ALL_LINAGE_SCHEMA.WILL_BE_DELETED_STREAM.METADATA$ACTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA$ISUPDATE
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB.ALL_LINAGE_SCHEMA.WILL_BE_DELETED_STREAM.METADATA$ISUPDATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA$ROW_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB.ALL_LINAGE_SCHEMA.WILL_BE_DELETED_STREAM.METADATA$ROW_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8ec45377-e73f-4e0c-9bb7-c2276650cf7f
+  type: databaseSchema
+  name: ALL_LINAGE_SCHEMA
+  fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB.ALL_LINAGE_SCHEMA
+  displayName: ALL_LINAGE_SCHEMA
+  deleted: false
+database:
+  id: 0fbfc475-e357-4c86-98d9-ae1f2bc04a8b
+  type: database
+  name: MT_DB
+  fullyQualifiedName: Hybrid Runner snowflake 3.MT_DB
+  description: This is a testing database
+  displayName: MT_DB
+  deleted: false
+service:
+  id: 0021ba2b-60e8-4e85-a6e6-278c3c93c1e1
+  type: databaseService
+  name: Hybrid Runner snowflake 3
+  fullyQualifiedName: Hybrid Runner snowflake 3
+  description: ""
+  displayName: Hybrid Runner snowflake 3
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: create or replace stream WILL_BE_DELETED_STREAM on table WILL_BE_DELETED_TABLE;
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: processedLineage
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/MT_DB/schemas/ALL_LINAGE_SCHEMA/stream/WILL_BE_DELETED_STREAM
+domains: []
+dataProducts: []
+sourceHash: 34d6ce9a923a2ca734c926d1ea8aa33b
+processedLineage: true
+entityStatus: Unprocessed

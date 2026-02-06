@@ -1,0 +1,104 @@
+name: team_entity
+fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.json
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.updatedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.updatedBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: deleted
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: teamType
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db.team_entity.teamType
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: bd966a9f-0ea2-4cfd-b34a-1e2b53329dea
+  type: databaseSchema
+  name: cypress_integrations_test_db
+  fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default.cypress_integrations_test_db
+  displayName: cypress_integrations_test_db
+  deleted: false
+database:
+  id: 33165093-fda0-4044-ba94-fb7d4cc39f77
+  type: database
+  name: default
+  fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22.default
+  displayName: default
+  deleted: false
+service:
+  id: e3707074-f3c7-4c1c-ac8f-1cf83ab51300
+  type: databaseService
+  name: Hybrid test mysql 2 - gyo 2025-04-22
+  fullyQualifiedName: Hybrid test mysql 2 - gyo 2025-04-22
+  description: ""
+  displayName: Hybrid test mysql 2 - gyo 2025-04-22
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 769c96df5ee3c2c163116c380576d3cd
+processedLineage: false
+entityStatus: Approved
