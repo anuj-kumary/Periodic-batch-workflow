@@ -1,0 +1,63 @@
+name: test-1
+fullyQualifiedName: test-1
+serviceType: BigQuery
+description: ""
+connection:
+  config:
+    type: BigQuery
+    scheme: bigquery
+    hostPort: bigquery.googleapis.com
+    costPerTB: 6.25
+    credentials:
+      gcpConfig:
+        type: service_account
+        authUri: https://accounts.google.com/o/oauth2/auth
+        tokenUri: https://oauth2.googleapis.com/token
+        authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs
+      gcpImpersonateServiceAccount:
+        lifetime: 3600
+    usageLocation: us
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    taxonomyLocation: us
+    includePolicyTags: true
+    taxonomyProjectID: []
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    storedProcedureFilterPattern:
+      excludes: []
+      includes: []
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: f45e2c4a-b8ac-4acf-9893-6bca7d4eb5af
+    type: ingestionPipeline
+    name: 2a34153f-0d6d-420c-9608-5bb121312179
+    fullyQualifiedName: test-1.2a34153f-0d6d-420c-9608-5bb121312179
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: 353928e3-8c86-423b-93eb-562b3accd828
+    type: user
+    name: anujkumar.yadav
+    fullyQualifiedName: '"anujkumar.yadav"'
+    displayName: anujkumar.yadav
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 6742f0ef-68bf-4a65-878d-31cb3919c6d5
+  type: ingestionRunner

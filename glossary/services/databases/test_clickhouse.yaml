@@ -1,0 +1,59 @@
+name: test_clickhouse
+fullyQualifiedName: test_clickhouse
+serviceType: Clickhouse
+description: ""
+connection:
+  config:
+    type: Clickhouse
+    https: true
+    scheme: clickhouse+http
+    hostPort: uicfocrfe9.ap-south-1.aws.clickhouse.cloud:8443
+    password: fernet:gAAAAABphcPC_e-rAdEspoREqje5NB20iOHaZb-KsfWuT69sgfZj-eZEZu7rbmSmOaNC7Hz4ddA-VzHdOwmykT7oLdEAeCgr3A==
+    username: default
+    supportsProfiler: true
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes:
+        - stackoverflow
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines:
+  - id: df069b83-537d-426d-a78b-f0739e39ba3e
+    type: ingestionPipeline
+    name: 00e9aea3-9bae-4716-9720-ca3f5f332b18
+    fullyQualifiedName: test_clickhouse.00e9aea3-9bae-4716-9720-ca3f5f332b18
+    displayName: Lineage Agent
+    deleted: false
+  - id: 59e831b8-c5b7-4d4c-bea4-58a9ca36720e
+    type: ingestionPipeline
+    name: 34292be1-4ebe-45c4-8969-2190c1a924eb
+    fullyQualifiedName: test_clickhouse.34292be1-4ebe-45c4-8969-2190c1a924eb
+    displayName: Usage Agent
+    deleted: false
+  - id: 43e7ae36-7f3f-4469-998a-47714c4a24eb
+    type: ingestionPipeline
+    name: c2df0d2d-52b0-4403-a827-5d98597d5ab6
+    fullyQualifiedName: test_clickhouse.c2df0d2d-52b0-4403-a827-5d98597d5ab6
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner

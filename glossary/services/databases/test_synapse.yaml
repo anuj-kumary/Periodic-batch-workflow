@@ -1,0 +1,33 @@
+name: test_synapse
+fullyQualifiedName: test_synapse
+serviceType: Synapse
+description: ""
+connection:
+  config:
+    type: Synapse
+    driver: ODBC Driver 18 for SQL Server
+    scheme: mssql+pyodbc
+    database: synapse_collate_dedicated
+    hostPort: collate-synapse-test.sql.azuresynapse.net
+    password: fernet:gAAAAABphcPC0LDWzKhHUI7W1fQ3wcSmKDQUV1JOXpu9ZZyUZ5nXu24ARVB7Ri7zodK07eAm5IcVDJXaw6gh7-qF8vxzVCZtdh-2FHsoLKlU3QHTtlPSqf4-Qbi31D41HCPOZEr1GA2w
+    username: sqladminuser@collate-synapse-test
+    supportsDatabase: true
+    supportsProfiler: true
+    authenticationMode:
+      connectionTimeout: 30
+    ingestAllDatabases: false
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+dataProducts: []

@@ -1,0 +1,30 @@
+name: test-service
+fullyQualifiedName: test-service
+serviceType: Mysql
+description: service tour
+connection:
+  config:
+    type: Mysql
+    scheme: mysql+pymysql
+    authType:
+      password: fernet:gAAAAABphcPCkFGCuhk7WdHis-IcclEnjgsQBt7O54xKYIZkPiQw9DrI3PTEiu9xwEZcfwEnklzUFkEI_NH4AJKhb1pahMhNbwVy201_yOpTeN_EvHOUFlr4jU2kO4dEak2RyDQdHiWZf4SjeQzMNYEGIzBT2sWKaA==
+    hostPort: mysql:3306
+    username: openmetadata_user
+    useSlowLogs: false
+    supportsDataDiff: true
+    supportsProfiler: true
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: c32bf443-6959-4d39-a1ac-83a84410290d
+    type: user
+    name: chirag
+    fullyQualifiedName: chirag
+    displayName: Chirag Madlani DS
+    deleted: false
+dataProducts: []

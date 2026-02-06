@@ -1,0 +1,34 @@
+name: test 20250311
+fullyQualifiedName: test 20250311
+serviceType: Redshift
+description: ""
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPCkWj774s3YcprxVdii6AE14cT4GGy7rT9boh0b-Pd_C68YYv5wmfSN4HBMCHIKzKGCVP5-4kV3V0pTRee66ZhEZHZNd6qvVEbHdG-BhVh-FaLzn1Mi9_54nrE1c3TTLc2
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 883fe858-06c3-4253-89c3-68ab59a517e4
+    type: user
+    name: pmbrull
+    fullyQualifiedName: pmbrull
+    displayName: Admin
+    deleted: false
+dataProducts: []

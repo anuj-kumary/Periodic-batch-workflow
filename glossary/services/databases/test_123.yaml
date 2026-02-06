@@ -1,0 +1,57 @@
+name: test 123
+fullyQualifiedName: test 123
+serviceType: Mysql
+description: ""
+connection:
+  config:
+    type: Mysql
+    scheme: mysql+pymysql
+    hostPort: localhost:3000
+    username: <your-username>
+    useSlowLogs: false
+    supportsDataDiff: true
+    supportsProfiler: true
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+        - ^performance_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines:
+  - id: c7ea1fc1-a0ca-4429-a014-1d4d3b0e4e8a
+    type: ingestionPipeline
+    name: 2c87a366-3f8c-4c8b-a87c-e964d2c27859
+    fullyQualifiedName: test 123.2c87a366-3f8c-4c8b-a87c-e964d2c27859
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: d8cd184a-ca4d-4312-b8a3-a3e009cd3686
+    type: user
+    name: sweta.agarwalla
+    fullyQualifiedName: '"sweta.agarwalla"'
+    description: ""
+    displayName: sweta.agarwalla
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner

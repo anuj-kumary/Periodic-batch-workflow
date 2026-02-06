@@ -1,0 +1,40 @@
+name: test service
+fullyQualifiedName: test service
+serviceType: AzureSQL
+description: ""
+connection:
+  config:
+    type: AzureSQL
+    driver: ODBC Driver 18 for SQL Server
+    scheme: mssql+pyodbc
+    database: Test
+    hostPort: localhost:3000
+    username: openmetadata_user
+    supportsDatabase: true
+    supportsProfiler: true
+    authenticationMode:
+      connectionTimeout: 30
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 0621fad7-1ef1-441d-96a9-500a55c01a1f
+    type: user
+    name: sweta.a
+    fullyQualifiedName: '"sweta.a"'
+    displayName: Sweta
+    deleted: false
+dataProducts: []

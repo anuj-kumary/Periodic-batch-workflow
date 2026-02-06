@@ -1,0 +1,32 @@
+name: test_azuresql
+fullyQualifiedName: test_azuresql
+serviceType: AzureSQL
+description: ""
+connection:
+  config:
+    type: AzureSQL
+    driver: ODBC Driver 18 for SQL Server
+    scheme: mssql+pyodbc
+    database: test-auth
+    hostPort: "tcp:test-auth.database.windows.net,1433"
+    password: fernet:gAAAAABphcPCQf5oFqDYfNUl-e8OEIqU-c6NlNh7GMUuDlCWjcft1ySueSO3QGbj58UZLPGtLsP0yRFOyqg7VKjDjjbH-0UPFuEn--PLXinE8ZU69UDwMmLpFkoNcCmn_cQzwvuZWxro
+    username: ayush@getcollate.io
+    supportsDatabase: true
+    supportsProfiler: true
+    authenticationMode:
+      connectionTimeout: 30
+    ingestAllDatabases: false
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 1eb7eb26-21da-42d7-b0ed-8812f04f4ca4
+    type: user
+    name: ayush
+    fullyQualifiedName: ayush
+    displayName: Ayush Shah
+    deleted: false
+dataProducts: []

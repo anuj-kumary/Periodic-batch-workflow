@@ -1,0 +1,28 @@
+name: Testing_virtualDB
+fullyQualifiedName: Testing_virtualDB
+serviceType: Postgres
+description: Testing the manual technical metadata upload.
+connection:
+  config:
+    type: Postgres
+    scheme: postgresql+psycopg2
+    sslMode: disable
+    authType: {}
+    database: test
+    hostPort: test
+    username: test
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    classificationName: PostgresPolicyTags
+    ingestAllDatabases: false
+    queryStatementSource: pg_stat_statements
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

@@ -1,0 +1,69 @@
+name: Test Glossary Term
+fullyQualifiedName: Test Glossary Term
+serviceType: BigQuery
+description: <p>xj</p>
+connection:
+  config:
+    type: BigQuery
+    scheme: bigquery
+    hostPort: bigquery.googleapis.com
+    costPerTB: 6.25
+    credentials:
+      gcpConfig:
+        type: service_account
+        authUri: https://accounts.google.com/o/oauth2/auth
+        tokenUri: https://oauth2.googleapis.com/token
+        authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs
+      gcpImpersonateServiceAccount:
+        lifetime: 3600
+    usageLocation: us
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    taxonomyLocation: us
+    includePolicyTags: true
+    taxonomyProjectID: []
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: 184ad1e6-57fd-4986-9c1c-ea7c1f44a08a
+    type: ingestionPipeline
+    name: af771e8f-7063-42ee-83be-d421f0bcd624
+    fullyQualifiedName: Test Glossary Term.af771e8f-7063-42ee-83be-d421f0bcd624
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: 95c692a1-21a6-4e79-ae53-c758293198df
+    type: user
+    name: reethika
+    fullyQualifiedName: reethika
+    description: <p>New Profile Page</p>
+    displayName: 'Admin User '
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 6742f0ef-68bf-4a65-878d-31cb3919c6d5
+  type: ingestionRunner

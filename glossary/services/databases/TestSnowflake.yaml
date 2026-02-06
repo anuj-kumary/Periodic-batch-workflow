@@ -1,0 +1,39 @@
+name: TestSnowflake
+fullyQualifiedName: TestSnowflake
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: niughrx-xi67120
+    password: fernet:gAAAAABphcPCBwkcXEXsvW90V_jqNUbhglKFPG3FWHu0VvjW1-N_VGaOo_zezuo-21TPPpXRsAMqHzlpD_Uochx9r7QD4JbNtxlNaNHLVDBHtRZBNQlrsX0MMdXMsBkJNFCPs9W75AD7
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: true
+    clientSessionKeepAlive: false
+    includeTransientTables: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 1eb7eb26-21da-42d7-b0ed-8812f04f4ca4
+    type: user
+    name: ayush
+    fullyQualifiedName: ayush
+    displayName: Ayush Shah
+    deleted: false
+dataProducts: []

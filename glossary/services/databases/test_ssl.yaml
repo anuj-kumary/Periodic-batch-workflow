@@ -1,0 +1,33 @@
+name: test_ssl
+fullyQualifiedName: test_ssl
+serviceType: Mysql
+description: ""
+connection:
+  config:
+    type: Mysql
+    scheme: mysql+pymysql
+    authType:
+      password: fernet:gAAAAABphcPChw_m64pQ4eGgfRl4TgdglxB4_2xUmNvC16cvRdLo3qr60RwcNC6Ej9bgn-yHH5rcTG-7enFS0aKA22dsNbreAXAd34HlDQROwz-OjeIYl2f8d5NMach9SkgNjocaDhI3QmrVTEVOl4Tvq6p4_iI1AA==
+    hostPort: mysql:3306
+    username: 'openmetadata_user '
+    sslConfig:
+      caCertificate: fernet:gAAAAABphcPCe8DZCfbKYW8BFpB1kiymGl8Q95YpceJZv27DnGoaHJZNn0rBPU6S_-E-R9TG0gJQFJGb5HHn8RM-Oq0QT4wlW_2MI-cYJEIcvbQzqWm04MZskrU7a4kEYLpzcbWXbw_AwolLsJH9H8I4MhYOlrNZ1g==
+    useSlowLogs: false
+    databaseSchema: test
+    supportsDataDiff: true
+    supportsProfiler: true
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+dataProducts: []
