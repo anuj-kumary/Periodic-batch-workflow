@@ -1,0 +1,67 @@
+domainType: Consumer-aligned
+name: Customer Domain
+fullyQualifiedName: Customer Domain
+displayName: Customer
+description: <p>Customer Domain</p>
+style: {}
+children:
+  - id: bc00e114-04a8-4f2c-acca-127cdcdb0832
+    type: domain
+    name: test1
+    fullyQualifiedName: Customer Domain.test1
+    description: <p>gh</p>
+    displayName: test1
+childrenCount: 3
+owners:
+  - id: 4614b5b7-7acc-4b93-96a5-3913903851f8
+    type: user
+    name: aanqueti18
+    fullyQualifiedName: aanqueti18
+    displayName: aanqueti18
+    deleted: false
+experts: []
+tags:
+  - tagFQN: EMAIL.Email
+    name: Email
+    description: SNOWFLAKE TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Financial Services.AML
+    name: AML
+    displayName: Anti-Money Laundering
+    description: Practices and regulations designed to prevent money laundering.
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: dbtTags.tags_column_one
+    name: tags_column_one
+    description: dbt Tags
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: personal.Personal
+    name: Personal
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: extension.testCustomProp
+      oldValue: '"valuea"'
+      newValue: '"valueaa"'
+  fieldsDeleted: []
+  previousVersion: 0.7
+  changeSummary: {}
+extension:
+  testCustomProp: valueaa

@@ -1,0 +1,66 @@
+domainType: Aggregate
+name: DomainTest22
+fullyQualifiedName: DomainTest22
+displayName: DomainTest22
+description: <p>DomainTest22</p>
+style: {}
+children:
+  - id: 6b0b0c97-f2f2-40d9-876b-b224c9b15735
+    type: domain
+    name: DomainTest222
+    fullyQualifiedName: DomainTest22.DomainTest222
+    description: <p>DomainTest222</p>
+    displayName: DomainTest222
+childrenCount: 1
+owners: []
+experts: []
+tags:
+  - tagFQN: General.Address
+    name: Address
+    displayName: Address new
+    description: Address of a Person.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: MY_TAG.1
+    name: 1
+    description: SNOWFLAKE TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: general.Address
+    name: Address
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: hk gloss 1.hk gloss 1
+    name: hk gloss 1
+    displayName: ""
+    description: <p>hk gloss 1</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"General.Address\",\"name\":\"Address\",\"displayName\"\
+        :\"Address new\",\"description\":\"Address of a Person.\",\"source\":\"Classification\"\
+        ,\"labelType\":\"Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"MY_TAG.1\"\
+        ,\"name\":\"1\",\"description\":\"SNOWFLAKE TAG VALUE\",\"source\":\"Classification\"\
+        ,\"labelType\":\"Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"general.Address\"\
+        ,\"name\":\"Address\",\"description\":\"DATABRICKS TAG\",\"source\":\"Classification\"\
+        ,\"labelType\":\"Manual\",\"state\":\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}

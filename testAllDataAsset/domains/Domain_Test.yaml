@@ -1,0 +1,123 @@
+domainType: Aggregate
+name: Domain Test
+fullyQualifiedName: Domain Test
+displayName: Domain Test
+description: <p>Domain Test</p>
+style: {}
+children:
+  - id: d8531d0d-0d0e-480f-bc01-165003cfa7a4
+    type: domain
+    name: test
+    fullyQualifiedName: Domain Test.test
+    description: <p>description</p>
+    displayName: test
+  - id: f7f5d838-2021-432b-8594-68ebba2811ff
+    type: domain
+    name: test2
+    fullyQualifiedName: Domain Test.test2
+    description: <p>desc</p>
+    displayName: test2
+  - id: c51178d1-bfa4-4df5-b86f-57c8b7e9bfa7
+    type: domain
+    name: testtt
+    fullyQualifiedName: Domain Test.testtt
+    description: <p>desc</p>
+    displayName: testtt
+childrenCount: 3
+owners: []
+experts: []
+tags:
+  - tagFQN: '"Bug.Test".TestingDraft edited'
+    name: TestingDraft edited
+    displayName: Testing Draft
+    description: 2test demo2
+    style:
+      color: "#db1414"
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '"Bug.Test".dataterm'
+    name: dataterm
+    displayName: dataterm
+    description: <p>dataterm</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '"Bug.Test".test1_glossary'
+    name: test1_glossary
+    displayName: test1_glossary
+    description: <p>test1_glossary</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '"Bug.Test".testMutuallyExclusive'
+    name: testMutuallyExclusive
+    displayName: ""
+    description: <p>Test</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.VATCode
+    name: VATCode
+    description: "VAT code or identification number. See [VAT Identification Number](https://en.wikipedia.org/wiki/VAT_identification_number)."
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: test_2_policy_tag.test_2_policy_tag
+    name: test_2_policy_tag
+    description: Bigquery Policy Tag
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"\\\"Bug.Test\\\".TestingDraft edited\",\"name\":\"\
+        TestingDraft edited\",\"displayName\":\"Testing Draft\",\"description\":\"\
+        2test demo2\",\"style\":{\"color\":\"#db1414\"},\"source\":\"Glossary\",\"\
+        labelType\":\"Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"\\\"Bug.Test\\\
+        \".dataterm\",\"name\":\"dataterm\",\"displayName\":\"dataterm\",\"description\"\
+        :\"<p>dataterm</p>\",\"style\":{},\"source\":\"Glossary\",\"labelType\":\"\
+        Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"\\\"Bug.Test\\\".test1_glossary\"\
+        ,\"name\":\"test1_glossary\",\"displayName\":\"test1_glossary\",\"description\"\
+        :\"<p>test1_glossary</p>\",\"style\":{},\"source\":\"Glossary\",\"labelType\"\
+        :\"Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"\\\"Bug.Test\\\".testMutuallyExclusive\"\
+        ,\"name\":\"testMutuallyExclusive\",\"displayName\":\"\",\"description\":\"\
+        <p>Test</p>\",\"style\":{},\"source\":\"Glossary\",\"labelType\":\"Manual\"\
+        ,\"state\":\"Confirmed\"},{\"tagFQN\":\"PostgresPolicyTags.sample_policy\"\
+        ,\"name\":\"sample_policy\",\"description\":\"Postgres Tag Value\",\"source\"\
+        :\"Classification\",\"labelType\":\"Derived\",\"state\":\"Confirmed\"},{\"\
+        tagFQN\":\"\\\"Bug.Test\\\".TestingDraft edited\",\"name\":\"TestingDraft\
+        \ edited\",\"displayName\":\"Testing Draft\",\"description\":\"2test demo2\"\
+        ,\"style\":{\"color\":\"#db1414\"},\"source\":\"Glossary\",\"labelType\":\"\
+        Manual\",\"state\":\"Confirmed\"},{\"tagFQN\":\"\\\"Bug.Test\\\".dataterm\"\
+        ,\"name\":\"dataterm\",\"displayName\":\"dataterm\",\"description\":\"<p>dataterm</p>\"\
+        ,\"style\":{},\"source\":\"Glossary\",\"labelType\":\"Manual\",\"state\":\"\
+        Confirmed\"},{\"tagFQN\":\"\\\"Bug.Test\\\".test1_glossary\",\"name\":\"test1_glossary\"\
+        ,\"displayName\":\"test1_glossary\",\"description\":\"<p>test1_glossary</p>\"\
+        ,\"style\":{},\"source\":\"Glossary\",\"labelType\":\"Manual\",\"state\":\"\
+        Confirmed\"},{\"tagFQN\":\"\\\"Bug.Test\\\".testMutuallyExclusive\",\"name\"\
+        :\"testMutuallyExclusive\",\"displayName\":\"\",\"description\":\"<p>Test</p>\"\
+        ,\"style\":{},\"source\":\"Glossary\",\"labelType\":\"Manual\",\"state\":\"\
+        Confirmed\"},{\"tagFQN\":\"PostgresPolicyTags.sample_policy\",\"name\":\"\
+        sample_policy\",\"description\":\"Postgres Tag Value\",\"source\":\"Classification\"\
+        ,\"labelType\":\"Derived\",\"state\":\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}

@@ -1,0 +1,34 @@
+domainType: Consumer-aligned
+name: Test_Hrk
+fullyQualifiedName: Test_Hrk
+displayName: Test_hr
+description: <p>testing domain</p>
+style:
+  color: "#cc1e1e"
+children: []
+childrenCount: 0
+owners: []
+experts: []
+tags:
+  - tagFQN: Business Department.test_business_term
+    name: test_business_term
+    displayName: Test Business Term
+    description: this is test_business_term
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PII.Sensitive
+    name: Sensitive
+    description: "PII which if lost, compromised, or disclosed without authorization,\
+      \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+      \ to an individual."
+    style:
+      color: "#ff0000"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin

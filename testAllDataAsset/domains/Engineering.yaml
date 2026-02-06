@@ -1,0 +1,191 @@
+domainType: Consumer-aligned
+name: Engineering
+fullyQualifiedName: Engineering
+displayName: Engineering
+description: Domain related engineering development.
+style: {}
+children: []
+childrenCount: 0
+owners: []
+experts:
+  - id: 34ee72dc-7dad-4710-9f1d-e934ad0554a9
+    type: user
+    name: brian_smith7
+    fullyQualifiedName: brian_smith7
+    displayName: Brian Smith
+    deleted: false
+  - id: 9a6687fa-8bd5-446c-aa8f-81416c88fe67
+    type: user
+    name: brittney_thomas3
+    fullyQualifiedName: brittney_thomas3
+    displayName: Brittney Thomas
+    deleted: false
+tags:
+  - tagFQN: Business Department.Finance
+    name: Finance
+    displayName: Finance
+    description: A finance department is the unit of a business responsible for obtaining
+      and handling any monies on behalf of the organization
+    style:
+      color: "#a80000"
+      iconURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAACUCAMAAACtIJvYAAAAA1BMVEX/AAAZ4gk3AAAALElEQVR4nO3BMQEAAADCoPVP7WkJoAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAGVrgAAQdwvSEAAAAASUVORK5CYII="
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Business Department.Marketing
+    name: Marketing
+    displayName: Marketing
+    description: "A marketing department is a division within a business that helps\
+      \ to promote its brand, products and services."
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: KnowledgeCenter.HowToGuide
+    name: HowToGuide
+    description: How To Guide Quick Link or Article Tag.
+    style:
+      color: "#25d80e"
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PII.Sensitive
+    name: Sensitive
+    description: "PII which if lost, compromised, or disclosed without authorization,\
+      \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+      \ to an individual."
+    style:
+      color: "#ff0000"
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PersonalData.Personal
+    name: Personal
+    description: Data that can be used to directly or indirectly identify a person.
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: TestPolicyTag.test_policy_tag
+    name: test_policy_tag
+    description: Bigquery Policy Tag
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: color.red
+    name: red
+    description: "<p>Bigquery Dataset Label What is Lorem Ipsum?</p><p><strong>Lorem\
+      \ Ipsum</strong> is simply dummy text of the printing and typesetting industry.\
+      \ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\
+      \ when an unknown printer took a galley of type and scrambled it to make a type\
+      \ specimen book. It has survived not only five centuries, but also the leap\
+      \ into electronic typesetting, remaining essentially unchanged. It was popularised\
+      \ in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\
+      \ and more recently with desktop publishing software like Aldus PageMaker including\
+      \ versions of Lorem Ipsum.</p>"
+    style:
+      color: "#d32727"
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: test.testcheck
+    name: testcheck
+    description: Bigquery Dataset Label
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"Business Department.Finance\",\"name\":\"Finance\"\
+        ,\"displayName\":\"Finance\",\"description\":\"A finance department is the\
+        \ unit of a business responsible for obtaining and handling any monies on\
+        \ behalf of the organization\",\"style\":{\"color\":\"#a80000\",\"iconURL\"\
+        :\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAACUCAMAAACtIJvYAAAAA1BMVEX/AAAZ4gk3AAAALElEQVR4nO3BMQEAAADCoPVP7WkJoAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAGVrgAAQdwvSEAAAAASUVORK5CYII=\"\
+        },\"source\":\"Glossary\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"\
+        },{\"tagFQN\":\"Business Department.Marketing\",\"name\":\"Marketing\",\"\
+        displayName\":\"Marketing\",\"description\":\"A marketing department is a\
+        \ division within a business that helps to promote its brand, products and\
+        \ services.\",\"style\":{},\"source\":\"Glossary\",\"labelType\":\"Manual\"\
+        ,\"state\":\"Confirmed\"},{\"tagFQN\":\"KnowledgeCenter.HowToGuide\",\"name\"\
+        :\"HowToGuide\",\"description\":\"How To Guide Quick Link or Article Tag.\"\
+        ,\"style\":{\"color\":\"#25d80e\"},\"source\":\"Classification\",\"labelType\"\
+        :\"Derived\",\"state\":\"Confirmed\"},{\"tagFQN\":\"PII.Sensitive\",\"name\"\
+        :\"Sensitive\",\"description\":\"PII which if lost, compromised, or disclosed\
+        \ without authorization, could result in substantial harm, embarrassment,\
+        \ inconvenience, or unfairness to an individual.\",\"style\":{\"color\":\"\
+        #ff0000\"},\"source\":\"Classification\",\"labelType\":\"Derived\",\"state\"\
+        :\"Confirmed\"},{\"tagFQN\":\"PersonalData.Personal\",\"name\":\"Personal\"\
+        ,\"description\":\"Data that can be used to directly or indirectly identify\
+        \ a person.\",\"source\":\"Classification\",\"labelType\":\"Derived\",\"state\"\
+        :\"Confirmed\"},{\"tagFQN\":\"TestPolicyTag.test_policy_tag\",\"name\":\"\
+        test_policy_tag\",\"description\":\"Bigquery Policy Tag\",\"source\":\"Classification\"\
+        ,\"labelType\":\"Derived\",\"state\":\"Confirmed\"},{\"tagFQN\":\"color.red\"\
+        ,\"name\":\"red\",\"description\":\"<p>Bigquery Dataset Label What is Lorem\
+        \ Ipsum?</p><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing\
+        \ and typesetting industry. Lorem Ipsum has been the industry's standard dummy\
+        \ text ever since the 1500s, when an unknown printer took a galley of type\
+        \ and scrambled it to make a type specimen book. It has survived not only\
+        \ five centuries, but also the leap into electronic typesetting, remaining\
+        \ essentially unchanged. It was popularised in the 1960s with the release\
+        \ of Letraset sheets containing Lorem Ipsum passages, and more recently with\
+        \ desktop publishing software like Aldus PageMaker including versions of Lorem\
+        \ Ipsum.</p>\",\"style\":{\"color\":\"#d32727\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Derived\",\"state\":\"Confirmed\"},{\"tagFQN\":\"test.testcheck\"\
+        ,\"name\":\"testcheck\",\"description\":\"Bigquery Dataset Label\",\"source\"\
+        :\"Classification\",\"labelType\":\"Derived\",\"state\":\"Confirmed\"},{\"\
+        tagFQN\":\"Business Department.Finance\",\"name\":\"Finance\",\"displayName\"\
+        :\"Finance\",\"description\":\"A finance department is the unit of a business\
+        \ responsible for obtaining and handling any monies on behalf of the organization\"\
+        ,\"style\":{\"color\":\"#a80000\",\"iconURL\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAACUCAMAAACtIJvYAAAAA1BMVEX/AAAZ4gk3AAAALElEQVR4nO3BMQEAAADCoPVP7WkJoAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAGVrgAAQdwvSEAAAAASUVORK5CYII=\"\
+        },\"source\":\"Glossary\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"\
+        },{\"tagFQN\":\"Business Department.Marketing\",\"name\":\"Marketing\",\"\
+        displayName\":\"Marketing\",\"description\":\"A marketing department is a\
+        \ division within a business that helps to promote its brand, products and\
+        \ services.\",\"style\":{},\"source\":\"Glossary\",\"labelType\":\"Manual\"\
+        ,\"state\":\"Confirmed\"},{\"tagFQN\":\"KnowledgeCenter.HowToGuide\",\"name\"\
+        :\"HowToGuide\",\"description\":\"How To Guide Quick Link or Article Tag.\"\
+        ,\"style\":{\"color\":\"#25d80e\"},\"source\":\"Classification\",\"labelType\"\
+        :\"Derived\",\"state\":\"Confirmed\"},{\"tagFQN\":\"PII.Sensitive\",\"name\"\
+        :\"Sensitive\",\"description\":\"PII which if lost, compromised, or disclosed\
+        \ without authorization, could result in substantial harm, embarrassment,\
+        \ inconvenience, or unfairness to an individual.\",\"style\":{\"color\":\"\
+        #ff0000\"},\"source\":\"Classification\",\"labelType\":\"Derived\",\"state\"\
+        :\"Confirmed\"},{\"tagFQN\":\"PersonalData.Personal\",\"name\":\"Personal\"\
+        ,\"description\":\"Data that can be used to directly or indirectly identify\
+        \ a person.\",\"source\":\"Classification\",\"labelType\":\"Derived\",\"state\"\
+        :\"Confirmed\"},{\"tagFQN\":\"TestPolicyTag.test_policy_tag\",\"name\":\"\
+        test_policy_tag\",\"description\":\"Bigquery Policy Tag\",\"source\":\"Classification\"\
+        ,\"labelType\":\"Derived\",\"state\":\"Confirmed\"},{\"tagFQN\":\"color.red\"\
+        ,\"name\":\"red\",\"description\":\"<p>Bigquery Dataset Label What is Lorem\
+        \ Ipsum?</p><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing\
+        \ and typesetting industry. Lorem Ipsum has been the industry's standard dummy\
+        \ text ever since the 1500s, when an unknown printer took a galley of type\
+        \ and scrambled it to make a type specimen book. It has survived not only\
+        \ five centuries, but also the leap into electronic typesetting, remaining\
+        \ essentially unchanged. It was popularised in the 1960s with the release\
+        \ of Letraset sheets containing Lorem Ipsum passages, and more recently with\
+        \ desktop publishing software like Aldus PageMaker including versions of Lorem\
+        \ Ipsum.</p>\",\"style\":{\"color\":\"#d32727\"},\"source\":\"Classification\"\
+        ,\"labelType\":\"Derived\",\"state\":\"Confirmed\"},{\"tagFQN\":\"test.testcheck\"\
+        ,\"name\":\"testcheck\",\"description\":\"Bigquery Dataset Label\",\"source\"\
+        :\"Classification\",\"labelType\":\"Derived\",\"state\":\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.8
+  changeSummary: {}

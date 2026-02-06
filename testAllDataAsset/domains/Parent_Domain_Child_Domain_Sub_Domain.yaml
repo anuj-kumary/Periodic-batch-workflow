@@ -1,0 +1,23 @@
+domainType: Aggregate
+name: Sub Domain
+fullyQualifiedName: Parent Domain.Child Domain.Sub Domain
+description: <p>test</p>
+style: {}
+parent:
+  id: 2addbcec-aea0-4345-9b9c-1cbe7664f782
+  type: domain
+  name: Child Domain
+  fullyQualifiedName: Parent Domain.Child Domain
+  description: <p>test</p>
+  displayName: Child Domain
+children:
+  - id: 15bf97ad-4195-4b1f-81b8-1397e940a264
+    type: domain
+    name: Sub-Sub-Domain
+    fullyQualifiedName: Parent Domain.Child Domain.Sub Domain.Sub-Sub-Domain
+    description: <p>Test</p>
+    displayName: Sub-Sub-Domain
+childrenCount: 2
+owners: []
+experts: []
+tags: []
