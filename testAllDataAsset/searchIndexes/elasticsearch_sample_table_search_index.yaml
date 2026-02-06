@@ -1,0 +1,77 @@
+name: table_search_index
+fullyQualifiedName: elasticsearch_sample.table_search_index
+displayName: TableSearchIndex
+description: Table Search Index
+service:
+  id: b05d9979-a05c-4e8e-8280-3c3386cd76d2
+  type: searchService
+  name: elasticsearch_sample
+  fullyQualifiedName: elasticsearch_sample
+  displayName: elasticsearch_sample
+  deleted: false
+serviceType: ElasticSearch
+fields:
+  - name: name
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Table Entity Name.
+    fullyQualifiedName: elasticsearch_sample.table_search_index.name
+    tags: []
+  - name: displayName
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Table Entity DisplayName.
+    fullyQualifiedName: elasticsearch_sample.table_search_index.displayName
+    tags: []
+  - name: description
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Table Entity Description.
+    fullyQualifiedName: elasticsearch_sample.table_search_index.description
+    tags: []
+  - name: columns
+    dataType: NESTED
+    dataTypeDisplay: nested
+    description: Table Columns.
+    fullyQualifiedName: elasticsearch_sample.table_search_index.columns
+    tags: []
+    children:
+      - name: name
+        dataType: TEXT
+        dataTypeDisplay: text
+        description: Column Name.
+        fullyQualifiedName: elasticsearch_sample.table_search_index.columns.name
+        tags: []
+      - name: displayName
+        dataType: TEXT
+        dataTypeDisplay: text
+        description: Column DisplayName.
+        fullyQualifiedName: elasticsearch_sample.table_search_index.columns.displayName
+        tags: []
+      - name: description
+        dataType: TEXT
+        dataTypeDisplay: text
+        description: Column Description.
+        fullyQualifiedName: elasticsearch_sample.table_search_index.columns.description
+        tags: []
+  - name: databaseSchema
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Database Schema that this table belongs to.
+    fullyQualifiedName: elasticsearch_sample.table_search_index.databaseSchema
+    tags: []
+indexType: Index
+owners: []
+tags: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: entityStatus
+      oldValue: Approved
+      newValue: Unprocessed
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+entityStatus: Unprocessed

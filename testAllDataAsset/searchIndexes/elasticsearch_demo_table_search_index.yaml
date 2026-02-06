@@ -1,0 +1,749 @@
+name: table_search_index
+fullyQualifiedName: elasticsearch_demo.table_search_index
+displayName: table_search_index
+description: <p></p><div data-type="file-attachment" data-url="http://sandbox-beta.open-metadata.org/api/v1/attachments/75b79208-ad48-4adb-963f-3e5176a420f0/download?direct=true"
+  data-filename="OpenSearchService.png" data-filesize="18130" data-mimetype="image/png"
+  data-uploading="false" data-upload-progress="100" data-is-image="true" data-alt="OpenSearchService.png"></div><p></p>
+service:
+  id: c26c2be6-d6d7-4a87-a7fe-ee908dbfed90
+  type: searchService
+  name: elasticsearch_demo
+  fullyQualifiedName: elasticsearch_demo
+  description: Show me in the community meeting!
+  displayName: elasticsearch_demo
+  deleted: false
+serviceType: ElasticSearch
+fields:
+  - name: columnNames
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.columnNames
+    tags: []
+  - name: column_suggest
+    dataType: COMPLETION
+    fullyQualifiedName: elasticsearch_demo.table_search_index.column_suggest
+    tags: []
+  - name: columns
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.columns
+    tags: []
+    children:
+      - name: constraint
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.constraint
+        tags: []
+      - name: dataLength
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.dataLength
+        tags: []
+      - name: dataType
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.dataType
+        tags: []
+      - name: dataTypeDisplay
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.dataTypeDisplay
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.description
+        tags: []
+      - name: fqnParts
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.fqnParts
+        tags: []
+      - name: fullyQualifiedName
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.fullyQualifiedName
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.name
+        tags: []
+      - name: ordinalPosition
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.ordinalPosition
+        tags: []
+      - name: tags
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.columns.tags
+        tags: []
+        children:
+          - name: description
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.columns.tags.description
+            tags: []
+          - name: labelType
+            dataType: KEYWORD
+            fullyQualifiedName: elasticsearch_demo.table_search_index.columns.tags.labelType
+            tags: []
+          - name: source
+            dataType: KEYWORD
+            fullyQualifiedName: elasticsearch_demo.table_search_index.columns.tags.source
+            tags: []
+          - name: state
+            dataType: KEYWORD
+            fullyQualifiedName: elasticsearch_demo.table_search_index.columns.tags.state
+            tags: []
+          - name: tagFQN
+            dataType: KEYWORD
+            fullyQualifiedName: elasticsearch_demo.table_search_index.columns.tags.tagFQN
+            tags: []
+  - name: dataProducts
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.description
+        tags: []
+      - name: displayName
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.displayName
+        tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.name
+        tags: []
+      - name: type
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.dataProducts.type
+        tags: []
+  - name: database
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.database
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.description
+        tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.name
+        tags: []
+      - name: type
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.database.type
+        tags: []
+  - name: databaseSchema
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.description
+        tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.name
+        tags: []
+      - name: type
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.databaseSchema.type
+        tags: []
+  - name: database_suggest
+    dataType: COMPLETION
+    fullyQualifiedName: elasticsearch_demo.table_search_index.database_suggest
+    tags: []
+  - name: deleted
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.deleted
+    tags: []
+  - name: description
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.description
+    tags: []
+  - name: displayName
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.displayName
+    tags: []
+  - name: domain
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.domain
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.description
+        tags: []
+      - name: fullyQualifiedName
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.name
+        tags: []
+      - name: type
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.domain.type
+        tags: []
+  - name: entityType
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.entityType
+    tags: []
+  - name: extension
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.extension
+    tags: []
+  - name: followers
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.followers
+    tags: []
+  - name: fqnParts
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.fqnParts
+    tags: []
+  - name: fullyQualifiedName
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.fullyQualifiedName
+    tags: []
+  - name: href
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.href
+    tags: []
+  - name: id
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.id
+    tags: []
+  - name: lifeCycle
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.lifeCycle
+    tags: []
+  - name: location
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.location
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.description
+        tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.name
+        tags: []
+      - name: type
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.location.type
+        tags: []
+  - name: name
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.name
+    tags: []
+  - name: owner
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.owner
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.description
+        tags: []
+      - name: displayName
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.displayName
+        tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.name
+        tags: []
+      - name: type
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.owner.type
+        tags: []
+  - name: schema_suggest
+    dataType: COMPLETION
+    fullyQualifiedName: elasticsearch_demo.table_search_index.schema_suggest
+    tags: []
+  - name: service
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.service
+    tags: []
+    children:
+      - name: deleted
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.deleted
+        tags: []
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.description
+        tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.fullyQualifiedName
+        tags: []
+      - name: href
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.href
+        tags: []
+      - name: id
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.id
+        tags: []
+      - name: name
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.name
+        tags: []
+      - name: type
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.service.type
+        tags: []
+  - name: serviceType
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.serviceType
+    tags: []
+  - name: service_suggest
+    dataType: COMPLETION
+    fullyQualifiedName: elasticsearch_demo.table_search_index.service_suggest
+    tags: []
+  - name: sourceUrl
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.sourceUrl
+    tags: []
+  - name: suggest
+    dataType: COMPLETION
+    fullyQualifiedName: elasticsearch_demo.table_search_index.suggest
+    tags: []
+  - name: tableType
+    dataType: KEYWORD
+    fullyQualifiedName: elasticsearch_demo.table_search_index.tableType
+    tags: []
+  - name: tags
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.tags
+    tags: []
+    children:
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tags.description
+        tags: []
+      - name: labelType
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tags.labelType
+        tags: []
+      - name: source
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tags.source
+        tags: []
+      - name: state
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tags.state
+        tags: []
+      - name: tagFQN
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tags.tagFQN
+        tags: []
+  - name: testSuite
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite
+    tags: []
+    children:
+      - name: deleted
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.deleted
+        tags: []
+      - name: executable
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.executable
+        tags: []
+      - name: executableEntityReference
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.executableEntityReference
+        tags: []
+        children:
+          - name: fullyQualifiedName
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.executableEntityReference.fullyQualifiedName
+            tags: []
+          - name: id
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.executableEntityReference.id
+            tags: []
+          - name: name
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.executableEntityReference.name
+            tags: []
+          - name: type
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.executableEntityReference.type
+            tags: []
+      - name: fullyQualifiedName
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.fullyQualifiedName
+        tags: []
+      - name: id
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.id
+        tags: []
+      - name: name
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.name
+        tags: []
+      - name: pipelines
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.pipelines
+        tags: []
+        children:
+          - name: deleted
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.pipelines.deleted
+            tags: []
+          - name: fullyQualifiedName
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.pipelines.fullyQualifiedName
+            tags: []
+          - name: id
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.pipelines.id
+            tags: []
+          - name: name
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.pipelines.name
+            tags: []
+          - name: type
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.pipelines.type
+            tags: []
+      - name: serviceType
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.serviceType
+        tags: []
+      - name: summary
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.summary
+        tags: []
+        children:
+          - name: aborted
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.summary.aborted
+            tags: []
+          - name: failed
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.summary.failed
+            tags: []
+          - name: success
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.summary.success
+            tags: []
+          - name: total
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.summary.total
+            tags: []
+      - name: testCaseResultSummary
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.testCaseResultSummary
+        tags: []
+        children:
+          - name: status
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.testCaseResultSummary.status
+            tags: []
+          - name: testCaseName
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.testCaseResultSummary.testCaseName
+            tags: []
+          - name: timestamp
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.testCaseResultSummary.timestamp
+            tags: []
+      - name: tests
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests
+        tags: []
+        children:
+          - name: deleted
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.deleted
+            tags: []
+          - name: description
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.description
+            tags: []
+          - name: displayName
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.displayName
+            tags: []
+          - name: fullyQualifiedName
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.fullyQualifiedName
+            tags: []
+          - name: id
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.id
+            tags: []
+          - name: name
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.name
+            tags: []
+          - name: type
+            dataType: TEXT
+            fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.tests.type
+            tags: []
+      - name: updatedAt
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.updatedAt
+        tags: []
+      - name: updatedBy
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.updatedBy
+        tags: []
+      - name: version
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.testSuite.version
+        tags: []
+  - name: tier
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.tier
+    tags: []
+    children:
+      - name: description
+        dataType: TEXT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tier.description
+        tags: []
+      - name: labelType
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tier.labelType
+        tags: []
+      - name: source
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tier.source
+        tags: []
+      - name: state
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tier.state
+        tags: []
+      - name: tagFQN
+        dataType: KEYWORD
+        fullyQualifiedName: elasticsearch_demo.table_search_index.tier.tagFQN
+        tags: []
+  - name: updatedAt
+    dataType: DATE
+    fullyQualifiedName: elasticsearch_demo.table_search_index.updatedAt
+    tags: []
+  - name: updatedBy
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.updatedBy
+    tags: []
+  - name: usageSummary
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary
+    tags: []
+    children:
+      - name: dailyStats
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.dailyStats
+        tags: []
+        children:
+          - name: count
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.dailyStats.count
+            tags: []
+          - name: percentileRank
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.dailyStats.percentileRank
+            tags: []
+      - name: date
+        dataType: DATE
+        fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.date
+        tags: []
+      - name: monthlyStats
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.monthlyStats
+        tags: []
+        children:
+          - name: count
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.monthlyStats.count
+            tags: []
+          - name: percentileRank
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.monthlyStats.percentileRank
+            tags: []
+      - name: weeklyStats
+        dataType: OBJECT
+        fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.weeklyStats
+        tags: []
+        children:
+          - name: count
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.weeklyStats.count
+            tags: []
+          - name: percentileRank
+            dataType: UNKNOWN
+            fullyQualifiedName: elasticsearch_demo.table_search_index.usageSummary.weeklyStats.percentileRank
+            tags: []
+  - name: version
+    dataType: UNKNOWN
+    fullyQualifiedName: elasticsearch_demo.table_search_index.version
+    tags: []
+  - name: viewDefinition
+    dataType: TEXT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.viewDefinition
+    tags: []
+  - name: votes
+    dataType: OBJECT
+    fullyQualifiedName: elasticsearch_demo.table_search_index.votes
+    tags: []
+    children:
+      - name: downVotes
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.votes.downVotes
+        tags: []
+      - name: upVotes
+        dataType: UNKNOWN
+        fullyQualifiedName: elasticsearch_demo.table_search_index.votes.upVotes
+        tags: []
+searchIndexSettings:
+  index:
+    uuid: FFzJMsByS5W1EY6a0JnpjQ
+    routing:
+      allocation:
+        include:
+          _tier_preference: data_content
+    version:
+      created: 8100299
+    analysis:
+      filter:
+        om_stemmer:
+          name: english
+          type: stemmer
+      analyzer:
+        om_ngram:
+          filter:
+            - lowercase
+          max_gram: 10
+          min_gram: 3
+          tokenizer: ngram
+        om_analyzer:
+          filter:
+            - lowercase
+            - om_stemmer
+          tokenizer: letter
+      normalizer:
+        lowercase_normalizer:
+          type: custom
+          filter:
+            - lowercase
+          char_filter: []
+    creation_date: 1697617638948
+    provided_name: table_search_index
+    number_of_shards: 1
+    number_of_replicas: 1
+indexType: Index
+owners: []
+tags: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: <p></p><div data-type="file-attachment" data-url="http://sandbox-beta.open-metadata.org/api/v1/attachments/75b79208-ad48-4adb-963f-3e5176a420f0/download?direct=true"
+        data-filename="OpenSearchService.png" data-filesize="18130" data-mimetype="image/png"
+        data-uploading="false" data-upload-progress="100" data-is-image="true" data-alt="OpenSearchService.png"></div><p></p>
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary: {}
+domains:
+  - id: 761f0a12-7b08-4889-acc3-b8d4d11a7865
+    type: domain
+    name: domain.with.dot
+    fullyQualifiedName: '"domain.with.dot"'
+    description: domain.with.dot
+    displayName: domain.with.dot
+    inherited: true
+dataProducts: []
+entityStatus: Approved

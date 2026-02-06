@@ -1,0 +1,68 @@
+name: table_search_index
+fullyQualifiedName: SampleElasticSearchService.table_search_index
+displayName: TableSearchIndex
+description: Table Search Index
+service:
+  id: 93f975ca-b177-4ab8-905d-e55104b2c472
+  type: searchService
+  name: SampleElasticSearchService
+  fullyQualifiedName: SampleElasticSearchService
+  displayName: SampleElasticSearchService
+  deleted: false
+serviceType: ElasticSearch
+fields:
+  - name: name
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Table Entity Name.
+    fullyQualifiedName: SampleElasticSearchService.table_search_index.name
+    tags: []
+  - name: displayName
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Table Entity DisplayName.
+    fullyQualifiedName: SampleElasticSearchService.table_search_index.displayName
+    tags: []
+  - name: description
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Table Entity Description.
+    fullyQualifiedName: SampleElasticSearchService.table_search_index.description
+    tags: []
+  - name: columns
+    dataType: NESTED
+    dataTypeDisplay: nested
+    description: Table Columns.
+    fullyQualifiedName: SampleElasticSearchService.table_search_index.columns
+    tags: []
+    children:
+      - name: name
+        dataType: TEXT
+        dataTypeDisplay: text
+        description: Column Name.
+        fullyQualifiedName: SampleElasticSearchService.table_search_index.columns.name
+        tags: []
+      - name: displayName
+        dataType: TEXT
+        dataTypeDisplay: text
+        description: Column DisplayName.
+        fullyQualifiedName: SampleElasticSearchService.table_search_index.columns.displayName
+        tags: []
+      - name: description
+        dataType: TEXT
+        dataTypeDisplay: text
+        description: Column Description.
+        fullyQualifiedName: SampleElasticSearchService.table_search_index.columns.description
+        tags: []
+  - name: databaseSchema
+    dataType: TEXT
+    dataTypeDisplay: text
+    description: Database Schema that this table belongs to.
+    fullyQualifiedName: SampleElasticSearchService.table_search_index.databaseSchema
+    tags: []
+indexType: Index
+owners: []
+tags: []
+domains: []
+dataProducts: []
+entityStatus: Unprocessed
