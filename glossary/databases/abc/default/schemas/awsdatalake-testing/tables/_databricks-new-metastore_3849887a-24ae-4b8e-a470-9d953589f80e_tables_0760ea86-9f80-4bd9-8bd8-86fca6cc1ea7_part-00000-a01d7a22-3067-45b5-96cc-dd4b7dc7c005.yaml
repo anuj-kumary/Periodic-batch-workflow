@@ -1,0 +1,105 @@
+name: databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet
+fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet"
+tableType: Regular
+columns:
+  - name: dateofbirth
+    displayName: dateofbirth
+    dataType: DATE
+    dataTypeDisplay: "date32[day]"
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet".dateofbirth
+    tags: []
+    children: []
+    customMetrics: []
+  - name: email
+    displayName: email
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet".email
+    tags: []
+    children: []
+    customMetrics: []
+  - name: firstname
+    displayName: firstname
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet".firstname
+    tags: []
+    children: []
+    customMetrics: []
+  - name: phonenumber
+    displayName: phonenumber
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet".phonenumber
+    tags: []
+    children: []
+    customMetrics: []
+  - name: lastname
+    displayName: lastname
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet".lastname
+    tags: []
+    children: []
+    customMetrics: []
+  - name: customerid
+    displayName: customerid
+    dataType: INT
+    dataTypeDisplay: int32
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet".customerid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    displayName: _fivetran_deleted
+    dataType: BOOLEAN
+    dataTypeDisplay: bool
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet"._fivetran_deleted
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    displayName: _fivetran_synced
+    dataType: DATETIME
+    dataTypeDisplay: "timestamp[ns]"
+    fullyQualifiedName: abc.default.awsdatalake-testing."databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/0760ea86-9f80-4bd9-8bd8-86fca6cc1ea7/part-00000-a01d7a22-3067-45b5-96cc-dd4b7dc7c005.c000.snappy.parquet"._fivetran_synced
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: b7bb62d9-5ce4-4da8-a0bd-56aa291fb4f9
+  type: databaseSchema
+  name: awsdatalake-testing
+  fullyQualifiedName: abc.default.awsdatalake-testing
+  displayName: awsdatalake-testing
+  deleted: false
+database:
+  id: 21b2a19d-78f7-45bc-8b85-e7cedccfac79
+  type: database
+  name: default
+  fullyQualifiedName: abc.default
+  displayName: default
+  deleted: false
+service:
+  id: d9609609-83c5-46dc-b2a7-ea2b261be6d7
+  type: databaseService
+  name: abc
+  fullyQualifiedName: abc
+  description: ""
+  displayName: abc
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: 4689105c7ec7c20bc50d4b0b9086541d
+processedLineage: false
+entityStatus: Unprocessed
