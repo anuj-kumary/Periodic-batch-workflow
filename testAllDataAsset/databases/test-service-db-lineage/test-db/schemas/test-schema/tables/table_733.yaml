@@ -1,0 +1,58 @@
+name: table_733
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_733
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_733.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view EXP_SERVICES_REP_QUOTA(\n\t\"ESRQPartnerAssignments\"\
+  ,\n\t\"ESRQTime\",\n\t\"ESRQQuarterlySvc\",\n\tESRQEID,\n\t\"ESRQName\",\n\t\"ESRQQuarter\"\
+  ,\n\t\"ESRQQuotaComponent\",\n\t\"ESRQQuota\",\n\t\"ESRQPlanType\",\n\t\"ESRQEtlInsertDate\"\
+  ,\n\t\"ESRQEtlUpdateDate\",\n\t\"ESRQEtlDeleteDate\",\n\t\"ESRQTerritorySysID\"\n\
+  ) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"PARTNER_ASSIGNMENTS\" as \"ESRQPartnerAssignments\"\
+  ,\n       \"TIME\" as \"ESRQTime\",\n       \"QUARTERLY_SVC\" as \"ESRQQuarterlySvc\"\
+  ,\n       \"EID\" as \"ESRQEID\",\n       \"NAME\" as \"ESRQName\",\n       \"QUARTER\"\
+  \ as \"ESRQQuarter\",\n       \"QUOTA_COMPONENT\" as \"ESRQQuotaComponent\",\n \
+  \      \"QUOTA\" as \"ESRQQuota\",\n       \"PLAN_TYPE\" as \"ESRQPlanType\",\n\
+  \       \"ETL_INSERT_DATE\" as \"ESRQEtlInsertDate\",\n       \"ETL_UPDATE_DATE\"\
+  \ as \"ESRQEtlUpdateDate\",\n       \"ETL_DELETE_DATE\" as \"ESRQEtlDeleteDate\"\
+  ,\n       \"TERRITORYSYSID\" as \"ESRQTerritorySysID\"\nFROM \"RDS\".\"ANAPLAN\"\
+  .\"EXP_SERVICES_REP_QUOTA\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

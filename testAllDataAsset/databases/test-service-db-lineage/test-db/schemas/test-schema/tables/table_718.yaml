@@ -1,0 +1,83 @@
+name: table_718
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_718
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_718.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view PARTY(\n\t\"Partyid\",\n\t\"CreateDate\"\
+  ,\n\t\"LastUpdateDate\",\n\t\"ConsolidationInd\",\n\t\"LastRowidSystem\",\n\t\"\
+  HubStateInd\",\n\t\"PartyName\",\n\t\"PartyTypeCode\",\n\t\"StatusCode\",\n\t\"\
+  DunsNumber\",\n\t\"BoClassCode\",\n\t\"EventType\",\n\t\"AddressLine1\",\n\t\"AddressLine2\"\
+  ,\n\t\"AddressLine3\",\n\t\"AddressLine4\",\n\t\"City\",\n\t\"StateCode\",\n\t\"\
+  StateName\",\n\t\"CountryCode\",\n\t\"CountryName\",\n\t\"Region\",\n\t\"PostalCode\"\
+  ,\n\t\"PostalExtCode\",\n\t\"AddrStatusCode\",\n\t\"AddrCleanseDescription\",\n\t\
+  \"MdmId\",\n\t\"MspEndCustomerName\",\n\t\"DunsStatus\",\n\t\"ActiveFlag\",\n\t\"\
+  OverrideTrustInd\",\n\t\"DuplicateReasonCode\",\n\t\"DuplicateOf\",\n\t\"OverrideTrustReason\"\
+  ,\n\t\"SourceCreateDate\",\n\t\"DerivedLanguage\",\n\t\"LocationType\",\n\t\"DunsManualFlag\"\
+  ,\n\t\"DunsAutoFlag\",\n\t\"DunsUpdateFlag\",\n\t\"VendorStatus\",\n\t\"AnonymizeFlag\"\
+  ,\n\t\"ServiceProviderStatus\",\n\t\"PeopleID\"\n) as -- SEMANTIC LAYER BEGINS\n\
+  \nSELECT \"ROWID_OBJECT\" as \"Partyid\",\n       \"CREATE_DATE\" as \"CreateDate\"\
+  ,\n       \"LAST_UPDATE_DATE\" as \"LastUpdateDate\",\n       \"CONSOLIDATION_IND\"\
+  \ as \"ConsolidationInd\",\n       \"LAST_ROWID_SYSTEM\" as \"LastRowidSystem\"\
+  ,\n       \"HUB_STATE_IND\" as \"HubStateInd\",\n       \"PARTY_NM\" as \"PartyName\"\
+  ,\n       \"PARTY_TYP_CD\" as \"PartyTypeCode\",\n       \"STATUS_CD\" as \"StatusCode\"\
+  ,\n       \"DUNS_NMBR\" as \"DunsNumber\",\n       \"BO_CLASS_CODE\" as \"BoClassCode\"\
+  ,\n       \"EVENT_TYP\" as \"EventType\",\n       \"ADDR_LN1\" as \"AddressLine1\"\
+  ,\n       \"ADDR_LN2\" as \"AddressLine2\",\n       \"ADDR_LN3\" as \"AddressLine3\"\
+  ,\n       \"ADDR_LN4\" as \"AddressLine4\",\n       \"CITY\" as \"City\",\n    \
+  \   \"STATE_CD\" as \"StateCode\",\n       \"STATE_NM\" as \"StateName\",\n    \
+  \   \"COUNTRY_CD\" as \"CountryCode\",\n       \"COUNTRY_NM\" as \"CountryName\"\
+  ,\n       \"REGION\" as \"Region\",\n       \"POSTAL_CD\" as \"PostalCode\",\n \
+  \      \"POSTAL_EXT_CD\" as \"PostalExtCode\",\n       \"ADDR_STATUS_CD\" as \"\
+  AddrStatusCode\",\n       \"ADDR_CLEANSE_DESC\" as \"AddrCleanseDescription\",\n\
+  \       \"MDM_ID\" as \"MdmId\",\n       \"MSP_END_CUST_NM\" as \"MspEndCustomerName\"\
+  ,\n       \"DUNS_STATUS\" as \"DunsStatus\",\n       \"ACTV_FLG\" as \"ActiveFlag\"\
+  ,\n       \"OVERRIDE_TRUST_IND\" as \"OverrideTrustInd\",\n       \"DUPLICATE_RSN_CD\"\
+  \ as \"DuplicateReasonCode\",\n       \"DUPLICATE_OF\" as \"DuplicateOf\",\n   \
+  \    \"OVERRIDE_TRUST_RSN\" as \"OverrideTrustReason\",\n       \"SRC_CREATE_DT\"\
+  \ as \"SourceCreateDate\",\n       \"DERIVED_LANGUAGE\" as \"DerivedLanguage\",\n\
+  \       \"LOCATION_TYPE\" as \"LocationType\",\n       \"DUNS_MANUAL_FLG\" as \"\
+  DunsManualFlag\",\n       \"DUNS_AUTO_FLG\" as \"DunsAutoFlag\",\n       \"DUNS_UPDATE_FLG\"\
+  \ as \"DunsUpdateFlag\",\n       \"VENDOR_STATUS\" as \"VendorStatus\",\n      \
+  \ \"ANONYMIZE_FLG\" as \"AnonymizeFlag\",\n       \"SERVICE_PROVIDER_STATUS\" as\
+  \ \"ServiceProviderStatus\",\n       \"PEOPLE_ID\" as \"PeopleID\"\nFROM \"RDS\"\
+  .\"MDM\".\"C_B_PARTY\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

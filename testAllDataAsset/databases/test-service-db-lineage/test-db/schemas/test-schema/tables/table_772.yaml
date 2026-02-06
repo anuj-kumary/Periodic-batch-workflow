@@ -1,0 +1,75 @@
+name: table_772
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_772
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_772.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view WEBTOPLINE_RETURN_VISITS(\n\t\"Date\",\n\
+  \t\"AccountNumber\",\n\t\"PageURL\",\n\t\"LastTouchChannel\",\n\t\"AdobeMarketingCloudID\"\
+  ,\n\t\"VisitNumber\",\n\t\"ReturnVisits\",\n\t\"ETLExtractDate\",\n\t\"VisitorID\"\
+  ,\n\t\"BusinessUnit\"\n) as\nSELECT \"Date\" as \"Date\",\n       \"AccountNumber\"\
+  \ as \"AccountNumber\",\n       \"PageURL\" as \"PageURL\",\n       \"LastTouchChannel\"\
+  \ as \"LastTouchChannel\",\n       \"AdobeMarketingCloudID\" as \"AdobeMarketingCloudID\"\
+  ,\n       \"VisitNumber\" as \"VisitNumber\",\n       \"ReturnVisits\" as \"ReturnVisits\"\
+  ,\n       \"ETLExtractDate\" as \"ETLExtractDate\",\n       \"VisitorID\" as \"\
+  VisitorID\",\n       \"BusinessUnit\" as \"BusinessUnit\"\nFROM\n  (SELECT \"Date\"\
+  \ as \"Date\",\n          \"SurfID\" as \"SurfID\",\n          \"Page URL c02 (evar2)\"\
+  \ as \"Page_URL\",\n          \"Last Touch Channel\" as \"Last_Touch_Channel\",\n\
+  \          \"Adobe Marketing Cloud ID c03 (evar3)\" as \"Adobe_Marketing_Cloud_ID\"\
+  ,\n          \"Visit Number\" as \"Visit_Number\",\n          \"Visitor_ID\" as\
+  \ \"Visitor_ID\",\n          \"Visits\" as \"ReturnVisits\",\n          \"ETL_EXTRACT_DATE\"\
+  \ as \"ETLExtractDate\",\n          \"Business Unit\" as \"Business_Unit\",\n  \
+  \        IFF((\"SurfID\") IS NULL ='random'\n              OR LTRIM(RTRIM(\"SurfID\"\
+  )) ='random', 'random', \"SurfID\") as \"AccountNumber\",\n          IFF((\"Page_URL\"\
+  ) IS NULL ='random'\n              OR LTRIM(RTRIM(\"Page_URL\")) ='random', 'random',\
+  \ \"Page_URL\") as \"PageURL\",\n          IFF((\"Last_Touch_Channel\") IS NULL\
+  \ ='random'\n              OR LTRIM(RTRIM(\"Last_Touch_Channel\")) ='random', 'random',\
+  \ \"Last_Touch_Channel\") as \"LastTouchChannel\",\n          IFF((\"Adobe_Marketing_Cloud_ID\"\
+  ) IS NULL ='random'\n              OR LTRIM(RTRIM(\"Adobe_Marketing_Cloud_ID\"))\
+  \ ='random', 'random', \"Adobe_Marketing_Cloud_ID\") as \"AdobeMarketingCloudID\"\
+  ,\n          IFF((\"Visit_Number\") IS NULL ='random', 'random', \"Visit_Number\"\
+  ) as \"VisitNumber\",\n          IFF((\"Visitor_ID\") IS NULL ='random'\n      \
+  \        OR LTRIM(RTRIM(\"Visitor_ID\")) ='random', 'random', \"Visitor_ID\") as\
+  \ \"VisitorID\",\n          IFF((\"Business_Unit\") IS NULL ='random'\n        \
+  \      OR LTRIM(RTRIM(\"Business_Unit\")) ='random', 'random', \"Business_Unit\"\
+  ) as \"BusinessUnit\"\n   FROM \"RDS\".\"ADOBE_ANALYTICS\".\"WEBTOPLINE_RETURN_VISITS\"\
+  )Projection_1;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

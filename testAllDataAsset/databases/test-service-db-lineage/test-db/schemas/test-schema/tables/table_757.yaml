@@ -1,0 +1,61 @@
+name: table_757
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_757
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_757.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view CEPC(\n\tMANDT,\n\tPRCTR,\n\tDATBI,\n\t\
+  KOKRS,\n\tDATAB,\n\tERSDA,\n\tUSNAM,\n\tMERKMAL,\n\tABTEI,\n\tVERAK,\n\tVERAK_USER,\n\
+  \tWAERS,\n\tNPRCTR,\n\tLAND1,\n\tANRED,\n\tNAME1,\n\tNAME2,\n\tNAME3,\n\tNAME4,\n\
+  \tORT01,\n\tORT02,\n\tSTRAS,\n\tPFACH,\n\tPSTLZ,\n\tPSTL2,\n\tSPRAS,\n\tTELBX,\n\
+  \tTELF1,\n\tTELF2,\n\tTELFX,\n\tTELTX,\n\tTELX1,\n\tDATLT,\n\tDRNAM,\n\tKHINR,\n\
+  \tBUKRS,\n\tVNAME,\n\tRECID,\n\tETYPE,\n\tTXJCD,\n\tREGIO,\n\tKVEWE,\n\tKAPPL,\n\
+  \tKALSM,\n\tLOGSYSTEM,\n\tLOCK_IND,\n\tPCA_TEMPLATE,\n\tSEGMENT,\n\tEEW_CEPC_PS_DUMMY\n\
+  ) as select\n\t\tMANDT,\n\t\tPRCTR,\n\t\tDATBI,\n\t\tKOKRS,\n\t\tDATAB,\n\t\tERSDA,\n\
+  \t\tUSNAM,\n\t\tMERKMAL,\n\t\tABTEI,\n\t\tVERAK,\n\t\tVERAK_USER,\n\t\tWAERS,\n\t\
+  \tNPRCTR,\n\t\tLAND1,\n\t\tANRED,\n\t\tNAME1,\n\t\tNAME2,\n\t\tNAME3,\n\t\tNAME4,\n\
+  \t\tORT01,\n\t\tORT02,\n\t\tSTRAS,\n\t\tPFACH,\n\t\tPSTLZ,\n\t\tPSTL2,\n\t\tSPRAS,\n\
+  \t\tTELBX,\n\t\tTELF1,\n\t\tTELF2,\n\t\tTELFX,\n\t\tTELTX,\n\t\tTELX1,\n\t\tDATLT,\n\
+  \t\tDRNAM,\n\t\tKHINR,\n\t\tBUKRS,\n\t\tVNAME,\n\t\tRECID,\n\t\tETYPE,\n\t\tTXJCD,\n\
+  \t\tREGIO,\n\t\tKVEWE,\n\t\tKAPPL,\n\t\tKALSM,\n\t\tLOGSYSTEM,\n\t\tLOCK_IND,\n\t\
+  \tPCA_TEMPLATE,\n\t\tSEGMENT,\n\t\tEEW_CEPC_PS_DUMMY\n from RDS.S4HANA.CEPC where\
+  \ MANDT='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

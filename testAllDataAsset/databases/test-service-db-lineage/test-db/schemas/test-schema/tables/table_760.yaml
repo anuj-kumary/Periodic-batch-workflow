@@ -1,0 +1,52 @@
+name: table_760
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_760
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_760.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view CDPOS(\n\tMANDANT,\n\tOBJECTCLAS,\n\tOBJECTID,\n\
+  \tCHANGENR,\n\tTABNAME,\n\tTABKEY,\n\tFNAME,\n\tCHNGIND,\n\tTEXT_CASE,\n\tUNIT_OLD,\n\
+  \tUNIT_NEW,\n\tCUKY_OLD,\n\tCUKY_NEW,\n\tVALUE_NEW,\n\tVALUE_OLD,\n\t_DATAAGING\n\
+  ) as select\n\t\tMANDANT,\n\t\tOBJECTCLAS,\n\t\tOBJECTID,\n\t\tCHANGENR,\n\t\tTABNAME,\n\
+  \t\tTABKEY,\n\t\tFNAME,\n\t\tCHNGIND,\n\t\tTEXT_CASE,\n\t\tUNIT_OLD,\n\t\tUNIT_NEW,\n\
+  \t\tCUKY_OLD,\n\t\tCUKY_NEW,\n\t\tVALUE_NEW,\n\t\tVALUE_OLD,\n\t\t_DATAAGING\n from\
+  \ RDS.s4hana.CDPOS where MANDANT ='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

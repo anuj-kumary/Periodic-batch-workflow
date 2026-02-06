@@ -1,0 +1,63 @@
+name: table_794
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_794
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_794.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_SERVICES_BOOKINGS(\n\t\"SBQuarterCommit\"\
+  ,\n\t\"SBQuarterUpside\",\n\t\"SBQuarterExpect\",\n\t\"SBWeek\",\n\t\"SBQuarter\"\
+  ,\n\t\"SBSysUpdatedOn\",\n\t\"SBType\",\n\t\"SBOwnerSysID\",\n\t\"SBOwner\",\n\t\
+  \"SBQuarterTrainingExpect\",\n\t\"SBQuarterTrainingCommit\",\n\t\"SBQuarterTrainingUpside\"\
+  ,\n\t\"SBQuarterCSExpect\",\n\t\"SBQuarterCSCommit\",\n\t\"SBQuarterCSUpside\",\n\
+  \t\"SBTerritoryValue\",\n\t\"SBTerritoryLabel\"\n) as -- SEMANTIC LAYER BEGINS\n\
+  \nSELECT \"U_QUARTER_COMMIT\" as \"SBQuarterCommit\",\n       \"U_QUARTER_UPSIDE\"\
+  \ as \"SBQuarterUpside\",\n       \"U_QUARTER_EXPECT\" as \"SBQuarterExpect\",\n\
+  \       \"U_WEEK\" as \"SBWeek\",\n       \"U_QUARTER\" as \"SBQuarter\",\n    \
+  \   \"SYS_UPDATED_ON\" as \"SBSysUpdatedOn\",\n       \"DV_U_TYPE\" as \"SBType\"\
+  ,\n       \"U_OWNER\" as \"SBOwnerSysID\",\n       \"DV_U_OWNER\" as \"SBOwner\"\
+  ,\n       \"U_TRAINING_QUARTER_EXPECT\" as \"SBQuarterTrainingExpect\",\n      \
+  \ \"U_TRAINING_QUARTER_COMMIT\" as \"SBQuarterTrainingCommit\",\n       \"U_TRAINING_QUARTER_UPSIDE\"\
+  \ as \"SBQuarterTrainingUpside\",\n       \"U_CS_BOOKINGS_QUARTER_EXPECT\" as \"\
+  SBQuarterCSExpect\",\n       \"U_CS_BOOKINGS_QUARTER_COMMIT\" as \"SBQuarterCSCommit\"\
+  ,\n       \"U_CS_BOOKINGS_QUARTER_UPSIDE\" as \"SBQuarterCSUpside\",\n       \"\
+  DV_U_SALES_TERRITORY\" as \"SBTerritoryValue\",\n       \"U_SALES_TERRITORY\" as\
+  \ \"SBTerritoryLabel\"\nFROM \"RDS\".\"SURF\".\"U_SERVICES_BOOKINGS\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,70 @@
+name: table_803
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_803
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_803.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_MASTER_PLUGIN_DATA(\n\tPSP_PER_UPDATE_DT,\n\
+  \tSYS_TAGS,\n\tU_REQUIRED_FOR_BASE_FUNCTIONALITY,\n\tU_ACTIVATES_LICENSABLE_PLUGINS,\n\
+  \tSYS_ID,\n\tU_PLUGIN_NAME,\n\tU_SCOPE,\n\tU_IS_PLUGIN_DEPRECATED,\n\tU_PLUGIN_ENABLED_OOB,\n\
+  \tU_RELEASE_INTRODUCED,\n\tU_LICENSE_CHECK_REQUIRED,\n\tSYS_MOD_COUNT,\n\tPSP_PER_DELETE_DT,\n\
+  \tU_OWNER_GROUP,\n\tU_IN_OEM_EDITION,\n\tU_RELEASE_DEPRECATED,\n\tU_PLUGIN_ACTIVE_OOB,\n\
+  \tU_IN_ENTERPRISE_EDITION,\n\tU_BETA_PLUGIN,\n\tU_REQUIRES_PLUGIN,\n\tU_APPLICATION,\n\
+  \tPSP_PER_INSERT_DT,\n\tSYS_CREATED_BY,\n\tU_MAINT_ONLY,\n\tSYS_UPDATED_ON,\n\t\
+  U_IN_PLATFORM_ONLY_EDITION,\n\tU_APPLICATION_ID,\n\tU_PLUGIN_ID,\n\tSYS_UPDATED_BY,\n\
+  \tU_OWNER_ORGANIZATION,\n\tSYS_CREATED_ON\n) as\n\n  /*********************************************************************************\n\
+  \     * Date Created  : 1-dec-2023\n     * Developed By  : Sunil Kumar Thota\n \
+  \    * Brief Description : Initial creation of base view for  table  RDS.HI.U_MASTER_PLUGIN_DATA\n\
+  \ \t* Project#/Story# \t: STRY2569526\n     * --------------------------------------------------------------------------------------------------------------------------\n\
+  \     * REVISION HISTORY:\n     *---------------------------------------------------------------------------------------------------------------------------\n\
+  \     * CR#                 Date Modified           Modified By            Brief\
+  \ Description of Change\n     *STRY2569526            12/01/2023\t\t\t  Sunil Kumar\
+  \ Thota       Initial creation of base view\n \t****************************************************************************************************************************/\n\
+  select\n    PSP_PER_UPDATE_DT,\n\tSYS_TAGS,\n\tU_REQUIRED_FOR_BASE_FUNCTIONALITY,\n\
+  \tU_ACTIVATES_LICENSABLE_PLUGINS,\n\tSYS_ID,\n\tU_PLUGIN_NAME,\n\tU_SCOPE,\n\tU_IS_PLUGIN_DEPRECATED,\n\
+  \tU_PLUGIN_ENABLED_OOB,\n\tU_RELEASE_INTRODUCED,\n\tU_LICENSE_CHECK_REQUIRED,\n\t\
+  SYS_MOD_COUNT,\n\tPSP_PER_DELETE_DT,\n\tU_OWNER_GROUP,\n\tU_IN_OEM_EDITION,\n\t\
+  U_RELEASE_DEPRECATED,\n\tU_PLUGIN_ACTIVE_OOB,\n\tU_IN_ENTERPRISE_EDITION,\n\tU_BETA_PLUGIN,\n\
+  \tU_REQUIRES_PLUGIN,\n\tU_APPLICATION,\n\tPSP_PER_INSERT_DT,\n\tSYS_CREATED_BY,\n\
+  \tU_MAINT_ONLY,\n\tSYS_UPDATED_ON,\n\tU_IN_PLATFORM_ONLY_EDITION,\n\tU_APPLICATION_ID,\n\
+  \tU_PLUGIN_ID,\n\tSYS_UPDATED_BY,\n\tU_OWNER_ORGANIZATION,\n\tSYS_CREATED_ON\nfrom\
+  \ RDS.HI.U_MASTER_PLUGIN_DATA;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,61 @@
+name: table_773
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_773
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_773.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_ST_ACCOUNT(\n\t\"AccountSysID\",\n\t\"\
+  AccountEndDate\",\n\t\"AccountDirectAssignment\",\n\t\"AccountOwnerName\",\n\t\"\
+  AccountActive\",\n\t\"AccountJobFunctionSysID\",\n\t\"AccountOwnerSysID\",\n\t\"\
+  SalesTeamAccountName\",\n\t\"AccountJobFunctionName\",\n\t\"AccountPrimaryAssignment\"\
+  ,\n\t\"AccountStartDate\",\n\t\"SysCreatedBy\",\n\t\"SysCreatedOn\"\n) as -- SEMANTIC\
+  \ LAYER BEGINS\n\nSELECT DISTINCT \"U_REC_SYS_ID\" as \"AccountSysID\",\n      \
+  \          \"U_END_DATE\" as \"AccountEndDate\",\n                \"U_DIRECT_ASSIGNMENT\"\
+  \ as \"AccountDirectAssignment\",\n                \"DV_U_USER\" as \"AccountOwnerName\"\
+  ,\n                \"U_ACTIVE\" as \"AccountActive\",\n                \"U_JOB_FUNCTION\"\
+  \ as \"AccountJobFunctionSysID\",\n                \"U_USER\" as \"AccountOwnerSysID\"\
+  ,\n                \"DV_U_REC_SYS_ID\" as \"SalesTeamAccountName\",\n          \
+  \      \"DV_U_JOB_FUNCTION\" as \"AccountJobFunctionName\",\n                \"\
+  U_PRIMARY_ASSIGNMENT\" as \"AccountPrimaryAssignment\",\n                \"U_START_DATE\"\
+  \ as \"AccountStartDate\",\n                \"SYS_CREATED_BY\" as \"SysCreatedBy\"\
+  ,\n                \"SYS_CREATED_ON\" as \"SysCreatedOn\"\nFROM \"RDS\".\"SURF\"\
+  .\"U_ST_ACCOUNT\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

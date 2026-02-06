@@ -1,0 +1,60 @@
+name: table_797
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_797
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_797.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view I18N_WEBSITE_DATA(\n\tDATE,\n\tUNIQUE_VISITORS,\n\
+  \tAVERAGE_PAGE_VIEWS_PER_VISIT,\n\tVISITS,\n\tGATED_FORM_COMPLETION_RATE,\n\tENGAGEMENT_RATE,\n\
+  \t\"Video_View_Rate(UV)\",\n\t\"Download_Rate(UV)\",\n\t\"Form_Submission_Rate(UV)\"\
+  ,\n\t\"Product_Solution_Platform_Visitor_Rate\",\n\tE17_FORM_SUCCESS,\n\tLANGUAGE,\n\
+  \tETL_EXTRACT_DATE\n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"DATE\" as \"DATE\"\
+  ,\n       \"UNIQUE_VISITORS\" as \"UNIQUE_VISITORS\",\n       \"AVERAGE_PAGE_VIEWS_PER_VISIT\"\
+  \ as \"AVERAGE_PAGE_VIEWS_PER_VISIT\",\n       \"VISITS\" as \"VISITS\",\n     \
+  \  \"GATED_FORM_COMPLETION_RATE\" as \"GATED_FORM_COMPLETION_RATE\",\n       \"\
+  ENGAGEMENT_RATE\" as \"ENGAGEMENT_RATE\",\n       \"Video_View_Rate(UV)\" as \"\
+  Video_View_Rate(UV)\",\n       \"Download_Rate(UV)\" as \"Download_Rate(UV)\",\n\
+  \       \"Form_Submission_Rate(UV)\" as \"Form_Submission_Rate(UV)\",\n       \"\
+  Product/Solution/Platform_Visitor_Rate\" as \"Product_Solution_Platform_Visitor_Rate\"\
+  ,\n       \"E17_FORM_SUCCESS\" as \"E17_FORM_SUCCESS\",\n       \"LANGUAGE\" as\
+  \ \"LANGUAGE\",\n       \"ETL_EXTRACT_DATE\" as \"ETL_EXTRACT_DATE\"\nFROM \"RDS\"\
+  .\"ADOBE_ANALYTICS\".\"I18N_WEBSITE_DATA\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

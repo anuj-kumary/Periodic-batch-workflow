@@ -1,0 +1,247 @@
+name: table_776
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_776
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_776.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_PLUGIN_ACTIVATION(\n\tU_INSTANCE,\n\t\
+  SYS_ID,\n\tSYS_UPDATED_ON,\n\tU_ACTIVATED,\n\tSYS_CREATED_ON,\n\tU_PLUGIN,\n\tDV_U_PLUGIN,\n\
+  \tSYS_CREATED_BY,\n\tSYS_UPDATED_BY,\n\tSYS_TAGS,\n\tSYS_MOD_COUNT,\n\tDV_U_INSTANCE,\n\
+  \tU_LAST_REPORTED,\n\tPSP_PER_INSERT_DT,\n\tPSP_PER_UPDATE_DT,\n\tPSP_PER_DELETE_DT,\n\
+  \tIS_FEDERAL,\n\tSYS_DOMAIN_PATH,\n\tSYS_DOMAIN,\n\tDV_SYS_DOMAIN,\n\tINSTANCE_ID\n\
+  ) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"U_INSTANCE\" as \"U_INSTANCE\",\n    \
+  \   \"SYS_ID\" as \"SYS_ID\",\n       \"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\",\n\
+  \       \"U_ACTIVATED\" as \"U_ACTIVATED\",\n       \"SYS_CREATED_ON\" as \"SYS_CREATED_ON\"\
+  ,\n       \"U_PLUGIN\" as \"U_PLUGIN\",\n       \"DV_U_PLUGIN\" as \"DV_U_PLUGIN\"\
+  ,\n       \"SYS_CREATED_BY\" as \"SYS_CREATED_BY\",\n       \"SYS_UPDATED_BY\" as\
+  \ \"SYS_UPDATED_BY\",\n       \"SYS_TAGS\" as \"SYS_TAGS\",\n       \"SYS_MOD_COUNT\"\
+  \ as \"SYS_MOD_COUNT\",\n       \"DV_U_INSTANCE\" as \"DV_U_INSTANCE\",\n      \
+  \ \"U_LAST_REPORTED\" as \"U_LAST_REPORTED\",\n       \"PSP_PER_INSERT_DT\" as \"\
+  PSP_PER_INSERT_DT\",\n       \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n \
+  \      \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n       \"IS_FEDERAL\" as\
+  \ \"IS_FEDERAL\",\n       \"SYS_DOMAIN_PATH\" as \"SYS_DOMAIN_PATH\",\n       \"\
+  SYS_DOMAIN\" as \"SYS_DOMAIN\",\n       \"DV_SYS_DOMAIN\" as \"DV_SYS_DOMAIN\",\n\
+  \       \"INSTANCE_ID\" as \"INSTANCE_ID\"\nFROM\n  (SELECT *\n   FROM\n     (SELECT\
+  \ 'random' as \"DV_SYS_DOMAIN\",\n             \"DV_U_INSTANCE\" as \"DV_U_INSTANCE\"\
+  ,\n             \"DV_U_PLUGIN\" as \"DV_U_PLUGIN\",\n             'random' as \"\
+  INSTANCE_ID\",\n             \"IS_FEDERAL\" as \"IS_FEDERAL\",\n             \"\
+  PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n             \"PSP_PER_INSERT_DT\"\
+  \ as \"PSP_PER_INSERT_DT\",\n             \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\"\
+  ,\n             \"SYS_CREATED_BY\" as \"SYS_CREATED_BY\",\n             \"SYS_CREATED_ON\"\
+  \ as \"SYS_CREATED_ON\",\n             'random' as \"SYS_DOMAIN\",\n           \
+  \  'random' as \"SYS_DOMAIN_PATH\",\n             \"SYS_ID\" as \"SYS_ID\",\n  \
+  \           \"SYS_MOD_COUNT\" as \"SYS_MOD_COUNT\",\n             \"SYS_TAGS\" as\
+  \ \"SYS_TAGS\",\n             \"SYS_UPDATED_BY\" as \"SYS_UPDATED_BY\",\n      \
+  \       \"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\",\n             \"U_ACTIVATED\"\
+  \ as \"U_ACTIVATED\",\n             \"U_INSTANCE\" as \"U_INSTANCE\",\n        \
+  \     \"U_LAST_REPORTED\" as \"U_LAST_REPORTED\",\n             \"U_PLUGIN\" as\
+  \ \"U_PLUGIN\"\n      FROM\n        (SELECT \"U_INSTANCE\" as \"U_INSTANCE\",\n\
+  \                \"SYS_ID1\" as \"SYS_ID\",\n                \"SYS_UPDATED_ON\"\
+  \ as \"SYS_UPDATED_ON\",\n                \"U_ACTIVATED\" as \"U_ACTIVATED\",\n\
+  \                \"SYS_CREATED_ON\" as \"SYS_CREATED_ON\",\n                \"U_PLUGIN\"\
+  \ as \"U_PLUGIN\",\n                \"DV_U_PLUGIN\" as \"DV_U_PLUGIN\",\n      \
+  \          \"SYS_CREATED_BY\" as \"SYS_CREATED_BY\",\n                \"SYS_UPDATED_BY\"\
+  \ as \"SYS_UPDATED_BY\",\n                \"SYS_TAGS\" as \"SYS_TAGS\",\n      \
+  \          \"SYS_MOD_COUNT\" as \"SYS_MOD_COUNT\",\n                \"DV_U_INSTANCE\"\
+  \ as \"DV_U_INSTANCE\",\n                \"U_LAST_REPORTED\" as \"U_LAST_REPORTED\"\
+  ,\n                \"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\",\n           \
+  \     \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n                \"PSP_PER_DELETE_DT\"\
+  \ as \"PSP_PER_DELETE_DT\",\n                \"U_SUMMARY\" as \"U_SUMMARY\",\n \
+  \               \"U_INSTANCE_SUFFIX\" as \"U_INSTANCE_SUFFIX\",\n              \
+  \  \"U_ACTIVE\" as \"U_ACTIVE\",\n                \"DV_U_SUMMARY\" as \"DV_U_SUMMARY\"\
+  ,\n                \"U_PLUGIN_VERSION\" as \"U_PLUGIN_VERSION\",\n             \
+  \   \"SYS_ID2\" as \"SYS_ID2\",\n                'random' as \"IS_FEDERAL\"\n  \
+  \       FROM\n           (SELECT \"Projection_3\".\"U_INSTANCE\" as \"U_INSTANCE\"\
+  ,\n                   \"Projection_3\".\"SYS_ID1\" as \"SYS_ID1\",\n           \
+  \        \"Projection_3\".\"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\",\n          \
+  \         \"Projection_3\".\"U_ACTIVATED\" as \"U_ACTIVATED\",\n               \
+  \    \"Projection_3\".\"SYS_CREATED_ON\" as \"SYS_CREATED_ON\",\n              \
+  \     \"Projection_3\".\"U_PLUGIN\" as \"U_PLUGIN\",\n                   \"Projection_3\"\
+  .\"DV_U_PLUGIN\" as \"DV_U_PLUGIN\",\n                   \"Projection_3\".\"SYS_CREATED_BY\"\
+  \ as \"SYS_CREATED_BY\",\n                   \"Projection_3\".\"SYS_UPDATED_BY\"\
+  \ as \"SYS_UPDATED_BY\",\n                   \"Projection_3\".\"SYS_TAGS\" as \"\
+  SYS_TAGS\",\n                   \"Projection_3\".\"SYS_MOD_COUNT\" as \"SYS_MOD_COUNT\"\
+  ,\n                   \"Projection_3\".\"DV_U_INSTANCE\" as \"DV_U_INSTANCE\",\n\
+  \                   \"Projection_3\".\"U_LAST_REPORTED\" as \"U_LAST_REPORTED\"\
+  ,\n                   \"Projection_3\".\"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\"\
+  ,\n                   \"Projection_3\".\"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\"\
+  ,\n                   \"Projection_3\".\"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\"\
+  ,\n                   \"Projection_3\".\"U_SUMMARY\" as \"U_SUMMARY\",\n       \
+  \            \"Projection_3\".\"U_INSTANCE_SUFFIX\" as \"U_INSTANCE_SUFFIX\",\n\
+  \                   \"Projection_3\".\"U_ACTIVE\" as \"U_ACTIVE\",\n           \
+  \        \"Projection_3\".\"DV_U_SUMMARY\" as \"DV_U_SUMMARY\",\n              \
+  \     \"Projection_3\".\"U_PLUGIN_VERSION\" as \"U_PLUGIN_VERSION\",\n         \
+  \          \"Aggregation_1\".\"SYS_ID2\" as \"SYS_ID2\"\n            FROM\n    \
+  \          (SELECT \"U_INSTANCE\" as \"U_INSTANCE\",\n                      \"SYS_ID\"\
+  \ as \"SYS_ID1\",\n                      \"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\"\
+  ,\n                      \"U_ACTIVATED\" as \"U_ACTIVATED\",\n                 \
+  \     \"SYS_CREATED_ON\" as \"SYS_CREATED_ON\",\n                      \"U_PLUGIN\"\
+  \ as \"U_PLUGIN\",\n                      \"DV_U_PLUGIN\" as \"DV_U_PLUGIN\",\n\
+  \                      \"SYS_CREATED_BY\" as \"SYS_CREATED_BY\",\n             \
+  \         \"SYS_UPDATED_BY\" as \"SYS_UPDATED_BY\",\n                      \"SYS_TAGS\"\
+  \ as \"SYS_TAGS\",\n                      \"SYS_MOD_COUNT\" as \"SYS_MOD_COUNT\"\
+  ,\n                      \"DV_U_INSTANCE\" as \"DV_U_INSTANCE\",\n             \
+  \         \"U_LAST_REPORTED\" as \"U_LAST_REPORTED\",\n                      \"\
+  PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\",\n                      \"PSP_PER_UPDATE_DT\"\
+  \ as \"PSP_PER_UPDATE_DT\",\n                      \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\"\
+  ,\n                      \"U_SUMMARY\" as \"U_SUMMARY\",\n                     \
+  \ \"U_INSTANCE_SUFFIX\" as \"U_INSTANCE_SUFFIX\",\n                      \"U_ACTIVE\"\
+  \ as \"U_ACTIVE\",\n                      \"DV_U_SUMMARY\" as \"DV_U_SUMMARY\",\n\
+  \                      \"U_PLUGIN_VERSION\" as \"U_PLUGIN_VERSION\"\n          \
+  \     FROM RDS.\"HI\".\"U_PLUGIN_ACTIVATION\")\"Projection_3\"\n            LEFT\
+  \ JOIN\n              (SELECT \"SYS_ID2\" as \"SYS_ID2\"\n               FROM\n\
+  \                 (SELECT *\n                  FROM\n                    (SELECT\
+  \ \"PA_SYS_ID\" as \"SYS_ID2\"\n                     FROM\n                    \
+  \   (SELECT \"PA_SYS_ID\" as \"PA_SYS_ID\"\n                        FROM RDS.\"\
+  HI\".\"U_USG_PLUGIN_ACTIVATION\")\"Projection_1\"\n                     UNION ALL\
+  \ SELECT \"PA_SYS_ID\" as \"SYS_ID2\"\n                     FROM\n             \
+  \          (SELECT \"PA_SYS_ID\" as \"PA_SYS_ID\"\n                        FROM\
+  \ RDS.\"HIWAVE\".\"U_USG_PLUGIN_ACTIVATION\")\"Projection_2\"))\"Union_1\"\n   \
+  \            GROUP BY \"SYS_ID2\")\"Aggregation_1\" ON \"Projection_3\".\"SYS_ID1\"\
+  \ = \"Aggregation_1\".\"SYS_ID2\")\"Join_1\"\n         WHERE \"SYS_ID2\" IS NULL\
+  \ )\"Projection_4\"\n      UNION ALL SELECT \"DV_SYS_DOMAIN\" as \"DV_SYS_DOMAIN\"\
+  ,\n                       \"DV_U_INSTANCE\" as \"DV_U_INSTANCE\",\n            \
+  \           \"DV_U_PLUGIN\" as \"DV_U_PLUGIN\",\n                       \"INSTANCE_ID\"\
+  \ as \"INSTANCE_ID\",\n                       \"IS_FEDERAL\" as \"IS_FEDERAL\",\n\
+  \                       \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n      \
+  \                 \"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\",\n            \
+  \           \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n                  \
+  \     'random' as \"SYS_CREATED_BY\",\n                       \"SYS_CREATED_ON\"\
+  \ as \"SYS_CREATED_ON\",\n                       \"SYS_DOMAIN\" as \"SYS_DOMAIN\"\
+  ,\n                       \"SYS_DOMAIN_PATH\" as \"SYS_DOMAIN_PATH\",\n        \
+  \               \"SYS_ID\" as \"SYS_ID\",\n                       'random' as \"\
+  SYS_MOD_COUNT\",\n                       'random' as \"SYS_TAGS\",\n           \
+  \            'random' as \"SYS_UPDATED_BY\",\n                       \"SYS_UPDATED_ON\"\
+  \ as \"SYS_UPDATED_ON\",\n                       \"U_ACTIVATED\" as \"U_ACTIVATED\"\
+  ,\n                       \"U_INSTANCE\" as \"U_INSTANCE\",\n                  \
+  \     \"U_LAST_REPORTED\" as \"U_LAST_REPORTED\",\n                       \"U_PLUGIN\"\
+  \ as \"U_PLUGIN\"\n      FROM\n        (SELECT \"C_SYS_DOMAIN\" as \"SYS_DOMAIN\"\
+  ,\n                \"PA_U_ACTIVATED\" as \"U_ACTIVATED\",\n                \"PA_U_LAST_REPORTED\"\
+  \ as \"U_LAST_REPORTED\",\n                \"PA_U_PLUGIN\" as \"U_PLUGIN\",\n  \
+  \              \"PA_SYS_ID\" as \"SYS_ID\",\n                \"PA_SYS_CREATED_ON\"\
+  \ as \"SYS_CREATED_ON\",\n                \"PA_SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\"\
+  ,\n                \"PA_U_INSTANCE\" as \"U_INSTANCE\",\n                \"PSP_PER_DELETE_DT\"\
+  \ as \"PSP_PER_DELETE_DT\",\n                \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\"\
+  ,\n                \"DV_C_SYS_DOMAIN\" as \"DV_SYS_DOMAIN\",\n                \"\
+  C_SNC_INSTANCE_ID\" as \"INSTANCE_ID\",\n                \"PSP_PER_INSERT_DT\" as\
+  \ \"PSP_PER_INSERT_DT\",\n                \"DV_PA_U_PLUGIN\" as \"DV_U_PLUGIN\"\
+  ,\n                \"C_SYS_DOMAIN_PATH\" as \"SYS_DOMAIN_PATH\",\n             \
+  \   \"DV_PA_U_INSTANCE\" as \"DV_U_INSTANCE\",\n                \"IS_FEDERAL\" as\
+  \ \"IS_FEDERAL\"\n         FROM\n           (SELECT *\n            FROM\n      \
+  \        (SELECT \"C_SYS_DOMAIN\" as \"C_SYS_DOMAIN\",\n                      \"\
+  PA_U_ACTIVATED\" as \"PA_U_ACTIVATED\",\n                      \"PA_U_LAST_REPORTED\"\
+  \ as \"PA_U_LAST_REPORTED\",\n                      \"PA_U_PLUGIN\" as \"PA_U_PLUGIN\"\
+  ,\n                      \"PA_SYS_ID\" as \"PA_SYS_ID\",\n                     \
+  \ \"PA_SYS_CREATED_ON\" as \"PA_SYS_CREATED_ON\",\n                      \"PA_SYS_UPDATED_ON\"\
+  \ as \"PA_SYS_UPDATED_ON\",\n                      \"PA_U_INSTANCE\" as \"PA_U_INSTANCE\"\
+  ,\n                      \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n     \
+  \                 \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n            \
+  \          \"DV_C_SYS_DOMAIN\" as \"DV_C_SYS_DOMAIN\",\n                      \"\
+  C_SNC_INSTANCE_ID\" as \"C_SNC_INSTANCE_ID\",\n                      \"PSP_PER_INSERT_DT\"\
+  \ as \"PSP_PER_INSERT_DT\",\n                      \"DV_PA_U_PLUGIN\" as \"DV_PA_U_PLUGIN\"\
+  ,\n                      \"C_SYS_DOMAIN_PATH\" as \"C_SYS_DOMAIN_PATH\",\n     \
+  \                 \"DV_PA_U_INSTANCE\" as \"DV_PA_U_INSTANCE\",\n              \
+  \        \"IS_FEDERAL\" as \"IS_FEDERAL\"\n               FROM\n               \
+  \  (SELECT \"C_SYS_DOMAIN\" as \"C_SYS_DOMAIN\",\n                         \"PA_U_ACTIVATED\"\
+  \ as \"PA_U_ACTIVATED\",\n                         \"PA_U_LAST_REPORTED\" as \"\
+  PA_U_LAST_REPORTED\",\n                         \"PA_U_PLUGIN\" as \"PA_U_PLUGIN\"\
+  ,\n                         \"PA_SYS_ID\" as \"PA_SYS_ID\",\n                  \
+  \       \"SYS_ID\" as \"SYS_ID\",\n                         \"PA_SYS_CREATED_ON\"\
+  \ as \"PA_SYS_CREATED_ON\",\n                         \"PA_SYS_UPDATED_ON\" as \"\
+  PA_SYS_UPDATED_ON\",\n                         \"PA_U_INSTANCE\" as \"PA_U_INSTANCE\"\
+  ,\n                         \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n  \
+  \                       \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n      \
+  \                   \"DV_C_SYS_DOMAIN\" as \"DV_C_SYS_DOMAIN\",\n              \
+  \           \"C_SNC_INSTANCE_ID\" as \"C_SNC_INSTANCE_ID\",\n                  \
+  \       \"C_SYS_ID\" as \"C_SYS_ID\",\n                         \"PSP_PER_INSERT_DT\"\
+  \ as \"PSP_PER_INSERT_DT\",\n                         \"DV_PA_U_PLUGIN\" as \"DV_PA_U_PLUGIN_CC\"\
+  ,\n                         \"C_SYS_DOMAIN_PATH\" as \"C_SYS_DOMAIN_PATH_CC\",\n\
+  \                         \"DV_PA_U_INSTANCE\" as \"DV_PA_U_INSTANCE_CC\",\n   \
+  \                      \"DV_PA_U_PLUGIN_CC\" as \"DV_PA_U_PLUGIN\",\n          \
+  \               \"C_SYS_DOMAIN_PATH_CC\" as \"C_SYS_DOMAIN_PATH\",\n           \
+  \              \"DV_PA_U_INSTANCE_CC\" as \"DV_PA_U_INSTANCE\",\n              \
+  \           'random' as \"IS_FEDERAL\"\n                  FROM RDS.\"HI\".\"U_USG_PLUGIN_ACTIVATION\"\
+  )\"Projection_5\"\n               UNION ALL SELECT \"C_SYS_DOMAIN\" as \"C_SYS_DOMAIN\"\
+  ,\n                                \"PA_U_ACTIVATED\" as \"PA_U_ACTIVATED\",\n \
+  \                               \"PA_U_LAST_REPORTED\" as \"PA_U_LAST_REPORTED\"\
+  ,\n                                \"PA_U_PLUGIN\" as \"PA_U_PLUGIN\",\n       \
+  \                         \"PA_SYS_ID\" as \"PA_SYS_ID\",\n                    \
+  \            \"PA_SYS_CREATED_ON\" as \"PA_SYS_CREATED_ON\",\n                 \
+  \               \"PA_SYS_UPDATED_ON\" as \"PA_SYS_UPDATED_ON\",\n              \
+  \                  \"PA_U_INSTANCE\" as \"PA_U_INSTANCE\",\n                   \
+  \             \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n                \
+  \                \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\",\n             \
+  \                   \"DV_C_SYS_DOMAIN\" as \"DV_C_SYS_DOMAIN\",\n              \
+  \                  \"C_SNC_INSTANCE_ID\" as \"C_SNC_INSTANCE_ID\",\n           \
+  \                     \"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\",\n        \
+  \                        \"DV_PA_U_PLUGIN\" as \"DV_PA_U_PLUGIN\",\n           \
+  \                     \"C_SYS_DOMAIN_PATH\" as \"C_SYS_DOMAIN_PATH\",\n        \
+  \                        \"DV_PA_U_INSTANCE\" as \"DV_PA_U_INSTANCE\",\n       \
+  \                         \"IS_FEDERAL\" as \"IS_FEDERAL\"\n               FROM\n\
+  \                 (SELECT \"C_SYS_DOMAIN\" as \"C_SYS_DOMAIN\",\n              \
+  \           \"PA_U_ACTIVATED\" as \"PA_U_ACTIVATED\",\n                        \
+  \ \"PA_U_LAST_REPORTED\" as \"PA_U_LAST_REPORTED\",\n                         \"\
+  PA_U_PLUGIN\" as \"PA_U_PLUGIN\",\n                         \"PA_SYS_ID\" as \"\
+  PA_SYS_ID\",\n                         \"SYS_ID\" as \"SYS_ID\",\n             \
+  \            \"PA_SYS_CREATED_ON\" as \"PA_SYS_CREATED_ON\",\n                 \
+  \        \"PA_SYS_UPDATED_ON\" as \"PA_SYS_UPDATED_ON\",\n                     \
+  \    \"PA_U_INSTANCE\" as \"PA_U_INSTANCE\",\n                         \"PSP_PER_DELETE_DT\"\
+  \ as \"PSP_PER_DELETE_DT\",\n                         \"PSP_PER_UPDATE_DT\" as \"\
+  PSP_PER_UPDATE_DT\",\n                         \"DV_C_SYS_DOMAIN\" as \"DV_C_SYS_DOMAIN\"\
+  ,\n                         \"C_SNC_INSTANCE_ID\" as \"C_SNC_INSTANCE_ID\",\n  \
+  \                       \"C_SYS_ID\" as \"C_SYS_ID\",\n                        \
+  \ \"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\",\n                         \"DV_PA_U_PLUGIN\"\
+  \ as \"DV_PA_U_PLUGIN_CC\",\n                         \"C_SYS_DOMAIN_PATH\" as \"\
+  C_SYS_DOMAIN_PATH_CC\",\n                         \"DV_PA_U_INSTANCE\" as \"DV_PA_U_INSTANCE_CC\"\
+  ,\n                         \"DV_PA_U_PLUGIN_CC\" as \"DV_PA_U_PLUGIN\",\n     \
+  \                    \"C_SYS_DOMAIN_PATH_CC\" as \"C_SYS_DOMAIN_PATH\",\n      \
+  \                   \"DV_PA_U_INSTANCE_CC\" as \"DV_PA_U_INSTANCE\",\n         \
+  \                'random' as \"IS_FEDERAL\"\n                  FROM RDS.\"HIWAVE\"\
+  .\"U_USG_PLUGIN_ACTIVATION\")\"Projection_6\"))\"Union_2\"\n         GROUP BY \"\
+  SYS_DOMAIN\",\n                  \"U_ACTIVATED\",\n                  \"U_LAST_REPORTED\"\
+  ,\n                  \"U_PLUGIN\",\n                  \"SYS_ID\",\n            \
+  \      \"SYS_CREATED_ON\",\n                  \"SYS_UPDATED_ON\",\n            \
+  \      \"U_INSTANCE\",\n                  \"PSP_PER_DELETE_DT\",\n             \
+  \     \"PSP_PER_UPDATE_DT\",\n                  \"DV_SYS_DOMAIN\",\n           \
+  \       \"INSTANCE_ID\",\n                  \"PSP_PER_INSERT_DT\",\n           \
+  \       \"DV_U_PLUGIN\",\n                  \"SYS_DOMAIN_PATH\",\n             \
+  \     \"DV_U_INSTANCE\",\n                  \"IS_FEDERAL\")\"Aggregation_2\"))Union_3;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

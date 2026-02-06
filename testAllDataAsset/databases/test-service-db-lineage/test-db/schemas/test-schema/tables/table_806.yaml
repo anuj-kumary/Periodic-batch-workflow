@@ -1,0 +1,53 @@
+name: table_806
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_806
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_806.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view DOCSITE_SEARCHPAGEDEPTH(\n\t\"DocsiteSrchPgDepDate\"\
+  ,\n\t\"DocsiteSrchPgDepExtractDate\",\n\t\"DocsiteSrchPgDepPageUrlV02InstanceOfEvar2\"\
+  ,\n\t\"DocsiteSrchPgDepSearchItem\",\n\t\"DocsiteSrchPgDepSearchResultsPageDepth\"\
+  \n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"DATE\" as \"DocsiteSrchPgDepDate\",\n\
+  \       \"EXTRACT_DATE\" as \"DocsiteSrchPgDepExtractDate\",\n       \"PAGE_URL_V02_INSTANCE_INSTANCE_OF_EVAR2\"\
+  \ as \"DocsiteSrchPgDepPageUrlV02InstanceOfEvar2\",\n       \"SEARCH_ITEM\" as \"\
+  DocsiteSrchPgDepSearchItem\",\n       \"SEARCH_RESULTS_PAGE_DEPTH\" as \"DocsiteSrchPgDepSearchResultsPageDepth\"\
+  \nFROM \"RDS\".\"ADOBE_ANALYTICS\".\"DOCSITE_SEARCHPAGEDEPTH\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,93 @@
+name: table_787
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_787
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_787.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view BSEG_ADD(\n\tMANDT,\n\tBUKRS,\n\tBELNR,\n\
+  \tGJAHR,\n\tBUZEI,\n\tBSTAT,\n\tBUZID,\n\tBSCHL,\n\tKOART,\n\tSHKZG,\n\tMWSKZ,\n\
+  \tDMBTR,\n\tWRBTR,\n\tKTOSL,\n\tVALUT,\n\tZUONR,\n\tSGTXT,\n\tVBUND,\n\tBEWAR,\n\
+  \tALTKT,\n\tVORGN,\n\tKOKRS,\n\tKOSTL,\n\tAUFNR,\n\tANLN1,\n\tANLN2,\n\tANBWA,\n\
+  \tXAUTO,\n\tXNCOP,\n\tHKONT,\n\tXBILK,\n\tGVTYP,\n\tMATNR,\n\tWERKS,\n\tMENGE,\n\
+  \tMEINS,\n\tPRCTR,\n\tVNAME,\n\tRECID,\n\tEGRUP,\n\tVPTNR,\n\tTXJCD,\n\tFIPOS,\n\
+  \tKSTRG,\n\tNPLNR,\n\tAUFPL,\n\tAPLZL,\n\tPROJK,\n\tPAOBJNR,\n\tPASUBNR,\n\tDMBE2,\n\
+  \tDMBE3,\n\tLOKKT,\n\tFISTL,\n\tGEBER,\n\tPPRCT,\n\tXREF1,\n\tXREF2,\n\tKBLNR,\n\
+  \tKBLPOS,\n\tOBZEI,\n\tXNEGP,\n\tXREF3,\n\tKONTT,\n\tKONTL,\n\tBUPLA,\n\tSECCO,\n\
+  \tLSTAR,\n\tPRZNR,\n\tGRANT_NBR,\n\tFKBER,\n\tMEASURE,\n\tSEGMENT,\n\tPSEGMENT,\n\
+  \tGSBER,\n\tPGEBER,\n\tPGRANT_NBR,\n\tBUDGET_PD,\n\tPBUDGET_PD,\n\tPSWSL,\n\tPSWBT,\n\
+  \tZTASK_ID,\n\tZZROLE,\n\tZZEMPNM,\n\tZZBLNB,\n\tZZLOC,\n\tZZPOB_ID,\n\tZZRECON_KEY,\n\
+  \tDUMMY_INCL_EEW_COBL,\n\tPFKBER,\n\tREBZG,\n\tREBZJ,\n\tREBZZ,\n\tREBZT,\n\tXLGCLR,\n\
+  \tAUGDT,\n\tAUGCP,\n\tAUGBL,\n\tAUGGJ,\n\tAGZEI,\n\tRDIFF,\n\tRDIF2,\n\tRDIF3,\n\
+  \tXRAGL,\n\tKSTAR,\n\tPARGB,\n\tBWKEY,\n\tBWTAR,\n\tVERTT,\n\tVERTN,\n\tVBEWA,\n\
+  \tVBELN,\n\tVBEL2,\n\tPOSN2,\n\tETEN2,\n\tGKONT,\n\tGKART,\n\tGHKON,\n\tBUZEI_SENDER,\n\
+  \t_DATAAGING,\n\tACROBJTYPE,\n\tACRLOGSYS,\n\tACROBJ_ID,\n\tACRSOBJ_ID,\n\tACRITMTYPE,\n\
+  \tACRVALDAT,\n\tVALOBJTYPE,\n\tVALOBJ_ID,\n\tVALSOBJ_ID,\n\tNETDT,\n\tRISK_CLASS,\n\
+  \tSDM_VERSION,\n\tHBKID,\n\tHKTID,\n\tRE_BUKRS,\n\tRE_ACCOUNT,\n\tBDIF2,\n\tBDIF3,\n\
+  \tBDIFF,\n\tCCBTC,\n\tDABRZ,\n\tFKONT,\n\tIMKEY,\n\tINTRENO,\n\tMWST2,\n\tMWST3,\n\
+  \tMWSTS,\n\tPPDIF2,\n\tPPDIF3,\n\tPPDIFF,\n\tPRODPER,\n\tPROJN,\n\tQSSKZ,\n\tRFZEI,\n\
+  \tUZAWE,\n\tWMWST,\n\tWVERW,\n\tXOPVW,\n\tZFBDT,\n\tBDGT_ACCOUNT,\n\tBDGT_ACCOUNT_COCODE\n\
+  ) as select\n\t\tMANDT,\n\t\tBUKRS,\n\t\tBELNR,\n\t\tGJAHR,\n\t\tBUZEI,\n\t\tBSTAT,\n\
+  \t\tBUZID,\n\t\tBSCHL,\n\t\tKOART,\n\t\tSHKZG,\n\t\tMWSKZ,\n\t\tDMBTR,\n\t\tWRBTR,\n\
+  \t\tKTOSL,\n\t\tVALUT,\n\t\tZUONR,\n\t\tSGTXT,\n\t\tVBUND,\n\t\tBEWAR,\n\t\tALTKT,\n\
+  \t\tVORGN,\n\t\tKOKRS,\n\t\tKOSTL,\n\t\tAUFNR,\n\t\tANLN1,\n\t\tANLN2,\n\t\tANBWA,\n\
+  \t\tXAUTO,\n\t\tXNCOP,\n\t\tHKONT,\n\t\tXBILK,\n\t\tGVTYP,\n\t\tMATNR,\n\t\tWERKS,\n\
+  \t\tMENGE,\n\t\tMEINS,\n\t\tPRCTR,\n\t\tVNAME,\n\t\tRECID,\n\t\tEGRUP,\n\t\tVPTNR,\n\
+  \t\tTXJCD,\n\t\tFIPOS,\n\t\tKSTRG,\n\t\tNPLNR,\n\t\tAUFPL,\n\t\tAPLZL,\n\t\tPROJK,\n\
+  \t\tPAOBJNR,\n\t\tPASUBNR,\n\t\tDMBE2,\n\t\tDMBE3,\n\t\tLOKKT,\n\t\tFISTL,\n\t\t\
+  GEBER,\n\t\tPPRCT,\n\t\tXREF1,\n\t\tXREF2,\n\t\tKBLNR,\n\t\tKBLPOS,\n\t\tOBZEI,\n\
+  \t\tXNEGP,\n\t\tXREF3,\n\t\tKONTT,\n\t\tKONTL,\n\t\tBUPLA,\n\t\tSECCO,\n\t\tLSTAR,\n\
+  \t\tPRZNR,\n\t\tGRANT_NBR,\n\t\tFKBER,\n\t\tMEASURE,\n\t\tSEGMENT,\n\t\tPSEGMENT,\n\
+  \t\tGSBER,\n\t\tPGEBER,\n\t\tPGRANT_NBR,\n\t\tBUDGET_PD,\n\t\tPBUDGET_PD,\n\t\t\
+  PSWSL,\n\t\tPSWBT,\n\t\tZTASK_ID,\n\t\tZZROLE,\n\t\tZZEMPNM,\n\t\tZZBLNB,\n\t\t\
+  ZZLOC,\n\t\tZZPOB_ID,\n\t\tZZRECON_KEY,\n\t\tDUMMY_INCL_EEW_COBL,\n\t\tPFKBER,\n\
+  \t\tREBZG,\n\t\tREBZJ,\n\t\tREBZZ,\n\t\tREBZT,\n\t\tXLGCLR,\n\t\tAUGDT,\n\t\tAUGCP,\n\
+  \t\tAUGBL,\n\t\tAUGGJ,\n\t\tAGZEI,\n\t\tRDIFF,\n\t\tRDIF2,\n\t\tRDIF3,\n\t\tXRAGL,\n\
+  \t\tKSTAR,\n\t\tPARGB,\n\t\tBWKEY,\n\t\tBWTAR,\n\t\tVERTT,\n\t\tVERTN,\n\t\tVBEWA,\n\
+  \t\tVBELN,\n\t\tVBEL2,\n\t\tPOSN2,\n\t\tETEN2,\n\t\tGKONT,\n\t\tGKART,\n\t\tGHKON,\n\
+  \t\tBUZEI_SENDER,\n\t\t_DATAAGING,\n\t\tACROBJTYPE,\n\t\tACRLOGSYS,\n\t\tACROBJ_ID,\n\
+  \t\tACRSOBJ_ID,\n\t\tACRITMTYPE,\n\t\tACRVALDAT,\n\t\tVALOBJTYPE,\n\t\tVALOBJ_ID,\n\
+  \t\tVALSOBJ_ID,\n\t\tNETDT,\n\t\tRISK_CLASS,\n\t\tSDM_VERSION,\n\t\tHBKID,\n\t\t\
+  HKTID,\n\t\tRE_BUKRS,\n\t\tRE_ACCOUNT,\n\t\tBDIF2,\n\t\tBDIF3,\n\t\tBDIFF,\n\t\t\
+  CCBTC,\n\t\tDABRZ,\n\t\tFKONT,\n\t\tIMKEY,\n\t\tINTRENO,\n\t\tMWST2,\n\t\tMWST3,\n\
+  \t\tMWSTS,\n\t\tPPDIF2,\n\t\tPPDIF3,\n\t\tPPDIFF,\n\t\tPRODPER,\n\t\tPROJN,\n\t\t\
+  QSSKZ,\n\t\tRFZEI,\n\t\tUZAWE,\n\t\tWMWST,\n\t\tWVERW,\n\t\tXOPVW,\n\t\tZFBDT,\n\
+  \t\tBDGT_ACCOUNT,\n\t\tBDGT_ACCOUNT_COCODE\n from RDS.S4HANA.BSEG_ADD where MANDT='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

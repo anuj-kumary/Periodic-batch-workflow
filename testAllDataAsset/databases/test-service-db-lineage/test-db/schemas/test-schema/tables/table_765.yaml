@@ -1,0 +1,117 @@
+name: table_765
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_765
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_765.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view WEBTOPLINE_WAREHOUSE_DATA(\n\t\"BusinessUnit\"\
+  ,\n\t\"VisitorID\",\n\t\"ETLExtractDate\",\n\t\"TotalSecondsSpent\",\n\t\"Registrations\"\
+  ,\n\t\"Logins\",\n\t\"FormSuccess\",\n\t\"VideoViews\",\n\t\"Downloads\",\n\t\"\
+  PageViews\",\n\t\"Visits\",\n\t\"UniqueVisitors\",\n\t\"VisitNumber\",\n\t\"AdobeMarketingCloudID\"\
+  ,\n\t\"LastTouchChannel\",\n\t\"PageURL\",\n\t\"Date\",\n\t\"AccountNumber\"\n)\
+  \ as\nSELECT \"BusinessUnit\" as \"BusinessUnit\",\n       \"VisitorID\" as \"VisitorID\"\
+  ,\n       \"ETLExtractDate\" as \"ETLExtractDate\",\n       \"TotalSecondsSpent\"\
+  \ as \"TotalSecondsSpent\",\n       \"Registrations\" as \"Registrations\",\n  \
+  \     \"Logins\" as \"Logins\",\n       \"FormSuccess\" as \"FormSuccess\",\n  \
+  \     \"VideoViews\" as \"VideoViews\",\n       \"Downloads\" as \"Downloads\",\n\
+  \       \"PageViews\" as \"PageViews\",\n       \"Visits\" as \"Visits\",\n    \
+  \   \"UniqueVisitors\" as \"UniqueVisitors\",\n       \"VisitNumber\" as \"VisitNumber\"\
+  ,\n       \"AdobeMarketingCloudID\" as \"AdobeMarketingCloudID\",\n       \"LastTouchChannel\"\
+  \ as \"LastTouchChannel\",\n       \"PageURL\" as \"PageURL\",\n       \"Date\"\
+  \ as \"Date\",\n       \"AccountNumber\" as \"AccountNumber\"\nFROM\n  (SELECT \"\
+  BusinessUnit\" as \"BusinessUnit\",\n          \"VisitorID\" as \"VisitorID\",\n\
+  \          \"ETLExtractDate\" as \"ETLExtractDate\",\n          \"TotalSecondsSpent\"\
+  \ as \"TotalSecondsSpent\",\n          \"Registrations\" as \"Registrations\",\n\
+  \          \"Logins\" as \"Logins\",\n          \"FormSuccess\" as \"FormSuccess\"\
+  ,\n          \"VideoViews\" as \"VideoViews\",\n          \"Downloads\" as \"Downloads\"\
+  ,\n          \"PageViews\" as \"PageViews\",\n          \"Visits\" as \"Visits\"\
+  ,\n          \"UniqueVisitors\" as \"UniqueVisitors\",\n          \"VisitNumber\"\
+  \ as \"VisitNumber\",\n          \"AdobeMarketingCloudID\" as \"AdobeMarketingCloudID\"\
+  ,\n          \"LastTouchChannel\" as \"LastTouchChannel\",\n          \"PageURL\"\
+  \ as \"PageURL\",\n          \"Date\" as \"Date\",\n          \"ChAccountNumber\"\
+  \ as \"ChAccountNumber\",\n          \"AdAccountNumber\" as \"AdAccountNumber\"\
+  ,\n          IFF((\"ChAccountNumber\") IS NULL ='random', \"AdAccountNumber\", \"\
+  ChAccountNumber\") as \"AccountNumber\"\n   FROM\n     (SELECT Projection_1.\"Date\"\
+  \ as \"Date\",\n             Projection_1.\"PageURL\" as \"PageURL\",\n        \
+  \     Projection_1.\"AdAccountNumber\" as \"AdAccountNumber\",\n             Projection_1.\"\
+  LastTouchChannel\" as \"LastTouchChannel\",\n             Projection_1.\"AdobeMarketingCloudID\"\
+  \ as \"AdobeMarketingCloudID\",\n             Projection_1.\"VisitNumber\" as \"\
+  VisitNumber\",\n             Projection_1.\"UniqueVisitors\" as \"UniqueVisitors\"\
+  ,\n             Projection_1.\"Visits\" as \"Visits\",\n             Projection_1.\"\
+  PageViews\" as \"PageViews\",\n             Projection_1.\"Downloads\" as \"Downloads\"\
+  ,\n             Projection_1.\"VideoViews\" as \"VideoViews\",\n             Projection_1.\"\
+  FormSuccess\" as \"FormSuccess\",\n             Projection_1.\"Logins\" as \"Logins\"\
+  ,\n             Projection_1.\"Registrations\" as \"Registrations\",\n         \
+  \    Projection_1.\"TotalSecondsSpent\" as \"TotalSecondsSpent\",\n            \
+  \ Projection_1.\"ETLExtractDate\" as \"ETLExtractDate\",\n             Projection_1.\"\
+  VisitorID\" as \"VisitorID\",\n             Projection_1.\"BusinessUnit\" as \"\
+  BusinessUnit\",\n             Projection_2.\"ChAccountNumber\" as \"ChAccountNumber\"\
+  \n      FROM\n        (SELECT \"Date\" as \"Date\",\n                \"SurfID\"\
+  \ as \"SurfID\",\n                \"Page URL c02 (evar2)\" as \"Page_URL\",\n  \
+  \              \"Last Touch Channel\" as \"Last_Touch_Channel\",\n             \
+  \   \"Adobe Marketing Cloud ID c03 (evar3)\" as \"Adobe_Marketing_Cloud_ID\",\n\
+  \                \"Visit Number\" as \"Visit_Number\",\n                \"Unique\
+  \ Visitors\" as \"UniqueVisitors\",\n                \"Visits\" as \"Visits\",\n\
+  \                \"Page Views\" as \"PageViews\",\n                \"Downloads (event23)\"\
+  \ as \"Downloads\",\n                \"e89 Video Views (event89)\" as \"VideoViews\"\
+  ,\n                \"e17 Form Success (event17)\" as \"FormSuccess\",\n        \
+  \        \"Logins (event14)\" as \"Logins\",\n                \"Registrations (event13)\"\
+  \ as \"Registrations\",\n                \"Total Seconds Spent\" as \"TotalSecondsSpent\"\
+  ,\n                \"ETL_EXTRACT_DATE\" as \"ETLExtractDate\",\n               \
+  \ \"Visitor_ID\" as \"Visitor_ID\",\n                \"Business Unit\" as \"Business_Unit\"\
+  ,\n                IFF(\"SurfID\" IS NULL\n                    OR TRIM(\"SurfID\"\
+  ) ='random', 'random', \"SurfID\") as \"AdAccountNumber\",\n                IFF(\"\
+  Page_URL\" IS NULL\n                    OR TRIM(\"Page_URL\") ='random', 'random',\
+  \ \"Page_URL\") as \"PageURL\",\n                IFF(\"Last_Touch_Channel\" IS NULL\n\
+  \                    OR TRIM(\"Last_Touch_Channel\") ='random', 'random', \"Last_Touch_Channel\"\
+  ) as \"LastTouchChannel\",\n                IFF(\"Adobe_Marketing_Cloud_ID\" IS\
+  \ NULL\n                    OR TRIM(\"Adobe_Marketing_Cloud_ID\") ='random', 'random',\
+  \ \"Adobe_Marketing_Cloud_ID\") as \"AdobeMarketingCloudID\",\n                IFF(\"\
+  Visit_Number\" IS NULL, 'random', \"Visit_Number\") as \"VisitNumber\",\n      \
+  \          IFF(\"Visitor_ID\" IS NULL\n                    OR TRIM(\"Visitor_ID\"\
+  ) ='random', 'random', \"Visitor_ID\") as \"VisitorID\",\n                IFF(\"\
+  Business_Unit\" IS NULL\n                    OR TRIM(\"Business_Unit\") ='random',\
+  \ 'random', \"Business_Unit\") as \"BusinessUnit\"\n         FROM \"RDS\".\"ADOBE_ANALYTICS\"\
+  .\"WEBTOPLINE_WAREHOUSE_DATA\") Projection_1\n      LEFT JOIN\n        (SELECT \"\
+  AdobeMCID\" as \"AdobeMCID\",\n                \"AccountNumber\" as \"ChAccountNumber\"\
+  \n         FROM \"RDS\".\"ADOBE_ANALYTICS\".\"ACCOUNT_MCID_MAPPING\") Projection_2\
+  \ ON Projection_1.\"AdobeMarketingCloudID\" = Projection_2.\"AdobeMCID\") Join_1)Projection_3;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

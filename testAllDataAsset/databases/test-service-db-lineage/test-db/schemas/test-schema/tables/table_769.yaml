@@ -1,0 +1,73 @@
+name: table_769
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_769
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_769.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_ST_TERRITORY(\n\t\"TerrUserRecSysID\"\
+  ,\n\t\"TerrUserEndDate\",\n\t\"TerrUserActive\",\n\t\"TerrUserJobFunction\",\n\t\
+  \"TerrUserSysID\",\n\t\"TerrUserDirectAssignment\",\n\t\"TerrUserPrimaryAssignment\"\
+  ,\n\t\"TerrUserJobFunctionName\",\n\t\"TerrUserName\",\n\t\"TerrUserTerritorySysID\"\
+  ,\n\t\"TerrUserSysUpdatedOn\",\n\t\"TerrUserTerritoryName\",\n\t\"TerrUserSystemSysID\"\
+  ,\n\t\"TerrUserJFAccess\",\n\t\"TerrUserJFAccessSYSID\",\n\t\"TerrUserRootSysID\"\
+  ,\n\t\"TerrUserFromSTA\",\n\t\"TerrUserTerritory\",\n\t\"TerrUserUserName\",\n\t\
+  \"TerrUserRootRecSysID\",\n\t\"TerrUserComp\",\n\t\"TerrUserJobFunctionSysID\",\n\
+  \t\"TerrUserFromSTTable\",\n\t\"TerrUserRecTerritory\",\n\t\"TerrUserUserSysID\"\
+  ,\n\t\"TerrUserRequestSysID\",\n\t\"TerrUserRequest\"\n) as -- SEMANTIC LAYER BEGINS\n\
+  \nSELECT \"U_REC_SYS_ID\" as \"TerrUserRecSysID\",\n       \"U_END_DATE\" as \"\
+  TerrUserEndDate\",\n       \"U_ACTIVE\" as \"TerrUserActive\",\n       \"U_JOB_FUNCTION\"\
+  \ as \"TerrUserJobFunction\",\n       \"U_USER\" as \"TerrUserSysID\",\n       \"\
+  U_DIRECT_ASSIGNMENT\" as \"TerrUserDirectAssignment\",\n       \"U_PRIMARY_ASSIGNMENT\"\
+  \ as \"TerrUserPrimaryAssignment\",\n       \"DV_U_JOB_FUNCTION\" as \"TerrUserJobFunctionName\"\
+  ,\n       \"DV_U_USER\" as \"TerrUserName\",\n       \"U_TERRITORY\" as \"TerrUserTerritorySysID\"\
+  ,\n       \"SYS_CREATED_ON\" as \"TerrUserSysUpdatedOn\",\n       \"DV_U_REC_SYS_ID\"\
+  \ as \"TerrUserTerritoryName\",\n       \"SYS_ID\" as \"TerrUserSystemSysID\",\n\
+  \t\t\"DV_U_JF_ACCESS\"  as    \"TerrUserJFAccess\",\n\t\t\"U_JF_ACCESS\"  as   \
+  \ \"TerrUserJFAccessSYSID\",\n\t\t\"U_ROOT_SYS_ID\"  as    \"TerrUserRootSysID\"\
+  ,\n\t\t\"U_FROM_STA\"  as    \"TerrUserFromSTA\",\n\t\t\"DV_U_TERRITORY\"  as  \
+  \  \"TerrUserTerritory\",\n\t\t\"DV_U_USER\"  as    \"TerrUserUserName\",\n\t\t\"\
+  U_ROOT_REC_SYS_ID\"  as    \"TerrUserRootRecSysID\",\n\t\t\"U_COMP\"  as    \"TerrUserComp\"\
+  ,\n\t\t\"U_JOB_FUNCTION\"  as    \"TerrUserJobFunctionSysID\",\n\t\t\"U_FROM_ST_TABLE\"\
+  \  as    \"TerrUserFromSTTable\",\n\t\t\"DV_U_REC_SYS_ID\"  as    \"TerrUserRecTerritory\"\
+  ,\n\t\t\"U_USER\"  as    \"TerrUserUserSysID\",\n\t\t\"U_REQUEST\"  as    \"TerrUserRequestSysID\"\
+  ,\n\t\t\"DV_U_REQUEST\"  as    \"TerrUserRequest\"\n\nFROM \"RDS\".\"SURF\".\"U_ST_TERRITORY\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

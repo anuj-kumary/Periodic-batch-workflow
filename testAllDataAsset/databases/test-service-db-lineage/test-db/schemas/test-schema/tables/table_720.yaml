@@ -1,0 +1,120 @@
+name: table_720
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_720
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_720.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_PRODUCT_CATEGORY(\n\tU_FEDERAL_INCIDENT_MANAGEMENT,\n\
+  \tDV_U_CATEGORY_OWNER_GROUP,\n\tDV_U_BUSINESS_AREA,\n\tDV_U_BUSINESS_UNIT,\n\tDV_U_PARENT,\n\
+  \tU_DEFINITION,\n\tDV_U_PRODUCT_OWNER_USER,\n\tU_PROBLEM_MANAGEMENT_GROUP,\n\tSYS_TAGS,\n\
+  \tU_INCIDENT_MAN_GRP___EXPRESS,\n\tDV_U_INCIDENT_MAN_USER___EXPRESS,\n\tU_INCIDENT_MAN_USER___EXPRESS,\n\
+  \tSYS_MOD_COUNT,\n\tU_CATEGORY_VP,\n\tSYS_UPDATED_ON,\n\tU_INCIDENT_MANAGEMENT_USER,\n\
+  \tDV_U_SUPPORT_PROBLEM_MANAGER,\n\tU_INCIDENT_RECORD_PRODUCER_EXP,\n\tU_INCIDENT_MANAGEMENT_GROUP,\n\
+  \tDV_U_FED_INCIDENT_MANAGEMENT_USER,\n\tU_INCIDENT_RECORD_PRODUCER,\n\tDV_U_PRODUCT,\n\
+  \tDV_U_INCIDENT_MAN_GRP___EXPRESS,\n\tDV_U_KNOWLEDGE_MANAGEMENT_USER,\n\tU_VP_CATEGORY_DEFAULT,\n\
+  \tU_CATEGORY_OWNER_GROUP,\n\tU_CHANGE_MANAGEMENT,\n\tU_INCIDENT_MANAGEMENT,\n\t\
+  U_PRODUCT_OWNER_USER,\n\tDV_U_CATEGORY_VP,\n\tU_ENHANCEMENT_REQUEST_RECORD_P,\n\t\
+  SYS_CREATED_ON,\n\tDV_U_FEDERAL_INCIDENT_MANAGEMENT,\n\tDV_U_KNOWLEDGE_MANAGEMENT_GROUP,\n\
+  \tU_KNOWLEDGE_MANAGEMENT_USER,\n\tDV_U_INCIDENT_MANAGEMENT_GROUP,\n\tDV_U_PROBLEM_MANAGEMENT_GROUP,\n\
+  \tSYS_UPDATED_BY,\n\tU_KNOWLEDGE_MANAGEMENT,\n\tU_HASHTAG,\n\tU_NAME,\n\tU_SUPPORT_PROBLEM_MANAGER,\n\
+  \tU_PROBLEM_MANAGEMENT_USER,\n\tU_FED_INCIDENT_MANAGEMENT_USER,\n\tU_REQUEST_MANAGEMENT,\n\
+  \tSYS_ID,\n\tDV_U_PROBLEM_MANAGEMENT_USER,\n\tU_ACTIVE,\n\tU_BUSINESS_UNIT,\n\t\
+  SYS_CREATED_BY,\n\tU_PRODUCT,\n\tU_PROBLEM_MANAGEMENT,\n\tU_PARENT,\n\tU_BUSINESS_AREA,\n\
+  \tU_KNOWLEDGE_MANAGEMENT_GROUP,\n\tDV_U_INCIDENT_MANAGEMENT_USER,\n\tPSP_PER_INSERT_DT,\n\
+  \tPSP_PER_UPDATE_DT,\n\tPSP_PER_DELETE_DT,\n\tU_KEYWORDS,\n\tDV_U_RELEASE_PROGRAM,\n\
+  \tU_RELEASE_PROGRAM,\n\tU_PRE_RELEASE,\n\tDV_U_REQUESTER_CC,\n\tU_REQUESTER_CC,\n\
+  \tU_PRODUCT_AREA_CC,\n\tDV_U_PRODUCT_AREA_CC,\n\tIS_FEDERAL,\n\tDV_U_REQUESTER,\n\
+  \tU_REQUESTER,\n\tU_PRODUCT_AREA,\n\tDV_U_PRODUCT_AREA\n) as -- SEMANTIC LAYER BEGINS\n\
+  \nSELECT \"U_FEDERAL_INCIDENT_MANAGEMENT\" as \"U_FEDERAL_INCIDENT_MANAGEMENT\"\
+  ,\n       \"DV_U_CATEGORY_OWNER_GROUP\" as \"DV_U_CATEGORY_OWNER_GROUP\",\n    \
+  \   \"DV_U_BUSINESS_AREA\" as \"DV_U_BUSINESS_AREA\",\n       \"DV_U_BUSINESS_UNIT\"\
+  \ as \"DV_U_BUSINESS_UNIT\",\n       \"DV_U_PARENT\" as \"DV_U_PARENT\",\n     \
+  \  \"U_DEFINITION\" as \"U_DEFINITION\",\n       \"DV_U_PRODUCT_OWNER_USER\" as\
+  \ \"DV_U_PRODUCT_OWNER_USER\",\n       \"U_PROBLEM_MANAGEMENT_GROUP\" as \"U_PROBLEM_MANAGEMENT_GROUP\"\
+  ,\n       \"SYS_TAGS\" as \"SYS_TAGS\",\n       \"U_INCIDENT_MAN_GRP___EXPRESS\"\
+  \ as \"U_INCIDENT_MAN_GRP___EXPRESS\",\n       \"DV_U_INCIDENT_MAN_USER___EXPRESS\"\
+  \ as \"DV_U_INCIDENT_MAN_USER___EXPRESS\",\n       \"U_INCIDENT_MAN_USER___EXPRESS\"\
+  \ as \"U_INCIDENT_MAN_USER___EXPRESS\",\n       \"SYS_MOD_COUNT\" as \"SYS_MOD_COUNT\"\
+  ,\n       \"U_CATEGORY_VP\" as \"U_CATEGORY_VP\",\n       \"SYS_UPDATED_ON\" as\
+  \ \"SYS_UPDATED_ON\",\n       \"U_INCIDENT_MANAGEMENT_USER\" as \"U_INCIDENT_MANAGEMENT_USER\"\
+  ,\n       \"DV_U_SUPPORT_PROBLEM_MANAGER\" as \"DV_U_SUPPORT_PROBLEM_MANAGER\",\n\
+  \       \"U_INCIDENT_RECORD_PRODUCER_EXP\" as \"U_INCIDENT_RECORD_PRODUCER_EXP\"\
+  ,\n       \"U_INCIDENT_MANAGEMENT_GROUP\" as \"U_INCIDENT_MANAGEMENT_GROUP\",\n\
+  \       \"DV_U_FED_INCIDENT_MANAGEMENT_USER\" as \"DV_U_FED_INCIDENT_MANAGEMENT_USER\"\
+  ,\n       \"U_INCIDENT_RECORD_PRODUCER\" as \"U_INCIDENT_RECORD_PRODUCER\",\n  \
+  \     \"DV_U_PRODUCT\" as \"DV_U_PRODUCT\",\n       \"DV_U_INCIDENT_MAN_GRP___EXPRESS\"\
+  \ as \"DV_U_INCIDENT_MAN_GRP___EXPRESS\",\n       \"DV_U_KNOWLEDGE_MANAGEMENT_USER\"\
+  \ as \"DV_U_KNOWLEDGE_MANAGEMENT_USER\",\n       \"U_VP_CATEGORY_DEFAULT\" as \"\
+  U_VP_CATEGORY_DEFAULT\",\n       \"U_CATEGORY_OWNER_GROUP\" as \"U_CATEGORY_OWNER_GROUP\"\
+  ,\n       \"U_CHANGE_MANAGEMENT\" as \"U_CHANGE_MANAGEMENT\",\n       \"U_INCIDENT_MANAGEMENT\"\
+  \ as \"U_INCIDENT_MANAGEMENT\",\n       \"U_PRODUCT_OWNER_USER\" as \"U_PRODUCT_OWNER_USER\"\
+  ,\n       \"DV_U_CATEGORY_VP\" as \"DV_U_CATEGORY_VP\",\n       \"U_ENHANCEMENT_REQUEST_RECORD_P\"\
+  \ as \"U_ENHANCEMENT_REQUEST_RECORD_P\",\n       \"SYS_CREATED_ON\" as \"SYS_CREATED_ON\"\
+  ,\n       \"DV_U_FEDERAL_INCIDENT_MANAGEMENT\" as \"DV_U_FEDERAL_INCIDENT_MANAGEMENT\"\
+  ,\n       \"DV_U_KNOWLEDGE_MANAGEMENT_GROUP\" as \"DV_U_KNOWLEDGE_MANAGEMENT_GROUP\"\
+  ,\n       \"U_KNOWLEDGE_MANAGEMENT_USER\" as \"U_KNOWLEDGE_MANAGEMENT_USER\",\n\
+  \       \"DV_U_INCIDENT_MANAGEMENT_GROUP\" as \"DV_U_INCIDENT_MANAGEMENT_GROUP\"\
+  ,\n       \"DV_U_PROBLEM_MANAGEMENT_GROUP\" as \"DV_U_PROBLEM_MANAGEMENT_GROUP\"\
+  ,\n       \"SYS_UPDATED_BY\" as \"SYS_UPDATED_BY\",\n       \"U_KNOWLEDGE_MANAGEMENT\"\
+  \ as \"U_KNOWLEDGE_MANAGEMENT\",\n       \"U_HASHTAG\" as \"U_HASHTAG\",\n     \
+  \  \"U_NAME\" as \"U_NAME\",\n       \"U_SUPPORT_PROBLEM_MANAGER\" as \"U_SUPPORT_PROBLEM_MANAGER\"\
+  ,\n       \"U_PROBLEM_MANAGEMENT_USER\" as \"U_PROBLEM_MANAGEMENT_USER\",\n    \
+  \   \"U_FED_INCIDENT_MANAGEMENT_USER\" as \"U_FED_INCIDENT_MANAGEMENT_USER\",\n\
+  \       \"U_REQUEST_MANAGEMENT\" as \"U_REQUEST_MANAGEMENT\",\n       \"SYS_ID\"\
+  \ as \"SYS_ID\",\n       \"DV_U_PROBLEM_MANAGEMENT_USER\" as \"DV_U_PROBLEM_MANAGEMENT_USER\"\
+  ,\n       \"U_ACTIVE\" as \"U_ACTIVE\",\n       \"U_BUSINESS_UNIT\" as \"U_BUSINESS_UNIT\"\
+  ,\n       \"SYS_CREATED_BY\" as \"SYS_CREATED_BY\",\n       \"U_PRODUCT\" as \"\
+  U_PRODUCT\",\n       \"U_PROBLEM_MANAGEMENT\" as \"U_PROBLEM_MANAGEMENT\",\n   \
+  \    \"U_PARENT\" as \"U_PARENT\",\n       \"U_BUSINESS_AREA\" as \"U_BUSINESS_AREA\"\
+  ,\n       \"U_KNOWLEDGE_MANAGEMENT_GROUP\" as \"U_KNOWLEDGE_MANAGEMENT_GROUP\",\n\
+  \       \"DV_U_INCIDENT_MANAGEMENT_USER\" as \"DV_U_INCIDENT_MANAGEMENT_USER\",\n\
+  \       \"PSP_PER_INSERT_DT\" as \"PSP_PER_INSERT_DT\",\n       \"PSP_PER_UPDATE_DT\"\
+  \ as \"PSP_PER_UPDATE_DT\",\n       \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\"\
+  ,\n       \"U_KEYWORDS\" as \"U_KEYWORDS\",\n       \"DV_U_RELEASE_PROGRAM\" as\
+  \ \"DV_U_RELEASE_PROGRAM\",\n       \"U_RELEASE_PROGRAM\" as \"U_RELEASE_PROGRAM\"\
+  ,\n       \"U_PRE_RELEASE\" as \"U_PRE_RELEASE\",\n       \"DV_U_REQUESTER\" as\
+  \ \"DV_U_REQUESTER_CC\",\n       \"U_REQUESTER\" as \"U_REQUESTER_CC\",\n      \
+  \ \"U_PRODUCT_AREA\" as \"U_PRODUCT_AREA_CC\",\n       \"DV_U_PRODUCT_AREA\" as\
+  \ \"DV_U_PRODUCT_AREA_CC\",\n       'random' as \"IS_FEDERAL\",\n       \"DV_U_REQUESTER_CC\"\
+  \ as \"DV_U_REQUESTER\",\n       \"U_REQUESTER_CC\" as \"U_REQUESTER\",\n      \
+  \ \"U_PRODUCT_AREA_CC\" as \"U_PRODUCT_AREA\",\n       \"DV_U_PRODUCT_AREA_CC\"\
+  \ as \"DV_U_PRODUCT_AREA\"\nFROM \"RDS\".\"HI\".\"U_PRODUCT_CATEGORY\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

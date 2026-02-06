@@ -1,0 +1,65 @@
+name: table_739
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_739
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_739.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view EMPLOYEE_ROSTER_SALES_AREA_MAPPING(\n\t\"\
+  Employees\",\n\t\"RecordType\",\n\t\"Employee_ID\",\n\t\"Employee_Name\",\n\t\"\
+  Employee_Type\",\n\t\"Hire_Date\",\n\t\"Org_Hire_Date\",\n\t\"Job_Effective_Date\"\
+  ,\n\t\"Hire_Quarter\",\n\t\"Reporting_Quarter\",\n\t\"Cost_Center_Code\",\n\t\"\
+  Department_Name\",\n\t\"Business_Title\",\n\t\"Manager_EID\",\n\t\"Manager_Name\"\
+  ,\n\t\"Geo\",\n\t\"Location\",\n\t\"Location_Country\",\n\t\"Exec_1_Name\",\n\t\"\
+  Exec_2_Name\",\n\t\"Exec_3_Name\",\n\t\"Exec_4_Name\",\n\t\"Exec_5_Name\",\n\t\"\
+  Exec_6_Name\",\n\t\"Exec_7_Name\",\n\t\"Business_Unit\",\n\t\"Email\",\n\t\"LOA_Status\"\
+  ,\n\t\"Sales_Geo\",\n\t\"Sales_Major_Area\",\n\t\"Sales_Area\",\n\t\"Sales_Region\"\
+  ,\n\t\"Sales_District\",\n\t\"End_Date\",\n\t\"Last_Transfer_Date\",\n\t\"Transfer_from_Department\"\
+  ,\n\t\"Department_Current\",\n\t\"Contractor\",\n\t\"Exclude_from_HC_Forecast\"\n\
+  ) as SELECT EMPLOYEES,\nRECORDTYPE,\nEMPLOYEE_ID,\nEMPLOYEE_NAME,\nEMPLOYEE_TYPE,\n\
+  HIRE_DATE,\nORG_HIRE_DATE,\nJOB_EFFECTIVE_DATE,\nHIRE_QUARTER,\nREPORTING_QUARTER,\n\
+  COST_CENTER_CODE,\nDEPARTMENT_NAME,\nBUSINESS_TITLE,\nMANAGER_EID,\nMANAGER_NAME,\n\
+  GEO,\nLOCATION,\nLOCATION_COUNTRY,\nEXEC_1_NAME,\nEXEC_2_NAME,\nEXEC_3_NAME,\nEXEC_4_NAME,\n\
+  EXEC_5_NAME,\nEXEC_6_NAME,\nEXEC_7_NAME,\nBUSINESS_UNIT,\nEMAIL,\nLOA_STATUS,\n\
+  SALES_GEO,\nSALES_MAJOR_AREA,\nSALES_AREA,\nSALES_REGION,\nSALES_DISTRICT,\nEND_DATE,\n\
+  LAST_TRANSFER_DATE,\nTRANSFER_FROM_DEPARTMENT,\nDEPARTMENT_CURRENT,\nCONTRACTOR,\n\
+  EXCLUDE_FROM_HC_FORECAST FROM \"RDS\".\"ANAPLAN\".\"EMPLOYEE_ROSTER_SALES_AREA_MAPPING\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

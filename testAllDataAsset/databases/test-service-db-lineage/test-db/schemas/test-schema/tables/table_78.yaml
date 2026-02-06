@@ -1,0 +1,64 @@
+name: table_78
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_78
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_78.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view CONTACT_C_LEVEL_DETAILS(\n\t\"PrimaryKey\"\
+  ,\n\t\"AccountMDMID\",\n\t\"AccountSurfID\",\n\t\"CLevelContactMDMID\",\n\t\"CLevelContactFullNm\"\
+  ,\n\t\"CLevelContactEmail\",\n\t\"CLevelContactJobTitle\",\n\t\"JobFunction\",\n\
+  \t\"ContactPhone\",\n\t\"CLevelContactSourceUrl\",\n\t\"LastUpdateDate\",\n\t\"\
+  DeleteFlag\",\n\t\"ETLExtractDate\",\n\t\"ActiveFlag\",\n\t\"OrgLevel\",\n\t\"ValidationFlag\"\
+  ,\n\t\"AcctPartyRowIDObject\",\n\t\"CntPartyRowIDObject\"\n) as -- SEMANTIC LAYER\
+  \ BEGINS\n\nSELECT \"PRIMARY_KEY\" as \"PrimaryKey\",\n       \"ACCOUNT_MDM_ID\"\
+  \ as \"AccountMDMID\",\n       \"ACCOUNT_SURF_ID\" as \"AccountSurfID\",\n     \
+  \  \"C_LEVEL_CONTACT_MDM_ID\" as \"CLevelContactMDMID\",\n       \"C_LEVEL_CONTACT_FULL_NM\"\
+  \ as \"CLevelContactFullNm\",\n       \"C_LEVEL_CONTACT_EMAIL\" as \"CLevelContactEmail\"\
+  ,\n       \"C_LEVEL_CONTACT_JOB_TITLE\" as \"CLevelContactJobTitle\",\n       \"\
+  JOB_FUNCTION\" as \"JobFunction\",\n       \"CONTACT_PHONE\" as \"ContactPhone\"\
+  ,\n       \"C_LEVEL_CONTACT_SOURCE_URL\" as \"CLevelContactSourceUrl\",\n      \
+  \ \"LAST_UPDATE_DATE\" as \"LastUpdateDate\",\n       \"DELETE_FLAG\" as \"DeleteFlag\"\
+  ,\n       \"ETL_EXTRACT_DATE\" as \"ETLExtractDate\",\n       \"ACTV_FLG\" as \"\
+  ActiveFlag\",\n       \"ORG_LEVEL\" as \"OrgLevel\",\n       \"VALIDATION_FLAG\"\
+  \ as \"ValidationFlag\",\n       \"ACCT_PARTY_ROWID_OBJECT\" as \"AcctPartyRowIDObject\"\
+  ,\n       \"CNT_PARTY_ROWID_OBJECT\" as \"CntPartyRowIDObject\"\nFROM RDS.\"MDM\"\
+  .\"CONTACT_C_LEVEL_DETAILS\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

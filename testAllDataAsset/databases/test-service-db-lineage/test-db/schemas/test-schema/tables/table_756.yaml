@@ -1,0 +1,67 @@
+name: table_756
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_756
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_756.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view ACCOUNT_TERRITORY(\n\t\"AccTerrNonSplit\"\
+  ,\n\t\"AccTerrNextFYTerritory\",\n\t\"AccTerrAccountOwner\",\n\t\"AccTerrEmployeeNumber\"\
+  ,\n\t\"AccTerrPlanDistrict\",\n\t\"AccTerrPlanRegion\",\n\t\"AccTerrPlanArea\",\n\
+  \t\"AccTerrPlanGroup\",\n\t\"AccTerrPlanGeo\",\n\t\"AccTerrTAM\",\n\t\"AccTerrEtlExtractDate\"\
+  ,\n\t\"AccTerrBU\",\n\t\"AcctTerrRepTitle\"\n) as\nSELECT \"AccTerrNonSplit\" as\
+  \ \"AccTerrNonSplit\",\n       \"AccTerrNextFYTerritory\" as \"AccTerrNextFYTerritory\"\
+  ,\n       \"AccTerrAccountOwner\" as \"AccTerrAccountOwner\",\n       \"AccTerrEmployeeNumber\"\
+  \ as \"AccTerrEmployeeNumber\",\n       \"AccTerrPlanDistrict\" as \"AccTerrPlanDistrict\"\
+  ,\n       \"AccTerrPlanRegion\" as \"AccTerrPlanRegion\",\n       \"AccTerrPlanArea\"\
+  \ as \"AccTerrPlanArea\",\n       \"AccTerrPlanGroup\" as \"AccTerrPlanGroup\",\n\
+  \       \"AccTerrPlanGeo\" as \"AccTerrPlanGeo\",\n       \"AccTerrTAM\" as \"AccTerrTAM\"\
+  ,\n       \"AccTerrEtlExtractDate\" as \"AccTerrEtlExtractDate\",\n       \"AccTerrBU\"\
+  \ as \"AccTerrBU\",\n       \"AcctTerrRepTitle\" as \"AcctTerrRepTitle\"\nFROM\n\
+  \  (SELECT \"Non Split\" as \"AccTerrNonSplit\",\n          \"Next FY Territory\"\
+  \ as \"AccTerrNextFYTerritory\",\n          \"Account Owner\" as \"AccTerrAccountOwner\"\
+  ,\n          \"Employee Number\" as \"AccTerrEmployeeNumber\",\n          \"Plan\
+  \ District\" as \"AccTerrPlanDistrict\",\n          \"Plan Region\" as \"AccTerrPlanRegion\"\
+  ,\n          \"Plan Area\" as \"AccTerrPlanArea\",\n          \"Plan Group\" as\
+  \ \"AccTerrPlanGroup\",\n          \"Plan Geo\" as \"AccTerrPlanGeo\",\n       \
+  \   \"TAM\" as \"AccTerrTAM\",\n          \"ETL_EXTRACT_DATE\" as \"AccTerrEtlExtractDate\"\
+  ,\n          \"BU\" as \"AccTerrBU\",\n          \"REP_TITLE\" as \"AcctTerrRepTitle\"\
+  \n   FROM \"RDS\".\"MARKETING\".\"TBLANAPLANACCTTERRITORY\")Projection_1;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

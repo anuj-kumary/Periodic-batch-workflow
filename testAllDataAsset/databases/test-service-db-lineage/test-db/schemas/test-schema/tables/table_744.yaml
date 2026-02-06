@@ -1,0 +1,65 @@
+name: table_744
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_744
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_744.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UD_PIPELINE_SNAPSHOT_DATES(\n\t\"SnapshotDate\"\
+  ,\n\t\"Quarter\",\n\t\"ExtractMonthName\",\n\t\"ExtractMonth\",\n\t\"ReportingMonth\"\
+  ,\n\t\"DataType\",\n\t\"MonthType\",\n\t\"MonthNumberofQtr\",\n\t\"QuarterReference\"\
+  ,\n\t\"STLQFlag\",\n\t\"STLYFlag\",\n\t\"MonthNumofYear\",\n\t\"SnapshotDate_CC\"\
+  ,\n\t\"QuarterDescription\",\n\t\"AnalysisQuarter\",\n\t\"RecordType\"\n) as --\
+  \ SEMANTIC LAYER BEGINS\n\nSELECT \"Snapshot_Date\" as \"SnapshotDate\",\n     \
+  \  \"Snapshot_Sales_Quarter\" as \"Quarter\",\n       \"ExtractMonthName\" as \"\
+  ExtractMonthName\",\n       \"ExtractMonth\" as \"ExtractMonth\",\n       \"ReportingMonth\"\
+  \ as \"ReportingMonth\",\n       \"DataType\" as \"DataType\",\n       \"MonthType\"\
+  \ as \"MonthType\",\n       \"MonthNumberofQtr\" as \"MonthNumberofQtr\",\n    \
+  \   \"QuarterReference\" as \"QuarterReference\",\n       \"STLQFlag\" as \"STLQFlag\"\
+  ,\n       \"STLYFlag\" as \"STLYFlag\",\n       \"MonthNumofYear\" as \"MonthNumofYear\"\
+  ,\n       case\n           when TO_TIME(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP)) < 'random'\n\
+  \                and MONTH(\"SnapshotDate\") = MONTH(CURRENT_TIMESTAMP)\n      \
+  \          and YEAR(\"SnapshotDate\") = YEAR(CURRENT_TIMESTAMP)\n              \
+  \  and RIGHT(TO_date(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP)), 'random') = 'random'\
+  \ then DATEADD(DAY, 'random', \"SnapshotDate\")\n           else \"SnapshotDate\"\
+  \n       end as \"SnapshotDate_CC\",\n       \"QTR_DESCRIPTION\" as \"QuarterDescription\"\
+  ,\n       \"Analysis_Quarter\" as \"AnalysisQuarter\",\n       \"RecordType\" as\
+  \ \"RecordType\"\nFROM \"EDW_LS\".\"SALES_EM\".\"UD_PIPELINE_SNAPSHOT_DATES\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

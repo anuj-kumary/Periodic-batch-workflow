@@ -1,0 +1,64 @@
+name: table_749
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_749
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_749.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UA_APP_USAGE(\n\tINSERT_OTHER_COUNT,\n\t\
+  APP_TYPE,\n\tDV_APP_TYPE,\n\tTABLE_NAMES,\n\tDELETE_COUNT,\n\tFULFILL_COUNT,\n\t\
+  ACCESS_COUNT,\n\tSYS_UPDATED_ON,\n\tLINEAGE_ID,\n\tPRODUCE_COUNT,\n\tPAGE_NAMES,\n\
+  \tSYS_ID,\n\tDELETE_OWN_COUNT,\n\tSYS_UPDATED_BY,\n\tUPDATE_OWN_COUNT,\n\tSYS_CREATED_ON,\n\
+  \tSYS_DOMAIN,\n\tDV_SYS_DOMAIN,\n\tDELETE_OTHER_COUNT,\n\tAPP_ID,\n\tSYS_CREATED_BY,\n\
+  \tTIME_STAMP,\n\tINSERT_OWN_COUNT,\n\tUPDATE_COUNT,\n\tSYS_MOD_COUNT,\n\tSYS_DOMAIN_PATH,\n\
+  \tSYS_TAGS,\n\tAPP_NAME,\n\tINSERT_COUNT,\n\tLICENSE_IDS,\n\tSCOPES,\n\tUSER,\n\t\
+  DV_USER,\n\tUPDATE_OTHER_COUNT,\n\tSTATUS,\n\tDV_STATUS,\n\tPSP_PER_INSERT_DT,\n\
+  \tPSP_DELETE,\n\tPSP_PER_DELETE_DT,\n\tPSP_PER_UPDATE_DT,\n\tPSP_SOURCE_DETAILS\n\
+  ) as -- SEMANTIC LAYER BEGINS\nSELECT\n    INSERT_OTHER_COUNT ,\n\tAPP_TYPE,\n\t\
+  DV_APP_TYPE ,\n\tTABLE_NAMES ,\n\tDELETE_COUNT ,\n\tFULFILL_COUNT ,\n\tACCESS_COUNT\
+  \ ,\n\tSYS_UPDATED_ON ,\n\tLINEAGE_ID ,\n\tPRODUCE_COUNT ,\n\tPAGE_NAMES ,\n\tSYS_ID\
+  \ ,\n\tDELETE_OWN_COUNT ,\n\tSYS_UPDATED_BY ,\n\tUPDATE_OWN_COUNT ,\n\tSYS_CREATED_ON\
+  \ ,\n\tSYS_DOMAIN ,\n\tDV_SYS_DOMAIN ,\n\tDELETE_OTHER_COUNT ,\n\tAPP_ID ,\n\tSYS_CREATED_BY\
+  \ ,\n\tTIME_STAMP ,\n\tINSERT_OWN_COUNT ,\n\tUPDATE_COUNT ,\n\tSYS_MOD_COUNT ,\n\
+  \tSYS_DOMAIN_PATH ,\n\tSYS_TAGS ,\n\tAPP_NAME ,\n\tINSERT_COUNT ,\n\tLICENSE_IDS\
+  \ ,\n\tSCOPES ,\n\tUSER ,\n\tDV_USER ,\n\tUPDATE_OTHER_COUNT ,\n\tSTATUS ,\n\tDV_STATUS\
+  \ ,\n\tPSP_PER_INSERT_DT ,\n\tPSP_DELETE ,\n\tPSP_PER_DELETE_DT ,\n\tPSP_PER_UPDATE_DT\
+  \ ,\n\tPSP_SOURCE_DETAILS\nFROM RDS.SURF.UA_APP_USAGE ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
