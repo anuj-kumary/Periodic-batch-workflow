@@ -1,0 +1,130 @@
+name: ddltable
+fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable
+tableType: Regular
+columns:
+  - name: headers
+    dataType: STRUCT
+    dataTypeDisplay: "struct<objectid:string,publicationdatetime:timestamp,eventtype:string,source:string,eventid:string,correlationid:string,sourceid:string>"
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers
+    tags: []
+    children:
+      - name: objectid
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.objectid
+        tags: []
+        children: []
+      - name: publicationdatetime
+        dataType: TIMESTAMP
+        dataTypeDisplay: timestamp
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.publicationdatetime
+        tags: []
+        children: []
+      - name: eventtype
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.eventtype
+        tags: []
+        children: []
+      - name: source
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.source
+        tags: []
+        children: []
+      - name: eventid
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.eventid
+        tags: []
+        children: []
+      - name: correlationid
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.correlationid
+        tags: []
+        children: []
+      - name: sourceid
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.headers.sourceid
+        tags: []
+        children: []
+    customMetrics: []
+  - name: gtins
+    dataType: ARRAY
+    arrayDataType: BIGINT
+    dataTypeDisplay: array<bigint>
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.gtins
+    tags: []
+    children: []
+    customMetrics: []
+  - name: vatPeriods
+    dataType: ARRAY
+    arrayDataType: STRUCT
+    dataTypeDisplay: "array<struct<vatcode:string,datevalidfrom:date,datevaliduntil:date,countrycode:string>>"
+    fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.vatPeriods
+    tags: []
+    children:
+      - name: vatcode
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.vatPeriods.vatcode
+        tags: []
+        children: []
+      - name: datevalidfrom
+        dataType: DATE
+        dataTypeDisplay: date
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.vatPeriods.datevalidfrom
+        tags: []
+        children: []
+      - name: datevaliduntil
+        dataType: DATE
+        dataTypeDisplay: date
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.vatPeriods.datevaliduntil
+        tags: []
+        children: []
+      - name: countrycode
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: DBX_TEXT.demo.new_schema.ddltable.vatPeriods.countrycode
+        tags: []
+        children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: de4cee1a-5f85-472d-aa5b-d9ffe1b75785
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: DBX_TEXT.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 598fd8c8-f34d-4c3f-bf6a-4bdb03edc6f8
+  type: database
+  name: demo
+  fullyQualifiedName: DBX_TEXT.demo
+  displayName: demo
+  deleted: false
+service:
+  id: bd97b214-e735-4211-a08b-a0f384214564
+  type: databaseService
+  name: DBX_TEXT
+  fullyQualifiedName: DBX_TEXT
+  description: ""
+  displayName: DBX_TEXT
+  deleted: false
+serviceType: Databricks
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2debb392a2b492da898bc1594c165882
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,94 @@
+name: orders_raw
+fullyQualifiedName: dbx - keshav.demo.uniform_schema.orders_raw
+tableType: Regular
+columns:
+  - name: order_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.orders_raw.order_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.orders_raw.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.orders_raw.order_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_amount
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: double
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.orders_raw.order_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: currency
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.uniform_schema.orders_raw.currency
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1b72b315-222e-41ec-9763-30125a1fdabc
+    type: user
+    name: suman
+    fullyQualifiedName: suman
+    displayName: suman
+    deleted: false
+databaseSchema:
+  id: 44eb96a5-3770-488f-9aae-7a4df8401aeb
+  type: databaseSchema
+  name: uniform_schema
+  fullyQualifiedName: dbx - keshav.demo.uniform_schema
+  description: uniform schema demo
+  displayName: uniform_schema
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/a8df6df6-db35-4f16-91a7-b51e714a161f
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b974cd495245f0a706a6063d428e0a07
+processedLineage: false
+entityStatus: Unprocessed
