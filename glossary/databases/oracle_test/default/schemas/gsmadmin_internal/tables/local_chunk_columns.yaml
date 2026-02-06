@@ -1,0 +1,112 @@
+name: local_chunk_columns
+fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns
+tableType: View
+columns:
+  - name: tabfam_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.tabfam_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: shard_level
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(1,0)"
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.shard_level
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: col_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.col_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: col_idx_in_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.col_idx_in_key
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: eff_type
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.eff_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: character_set
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.character_set
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: col_type
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.col_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: col_size
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.gsmadmin_internal.local_chunk_columns.col_size
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f8e90d5f-96cc-4df9-ab89-635591a57f08
+  type: databaseSchema
+  name: gsmadmin_internal
+  fullyQualifiedName: oracle_test.default.gsmadmin_internal
+  displayName: gsmadmin_internal
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 57c545f9963758544675afd32fea92c1
+processedLineage: false
+entityStatus: Approved

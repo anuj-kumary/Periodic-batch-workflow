@@ -1,0 +1,94 @@
+name: _BASE_OPT_FINDING
+fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING
+tableType: View
+columns:
+  - name: f_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING.f_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: F_OWN#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING.F_OWN#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: type
+    dataType: VARCHAR
+    dataLength: 26
+    dataTypeDisplay: varchar2(26)
+    fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING.type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: reason
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar2(36)
+    fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING.reason
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ctime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6)
+    fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING.ctime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tab_cnt
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys._BASE_OPT_FINDING.tab_cnt
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d9192fdb0ff58b886038ee7f38723745
+processedLineage: false
+entityStatus: Approved

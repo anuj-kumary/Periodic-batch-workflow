@@ -1,0 +1,103 @@
+name: RDS_SYS_PRIVS
+fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS
+tableType: Regular
+columns:
+  - name: privilege
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: varchar2(40)
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.privilege
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: revoke_from_public
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.revoke_from_public
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: revoke_from_all_users
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.revoke_from_all_users
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: grant_to_public
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.grant_to_public
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: grant_to_master_user
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.grant_to_master_user
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: include_with_admin_option
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2(1)
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.include_with_admin_option
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: creation_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: oracle_test.default.rdsadmin.RDS_SYS_PRIVS.creation_date
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 4e5fec0f-68e3-4e71-9986-d123da76d830
+  type: databaseSchema
+  name: rdsadmin
+  fullyQualifiedName: oracle_test.default.rdsadmin
+  displayName: rdsadmin
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 8c4ac883bf0f21ed7126cfa8aa1eacbc
+processedLineage: false
+entityStatus: Approved

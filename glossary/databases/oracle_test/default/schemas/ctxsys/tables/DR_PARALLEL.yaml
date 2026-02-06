@@ -1,0 +1,96 @@
+name: DR$PARALLEL
+fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL
+tableType: Regular
+columns:
+  - name: p_idx_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL.p_idx_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_slave_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL.p_slave_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: p_job
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL.p_job
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_partition
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL.p_partition
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_status
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar2(10)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL.p_status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: p_error
+    dataType: VARCHAR
+    dataLength: 2000
+    dataTypeDisplay: varchar2(2000)
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$PARALLEL.p_error
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - p_idx_id
+      - p_slave_id
+owners: []
+databaseSchema:
+  id: 5e47000e-823d-436f-9638-5b6ec8cedf56
+  type: databaseSchema
+  name: ctxsys
+  fullyQualifiedName: oracle_test.default.ctxsys
+  displayName: ctxsys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ac0e6dacd8c9765c99edf96f15896ca0
+processedLineage: false
+entityStatus: Approved

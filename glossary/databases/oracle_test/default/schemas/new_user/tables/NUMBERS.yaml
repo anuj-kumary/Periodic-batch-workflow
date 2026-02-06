@@ -1,0 +1,94 @@
+name: NUMBERS
+fullyQualifiedName: oracle_test.default.new_user.NUMBERS
+tableType: Regular
+columns:
+  - name: num1
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.new_user.NUMBERS.num1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: num2
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.new_user.NUMBERS.num2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d86f6cc5-b844-4840-8c10-305e0487447a
+  type: databaseSchema
+  name: new_user
+  fullyQualifiedName: oracle_test.default.new_user
+  displayName: new_user
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+tableProfilerConfig:
+  profileSampleType: PERCENTAGE
+  profileSample: 10.0
+  sampleDataCount: 50
+  randomizedSample: true
+  computeTableMetrics: true
+  computeColumnMetrics: true
+customMetrics: []
+testSuite:
+  id: 273fe888-0ee1-4b13-811b-3ad7d2bd747b
+  type: testSuite
+  name: NUMBERS.testSuite
+  fullyQualifiedName: oracle_test.default.new_user.NUMBERS.testSuite
+  displayName: NUMBERS.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: dataProducts
+      newValue: "[{\"id\":\"d3fa8a0c-b894-43d8-b0b7-0a8f4ab6a0bf\",\"type\":\"dataProduct\"\
+        ,\"name\":\"Customer 360\",\"fullyQualifiedName\":\"Customer 360\",\"description\"\
+        :\"<p>Master customer table </p>\",\"displayName\":\"C360\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+domains:
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+dataProducts:
+  - id: d3fa8a0c-b894-43d8-b0b7-0a8f4ab6a0bf
+    type: dataProduct
+    name: Customer 360
+    fullyQualifiedName: Customer 360
+    description: <p>Master customer table </p>
+    displayName: C360
+sourceHash: 32baa285f1dec74a460af52a74396a40
+processedLineage: false
+entityStatus: Approved

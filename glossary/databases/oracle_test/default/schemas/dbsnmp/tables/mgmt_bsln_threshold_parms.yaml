@@ -1,0 +1,104 @@
+name: mgmt_bsln_threshold_parms
+fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms
+description: Database Metric Baseline Thresholds (10.2)
+tableType: View
+columns:
+  - name: bsln_guid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.bsln_guid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: datasource_guid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.datasource_guid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: threshold_method
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar2(16)
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.threshold_method
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: num_occurrences
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.num_occurrences
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: warning_param
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.warning_param
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: critical_param
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.critical_param
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fail_action
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar2(16)
+    fullyQualifiedName: oracle_test.default.dbsnmp.mgmt_bsln_threshold_parms.fail_action
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 456c1329-65cb-4a23-ae5d-ffe945897b97
+  type: databaseSchema
+  name: dbsnmp
+  fullyQualifiedName: oracle_test.default.dbsnmp
+  displayName: dbsnmp
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 96520c4b5ded36d8ec4df01c13f5654c
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,69 @@
+name: DR$TREE
+fullyQualifiedName: oracle_test.default.ctxsys.DR$TREE
+tableType: Regular
+columns:
+  - name: idxid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$TREE.idxid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: secid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$TREE.secid
+    tags: []
+    children: []
+    customMetrics: []
+  - name: node_seq
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.ctxsys.DR$TREE.node_seq
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - idxid
+      - secid
+owners: []
+databaseSchema:
+  id: 5e47000e-823d-436f-9638-5b6ec8cedf56
+  type: databaseSchema
+  name: ctxsys
+  fullyQualifiedName: oracle_test.default.ctxsys
+  displayName: ctxsys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: feda1990924665069dc5a8a98d43ce96
+processedLineage: false
+entityStatus: Approved
