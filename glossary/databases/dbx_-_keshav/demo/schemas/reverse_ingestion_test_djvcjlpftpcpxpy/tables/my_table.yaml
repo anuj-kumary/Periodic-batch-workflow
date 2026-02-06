@@ -1,0 +1,109 @@
+name: my_table
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table
+tableType: Regular
+columns:
+  - name: First Name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.First
+      Name
+    tags:
+      - tagFQN: pii.Sensitive
+        name: Sensitive
+        description: UNITY CATALOG TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.last_name
+    tags:
+      - tagFQN: general.Address
+        name: Address
+        description: DATABRICKS TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: pii.NonSensitive
+        name: NonSensitive
+        description: UNITY CATALOG TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: Date of Birth
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table.Date
+      of Birth
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: 8bc59090-9836-440d-a4e8-8e774c185632
+  type: databaseSchema
+  name: reverse_ingestion_test_djvcjlpftpcpxpy
+  fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy
+  displayName: reverse_ingestion_test_djvcjlpftpcpxpy
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/3a686a15-0101-4efb-baee-bfd9a270b8d8
+tags:
+  - tagFQN: pii.Sensitive
+    name: Sensitive
+    description: UNITY CATALOG TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f0b21a82c9a2d5c82c8919e52bee59c0
+processedLineage: false
+entityStatus: Unprocessed

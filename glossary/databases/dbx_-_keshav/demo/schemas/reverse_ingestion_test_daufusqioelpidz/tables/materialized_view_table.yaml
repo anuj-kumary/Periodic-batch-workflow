@@ -1,0 +1,94 @@
+name: materialized_view_table
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.materialized_view_table
+description: new description - reverse metadata testing.
+tableType: View
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: new description.
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.materialized_view_table.id
+    tags:
+      - tagFQN: metadata.reverse
+        name: reverse
+        description: DATABRICKS TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.materialized_view_table.count
+    tags:
+      - tagFQN: color.green
+        name: green
+        description: DATABRICKS TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: 7f94db4b-a8a4-41c4-a6bd-db525bd7e112
+  type: databaseSchema
+  name: reverse_ingestion_test_daufusqioelpidz
+  fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz
+  description: Updated schema description
+  displayName: reverse_ingestion_test_daufusqioelpidz
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+schemaDefinition: "SELECT id, COUNT(*) AS count FROM demo.reverse_ingestion_test_daufusqioelpidz.regular_table\
+  \ GROUP BY id"
+tags:
+  - tagFQN: metadata.reverse
+    name: reverse
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 56a644744c1e552271dc2537649e2e73
+processedLineage: false
+entityStatus: Unprocessed
