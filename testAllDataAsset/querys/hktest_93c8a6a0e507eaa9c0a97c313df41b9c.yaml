@@ -1,0 +1,26 @@
+name: 93c8a6a0e507eaa9c0a97c313df41b9c
+fullyQualifiedName: hktest.93c8a6a0e507eaa9c0a97c313df41b9c
+owners: []
+duration: 79.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CONT_ACCUM_NETPREMPD_ATINT\"\
+  ) AS count_1 \nFROM \"CURATED\".\"CONT\" GROUP BY \"CONT_ACCUM_NETPREMPD_ATINT\"\
+  \ \nHAVING count(\"CONT_ACCUM_NETPREMPD_ATINT\") = ?) AS only_once\n LIMIT ?"
+checksum: 93c8a6a0e507eaa9c0a97c313df41b9c
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

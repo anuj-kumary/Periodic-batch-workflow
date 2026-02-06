@@ -1,0 +1,40 @@
+name: 95b48073075fecb6b01cdb4c0179a0f6
+fullyQualifiedName: hktest.95b48073075fecb6b01cdb4c0179a0f6
+owners: []
+duration: 489.0
+users: []
+query: "WITH \"5856cac33d051363dc9eeb2de9e675ce_rnd\" AS \n(SELECT \"WEB_RETURNS_1\"\
+  .\"WR_NET_LOSS\" AS \"WR_NET_LOSS\" \nFROM \"TPCDS_SF100TCL\".\"WEB_RETURNS\" AS\
+  \ \"WEB_RETURNS_1\" TABLESAMPLE ROW(? ROWS)), \n\"5856cac33d051363dc9eeb2de9e675ce_sample\"\
+  \ AS \n(SELECT \"5856cac33d051363dc9eeb2de9e675ce_rnd\".\"WR_NET_LOSS\" AS \"WR_NET_LOSS\"\
+  \ \nFROM \"5856cac33d051363dc9eeb2de9e675ce_rnd\")\n SELECT count(CASE WHEN (\"\
+  WR_NET_LOSS\" >= ? AND \"WR_NET_LOSS\" < ?) THEN \"WR_NET_LOSS\" END) AS \"27.900\
+  \ to 481.094\", count(CASE WHEN (\"WR_NET_LOSS\" >= ? AND \"WR_NET_LOSS\" < ?) THEN\
+  \ \"WR_NET_LOSS\" END) AS \"481.094 to 934.288\", count(CASE WHEN (\"WR_NET_LOSS\"\
+  \ >= ? AND \"WR_NET_LOSS\" < ?) THEN \"WR_NET_LOSS\" END) AS \"934.288 to 1.387K\"\
+  , count(CASE WHEN (\"WR_NET_LOSS\" >= ? AND \"WR_NET_LOSS\" < ?) THEN \"WR_NET_LOSS\"\
+  \ END) AS \"1.387K to 1.841K\", count(CASE WHEN (\"WR_NET_LOSS\" >= ? AND \"WR_NET_LOSS\"\
+  \ < ?) THEN \"WR_NET_LOSS\" END) AS \"1.841K to 2.294K\", count(CASE WHEN (\"WR_NET_LOSS\"\
+  \ >= ? AND \"WR_NET_LOSS\" < ?) THEN \"WR_NET_LOSS\" END) AS \"2.294K to 2.747K\"\
+  , count(CASE WHEN (\"WR_NET_LOSS\" >= ? AND \"WR_NET_LOSS\" < ?) THEN \"WR_NET_LOSS\"\
+  \ END) AS \"2.747K to 3.200K\", count(CASE WHEN (\"WR_NET_LOSS\" >= ?) THEN \"WR_NET_LOSS\"\
+  \ END) AS \"3.200K and up\" \nFROM \"5856cac33d051363dc9eeb2de9e675ce_sample\"\n\
+  \ LIMIT ?"
+checksum: 95b48073075fecb6b01cdb4c0179a0f6
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: c0d42425-f509-4e1e-a280-aa20852ebf64
+    type: table
+    name: WEB_RETURNS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_RETURNS
+    displayName: WEB_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

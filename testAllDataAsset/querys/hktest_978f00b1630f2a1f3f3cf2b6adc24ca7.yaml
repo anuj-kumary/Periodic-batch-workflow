@@ -1,0 +1,40 @@
+name: 978f00b1630f2a1f3f3cf2b6adc24ca7
+fullyQualifiedName: hktest.978f00b1630f2a1f3f3cf2b6adc24ca7
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"97a1a769-0ed2-4e8f-b352-177a49154924\",\"type\":\"table\"\
+        ,\"name\":\"SUPPLIER\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER\"\
+        ,\"description\":\"Supplier data as defined by TPC-H\",\"displayName\":\"\
+        SUPPLIER\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 69.0
+users: []
+query: "SELECT avg(\"S_SUPPKEY\") AS mean, count(\"S_SUPPKEY\") AS \"valuesCount\"\
+  , count(DISTINCT \"S_SUPPKEY\") AS \"distinctCount\", MIN(\"S_SUPPKEY\") AS min,\
+  \ MAX(\"S_SUPPKEY\") AS max, coalesce(SUM(CASE WHEN (\"S_SUPPKEY\" IS ?) THEN ?\
+  \ ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"S_SUPPKEY\") AS stddev, SUM(\"\
+  S_SUPPKEY\") AS sum \nFROM \"TPCH_SF1\".\"SUPPLIER\"\n LIMIT ?"
+checksum: 978f00b1630f2a1f3f3cf2b6adc24ca7
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 97a1a769-0ed2-4e8f-b352-177a49154924
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,35 @@
+name: 914368b73df480aa13bc7d2fad7702ec
+fullyQualifiedName: hktest.914368b73df480aa13bc7d2fad7702ec
+owners: []
+duration: 80.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"STATUS\")) AS mean, count(\"STATUS\") AS \"valuesCount\"\
+  , count(DISTINCT \"STATUS\") AS \"distinctCount\", MIN(LEN(\"STATUS\")) AS min,\
+  \ MAX(LEN(\"STATUS\")) AS max, coalesce(SUM(CASE WHEN (\"STATUS\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"STATUS\")) AS stddev, SUM(LEN(\"\
+  STATUS\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"SNAPSHOT_RUN_RESULTS\"\n LIMIT\
+  \ ?"
+checksum: 914368b73df480aa13bc7d2fad7702ec
+queryDate: 1748563200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 1067c449-1123-409b-88c7-98614f62bedd
+    type: table
+    name: SNAPSHOT_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SNAPSHOT_RUN_RESULTS
+    displayName: SNAPSHOT_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

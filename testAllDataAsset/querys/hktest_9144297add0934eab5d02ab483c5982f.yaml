@@ -1,0 +1,41 @@
+name: 9144297add0934eab5d02ab483c5982f
+fullyQualifiedName: hktest.9144297add0934eab5d02ab483c5982f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0b565859-50f2-4c96-b4f3-2abd5feeecb1\",\"type\":\"table\"\
+        ,\"name\":\"LINEITEM\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM\"\
+        ,\"description\":\"Lineitem data as defined by TPC-H\",\"displayName\":\"\
+        LINEITEM\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 71.0
+users: []
+query: "SELECT avg(LEN(\"L_RETURNFLAG\")) AS mean, count(\"L_RETURNFLAG\") AS \"valuesCount\"\
+  , count(DISTINCT \"L_RETURNFLAG\") AS \"distinctCount\", MIN(LEN(\"L_RETURNFLAG\"\
+  )) AS min, MAX(LEN(\"L_RETURNFLAG\")) AS max, coalesce(SUM(CASE WHEN (\"L_RETURNFLAG\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"L_RETURNFLAG\"\
+  )) AS stddev, SUM(LEN(\"L_RETURNFLAG\")) AS sum \nFROM \"TPCH_SF1\".\"LINEITEM\"\
+  \n LIMIT ?"
+checksum: 9144297add0934eab5d02ab483c5982f
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b565859-50f2-4c96-b4f3-2abd5feeecb1
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

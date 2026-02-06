@@ -1,0 +1,117 @@
+name: 9700417d37d41cee4a9108a44cd3a29f
+fullyQualifiedName: hktest.9700417d37d41cee4a9108a44cd3a29f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b61c5123-d022-4b6e-810b-f35b41e4ab82\",\"type\":\"table\"\
+        ,\"name\":\"CUSTOMER\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER\"\
+        ,\"description\":\"Customer data as defined by TPC-H\",\"displayName\":\"\
+        CUSTOMER\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 111.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?)\
+  \ THEN LEN(\"C_COMMENT\") END) AS \"29.000 to 30.619\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  30.619 to 32.237\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"32.237 to 33.856\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  33.856 to 35.474\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"35.474 to 37.093\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  37.093 to 38.711\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"38.711 to 40.330\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  40.330 to 41.949\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"41.949 to 43.567\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  43.567 to 45.186\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"45.186 to 46.804\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  46.804 to 48.423\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"48.423 to 50.042\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  50.042 to 51.660\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"51.660 to 53.279\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  53.279 to 54.897\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"54.897 to 56.516\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  56.516 to 58.134\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"58.134 to 59.753\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  59.753 to 61.372\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"61.372 to 62.990\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  62.990 to 64.609\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"64.609 to 66.227\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  66.227 to 67.846\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"67.846 to 69.465\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  69.465 to 71.083\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"71.083 to 72.702\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  72.702 to 74.320\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"74.320 to 75.939\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  75.939 to 77.557\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"77.557 to 79.176\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  79.176 to 80.795\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"80.795 to 82.413\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  82.413 to 84.032\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"84.032 to 85.650\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  85.650 to 87.269\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"87.269 to 88.888\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  88.888 to 90.506\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"90.506 to 92.125\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  92.125 to 93.743\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"93.743 to 95.362\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  95.362 to 96.980\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"96.980 to 98.599\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  98.599 to 100.218\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"100.218 to 101.836\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  101.836 to 103.455\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"103.455 to 105.073\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  105.073 to 106.692\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"106.692 to 108.311\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  108.311 to 109.929\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"109.929 to 111.548\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ? AND LEN(\"C_COMMENT\") < ?) THEN LEN(\"C_COMMENT\") END) AS \"\
+  111.548 to 113.166\", count(CASE WHEN (LEN(\"C_COMMENT\") >= ? AND LEN(\"C_COMMENT\"\
+  ) < ?) THEN LEN(\"C_COMMENT\") END) AS \"113.166 to 114.785\", count(CASE WHEN (LEN(\"\
+  C_COMMENT\") >= ?) THEN LEN(\"C_COMMENT\") END) AS \"114.785 and up\" \nFROM \"\
+  TPCH_SF1\".\"CUSTOMER\"\n LIMIT ?"
+checksum: 9700417d37d41cee4a9108a44cd3a29f
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b61c5123-d022-4b6e-810b-f35b41e4ab82
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

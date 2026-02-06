@@ -1,0 +1,35 @@
+name: 963e86d7bc8f16e9d18218cf5f72c924
+fullyQualifiedName: hktest.963e86d7bc8f16e9d18218cf5f72c924
+owners: []
+duration: 439.0
+users: []
+query: "WITH \"7492547a05b84d643fd227e52ada40ff_rnd\" AS \n(SELECT \"CATALOG_RETURNS_1\"\
+  .\"CR_RETURN_AMOUNT\" AS \"CR_RETURN_AMOUNT\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_RETURNS\"\
+  \ AS \"CATALOG_RETURNS_1\" TABLESAMPLE ROW(? ROWS)), \n\"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \ AS \n(SELECT \"7492547a05b84d643fd227e52ada40ff_rnd\".\"CR_RETURN_AMOUNT\" AS\
+  \ \"CR_RETURN_AMOUNT\" \nFROM \"7492547a05b84d643fd227e52ada40ff_rnd\")\n SELECT\
+  \ count(CASE WHEN (\"CR_RETURN_AMOUNT\" >= ? AND \"CR_RETURN_AMOUNT\" < ?) THEN\
+  \ \"CR_RETURN_AMOUNT\" END) AS \"0 to 1.616K\", count(CASE WHEN (\"CR_RETURN_AMOUNT\"\
+  \ >= ? AND \"CR_RETURN_AMOUNT\" < ?) THEN \"CR_RETURN_AMOUNT\" END) AS \"1.616K\
+  \ to 3.232K\", count(CASE WHEN (\"CR_RETURN_AMOUNT\" >= ? AND \"CR_RETURN_AMOUNT\"\
+  \ < ?) THEN \"CR_RETURN_AMOUNT\" END) AS \"3.232K to 4.848K\", count(CASE WHEN (\"\
+  CR_RETURN_AMOUNT\" >= ?) THEN \"CR_RETURN_AMOUNT\" END) AS \"4.848K and up\" \n\
+  FROM \"7492547a05b84d643fd227e52ada40ff_sample\"\n LIMIT ?"
+checksum: 963e86d7bc8f16e9d18218cf5f72c924
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 1958181b-5456-47f3-ae43-17e600b97d68
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

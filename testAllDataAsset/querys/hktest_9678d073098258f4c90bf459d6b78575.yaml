@@ -1,0 +1,46 @@
+name: 9678d073098258f4c90bf459d6b78575
+fullyQualifiedName: hktest.9678d073098258f4c90bf459d6b78575
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"12757ab2-88f3-44af-ad44-2b4c38e0102a\",\"type\":\"table\"\
+        ,\"name\":\"TEST_RESULT_ROWS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.TEST_RESULT_ROWS\"\
+        ,\"displayName\":\"TEST_RESULT_ROWS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 48.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"ELEMENTARY_TEST_RESULTS_ID\")) AS mean, count(\"ELEMENTARY_TEST_RESULTS_ID\"\
+  ) AS \"valuesCount\", count(DISTINCT \"ELEMENTARY_TEST_RESULTS_ID\") AS \"distinctCount\"\
+  , MIN(LEN(\"ELEMENTARY_TEST_RESULTS_ID\")) AS min, MAX(LEN(\"ELEMENTARY_TEST_RESULTS_ID\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"ELEMENTARY_TEST_RESULTS_ID\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"ELEMENTARY_TEST_RESULTS_ID\")) AS\
+  \ stddev, SUM(LEN(\"ELEMENTARY_TEST_RESULTS_ID\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"TEST_RESULT_ROWS\"\n LIMIT ?"
+checksum: 9678d073098258f4c90bf459d6b78575
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 12757ab2-88f3-44af-ad44-2b4c38e0102a
+    type: table
+    name: TEST_RESULT_ROWS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.TEST_RESULT_ROWS
+    displayName: TEST_RESULT_ROWS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

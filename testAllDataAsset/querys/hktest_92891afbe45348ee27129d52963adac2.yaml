@@ -1,0 +1,26 @@
+name: 92891afbe45348ee27129d52963adac2
+fullyQualifiedName: hktest.92891afbe45348ee27129d52963adac2
+owners: []
+duration: 69.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CONT_CUR_MO_INT\"\
+  ) AS count_1 \nFROM \"CURATED\".\"CONT\" GROUP BY \"CONT_CUR_MO_INT\" \nHAVING count(\"\
+  CONT_CUR_MO_INT\") = ?) AS only_once\n LIMIT ?"
+checksum: 92891afbe45348ee27129d52963adac2
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

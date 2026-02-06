@@ -1,0 +1,36 @@
+name: 971d7574b1ac2196b3265f832bdb6f46
+fullyQualifiedName: hktest.971d7574b1ac2196b3265f832bdb6f46
+owners: []
+duration: 1688.0
+users: []
+query: "WITH ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd AS \n(SELECT \"ORDERS_1\".\"O_COMMENT\"\
+  \ AS \"O_COMMENT\" \nFROM \"TPCH_SF1000\".\"ORDERS\" AS \"ORDERS_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nab2fad6a9f7c58c2c0dabdb6c89213f1_sample AS \n(SELECT ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd.\"\
+  O_COMMENT\" AS \"O_COMMENT\" \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd)\n SELECT\
+  \ count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"\
+  O_COMMENT\") END) AS \"19.000 to 31.486\", count(CASE WHEN (LEN(\"O_COMMENT\") >=\
+  \ ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"31.486 to 43.973\"\
+  , count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"\
+  O_COMMENT\") END) AS \"43.973 to 56.459\", count(CASE WHEN (LEN(\"O_COMMENT\") >=\
+  \ ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"56.459 to 68.945\"\
+  , count(CASE WHEN (LEN(\"O_COMMENT\") >= ?) THEN LEN(\"O_COMMENT\") END) AS \"68.945\
+  \ and up\" \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_sample\n LIMIT ?"
+checksum: 971d7574b1ac2196b3265f832bdb6f46
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

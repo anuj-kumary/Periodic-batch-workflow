@@ -1,0 +1,31 @@
+name: 97b0277e048deca81edfbf2a9dfa7a71
+fullyQualifiedName: hktest.97b0277e048deca81edfbf2a9dfa7a71
+owners: []
+duration: 49.0
+users: []
+query: "WITH \"29671ad4b8368e8fdff13a70eede5de7_rnd\" AS \n(SELECT \"ALL_DATA_TYPES_DEMO_1\"\
+  .\"COL_STRUCT_OBJECT\" AS \"COL_STRUCT_OBJECT\" \nFROM \"PUBLIC\".\"ALL_DATA_TYPES_DEMO\"\
+  \ AS \"ALL_DATA_TYPES_DEMO_1\" TABLESAMPLE ROW(? ROWS)), \n\"29671ad4b8368e8fdff13a70eede5de7_sample\"\
+  \ AS \n(SELECT \"29671ad4b8368e8fdff13a70eede5de7_rnd\".\"COL_STRUCT_OBJECT\" AS\
+  \ \"COL_STRUCT_OBJECT\" \nFROM \"29671ad4b8368e8fdff13a70eede5de7_rnd\")\n SELECT\
+  \ count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"COL_STRUCT_OBJECT\") AS count_1\
+  \ \nFROM \"29671ad4b8368e8fdff13a70eede5de7_sample\" GROUP BY \"COL_STRUCT_OBJECT\"\
+  \ \nHAVING count(\"COL_STRUCT_OBJECT\") = ?) AS only_once\n LIMIT ?"
+checksum: 97b0277e048deca81edfbf2a9dfa7a71
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: dbe33118-3dab-4f53-b321-3f1a45970e5b
+    type: table
+    name: ALL_DATA_TYPES_DEMO
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.ALL_DATA_TYPES_DEMO
+    displayName: ALL_DATA_TYPES_DEMO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

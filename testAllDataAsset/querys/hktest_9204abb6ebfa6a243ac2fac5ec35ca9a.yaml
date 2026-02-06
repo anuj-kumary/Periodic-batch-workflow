@@ -1,0 +1,41 @@
+name: 9204abb6ebfa6a243ac2fac5ec35ca9a
+fullyQualifiedName: hktest.9204abb6ebfa6a243ac2fac5ec35ca9a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"63c57e4c-b711-41ac-87e8-2bc0b63008df\",\"type\":\"table\"\
+        ,\"name\":\"DBT_EXPOSURES\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES\"\
+        ,\"displayName\":\"DBT_EXPOSURES\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 73.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "select metadata_hash \n    from dbt_db.DBT_SAMPLE_elementary.dbt_exposures\n\
+  \    order by metadata_hash"
+checksum: 9204abb6ebfa6a243ac2fac5ec35ca9a
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 63c57e4c-b711-41ac-87e8-2bc0b63008df
+    type: table
+    name: DBT_EXPOSURES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES
+    displayName: DBT_EXPOSURES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

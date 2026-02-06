@@ -1,0 +1,36 @@
+name: 925be3f25880eaa1e97a2a4d5abb9d13
+fullyQualifiedName: hktest.925be3f25880eaa1e97a2a4d5abb9d13
+owners: []
+duration: 88.0
+users: []
+query: "WITH \"8924b4b411990bf5c24320a9ab1eba23_rnd\" AS \n(SELECT \"CATALOG_PAGE_1\"\
+  .\"CP_CATALOG_PAGE_NUMBER\" AS \"CP_CATALOG_PAGE_NUMBER\" \nFROM \"TPCDS_SF10TCL\"\
+  .\"CATALOG_PAGE\" AS \"CATALOG_PAGE_1\" TABLESAMPLE ROW(? ROWS)), \n\"8924b4b411990bf5c24320a9ab1eba23_sample\"\
+  \ AS \n(SELECT \"8924b4b411990bf5c24320a9ab1eba23_rnd\".\"CP_CATALOG_PAGE_NUMBER\"\
+  \ AS \"CP_CATALOG_PAGE_NUMBER\" \nFROM \"8924b4b411990bf5c24320a9ab1eba23_rnd\"\
+  )\n SELECT count(CASE WHEN (\"CP_CATALOG_PAGE_NUMBER\" >= ? AND \"CP_CATALOG_PAGE_NUMBER\"\
+  \ < ?) THEN \"CP_CATALOG_PAGE_NUMBER\" END) AS \"1.000 to 111.748\", count(CASE\
+  \ WHEN (\"CP_CATALOG_PAGE_NUMBER\" >= ? AND \"CP_CATALOG_PAGE_NUMBER\" < ?) THEN\
+  \ \"CP_CATALOG_PAGE_NUMBER\" END) AS \"111.748 to 222.496\", count(CASE WHEN (\"\
+  CP_CATALOG_PAGE_NUMBER\" >= ? AND \"CP_CATALOG_PAGE_NUMBER\" < ?) THEN \"CP_CATALOG_PAGE_NUMBER\"\
+  \ END) AS \"222.496 to 333.245\", count(CASE WHEN (\"CP_CATALOG_PAGE_NUMBER\" >=\
+  \ ?) THEN \"CP_CATALOG_PAGE_NUMBER\" END) AS \"333.245 and up\" \nFROM \"8924b4b411990bf5c24320a9ab1eba23_sample\"\
+  \n LIMIT ?"
+checksum: 925be3f25880eaa1e97a2a4d5abb9d13
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: ce44236d-bb62-407f-9bd8-88e8e9b29ca1
+    type: table
+    name: CATALOG_PAGE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_PAGE
+    displayName: CATALOG_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

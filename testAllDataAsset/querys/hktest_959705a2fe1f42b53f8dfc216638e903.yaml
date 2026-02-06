@@ -1,0 +1,33 @@
+name: 959705a2fe1f42b53f8dfc216638e903
+fullyQualifiedName: hktest.959705a2fe1f42b53f8dfc216638e903
+owners: []
+duration: 93.0
+users: []
+query: "WITH \"29671ad4b8368e8fdff13a70eede5de7_rnd\" AS \n(SELECT \"ALL_DATA_TYPES_DEMO_1\"\
+  .\"COL_CHAR\" AS \"COL_CHAR\" \nFROM \"PUBLIC\".\"ALL_DATA_TYPES_DEMO\" AS \"ALL_DATA_TYPES_DEMO_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"29671ad4b8368e8fdff13a70eede5de7_sample\" AS \n\
+  (SELECT \"29671ad4b8368e8fdff13a70eede5de7_rnd\".\"COL_CHAR\" AS \"COL_CHAR\" \n\
+  FROM \"29671ad4b8368e8fdff13a70eede5de7_rnd\")\n SELECT avg(LEN(\"COL_CHAR\")) AS\
+  \ mean, count(\"COL_CHAR\") AS \"valuesCount\", count(DISTINCT \"COL_CHAR\") AS\
+  \ \"distinctCount\", MIN(LEN(\"COL_CHAR\")) AS min, MAX(LEN(\"COL_CHAR\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"COL_CHAR\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(LEN(\"COL_CHAR\")) AS stddev, SUM(LEN(\"COL_CHAR\")) AS sum \nFROM\
+  \ \"29671ad4b8368e8fdff13a70eede5de7_sample\"\n LIMIT ?"
+checksum: 959705a2fe1f42b53f8dfc216638e903
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: dbe33118-3dab-4f53-b321-3f1a45970e5b
+    type: table
+    name: ALL_DATA_TYPES_DEMO
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.ALL_DATA_TYPES_DEMO
+    displayName: ALL_DATA_TYPES_DEMO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

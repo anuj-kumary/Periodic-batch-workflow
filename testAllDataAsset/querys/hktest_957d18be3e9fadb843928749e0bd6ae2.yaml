@@ -1,0 +1,45 @@
+name: 957d18be3e9fadb843928749e0bd6ae2
+fullyQualifiedName: hktest.957d18be3e9fadb843928749e0bd6ae2
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"71f3b29a-0599-4623-b7e2-1e721ace56c4\",\"type\":\"table\"\
+        ,\"name\":\"SEED_RUN_RESULTS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SEED_RUN_RESULTS\"\
+        ,\"displayName\":\"SEED_RUN_RESULTS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 250.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"SCHEMA_NAME\")) AS mean, count(\"SCHEMA_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"SCHEMA_NAME\") AS \"distinctCount\", MIN(LEN(\"SCHEMA_NAME\"\
+  )) AS min, MAX(LEN(\"SCHEMA_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"SCHEMA_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"SCHEMA_NAME\"\
+  )) AS stddev, SUM(LEN(\"SCHEMA_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"SEED_RUN_RESULTS\"\n LIMIT ?"
+checksum: 957d18be3e9fadb843928749e0bd6ae2
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 71f3b29a-0599-4623-b7e2-1e721ace56c4
+    type: table
+    name: SEED_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SEED_RUN_RESULTS
+    displayName: SEED_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

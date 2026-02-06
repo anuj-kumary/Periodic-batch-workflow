@@ -1,0 +1,30 @@
+name: 9792bc9bcb8be0ed237e93640613a3a3
+fullyQualifiedName: hktest.9792bc9bcb8be0ed237e93640613a3a3
+owners: []
+duration: 104.0
+users: []
+query: "SELECT count(CASE WHEN (\"ACCOUNTID\" >= ? AND \"ACCOUNTID\" < ?) THEN \"\
+  ACCOUNTID\" END) AS \"1.000 to 14.301\", count(CASE WHEN (\"ACCOUNTID\" >= ? AND\
+  \ \"ACCOUNTID\" < ?) THEN \"ACCOUNTID\" END) AS \"14.301 to 27.601\", count(CASE\
+  \ WHEN (\"ACCOUNTID\" >= ? AND \"ACCOUNTID\" < ?) THEN \"ACCOUNTID\" END) AS \"\
+  27.601 to 40.902\", count(CASE WHEN (\"ACCOUNTID\" >= ?) THEN \"ACCOUNTID\" END)\
+  \ AS \"40.902 and up\" \nFROM \"MSSQLBANKING_STG\".\"CUSTOMERACCOUNTS\"\n LIMIT\
+  \ ?"
+checksum: 9792bc9bcb8be0ed237e93640613a3a3
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d03f73b0-8a36-4cd5-a82f-a07db17fe588
+    type: table
+    name: CUSTOMERACCOUNTS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG.CUSTOMERACCOUNTS
+    displayName: CUSTOMERACCOUNTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

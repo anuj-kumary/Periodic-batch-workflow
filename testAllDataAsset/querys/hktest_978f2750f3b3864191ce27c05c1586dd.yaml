@@ -1,0 +1,50 @@
+name: 978f2750f3b3864191ce27c05c1586dd
+fullyQualifiedName: hktest.978f2750f3b3864191ce27c05c1586dd
+owners: []
+duration: 792.0
+users: []
+query: "WITH \"534e5b12fce522f81d9c91fd466b84a9_rnd\" AS \n(SELECT \"STORE_SALES_1\"\
+  .\"SS_COUPON_AMT\" AS \"SS_COUPON_AMT\" \nFROM \"TPCDS_SF100TCL\".\"STORE_SALES\"\
+  \ AS \"STORE_SALES_1\" TABLESAMPLE ROW(? ROWS)), \n\"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \ AS \n(SELECT \"534e5b12fce522f81d9c91fd466b84a9_rnd\".\"SS_COUPON_AMT\" AS \"\
+  SS_COUPON_AMT\" \nFROM \"534e5b12fce522f81d9c91fd466b84a9_rnd\")\n SELECT count(CASE\
+  \ WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\"\
+  \ END) AS \"0 to 76.590\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\"\
+  \ < ?) THEN \"SS_COUPON_AMT\" END) AS \"76.590 to 153.180\", count(CASE WHEN (\"\
+  SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\" END) AS \"\
+  153.180 to 229.770\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\"\
+  \ < ?) THEN \"SS_COUPON_AMT\" END) AS \"229.770 to 306.360\", count(CASE WHEN (\"\
+  SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\" END) AS \"\
+  306.360 to 382.950\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\"\
+  \ < ?) THEN \"SS_COUPON_AMT\" END) AS \"382.950 to 459.540\", count(CASE WHEN (\"\
+  SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\" END) AS \"\
+  459.540 to 536.130\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\"\
+  \ < ?) THEN \"SS_COUPON_AMT\" END) AS \"536.130 to 612.720\", count(CASE WHEN (\"\
+  SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\" END) AS \"\
+  612.720 to 689.310\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\"\
+  \ < ?) THEN \"SS_COUPON_AMT\" END) AS \"689.310 to 765.900\", count(CASE WHEN (\"\
+  SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\" END) AS \"\
+  765.900 to 842.490\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\"\
+  \ < ?) THEN \"SS_COUPON_AMT\" END) AS \"842.490 to 919.080\", count(CASE WHEN (\"\
+  SS_COUPON_AMT\" >= ? AND \"SS_COUPON_AMT\" < ?) THEN \"SS_COUPON_AMT\" END) AS \"\
+  919.080 to 995.670\", count(CASE WHEN (\"SS_COUPON_AMT\" >= ?) THEN \"SS_COUPON_AMT\"\
+  \ END) AS \"995.670 and up\" \nFROM \"534e5b12fce522f81d9c91fd466b84a9_sample\"\n\
+  \ LIMIT ?"
+checksum: 978f2750f3b3864191ce27c05c1586dd
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8ac2014f-2667-4186-a6c8-8754e351d4ef
+    type: table
+    name: STORE_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.STORE_SALES
+    displayName: STORE_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

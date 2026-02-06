@@ -1,0 +1,36 @@
+name: 93f226e67425033e1a0a44373e0f6462
+fullyQualifiedName: hktest.93f226e67425033e1a0a44373e0f6462
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"c2d2d6f6-b42a-4722-a4b5-ab506209b204\",\"type\":\"table\"\
+        ,\"name\":\"TEST_CTS\",\"fullyQualifiedName\":\"hktest.NEW_E2E.PUBLIC.TEST_CTS\"\
+        ,\"displayName\":\"TEST_CTS\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 47.0
+users: []
+query: "SELECT \"PUBLIC\".\"TEST_CTS\".\"ID\" AS \"PUBLIC_TEST_CTS_ID\", \"PUBLIC\"\
+  .\"TEST_CTS\".\"NAME\" AS \"PUBLIC_TEST_CTS_NAME\" \nFROM \"PUBLIC\".\"TEST_CTS\"\
+  \n LIMIT ?"
+checksum: 93f226e67425033e1a0a44373e0f6462
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: c2d2d6f6-b42a-4722-a4b5-ab506209b204
+    type: table
+    name: TEST_CTS
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.TEST_CTS
+    displayName: TEST_CTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
