@@ -1,0 +1,148 @@
+name: int$dba_attr_dim
+fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim
+tableType: View
+columns:
+  - name: owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.owner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: dimension_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.dimension_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: owner_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.owner_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: object_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.object_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: object_type
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.object_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: dimension_type
+    dataType: VARCHAR
+    dataLength: 8
+    dataTypeDisplay: varchar2(8)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.dimension_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: all_member_name
+    dataType: CLOB
+    dataLength: 1
+    dataTypeDisplay: clob
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.all_member_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: all_member_caption
+    dataType: CLOB
+    dataLength: 1
+    dataTypeDisplay: clob
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.all_member_caption
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: all_member_description
+    dataType: CLOB
+    dataLength: 1
+    dataTypeDisplay: clob
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.all_member_description
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: compile_state
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.compile_state
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sharing
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.sharing
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: origin_con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_attr_dim.origin_con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a6f4068d590182c2164c11d4d33853a6
+processedLineage: false
+entityStatus: Approved

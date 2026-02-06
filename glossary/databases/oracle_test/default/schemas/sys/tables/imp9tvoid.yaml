@@ -1,0 +1,103 @@
+name: imp9tvoid
+fullyQualifiedName: oracle_test.default.sys.imp9tvoid
+tableType: View
+columns:
+  - name: tname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.tname
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: towner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.towner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: hash
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.hash
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tvoid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.tvoid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.status
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: typeid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.typeid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: roottoid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.imp9tvoid.roottoid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3dec9c0283f9a901859904851d79dfbc
+processedLineage: false
+entityStatus: Approved
