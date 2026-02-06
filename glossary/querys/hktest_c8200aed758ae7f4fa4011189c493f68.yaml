@@ -1,0 +1,56 @@
+name: c8200aed758ae7f4fa4011189c493f68
+fullyQualifiedName: hktest.c8200aed758ae7f4fa4011189c493f68
+owners: []
+duration: 276.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN\
+  \ LEN(\"P_NAME\") END) AS \"20.000 to 21.409\", count(CASE WHEN (LEN(\"P_NAME\"\
+  ) >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"21.409 to 22.818\"\
+  , count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\"\
+  ) END) AS \"22.818 to 24.227\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"\
+  P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"24.227 to 25.636\", count(CASE WHEN\
+  \ (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"\
+  25.636 to 27.045\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") <\
+  \ ?) THEN LEN(\"P_NAME\") END) AS \"27.045 to 28.455\", count(CASE WHEN (LEN(\"\
+  P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"28.455 to\
+  \ 29.864\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN\
+  \ LEN(\"P_NAME\") END) AS \"29.864 to 31.273\", count(CASE WHEN (LEN(\"P_NAME\"\
+  ) >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"31.273 to 32.682\"\
+  , count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\"\
+  ) END) AS \"32.682 to 34.091\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"\
+  P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"34.091 to 35.500\", count(CASE WHEN\
+  \ (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"\
+  35.500 to 36.909\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") <\
+  \ ?) THEN LEN(\"P_NAME\") END) AS \"36.909 to 38.318\", count(CASE WHEN (LEN(\"\
+  P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"38.318 to\
+  \ 39.727\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN\
+  \ LEN(\"P_NAME\") END) AS \"39.727 to 41.136\", count(CASE WHEN (LEN(\"P_NAME\"\
+  ) >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"41.136 to 42.545\"\
+  , count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\"\
+  ) END) AS \"42.545 to 43.955\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"\
+  P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"43.955 to 45.364\", count(CASE WHEN\
+  \ (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"\
+  45.364 to 46.773\", count(CASE WHEN (LEN(\"P_NAME\") >= ? AND LEN(\"P_NAME\") <\
+  \ ?) THEN LEN(\"P_NAME\") END) AS \"46.773 to 48.182\", count(CASE WHEN (LEN(\"\
+  P_NAME\") >= ? AND LEN(\"P_NAME\") < ?) THEN LEN(\"P_NAME\") END) AS \"48.182 to\
+  \ 49.591\", count(CASE WHEN (LEN(\"P_NAME\") >= ?) THEN LEN(\"P_NAME\") END) AS\
+  \ \"49.591 and up\" \nFROM \"TPCH_SF10\".\"PART\"\n LIMIT ?"
+checksum: c8200aed758ae7f4fa4011189c493f68
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: edafde3d-6c1b-476a-9f4c-7225f6146b68
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,33 @@
+name: c15347c39a7f38a072a5bffc515936cb
+fullyQualifiedName: hktest.c15347c39a7f38a072a5bffc515936cb
+owners: []
+duration: 57.0
+users: []
+query: "WITH \"29671ad4b8368e8fdff13a70eede5de7_rnd\" AS \n(SELECT \"ALL_DATA_TYPES_DEMO_1\"\
+  .\"COL_TIMESTAMP\" AS \"COL_TIMESTAMP\" \nFROM \"PUBLIC\".\"ALL_DATA_TYPES_DEMO\"\
+  \ AS \"ALL_DATA_TYPES_DEMO_1\" TABLESAMPLE ROW(? ROWS)), \n\"29671ad4b8368e8fdff13a70eede5de7_sample\"\
+  \ AS \n(SELECT \"29671ad4b8368e8fdff13a70eede5de7_rnd\".\"COL_TIMESTAMP\" AS \"\
+  COL_TIMESTAMP\" \nFROM \"29671ad4b8368e8fdff13a70eede5de7_rnd\")\n SELECT ? AS anon_1,\
+  \ count(\"COL_TIMESTAMP\") AS \"valuesCount\", count(DISTINCT \"COL_TIMESTAMP\"\
+  ) AS \"distinctCount\", MIN(\"COL_TIMESTAMP\") AS min, MAX(\"COL_TIMESTAMP\") AS\
+  \ max, coalesce(SUM(CASE WHEN (\"COL_TIMESTAMP\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", ? AS anon__1, ? AS anon__2 \nFROM \"29671ad4b8368e8fdff13a70eede5de7_sample\"\
+  \n LIMIT ?"
+checksum: c15347c39a7f38a072a5bffc515936cb
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: dbe33118-3dab-4f53-b321-3f1a45970e5b
+    type: table
+    name: ALL_DATA_TYPES_DEMO
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.ALL_DATA_TYPES_DEMO
+    displayName: ALL_DATA_TYPES_DEMO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

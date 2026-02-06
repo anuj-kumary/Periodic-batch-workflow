@@ -1,0 +1,37 @@
+name: c8a09a611343bae466f21e8fe0db63ea
+fullyQualifiedName: hktest.c8a09a611343bae466f21e8fe0db63ea
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"77cb81a8-3b36-41e0-b1c9-e8062da66307\",\"type\":\"table\"\
+        ,\"name\":\"REGIONS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.REGIONS\"\
+        ,\"displayName\":\"REGIONS\",\"deleted\":false}]"
+  previousVersion: 0.8
+  changeSummary: {}
+owners: []
+duration: 84.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"REGION_ID\" ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"REGION_ID\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"REGION_ID\" ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"E2E_TEST\".\"REGIONS\"\n LIMIT ?"
+checksum: c8a09a611343bae466f21e8fe0db63ea
+queryDate: 1748217600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 77cb81a8-3b36-41e0-b1c9-e8062da66307
+    type: table
+    name: REGIONS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.REGIONS
+    displayName: REGIONS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

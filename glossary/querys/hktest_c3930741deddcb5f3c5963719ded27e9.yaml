@@ -1,0 +1,21 @@
+name: c3930741deddcb5f3c5963719ded27e9
+fullyQualifiedName: hktest.c3930741deddcb5f3c5963719ded27e9
+owners: []
+duration: 73.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"COUPON_AMOUNT\" ASC) AS\
+  \ median, percentile_cont(?) WITHIN GROUP (ORDER BY \"COUPON_AMOUNT\" ASC) AS \"\
+  firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY \"COUPON_AMOUNT\" ASC)\
+  \ AS \"thirdQuartile\" \nFROM \"JAFFLE_SHOP\".\"ORDERS\"\n LIMIT ?"
+checksum: c3930741deddcb5f3c5963719ded27e9
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

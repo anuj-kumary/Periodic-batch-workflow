@@ -1,0 +1,33 @@
+name: c73400ca5cb670ecbfde74282647888f
+fullyQualifiedName: hktest.c73400ca5cb670ecbfde74282647888f
+owners: []
+duration: 75.0
+users: []
+query: "SELECT count(CASE WHEN (\"LOGINID\" >= ? AND \"LOGINID\" < ?) THEN \"LOGINID\"\
+  \ END) AS \"101.812K to 145.534M\", count(CASE WHEN (\"LOGINID\" >= ? AND \"LOGINID\"\
+  \ < ?) THEN \"LOGINID\" END) AS \"145.534M to 290.966M\", count(CASE WHEN (\"LOGINID\"\
+  \ >= ? AND \"LOGINID\" < ?) THEN \"LOGINID\" END) AS \"290.966M to 436.397M\", count(CASE\
+  \ WHEN (\"LOGINID\" >= ? AND \"LOGINID\" < ?) THEN \"LOGINID\" END) AS \"436.397M\
+  \ to 581.829M\", count(CASE WHEN (\"LOGINID\" >= ? AND \"LOGINID\" < ?) THEN \"\
+  LOGINID\" END) AS \"581.829M to 727.261M\", count(CASE WHEN (\"LOGINID\" >= ? AND\
+  \ \"LOGINID\" < ?) THEN \"LOGINID\" END) AS \"727.261M to 872.693M\", count(CASE\
+  \ WHEN (\"LOGINID\" >= ?) THEN \"LOGINID\" END) AS \"872.693M and up\" \nFROM \"\
+  MSSQLBANKING_CUSTOMER\".\"CUSTOMERLOGIN\"\n LIMIT ?"
+checksum: c73400ca5cb670ecbfde74282647888f
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 362a3c96-9793-4426-b8a0-46295ee4a87b
+    type: table
+    name: CUSTOMERLOGIN
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERLOGIN
+    displayName: CUSTOMERLOGIN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

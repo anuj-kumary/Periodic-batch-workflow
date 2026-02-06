@@ -1,0 +1,32 @@
+name: c1ce688e57a1fc3e19838b1fd7da8866
+fullyQualifiedName: hktest.c1ce688e57a1fc3e19838b1fd7da8866
+owners: []
+duration: 591.0
+users: []
+query: "WITH \"7acd5a55767403e4819968ec03121cca_rnd\" AS \n(SELECT \"STORE_RETURNS_1\"\
+  .\"SR_STORE_SK\" AS \"SR_STORE_SK\" \nFROM \"TPCDS_SF10TCL\".\"STORE_RETURNS\" AS\
+  \ \"STORE_RETURNS_1\" TABLESAMPLE ROW(? ROWS)), \n\"7acd5a55767403e4819968ec03121cca_sample\"\
+  \ AS \n(SELECT \"7acd5a55767403e4819968ec03121cca_rnd\".\"SR_STORE_SK\" AS \"SR_STORE_SK\"\
+  \ \nFROM \"7acd5a55767403e4819968ec03121cca_rnd\")\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"SR_STORE_SK\" ASC) AS median, percentile_cont(?) WITHIN GROUP\
+  \ (ORDER BY \"SR_STORE_SK\" ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"SR_STORE_SK\" ASC) AS \"thirdQuartile\" \nFROM \"7acd5a55767403e4819968ec03121cca_sample\"\
+  \n LIMIT ?"
+checksum: c1ce688e57a1fc3e19838b1fd7da8866
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e86ff48f-2b49-4cdf-b51b-651c26d03830
+    type: table
+    name: STORE_RETURNS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE_RETURNS
+    displayName: STORE_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

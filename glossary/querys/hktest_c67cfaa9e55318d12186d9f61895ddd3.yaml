@@ -1,0 +1,35 @@
+name: c67cfaa9e55318d12186d9f61895ddd3
+fullyQualifiedName: hktest.c67cfaa9e55318d12186d9f61895ddd3
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"5d8900b8-40e4-49a1-86b1-9d56a6638884\",\"type\":\"table\"\
+        ,\"name\":\"NEW_VIEW_CTE\",\"fullyQualifiedName\":\"hktest.NEW_E2E.PUBLIC.NEW_VIEW_CTE\"\
+        ,\"displayName\":\"NEW_VIEW_CTE\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 125.0
+users: []
+query: "SELECT \"PUBLIC\".\"NEW_VIEW_CTE\".\"ID\" AS \"PUBLIC_NEW_VIEW_CTE_ID\" \n\
+  FROM \"PUBLIC\".\"NEW_VIEW_CTE\"\n LIMIT ?"
+checksum: c67cfaa9e55318d12186d9f61895ddd3
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 5d8900b8-40e4-49a1-86b1-9d56a6638884
+    type: table
+    name: NEW_VIEW_CTE
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.NEW_VIEW_CTE
+    displayName: NEW_VIEW_CTE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

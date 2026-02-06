@@ -1,0 +1,79 @@
+name: c6bfc6d1ed53b8e5166906c01fa57e85
+fullyQualifiedName: hktest.c6bfc6d1ed53b8e5166906c01fa57e85
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 36868.0
+users: []
+query: "SELECT count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"\
+  O_CUSTKEY\" END) AS \"1.000 to 4.688M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND\
+  \ \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"4.688M to 9.375M\", count(CASE\
+  \ WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"\
+  9.375M to 14.063M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?)\
+  \ THEN \"O_CUSTKEY\" END) AS \"14.063M to 18.750M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"18.750M to 23.438M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"23.438M to 28.125M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"28.125M to 32.813M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"32.813M to 37.500M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"37.500M to 42.188M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"42.188M to 46.875M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"46.875M to 51.563M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"51.563M to 56.250M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"56.250M to 60.938M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"60.938M to 65.625M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"65.625M to 70.313M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"70.313M to 75.000M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"75.000M to 79.687M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"79.687M to 84.375M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"84.375M to 89.062M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"89.062M to 93.750M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"93.750M to 98.437M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"98.437M to 103.125M\", count(CASE WHEN (\"O_CUSTKEY\"\
+  \ >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"103.125M to 107.812M\"\
+  , count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"107.812M to 112.500M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"112.500M to 117.187M\", count(CASE WHEN (\"\
+  O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"117.187M to\
+  \ 121.875M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"\
+  O_CUSTKEY\" END) AS \"121.875M to 126.562M\", count(CASE WHEN (\"O_CUSTKEY\" >=\
+  \ ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"126.562M to 131.250M\",\
+  \ count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\"\
+  \ END) AS \"131.250M to 135.937M\", count(CASE WHEN (\"O_CUSTKEY\" >= ? AND \"O_CUSTKEY\"\
+  \ < ?) THEN \"O_CUSTKEY\" END) AS \"135.937M to 140.625M\", count(CASE WHEN (\"\
+  O_CUSTKEY\" >= ? AND \"O_CUSTKEY\" < ?) THEN \"O_CUSTKEY\" END) AS \"140.625M to\
+  \ 145.312M\", count(CASE WHEN (\"O_CUSTKEY\" >= ?) THEN \"O_CUSTKEY\" END) AS \"\
+  145.312M and up\" \nFROM \"TPCH_SF1000\".\"ORDERS\"\n LIMIT ?"
+checksum: c6bfc6d1ed53b8e5166906c01fa57e85
+queryDate: 1752105600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

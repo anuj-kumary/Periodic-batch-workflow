@@ -1,0 +1,37 @@
+name: c48a06b30dde0b87d838434dd105fea4
+fullyQualifiedName: hktest.c48a06b30dde0b87d838434dd105fea4
+owners: []
+duration: 302.0
+users: []
+query: "WITH \"979ee13f032c02b4652a4e3c3928d90b_rnd\" AS \n(SELECT \"CUSTOMER_1\"\
+  .\"C_BIRTH_MONTH\" AS \"C_BIRTH_MONTH\" \nFROM \"TPCDS_SF10TCL\".\"CUSTOMER\" AS\
+  \ \"CUSTOMER_1\" TABLESAMPLE ROW(? ROWS)), \n\"979ee13f032c02b4652a4e3c3928d90b_sample\"\
+  \ AS \n(SELECT \"979ee13f032c02b4652a4e3c3928d90b_rnd\".\"C_BIRTH_MONTH\" AS \"\
+  C_BIRTH_MONTH\" \nFROM \"979ee13f032c02b4652a4e3c3928d90b_rnd\")\n SELECT count(CASE\
+  \ WHEN (\"C_BIRTH_MONTH\" >= ? AND \"C_BIRTH_MONTH\" < ?) THEN \"C_BIRTH_MONTH\"\
+  \ END) AS \"1.000 to 3.186\", count(CASE WHEN (\"C_BIRTH_MONTH\" >= ? AND \"C_BIRTH_MONTH\"\
+  \ < ?) THEN \"C_BIRTH_MONTH\" END) AS \"3.186 to 5.372\", count(CASE WHEN (\"C_BIRTH_MONTH\"\
+  \ >= ? AND \"C_BIRTH_MONTH\" < ?) THEN \"C_BIRTH_MONTH\" END) AS \"5.372 to 7.559\"\
+  , count(CASE WHEN (\"C_BIRTH_MONTH\" >= ? AND \"C_BIRTH_MONTH\" < ?) THEN \"C_BIRTH_MONTH\"\
+  \ END) AS \"7.559 to 9.745\", count(CASE WHEN (\"C_BIRTH_MONTH\" >= ? AND \"C_BIRTH_MONTH\"\
+  \ < ?) THEN \"C_BIRTH_MONTH\" END) AS \"9.745 to 11.931\", count(CASE WHEN (\"C_BIRTH_MONTH\"\
+  \ >= ?) THEN \"C_BIRTH_MONTH\" END) AS \"11.931 and up\" \nFROM \"979ee13f032c02b4652a4e3c3928d90b_sample\"\
+  \n LIMIT ?"
+checksum: c48a06b30dde0b87d838434dd105fea4
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b17bebfd-6661-4983-a4e4-1c07f7b19158
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CUSTOMER
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

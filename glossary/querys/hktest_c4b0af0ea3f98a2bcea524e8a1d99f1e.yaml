@@ -1,0 +1,51 @@
+name: c4b0af0ea3f98a2bcea524e8a1d99f1e
+fullyQualifiedName: hktest.c4b0af0ea3f98a2bcea524e8a1d99f1e
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b47b343a-03e8-409a-9861-bffd086dce6c\",\"type\":\"table\"\
+        ,\"name\":\"MODEL_RUN_RESULTS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS\"\
+        ,\"displayName\":\"MODEL_RUN_RESULTS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 209.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "with model_runs as (\n            select \n                *,\n          \
+  \      rank() over (partition by unique_id order by generated_at desc) as invocations_rank_index\n\
+  \            from dbt_db.DBT_SAMPLE_elementary.model_run_results\n        )\n\n\
+  \        select\n            unique_id, \n            invocation_id,\n         \
+  \   name,\n            schema_name as schema,\n            status,\n           \
+  \ case\n                when status != ? then ?\n                else round(cast(execution_time\
+  \ as numeric(?,?)), ?)\n            end as execution_time,\n            full_refresh,\n\
+  \            materialization,\n            case when invocations_rank_index = ?\
+  \ then compiled_code else ? end as compiled_code,\n            generated_at\n  \
+  \      from model_runs\n        where datediff(\n        day,\n        cast(generated_at\
+  \ as timestamp),\n        \n  current_timestamp::timestamp\n\n        ) < ?\n  \
+  \      \n          and unique_id not like ?\n        \n        order by generated_at"
+checksum: c4b0af0ea3f98a2bcea524e8a1d99f1e
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
