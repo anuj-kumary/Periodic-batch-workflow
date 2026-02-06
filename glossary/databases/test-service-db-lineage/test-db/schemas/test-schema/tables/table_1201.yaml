@@ -1,0 +1,87 @@
+name: table_1201
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1201
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1201.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_ST_FACT_PIPELINE_AGG01_D_TEST(\n\t\
+  IS_SALES_ACTIVE_PIPELINE,\n\tNNACV_USD_CFX,\n\tNNACV_USD,\n\tRENEWAL_ACV_USD,\n\t\
+  RENEWAL_ACV_USD_CFX,\n\tTOTAL_VALUE_AMOUNT_USD,\n\tTOTAL_VALUE_CFX,\n\tOPTY_NUMBER,\n\
+  \tORDER_NUMBER,\n\tOPTY_NAME,\n\tOPTY_PIPELINE_STATUS,\n\tOPTY_TYPE,\n\tTERRITORY_ID,\n\
+  \tOPTY_SYSID,\n\tOPTY_STAGE,\n\tQUARTER_YYQQ,\n\tST_DATE,\n\tOPTY_SYS_CREATED_ON,\n\
+  \tTERRITORY_NAME,\n\tOPTY_OWNER,\n\tOPTY_ACCOUNT_SYSID,\n\tOPTY_START_DT,\n\tOPTY_CLOSE_DT,\n\
+  \tBASE_CURRENCY,\n\tOPTY_ITEM_CREATED_ON,\n\tOPTY_COMANAGE,\n\tDYNAMICS_GUID,\n\t\
+  OPTY_WEIGHTED_PERCENTAGE,\n\tOPTY_BI_FLAG,\n\tIS_PRICE_REST_PRIMARY_LINE,\n\tOPTY_PARTNER,\n\
+  \tOPTY_PIPELINE_SOURCE,\n\tNNACV_USD_GSD,\n\tNNACV_USD_COREREP,\n\tNNACV_USD_ACE,\n\
+  \tNNACV_USD_SOLUTIONSALES,\n\tNNACV_USD_OTHER,\n\tBU_GROUP,\n\tCURRENT_ETL_TIMESTAMP\n\
+  ) as\n(SELECT \"STOptyActivePipelineFlag\" as IS_SALES_ACTIVE_PIPELINE,\nsum(\"\
+  SOptyItemNetNewACV\") as NNACV_USD_CFX,\nsum(\"SOptyItemNetNewACVUSD\") as NNACV_USD,\n\
+  sum(\"SOptyitemRenewalACVUSD\") as RENEWAL_ACV_USD,\nsum(\"SOptyItemRenewalACV\"\
+  ) as RENEWAL_ACV_USD_CFX,\nsum(\"STOptyItemTotalValueAmount_USD\") as TOTAL_VALUE_AMOUNT_USD,\n\
+  sum(\"STOptyItemTotalValueAmount\") as TOTAL_VALUE_CFX,\n\"STOptyNumber\" as OPTY_NUMBER,\n\
+  \"SalesOrderNumber\" as ORDER_NUMBER,\n\"STOptyName\" as OPTY_NAME,\n\"STOptyPipelineStatus\"\
+  \ as OPTY_PIPELINE_STATUS,\n\"STOpportunityType\" as OPTY_TYPE,\n\"STOptyTerritorySysID\"\
+  \ as TERRITORY_ID,\n\"STOptySysID\" as OPTY_SYSID,\n\"STOptyStage\" as OPTY_STAGE,\n\
+  \"STOptySalesQuarter\" as QUARTER_YYQQ,\n\"STExtractDate\" as ST_DATE,\n\"STOptySysCreatedOn\"\
+  \ as OPTY_SYS_CREATED_ON,\n\"STOptyTerritory\" as TERRITORY_NAME,\n\"STOptyOwner\"\
+  \ as OPTY_OWNER,\n\"STOptyAccountSysID\" as OPTY_ACCOUNT_SYSID,\n\"STOptyStartDate\"\
+  \ as OPTY_START_DT,\n\"STOptyCloseDate\" as OPTY_CLOSE_DT,\n\"STOptyBaseCurrency\"\
+  \ as BASE_CURRENCY,\nmin(\"STOptyItemCreatedOn\") as OPTY_ITEM_CREATED_ON,\n\"STOptyCOManaged\"\
+  \ as OPTY_COMANAGE,\n\"STOptyDynamicsGUID\" as DYNAMICS_GUID,\n\"STOptyWeightedPercentage\"\
+  \ as OPTY_WEIGHTED_PERCENTAGE,\n\"SOptyItemBIFlags\" as OPTY_BI_FLAG,\n\"SOptyPriceRestPrimaryLine\"\
+  \ as IS_PRICE_REST_PRIMARY_LINE,\n\"STOptyPartnered\" as OPTY_PARTNER,\n\"STOptyPipelineSourced\"\
+  \ as OPTY_PIPELINE_SOURCE,\nsum(case when \"STOptyItemLineCreatedBy\" = 'random'\
+  \ then \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_USD_GSD,\nsum(case\
+  \ when \"STOptyItemLineCreatedBy\" = 'random' then \"SOptyItemNetNewACVUSD\" else\
+  \ 'random' end) as NNACV_USD_COREREP,\nsum(case when \"STOptyItemLineCreatedBy\"\
+  \ = 'random' then \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_USD_ACE,\n\
+  sum(case when \"STOptyItemLineCreatedBy\" = 'random' then \"SOptyItemNetNewACVUSD\"\
+  \ else 'random' end) as NNACV_USD_SOLUTIONSALES,\nsum(case when (\"STOptyItemLineCreatedBy\"\
+  \ IS NULL or \"STOptyItemLineCreatedBy\" = 'random')  then \"SOptyItemNetNewACVUSD\"\
+  \ else 'random' end) as NNACV_USD_OTHER,\n\"BUGroup\" as BU_GROUP,\nCURRENT_TIMESTAMP\n\
+  from EDW_LS.SALES_EM.ST_OPTY_ITEM_COMBINED soic\n  left outer join\n  (SELECT distinct\
+  \ \"ProductSysID\" as \"ProductSysID\",\n\"ProductBusinessUnitValue\" as \"ProductBusinessUnitValue\"\
+  ,\n--\"ProductFamily3Value\" as \"ProductFamily3Value\",\nIFF((\"BUGroup\") IS NULL,'random',\
+  \ \"BUGroup\") as \"BUGroup\" FROM ODS_LS.\"SURF\".\"SALES_PRODUCT\"\nWHERE ((\"\
+  ProductFamily3Value\"!='random' or (\"ProductFamily3Value\") IS NULL)) and \"BUGroup\"\
+  \ <> 'random') sp\non soic.\"SOptyItemProductSysID\"=sp.\"ProductSysID\"\n--where\
+  \ \"STExtractDate\"=current_date-2\ngroup by all)\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,102 @@
+name: table_1220
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1220
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1220.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FIELD_SALES_TERRITORY_MAPPING(\n\t\
+  SALES_REP_ID,\n\tTERRITORY_ID,\n\tQUARTER_ID,\n\tEMPLOYEE_ID,\n\tQUARTER_YYQQ,\n\
+  \tREP_NAME,\n\tIS_ACTIVE,\n\tDEPARTMENT_NAME,\n\tSTART_DT,\n\tEND_DT,\n\tTENURE_IN_MONTHS,\n\
+  \tIS_RAMPED,\n\tTERRITORY_NAME,\n\tSALESREP_TITLE,\n\tQUOTA_COMPONENT,\n\tNEWLOGO_REPNAME,\n\
+  \tREP_TYPE,\n\tTERRITORY_SYSID,\n\tEMPLOYEE_SYSID\n) as\n ----------------------New\
+  \ Table created by Accenture team (Jyoti Gandhi) on 15.02.2024----------------------\n\
+  WITH TabSalesRepDetails as (\nSELECT  distinct\n\t\te.\"EmpName\" as \"EmployeeName\"\
+  ,\n\t\tana.\"STEmpTerrTerritorySysId\" as \"TerritorySysID\",\n\t\tana.\"STEmpTerrRamped\"\
+  \ as \"Ramped\",\n\t\tcount( ana.\"STEmpTerrEmployeeSysId\") over (partition by\
+  \ ana.\"STEmpTerrTerritorySysId\" order by 'random') \"Cnt\"\nFROM ODS_LS.\"ANAPLAN\"\
+  .\"SALES_EMPLOYEE_TERRITORY_MAPPING\" as ana\nLEFT JOIN ODS_LS.\"SURF\".\"EMPLOYEE\"\
+  \ as e on e.\"EmpSysID\" = ana.\"STEmpTerrEmployeeSysId\"\nWHERE EXISTS (\tSELECT\
+  \ 'random' FROM ODS_LS.\"SURF\".\"CMN_DEPARTMENT\" cmn\n\t\t\t\tWHERE \"DeptCostCenter\"\
+  \ in ('random','random','random','random')\n\t\t\t\t  AND e.\"EmpDepartment\"= cmn.\"\
+  Deptname\" )\n\tAND \"STEmpTerrRepType\"='random'\n\tAND e.\"EmpActive\"='random'\n\
+  \tAND ana.\"STEmpQuotaComponent\"='random'\n\tAND \"STEmpPlanEndDate\"> CURRENT_DATE()\n\
+  \tAND \"STEmpTerrActive\" = 'random'\n\tAND ana.\"STEmpTerrQuarter\" = RIGHT(YEAR(convert_timezone('random',CURRENT_DATE))\
+  \ ||'random'||QUARTER(convert_timezone('random',CURRENT_DATE)),'random')\n),\n\n\
+  SalesRepDetails as (\nSELECT \"TerritorySysID\" as \"TerritorySysIDRep\", \"EmployeeName\"\
+  \ as \"SalesRepName\" FROM TabSalesRepDetails WHERE \"Cnt\" = 'random'\nUNION\n\
+  SELECT \"TerritorySysIDRep\", \"SalesRepName\" FROM\n\t(SELECT DISTINCT\n\t\t\t\"\
+  TerrUserRecSysID\" as \"TerritorySysIDRep\",\n\t\t\t\"TerrUserName\" as \"SalesRepName\"\
+  ,\n\t\t\tRANK() OVER (PARTITION  BY  \"TerrUserRecSysID\"  ORDER BY \"TerrUserRecSysID\"\
+  \ ) RANK\n\t  FROM  ODS_LS.SURF.U_ST_TERRITORY t, TabSalesRepDetails x\n\t  WHERE\
+  \ t.\"TerrUserJobFunctionName\" in ('random')\n\t  AND  t.\"TerrUserPrimaryAssignment\"\
+  ='random'\n\t  AND  t.\"TerrUserActive\"='random' AND \"TerrUserRecSysID\"=x.\"\
+  TerritorySysID\" AND \"Cnt\"='random')\nWHERE RANK='random'),\n\nFieldSalesRep1\
+  \ as (\nSELECT\n\t'random' AS SALES_REP_ID,\n\tHASH(ST.\"STEmpTerrTerritorySysId\"\
+  ) AS TERRITORY_ID,\n\tqtr.QUARTER_ID,\n\tqtr.QUARTER_YYQQ,\n\tHASH(\"STEmpTerrEmployeeSysId\"\
+  ) AS EMPLOYEE_ID ,\n\tST.\"STEmpTerrTerritorySysId\" AS TERRITORY_SYSID,\n\tST.\"\
+  STEmpTerrEmployeeSysId\" AS EMPLOYEE_SYSID,\n\t\"STEmpTerrEmployeeName\" AS REP_NAME,\n\
+  \tST.\"STEmpTerrActive\" AS  IS_ACTIVE,\n\tD.DEPARTMENT_NAME AS DEPARTMENT_NAME,\n\
+  \tST.\"STEmpPlanStartDate\" AS START_DT,\n\tST.\"STEmpPlanEndDate\" AS END_DT,\n\
+  \tMAX(ST.\"STEmpTerrTenure\") over(partition by ST.\"STEmpTerrEmployeeSysId\") as\
+  \ \"STEmpTerrTenure\" ,\n\tST.\"STEmpTerrRamped\" AS IS_RAMPED,\n\tST.\"STEmpTerrTerritoy\"\
+  \ AS TERRITORY_NAME,\n\tST.\"STEmpTerrEmpTitle\" AS SALESREP_TITLE,\n\tST.\"STEmpQuotaComponent\"\
+  \ AS QUOTA_COMPONENT,\n\tST.\"STEmpTerrRepType\" AS REP_TYPE -- 22/02/2024 Added\
+  \ new column. DIM_SALESREP table desolved.\nFROM ODS_LS.ANAPLAN.SALES_EMPLOYEE_TERRITORY_MAPPING\
+  \ ST\nleft outer join\n(select distinct QUARTER_ID, QUARTER_DT, QUARTER_YYQQ from\
+  \ EDW.ENTERPRISE.DIM_QUARTER) qtr on qtr.QUARTER_YYQQ=ST.\"STEmpTerrQuarter\"\n\
+  left outer join EDW.ENTERPRISE.DIM_DEPARTMENT D ON D.DEPARTMENT_SYSID = ST.\"STEmpTerrTerritorySysId\"\
+  \n),\n\nFieldSalesRep2 as (\nSELECT\n\tHASH(TERRITORY_ID,QUARTER_ID) AS SALES_REP_ID,\n\
+  \tTERRITORY_ID ,\n\tQUARTER_ID,\n\tQUARTER_YYQQ,\n\tEMPLOYEE_ID,\n\tTERRITORY_SYSID,\n\
+  \tEMPLOYEE_SYSID,\n\tREP_NAME,\n\tIS_ACTIVE ,\n\tDEPARTMENT_NAME ,\n\tSTART_DT ,\n\
+  \tEND_DT,\n\tcase\n\t\twhen \"STEmpTerrTenure\" >'random' then 'random'\n\t\twhen\
+  \ \"STEmpTerrTenure\" >='random' then 'random'\n\t\twhen \"STEmpTerrTenure\">='random'\
+  \ then 'random'\n\t\twhen \"STEmpTerrTenure\">='random' then 'random'\n\t\twhen\
+  \ \"STEmpTerrTenure\">='random' then 'random'\n\telse 'random'\n\tend as TENURE_IN_MONTHS,\n\
+  \tIS_RAMPED,\n\tTERRITORY_NAME,\n\tSALESREP_TITLE ,\n\tQUOTA_COMPONENT,\n\tREP_TYPE\
+  \ -- 22/02/2024 Added new column. DIM_SALESREP table desolved.\nFROM FieldSalesRep1\n\
+  )\n\nSELECT DISTINCT\n\tSALES_REP_ID,\n\tTERRITORY_ID ,\n\tQUARTER_ID,\n\tEMPLOYEE_ID,\n\
+  \tQUARTER_YYQQ,\n\tREP_NAME,\n\tIS_ACTIVE ,\n\tDEPARTMENT_NAME ,\n\tSTART_DT ,\n\
+  \tEND_DT,\n\tTENURE_IN_MONTHS,\n\tIS_RAMPED,\n\tTERRITORY_NAME,\n\tSALESREP_TITLE,\n\
+  \tQUOTA_COMPONENT,\n\tSR.\"SalesRepName\" AS NEWLOGO_REPNAME,\n\tREP_TYPE, -- 22/02/2024\
+  \ Added new column. DIM_SALESREP table desolved.\n\tTERRITORY_SYSID,\n\tEMPLOYEE_SYSID\n\
+  from FieldSalesRep2 FSR\nLEFT OUTER JOIN SalesRepDetails SR\nON SR.\"TerritorySysIDRep\"\
+  \ = FSR.TERRITORY_SYSID;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

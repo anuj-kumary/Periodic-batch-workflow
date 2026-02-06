@@ -1,0 +1,521 @@
+name: table_1263
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1263
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1263.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_CO_USER_PERFORMANCE_SUMMARY(\n\
+  \tSUMMARY_QUARTER_ID,\n\tUSER_ID,\n\tQUARTER_ID,\n\tQUARTER_DT,\n\tQUARTER_YYQQ,\n\
+  \tYEAR_NUMBER,\n\tEMPLOYEE_NUMBER,\n\tTARGET_ID,\n\tMANAGER_ID,\n\tUSER_EXTERNAL_ID,\n\
+  \tEMPLOYEE_NAME,\n\tGEO,\n\tEMP_JOB_LEVEL,\n\tJOB_FUNCTION,\n\tCOST_CENTER_NAME,\n\
+  \tBILLABLE_HOURS,\n\tPRODUCTIVE_HOURS,\n\tTOTAL_UTILIZED_HOURS,\n\tPRE_SALES_HOURS,\n\
+  \tBUSINESS_HOURS,\n\tPROGRAM_CUSTOMER_SATISFACTION_HOURS,\n\tUTILIZED_CUSTOMER_SATISFACTION_HOURS,\n\
+  \tBILLABLE_PRE_SALES_HOURS,\n\tINNOVATION_HOURS,\n\tTEAM_BILLABLE_HOURS,\n\tTEAM_PRODUCTIVE_HOURS,\n\
+  \tTEAM_BUSINESS_HOURS,\n\tTEAM_PRE_SALES_HOURS,\n\tTASK_UTILIZED_CUSTOMER_SATISFACTION_HOURS,\n\
+  \tTASK_PROGRAM_CUSTOMER_SATISFACTION_HOURS,\n\tTEAM_INNOVATION_HOURS,\n\tMANAGER_EMP_AVG_UTLIZATION_TARGET,\n\
+  \tAPPROVED_BILLABLE_HOURS,\n\tBOOKED_BILLABLE_HOURS,\n\tINDIVIDUAL_GATE_SURVEY_RESPONSE,\n\
+  \tCUSTOMER_SATISFACTION_ATTAINMENT,\n\tLATE_SUBMITTED_TIMECARDS,\n\tSUBMITTED_TIMECARDS,\n\
+  \tWEEK_COUNT,\n\tCOMPLETED_PROJECTS,\n\tUNSCHEDULED_PROJECTS,\n\tEXPENSE_REPORTS,\n\
+  \tLATE_EXPENSE_REPORTS,\n\tSATISFACTION_SCORE,\n\tSATISFACTION_SCORE_THRESHOLD_FOUR,\n\
+  \tUSER_USER_ID,\n\tDMUID,\n\tDRUID,\n\tSDRUID,\n\tVPUID,\n\tUSER_SYSID,\n\tMANAGER_SYSID\n\
+  ) as\n\nwith TEMP_EM_ST_USER_PSKPI as (\n    SELECT *\n    FROM EDW_LS.\"CUSTOMER_PSANEW_EM\"\
+  .\"EM_ST_USER_PSKPI\"\n),\nTEMP_CDL_LS_PSKPI_UTILIZATION as (\n    select *\n  \
+  \  from CDL_LS.\"CUSTOMER_PSANEW_ER\".\"PSKPI_UTILIZATION\"\n\t--from CDL_LS.\"\
+  CUSTOMER_PSANEW_RPT\".\"RPT_UTILIZATION_AUF\"\n),\n\n\"EM_ST_USER_ACTIVE_NEW\" as\
+  \ (\n    select usr.\"SUserID\",\n       usr.\"SUserEmployeeNumber\",\n       usr.\"\
+  SUserExtractDate\",\n       usr.\"SUserLineManagerID\",\n       usr.\"SUserName\"\
+  ,\n\t   tgt.UTLIZATION_TARGET,\n       usr.\"SUserLineManagerName\"\n    from EDW_LS.\"\
+  CUSTOMER_PSANEW_EM\".\"EM_ST_USER_ACTIVE_NEW\" usr\n    LEFT JOIN EDW.CUSTOMER_OUTCOMES.DIM_TARGETS\
+  \ tgt ON QUARTER_YYQQ = right(year(\"SUserExtractDate\"),'random')||'random'||quarter(\"\
+  SUserExtractDate\")\n                                                    AND GEO\
+  \ = \"SPSGeo\"\n                                                    AND JOB_FUNCTION\
+  \ = \"SJobCodeJobFunction\"\n                                                  \
+  \  AND JOB_LEVEL = \"EmpJobLevel\"\n                                           \
+  \         where \"SUserExtractDate\" >= 'random'\n),\nUSER_MANAGER_MAP as (\n  \
+  \  select distinct *\n    from (\n            select \"SUserID\",\n            \
+  \    \"SUserEmployeeNumber\",\n                \"SUserName\",\n\t\t\t\tUTLIZATION_TARGET,\n\
+  \                \"SUserLineManagerID\",\n                \"SUserLineManagerName\"\
+  ,\n                \"SUserExtractDate\"\n                /*,'part1' as \"Check\"\
+  */\n            from \"EM_ST_USER_ACTIVE_NEW\" --first level\n            union\
+  \ all\n            select \"MainData\".\"SUserID\",\n                \"MainData\"\
+  .\"SUserEmployeeNumber\",\n                \"MainData\".\"SUserName\",\n\t\t\t\t\
+  \"MainData\".UTLIZATION_TARGET,\n                \"Manager_Lvl1\".\"SUserLineManagerID\"\
+  ,\n                \"Manager_Lvl1\".\"SUserLineManagerName\",\n                \"\
+  MainData\".\"SUserExtractDate\" --'part2' as \"Check\"\n            from \"EM_ST_USER_ACTIVE_NEW\"\
+  \ as \"MainData\"\n                left join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl1\"\
+  \ on \"MainData\".\"SUserLineManagerID\" = \"Manager_Lvl1\".\"SUserID\"\n      \
+  \          and \"MainData\".\"SUserExtractDate\" = \"Manager_Lvl1\".\"SUserExtractDate\"\
+  \ --second level\n            union all\n            select \"MainData\".\"SUserID\"\
+  ,\n                \"MainData\".\"SUserEmployeeNumber\",\n                \"MainData\"\
+  .\"SUserName\",\n\t\t\t\t\"MainData\".UTLIZATION_TARGET,\n                \"Manager_Lvl2\"\
+  .\"SUserLineManagerID\",\n                \"Manager_Lvl2\".\"SUserLineManagerName\"\
+  ,\n                \"MainData\".\"SUserExtractDate\"\n                /*'part3'\
+  \ as \"Check\"*/\n            from \"EM_ST_USER_ACTIVE_NEW\" as \"MainData\"\n \
+  \               left join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl1\" on \"MainData\"\
+  .\"SUserLineManagerID\" = \"Manager_Lvl1\".\"SUserID\"\n                and \"MainData\"\
+  .\"SUserExtractDate\" = \"Manager_Lvl1\".\"SUserExtractDate\"\n                left\
+  \ join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl2\" on \"Manager_Lvl1\".\"SUserLineManagerID\"\
+  \ = \"Manager_Lvl2\".\"SUserID\"\n                and \"Manager_Lvl1\".\"SUserExtractDate\"\
+  \ = \"Manager_Lvl2\".\"SUserExtractDate\" --Third level\n\t\t\tunion all\n\t\t\t\
+  select \"MainData\".\"SUserID\",\n                \"MainData\".\"SUserEmployeeNumber\"\
+  ,\n                \"MainData\".\"SUserName\",\n\t\t\t\t\"MainData\".UTLIZATION_TARGET,\n\
+  \                \"Manager_Lvl3\".\"SUserLineManagerID\",\n                \"Manager_Lvl3\"\
+  .\"SUserLineManagerName\",\n                \"MainData\".\"SUserExtractDate\"\n\
+  \                /*'part4' as \"Check\"*/\n            from \"EM_ST_USER_ACTIVE_NEW\"\
+  \ as \"MainData\"\n                left join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl1\"\
+  \ on \"MainData\".\"SUserLineManagerID\" = \"Manager_Lvl1\".\"SUserID\"\n      \
+  \          and \"MainData\".\"SUserExtractDate\" = \"Manager_Lvl1\".\"SUserExtractDate\"\
+  \n\t\t\t\tleft join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl2\" on \"Manager_Lvl1\"\
+  .\"SUserLineManagerID\" = \"Manager_Lvl2\".\"SUserID\"\n                and \"Manager_Lvl1\"\
+  .\"SUserExtractDate\" = \"Manager_Lvl2\".\"SUserExtractDate\"\n                left\
+  \ join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl3\" on \"Manager_Lvl2\".\"SUserLineManagerID\"\
+  \ = \"Manager_Lvl3\".\"SUserID\"\n                and \"Manager_Lvl2\".\"SUserExtractDate\"\
+  \ = \"Manager_Lvl3\".\"SUserExtractDate\"  -- Fourth Level\n\t\t\tunion all\n\n\t\
+  \t\tselect \"MainData\".\"SUserID\",\n                \"MainData\".\"SUserEmployeeNumber\"\
+  ,\n                \"MainData\".\"SUserName\",\n\t\t\t\t\"MainData\".UTLIZATION_TARGET,\n\
+  \                \"Manager_Lvl4\".\"SUserLineManagerID\",\n                \"Manager_Lvl4\"\
+  .\"SUserLineManagerName\",\n                \"MainData\".\"SUserExtractDate\"\n\
+  \                /*'part5' as \"Check\"*/\n            from \"EM_ST_USER_ACTIVE_NEW\"\
+  \ as \"MainData\"\n                left join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl1\"\
+  \ on \"MainData\".\"SUserLineManagerID\" = \"Manager_Lvl1\".\"SUserID\"\n      \
+  \          and \"MainData\".\"SUserExtractDate\" = \"Manager_Lvl1\".\"SUserExtractDate\"\
+  \n\t\t\t\tleft join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl2\" on \"Manager_Lvl1\"\
+  .\"SUserLineManagerID\" = \"Manager_Lvl2\".\"SUserID\"\n                and \"Manager_Lvl1\"\
+  .\"SUserExtractDate\" = \"Manager_Lvl2\".\"SUserExtractDate\"\n                left\
+  \ join \"EM_ST_USER_ACTIVE_NEW\" as \"Manager_Lvl3\" on \"Manager_Lvl2\".\"SUserLineManagerID\"\
+  \ = \"Manager_Lvl3\".\"SUserID\"\n                and \"Manager_Lvl2\".\"SUserExtractDate\"\
+  \ = \"Manager_Lvl3\".\"SUserExtractDate\"\n\t\t\t\tleft join \"EM_ST_USER_ACTIVE_NEW\"\
+  \ as \"Manager_Lvl4\" on \"Manager_Lvl3\".\"SUserLineManagerID\" = \"Manager_Lvl4\"\
+  .\"SUserID\"\n                and \"Manager_Lvl3\".\"SUserExtractDate\" = \"Manager_Lvl4\"\
+  .\"SUserExtractDate\"\t\t\t\t-- Fifth Level\n\n        )\n),\n\n\"DeliverymanagerEngagementManager\"\
+  \ as (\n    select \"Project\".PROJECT_ID,\n        PROJECT_ENGAGEMENT_MANAGER,\n\
+  \        PROJECT_DELIVERY_MANAGER,\n        CLOSE_DT,\n        PROJECT_CURRENCY,\n\
+  \        BUDGET_USD,\n        DELIVERED_TO_DATE_BUDGET_LC,\n        DELIVERED_TO_DATE_BUDGET_LC\
+  \ AS DELIVERED_TO_DATE_BUDGET_USD,\n        PLANNED_BUDGET_LC,\n        PLANNED_BUDGET_LC\
+  \ as PLANNED_BUDGET_USD\n    from (\n            SELECT PROJECT_ID,\n          \
+  \      PROJECT_CURRENCY,\n                START_DT,\n                CLOSE_DT,\n\
+  \                BUDGET_LC AS BUDGET_USD,\n                PROJECT_ENGAGEMENT_MANAGER,\n\
+  \                hash(\"ProjectData\".\"CustPrjDeliveryManagerSysID\") as PROJECT_DELIVERY_MANAGER\n\
+  \            FROM EDW.CUSTOMER_OUTCOMES.DIM_PROJECT AS \"DrivingData\"\n       \
+  \         LEFT JOIN ODS_LS.PSA.CUSTOMER_PROJECT AS \"ProjectData\" on \"DrivingData\"\
+  .PROJECT_SYSID = \"ProjectData\".\"CustPrjSysID\"\n            WHERE PROJECT_HEALTH_FLAG\
+  \ = 'random'\n\t\t\tand \"DrivingData\".PROJECT_STAGE_NAME in('random','random')\n\
+  \        ) as \"Project\"\n        LEFT JOIN (\n            SELECT PROJECT_ID,\n\
+  \                SUM(REVENUE_LC) AS REVENUE_LC ,\n                SUM(DELIVERED_TO_DATE_BUDGET_LC)\
+  \ AS DELIVERED_TO_DATE_BUDGET_LC,\n                SUM(PLANNED_BUDGET_LC) AS PLANNED_BUDGET_LC,\n\
+  \                SUM(DELIVERED_TO_DATE_HOURS) AS DELIVERED_TO_DATE_HOURS,\n    \
+  \            SUM(PLANNED_HOURS) AS PLANNED_HOURS\n            FROM EDW.CUSTOMER_OUTCOMES.FACT_PROJECT_REVENUE\n\
+  \            GROUP BY PROJECT_ID --having \"PrjID\"=''d5dad39907e9311013b8fea89c1ed022''\n\
+  \        ) \"Aggregation_1\" ON \"Project\".PROJECT_ID = \"Aggregation_1\".PROJECT_ID\n\
+  \        LEFT JOIN EDW_LS.\"FINANCE_MD_EM\".\"CURR_CONV_RATES\" \"CURR\" ON \"CURR\"\
+  .\"KURST\" = 'random'\n        AND \"CURR\".\"FCURR\" = \"Project\".PROJECT_CURRENCY\n\
+  \        AND \"CURR\".\"TCURR\" = 'random'\n        AND date(\"Project\".START_DT)\
+  \ BETWEEN \"CURR\".\"DATE_FROM\" AND \"CURR\".\"DATE_TO\"\n),\n\nUNSCHEDULED_BACKLOG\
+  \ as (\nselect PROJECT_ENGAGEMENT_MANAGER,\n    PROJECT_CLOSE_QUARTER,\n    PROJECT_ID,\n\
+  \    BUDGET_USD,\n    BUDGET_USD - PROJECT_DELIVERED_TO_DATE_BUDGET_USD - PROJECT_PLANNED_BUDGET_USD\
+  \ as UNSCHEDULED_BACKLOG,\n    'random' as COUNT_COMPLETED_PROJECTS,\n    case\n\
+  \        when div0(UNSCHEDULED_BACKLOG, BUDGET_USD) < 'random' then 'random'\n \
+  \       else 'random'\n    end as COUNT_COMPLETED_PROJECT_UNSCHEDULED\nfrom (\n\
+  \        select PROJECT_ENGAGEMENT_MANAGER,\n            PROJECT_ID,\n         \
+  \   CLOSE_DT,\n            \"DIM_QUARTER\".QUARTER_YYQQ as PROJECT_CLOSE_QUARTER,\n\
+  \            PROJECT_CURRENCY,\n            BUDGET_USD,\n            DELIVERED_TO_DATE_BUDGET_USD\
+  \ AS PROJECT_DELIVERED_TO_DATE_BUDGET_USD,\n            PLANNED_BUDGET_USD AS PROJECT_PLANNED_BUDGET_USD\n\
+  \        from \"DeliverymanagerEngagementManager\"\n            left join EDW.ENTERPRISE.DIM_DATE\
+  \ as \"DateDim\" on CLOSE_DT = \"DateDim\".\"CALENDAR_DT\"\n            LEFT JOIN\
+  \ CDL.ENTERPRISE.V_DIM_QUARTER as \"DIM_QUARTER\" on \"DateDim\".QUARTER_ID = \"\
+  DIM_QUARTER\".QUARTER_ID --where \"PrjID\" =''d5dad39907e9311013b8fea89c1ed022''\n\
+  \    )\n    /*union\n     select \"PrjUserID\",\n     \"PrjCloseQuarter\",\n   \
+  \  \"PrjBudget_USD\" as \"TransactionalBudget\",\n     \"PrjBudget_USD\" - \"PrjDeliveredToDateBudget_USD\"\
+  \ - \"PrjPlannedBudget_USD\" as \"UnscheduledBacklog\"\n     from\n     (\n    \
+  \ select \"CustPrjDeliveryManagerSysID\" as \"PrjUserID\",\n     \"PrjID\",\n  \
+  \   \"PrjProjCloseDate\",\n     YEAR(\"PrjProjCloseDate\") || '-Q' || QUARTER(\"\
+  PrjProjCloseDate\") as \"PrjCloseQuarter\",\n     \"PrjCurrency\",\n     \"PrjBudget_USD\"\
+  ,\n     \"DeliveredToDateBudget\",\n     \"DeliveredToDateBudget_USD\" AS \"PrjDeliveredToDateBudget_USD\"\
+  ,\n     \"PlannedBudget\",\n     \"PlannedBudget_USD\" AS \"PrjPlannedBudget_USD\"\
+  \n     from \"DeliverymanagerEngagementManager\"\n     --where \"PrjID\" =''d5dad39907e9311013b8fea89c1ed022''\n\
+  \     )*/\n\t )\n\n\n--Main Layer\n\nselect\n\tHASH(ifnull(Emp.\"SUserID\",'random')||ifnull(Emp.\"\
+  QTR\",'random')) AS SUMMARY_QUARTER_ID,\n\tEmp.USER_ID,\n\tDIM_QTR.QUARTER_ID,\n\
+  \tDIM_QTR.QUARTER_DT,\n\tDIM_QTR.QUARTER_YYQQ,\n\tDIM_QTR.YEAR_NUMBER as YEAR_NUMBER,\n\
+  \tEmp.\"EmployeeNumber\" as EMPLOYEE_NUMBER,\n\tHASH(IFNULL(Emp.\"QTR\",'random')||IFNULL(Emp.\"\
+  JobFunction\",'random')||IFNULL(Emp.\"Geo\",'random')||IFNULL(Emp.\"EmpJobLevel\"\
+  ,'random')) AS TARGET_ID,\n    HASH(Emp.\"ManagerID\") AS MANAGER_ID,\n\tEmp.\"\
+  SUserExternalID\" AS USER_EXTERNAL_ID,\n\tEmp.\"EmployeeName\" as EMPLOYEE_NAME,\n\
+  \tEmp.\"Geo\" as GEO,\n\tEmp.\"EmpJobLevel\" as EMP_JOB_LEVEL,\n    Emp.\"JobFunction\"\
+  \ AS JOB_FUNCTION,\n\tEmp.\"DepartmentName\" as COST_CENTER_NAME,\n    util.\"BillableHours\"\
+  \ as BILLABLE_HOURS,\n    util.\"ProductiveHours\" as PRODUCTIVE_HOURS,\n\tutil.\"\
+  TotalUtilizedHours\" as TOTAL_UTILIZED_HOURS,\n    util.\"PreSalesHours\" as PRE_SALES_HOURS,\n\
+  \    util.\"BusinessHours\" as BUSINESS_HOURS,\n    util.\"ProgramCSATHours\" as\
+  \ PROGRAM_CUSTOMER_SATISFACTION_HOURS,\n    util.\"UtilizedCSATHours\" as UTILIZED_CUSTOMER_SATISFACTION_HOURS,\n\
+  \    util.\"BillablePreSalesHours\" as BILLABLE_PRE_SALES_HOURS,\n    util.\"InnovationHours\"\
+  \ as INNOVATION_HOURS,\n    --util.\"BillableUtilization\" as BILLABLE_UTILIZATION,\n\
+  \   -- util.\"BillablePreSalesUtilization\" as BILLABLE_PRE_SALES_UTILIZATION,\n\
+  \   -- util.\"ProductiveUtilization\" AS PRODUCTIVE_UTILIZATION,\n   -- util.\"\
+  IndBillableCSAT\" as INDIVIDUAL_BILLABLE_CUSTOMER_SATISFACTION,\n\tteamutil.\"TeamBillableHours\"\
+  \ as TEAM_BILLABLE_HOURS,\n\tteamutil.\"TeamProductiveHours\" as TEAM_PRODUCTIVE_HOURS,\n\
+  \tteamutil.\"TeamBusinessHours\" as TEAM_BUSINESS_HOURS,\n\tteamutil.\"TeamPreSalesHours\"\
+  \ as TEAM_PRE_SALES_HOURS,\n\tteamutil.\"TaskUtilizedCSATHours\" as TASK_UTILIZED_CUSTOMER_SATISFACTION_HOURS,\n\
+  \tteamutil.\"TaskProgramCSATHours\" as TASK_PROGRAM_CUSTOMER_SATISFACTION_HOURS,\n\
+  \tteamutil.\"TeamInnovationHours\" as TEAM_INNOVATION_HOURS,\n\t--teamutil.\"TeamBillableUtilization\"\
+  \ as TEAM_BILLABLE_UTILIZATION,\n\t--teamutil.\"TeamBillablePreSalesUtilization\"\
+  \ as TEAM_BILLABLE_PRE_SALES_UTILIZATION,\n\t--teamutil.\"TeamProductiveUtilization\"\
+  \ as TEAM_PRODUCTIVE_UTILIZATION,\n\t--teamutil.\"TeamBillableCSAT\" as TEAM_BILLABLE_CUSTOMER_SATISFACTION,\n\
+  \tteamutil.MANAGER_EMP_AVG_UTLIZATION_TARGET,\n    Fcst.APPROVED_BILLABLE_HOURS,\n\
+  \    Fcst.BOOKED_HOURS as BOOKED_BILLABLE_HOURS,\n\t--Osat.QUALTRICS_SURVEY,\n\t\
+  GTSurvey.CUSTOMER_SURVEY_RESPONSES as INDIVIDUAL_GATE_SURVEY_RESPONSE,\n\tAttainment.\"\
+  CSAT_Attainment\" as CUSTOMER_SATISFACTION_ATTAINMENT,\n\tStc.LATE_SUBMITTED_TIMECARDS,\n\
+  \tStc.SUBMITTED_TIMECARDS,\n\tStc.WEEK_COUNT,\n\tUnBklg.COMPLETED_PROJECTS,\n\t\
+  UnBklg.UNSCHEDULED_PROJECTS,\n\tExpns.EXPENSE_REPORTS,\n\tExpns.LATE_EXPENSE_REPORTS,\n\
+  \tOsat.SATISFACTION_SCORE as SATISFACTION_SCORE,\n\tOsat.SATISFACTION_SCORE_THRESHOLD_FOUR\
+  \ as SATISFACTION_SCORE_THRESHOLD_FOUR,\n\tEmp.\"UserName\" as USER_USER_ID,\n\t\
+  Scrty.\"DMUID\" as DMUID,\n\tScrty.\"DRUID\" as DRUID,\n\tScrty.\"SDRUID\" as SDRUID,\n\
+  \tScrty.\"VPUID\" as VPUID,\n\tEmp.\"SUserID\" AS USER_SYSID,\n\tEmp.\"ManagerID\"\
+  \ AS MANAGER_SYSID,\n\nfrom (\n        SELECT HASH(\"SUserID\") AS USER_ID,\n  \
+  \          *\n        FROM TEMP_EM_ST_USER_PSKPI\n        WHERE \"QTR\" >= 'random'\n\
+  \            AND \"JobFunction\"\n\t\t\tin( 'random',\n\t\t\t\t'random',\n\t\t\t\
+  \t'random',\n\t\t\t\t'random',\n\t\t\t\t'random',\n\t\t\t\t'random',\n\t\t\t\t'random'\n\
+  \t\t\t\t)\n\n\n\t\t\t/*Not In (\n                'Customer Success Executive',\n\
+  \                'Management Consultant',\n                'Success Architect',\n\
+  \                'Program Advisor',\n                --'Program Director',\n   \
+  \             'Platform Architect'\n\t\t\t\t--,'Solution Architect'\n          \
+  \  )\n\t\t\t*/\n    ) EMP\n\n--TO GET INDIVIDUAL HOURS\n    LEFT JOIN (\n      \
+  \  SELECT DISTINCT \"SUserID\",\n            \"Quarter\",\n            \"BillableHours\"\
+  ,\n            \"ProductiveHours\",\n            \"TotalUtilizedHours\",\n     \
+  \       \"PreSalesHours\",\n            \"BusinessHours\",\n            \"ProgramCSATHours\"\
+  ,\n            \"UtilizedCSATHours\",\n            \"BillablePreSalesHours\",\n\
+  \            \"InnovationHours\"\n            /*,CASE\n                WHEN \"BusinessHours\"\
+  \ = 0 THEN 0\n                ELSE \"BillableHours\" / \"BusinessHours\" * 100\n\
+  \            END \"BillableUtilization\",\n            CASE\n                WHEN\
+  \ \"BusinessHours\" = 0 THEN 0\n                ELSE (\"BillableHours\" + IFNULL\
+  \ (\"PreSalesHours\", 0)) / \"BusinessHours\" * 100\n            END \"BillablePreSalesUtilization\"\
+  ,\n            CASE\n                WHEN \"BusinessHours\" = 0 THEN 0\n       \
+  \         ELSE \"ProductiveHours\" / (\"BusinessHours\") * 100\n            END\
+  \ \"ProductiveUtilization\",\n            CASE\n                WHEN \"BusinessHours\"\
+  \ = 0 THEN 0\n                ELSE \"TotalUtilizedHours\" / (\"BusinessHours\")\
+  \ * 100\n            END \"TotalUtilization\",\n          --STRY2517306\n      \
+  \      CASE\n                WHEN \"BusinessHours\" = 0 THEN 0\n               \
+  \ ELSE (\n                    \"BillableHours\" + \"UtilizedCSATHours\" + \"ProgramCSATHours\"\
+  \n                ) /(\"BusinessHours\") * 100\n            END \"IndBillableCSAT\"\
+  \n\t\t\t*/\n        FROM (SELECT DISTINCT \"SUserID\",\n                    \"Quarter_FQ\"\
+  \ as \"Quarter\",\n                    SUM (\"ActualBillableHours\") \"BillableHours\"\
+  ,\n                    SUM (\"ActualProductiveHours\") \"ProductiveHours\",\n  \
+  \                  SUM (\"ActualTotalUtilizedHours\") \"TotalUtilizedHours\",\n\
+  \                    SUM (\"ActualPreSalesHours\") \"PreSalesHours\",\n        \
+  \            SUM (\"ActualBusinessHours\") \"BusinessHours\",\n                \
+  \    SUM (\"ActualBillableHours\" + \"ActualPreSalesHours\") \"BillablePreSalesHours\"\
+  ,\n                    SUM (IFNULL (\"InnovationHours\", 'random')) \"InnovationHours\"\
+  ,\n                    SUM (\"ActualProgramCSATHours\") \"ProgramCSATHours\",\n\
+  \                    SUM (\"ActualUtilizedCSATHours\") \"UtilizedCSATHours\"\n \
+  \               FROM --TEMP_CDL_LS_PSKPI_UTILIZATION\n\t\t\t\t(\n\t\t\t\tSELECT\
+  \ *,YEAR(TIME_CARD_DATE_FQ)||'random'||QUARTER(TIME_CARD_DATE_FQ) AS \"Quarter_FQ\"\
+  \ FROM (\n\t\t\t\tSELECT *,\n\t\t\t\t\t\tCASE when month(\"TimeCardDate\")='random'\
+  \ or month(\"TimeCardDate\")='random' then\n\t\t\t\t\t\tIFF(DAY(\"TimeCardDate\"\
+  ) <='random', ADD_MONTHS(LAST_DAY(\"TimeCardDate\"), 'random'), DATEADD(DAY, 'random',\
+  \ LAST_DAY(\"TimeCardDate\")))\n\t\t\t\t\t\tELSE\n\t\t\t\t\t\tIFF(DAY(\"TimeCardDate\"\
+  ) <='random', ADD_MONTHS(LAST_DAY(\"TimeCardDate\"), 'random'), DATEADD(DAY, 'random',\
+  \ LAST_DAY(\"TimeCardDate\"))) END as TIME_CARD_DATE_FQ,\n\t\t\t\t\t\tFROM\n\t\t\
+  \t\t\t\tTEMP_CDL_LS_PSKPI_UTILIZATION\n\t\t\t\t\t\t--CDL_LS.\"CUSTOMER_PSANEW_ER\"\
+  .\"PSKPI_UTILIZATION\"\n\t\t\t\t\t\t)\n\t\t\t\t)\n\n                WHERE \"Flag\"\
+  \ IN (\n                        'random',\n                        'random',\n \
+  \                       'random'\n                    )\n                    AND\
+  \ \"Quarter_FQ\" >= 'random'\n                GROUP BY \"SUserID\",\n          \
+  \          \"Quarter_FQ\" )\n\n\t\t\t\t/*\tSELECT DISTINCT \"EmployeeNumber\",\n\
+  \                    \"Quarter\",\n                    SUM (\"ActualBillableHours\"\
+  ) \"BillableHours\",\n                    SUM (\"ActualProductiveHours\") \"ProductiveHours\"\
+  ,\n                    SUM (\"ActualTotalUtilizedHours\") \"TotalUtilizedHours\"\
+  ,\n                    SUM (\"ActualPreSalesHours\") \"PreSalesHours\",\n      \
+  \              SUM (\"ActualBusinessHours\") \"BusinessHours\",\n              \
+  \      SUM (\"ActualBillableHours\" + \"ActualPreSalesHours\") \"BillablePreSalesHours\"\
+  ,\n                    SUM (IFNULL (\"InnovationHours\", 0)) \"InnovationHours\"\
+  ,\n                    SUM (\"ActualProgramCSATHours\") \"ProgramCSATHours\",\n\
+  \                    SUM (\"ActualUtilizedCSATHours\") \"UtilizedCSATHours\"\n \
+  \               FROM (\n\t\t\t\tSELECT \"EmployeeNumber\" as \"EmployeeNumber\"\
+  ,\n                \"QuarterBeginDate\" as \"QuarterBeginDate\",\n             \
+  \   \"Flag\" as \"Flag\",\n                \"SUserBusinessHours\" as \"SUserBusinessHours\"\
+  ,\n                \"TaskProductiveHours\" as \"TaskProductiveHours\",\n       \
+  \         \"TaskProgramCSATHours\" as \"TaskProgramCSATHours\",\n              \
+  \  \"TaskUtilizedCSATHours\" as \"TaskUtilizedCSATHours\",\n                \"TaskCSATHours\"\
+  \ as \"TaskCSATHours\",\n                \"TaskBillableHours\" as \"TaskBillableHours\"\
+  ,\n                \"TimeCardHours\" as \"TimeCardHours\",\n                \"TaskPreSalesHours\"\
+  \ as \"TaskPreSalesHours\",\n                \"UtlizationTarget\" as \"UtlizationTarget\"\
+  ,\n                \"UtlizationGate\" as \"UtlizationGate\",\n                \"\
+  606Calender_Quarter\" as \"Quarter\",\n                \"TimeCardCategory\" as \"\
+  TimeCardCategory\",\n                \"UserName\" as \"UserName\",\n           \
+  \     \"TimeCardSubCategory\" as \"TimeCardSubCategory\",\n                \"TimeCardWeekStartsOn\"\
+  \ as \"TimeCardWeekStartsOn\",\n                \"TimeCardDate\" as \"TimeCardDate\"\
+  ,\n                \"TimeCardGroup\" as \"TimeCardGroup\",\n                \"AccountName\"\
+  \ as \"AccountName\",\n                \"PrjName\" as \"PrjName\",\n           \
+  \     CASE\n                    WHEN \"Flag\" IS NULL\n                        \
+  \ OR \"TimeCardWeekStartsOn\" IS NULL then NULL\n                    else IFF ((\"\
+  Flag\"='Forecast Snapshot on Sunday Data'\n                               and \"\
+  TimeCardWeekStartsOn\">=date('2020-03-01')) ,\"TaskBillableHours\", 0)\n       \
+  \         END as \"BookedBillableHours\",\n                \"TaskProductiveHours\"\
+  +\"TaskPreSalesHours\" as \"TotalUtilizedHours\",\n                CASE\n      \
+  \              WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"\
+  Flag\" In ('Actuals', 'Previous Quarter Data'), \"TaskBillableHours\", 0)\n    \
+  \            END as \"ActualBillableHours\",\n                CASE\n           \
+  \         WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"Flag\"\
+  \ In ('Actuals', 'Previous Quarter Data'), \"TaskPreSalesHours\", 0)\n         \
+  \       END as \"ActualPreSalesHours\",\n                CASE\n                \
+  \    WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"Flag\" In\
+  \ ('Actuals', 'Previous Quarter Data'), \"TaskProductiveHours\", 0)\n          \
+  \      END as \"ActualProductiveHours\",\n                CASE\n               \
+  \     WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"Flag\" In\
+  \ ('Actuals', 'Previous Quarter Data'), \"TotalUtilizedHours\", 0)\n           \
+  \     END as \"ActualTotalUtilizedHours\",\n                CASE\n             \
+  \       WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"Flag\"\
+  \ In ('Actuals', 'Previous Quarter Data'), \"SUserBusinessHours\", 0)\n        \
+  \        END as \"ActualBusinessHours\",\n                CASE\n               \
+  \     WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"Flag\" In\
+  \ ('Actuals', 'Previous Quarter Data'), \"TaskProgramCSATHours\", 0)\n         \
+  \       END as \"ActualProgramCSATHours\",\n                CASE\n             \
+  \       WHEN \"Flag\" IS NULL then NULL\n                    else IFF (\"Flag\"\
+  \ In ('Actuals', 'Previous Quarter Data'), \"TaskUtilizedCSATHours\", 0)\n     \
+  \           END as \"ActualUtilizedCSATHours\",\n                CASE\n        \
+  \            WHEN \"Flag\" IS NULL\n                         OR \"TimeCardGroup\"\
+  \ IS NULL\n                         OR \"TimeCardCategory\" IS NULL\n          \
+  \               OR \"TimeCardSubCategory\" IS NULL then NULL\n                 \
+  \   else IFF(\"Flag\" In('Actuals', 'Previous Quarter Data')\n                 \
+  \            And \"TimeCardGroup\"='Productive'\n                             And\
+  \ (\"TimeCardCategory\"='Innovation'\n                                  or \"TimeCardSubCategory\"\
+  ='Innovation') ,\"TimeCardHours\", 0)\n                END as \"InnovationHours\"\
+  \n         FROM -- \"CDL_LS\".\"CUSTOMER_PSANEW_RPT\".\"RPT_UTILIZATION_AUF\"\n\t\
+  \t\tTEMP_CDL_LS_PSKPI_UTILIZATION\n         WHERE (\"606Calender_Quarter\" >='2022-Q1')\n\
+  \t\t\t\t)\n                WHERE \"Flag\" IN (\n                        'Previous\
+  \ Quarter Data',\n                        'Actuals',\n                        'Forecast\
+  \ Snapshot on Sunday Data'\n                    )\n                    AND \"Quarter\"\
+  \ >= '2024-Q1'\n                GROUP BY \"EmployeeNumber\",\n                 \
+  \   \"Quarter\"\n\n\t\t\t\t\t)\n\t\t\t*/\n\n    ) util ON Emp.\"SUserID\" = util.\"\
+  SUserID\"\n    AND Emp.\"QTR\" = util.\"Quarter\"\n\n--TO GET APPROVED HOURS AND\
+  \ BOOKED HOURS FOR BOOKING FORCAST ACCURACY\n    LEFT JOIN (\n        SELECT DISTINCT\
+  \ USER_ID,\n            QUARTER_YYQQ,\n            Sum(APPROVED_BILLABLE_HOURS)\
+  \ APPROVED_BILLABLE_HOURS,\n            Sum(BOOKED_HOURS) BOOKED_HOURS\n       \
+  \ FROM EDW.CUSTOMER_OUTCOMES.FACT_BOOKING_FORECAST_ACCURACY\n        GROUP BY USER_ID,\n\
+  \            QUARTER_YYQQ\n    ) Fcst ON Emp.USER_ID = Fcst.USER_ID\n    AND right(Emp.\"\
+  QTR\", 'random') = Fcst.QUARTER_YYQQ\n\n--TO GET TEAM RELATED HOURS\n\tLEFT JOIN(\n\
+  \t\tSELECT DISTINCT\n\t\t\t\"ManagerID\",\n\t\t\t\"Quarter\",\n\t\t\tSUM (\"TeamBillableHours\"\
+  ) \"TeamBillableHours\",\n\t\t\tSUM (\"TeamProductiveHours\") \"TeamProductiveHours\"\
+  ,\n\t\t\tSUM (\"TeamBusinessHours\") \"TeamBusinessHours\",\n\t\t\tSUM (\"TeamPreSalesHours\"\
+  ) \"TeamPreSalesHours\",\n\t\t\tSUM(\"TaskUtilizedCSATHours\") \"TaskUtilizedCSATHours\"\
+  ,\n\t\t\tSUM(\"TaskProgramCSATHours\") \"TaskProgramCSATHours\",\n\t\t\tSUM(\"InnovationHours\"\
+  ) \"TeamInnovationHours\",\n\t\t\tAVG(UTLIZATION_TARGET) MANAGER_EMP_AVG_UTLIZATION_TARGET\n\
+  \t\t/*\t,CASE\n\t\t\t\tWHEN SUM (\"TeamBusinessHours\") = 0 THEN 0\n\t\t\t\tELSE\
+  \ SUM (\"TeamBillableHours\") / SUM (\"TeamBusinessHours\") * 100\n\t\t\tEND \"\
+  TeamBillableUtilization\",\n\t\t\tCASE\n\t\t\t\tWHEN SUM (\"TeamBusinessHours\"\
+  ) = 0 THEN 0\n\t\t\t\tELSE SUM (\n\t\t\t\t\t\"TeamBillableHours\" + IFNULL (\"TeamPreSalesHours\"\
+  , 0)\n\t\t\t\t) / SUM (\"TeamBusinessHours\") * 100\n\t\t\tEND \"TeamBillablePreSalesUtilization\"\
+  ,\n\t\t\tCASE\n\t\t\t\tWHEN SUM (\"TeamBusinessHours\") = 0 THEN 0\n\t\t\t\tELSE\
+  \ SUM (\"TeamProductiveHours\") / SUM (\"TeamBusinessHours\") * 100\n\t\t\tEND \"\
+  TeamProductiveUtilization\",\n\t\t\t--STRY2517306\n\t\t\tCASE\n\t\t\t\tWHEN SUM\
+  \ (\"TeamBusinessHours\") = 0 THEN 0\n\t\t\t\tELSE SUM(\n\t\t\t\t\t\"TeamBillableHours\"\
+  \ + \"TaskUtilizedCSATHours\" + \"TaskProgramCSATHours\"\n\t\t\t\t) / SUM (\"TeamBusinessHours\"\
+  ) * 100\n\t\t\tEND \"TeamBillableCSAT\"\n\t\t\t*/\n\t\tFROM (\n\t\t\t\tselect \"\
+  SUserLineManagerID\" as \"ManagerID\",\n\t\t\t\t\t\"Quarter\",\"Role\",\n\t\t\t\t\
+  \tSUM (\"TaskBillableHours\") \"TeamBillableHours\",\n\t\t\t\t\tSUM (\"TaskProductiveHours\"\
+  ) \"TeamProductiveHours\",\n\t\t\t\t\tSUM (\"SUserBusinessHours\") \"TeamBusinessHours\"\
+  ,\n\t\t\t\t\tSUM (\"TaskPreSalesHours\") \"TeamPreSalesHours\",\n\t\t\t\t\tSUM(\"\
+  TaskUtilizedCSATHours\") \"TaskUtilizedCSATHours\",\n\t\t\t\t\tSUM(\"TaskProgramCSATHours\"\
+  ) \"TaskProgramCSATHours\",\n\t\t\t\t\tSUM(\"InnovationHours\") \"InnovationHours\"\
+  ,\n\t\t\t\t\tMAX(UTLIZATION_TARGET) UTLIZATION_TARGET\n\t\t\t\tfrom (\n\t\t\t\t\t\
+  \tselect Act.\"SUserLineManagerID\",\n\t\t\t\t\t\t\tAct.\"SUserLineManagerName\"\
+  ,\n\t\t\t\t\t\t\tAct.\"SUserName\",\n\t\t\t\t\t\t\tAct.UTLIZATION_TARGET,\n\t\t\t\
+  \t\t\t\tAuf.\"Quarter\",\n\t\t\t\t\t\t\tAuf.\"TaskBillableHours\",\n\t\t\t\t\t\t\
+  \tAuf.\"TaskProductiveHours\",\n\t\t\t\t\t\t\tAuf.\"SUserBusinessHours\",\n\t\t\t\
+  \t\t\t\tAuf.\"TaskPreSalesHours\",\n\t\t\t\t\t\t\tAuf.\"TaskUtilizedCSATHours\"\
+  ,\n\t\t\t\t\t\t\tAuf.\"TaskProgramCSATHours\",\n\t\t\t\t\t\t\tAuf.\"InnovationHours\"\
+  ,\n\t\t\t\t\t\t\tAuf.\"Role\"\n\t\t\t\t\t\tfrom (\n\t\t\t\t\t\t\t\tselect *\n\t\t\
+  \t\t\t\t\t\tfrom USER_MANAGER_MAP\n\t\t\t\t\t\t\t) Act\n\t\t\t\t\t\t\tleft join\
+  \ (\n\t\t\t\t\t\t\t\tselect \"ManagerName\",\n\t\t\t\t\t\t\t\t\t\"EmployeeNumber\"\
+  ,\n\t\t\t\t\t\t\t\t\t\"606Calender_Quarter\" as \"Quarter\",\n\t\t\t\t\t\t\t\t\t\
+  \"TaskBillableHours\",\n\t\t\t\t\t\t\t\t\t\"TaskProductiveHours\",\n\t\t\t\t\t\t\
+  \t\t\t\"SUserBusinessHours\",\n\t\t\t\t\t\t\t\t\t\"TaskPreSalesHours\",\n\t\t\t\t\
+  \t\t\t\t\t\"TaskUtilizedCSATHours\",\n\t\t\t\t\t\t\t\t\t\"TaskProgramCSATHours\"\
+  ,\n\t\t\t\t\t\t\t\t\t\"InnovationHours\",\n\t\t\t\t\t\t\t\t\t\"TimeCardDate\",\n\
+  \t\t\t\t\t\t\t\t\tTIME_CARD_DATE_FQ,\n\t\t\t\t\t\t\t\t\t\"Role\"\n\t\t\t\t\t\t\t\
+  \tFROM (select *,\n\t\t\t\t\t\t\t\tcase when \t\"Flag\" In('random', 'random')\n\
+  \t\t\t\t\t\t\t\t\tand \"TimeCardGroup\"='random'\n\t\t\t\t\t\t\t\t\tand lower(\"\
+  TimeCardCategory\")='random'\n\t\t\t\t\t\t\t\t\tand lower(\"TimeCardSubCategory\"\
+  ) like 'random' then \"TimeCardHours\"\n\t\t\t\t\t\t\t\twhen \"Flag\" In('random',\
+  \ 'random')\n\t\t\t\t\t\t\t\t\tand \"TimeCardGroup\"='random'\n\t\t\t\t\t\t\t\t\t\
+  and lower(\"TimeCardCategory\")='random' then \"TimeCardHours\" else 'random'\n\n\
+  \t\t\t\t\t\t\t\tEND as \"InnovationHours\",\n\t\t\t\t\t\t\t\tYEAR(TIME_CARD_DATE_FQ)||'random'||QUARTER(TIME_CARD_DATE_FQ)\
+  \ AS \"Quarter_FQ\" from (select *,\n                                CASE when month(\"\
+  TimeCardDate\")='random' or month(\"TimeCardDate\")='random' then\n\t\t\t\t\t\t\t\
+  \t\tIFF(DAY(\"TimeCardDate\") <='random', ADD_MONTHS(LAST_DAY(\"TimeCardDate\"),\
+  \ 'random'), DATEADD(DAY, 'random', LAST_DAY(\"TimeCardDate\")))\n\t\t\t\t\t\t\t\
+  \t\tELSE\n\t\t\t\t\t\t\t\t\tIFF(DAY(\"TimeCardDate\") <='random', ADD_MONTHS(LAST_DAY(\"\
+  TimeCardDate\"), 'random'), DATEADD(DAY, 'random', LAST_DAY(\"TimeCardDate\")))\n\
+  \t\t\t\t\t\t\t\tEND as TIME_CARD_DATE_FQ\n                                from CDL_LS.\"\
+  CUSTOMER_PSANEW_RPT\".\"RPT_UTILIZATION_AUF\"))\n\t\t\t\t\t\t\t\t--TEMP_CDL_LS_PSKPI_UTILIZATION\n\
+  \t\t\t\t\t\t\t\twhere \"Flag\" In (\n\t\t\t\t\t\t\t\t\t\t'random',\n\t\t\t\t\t\t\
+  \t\t\t\t'random'\n\t\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t\t\tAND \"Quarter_FQ\" >= 'random'\n\
+  \t\t\t\t\t\t\t) Auf on Act.\"SUserEmployeeNumber\" = Auf.\"EmployeeNumber\"\n\t\t\
+  \t\t\t\t\tand Act.\"SUserExtractDate\" = Auf.\"TimeCardDate\"\n\t\t\t\t\t)\n\t\t\
+  \t\twhere \"Role\" not in ('random', 'random')\n\t\t\t\tGROUP BY \"ManagerID\",\n\
+  \t\t\t\t\t\"Quarter\",\"Role\"\n\t\t\t)\n\t\tGROUP BY \"ManagerID\",\n\t\t\t\"Quarter\"\
+  \n\t) teamutil on teamutil.\"ManagerID\" = Emp.\"SUserID\"\n\tAND teamutil.\"Quarter\"\
+  \ = Emp.\"QTR\"\n\n-- TO GET THE QUARTER METRICS FROM DIM_QUARTER\n\tLEFT JOIN\n\
+  \t\tEDW.ENTERPRISE.DIM_QUARTER as DIM_QTR on right(Emp.\"QTR\",'random')=DIM_QTR.QUARTER_YYQQ\n\
+  \n-- TO GET QUALTRIC SURVEY FROM OSAT MODEL\n\tLEFT JOIN (\n\tselect distinct  USER_ID,QUARTER_YYQQ,SATISFACTION_SCORE_THRESHOLD_FOUR,SATISFACTION_SCORE\
+  \ from  (\n\tSELECT USER_ID,\n\t\t\tQUARTER_YYQQ,\n\t\t\t--SUM (COUNT_OVERALL_SATISFACTION_FOR)\
+  \ / SUM (COUNT_OVERALL_SATISFACTION_SCORE) * 100 AS QUALTRICS_SURVEY\n\t\t\tSUM\
+  \ (SATISFACTION_SCORE_THRESHOLD_FOUR) as SATISFACTION_SCORE_THRESHOLD_FOUR,\n\t\t\
+  \tSUM (SATISFACTION_SCORE) as SATISFACTION_SCORE\n\t\t\tFROM (\n\t\t\t\t\tSELECT\
+  \ DISTINCT USER_ID,\n\t\t\t\t\t\tQUARTER_YYQQ,\n\t\t\t\t\t\tENGAGMENT_NUMBER,\n\t\
+  \t\t\t\t\tSATISFACTION_SCORE,\n\t\t\t\t\t\tSATISFACTION_SCORE_THRESHOLD_FOUR\n\t\
+  \t\t\t\tFROM EDW.CUSTOMER_OUTCOMES.FACT_CO_USER_SATISFACTION\n\t\t\t\t\tWHERE QUARTER_YYQQ\
+  \ >= 'random'\n\t\t\t\t\t\tAND JOB_FUNCTION Not In (\n\t\t\t\t\t\t\t'random',\n\t\
+  \t\t\t\t\t\t'random',\n\t\t\t\t\t\t\t'random',\n\t\t\t\t\t\t\t--'Program Director',\n\
+  \t\t\t\t\t\t\t'random'\n\t\t\t\t\t\t)\n\t\t\t\t\t\tAND EMPLOYEE_NUMBER = USER_EMPLOYEE_NUMBER\n\
+  \t\t\t\t\t\tAND TIME_ON_PROJECT >= 'random'\n\t\t\t\t)\n\t\t\tGROUP BY USER_ID,\n\
+  \t\t\t\tQUARTER_YYQQ\n\t\t\tUNION ALL\n\t\t\t------------WF Manager & Delivery Manager--------------------------------\n\
+  \n\t\t\t/*SELECT MANAGER_ID,\n\t\t\t\tQUARTER_YYQQ,\n\t\t\t\t--SUM (COUNT_OVERALL_SATISFACTION_FOR)\
+  \ / SUM (COUNT_OVERALL_SATISFACTION_SCORE) * 100 AS QUALTRICS_SURVEY\n\t\t\t\tSUM\
+  \ (SATISFACTION_SCORE_THRESHOLD_FOUR) as SATISFACTION_SCORE_THRESHOLD_FOUR,\n\t\t\
+  \t\tSUM (SATISFACTION_SCORE) as SATISFACTION_SCORE\n\t\t\tFROM (\n\t\t\t\t\tSELECT\
+  \ DISTINCT MANAGER_ID,\n\t\t\t\t\t\tUSER_ID,\n\t\t\t\t\t\tQUARTER_YYQQ,\n\t\t\t\t\
+  \t\tENGAGMENT_NUMBER,\n\t\t\t\t\t\tSATISFACTION_SCORE,\n\t\t\t\t\t\tSATISFACTION_SCORE_THRESHOLD_FOUR\n\
+  \t\t\t\t\tFROM EDW.CUSTOMER_OUTCOMES.FACT_CO_USER_SATISFACTION\n\t\t\t\t\tWHERE\
+  \ QUARTER_YYQQ >= '24-Q1'\n\t\t\t\t\t\tAND MANAGER_JOB_FUNCTION In (\n\t\t\t\t\t\
+  \t\t--'Management Consultant',\n\t\t\t\t\t\t\t'MC - Workflow Manager',\n\t\t\t\t\
+  \t\t\t'MC - Delivery Manager'\n\t\t\t\t\t\t)\n\t\t\t\t\t\tAND TIME_ON_PROJECT >=\
+  \ 0.05\n\t\t\t\t)\n\t\t\tGROUP BY MANAGER_ID,\n\t\t\t\tQUARTER_YYQQ*/\n\t\t\t\t\
+  select\n\t\t\t\t\t\thash(MANAGER_SYSID) as MANAGER_ID,\n\t\t\t\t\t\tQUARTER_YYQQ,\n\
+  \t\t\t\t\t\tSUM (SATISFACTION_SCORE_THRESHOLD_FOUR) as SATISFACTION_SCORE_THRESHOLD_FOUR,\n\
+  \t\t\t\t\t\tSUM (SATISFACTION_SCORE) as SATISFACTION_SCORE\n\t\t\t\t\t\tfrom\n\t\
+  \t\t\t\t\t(\n\t\t\t\t\t\tselect\n\t\t\t\t\t\tmap.\"SUserLineManagerID\" as MANAGER_SYSID,\n\
+  \t\t\t\t\t\tmap.\"SUserLineManagerName\",\n\t\t\t\t\t\tmap.\"SUserName\",\n\t\t\t\
+  \t\t\tosatsrc.QUARTER_YYQQ,\n\t\t\t\t\t\tosatsrc.JOB_FUNCTION,\n\t\t\t\t\t\tosatsrc.ENGAGMENT_NUMBER,\n\
+  \t\t\t\t\t\tosatsrc.SATISFACTION_SCORE,\n\t\t\t\t\t\tosatsrc.SATISFACTION_SCORE_THRESHOLD_FOUR\n\
+  \t\t\t\t\t\tfrom\n\n\t\t\t\t\t\t(select DISTINCT \"SUserLineManagerID\",\"SUserLineManagerName\"\
+  ,\"SUserID\",\"SUserName\",\n\t\t\t\t\t\tright(year(\"SUserExtractDate\"),'random')||'random'||quarter(\"\
+  SUserExtractDate\") AS QUARTER_YYQQ\n\t\t\t\t\t\tfrom USER_MANAGER_MAP) map\n\t\t\
+  \t\t\t\tleft join\n\t\t\t\t\t\t(SELECT DISTINCT MANAGER_SYSID,\n\t\t\t\t\t\tUSER_SYSID,\n\
+  \                        JOB_FUNCTION,\n\t\t\t\t\t\tQUARTER_YYQQ,\n\t\t\t\t\t\t\
+  ENGAGMENT_NUMBER,\n\t\t\t\t\t\tSATISFACTION_SCORE,\n\t\t\t\t\t\tSATISFACTION_SCORE_THRESHOLD_FOUR\n\
+  \t\t\t\t\tFROM EDW.CUSTOMER_OUTCOMES.FACT_CO_USER_SATISFACTION\n\t\t\t\t\tWHERE\
+  \ QUARTER_YYQQ >= 'random'\n\t\t\t\t\t\tAND TIME_ON_PROJECT >= 'random'\n      \
+  \                  ) osatsrc\n                        on map.\"SUserID\"= osatsrc.USER_SYSID\n\
+  \                        and map.QUARTER_YYQQ =osatsrc.QUARTER_YYQQ\n          \
+  \              ) where JOB_FUNCTION not in ('random','random')\n               \
+  \          GROUP BY MANAGER_SYSID,\n\t\t\t\t                 QUARTER_YYQQ\n\n\t\t\
+  \t\t)) Osat ON Emp.USER_ID = Osat.USER_ID\n    AND right(Emp.\"QTR\", 'random')\
+  \ = Osat.QUARTER_YYQQ\n\n\n\n--TO GET GATE SURVEY RESPONSE\n\tLEFT JOIN(\n\tSELECT\
+  \ DISTINCT\n\t\tUSER_ID,\n\t\tQUARTER_YYQQ,\n\t\tSUM(CUSTOMER_SURVEY_RESPONSES)\
+  \ AS CUSTOMER_SURVEY_RESPONSES\n\t\tFROM (\n\t\t(SELECT USER_ID,\n\t\tQUARTER_YYQQ,\n\
+  \t\tCUSTOMER_SURVEY_NUMBER,\n\t\tMAX(CUSTOMER_SURVEY_RESPONSES) as CUSTOMER_SURVEY_RESPONSES\n\
+  \        FROM EDW.CUSTOMER_OUTCOMES.FACT_CO_USER_SATISFACTION\n        WHERE QUARTER_YYQQ\
+  \ >= 'random'\n            AND JOB_FUNCTION Not In (\n                'random',\n\
+  \                'random',\n                'random',\n                'random'\n\
+  \            )\n            AND EMPLOYEE_NUMBER = USER_EMPLOYEE_NUMBER\n       \
+  \     AND TIME_ON_PROJECT >= 'random'\n\t\t\tGROUP BY USER_ID,\n\t\tQUARTER_YYQQ,CUSTOMER_SURVEY_NUMBER))\n\
+  \t\tGROUP BY USER_ID,\n\t\tQUARTER_YYQQ\n\t)GTSurvey ON Emp.USER_ID = GTSurvey.USER_ID\n\
+  \    AND right(Emp.\"QTR\", 'random') = GTSurvey.QUARTER_YYQQ\n\n-- TO GET CSAT\
+  \ ATTAINMENT\n\n\tLEFT JOIN(\n\tselect \"CSAT_Attainment\",\"Quarter\",\"TerrGeo\"\
+  ,src2.\"JobFunction\" from\n\t\t(select avg(\"Value\") as \"CSAT_Attainment\",\n\
+  \t\tyear(\"SurveyDate\") || 'random' || quarter(\"SurveyDate\") as \"Quarter\",\n\
+  \t\t'random' as ID,\n\t\t\"TerrGeo\"\n\tfrom CDL_LS.CUSTOMER_RPT.RPT_CX_SURVEY_DRILLDOWN_METRICS\n\
+  \t\twhere \"Metric\" like 'random'\n\t\t\tand \"SurveyType\" = 'random'\n\t\t\t\
+  and \"Data\" = 'random'\n\t\t\tand \"TimeFrame\" in ('random', 'random')\n\t\t\t\
+  and year(\"SurveyDate\") >='random'\n\t\t\tand \"TerrGeo\" IS not NULL\n\tgroup\
+  \ by year(\"SurveyDate\") || 'random' || quarter(\"SurveyDate\"),\n\t\t\t\"TerrGeo\"\
+  ) src\n    left join (select 'random' as ID ,'random'  as \"JobFunction\" from dual\
+  \ union all\n\t\tselect 'random' as ID ,'random'  as \"JobFunction\" from dual\n\
+  \t\t\t) src2 on src.ID  = src2.ID\n\t\torder by \"Quarter\",\"TerrGeo\"\n\t)Attainment\
+  \ on Emp.\"QTR\" =Attainment.\"Quarter\" and\n\tEmp.\"Geo\"=Attainment.\"TerrGeo\"\
+  \ and\n\tEmp.\"JobFunction\" =Attainment.\"JobFunction\"\n\n--TO GET SUBMITTE TIMECARD\
+  \ COMPLIANCE FOR INDIVIUDALS ONLY\n\tLEFT JOIN (\n\tSELECT USER_ID,\n\t\tQUARTER_YYQQ,\n\
+  \t\tSUM(CASE WHEN TIME_CARD_SUBMITED_COMPLIANT ='random' THEN 'random' ELSE 'random'\
+  \ END ) AS LATE_SUBMITTED_TIMECARDS,\n\t\tCOUNT(TIME_CARD_SUBMITED_COMPLIANT) AS\
+  \ SUBMITTED_TIMECARDS,\n        MAX(WEEK_COUNT) AS WEEK_COUNT\n\t\tFROM (\n\t\t\
+  select USER_ID,\n\t\tWEEK_STARTS_ON_DT,\n\t\tQUARTER_YYQQ,\n\t\tSUM(TIME_CARD_HOURS)\
+  \ AS SUBMITTED_TIME_CARD_HOURS,\n\t\tCASE WHEN SUM(TIME_CARD_HOURS)>= 'random' THEN\
+  \ 'random' ELSE 'random' END AS TIME_CARD_SUBMITED_COMPLIANT,\n        MAX(WEEK_COUNT)\
+  \ AS WEEK_COUNT\n\t\tfrom EDW.CUSTOMER_OUTCOMES.FACT_SUBMITTED_TIMECARD_COMPLIANCE\
+  \ as \"DrivingData\"\n\t\tLEFT JOIN\n        (\n            SELECT DIM_WEEK.QUARTER_ID,COUNT(*)\
+  \ as WEEK_COUNT\n            FROM EDW.ENTERPRISE.DIM_WEEK AS DIM_WEEK\n        \
+  \    left join EDW.ENTERPRISE.DIM_DATE as DIM_DATE WHERE CALENDAR_DT=CURRENT_DATE\
+  \ - 'random'\n            and DIM_WEEK.WEEK_DT<DIM_DATE.WEEK_DT\n            group\
+  \ by DIM_WEEK.QUARTER_ID\n            --having DIM_WEEK.QUARTER_ID in (20240101,20240401,20240701,20241001)\n\
+  \        ) \"WeekCount\"\n        on \"DrivingData\".QUARTER_ID= \"WeekCount\".QUARTER_ID\n\
+  \        WHERE QUARTER_YYQQ >='random'\n\t\t\t\tAND USER_JOB_FUNCTION not in ('random','random')\t\
+  --AND USER_ID ='5051216573109645512'\n        GROUP BY  USER_ID,WEEK_STARTS_ON_DT,\
+  \ QUARTER_YYQQ\n\t\t)GROUP BY USER_ID,\n\t\tQUARTER_YYQQ\n\t)Stc ON Emp.USER_ID\
+  \ = Stc.USER_ID\n    AND right(Emp.\"QTR\", 'random') = Stc.QUARTER_YYQQ\n\n\n--TO\
+  \ GET UNSCEDHULE BACKLOG\n\tLEFT JOIN (\n\t select PROJECT_ENGAGEMENT_MANAGER,\n\
+  \t\t\tPROJECT_CLOSE_QUARTER,\n\t\tsum(COUNT_COMPLETED_PROJECTS) as COMPLETED_PROJECTS,\n\
+  \t\tSUM(COUNT_COMPLETED_PROJECT_UNSCHEDULED) AS UNSCHEDULED_PROJECTS\n     from\
+  \ UNSCHEDULED_BACKLOG\n     GROUP BY PROJECT_ENGAGEMENT_MANAGER,PROJECT_CLOSE_QUARTER\n\
+  \n\t)UnBklg ON  EMP.USER_ID = UnBklg.PROJECT_ENGAGEMENT_MANAGER\n\tAND right(Emp.\"\
+  QTR\", 'random') = UnBklg.PROJECT_CLOSE_QUARTER\n\n\n--TO GET EXPENSE REPORT COMPLIANCE\n\
+  \tLEFT JOIN(\n\tSELECT distinct USER_ID,\n       QUARTER_YYQQ,\n       COUNT (DISTINCT\
+  \ LATE_EXPENSE_REPORTS) LATE_EXPENSE_REPORTS,\n       COUNT (DISTINCT EXPENSE_REPORTS)\
+  \ EXPENSE_REPORTS\n       FROM EDW.CUSTOMER_OUTCOMES.FACT_EXPENSE_REPORT_COMPLIANCE\n\
+  \t   where QUARTER_YYQQ >='random'\n\t   and JOB_FUNCTION not in ('random','random')\n\
+  \       GROUP BY USER_ID,QUARTER_YYQQ\n\t)Expns ON EMP.USER_ID = Expns.USER_ID\n\
+  \tAND right(Emp.\"QTR\", 'random') = Expns.QUARTER_YYQQ\n\n-- TO GET THE SECURITY\
+  \ DETAILS\n\tLEFT JOIN (\n\tSELECT \"EmpHierEmployeeSysID\" as \"EmpHierEmployeeSysID\"\
+  ,\n                max(\"DMUID\") as \"DMUID\",\n                max(\"DRUID\")\
+  \ as \"DRUID\",\n                max(\"SDRUID\") as \"SDRUID\",\n              \
+  \  max(\"VPUID\") as \"VPUID\"\n         FROM\n           (SELECT \"EmpHierEmployeeSysID\"\
+  \ as \"EmpHierEmployeeSysID\",\n                   \"EmpHierUserName\" as \"EmpHierUserName\"\
+  ,\n                   \"EmpHierRollupManager\" as \"EmpHierRollupManager\",\n  \
+  \                 \"EmpHierActive\" as \"EmpHierActive\",\n                   \"\
+  EmpHierHierarchyLevel\" as \"EmpHierHierarchyLevel\",\n                   CASE\n\
+  \                       WHEN \"EmpHierHierarchyLevel\" IS NULL\n               \
+  \             OR \"EmpHierRollupManager\" IS NULL then 'random'\n              \
+  \         else IFF(\"EmpHierHierarchyLevel\"='random', \"EmpHierRollupManager\"\
+  , 'random')\n                   END as \"DMUID\",\n                   CASE\n   \
+  \                    WHEN \"EmpHierHierarchyLevel\" IS NULL\n                  \
+  \          OR \"EmpHierRollupManager\" IS NULL then 'random'\n                 \
+  \      else IFF(\"EmpHierHierarchyLevel\"='random', \"EmpHierRollupManager\", 'random')\n\
+  \                   END as \"DRUID\",\n                   CASE\n               \
+  \        WHEN \"EmpHierHierarchyLevel\" IS NULL\n                            OR\
+  \ \"EmpHierRollupManager\" IS NULL then 'random'\n                       else IFF(\"\
+  EmpHierHierarchyLevel\"='random', \"EmpHierRollupManager\", 'random')\n        \
+  \           END as \"SDRUID\",\n                   CASE\n                      \
+  \ WHEN \"EmpHierHierarchyLevel\" IS NULL\n                            OR \"EmpHierRollupManager\"\
+  \ IS NULL then 'random'\n                       else IFF(\"EmpHierHierarchyLevel\"\
+  ='random', \"EmpHierRollupManager\", 'random')\n                   END as \"VPUID\"\
+  \n            FROM EDW_LS.\"PRODUCT_GTS_EM\".\"VW_SURF_EMPLOYEE_HIERARCHY_MASHUP\"\
+  \n            WHERE (\"EmpHierActive\" ='random')\n              AND (\"EmpHierHierarchyLevel\"\
+  \ <='random') )\"Projection_2\"\n         GROUP BY \"EmpHierEmployeeSysID\"\n\t\
+  ) Scrty ON Emp.\"SUserExternalID\" = Scrty.\"EmpHierEmployeeSysID\"\n\n\t;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

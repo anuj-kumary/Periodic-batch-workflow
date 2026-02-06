@@ -1,0 +1,80 @@
+name: table_12
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_12
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_12.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view X_SNC_VALUEASSESME_VALUE_ASSESSMENTS(\n\t\
+  SYS_CREATED_ON,\n\tBUSINESS_CASE_TOTAL_COSTS,\n\tVIEW_RECORD,\n\tBUSINESS_CASE_STATUS,\n\
+  \tDV_CASE_MODIFIED_BY,\n\tPSP_PER_INSERT_DT,\n\tDV_BASE_CURRENCY,\n\tWACC_PERCENTAGE,\n\
+  \tBUSINESS_CASE_COST_OF_DELAY,\n\tBUSINESS_CASE_PAYBACK_PERIOD,\n\tDV_ACCOUNT,\n\
+  \tCASE_CREATED_BY,\n\tSYS_TAGS,\n\tACCOUNT,\n\tCASE_MODIFIED_BY,\n\tBUSINESS_CASE_TCO_TOTAL,\n\
+  \tBUSINESS_CASE_NUMBER,\n\tDV_CASE_CREATED_BY,\n\tPSP_PER_UPDATE_DT,\n\tSYS_ID,\n\
+  \tBUSINESS_CASE_NPV,\n\tDV_U_OPPORTUNITIES,\n\tSYS_MOD_COUNT,\n\tU_OPPORTUNITIES,\n\
+  \tSYS_UPDATED_BY,\n\tCASE_MODIFIED_ON,\n\tPSP_PER_DELETE_DT,\n\tBUSINESS_CASE_NAME,\n\
+  \tCASE_CREATED_ON,\n\tWEIGHTED_DISCOUNT,\n\tBUSINESS_CASE_ROI,\n\tBUSINESS_CASE_TOTAL_BENEFITS,\n\
+  \tSYS_CREATED_BY,\n\tBUSINESS_CASE_TERM,\n\tBASE_CURRENCY,\n\tSYS_UPDATED_ON\n)\
+  \ as -- SEMANTIC LAYER BEGINS\n\nSELECT \"SYS_CREATED_ON\" as \"SYS_CREATED_ON\"\
+  ,\n       \"BUSINESS_CASE_TOTAL_COSTS\" as \"BUSINESS_CASE_TOTAL_COSTS\",\n    \
+  \   \"VIEW_RECORD\" as \"VIEW_RECORD\",\n       \"BUSINESS_CASE_STATUS\" as \"BUSINESS_CASE_STATUS\"\
+  ,\n       \"DV_CASE_MODIFIED_BY\" as \"DV_CASE_MODIFIED_BY\",\n       \"PSP_PER_INSERT_DT\"\
+  \ as \"PSP_PER_INSERT_DT\",\n       \"DV_BASE_CURRENCY\" as \"DV_BASE_CURRENCY\"\
+  ,\n       \"WACC_PERCENTAGE\" as \"WACC_PERCENTAGE\",\n       \"BUSINESS_CASE_COST_OF_DELAY\"\
+  \ as \"BUSINESS_CASE_COST_OF_DELAY\",\n       \"BUSINESS_CASE_PAYBACK_PERIOD\" as\
+  \ \"BUSINESS_CASE_PAYBACK_PERIOD\",\n       \"DV_ACCOUNT\" as \"DV_ACCOUNT\",\n\
+  \       \"CASE_CREATED_BY\" as \"CASE_CREATED_BY\",\n       \"SYS_TAGS\" as \"SYS_TAGS\"\
+  ,\n       \"ACCOUNT\" as \"ACCOUNT\",\n       \"CASE_MODIFIED_BY\" as \"CASE_MODIFIED_BY\"\
+  ,\n       \"BUSINESS_CASE_TCO_TOTAL\" as \"BUSINESS_CASE_TCO_TOTAL\",\n       \"\
+  BUSINESS_CASE_NUMBER\" as \"BUSINESS_CASE_NUMBER\",\n       \"DV_CASE_CREATED_BY\"\
+  \ as \"DV_CASE_CREATED_BY\",\n       \"PSP_PER_UPDATE_DT\" as \"PSP_PER_UPDATE_DT\"\
+  ,\n       \"SYS_ID\" as \"SYS_ID\",\n       \"BUSINESS_CASE_NPV\" as \"BUSINESS_CASE_NPV\"\
+  ,\n       \"DV_U_OPPORTUNITIES\" as \"DV_U_OPPORTUNITIES\",\n       \"SYS_MOD_COUNT\"\
+  \ as \"SYS_MOD_COUNT\",\n       \"U_OPPORTUNITIES\" as \"U_OPPORTUNITIES\",\n  \
+  \     \"SYS_UPDATED_BY\" as \"SYS_UPDATED_BY\",\n       \"CASE_MODIFIED_ON\" as\
+  \ \"CASE_MODIFIED_ON\",\n       \"PSP_PER_DELETE_DT\" as \"PSP_PER_DELETE_DT\",\n\
+  \       \"BUSINESS_CASE_NAME\" as \"BUSINESS_CASE_NAME\",\n       \"CASE_CREATED_ON\"\
+  \ as \"CASE_CREATED_ON\",\n       \"WEIGHTED_DISCOUNT\" as \"WEIGHTED_DISCOUNT\"\
+  ,\n       \"BUSINESS_CASE_ROI\" as \"BUSINESS_CASE_ROI\",\n       \"BUSINESS_CASE_TOTAL_BENEFITS\"\
+  \ as \"BUSINESS_CASE_TOTAL_BENEFITS\",\n       \"SYS_CREATED_BY\" as \"SYS_CREATED_BY\"\
+  ,\n       \"BUSINESS_CASE_TERM\" as \"BUSINESS_CASE_TERM\",\n       \"BASE_CURRENCY\"\
+  \ as \"BASE_CURRENCY\",\n       \"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\"\nFROM \"\
+  RDS\".\"SURF\".\"X_SNC_VALUEASSESME_VALUE_ASSESSMENTS\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

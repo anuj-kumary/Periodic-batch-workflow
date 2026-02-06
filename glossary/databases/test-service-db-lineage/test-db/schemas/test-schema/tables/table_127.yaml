@@ -1,0 +1,58 @@
+name: table_127
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_127
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_127.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view V_HEADCOUNT_SALES_MAPPING(\n\t\"Cost_Center\"\
+  ,\n\t\"Company_code\",\n\t\"CCEntity\",\n\t\"Cost_Center_Name\",\n\t\"Geo\",\n\t\
+  \"Geo_Or_Global_Managed\",\n\t\"Leader\",\n\t\"Leader_1\",\n\t\" Role_Type\",\n\t\
+  P4_1,\n\t\"Level_1\",\n\t\"Level_2\",\n\tLEVEL_3,\n\t\"Major_Area\",\n\t\"Area\"\
+  ,\n\t\"Territory\",\n\t\"Priority\",\n\t\"Workflow\",\n\t\"Discrete_Quota_Carrier\"\
+  ,\n\t\"Manager\"\n) as\nselect to_varchar(COST_CENTER) as \"Cost_Center\",\nENTITY\
+  \ as \"Company_code\",\nto_varchar(CCENTITY) \"CCEntity\",\nCOST_CENTER_NAME as\
+  \ \"Cost_Center_Name\",\nGEO as \"Geo\",\nGEO_OR_GLOBAL_MANAGED as \"Geo_Or_Global_Managed\"\
+  ,\nLEADER as \"Leader\",\nLEADER_1 as \"Leader_1\",\nROLE_TYPE \" Role_Type\",\n\
+  P4_1 as \"P4_1\",\nL1 \"Level_1\",\nL2 as \"Level_2\",\nL3 as Level_3,\nMAJOR_AREA\
+  \ as \"Major_Area\",\nAREA as \"Area\",\nTERRITORY as \"Territory\",\nPRIORITY as\
+  \ \"Priority\",\nWORKFLOW as \"Workflow\",\nDISCRETE_QUOTA_CARRIER as \"Discrete_Quota_Carrier\"\
+  ,\nMANAGER as \"Manager\" from RDS.FLATFILESOURCE.SALES_MAPPING;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

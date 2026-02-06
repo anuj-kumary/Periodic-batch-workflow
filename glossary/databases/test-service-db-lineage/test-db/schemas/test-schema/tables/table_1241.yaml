@@ -1,0 +1,78 @@
+name: table_1241
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1241
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1241.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_CO_USER_SATISFACTION(\n\tSATISFACTION_ID,\n\
+  \tUSER_ID,\n\tMANAGER_ID,\n\tPROJECT_ID,\n\tQUARTER_ID,\n\tQUARTER_DT,\n\tQUARTER_YYQQ,\n\
+  \tYEAR_NUMBER,\n\tENGAGMENT_NUMBER,\n\tEMPLOYEE_NUMBER,\n\tUSER_EMPLOYEE_NUMBER,\n\
+  \tJOB_FUNCTION,\n\tTIME_ON_PROJECT,\n\tCUSTOMER_SURVEY_SATISFACTION_AVG,\n\tDATE_DIM_QUARTER_BEGIN_DT,\n\
+  \tCUSTOMER_SURVEY_NUMBER,\n\tUSER_EXTERNAL_ID,\n\tCUSTOMER_SURVEY_RESPONSES,\n\t\
+  CUSTOMER_SURVEY_INVITES,\n\tMANAGER_JOB_FUNCTION,\n\tSATISFACTION_SCORE,\n\tSURVEY_QUARTER_YYQQ,\n\
+  \tBUSINESS_UNIT,\n\tPROJECT_PRODUCTIVE_HOURS,\n\tUSER_PROJECT_PRODUCTIVE_HOURS,\n\
+  \tSATISFACTION_SCORE_THRESHOLD_FOUR,\n\tIMPLEMENTATION_MODE_COUNT,\n\tCUSTOMER_SURVEY_INVITES_COUNT,\n\
+  \tSOURCE_SYSTEM,\n\tACCOUNT,\n\tIS_SURVEY_INVITES,\n\tEXECUTIVE_SPONSOR_CONTACT_COUNT,\n\
+  \tUSER_SYSID,\n\tMANAGER_SYSID,\n\tPROJECT_SYSID\n) as\nselect\nhash(ifnull(\"ProjectID\"\
+  ,'random')||\nifnull(\"SUserID\",'random')||\nifnull(\"EgmtNumber\",'random')||\n\
+  ifnull(\"Quarter\",'random')) as SATISFACTION_ID,\nhash(\"SUserID\") as USER_ID,\n\
+  hash(\"ManagerID\") as MANAGER_ID,\nHASH(\"ProjectID\") as PROJECT_ID,\n\"DIM_QUARTER\"\
+  .QUARTER_ID as QUARTER_ID,\n\"DIM_QUARTER\".QUARTER_DT as QUARTER_DT,\n\"DIM_QUARTER\"\
+  .QUARTER_YYQQ as QUARTER_YYQQ,\n\"DIM_QUARTER\".YEAR_NUMBER as YEAR_NUMBER,\n\"\
+  EgmtNumber\" as ENGAGMENT_NUMBER,\n\"EmployeeNumber\" as EMPLOYEE_NUMBER,\n\"UserEmployeeNumber\"\
+  \ AS USER_EMPLOYEE_NUMBER,\n\"JobFunction\" AS JOB_FUNCTION,\n\"TimeOnProject\"\
+  \ as TIME_ON_PROJECT,\n\"CustSurveyOverallSatAvg\" as CUSTOMER_SURVEY_SATISFACTION_AVG,\n\
+  \"DateDimQuarterBeginDate\" as DATE_DIM_QUARTER_BEGIN_DT,\n\"CustSurveyNumber\"\
+  \ as CUSTOMER_SURVEY_NUMBER,\n\"UserExternalID\" as USER_EXTERNAL_ID,\n\"CustSurveySurveyResponses\"\
+  \ as CUSTOMER_SURVEY_RESPONSES,\n\"CustSurveySurveyInvites\" as CUSTOMER_SURVEY_INVITES,\n\
+  \"ManagerJobFunction\" AS MANAGER_JOB_FUNCTION,\n\"CntOSATScore\" as SATISFACTION_SCORE,\n\
+  \"SurveyQuarter\" as SURVEY_QUARTER_YYQQ,\n\"BusinessUnit\" as BUSINESS_UNIT,\n\"\
+  TotalProjectProductiveHours\" as PROJECT_PRODUCTIVE_HOURS,\n\"UserProjectProductiveHours\"\
+  \ as USER_PROJECT_PRODUCTIVE_HOURS,\n\"CntOSAT4\" as SATISFACTION_SCORE_THRESHOLD_FOUR,\n\
+  \"ImplementationMode_Count\" as IMPLEMENTATION_MODE_COUNT,\n\"CustSurveySurveyInvites_Count\"\
+  \ as CUSTOMER_SURVEY_INVITES_COUNT,\n\"Flag\" as SOURCE_SYSTEM,\n\"DplyAccount\"\
+  \ as ACCOUNT,\n\"HasSurveyInvites\" as IS_SURVEY_INVITES,\n\"ExecSponsorContact_Count\"\
+  \ as EXECUTIVE_SPONSOR_CONTACT_COUNT,\n\"SUserID\"  AS USER_SYSID,\n\"ManagerID\"\
+  \ as MANAGER_SYSID,\n\"ProjectID\" as PROJECT_SYSID\nfrom\nCDL_LS.CUSTOMER_PSANEW_ER.PSKPI_OSAT\
+  \ as \"DrivingData\"\n   LEFT JOIN CDL.ENTERPRISE.V_DIM_QUARTER as \"DIM_QUARTER\"\
+  \n   on right(\"DrivingData\".\"Quarter\",'random')=\"DIM_QUARTER\".QUARTER_YYQQ\n\
+  where \"DrivingData\".\"SUserID\" IS not NULL\nAND \"DrivingData\".\"Quarter\">='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

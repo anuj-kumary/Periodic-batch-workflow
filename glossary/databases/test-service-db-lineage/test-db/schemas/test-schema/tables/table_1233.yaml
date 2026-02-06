@@ -1,0 +1,85 @@
+name: table_1233
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1233
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1233.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_SUBMITTED_TIMECARD_COMPLIANCE(\n\
+  \tSUBMITTED_TIME_CARD_ID,\n\tUSER_ID,\n\tTASK_ID,\n\tMANAGER_ID,\n\tQUARTER_ID,\n\
+  \tQUARTER_DT,\n\tQUARTER_YYQQ,\n\tYEAR_NUMBER,\n\tWEEK_STARTS_ON_DT,\n\tCATEGORY,\n\
+  \tSUBMITTED_DT,\n\tSTATE,\n\tSUBMITTED_BY,\n\tEMPLOYEE_NUMBER,\n\tUSER_JOB_FUNCTION,\n\
+  \tTIME_CARD_HOURS,\n\tDEPARTMENT_ID,\n\tUSER_SYSID,\n\tMANAGER_SYSID,\n\tTASK_SYSID\n\
+  ) as\n\nselect\nHASH(ifnull(\"DrivingUser\".\"SUserID\",'random')||ifnull(\"TaskProjectID\"\
+  ,'random')||\"TimeCardWeekStartsOn\"||\"TimeCardCategory\"||\"TimeCardSubmittedDate\"\
+  ||\"TimeCardState\") as SUBMITTED_TIME_CARD_ID,\nhash(\"DrivingUser\".\"SUserID\"\
+  ) as USER_ID,\nhash(\"TaskProjectID\")  as TASK_ID,\nhash(\"DrivingUser\".\"SUserLineManagerID\"\
+  ) as MANAGER_ID,\n\"DIM_QUARTER\".QUARTER_ID,\n\"DIM_QUARTER\".QUARTER_DT,\n\"DIM_QUARTER\"\
+  .QUARTER_YYQQ,\n\"DIM_QUARTER\".YEAR_NUMBER as YEAR_NUMBER,\n--TIME_CARD_ID  --\
+  \ not needed\n--TIME_CARD_SYSID --not needed\n\"TimeSheetData\".\"TimeCardWeekStartsOn\"\
+  \ as WEEK_STARTS_ON_DT,\n\"TimeCardCategory\" as CATEGORY,\n\"TimeSheetData\".\"\
+  TimeCardSubmittedDate\" as SUBMITTED_DT,\n\"TimeSheetData\".\"TimeCardState\" as\
+  \ STATE,\n\"TimeSheetData\".\"TimeCardSubmittedBy\" as SUBMITTED_BY,\n\"DrivingUser\"\
+  .\"SUserEmployeeNumber\" as EMPLOYEE_NUMBER,\n--LATE_SUBMITTED_TIME_CARDS not needed\n\
+  --SUBMITTED_DAYS_DIFFERENCE not needed\n--TOTAL_SUBMITTED_TIME_CARDS not needed\n\
+  \"SJobCodeJobFunction\" AS USER_JOB_FUNCTION,\nsum(\"TimeSheetData\".\"TimeCardHours\"\
+  ) as TIME_CARD_HOURS,\n\"DrivingUser\".\"SCostCenterID\" as DEPARTMENT_ID,\n\"DrivingUser\"\
+  .\"SUserID\" as USER_SYSID,\n\"DrivingUser\".\"SUserLineManagerID\" as MANAGER_SYSID,\n\
+  \"TaskProjectID\"  as TASK_SYSID,\n--TIME_CARD_DT not needed\n\nFROM\n\nEDW_LS.\"\
+  CUSTOMER_PSANEW_EM\".\"EM_ST_USER_ACTIVE_NEW\" as \"DrivingUser\"\nLEFT JOIN EDW_LS.CUSTOMER_PSANEW_EM.ST_EM_TIMESHEET\
+  \ as \"TimeSheetData\"\nON \"DrivingUser\".\"SUserID\" =\"TimeSheetData\".\"TaskUserID\"\
+  \nand \"DrivingUser\".\"SUserExtractDate\"=\"TimeSheetData\".\"TimeCardWeekStartsOn\"\
+  \nleft join EDW.ENTERPRISE.DIM_DATE as \"DateDim\"\non \"TimeSheetData\".\"TimeCardWeekStartsOn\"\
+  =\"DateDim\".\"CALENDAR_DT\"\nLEFT JOIN CDL.ENTERPRISE.V_DIM_QUARTER as \"DIM_QUARTER\"\
+  \non \"DateDim\".QUARTER_ID=\"DIM_QUARTER\".QUARTER_ID\nwhere\n(( \"TimeCardState\"\
+  \ in ('random','random','random') and \"TimeCardDate\" <'random')\n\t\t\t\t\t\t\
+  or\n\t\t\t\t\t\t(\"TimeCardState\" in('random','random') and \"TimeCardDate\" >=\
+  \ 'random')\n)\nand \"TimeCardWeekStartsOn\"  not in ('random','random','random')\
+  \  --STRY2563265\nand \"TimeCardWeekStartsOn\" >='random'\nand DATEADD(DAY, 'random',\
+  \ \"TimeCardWeekStartsOn\") <= TO_date(CURRENT_TIMESTAMP)\ngroup BY\nhash(\"DrivingUser\"\
+  .\"SUserID\"),\n\"DrivingUser\".\"SUserName\",\n\"DrivingUser\".\"SUserID\",\n\"\
+  DrivingUser\".\"SUserEmployeeNumber\",\nhash(\"DrivingUser\".\"SUserLineManagerID\"\
+  ),\n\"DrivingUser\".\"SUserLineManagerID\",\n\"DrivingUser\".\"SCostCenterID\",\n\
+  \"TimeSheetData\".\"TimeCardState\",\n\"TimeSheetData\".\"TimeCardWeekStartsOn\"\
+  ,\n\"TimeSheetData\".\"TimeCardSubmittedBy\",\n\"TimeSheetData\".\"TimeCardSubmittedDate\"\
+  ,\n\"DIM_QUARTER\".QUARTER_ID,\n\"DIM_QUARTER\".QUARTER_DT,\n\"DIM_QUARTER\".QUARTER_YYQQ,\n\
+  \"TimeCardCategory\",\nhash(\"TaskProjectID\"),\n\"TaskProjectID\",\n\"DIM_QUARTER\"\
+  .YEAR_NUMBER,\n\"SJobCodeJobFunction\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

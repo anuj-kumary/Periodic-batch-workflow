@@ -1,0 +1,65 @@
+name: table_1247
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1247
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1247.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_FIXEDDATA_PIPELINE_INACTIVE(\n\
+  \tOPTY_ID,\n\tQUARTER_ID,\n\tTERRITORY_ID,\n\tGEO_ID,\n\tACCOUNT_ID,\n\tPRODUCT_ID,\n\
+  \tLINE_ITEM_ID,\n\tIS_SALES_ACTIVE_PIPELINE,\n\tNNACV_LC,\n\tNNACV_USD_CFX,\n\t\
+  OPTY_NUMBER,\n\tTERRITORY_SYSID,\n\tOPTY_SYSID,\n\tOPTY_ITEM_NUMBER_CRM,\n\tQUARTER_YYQQ,\n\
+  \tACCOUNT_SYSID,\n\tOPTY_ITEM_CREATED_DT,\n\tPRICE_RESET_PRIMARY_LINE,\n\tOPTY_ITEM_FLAGGED_AS,\n\
+  \tOPTY_ITEM_CREATED_BY,\n\tOPTY_ITEM_NUMBER\n) as\nselect\nhash(\"OptySysID\") as\
+  \ OPTY_ID,\nQUARTER_ID,\nhash(\"OptyTerritorySysID\") as TERRITORY_ID,\nifnull(GEO_ID,hash(GEO_ID))as\
+  \ GEO_ID,\nhash(\"OptyAccountSysID\") as ACCOUNT_ID,\nhash(\"OptyItemProductSysID\"\
+  ) as PRODUCT_ID,\nhash(\"OptyItemLineItemNumber\") as LINE_ITEM_ID,\n\"SalesActivePipeline_CC\"\
+  \ as IS_SALES_ACTIVE_PIPELINE,\n\"OptyItemNetNewACV\" as NNACV_LC,\n\"OptyItemNetNewACV_USD\"\
+  \ as NNACV_USD_CFX,\n\"OptyNumber\" as OPTY_NUMBER,\n\"OptyTerritorySysID\" as TERRITORY_SYSID,\n\
+  \"OptySysID\" as OPTY_SYSID,\n\"OptyItemProductSysID_CRM\" as OPTY_ITEM_NUMBER_CRM,\n\
+  \"OptySalesQuarter\" as QUARTER_YYQQ,\n\"OptyAccountSysID\" as ACCOUNT_SYSID,\n\"\
+  OptyItemCreatedOn\" as OPTY_ITEM_CREATED_DT,\n\"OptyLinePriceResetPrimaryLineSysID\"\
+  \ as PRICE_RESET_PRIMARY_LINE,\n\"OptyItemFlags\" as OPTY_ITEM_FLAGGED_AS,\n\"OptyItemLineCreatedBy\"\
+  \ as OPTY_ITEM_CREATED_BY,\n\"OptyItemNumber\" as OPTY_ITEM_NUMBER\n from EDW_LS.\"\
+  SALES_EM\".\"EM_SALES_OPPORTUNITY_EXTENDED_RT\" ext\n left join edw.enterprise.dim_quarter\
+  \ quar on ext.\"OptySalesQuarter\"=quar.quarter_yyqq\n left join edw.enterprise.dim_territory\
+  \ terr on ext.\"OptyTerritorySysID\"=terr.territory_sysid\n WHERE \"SalesActivePipeline_CC\"\
+  \ <> 'random' and \"OptyItemFlagsFilter_CC\"= 'random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

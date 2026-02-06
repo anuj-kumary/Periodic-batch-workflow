@@ -1,0 +1,197 @@
+name: table_1212
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1212
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1212.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFEDSS_FACT_SALES_COMBINED(\n\t\"TerritorySysID_CC\"\
+  ,\n\t\"SalesQuarter_FD\",\n\t\"OpportunityName\",\n\t\"OpportunityNumber\",\n\t\"\
+  OpportunityCloseDate\",\n\t\"OpportunityCloseMonth\",\n\t\"OpportunityType\",\n\t\
+  \"OpportunityForecastCategory\",\n\t\"OpportunityForecastStage\",\n\t\"OpportunitySysCreatedOn\"\
+  ,\n\t\"OpportunityOwnerName\",\n\t\"OpportunityParentNumber\",\n\t\"OpportunityParentName\"\
+  ,\n\t\"OpportunityParentCloseDate\",\n\t\"OpportunityParentCloseMonth\",\n\t\"OpportunityParentCloseQuarter\"\
+  ,\n\t\"OpportunityParentForecastCategory\",\n\t\"OpportunityParentForecastStage\"\
+  ,\n\t\"OpportunityParentType\",\n\t\"OpportunityParentReportingGeo\",\n\t\"OpportunityParentMajorArea\"\
+  ,\n\t\"OpportunityParentArea\",\n\t\"OpportunityParentRegion\",\n\t\"OpportunityParentDistrict\"\
+  ,\n\t\"PSGeo\",\n\t\"PSMajorArea\",\n\t\"PSArea\",\n\t\"PSRegion\",\n\t\"PSTerritory\"\
+  ,\n\t\"IsFixed\",\n\t\"LineItemNumber\",\n\t\"ProductCode\",\n\t\"BUGroup_FD\",\n\
+  \t\"SalesActivePipeline\",\n\t\"FlagsFilter\",\n\t\"LineItemNetNewQuantity\",\n\t\
+  \"LineItemQuantity\",\n\t\"LineItemTerm\",\n\t\"USDNetNewACV\",\n\t\"NetNewACV\"\
+  ,\n\t\"NetNewACV_FX\",\n\t\"USDWeightedACV\",\n\t\"WeightedACV_FX\",\n\t\"Upside_FX\"\
+  ,\n\t\"Expect_FX\",\n\t\"Commit_FX\",\n\t\"Submitted_FX\",\n\t\"Closed_FX\",\n\t\
+  \"LostACV_FX\",\n\t\"OpenPipeline_FX\",\n\t\"MaturedPipeline_FX\",\n\t\"TotalValueAmount\"\
+  ,\n\t\"TotalValueAmount_FX\",\n\t\"USDTotalACV\",\n\t\"USDRenewalACV\",\n\t\"RenewalACV\"\
+  ,\n\t\"RenewalACV_FX\",\n\t\"USDServices\",\n\t\"ServicesACV\",\n\t\"ServicesACV_FX\"\
+  ,\n\t\"USDPSRevenue\",\n\t\"PSRevenue\",\n\t\"PSRevenue_FX\",\n\t\"TotalTrainingRevenue\"\
+  ,\n\t\"USDTotalTrainingRevenue\",\n\t\"TotalTrainingRevenue_FX\",\n\t\"OpportunityParentAccountNumber\"\
+  ,\n\t\"OpportunityParentTerritory\",\n\t\"AccountNumber_FD\",\n\t\"RenewalGeo\"\
+  ,\n\t\"RenewalMajorArea\",\n\t\"RenewalArea\",\n\t\"RenewalRegion\",\n\t\"RenewalDistrict\"\
+  ,\n\t\"RenewalTerritory\",\n\t\"OpportunityACEMajorArea\",\n\t\"OpportunityACEGeo\"\
+  ,\n\t\"OpportunityACEArea\",\n\t\"OpportunityACERegion\",\n\t\"OpportunityACEDistrict\"\
+  ,\n\t\"OpportunityACETerritory\",\n\t\"RenewalEarlyOntimeLateStatus\",\n\t\"USDUpside+\"\
+  ,\n\t\"USDExpect+\",\n\t\"USDCommit+\",\n\t\"USDSubmitted+\",\n\t\"USDClosed\",\n\
+  \t\"USDLostACV\",\n\t\"USDOpenPipeline\",\n\t\"USDClosedRenewalACV\",\n\t\"ClosedRenewalACV_FX\"\
+  ,\n\t\"USDClosedWonRenewalACV\",\n\t\"ClosedWonRenewalACV_FX\",\n\t\"USDClosedLostRenewalACV\"\
+  ,\n\t\"ClosedLostRenewalACV_FX\",\n\t\"USDOpenRenewalACV\",\n\t\"USDPartnerSourcedACV\"\
+  ,\n\t\"USDPartnerTouchedACV\",\n\t\"USDACESourcedNetNewACV\",\n\t\"USDMKTSourcedNetNewACV\"\
+  ,\n\t\"USDTrainingClosedACV\",\n\t\"USDExpertServicesClosedACV\",\n\t\"USDCustomerSucessClosedACV\"\
+  ,\n\t\"USDTotalServicesClosedACV\",\n\t\"USDMaturedPipeline\",\n\t\"OpportunitySysID_CRM\"\
+  ,\n\t\"ProductSysID_CRM\",\n\t\"OpportunityLeadNumber_CRM\",\n\t\"OpportunityMasterQuoteSysID_CRM\"\
+  ,\n\t\"ContractKey_CRM\",\n\t\"BUGroup_CRM\",\n\t\"ProductCode_CRM\",\n\t\"Quantity_CRM\"\
+  ,\n\t\"NetNewQuantity_CRM\",\n\t\"USDRenewalACV_CRM\",\n\t\"USDNetNewACV_CRM\",\n\
+  \t\"USDListPrice_CRM\",\n\t\"USDTotalValue_CRM\",\n\t\"USDSalesPrice_CRM\",\n\t\"\
+  USDAnnualContractValue_CRM\",\n\t\"RenewalACV_CRM\",\n\t\"USDBasePrice_CRM\",\n\t\
+  \"AccountSysID_Key\",\n\t\"ContractSysID_CRM\",\n\t\"LineItemNumber_CRM\",\n\t\"\
+  ContractItemLineItemNumber\",\n\t\"USDContractACV\",\n\t\"ContractItemQuantity\"\
+  ,\n\t\"ContractACV_FX\",\n\t\"ContractACV\",\n\t\"USDContractACV_CRM\",\n\t\"ContractACV_CRM\"\
+  ,\n\t\"Quota\",\n\t\"OpportunitySysID_QuoteKey\",\n\t\"CommitType\",\n\t\"CommitWeekNumber\"\
+  ,\n\t\"CommitWeekDate\",\n\t\"CommitOwner\",\n\t\"CommitSysUpdatedOn\",\n\t\"Commit\"\
+  ,\n\t\"CommitExpect\",\n\t\"CommitUpside\",\n\t\"CommitMonth_CRM\",\n\t\"CommitMonthExpect_CRM\"\
+  ,\n\t\"CommitMonthUpside_CRM\",\n\t\"Commit_CRM\",\n\t\"CommitExpect_CRM\",\n\t\"\
+  CommitUpside_CRM\",\n\t\"BUWorkFlow_CRM\",\n\t\"BUWorkFlow_FD\",\n\t\"OpportunityItemSourceSystem_CRM\"\
+  ,\n\t\"ExpertServicesTarget\",\n\t\"CustomerServicesTarget\",\n\t\"TotalServicesTarget\"\
+  ,\n\t\"FSPNewLogoTarget\",\n\t\"TrainingTarget\",\n\tTAM,\n\t\"USDPartnerOptySourcedACV\"\
+  ,\n\t\"RepQuota\",\n\t\"RepCommit\",\n\t\"RepCommitUpside\",\n\t\"RepCommitExpect\"\
+  ,\n\t\"VaricentQuota\",\n\t\"VaricentActuals\",\n\t\"VaricentAttainment\",\n\t\"\
+  EmployeeSysID\",\n\t\"ProductSysID\",\n\t\"USDAcquiredNetNewACV\",\n\t\"RecordType\"\
+  ,\n\t\"CommitQuota\",\n\t\"CommitACVCloseToDate\",\n\t\"CommitClosedToQuota\",\n\
+  \t\"CommitACVExpectedToCloseThisWeek\",\n\t\"CommitExpectedNewLogosQuarter\",\n\t\
+  \"AllocationType\",\n\t\"OpportunityCloseDateWeekofQuarter\",\n\t\"OpportunityCloseDateQuarterBeginDate\"\
+  ,\n\t\"OpportunityCloseDateLinearWeekOfQuarter\",\n\t\"OpportunityCloseDateWeekNumOfYear\"\
+  ,\n\t\"USDContractSalesPrice\",\n\t\"USDContractSalesPrice_CRM\",\n\t\"ContractAnnualListValue\"\
+  ,\n\t\"ContractAnnualListValue_CRM\",\n\t\"USDContractAnnualListValue\",\n\t\"USDContractAnnualListValue_CRM\"\
+  ,\n\t\"OpportunityCloseDateQuarterEndDate\",\n\t\"CommitPSRevenueExpectMonth\",\n\
+  \t\"CommitPSRevenueExpectQuarter\",\n\t\"USDContractTotalValue\",\n\t\"USDContractTotalValue_CRM\"\
+  ,\n\t\"SBQuarterCommit\",\n\t\"SBQuarterUpside\",\n\t\"SBQuarterExpect\",\n\t\"\
+  SBWeek\",\n\t\"SBQuarterTrainingExpect\",\n\t\"SBQuarterTrainingCommit\",\n\t\"\
+  SBQuarterTrainingUpside\",\n\t\"SBQuarterCSExpect\",\n\t\"SBQuarterCSCommit\",\n\
+  \t\"SBQuarterCSUpside\",\n\t\"SBOwner\",\n\t\"NetNewACV_CRM\",\n\t\"ContractSalesPrice\"\
+  ,\n\t\"ContractSalesPrice_CRM\",\n\t\"ActualRenewalRate\",\n\t\"RepPlanType\",\n\
+  \t\"RepQuotaComponent\",\n\t\"OptyItemLineCreatedByRole\"\n) as\n\n\n/* Comments\
+  \ retained from HANA input file */\n\n /****************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Unified SelfServer Project\n \t\t* Object\
+  \ Name \t\t\t\t :     UNIFEDSS_FACT_SALES_COMBINED\n \t\t* Brief Description   \
+  \       : \t   Final Fact sales combined from materilized table\n \t\t* Developed\
+  \ By               :     Swetha Bobba\n \t\t* Date Created               : \t  \
+  \ Oct 21 2021\n \t\t* --------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:\n \t\t*-----------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t*\n *********************************************************************************************************************************/\n\
+  \n\n-- Added by Venkata\n\nselect \"TerritorySysID_CC\",\n       \"SalesQuarter_FD\"\
+  ,\n       \"OpportunityName\",\n       \"OpportunityNumber\",\n       \"OpportunityCloseDate\"\
+  ,\n       \"OpportunityCloseMonth\",\n       \"OpportunityType\",\n       \"OpportunityForecastCategory\"\
+  ,\n       \"OpportunityForecastStage\",\n       \"OpportunitySysCreatedOn\",\n \
+  \      \"OpportunityOwnerName\",\n       \"OpportunityParentNumber\",\n       \"\
+  OpportunityParentName\",\n       \"OpportunityParentCloseDate\",\n       \"OpportunityParentCloseMonth\"\
+  ,\n       \"OpportunityParentCloseQuarter\",\n       \"OpportunityParentForecastCategory\"\
+  ,\n       \"OpportunityParentForecastStage\",\n       \"OpportunityParentType\"\
+  ,\n       \"OpportunityParentReportingGeo\",\n       \"OpportunityParentMajorArea\"\
+  ,\n       \"OpportunityParentArea\",\n       \"OpportunityParentRegion\",\n    \
+  \   \"OpportunityParentDistrict\",\n       \"PSGeo\",\n       \"PSMajorArea\",\n\
+  \       \"PSArea\",\n       \"PSRegion\",\n       \"PSTerritory\",\n       \"IsFixed\"\
+  ,\n       \"LineItemNumber\",\n       \"ProductCode\",\n       \"BUGroup_FD\",\n\
+  \       \"SalesActivePipeline\",\n       \"FlagsFilter\",\n       \"LineItemNetNewQuantity\"\
+  ,\n       \"LineItemQuantity\",\n       \"LineItemTerm\",\n       \"USDNetNewACV\"\
+  ,\n       \"NetNewACV\",\n       \"NetNewACV_FX\",\n       \"USDWeightedACV\",\n\
+  \       \"WeightedACV_FX\",\n       \"Upside_FX\",\n       \"Expect_FX\",\n    \
+  \   \"Commit_FX\",\n       \"Submitted_FX\",\n       \"Closed_FX\",\n       \"LostACV_FX\"\
+  ,\n       \"OpenPipeline_FX\",\n       \"MaturedPipeline_FX\",\n       \"TotalValueAmount\"\
+  ,\n       \"TotalValueAmount_FX\",\n       \"USDTotalACV\",\n       \"USDRenewalACV\"\
+  ,\n       \"RenewalACV\",\n       \"RenewalACV_FX\",\n       \"USDServices\",\n\
+  \       \"ServicesACV\",\n       \"ServicesACV_FX\",\n       \"USDPSRevenue\",\n\
+  \       \"PSRevenue\",\n       \"PSRevenue_FX\",\n       \"TotalTrainingRevenue\"\
+  ,\n       \"USDTotalTrainingRevenue\",\n       \"TotalTrainingRevenue_FX\",\n  \
+  \     \"OpportunityParentAccountNumber\",\n       \"OpportunityParentTerritory\"\
+  ,\n       \"AccountNumber_FD\",\n       \"RenewalGeo\",\n       \"RenewalMajorArea\"\
+  ,\n       \"RenewalArea\",\n       \"RenewalRegion\",\n       \"RenewalDistrict\"\
+  ,\n       \"RenewalTerritory\",\n       \"OpportunityACEMajorArea\",\n       \"\
+  OpportunityACEGeo\",\n       \"OpportunityACEArea\",\n       \"OpportunityACERegion\"\
+  ,\n       \"OpportunityACEDistrict\",\n       \"OpportunityACETerritory\",\n   \
+  \    \"RenewalEarlyOntimeLateStatus\",\n       \"USDUpside+\",\n       \"USDExpect+\"\
+  ,\n       \"USDCommit+\",\n       \"USDSubmitted+\",\n       \"USDClosed\",\n  \
+  \     \"USDLostACV\",\n       \"USDOpenPipeline\",\n       \"USDClosedRenewalACV\"\
+  ,\n       \"ClosedRenewalACV_FX\",\n       \"USDClosedWonRenewalACV\",\n       \"\
+  ClosedWonRenewalACV_FX\",\n       \"USDClosedLostRenewalACV\",\n       \"ClosedLostRenewalACV_FX\"\
+  ,\n       \"USDOpenRenewalACV\",\n       \"USDPartnerSourcedACV\",\n       \"USDPartnerTouchedACV\"\
+  ,\n       \"USDACESourcedNetNewACV\",\n       \"USDMKTSourcedNetNewACV\",\n    \
+  \   \"USDTrainingClosedACV\",\n       \"USDExpertServicesClosedACV\",\n       \"\
+  USDCustomerSucessClosedACV\",\n       \"USDTotalServicesClosedACV\",\n       \"\
+  USDMaturedPipeline\",\n       \"OpportunitySysID_CRM\",\n       \"ProductSysID_CRM\"\
+  ,\n       \"OpportunityLeadNumber_CRM\",\n       \"OpportunityMasterQuoteSysID_CRM\"\
+  ,\n       \"ContractKey_CRM\",\n       \"BUGroup_CRM\",\n       \"ProductCode_CRM\"\
+  ,\n       \"Quantity_CRM\",\n       \"NetNewQuantity_CRM\",\n       \"USDRenewalACV_CRM\"\
+  ,\n       \"USDNetNewACV_CRM\",\n       \"USDListPrice_CRM\",\n       \"USDTotalValue_CRM\"\
+  ,\n       \"USDSalesPrice_CRM\",\n       \"USDAnnualContractValue_CRM\",\n     \
+  \  \"RenewalACV_CRM\",\n       \"USDBasePrice_CRM\",\n       \"AccountSysID_Key\"\
+  ,\n       \"ContractSysID_CRM\",\n       \"LineItemNumber_CRM\",\n       \"ContractItemLineItemNumber\"\
+  ,\n       \"USDContractACV\",\n       \"ContractItemQuantity\",\n       \"ContractACV_FX\"\
+  ,\n       \"ContractACV\",\n       \"USDContractACV_CRM\",\n       \"ContractACV_CRM\"\
+  ,\n       \"Quota\",\n       \"OpportunitySysID_QuoteKey\",\n       \"CommitType\"\
+  ,\n       \"CommitWeekNumber\",\n       \"CommitWeekDate\",\n       \"CommitOwner\"\
+  ,\n       \"CommitSysUpdatedOn\",\n       \"Commit\",\n       \"CommitExpect\",\n\
+  \       \"CommitUpside\",\n       \"CommitMonth_CRM\",\n       \"CommitMonthExpect_CRM\"\
+  ,\n       \"CommitMonthUpside_CRM\",\n       \"Commit_CRM\",\n       \"CommitExpect_CRM\"\
+  ,\n       \"CommitUpside_CRM\",\n       \"BUWorkFlow_CRM\",\n       \"BUWorkFlow_FD\"\
+  ,\n       \"OpportunityItemSourceSystem_CRM\",\n       \"ExpertServicesTarget\"\
+  ,\n       \"CustomerServicesTarget\",\n       \"TotalServicesTarget\",\n       \"\
+  FSPNewLogoTarget\",\n       \"TrainingTarget\",\n       \"TAM\",\n       \"USDPartnerOptySourcedACV\"\
+  ,\n       \"RepQuota\",\n       \"RepCommit\",\n       \"RepCommitUpside\",\n  \
+  \     \"RepCommitExpect\",\n       \"VaricentQuota\",\n       \"VaricentActuals\"\
+  ,\n       \"VaricentAttainment\",\n       \"EmployeeSysID\",\n       \"ProductSysID\"\
+  ,\n       \"USDAcquiredNetNewACV\",\n       \"RecordType\",\n       \"CommitQuota\"\
+  ,\n       \"CommitACVCloseToDate\",\n       \"CommitClosedToQuota\",\n       \"\
+  CommitACVExpectedToCloseThisWeek\",\n       \"CommitExpectedNewLogosQuarter\",\n\
+  \       \"AllocationType\",\n       \"OpportunityCloseDateWeekofQuarter\",\n   \
+  \    \"OpportunityCloseDateQuarterBeginDate\",\n       \"OpportunityCloseDateLinearWeekOfQuarter\"\
+  ,\n       \"OpportunityCloseDateWeekNumOfYear\",\n       \"USDContractSalesPrice\"\
+  ,\n       \"USDContractSalesPrice_CRM\",\n       \"ContractAnnualListValue\",\n\
+  \       \"ContractAnnualListValue_CRM\",\n       \"USDContractAnnualListValue\"\
+  ,\n       \"USDContractAnnualListValue_CRM\",\n       \"OpportunityCloseDateQuarterEndDate\"\
+  ,\n       \"CommitPSRevenueExpectMonth\",\n       \"CommitPSRevenueExpectQuarter\"\
+  ,\n       \"USDContractTotalValue\",\n       \"USDContractTotalValue_CRM\",\n  \
+  \     \"SBQuarterCommit\",\n       \"SBQuarterUpside\",\n       \"SBQuarterExpect\"\
+  ,\n       \"SBWeek\",\n       \"SBQuarterTrainingExpect\",\n       \"SBQuarterTrainingCommit\"\
+  ,\n       \"SBQuarterTrainingUpside\",\n       \"SBQuarterCSExpect\",\n       \"\
+  SBQuarterCSCommit\",\n       \"SBQuarterCSUpside\",\n       \"SBOwner\",\n     \
+  \  \"NetNewACV_CRM\",\n       \"ContractSalesPrice\",\n       \"ContractSalesPrice_CRM\"\
+  ,\n       \"ActualRenewalRate\",\n       \"RepPlanType\",\n       \"RepQuotaComponent\"\
+  ,\n       \"OptyItemLineCreatedByRole\"\nfrom \"EDW_LS\".\"SALES_SS_EM\".\"UNIFIEDSS_FACT_SALES_COMBINED_MAT_A\"\
+  \ ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

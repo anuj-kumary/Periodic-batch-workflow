@@ -1,0 +1,51 @@
+name: table_1249
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1249
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1249.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view GP_MDM_SF(\n\tGP_NMBR,\n\tGP_OVERRIDE_NAME,\n\
+  \tGP_OVERRIDE_DUNS_NUMBER,\n\tOVERRIDE_HOME_GEO,\n\tGP_OVERRIDE_EMPL_CNT,\n\tGP_OVERRIDE_INDUSTRY_SEGMENT,\n\
+  \tGP_OVERRIDE_SEGMENT,\n\tGP_OVERRIDE_ANNUAL_REVENUE,\n\tADDR_LN1,\n\tCITY,\n\t\
+  STATE_NM,\n\tCOUNTRY_NM\n) as\nselect m.gp_nmbr,m.gp_override_name,m.gp_override_duns_number,m.override_home_geo,m.gp_override_empl_cnt,m.gp_override_industry_segment,m.gp_override_segment,m.gp_override_annual_revenue,m.addr_ln1,m.city,m.state_nm,m.country_nm\n\
+  from rds.mdm.v_mdm_company m\nwhere m.company_hierarchy_level in ('random')\nAND\
+  \ m.company_hier_active_flag = 'random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

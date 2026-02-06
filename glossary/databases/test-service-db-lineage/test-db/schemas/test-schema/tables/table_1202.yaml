@@ -1,0 +1,134 @@
+name: table_1202
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1202
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1202.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_DIM_TERRITORYDATE(\n\t\"SalesMonth\"\
+  ,\n\t\"SalesQuarter\",\n\t\"SalesYear\",\n\t\"ReportingTerritoryGeo\",\n\t\"TerritoryMajorArea\"\
+  ,\n\t\"TerritoryArea\",\n\t\"TerritoryRegion\",\n\t\"TerritoryDistrict\",\n\t\"\
+  TerritoryName\",\n\t\"TerritoryCountry\",\n\t\"TerritoryGeo\",\n\t\"TerritorySysID\"\
+  ,\n\t\"TerritoryMarketSegmentation\",\n\t\"TerritoryType\",\n\t\"TerritoryActiveFlag\"\
+  ,\n\t\"TerritorySalesOperations\",\n\t\"TerritorySalesOperationsManager\",\n\t\"\
+  TerritoryDealDesk\",\n\t\"TerritoryRenewalOperations\",\n\t\"TerritoryRevenueContact\"\
+  ,\n\t\"TerritoryLegalSupport\",\n\t\"TerritoryPriceBandApprover_Derived\",\n\t\"\
+  RegionPriceBandApprover_Derived\",\n\t\"AreaPriceBandApprover_Derived\",\n\t\"MajorAreaPriceBandApprover_Derived\"\
+  ,\n\t\"SalesRepName_ANAPLAN\",\n\t\"TerritoryPSDealDesk\",\n\t\"TerrPSFinance\"\
+  ,\n\t\"TerrProposalManager\",\n\t\"TerrRMLead\",\n\t\"TerrRateBook\",\n\t\"TerrGeoCustomerDeliveryLeader\"\
+  ,\n\t\"TerrDeliveryManager\",\n\t\"TerrTerritoryManager\"\n) as\nSELECT \tDISTINCT\
+  \ \"DateDimMonthByYearSURF\" as \"SalesMonth\"\n \t\t\t\t\t,\"DateDimQuarterByYearSURF\"\
+  \ as \"SalesQuarter\"\n \t\t\t\t\t, \"DateDimYearNumber\" as \"SalesYear\"\n \t\t\
+  \t\t\t, \"TerritoryGeo\" as \"ReportingTerritoryGeo\"\n \t\t\t\t\t, \"TerritoryMajorArea\"\
+  \ as \"TerritoryMajorArea\"\n \t\t\t\t\t, \"TerritoryArea\" as \"TerritoryArea\"\
+  \n \t\t\t\t\t, \"TerritoryRegion\" as \"TerritoryRegion\"\n \t\t\t\t\t, \"TerritoryDistrict\"\
+  \ as \"TerritoryDistrict\"\n \t\t\t\t\t, \"TerritoryName\" as \"TerritoryName\"\n\
+  \ \t\t\t\t\t, \"TerritoryCountry\" as \"TerritoryCountry\"\n \t\t\t\t\t, \"TerritoryGeo\"\
+  \ as \"TerritoryGeo\"\n \t\t\t\t\t, \"TerritorySysID\" as \"TerritorySysID\"\n \t\
+  \t\t\t\t, \"TerritoryMarketSegmentation\"\n \t\t\t\t\t, \"TerritoryType\"\n \t\t\
+  \t\t\t, \"TerritoryActiveFlag\" as \"TerritoryActiveFlag\"\n \t\t\t\t\t, \"TerritorySalesOperations\"\
+  \ as \"TerritorySalesOperations\"\n                    , \"TerritorySalesOperationsManager\"\
+  \ as \"TerritorySalesOperationsManager\"\n \t\t\t\t\t, \"TerritoryDealDesk\"\n \t\
+  \t\t\t\t, \"TerritoryRenewalOperations\"\n \t\t\t\t\t, \"TerritoryRevenueContact\"\
+  \n \t\t\t\t\t, \"TerritoryLegalSupport\"\n \t\t\t\t\t, \"TerritoryPriceBandApprover_Derived\"\
+  \n \t\t\t\t\t, \"RegionPriceBandApprover_Derived\"\n \t \t\t\t\t, \"AreaPriceBandApprover_Derived\"\
+  \n \t \t\t\t\t, \"MajorAreaPriceBandApprover_Derived\"\n \t\t\t\t\t, an.\"STEmpTerrEmployeeName\"\
+  \ as \"SalesRepName_ANAPLAN\"\n \t\t\t\t\t, \"TerritoryPSDealDesk\"\n \t\t\t\t\t\
+  , \"TerrPSFinance\"\n \t\t\t\t\t, \"TerrProposalManager\"\n \t\t\t\t\t, \"TerrRMLead\"\
+  \n \t\t\t\t\t, \"TerrRateBook\"\n \t\t\t\t\t, \"TerrGeoCustomerDeliveryLeader\"\n\
+  \ \t\t\t\t\t, \"TerrDeliveryManager\"\n \t\t\t\t\t, \"TerrTerritoryManager\"\n \t\
+  \t\tFROM\n \t\t\t\t(\tSELECT DISTINCT \"DateDimMonthByYearSURF\",\"DateDimQuarterByYearSURF\"\
+  \  ,\"DateDimYearNumber\",'random' as joinkey\n \t\t\t\t \tFROM ODS_LS.\"SURF\"\
+  .\"DATE_DIMENSION\"\n \t\t\t\t\tWHERE   \"DateDimQuarterByYearSURF\">='random'\n\
+  \ \t\t\t\t)D\n \t\t\tLEFT outer join\n \t\t\t\t(\tSELECT  case when \"TerritoryActiveFlag\"\
+  \ = 'random' then \"ReportingTerritoryGeo\" else 'random' end as \"ReportingTerritoryGeo\"\
+  \n \t\t\t\t\t\t\t, \"TerritoryMajorArea\", \"TerritoryArea\", \"TerritoryRegion\"\
+  \n \t\t\t\t\t\t\t, \"TerritoryDistrict\", \"TerritoryName\", \"TerritoryCountry\"\
+  , \"TerritoryGeo\", \"TerritorySysID\"\n \t\t\t\t\t\t\t, \"TerritoryType\" , \"\
+  TerritoryMarketSegmentation\",\"TerritorySalesOperations\", emp.\"EmployeeManager\"\
+  \ as \"TerritorySalesOperationsManager\", \"TerritoryActiveFlag\"\n \t\t\t\t\t\t\
+  \t, \"TerritoryDealDesk\", \"TerritoryRenewalOperations\",\"TerritoryRevenueContact\"\
+  , \"TerritoryLegalSupport\"\n \t\t\t\t\t\t\t, \"TerritoryPriceBandApprover_Derived\"\
+  ,\"RegionPriceBandApprover_Derived\"\n \t \t\t\t\t\t\t, \"AreaPriceBandApprover_Derived\"\
+  , \"MajorAreaPriceBandApprover_Derived\"\n \t \t\t\t\t\t\t, \"TerritoryPSDealDesk\"\
+  \n \t \t\t\t\t\t\t, \"TerrPSFinance\"\n \t\t\t\t\t        , \"TerrProposalManager\"\
+  \n \t\t\t\t\t        , \"TerrRMLead\"\n \t\t\t\t\t        , \"TerrRateBook\"\n \t\
+  \t\t\t\t        , \"TerrGeoCustomerDeliveryLeader\"\n \t\t\t\t\t        , \"TerrDeliveryManager\"\
+  \n \t\t\t\t\t        , \"TerrTerritoryManager\"\n \t\t\t\t\t\t\t,'random' as joinkey\n\
+  \n \t\t\t\t\tFROM EDW_LS.\"SALES_SS_EM\".\"EM_UNIFIEDSS_SALES_TERRITORY\" st\n \
+  \                   LEFT JOIN (SELECT \"EmployeeName\",\"EmployeeManager\" FROM\
+  \ EDW_LS.\"SALES_SS_EM\".\"EM_UNIFIEDSS_EMPLOYEE\"\n                    WHERE \"\
+  EmployeeActive\" = 'random') emp\n                    ON st.\"TerritorySalesOperations\"\
+  \ = emp.\"EmployeeName\"\n \t\t\t\t\tUNION ALL\n \t\t\t\t\tSELECT  'random' as \"\
+  ReportingTerritoryGeo\", 'random' as \"TerritoryMajorArea\", 'random' as \"TerritoryArea\"\
+  ,'random' as \"TerritoryRegion\"\n \t\t\t\t\t\t\t, 'random' as \"TerritoryDistrict\"\
+  , 'random' as \"TerritoryName\", 'random' as \"TerritoryCountry\", 'random' as \"\
+  TerritoryGeo\", 'random' \"TerritorySysID\"\n \t\t\t\t\t\t\t, 'random' as \"TerritoryType\"\
+  \ , 'random' as \"TerritoryMarketSegmentation\",  'random' as \"TerritorySalesOperations\"\
+  , 'random' as \"TerritorySalesOperationsManager\", 'random' as \"TerritoryActiveFlag\"\
+  \n \t\t\t\t\t\t\t, 'random' as \"TerritoryDealDesk\", 'random' as \"TerritoryRenewalOperations\"\
+  , 'random' as \"TerritoryRevenueContact\", 'random' as \"TerritoryLegalSupport\"\
+  \n \t\t\t\t\t\t\t, 'random' as \"TerritoryPriceBandApprover_Derived\", 'random'\
+  \ as \"RegionPriceBandApprover_Derived\"\n \t \t\t\t\t\t\t, 'random' as \"AreaPriceBandApprover_Derived\"\
+  , 'random' as \"MajorAreaPriceBandApprover_Derived\"\n \t \t\t\t\t\t\t, 'random'\
+  \ as \"TerritoryPSDealDesk\"\n \t \t\t\t\t\t\t, 'random' as \"TerrPSFinance\"\n\
+  \ \t\t\t\t\t        , 'random' as \"TerrProposalManager\"\n \t\t\t\t\t        ,\
+  \ 'random' as \"TerrRMLead\"\n \t\t\t\t\t        , 'random' as \"TerrRateBook\"\n\
+  \ \t\t\t\t\t        , 'random' as \"TerrGeoCustomerDeliveryLeader\"\n \t\t\t\t\t\
+  \        , 'random' as \"TerrDeliveryManager\"\n \t\t\t\t\t        , 'random' as\
+  \ \"TerrTerritoryManager\"\n \t \t\t\t\t\t\t, 'random' as joinkey\n\n \t\t\t\t\t\
+  FROM DUAL\n \t\t\t\t) T on D.joinkey=T.joinkey\n \t\t\tLEFT outer join\n \t\t\t\
+  (select   ana.\"STEmpTerrTerritorySysId\",\n                       e.\"EmpName\"\
+  \ as \"STEmpTerrEmployeeName\"\n \t\t\t\tfrom ODS_LS.\"ANAPLAN\".\"SALES_EMPLOYEE_TERRITORY_MAPPING\"\
+  \ as ana\t\t\t\t\t\t\t\t\t LEFT join ODS_LS.\"SURF\".\"EMPLOYEE\" as e\n \t\t\t\t\
+  \t   \t   on e.\"EmpSysID\" = ana.\"STEmpTerrEmployeeSysId\"\t\t\t\t\t\t\t\t\t\t\
+  \t\t\t\t\t\t LEFT outer join ODS_LS.\"SURF\".\"U_ST_TERRITORY\" as st\n \t\t\t\t\
+  \       \t   on st.\"TerrUserSysID\"=e.\"EmpSysID\"\n \t\t\t\t       LEFT outer\
+  \ join ODS_LS.\"SURF\".\"SALES_TERRITORY\" as stt\n \t\t\t\t       \t   on st.\"\
+  TerrUserRecSysID\"=stt.\"TerrSysID\"\n \t\t\t\t        Where e.\"EmpDepartment\"\
+  \ in (SELECT \"Deptname\" FROM ODS_LS.\"SURF\".\"CMN_DEPARTMENT\"   where \"DeptCostCenter\"\
+  \ in('random','random'))   and e.\"EmpActive\"='random'\n \t\t\t\t\t       and st.\"\
+  TerrUserDirectAssignment\"='random'\n \t\t\t\t\t       and st.\"TerrUserPrimaryAssignment\"\
+  ='random'\n \t\t\t\t\t       and st.\"TerrUserEndDate\" IS NULL\n \t\t\t\t\t   \
+  \    and st.\"TerrUserActive\"='random'\n \t\t\t\t\t       and stt.\"TerrTypeValue\"\
+  ='random'\n \t\t\t\t\t       and ana.\"STEmpTerrQuarter\" = RIGHT(YEAR(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP()))\
+  \ ||'random'|| QUARTER(TO_TIMESTAMP_LTZ(CURRENT_TIMESTAMP())),'random')\n \t\t\t\
+  ) an\n \t\t\t on an.\"STEmpTerrTerritorySysId\" = T.\"TerritorySysID\"\n \t ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

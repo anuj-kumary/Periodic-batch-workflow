@@ -1,0 +1,64 @@
+name: table_123
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_123
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_123.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view ZDEF_REV_SCH(\n\tMANDT,\n\tACCT_PRINCIPLE,\n\
+  \tVBELN,\n\tPOSNR,\n\tPOB_ID,\n\tACCT_PERIOD,\n\tREV_PRICE,\n\tREV_PRICE_LC,\n\t\
+  CURRENCY_KEY,\n\tQUANTITY,\n\tFULFILLED_QTY,\n\tCOMPANY_CODE,\n\tCONTRACT_ID,\n\t\
+  POB_NAME,\n\tPOB_TYPE,\n\tALLOC_AMOUNT,\n\tREMAIN_QUANTITY,\n\tREV_PRICE_NOPENDING,\n\
+  \tINV_AMOUNT,\n\tREV_CATCHUP,\n\tFULFILL_POC,\n\tCUMULATE_POC,\n\tFULFILL_POC_BY_AMT,\n\
+  \tCUMULATE_POC_BY_AMT,\n\tINVOICED_QUANTITY,\n\tUNIT_PRICE,\n\tPOST_PRICE,\n\tPOST_PRICE_LC,\n\
+  \tPOST_PRICE_GC,\n\tPOST_PRICE_HC,\n\tBLENDED_LC,\n\tBLENDED_GC,\n\tBLENDED_HC,\n\
+  \tT4C_REV_DC,\n\tT4C_REV_LC,\n\tT4C_REV_GC,\n\tT4C_REV_HC,\n\tREV_STATUS,\n\tHWAER,\n\
+  \tHWAE2,\n\tHWAE3,\n\tDOWNSELL,\n\tERDAT,\n\tERZET,\n\tERNAM\n) as select\n\t\t\
+  MANDT,\n\t\tACCT_PRINCIPLE,\n\t\tVBELN,\n\t\tPOSNR,\n\t\tPOB_ID,\n\t\tACCT_PERIOD,\n\
+  \t\tREV_PRICE,\n\t\tREV_PRICE_LC,\n\t\tCURRENCY_KEY,\n\t\tQUANTITY,\n\t\tFULFILLED_QTY,\n\
+  \t\tCOMPANY_CODE,\n\t\tCONTRACT_ID,\n\t\tPOB_NAME,\n\t\tPOB_TYPE,\n\t\tALLOC_AMOUNT,\n\
+  \t\tREMAIN_QUANTITY,\n\t\tREV_PRICE_NOPENDING,\n\t\tINV_AMOUNT,\n\t\tREV_CATCHUP,\n\
+  \t\tFULFILL_POC,\n\t\tCUMULATE_POC,\n\t\tFULFILL_POC_BY_AMT,\n\t\tCUMULATE_POC_BY_AMT,\n\
+  \t\tINVOICED_QUANTITY,\n\t\tUNIT_PRICE,\n\t\tPOST_PRICE,\n\t\tPOST_PRICE_LC,\n\t\
+  \tPOST_PRICE_GC,\n\t\tPOST_PRICE_HC,\n\t\tBLENDED_LC,\n\t\tBLENDED_GC,\n\t\tBLENDED_HC,\n\
+  \t\tT4C_REV_DC,\n\t\tT4C_REV_LC,\n\t\tT4C_REV_GC,\n\t\tT4C_REV_HC,\n\t\tREV_STATUS,\n\
+  \t\tHWAER,\n\t\tHWAE2,\n\t\tHWAE3,\n\t\tDOWNSELL,\n\t\tERDAT,\n\t\tERZET,\n\t\t\
+  ERNAM\n from RDS.S4HANA.ZDEF_REV_SCH where MANDT='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

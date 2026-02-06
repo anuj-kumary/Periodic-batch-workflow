@@ -1,0 +1,398 @@
+name: table_1229
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1229
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1229.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SALESSELFSERVICEMAT(\n\t\"OpportunityTerm\"\
+  ,\n\t\"OpportunityMSPPartner\",\n\t\"OpenPipeline\",\n\t\"Closed\",\n\t\"Submitted\"\
+  ,\n\t\"ProductUnit\",\n\t\"ContractSLAPercent\",\n\t\"ContractDataCenter\",\n\t\"\
+  BUGroup\",\n\t\"OpenPipeline_FX\",\n\t\"Closed_FX\",\n\t\"Submitted_FX\",\n\t\"\
+  MaturedPipeline\",\n\t\"MaturedPipeline_FX\",\n\t\"RecordType\",\n\t\"OpenRenewals\"\
+  ,\n\t\"ClosedRenewals_FX\",\n\t\"ClosedWonNNACV\",\n\t\"USDRenewalNNACV\",\n\t\"\
+  ClosedRenewals\",\n\t\"NetNewACV_FX\",\n\t\"ProductCategoryValue\",\n\t\"ProductCode\"\
+  ,\n\t\"ProductName\",\n\t\"OpportunityNumber\",\n\t\"OpportunityType\",\n\t\"OpportunityStage\"\
+  ,\n\t\"USDNetNewACV\",\n\t\"NetNewACV\",\n\t\"RenewalACV\",\n\t\"USDRenewalACV\"\
+  ,\n\t\"USDWeightedACV\",\n\t\"SalesQuarter\",\n\t\"DataSet\",\n\t\"SalesActivePipeline\"\
+  ,\n\t\"NewLogoFlag\",\n\t\"OpportunityForeCastType\",\n\t\"DynamicQuarter\",\n\t\
+  \"Upside\",\n\t\"Expect\",\n\t\"Commit\",\n\t\"AtRiskLogo\",\n\t\"EnterpriseNewLogo\"\
+  ,\n\t\"Quota\",\n\t\"CommitExpectValue\",\n\t\"CommitUpsideValue\",\n\t\"CommitValue\"\
+  ,\n\t\"USDPSRevenue\",\n\t\"ProductActive\",\n\t\"OpportunityNewLogo\",\n\t\"ExpressNewLogoOverride\"\
+  ,\n\t\"OpportunityLogoOverride\",\n\t\"OpportunityName\",\n\t\"PipelineStatus\"\
+  ,\n\t\"OpportunityCloseMonth\",\n\t\"OpportunityCloseDate\",\n\t\"FinnanceNNACV\"\
+  ,\n\t\"OpportunityOwnerActive\",\n\t\"OpportunityItemCreatedOn\",\n\t\"ClosedNewLogo\"\
+  ,\n\t\"LineItemTerm\",\n\t\"Services_FX\",\n\t\"Upside_FX\",\n\t\"Expect_FX\",\n\
+  \t\"Commit_FX\",\n\t\"RenewalACV_FX\",\n\t\"WeightedNetNewACV_FX\",\n\t\"LineItemNumber\"\
+  ,\n\t\"OpportunityParentName\",\n\t\"OpportunityParentNumber\",\n\t\"SalesPartner\"\
+  ,\n\t\"AccountName\",\n\t\"AccountNumber\",\n\t\"AccountCustomerSince\",\n\t\"AccountType\"\
+  ,\n\t\"AccountNewSegment\",\n\t\"AccountCountry\",\n\t\"AccountPrimarySalesRep\"\
+  ,\n\t\"AccountSolutionConsultant\",\n\t\"ProductSKU\",\n\t\"ProductFullName\",\n\
+  \t\"ProductFamily3\",\n\t\"ProductFamily2\",\n\t\"ProductFamily1\",\n\t\"BusinessUnit\"\
+  ,\n\t\"TerritorySysID_CC\",\n\t\"TerritoryName\",\n\t\"ReportingTerritoryGeo\",\n\
+  \t\"ConItemACV\",\n\t\"ConItemLineItemNumber\",\n\t\"ConItemACV_USD\",\n\t\"ContractRenewalStatus\"\
+  ,\n\t\"ContractTerm\",\n\t\"ContractActive\",\n\t\"G2KCatID\",\n\t\"G2KRanking\"\
+  ,\n\t\"ContractEndDate\",\n\t\"ContractNumber\",\n\t\"ContractStartDate\",\n\t\"\
+  ContractType\",\n\t\"OpportunitySolutionConsultantName\",\n\t\"ProductFamilyValue\"\
+  ,\n\t\"AccountMaintenance\",\n\tADR,\n\t\"AnnualRevenue\",\n\t\"ChannelParent\"\
+  ,\n\t\"DisplacedITSMSolution\",\n\t\"DUNSNumber\",\n\t\"DUNSName\",\n\t\"EmployeeCountSource\"\
+  ,\n\t\"EmployeesUsed\",\n\t\"FieldSalesParent\",\n\t\"FieldSalesParentEmployeesUsed\"\
+  ,\n\t\"FieldSalesParentNumber\",\n\t\"FieldSalesParentOverrideSegment\",\n\t\"FieldSalesParentReason\"\
+  ,\n\t\"FieldSalesParentUSDTotalACV\",\n\t\"G2KParentcountry\",\n\t\"G2KParentname\"\
+  ,\n\tGULTDUNS,\n\t\"Industry\",\n\t\"IndustryCategory\",\n\t\"IndustryChangeReason\"\
+  ,\n\tISR,\n\t\"ITSMSolution\",\n\t\"MSPEndCustomer\",\n\t\"MSPStatus\",\n\t\"PartnerAccountNumber\"\
+  ,\n\t\"PartnerStatus\",\n\t\"PORequired\",\n\t\"SalesProgramMapping\",\n\t\"SAPCustomerID\"\
+  ,\n\t\"TargetAccount\",\n\t\"ContractReview\",\n\t\"OFLegalReviewduetoMOATerms\"\
+  ,\n\t\"LegalProgress\",\n\t\"RenewalGuideline\",\n\t\"JobFunction\",\n\t\"JobLevel\"\
+  ,\n\t\"JobRole\",\n\t\"LeadSource\",\n\t\"LeadSourceMostRecent\",\n\t\"LeadSourceMostRecentDate\"\
+  ,\n\t\"LeadSourceType\",\n\t\"LeadStatus\",\n\t\"LeadMostRecentBU\",\n\t\"LeadNumber\"\
+  ,\n\t\"ReasonCode\",\n\t\"LegalSupport\",\n\t\"DNBGULTName\",\n\t\"DNBGULTNumber\"\
+  ,\n\t\"DNBBusinessName\",\n\t\"DNBHQParentName\",\n\t\"DNBDUNSNumberSDMR\",\n\t\"\
+  AccountEmployeeUserName\",\n\t\"AccountEmployeeStartDate\",\n\t\"AccountEmployeeCountry\"\
+  ,\n\t\"CustomerHQ\",\n\t\"AccountEmployees\",\n\t\"G2KCompanyName\",\n\t\"DNBHQDUNSNumber\"\
+  ,\n\t\"DNBHQDUNSParentName\",\n\t\"DNBHQBusinessName\",\n\t\"AccountMDMID\",\n\t\
+  \"AccountMDMCustomerHQ\",\n\t\"AccountCustomeHQAssignmentRule\",\n\t\"AccountCustomerHQChangeReasonCode\"\
+  ,\n\t\"AccountOwnerName\",\n\t\"AccountCustomerHQNewSegment\",\n\t\"AccountCustomerHQEmployeesDB\"\
+  ,\n\t\"AccountCustomerHQAcctNumber\",\n\t\"MergeAccountNumber\",\n\t\"AccountIndustryName\"\
+  ,\n\t\"AccountCustomerHQSegment\",\n\t\"AccountCustomerHQOverrideSegment\",\n\t\"\
+  AccountCustomerHQEmployees\",\n\t\"DNBCustomerType\",\n\t\"AccounttExecutiveSponser\"\
+  ,\n\t\"AccounttCustomerSuccessManager\",\n\t\"AccountCustomerType\",\n\t\"AccountPaymentStatus\"\
+  ,\n\t\"AccountContractOwner\",\n\t\"AccountSupportChampion\",\n\t\"AccountPSChampion\"\
+  ,\n\t\"AccountG2KParentSubsidiary\",\n\t\"DNBSegment\",\n\t\"DNBEmployeesTotal\"\
+  ,\n\t\"DNBPrimaryNAICSCode\",\n\t\"AccountChannelManager\",\n\t\"AccountEmployeeManagerName\"\
+  ,\n\t\"AccountActiveFlag\",\n\t\"AccountFieldSalesParentValue\",\n\t\"AccountFieldSalesParentSegmentValue\"\
+  ,\n\t\"AccountCustomerHQAccount\",\n\t\"AccountFieldSalesParentSegment\",\n\t\"\
+  AccountMDMFieldSalesParentValue\",\n\t\"DNBCountryName\",\n\t\"DNBCityName\",\n\t\
+  \"DNBEmployeesHere\",\n\t\"LeadTerritoryAssignmentReason\",\n\t\"MarketingTerritory\"\
+  ,\n\t\"G2KAudit\",\n\t\"Commissions\",\n\t\"FinanceContact\",\n\t\"DealDesk\",\n\
+  \t\"SCGroup\",\n\t\"SRMCategory\",\n\t\"SRMSUBCategory\",\n\t\"TraningsOPSApprover\"\
+  ,\n\t\"RevenueContact\",\n\t\"PriceBandApprover\",\n\t\"SalesOperations\",\n\t\"\
+  Renewals\",\n\t\"JobTitle\",\n\t\"AccountGrade\",\n\t\"USDTotalACV\",\n\t\"FieldSalesParentAccountTerritoryRegion\"\
+  ,\n\t\"FieldSalesParentAccountTerritoryArea\",\n\t\"FieldSalesParentAccountTerritoryGeo\"\
+  ,\n\t\"FieldSalesParentAccountTerritory\",\n\t\"FieldSalesParentAccountTerritoryDistrict\"\
+  ,\n\t\"FieldSalesParentAccountTerritoryMajorArea\",\n\t\"FieldSalesParentAccountPrimarySalesRep\"\
+  ,\n\t\"AccountCustomerHQName\",\n\t\"PartnerTouched\",\n\t\"Services\",\n\t\"LineItemNetNewQuantity\"\
+  ,\n\t\"AccountHQCountry\",\n\t\"CustomerHQEmployeeUsed\",\n\t\"AccountOverrideSegment\"\
+  ,\n\t\"AccountCustomerHQIndustrySegment\",\n\t\"AccountParentOverrideSegment\",\n\
+  \t\"AccountParentIndustrySegment\",\n\t\"AccountOverrideSegmentReason\",\n\t\"OpportunityLinkReason\"\
+  ,\n\t\"TotalRenewalOpportunity_CC\",\n\t\"OpportunityItemTermEndDate\",\n\t\"OpportunityItemTermStartDate\"\
+  ,\n\t\"OpportunityMSPMajorArea\",\n\t\"OpportunityActiveFlag\",\n\t\"LostOpportunityReasonCode\"\
+  ,\n\t\"OpportunityRoutetoMarket\",\n\t\"OpportunityParentType\",\n\t\"OpportunityMSPGeo\"\
+  ,\n\t\"OpportunityMSPArea\",\n\t\"OpportunityMSPRegion\",\n\t\"OpportunityMSPDistrict\"\
+  ,\n\t\"OpportunityMSPSales\",\n\t\"OpportunityMSPTerritory\",\n\t\"OpportunityOwnerJobTitle\"\
+  ,\n\t\"OpportunityOwnerCountry\",\n\t\"OpportunityOwnerStartDate\",\n\t\"OpportunityOwnerEmployeeNumber\"\
+  ,\n\t\"OpportunityGeoLegacy\",\n\t\"OpportunityTerritoryLegacy\",\n\t\"OpportunityDistrictLegacy\"\
+  ,\n\t\"OpportunityRegionLegacy\",\n\t\"OpportunityAreaLegacy\",\n\t\"OpportunityEndCustomer\"\
+  ,\n\t\"OpportunitySourceValue\",\n\t\"OpportunityParentPipelineStatus\",\n\t\"OpportunityParentStage\"\
+  ,\n\t\"OpportunityParentCloseDate\",\n\t\"OpportunityParentCloseQuarter\",\n\t\"\
+  OpportunityParentCloseMonth\",\n\t\"OpportunityParentAcctNumber\",\n\t\"OpportunitySecondaryCompetitor\"\
+  ,\n\t\"OpportunityPrimaryCompetitor\",\n\t\"OpportunityItemReplacesLine\",\n\t\"\
+  OpportunityTerritoryMajorAreaLegacy\",\n\t\"OpportunityItemTotalPSRevenue_USD\"\
+  ,\n\t\"OpportunitySysCreatedOn\",\n\t\"OpportunityTerritoryDistrictLegacy\",\n\t\
+  \"OpportunityContractStatus\",\n\t\"OpportunityCompititiveReason\",\n\t\"OpportunityCompititveStatus\"\
+  ,\n\t\"OpportunityStartDate\",\n\t\"OpportunityISRInteraction\",\n\t\"OpportunityPriceBand\"\
+  ,\n\t\"OpportunityPriceBook\",\n\t\"OpportunityUleadSource\",\n\t\"OpportunityLeadNumber\"\
+  ,\n\t\"OpportunityLeadSource\",\n\t\"OpportunityBaseCurrency\",\n\t\"OpportunityConstantFXRate\"\
+  ,\n\t\"OpportunityESADealFlag\",\n\t\"OpportunityRenewalRep\",\n\t\"OpportunityRenewalsEngagement\"\
+  ,\n\t\"OpportunityRenewalRepManager\",\n\t\"ContractEndDate_CC\",\n\t\"USDContractTotalACV\"\
+  ,\n\t\"USDAnnualContractAmount\",\n\t\"TerritoryFinanceContact\",\n\t\"TerritoryRevenueContact\"\
+  ,\n\t\"ContractDedicatedServer\",\n\t\"ContractMasterContractValue\",\n\t\"ContractTotalSubscriptionACV_DC\"\
+  ,\n\t\"ContractTotalPSRevenue\",\n\t\"ContractTotalOtherRevenue\",\n\t\"ContractTotalServicesRevenue\"\
+  ,\n\t\"ContractTotalTrainingRevenue\",\n\t\"ContractNumberofInstances\",\n\t\"EMEAAreaGroup\"\
+  ,\n\t\"PSArea\",\n\t\"AccountArea\",\n\t\"AccountInsideSalesRepNew\",\n\t\"LostACV_FX\"\
+  ,\n\t\"LostACV\",\n\t\"ConItemUSDConstantFXACV\",\n\t\"AccountTotalACV\",\n\t\"\
+  AccountCountryName\",\n\t\"USDListPrice\",\n\t\"USDSalesAmount\",\n\t\"USDAnnualListAmount\"\
+  ,\n\t\"USDTotalTrainingRevenue\",\n\t\"USDTotalValue\",\n\t\"USDServices\",\n\t\"\
+  USDBasePrice\",\n\t\"ConItemUSDConstantFXAdjustment\",\n\t\"ConItemUSDConstantFXAnnualListValue\"\
+  ,\n\t\"ConItemUSDConstantFXSalesPrice\",\n\t\"ConItemUSDConstantFXTotalValue\",\n\
+  \t\"ConItemUSDAdjustment\",\n\t\"USDTotalCustomerSuccessRevenue\",\n\t\"ConItemSalesPriceUSD\"\
+  ,\n\t\"RenewalRateWon_CC\",\n\t\"RenewalStatusFlag_CC\",\n\t\"TerritoryRenewalsValue\"\
+  ,\n\t\"RenewalStatus_CC\",\n\t\"ClosedWonRenewalsFlag\",\n\t\"ClosedLostRenewalsFlag\"\
+  ,\n\t\"ClosedLostRenewalsCnt\",\n\t\"ClosedWonRenewalsCnt\",\n\t\"ClosedRenewalsCnt\"\
+  ,\n\t\"RenewalStatusOld\",\n\t\"ClosedLostRenewal\",\n\t\"ClosedWonRenewal_FX\"\
+  ,\n\t\"ClosedWonRenewal\",\n\t\"ClosedLostRenewal_FX\",\n\t\"RenewalCategory\",\n\
+  \t\"NewLogoCommit\",\n\t\"ProdCommissionableBU\",\n\t\"LineItemFlagsValue\",\n\t\
+  \"LineItemQuantity\",\n\t\"IsFixed\",\n\t\"SFixedDataReferralFees\",\n\t\"UpSellsCnt\"\
+  ,\n\t\"PartnerPipeline\",\n\t\"AbsMaturedPipeline\",\n\t\"AbsRawPipeline\",\n\t\"\
+  PSOpenPipeline\",\n\t\"ProductAttribute1Value\",\n\t\"ProductBusinessUnitValue\"\
+  ,\n\t\"ACESalesManager\",\n\t\"FieldSalesManager\",\n\t\"G2KCompanyCountryValue\"\
+  ,\n\t\"DNBDUNSNumber\",\n\t\"DNBName\",\n\t\"DNBGULTDUNSNumber\",\n\t\"AccountParentNumber\"\
+  ,\n\t\"AccountParent\",\n\t\"PSRegion\",\n\t\"ReportingTerritoryGeoLegacy\",\n\t\
+  \"TerritoryDistrict\",\n\t\"TerritoryMajorArea\",\n\t\"TerritoryArea\",\n\t\"TerritoryRegion\"\
+  ,\n\t\"TerritoryCommissions\",\n\t\"TerritoryDealDesk\",\n\t\"TerritorySCGroup\"\
+  ,\n\t\"TerritorySRMCategory\",\n\t\"TerritorySRMSUBCategory\",\n\t\"TerritorySalesOperationsValue\"\
+  ,\n\t\"PSExpect\",\n\t\"PSClosed\",\n\t\"PSGeo\",\n\t\"TotalPSRevenue_FX\",\n\t\"\
+  PSRevenue\",\n\t\"LostLogoFlag\",\n\t\"AverageRatio\",\n\t\"StdDev\",\n\t\"Variance\"\
+  ,\n\t\"WeekInQuarter\",\n\t\"TotalValueAmount_FX\",\n\t\"ClosedFlag\",\n\t\"PartnerInfluencer\"\
+  ,\n\t\"Incumbent\",\n\t\"PartnerSourced\",\n\t\"PartnerSourcedACV\",\n\t\"PartnerTouchedACV\"\
+  ,\n\t\"AccountPartnerType\",\n\t\"AccountNewPartnerType\",\n\t\"ImplementationPartner\"\
+  ,\n\t\"SalesOrderNumber\",\n\t\"AccountFieldSalesParentName\",\n\t\"FieldSalesParentName\"\
+  ,\n\t\"AccountSalesProgram\",\n\t\"AccountParentFieldSalesChangeReason\",\n\t\"\
+  TotalValueAmount\",\n\t\"EndCustomerNumber\",\n\t\"FlagsFilter\",\n\t\"AccountParentIndustryCategory\"\
+  ,\n\t\"AccountCustomerHQIndustryCategory\",\n\t\"ConItemQuantity\",\n\t\"ConConstantFXRate\"\
+  ,\n\t\"ConItemConstantFXRateEffectiveYear\",\n\t\"AccountMarketingStatus\",\n\t\"\
+  AccountInsideSalesRep\",\n\t\"ConItemAdjustment\",\n\t\"AccountEmployeesDB\",\n\t\
+  \"AccountKeyAccountParent\",\n\t\"OpportunityOwnerUserName\",\n\t\"AccountRiskSeverityScore\"\
+  ,\n\t\"AccountAtRiskFlag\",\n\t\"AccountIndustryRisk\",\n\t\"TopAccount\",\n\t\"\
+  NewLogoTargets\",\n\t\"ClosedNewLogoNNACV\",\n\t\"AtRiskLogoNNACV\",\n\t\"FieldSalesParentDNBDUNSNumber\"\
+  ,\n\t\"FieldSalesParentDNBGULTDUNSNumber\",\n\t\"FieldSalesParentDNBBusinessName\"\
+  ,\n\t\"FieldSalesParentDNBName\",\n\t\"FieldSalesParentDNBGULTNumber\",\n\t\"FieldSalesParentDNBDUNSNumberSDMR\"\
+  ,\n\t\"FieldSalesParentAccountIndustrySegment\",\n\t\"FieldSalesParentAcctNewSegment\"\
+  ,\n\t\"FieldSalesParentAcctType\",\n\t\"FieldSalesParentCustomerHQ\",\n\t\"FieldSalesParentMDMCustomerHQ\"\
+  ,\n\t\"PSTerrMajorArea\",\n\t\"AccountDerivedFieldSalesParentType_CC\",\n\t\"AccountDerivedCustomerSince\"\
+  ,\n\t\"AccountMergeWith\",\n\t\"AccountStatus\",\n\t\"ServEducationTarget\",\n\t\
+  \"ServTotalTarget\",\n\t\"ServBookingsTarget\",\n\t\"ServCSTarget\",\n\t\"OpportunityPipelineSourced\"\
+  ,\n\t\"MKTSourcedUSDNetNewACV\",\n\t\"ACESourcedUSDNetNewACV\",\n\t\"OptySourcedACV\"\
+  ,\n\t\"ActiveNetNewACVUSD\",\n\t\"OpportunityParentReportingGeo\",\n\t\"OpportunityParentMajorArea\"\
+  ,\n\t\"OpportunityParentArea\",\n\t\"OpportunityParentRegion\",\n\t\"OpportunityParentDistrict\"\
+  ,\n\t\"OpportunityParentTerrName\",\n\t\"OptyParentAcctTerritorySysID\",\n\t\"OptyParentAcctTerrName\"\
+  ,\n\t\"OptyParentAcctTerrDistrict\",\n\t\"OptyParentAcctTerrRegion\",\n\t\"OptyParentAcctTerrArea\"\
+  ,\n\t\"OptyParentAcctTerrMajorArea\",\n\t\"OptyParentAcctReportingTerritoryGeo\"\
+  ,\n\t\"AccountGeo\",\n\t\"AccountMajorArea\",\n\t\"AccountRegion\",\n\t\"AccountDistrict\"\
+  ,\n\t\"AccountTerritory\",\n\tETL_EXTRACT_DATE,\n\t\"OpportunitySysID\",\n\t\"OptyCOManaged\"\
+  ,\n\t\"OptyDynamicsGUID\",\n\t\"AcctMSPEndCustName\",\n\t\"AcctMSPEndCustNumber\"\
+  ,\n\t\"AcctMSPEndCustCustomerHQ\",\n\t\"AcctMSPEndCustCountry\",\n\t\"AcctMSPEndCustRegion\"\
+  ,\n\t\"AcctMSPEndCustGeo\",\n\t\"AcctMSPEndCustArea\",\n\t\"AcctMSPEndCustTerritory\"\
+  ,\n\t\"AcctMSPEndCustDistrict\",\n\t\"AcctMSPEndCustMajorArea\",\n\t\"AcctMSPEndCustDNBDUNSNumber\"\
+  ,\n\t\"AcctMSPEndCustOverrideSegment\",\n\t\"OpportunityBUList\",\n\t\"NotesLastUpdatedDate\"\
+  ,\n\t\"NextStepsLastUpdatedDate\",\n\t\"AcctMSPEndCustFSPName\",\n\t\"AcctMSPEndCustFSPNumber\"\
+  ,\n\t\"AcctMSPEndCustFSPGeo\",\n\t\"AcctMSPEndCustFSPMajorArea\",\n\t\"AcctMSPEndCustFSPArea\"\
+  ,\n\t\"AcctMSPEndCustFSPRegion\",\n\t\"AcctMSPEndCustFSPDistrict\",\n\t\"AcctMSPEndCustFSPTerritory\"\
+  ,\n\t\"AccountSysID\",\n\t\"AccountLatitude\",\n\t\"AccountLongitude\",\n\t\"EmpCity\"\
+  ,\n\t\"EmpLatitude\",\n\t\"EmpLongitude\",\n\t\"RenewalStatusSubCategoryFlagMode\"\
+  ,\n\t\"AcctCity\",\n\t\"AcctPrimarySalesRepTitle\",\n\t\"AcctPrimarySalesRepNumber\"\
+  ,\n\t\"AcctPrimarySalesRepSysID\",\n\t\"OpportunityOwnerName\",\n\t\"RenewalGeo\"\
+  ,\n\t\"RenewalMajorArea\",\n\t\"RenewalArea\",\n\t\"RenewalRegion\",\n\t\"RenewalDistrict\"\
+  ,\n\t\"RenewalTerritory\",\n\t\"RenewalTerritorySysID\",\n\t\"SurvivorOppBridgeFlag_CC\"\
+  ,\n\t\"SurvivorAccountBridgeFlag_CC\",\n\t\"AccountConsolidationFlag_CC\",\n\t\"\
+  OptyTerrMarketSegmentation\",\n\t\"Vertical\",\n\t\"TerrMarketSegmentation\",\n\t\
+  \"AcctDynamicsGUID\",\n\t\"TotalTrainingRevenue\",\n\t\"TotalTrainingRevenue_FX\"\
+  ,\n\t\"NextSteps\",\n\t\"OpportunityParentAcctName\",\n\t\"LineItemNumber_CRM\"\
+  ,\n\t\"ProductSysID\",\n\t\"FSPNewLogoFlagValue\",\n\t\"AccountFieldSalesParentAccount\"\
+  ,\n\t\"AllocationType\"\n) as\n\n\n/* Comments retained from HANA input file */\n\
+  \n /******************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Sales Self Service Analytics\n \t\t* Project\
+  \ \t\t\t\t\t :     NA\n \t\t* Object Name \t\t\t\t :     \"REAL-TIME-SALES.TABLEFUNCTIONS::MatSalesSelfserve\"\
+  \ ( )\n \t\t* Development Request # \t :\n \t\t* Brief Description          : \t\
+  \   Wrapper for the Sales Selfservice synonym\n \t\t* Developed By             \
+  \  :     Pruthviraj Chanda\n \t\t* Date Created               : \t   2020-07-07\n\
+  \n Revision\n\n  STRY2233264                28/08/2020                 Amit    \
+  \        Added 3 new  fields in Analytics-Sales_Unified Self Service -\n       \
+  \                                                                For Opty linking\
+  \ to Surf/Dynamics from Tableau Dashboard\n \t\t\t\t\t\t   14/09/2020\t\t\t\t  Swetha\
+  \ Bobba\t  Added End customer account details and BUList\n  STRY2275189        \
+  \       25/09/2020                 Amit            Added 6 Columns in the self service\
+  \ models\n                                                                     \
+  \  -- NextSteps,Notes,NextstepsUpdatedDate,NotesLastUpdatedDate\n              \
+  \              07/10/2020  \t \t \t \t  Swetha Bobba\t  Added MSP End Customer FSP\
+  \ details, Lattitude and longitude fields\n                            14/10/2020\t\
+  \t\t\t  Swetha Bobba    Added Account City field\n                            21/10/2020\t\
+  \ \t \t \t  Swetha Bobba\t  Added AcctPrimarySalesRep details and OptyOwnerName\n\
+  \  STRY2346146               18/11/2020                 Amit            Added Renewal\
+  \ Hierarchy fields\n  STRY2392058               01/02/2021                 Amit\
+  \            Added Survivor Flag fields 3 Columns\n  STRY2407641               04/03/2021\
+  \                 Amit            Added TerrMarketSegmentation & Vertical Attribute\n\
+  \                       \t   08/04/2021                 Amit            Added 13\
+  \ Columns for FSP New Logo Model\n                       \t   04/05/2021       \
+  \          Amit\t          Added AcctDynamicsGUID Attribute\n                  \
+  \     \t   17/05/2021                 Amit            Added TotalTrainingRevenue\
+  \ & TotalTrainingRevenue_FX Attribute\n                       \t   06/06/2021  \
+  \               Amit            Added NextSteps & OpportunityParentAcctName  Attribute\n\
+  \ ********************************************************************************************************************************/\n\
+  \n\n\n\n\n(\n SELECT \"OpportunityTerm\",\n \"OpportunityMSPPartner\",\n \"OpenPipeline\"\
+  ,\n \"Closed\",\n \"Submitted\",\n \"ProductUnit\",\n \"ContractSLAPercent\",\n\
+  \ \"ContractDataCenter\",\n \"BUGroup\",\n \"OpenPipeline_FX\",\n \"Closed_FX\"\
+  ,\n \"Submitted_FX\",\n \"MaturedPipeline\",\n \"MaturedPipeline_FX\",\n \"RecordType\"\
+  ,\n \"OpenRenewals\",\n \"ClosedRenewals_FX\",\n \"ClosedWonNNACV\",\n \"USDRenewalNNACV\"\
+  ,\n \"ClosedRenewals\",\n \"NetNewACV_FX\",\n \"ProductCategoryValue\",\n \"ProductCode\"\
+  ,\n \"ProductName\",\n \"OpportunityNumber\",\n \"OpportunityType\",\n \"OpportunityStage\"\
+  ,\n \"USDNetNewACV\",\n \"NetNewACV\",\n \"RenewalACV\",\n \"USDRenewalACV\",\n\
+  \ \"USDWeightedACV\",\n \"SalesQuarter\",\n \"DataSet\",\n \"SalesActivePipeline\"\
+  ,\n \"NewLogoFlag\",\n \"OpportunityForeCastType\",\n \"DynamicQuarter\",\n \"Upside\"\
+  ,\n \"Expect\",\n \"Commit\",\n \"AtRiskLogo\",\n \"EnterpriseNewLogo\",\n \"Quota\"\
+  ,\n \"CommitExpectValue\",\n \"CommitUpsideValue\",\n \"CommitValue\",\n \"USDPSRevenue\"\
+  ,\n \"ProductActive\",\n \"OpportunityNewLogo\",\n \"ExpressNewLogoOverride\",\n\
+  \ \"OpportunityLogoOverride\",\n \"OpportunityName\",\n \"PipelineStatus\",\n \"\
+  OpportunityCloseMonth\",\n \"OpportunityCloseDate\",\n \"FinnanceNNACV\",\n \"OpportunityOwnerActive\"\
+  ,\n \"OpportunityItemCreatedOn\",\n \"ClosedNewLogo\",\n \"LineItemTerm\",\n \"\
+  Services_FX\",\n \"Upside_FX\",\n \"Expect_FX\",\n \"Commit_FX\",\n \"RenewalACV_FX\"\
+  ,\n \"WeightedNetNewACV_FX\",\n \"LineItemNumber\",\n \"OpportunityParentName\"\
+  ,\n \"OpportunityParentNumber\",\n \"SalesPartner\",\n \"AccountName\",\n \"AccountNumber\"\
+  ,\n \"AccountCustomerSince\",\n \"AccountType\",\n \"AccountNewSegment\",\n \"AccountCountry\"\
+  ,\n \"AccountPrimarySalesRep\",\n \"AccountSolutionConsultant\",\n \"ProductSKU\"\
+  ,\n \"ProductFullName\",\n \"ProductFamily3\",\n \"ProductFamily2\",\n \"ProductFamily1\"\
+  ,\n \"BusinessUnit\",\n \"TerritorySysID_CC\",\n \"TerritoryName\",\n \"ReportingTerritoryGeo\"\
+  ,\n \"ConItemACV\",\n \"ConItemLineItemNumber\",\n \"ConItemACV_USD\",\n \"ContractRenewalStatus\"\
+  ,\n \"ContractTerm\",\n \"ContractActive\",\n \"G2KCatID\",\n \"G2KRanking\",\n\
+  \ \"ContractEndDate\",\n \"ContractNumber\",\n \"ContractStartDate\",\n \"ContractType\"\
+  ,\n \"OpportunitySolutionConsultantName\",\n \"ProductFamilyValue\",\n \"AccountMaintenance\"\
+  ,\n \"ADR\",\n \"AnnualRevenue\",\n \"ChannelParent\",\n \"DisplacedITSMSolution\"\
+  ,\n \"DUNSNumber\",\n \"DUNSName\",\n \"EmployeeCountSource\",\n \"EmployeesUsed\"\
+  ,\n \"FieldSalesParent\",\n \"FieldSalesParentEmployeesUsed\",\n \"FieldSalesParentNumber\"\
+  ,\n \"FieldSalesParentOverrideSegment\",\n \"FieldSalesParentReason\",\n \"FieldSalesParentUSDTotalACV\"\
+  ,\n \"G2KParentcountry\",\n \"G2KParentname\",\n \"GULTDUNS\",\n \"Industry\",\n\
+  \ \"IndustryCategory\",\n \"IndustryChangeReason\",\n \"ISR\",\n \"ITSMSolution\"\
+  ,\n \"MSPEndCustomer\",\n \"MSPStatus\",\n \"PartnerAccountNumber\",\n \"PartnerStatus\"\
+  ,\n \"PORequired\",\n \"SalesProgramMapping\",\n \"SAPCustomerID\",\n \"TargetAccount\"\
+  ,\n \"ContractReview\",\n \"OFLegalReviewduetoMOATerms\",\n \"LegalProgress\",\n\
+  \ \"RenewalGuideline\",\n \"JobFunction\",\n \"JobLevel\",\n \"JobRole\",\n \"LeadSource\"\
+  ,\n \"LeadSourceMostRecent\",\n \"LeadSourceMostRecentDate\",\n \"LeadSourceType\"\
+  ,\n \"LeadStatus\",\n \"LeadMostRecentBU\",\n \"LeadNumber\",\n \"ReasonCode\",\n\
+  \ \"LegalSupport\",\n \"DNBGULTName\",\n \"DNBGULTNumber\",\n \"DNBBusinessName\"\
+  ,\n \"DNBHQParentName\",\n \"DNBDUNSNumberSDMR\",\n \"AccountEmployeeUserName\"\
+  ,\n \"AccountEmployeeStartDate\",\n \"AccountEmployeeCountry\",\n \"CustomerHQ\"\
+  ,\n \"AccountEmployees\",\n \"G2KCompanyName\",\n \"DNBHQDUNSNumber\",\n \"DNBHQDUNSParentName\"\
+  ,\n \"DNBHQBusinessName\",\n \"AccountMDMID\",\n \"AccountMDMCustomerHQ\",\n \"\
+  AccountCustomeHQAssignmentRule\",\n \"AccountCustomerHQChangeReasonCode\",\n \"\
+  AccountOwnerName\",\n \"AccountCustomerHQNewSegment\",\n \"AccountCustomerHQEmployeesDB\"\
+  ,\n \"AccountCustomerHQAcctNumber\",\n \"MergeAccountNumber\",\n \"AccountIndustryName\"\
+  ,\n \"AccountCustomerHQSegment\",\n \"AccountCustomerHQOverrideSegment\",\n \"AccountCustomerHQEmployees\"\
+  ,\n \"DNBCustomerType\",\n \"AccounttExecutiveSponser\",\n \"AccounttCustomerSuccessManager\"\
+  ,\n \"AccountCustomerType\",\n \"AccountPaymentStatus\",\n \"AccountContractOwner\"\
+  ,\n \"AccountSupportChampion\",\n \"AccountPSChampion\",\n \"AccountG2KParentSubsidiary\"\
+  ,\n \"DNBSegment\",\n \"DNBEmployeesTotal\",\n \"DNBPrimaryNAICSCode\",\n \"AccountChannelManager\"\
+  ,\n \"AccountEmployeeManagerName\",\n \"AccountActiveFlag\",\n \"AccountFieldSalesParentValue\"\
+  ,\n \"AccountFieldSalesParentSegmentValue\",\n \"AccountCustomerHQAccount\",\n \"\
+  AccountFieldSalesParentSegment\",\n \"AccountMDMFieldSalesParentValue\",\n \"DNBCountryName\"\
+  ,\n \"DNBCityName\",\n \"DNBEmployeesHere\",\n \"LeadTerritoryAssignmentReason\"\
+  ,\n \"MarketingTerritory\",\n \"G2KAudit\",\n \"Commissions\",\n \"FinanceContact\"\
+  ,\n \"DealDesk\",\n \"SCGroup\",\n \"SRMCategory\",\n \"SRMSUBCategory\",\n \"TraningsOPSApprover\"\
+  ,\n \"RevenueContact\",\n \"PriceBandApprover\",\n \"SalesOperations\",\n \"Renewals\"\
+  ,\n \"JobTitle\",\n \"AccountGrade\",\n \"USDTotalACV\",\n \"FieldSalesParentAccountTerritoryRegion\"\
+  ,\n \"FieldSalesParentAccountTerritoryArea\",\n \"FieldSalesParentAccountTerritoryGeo\"\
+  ,\n \"FieldSalesParentAccountTerritory\",\n \"FieldSalesParentAccountTerritoryDistrict\"\
+  ,\n \"FieldSalesParentAccountTerritoryMajorArea\",\n \"FieldSalesParentAccountPrimarySalesRep\"\
+  ,\n \"AccountCustomerHQName\",\n \"PartnerTouched\",\n \"Services\",\n \"LineItemNetNewQuantity\"\
+  ,\n \"AccountHQCountry\",\n \"CustomerHQEmployeeUsed\",\n \"AccountOverrideSegment\"\
+  ,\n \"AccountCustomerHQIndustrySegment\",\n \"AccountParentOverrideSegment\",\n\
+  \ \"AccountParentIndustrySegment\",\n \"AccountOverrideSegmentReason\",\n \"OpportunityLinkReason\"\
+  ,\n \"TotalRenewalOpportunity_CC\",\n \"OpportunityItemTermEndDate\",\n \"OpportunityItemTermStartDate\"\
+  ,\n \"OpportunityMSPMajorArea\",\n \"OpportunityActiveFlag\",\n \"LostOpportunityReasonCode\"\
+  ,\n \"OpportunityRoutetoMarket\",\n \"OpportunityParentType\",\n \"OpportunityMSPGeo\"\
+  ,\n \"OpportunityMSPArea\",\n \"OpportunityMSPRegion\",\n \"OpportunityMSPDistrict\"\
+  ,\n \"OpportunityMSPSales\",\n \"OpportunityMSPTerritory\",\n \"OpportunityOwnerJobTitle\"\
+  ,\n \"OpportunityOwnerCountry\",\n \"OpportunityOwnerStartDate\",\n \"OpportunityOwnerEmployeeNumber\"\
+  ,\n \"OpportunityGeoLegacy\",\n \"OpportunityTerritoryLegacy\",\n \"OpportunityDistrictLegacy\"\
+  ,\n \"OpportunityRegionLegacy\",\n \"OpportunityAreaLegacy\",\n \"OpportunityEndCustomer\"\
+  ,\n \"OpportunitySourceValue\",\n \"OpportunityParentPipelineStatus\",\n \"OpportunityParentStage\"\
+  ,\n \"OpportunityParentCloseDate\",\n \"OpportunityParentCloseQuarter\",\n \"OpportunityParentCloseMonth\"\
+  ,\n \"OpportunityParentAcctNumber\",\n \"OpportunitySecondaryCompetitor\",\n \"\
+  OpportunityPrimaryCompetitor\",\n \"OpportunityItemReplacesLine\",\n \"OpportunityTerritoryMajorAreaLegacy\"\
+  ,\n \"OpportunityItemTotalPSRevenue_USD\",\n \"OpportunitySysCreatedOn\",\n \"OpportunityTerritoryDistrictLegacy\"\
+  ,\n \"OpportunityContractStatus\",\n \"OpportunityCompititiveReason\",\n \"OpportunityCompititveStatus\"\
+  ,\n \"OpportunityStartDate\",\n \"OpportunityISRInteraction\",\n \"OpportunityPriceBand\"\
+  ,\n \"OpportunityPriceBook\",\n \"OpportunityUleadSource\",\n \"OpportunityLeadNumber\"\
+  ,\n \"OpportunityLeadSource\",\n \"OpportunityBaseCurrency\",\n \"OpportunityConstantFXRate\"\
+  ,\n \"OpportunityESADealFlag\",\n \"OpportunityRenewalRep\",\n \"OpportunityRenewalsEngagement\"\
+  ,\n \"OpportunityRenewalRepManager\",\n \"ContractEndDate_CC\",\n \"USDContractTotalACV\"\
+  ,\n \"USDAnnualContractAmount\",\n \"TerritoryFinanceContact\",\n \"TerritoryRevenueContact\"\
+  ,\n \"ContractDedicatedServer\",\n \"ContractMasterContractValue\",\n \"ContractTotalSubscriptionACV_DC\"\
+  ,\n \"ContractTotalPSRevenue\",\n \"ContractTotalOtherRevenue\",\n \"ContractTotalServicesRevenue\"\
+  ,\n \"ContractTotalTrainingRevenue\",\n \"ContractNumberofInstances\",\n \"EMEAAreaGroup\"\
+  ,\n \"PSArea\",\n \"AccountArea\",\n \"AccountInsideSalesRepNew\",\n \"LostACV_FX\"\
+  ,\n \"LostACV\",\n \"ConItemUSDConstantFXACV\",\n \"AccountTotalACV\",\n \"AccountCountryName\"\
+  ,\n \"USDListPrice\",\n \"USDSalesAmount\",\n \"USDAnnualListAmount\",\n \"USDTotalTrainingRevenue\"\
+  ,\n \"USDTotalValue\",\n \"USDServices\",\n \"USDBasePrice\",\n \"ConItemUSDConstantFXAdjustment\"\
+  ,\n \"ConItemUSDConstantFXAnnualListValue\",\n \"ConItemUSDConstantFXSalesPrice\"\
+  ,\n \"ConItemUSDConstantFXTotalValue\",\n \"ConItemUSDAdjustment\",\n \"USDTotalCustomerSuccessRevenue\"\
+  ,\n \"ConItemSalesPriceUSD\",\n \"RenewalRateWon_CC\",\n \"RenewalStatusFlag_CC\"\
+  ,\n \"TerritoryRenewalsValue\",\n \"RenewalStatus_CC\",\n \"ClosedWonRenewalsFlag\"\
+  ,\n \"ClosedLostRenewalsFlag\",\n \"ClosedLostRenewalsCnt\",\n \"ClosedWonRenewalsCnt\"\
+  ,\n \"ClosedRenewalsCnt\",\n \"RenewalStatusOld\",\n \"ClosedLostRenewal\",\n \"\
+  ClosedWonRenewal_FX\",\n \"ClosedWonRenewal\",\n \"ClosedLostRenewal_FX\",\n \"\
+  RenewalCategory\",\n \"NewLogoCommit\",\n \"ProdCommissionableBU\",\n \"LineItemFlagsValue\"\
+  ,\n \"LineItemQuantity\",\n \"IsFixed\",\n \"SFixedDataReferralFees\",\n \"UpSellsCnt\"\
+  ,\n \"PartnerPipeline\",\n \"AbsMaturedPipeline\",\n \"AbsRawPipeline\",\n \"PSOpenPipeline\"\
+  ,\n \"ProductAttribute1Value\",\n \"ProductBusinessUnitValue\",\n \"ACESalesManager\"\
+  ,\n \"FieldSalesManager\",\n \"G2KCompanyCountryValue\",\n \"DNBDUNSNumber\",\n\
+  \ \"DNBName\",\n \"DNBGULTDUNSNumber\",\n \"AccountParentNumber\",\n \"AccountParent\"\
+  ,\n \"PSRegion\",\n \"ReportingTerritoryGeoLegacy\",\n \"TerritoryDistrict\",\n\
+  \ \"TerritoryMajorArea\",\n \"TerritoryArea\",\n \"TerritoryRegion\",\n \"TerritoryCommissions\"\
+  ,\n \"TerritoryDealDesk\",\n \"TerritorySCGroup\",\n \"TerritorySRMCategory\",\n\
+  \ \"TerritorySRMSUBCategory\",\n \"TerritorySalesOperationsValue\",\n \"PSExpect\"\
+  ,\n \"PSClosed\",\n \"PSGeo\",\n \"TotalPSRevenue_FX\",\n \"PSRevenue\",\n \"LostLogoFlag\"\
+  ,\n \"AverageRatio\",\n \"StdDev\",\n \"Variance\",\n \"WeekInQuarter\",\n \"TotalValueAmount_FX\"\
+  ,\n \"ClosedFlag\",\n \"PartnerInfluencer\",\n \"Incumbent\",\n \"PartnerSourced\"\
+  ,\n \"PartnerSourcedACV\",\n \"PartnerTouchedACV\",\n \"AccountPartnerType\",\n\
+  \ \"AccountNewPartnerType\",\n \"ImplementationPartner\",\n \"SalesOrderNumber\"\
+  ,\n \"AccountFieldSalesParentName\",\n \"FieldSalesParentName\",\n \"AccountSalesProgram\"\
+  ,\n \"AccountParentFieldSalesChangeReason\",\n \"TotalValueAmount\",\n \"EndCustomerNumber\"\
+  ,\n \"FlagsFilter\",\n \"AccountParentIndustryCategory\",\n \"AccountCustomerHQIndustryCategory\"\
+  ,\n \"ConItemQuantity\",\n \"ConConstantFXRate\",\n \"ConItemConstantFXRateEffectiveYear\"\
+  ,\n \"AccountMarketingStatus\",\n \"AccountInsideSalesRep\",\n \"ConItemAdjustment\"\
+  ,\n \"AccountEmployeesDB\",\n \"AccountKeyAccountParent\",\n \"OpportunityOwnerUserName\"\
+  ,\n \"AccountRiskSeverityScore\",\n \"AccountAtRiskFlag\",\n \"AccountIndustryRisk\"\
+  ,\n \"TopAccount\",\n \"NewLogoTargets\",\n \"ClosedNewLogoNNACV\",\n \"AtRiskLogoNNACV\"\
+  ,\n \"FieldSalesParentDNBDUNSNumber\",\n \"FieldSalesParentDNBGULTDUNSNumber\",\n\
+  \ \"FieldSalesParentDNBBusinessName\",\n \"FieldSalesParentDNBName\",\n \"FieldSalesParentDNBGULTNumber\"\
+  ,\n \"FieldSalesParentDNBDUNSNumberSDMR\",\n \"FieldSalesParentAccountIndustrySegment\"\
+  ,\n \"FieldSalesParentAcctNewSegment\",\n \"FieldSalesParentAcctType\",\n \"FieldSalesParentCustomerHQ\"\
+  ,\n \"FieldSalesParentMDMCustomerHQ\",\n \"PSTerrMajorArea\",\n \"AccountDerivedFieldSalesParentType_CC\"\
+  ,\n \"AccountDerivedCustomerSince\",\n \"AccountMergeWith\",\n \"AccountStatus\"\
+  ,\n \"ServEducationTarget\",\n \"ServTotalTarget\",\n \"ServBookingsTarget\",\n\
+  \ \"ServCSTarget\",\n \"OpportunityPipelineSourced\",\n \"MKTSourcedUSDNetNewACV\"\
+  ,\n \"ACESourcedUSDNetNewACV\",\n \"OptySourcedACV\",\n \"ActiveNetNewACVUSD\",\n\
+  \ \"OpportunityParentReportingGeo\",\n \"OpportunityParentMajorArea\",\n \"OpportunityParentArea\"\
+  ,\n \"OpportunityParentRegion\",\n \"OpportunityParentDistrict\",\n \"OpportunityParentTerrName\"\
+  ,\n \"OptyParentAcctTerritorySysID\",\n \"OptyParentAcctTerrName\",\n \"OptyParentAcctTerrDistrict\"\
+  ,\n \"OptyParentAcctTerrRegion\",\n \"OptyParentAcctTerrArea\",\n \"OptyParentAcctTerrMajorArea\"\
+  ,\n \"OptyParentAcctReportingTerritoryGeo\",\n \"AccountGeo\",\n \"AccountMajorArea\"\
+  \ ,\n \"AccountRegion\",\n \"AccountDistrict\",\n \"AccountTerritory\",\n \"ETL_EXTRACT_DATE\"\
+  ,\n \"OpportunitySysID\",\n \"OptyCOManaged\",\n \"OptyDynamicsGUID\",\n \"AcctMSPEndCustName\"\
+  ,\n \"AcctMSPEndCustNumber\",\n \"AcctMSPEndCustCustomerHQ\",\n \"AcctMSPEndCustCountry\"\
+  ,\n \"AcctMSPEndCustRegion\",\n \"AcctMSPEndCustGeo\",\n \"AcctMSPEndCustArea\"\
+  ,\n \"AcctMSPEndCustTerritory\",\n \"AcctMSPEndCustDistrict\",\n \"AcctMSPEndCustMajorArea\"\
+  ,\n \"AcctMSPEndCustDNBDUNSNumber\",\n \"AcctMSPEndCustOverrideSegment\",\n \"OpportunityBUList\"\
+  ,\n \"NotesLastUpdatedDate\",\n \"NextStepsLastUpdatedDate\",\n \"AcctMSPEndCustFSPName\"\
+  ,\n \"AcctMSPEndCustFSPNumber\",\n \"AcctMSPEndCustFSPGeo\",\n \"AcctMSPEndCustFSPMajorArea\"\
+  ,\n \"AcctMSPEndCustFSPArea\",\n \"AcctMSPEndCustFSPRegion\",\n \"AcctMSPEndCustFSPDistrict\"\
+  ,\n \"AcctMSPEndCustFSPTerritory\",\n \"AccountSysID\",\n \"AccountLatitude\",\n\
+  \ \"AccountLongitude\",\n \"EmpCity\",\n \"EmpLatitude\",\n \"EmpLongitude\",\n\
+  \ \"RenewalStatusSubCategoryFlagMode\",\n \"AcctCity\",\n \"AcctPrimarySalesRepTitle\"\
+  ,\n \"AcctPrimarySalesRepNumber\",\n \"AcctPrimarySalesRepSysID\",\n \"OpportunityOwnerName\"\
+  ,\n \"RenewalGeo\",\n \"RenewalMajorArea\",\n \"RenewalArea\",\n \"RenewalRegion\"\
+  ,\n \"RenewalDistrict\",\n \"RenewalTerritory\",\n \"RenewalTerritorySysID\",\n\
+  \ \"SurvivorOppBridgeFlag_CC\",\n \"SurvivorAccountBridgeFlag_CC\",\n \"AccountConsolidationFlag_CC\"\
+  ,\n \"OptyTerrMarketSegmentation\",\n \"Vertical\",\n \"TerrMarketSegmentation\"\
+  ,\n \"AcctDynamicsGUID\",\n \"TotalTrainingRevenue\",\n \"TotalTrainingRevenue_FX\"\
+  ,\n \"NextSteps\",\n \"OpportunityParentAcctName\",\n \"LineItemNumber_CRM\",\n\
+  \ \"ProductSysID\",\n \"FSPNewLogoFlagValue\",\n \"AccountFieldSalesParentAccount\"\
+  ,\n \"AllocationType\"\n FROM EDW_LS.SALES_SS_EM.OPTY_CONT_ACCT_SELFSERVICE_A);"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

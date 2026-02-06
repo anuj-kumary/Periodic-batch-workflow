@@ -1,0 +1,57 @@
+name: table_1208
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1208
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1208.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view PPR_RPT_PARTNER_FUTURE12MONTHS_PROGRAM_EVALUATION_UNIFIED(\n\
+  \t\"ParentPartnerSysID\",\n\t\"ParentPartner\",\n\t\"ParentPartnerNumber\",\n\t\"\
+  ProgramType\",\n\t\"ParentPartnerPublicSectorFlag\",\n\t\"ParentPartnerPublicSectorFlagFuture\"\
+  ,\n\t\"Category_3C\",\n\t\"Criteria\",\n\t\"CriteriaValCompletedDaily\",\n\t\"PSCriteriaValCompletedDaily\"\
+  ,\n\t\"PotentialCriteriaSegment\",\n\t\"CriteriaThresholdLowerLimit\",\n\t\"FutureGap\"\
+  ,\n\t\"PSGap\",\n\t\"CriteriaValCompleted12Months_Actual\",\n\t\"PSCriteriaValCompleted12Months_Actual\"\
+  ,\n\t\"WTCriteriaValCompleted12Months_Actual\",\n\t\"CriteriaValCompleted12Months\"\
+  ,\n\t\"PSCriteriaValCompleted12Months\",\n\t\"WTCriteriaValCompleted12Months\",\n\
+  \t\"CurrentCriteriaSegment\",\n\t\"Gap\",\n\t\"PSFutureGap\",\n\t\"MonthlyProgramEvaluatedDate\"\
+  ,\n\t\"DailyChangeFlag\",\n\t\"DeleteFlagMonthly\",\n\t\"DeletedDateMonthly\",\n\
+  \t\"PSIdentifier\",\n\t\"WTIdentifier\"\n) as SELECT * FROM \"MAT\".\"MATL\".\"\
+  PPR_RPT_PARTNER_FUTURE12MONTHS_PROGRAM_EVALUATION_UNIFIED\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

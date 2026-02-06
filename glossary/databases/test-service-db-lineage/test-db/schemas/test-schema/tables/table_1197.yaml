@@ -1,0 +1,287 @@
+name: table_1197
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1197
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1197.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_EM_SALES_OPPORTUNITY_MAT(\n\t\"\
+  OpportunityNumber\",\n\t\"OpportunityPSTerritorySysID\",\n\t\"OpportunityParentSysID\"\
+  ,\n\t\"OpportunityName\",\n\t\"OpportunityForecastCategory\",\n\t\"OpportunityProductSysID\"\
+  ,\n\t\"OpportunityAccountSysID\",\n\t\"OpportunityContractSysID\",\n\t\"OpportunitySalesQuarter\"\
+  ,\n\t\"OpportunityOwnerSysID\",\n\t\"OpportunitySysID\",\n\t\"OpportunityForecastStage\"\
+  ,\n\t\"OpportunityEnterpriseNewLogo\",\n\t\"OpportunityMasterQuoteSysID\",\n\t\"\
+  OpportunityFieldTerritory\",\n\t\"OpportunityExpressNewLogo\",\n\t\"OpportunityExpressNewLogoOverride\"\
+  ,\n\t\"OpportunityACETerritorySysID\",\n\t\"OpportunityCloseMonth\",\n\t\"OpportunityCloseDate\"\
+  ,\n\t\"OpportunityCreatedOn\",\n\t\"OpportunityGSIPartner\",\n\t\"OpportunityAccountName\"\
+  ,\n\t\"OpportunityFlags\",\n\t\"OpportunityLeadSource\",\n\t\"OpportunityIncumbent\"\
+  ,\n\t\"OpportunityServicesPartner\",\n\t\"OpportunitySalesOrderNumber\",\n\t\"OpportunityWeightedPercentage\"\
+  ,\n\t\"OpportunityActive\",\n\t\"OpportunityTerm\",\n\t\"OpportunityPartnerPercent\"\
+  ,\n\t\"OpportunityPartnershipType\",\n\t\"OpportunityCompetition\",\n\t\"OpportunityPSTeaming\"\
+  ,\n\t\"OpportunityDataCenter\",\n\t\"OpportunityContractSignedDate\",\n\t\"OpportunityRoutetoMarket\"\
+  ,\n\t\"OpportunityWinLossNoDecisionNotes\",\n\t\"OpportunityOffsettingValue\",\n\
+  \t\"OpportunityACESales\",\n\t\"OpportunitySource\",\n\t\"OpportunityFirstClosedOn\"\
+  ,\n\t\"OpportunitySolutionConsultant\",\n\t\"OpportunityCustomerOutcomesOwner\"\
+  ,\n\t\"OpportunityLinkReason\",\n\t\"OpportunityOptionSelfHostedWOSigPenalty\",\n\
+  \t\"OpportunitySAPContractIDReqStatus\",\n\t\"OpportunityUleadSource\",\n\t\"OpportunityLeadNumberSysID\"\
+  ,\n\t\"OpportunityOverlayADR\",\n\t\"OpportunityLeadNumber\",\n\t\"OpportunityPriceBook\"\
+  ,\n\t\"OpportunityADR\",\n\t\"OpportunityContractType\",\n\t\"OpportunityContractEndDate\"\
+  ,\n\t\"OpportunitySPEndCustomer\",\n\t\"OpportunityOrderTermStartDate\",\n\t\"OpportunityServiceProvider\"\
+  ,\n\t\"OpportunityPrimaryCompetitor\",\n\t\"OpportunitySecondaryCompetitor\",\n\t\
+  \"OpportunityDidMarketingHelp\",\n\t\"OpportunityReasonCode\",\n\t\"OpportunityLinkReasonFlag\"\
+  ,\n\t\"OpportunityTrainingAccountExecutive\",\n\t\"OpportunityOtherCompetitor\"\
+  ,\n\t\"OpportunityOrderTermEndDate\",\n\t\"OpportunityCampaignHistoryValue\",\n\t\
+  \"OpportunityOrderFormStatus\",\n\t\"OpportunityWinLossNoDecisionReason\",\n\t\"\
+  OpportunityCompititveStatus\",\n\t\"OpportunityCreatedDate\",\n\t\"OpportunityADRInteraction\"\
+  ,\n\t\"OpportunityPriceBand\",\n\t\"OpportunitySourced\",\n\t\"OpportunityPartnered\"\
+  ,\n\t\"OpportunityISRDriven\",\n\t\"OpportunityCreatedBy\",\n\t\"OpportunityUpdatedOn\"\
+  ,\n\t\"OpportunityFinalOrderFormOutput\",\n\t\"OpportunitySupportPartner\",\n\t\"\
+  OpportunityUpdatedBy\",\n\t\"OpportunitySPEndCustomerName\",\n\t\"OpportunityRenewalDriven\"\
+  ,\n\t\"OpportunityImplementationPartner\",\n\t\"OpportunityESA\",\n\t\"OpportunityConstantFXRate\"\
+  ,\n\t\"OpportunityRenewalsEngagement\",\n\t\"OpportunityCOManaged\",\n\t\"OpportunityDynamicsGUID\"\
+  ,\n\t\"OpportunityPipelineSourced\",\n\t\"OpportunityACEAllocationPercentage\",\n\
+  \t\"OpportunityMKTAllocationPercentage\",\n\t\"OpportunitySalesAllocationPercentage\"\
+  ,\n\t\"OpportunityTermNew\",\n\t\"OpportunityHasBusinessCase\",\n\t\"OpportunityCoDelivery\"\
+  ,\n\t\"OpportunitySuccessServiceAttach\",\n\t\"OpportunityMeetingNumber\",\n\t\"\
+  OpportunityACETerritory\",\n\t\"OpportunityEnvironmentType\",\n\t\"OpportunityServiceProviderUsageType\"\
+  ,\n\t\"OpportunityJournalNotes\",\n\t\"OpportunityNextStepsJournaled\",\n\t\"OpportunityBusnessUnitList\"\
+  ,\n\t\"OpportunityDidMarketingHelpID\",\n\t\"OpportunityExtensionSysID\",\n\t\"\
+  OpportunityExtension\",\n\t\"OpportunityApprovalTerritorySysID\",\n\t\"OpportunityUseLineItems\"\
+  ,\n\t\"OpportunityDoubleCompensationOverlay\",\n\t\"OpportunityExpectedDate\",\n\
+  \t\"OpportunityARNotes\",\n\t\"OpportunityAuditingNotes\",\n\t\"OpportunityRenewalCategory\"\
+  ,\n\t\"OpportunityEnterpriseLogoOverride\",\n\t\"OpportunityRenewalAccountManager\"\
+  ,\n\t\"OptyBaseCurrency\",\n\t\"OpportunityOwnerName\",\n\t\"OpportunityNextStepsLastUpdatedOn\"\
+  ,\n\t\"OpportunityNotesLastUpdatedOn\",\n\t\"OpportunityNotes\",\n\t\"OpportunityApprovalTerritoryGeo\"\
+  ,\n\t\"OpportunityApprovalTerritoryMajorArea\",\n\t\"OpportunityApprovalTerritoryArea\"\
+  ,\n\t\"OpportunityApprovalTerritoryRegion\",\n\t\"OpportunityApprovalTerritoryDistrict\"\
+  ,\n\t\"OpportunityApprovalTerritoryName\",\n\t\"OpportunityRenewalStatus\",\n\t\"\
+  OpportunityForeCastType\",\n\t\"OpportunityFirstClosedBy\",\n\t\"OpportunityEngagementManagerUserName\"\
+  ,\n\t\"OpportunityType\",\n\t\"OpportunityForecastTypeOverride\",\n\t\"OpportunityMarketingProgramEvent\"\
+  ,\n\t\"OpportunityContractNumber\",\n\t\"OpportunityTerritorySysID\",\n\t\"OpportunityUSDNetNewACV\"\
+  ,\n\t\"OpportunityUSDWeightedACV\",\n\t\"OpportunitySAPContractID\",\n\t\"OpportunityServicesType\"\
+  ,\n\t\"OpportunityMODCount\",\n\t\"OpportunityPSRecognizableRevenue\",\n\t\"OpportunityStartDateDimension\"\
+  ,\n\t\"OpportunityRollupServAmount\",\n\t\"OpportunityRollupACVAmount\",\n\t\"OpportunityConstantFXTtlLicenseValueUSD\"\
+  ,\n\t\"OpportunityAllowableDiscountLevel\",\n\t\"OpportunityUSDTotalACV\",\n\t\"\
+  OpportunityRollUpACVUSD\",\n\t\"OpportunityChangeOrder\",\n\t\"OpportunityQuoteApproved\"\
+  ,\n\t\"OpportunityUSDOtherDiscount\",\n\t\"OpportunityUSDConstantFXRenewalACV\"\
+  ,\n\t\"OpportunityUSDConstantFXTotalNetNewACV\",\n\t\"OpportunityMaximumDiscount\"\
+  ,\n\t\"OpportunityParentNetNewACV_USD\",\n\t\"OpportunityParentRenewalACV_USD\"\
+  ,\n\t\"OpportunityParentOwnerName\",\n\t\"OpportunityParentOpportunityLinkReason\"\
+  ,\n\t\"OpportunityParentTerm\",\n\t\"OpportunityParentTotalACV_USD\",\n\t\"OpportunityParentPSRevenue_USD\"\
+  ,\n\t\"OpportunityParentWeightedACV_USD\",\n\t\"OpportunityParentOtherDiscountUSD\"\
+  ,\n\t\"OpportunityParentOrderTermStartDate\",\n\t\"OpportunityParentOrderTermEndDate\"\
+  ,\n\t\"OpportunityParentContEndDate\",\n\t\"OpportunityParentContractType\",\n\t\
+  \"OpportunityFieldTerritoryGeo\",\n\t\"OpportunityFieldTerritoryMajorArea\",\n\t\
+  \"OpportunityFieldTerritoryArea\",\n\t\"OpportunityFieldTerritoryRegion\",\n\t\"\
+  OpportunityFieldTerritoryDistrict\",\n\t\"OpportunityParentAccountChannelManager\"\
+  ,\n\t\"OpportunityParentAccountOverrideSegment\",\n\t\"OpportunityParentAccountGeo\"\
+  ,\n\t\"OpportunityParentAccountMajorArea\",\n\t\"OpportunityParentAccountArea\"\
+  ,\n\t\"OpportunityParentAccountRegion\",\n\t\"OpportunityParentAccountDistrict\"\
+  ,\n\t\"OpportunityParentAccountTerritory\",\n\t\"OpportunityParentAccountGlobalParent\"\
+  ,\n\t\"OpportunityParentAccountFSPName\",\n\t\"OpportunityParentAccountFieldSalesParentSegmentValue\"\
+  ,\n\t\"OpportunityParentAccountIndustryCategory\",\n\t\"OpportunityUSDRollUpLicense\"\
+  ,\n\t\"OpportunityRisk\",\n\t\"OpportunityTiming\",\n\t\"OpportunityNetNewServer\"\
+  ,\n\t\"OpportunityUSDNetPricePerServer\",\n\t\"OpportunityNumberofSeats\",\n\t\"\
+  OpportunityNetNewSeats\",\n\t\"OpportunityProductTechnologyPartner\",\n\t\"OpportunityDeploymentRegistrationNumber\"\
+  ,\n\t\"OpportunityParentDeployment\",\n\t\"OpportunityParentUSDConstantFXRenewalACV\"\
+  ,\n\t\"OpportunityParentUSDConstantFXTotalNetNewACV\",\n\t\"OpportunityParentAccountNewSegment\"\
+  ,\n\t\"OpportunityParentAccountIndustrySegment\",\n\t\"OpportunityCustomerSuccessRevenue\"\
+  ,\n\t\"OpportunityUSDConstantFXTotalWeightedACV\",\n\t\"OpportunityUSDConstantFXTotalSubscriptionACV\"\
+  ,\n\t\"OpportunityUSDRenewalACV\",\n\t\"OpportunityUSDPSRecRevenue\",\n\t\"OpportunityTotalACV\"\
+  ,\n\t\"OpportunityFieldSalesManager\",\n\t\"OpportunityFieldSalesRegion\",\n\t\"\
+  OpportunityFieldSalesBusinessTitle\",\n\t\"OpportunityParentAccountName\",\n\t\"\
+  OpportunityUSDTotalPSRevenue\",\n\t\"OpportunityACETerritorySalesOperations\",\n\
+  \t\"OpportunityParentAccountFSPOverrideSegment\",\n\t\"OpportunityUSDTotalValue\"\
+  ,\n\t\"OpportunityOrderFormOutputReason\",\n\t\"OpportunityACESalesEmployeeNumber\"\
+  ,\n\t\"OpportunityACESalesEmployeeManagerName\",\n\t\"OpportunityOverlayADRManagerName\"\
+  ,\n\t\"OpportunityCustomerOutcomesOwnerManagerName\",\n\t\"OpportunityUSDTotalCustomerSuccessRevenue\"\
+  ,\n\t\"OpportunityUSDTotalOtherRevenue\",\n\t\"OptyUSDTotalServicesRevenue\",\n\t\
+  \"OpportunityFieldTerritoryRenewalOperations\",\n\t\"OpportunityUSDNetPricePerSeat\"\
+  ,\n\t\"OpportunityUpsellPercentIncrease\",\n\t\"OpportunityRenewalPercentIncrease\"\
+  ,\n\t\"OpportunityApprovalTerritoryMarketSegmentation\",\n\t\"OpportunityTermMonthsAndDays\"\
+  ,\n\t\"OpportunityUSDPSRevenue\",\n\t\"OpportunityUpdatedToContract\",\n\t\"OpportunityTotalNetNewACV\"\
+  ,\n\t\"OpportunityFieldTerritoryMarketSegmentation\",\n\t\"OpportunityDoubleCompensationOverlayEmployeeNumber\"\
+  ,\n\t\"OpportunityFieldTerritoryCountry\",\n\t\"OpportunityParentAccountG2KParentCompanyName\"\
+  ,\n\t\"OpportunityRenewalACV\",\n\t\"OpportunityUSDTotalTrainingRevenue\",\n\t\"\
+  OpportunitySolutionConsultantManager\",\n\t\"OpportunityParentRisk\",\n\t\"OpportunityTotalOtherRevenue\"\
+  ,\n\t\"OpportunityForecastLumpSumACV\",\n\t\"OpportunityTotalLicenseValue\",\n\t\
+  \"OpportunityParentLinkReasonFlag\",\n\t\"OpportunityContractContractType\",\n\t\
+  \"OpportunityContractStartDate\",\n\t\"OpportunityProbabilityToCloseInQtr\",\n\t\
+  \"OpportunityFieldTerritorySalesOperations\",\n\t\"OpportunityContractUSDTotalACV\"\
+  ,\n\t\"OpportunityContractUSDConstantFXTotalSubscriptionACV\",\n\t\"OpportunityNetNewACV\"\
+  ,\n\t\"OpportunityFieldTerritoryLegalSupport\",\n\t\"OptyMasterQuote\",\n\t\"OptySalesOperationsNotes\"\
+  ,\n\t\"OpportunityNextSteps\",\n\t\"OpportunityApprovalTerritoryDealDesk\",\n\t\"\
+  OpportunitySolutionConsultantManagerManager\",\n\t\"OpportunityACETerritoryDistrict\"\
+  ,\n\t\"OpportunityACETerritoryMajorArea\",\n\t\"OpportunityACETerritoryArea\",\n\
+  \t\"OpportunityACETerritoryGeo\",\n\t\"OpportunityACETerritoryRegion\",\n\t\"OpportunityImplementationMode\"\
+  ,\n\t\"OpportunityRiskMitigationSteps\",\n\t\"OpportunityRiskReasonCodeName\",\n\
+  \t\"OpportunityQualityFlag\",\n\t\"OpportunityESROwner\",\n\t\"OpportunityESRManager\"\
+  ,\n\t\"OpportunityParentAccountCustomerHQ\",\n\t\"OpportunityIsBIU\"\n) as\n\n\n\
+  \n\n\n\nSELECT \"OpportunityNumber\",\n       \"OpportunityPSTerritorySysID\",\n\
+  \       \"OpportunityParentSysID\",\n       \"OpportunityName\",\n       \"OpportunityForecastCategory\"\
+  ,\n       \"OpportunityProductSysID\",\n       \"OpportunityAccountSysID\",\n  \
+  \     \"OpportunityContractSysID\",\n       \"OpportunitySalesQuarter\",\n     \
+  \  \"OpportunityOwnerSysID\",\n       \"OpportunitySysID\",\n       \"OpportunityForecastStage\"\
+  ,\n       \"OpportunityEnterpriseNewLogo\",\n       \"OpportunityMasterQuoteSysID\"\
+  ,\n       \"OpportunityFieldTerritory\",\n       \"OpportunityExpressNewLogo\",\n\
+  \       \"OpportunityExpressNewLogoOverride\",\n       \"OpportunityACETerritorySysID\"\
+  ,\n       \"OpportunityCloseMonth\",\n       \"OpportunityCloseDate\",\n       \"\
+  OpportunityCreatedOn\",\n       \"OpportunityGSIPartner\",\n       \"OpportunityAccountName\"\
+  ,\n       \"OpportunityFlags\",\n       \"OpportunityLeadSource\",\n       \"OpportunityIncumbent\"\
+  ,\n       \"OpportunityServicesPartner\",\n       \"OpportunitySalesOrderNumber\"\
+  ,\n       \"OpportunityWeightedPercentage\",\n       \"OpportunityActive\",\n  \
+  \     \"OpportunityTerm\",\n       \"OpportunityPartnerPercent\",\n       \"OpportunityPartnershipType\"\
+  ,\n       \"OpportunityCompetition\",\n       \"OpportunityPSTeaming\",\n      \
+  \ \"OpportunityDataCenter\",\n       \"OpportunityContractSignedDate\",\n      \
+  \ \"OpportunityRoutetoMarket\",\n       \"OpportunityWinLossNoDecisionNotes\",\n\
+  \       \"OpportunityOffsettingValue\",\n       \"OpportunityACESales\",\n     \
+  \  \"OpportunitySource\",\n       \"OpportunityFirstClosedOn\",\n       \"OpportunitySolutionConsultant\"\
+  ,\n       \"OpportunityCustomerOutcomesOwner\",\n       \"OpportunityLinkReason\"\
+  ,\n       \"OpportunityOptionSelfHostedWOSigPenalty\",\n       \"OpportunitySAPContractIDReqStatus\"\
+  ,\n       \"OpportunityUleadSource\",\n       \"OpportunityLeadNumberSysID\",\n\
+  \       \"OpportunityOverlayADR\",\n       \"OpportunityLeadNumber\",\n       \"\
+  OpportunityPriceBook\",\n       \"OpportunityADR\",\n       \"OpportunityContractType\"\
+  ,\n       \"OpportunityContractEndDate\",\n       \"OpportunitySPEndCustomer\",\n\
+  \       \"OpportunityOrderTermStartDate\",\n       \"OpportunityServiceProvider\"\
+  ,\n       \"OpportunityPrimaryCompetitor\",\n       \"OpportunitySecondaryCompetitor\"\
+  ,\n       \"OpportunityDidMarketingHelp\",\n       \"OpportunityReasonCode\",\n\
+  \       \"OpportunityLinkReasonFlag\",\n       \"OpportunityTrainingAccountExecutive\"\
+  ,\n       \"OpportunityOtherCompetitor\",\n       \"OpportunityOrderTermEndDate\"\
+  ,\n       \"OpportunityCampaignHistoryValue\",\n       \"OpportunityOrderFormStatus\"\
+  ,\n       \"OpportunityWinLossNoDecisionReason\",\n       \"OpportunityCompititveStatus\"\
+  ,\n       \"OpportunityCreatedDate\",\n       \"OpportunityADRInteraction\",\n \
+  \      \"OpportunityPriceBand\",\n       \"OpportunitySourced\",\n       \"OpportunityPartnered\"\
+  ,\n       \"OpportunityISRDriven\",\n       \"OpportunityCreatedBy\",\n       \"\
+  OpportunityUpdatedOn\",\n       \"OpportunityFinalOrderFormOutput\",\n       \"\
+  OpportunitySupportPartner\",\n       \"OpportunityUpdatedBy\",\n       \"OpportunitySPEndCustomerName\"\
+  ,\n       \"OpportunityRenewalDriven\",\n       \"OpportunityImplementationPartner\"\
+  ,\n       \"OpportunityESA\",\n       \"OpportunityConstantFXRate\",\n       \"\
+  OpportunityRenewalsEngagement\",\n       \"OpportunityCOManaged\",\n       \"OpportunityDynamicsGUID\"\
+  ,\n       \"OpportunityPipelineSourced\",\n       \"OpportunityACEAllocationPercentage\"\
+  ,\n       \"OpportunityMKTAllocationPercentage\",\n       \"OpportunitySalesAllocationPercentage\"\
+  ,\n       \"OpportunityTermNew\",\n       \"OpportunityHasBusinessCase\",\n    \
+  \   \"OpportunityCoDelivery\",\n       \"OpportunitySuccessServiceAttach\",\n  \
+  \     \"OpportunityMeetingNumber\",\n       \"OpportunityACETerritory\",\n     \
+  \  \"OpportunityEnvironmentType\",\n       \"OpportunityServiceProviderUsageType\"\
+  ,\n       \"OpportunityJournalNotes\",\n       \"OpportunityNextStepsJournaled\"\
+  ,\n       \"OpportunityBusnessUnitList\",\n       \"OpportunityDidMarketingHelpID\"\
+  ,\n       \"OpportunityExtensionSysID\",\n       \"OpportunityExtension\",\n   \
+  \    \"OpportunityApprovalTerritorySysID\",\n       \"OpportunityUseLineItems\"\
+  ,\n       \"OpportunityDoubleCompensationOverlay\",\n       \"OpportunityExpectedDate\"\
+  ,\n       \"OpportunityARNotes\",\n       \"OpportunityAuditingNotes\",\n      \
+  \ \"OpportunityRenewalCategory\",\n       \"OpportunityEnterpriseLogoOverride\"\
+  ,\n       \"OpportunityRenewalAccountManager\",\n       \"OptyBaseCurrency\",\n\
+  \       \"OpportunityOwnerName\",\n       \"OpportunityNextStepsLastUpdatedOn\"\
+  ,\n       \"OpportunityNotesLastUpdatedOn\",\n       \"OpportunityNotes\",\n   \
+  \    \"OpportunityApprovalTerritoryGeo\",\n       \"OpportunityApprovalTerritoryMajorArea\"\
+  ,\n       \"OpportunityApprovalTerritoryArea\",\n       \"OpportunityApprovalTerritoryRegion\"\
+  ,\n       \"OpportunityApprovalTerritoryDistrict\",\n       \"OpportunityApprovalTerritoryName\"\
+  ,\n       \"OpportunityRenewalStatus\",\n       \"OpportunityForeCastType\",\n \
+  \      \"OpportunityFirstClosedBy\",\n       \"OpportunityEngagementManagerUserName\"\
+  ,\n       \"OpportunityType\",\n       \"OpportunityForecastTypeOverride\",\n  \
+  \     \"OpportunityMarketingProgramEvent\",\n       \"OpportunityContractNumber\"\
+  ,\n       \"OpportunityTerritorySysID\",\n       \"OpportunityUSDNetNewACV\",\n\
+  \       \"OpportunityUSDWeightedACV\",\n       \"OpportunitySAPContractID\",\n \
+  \      \"OpportunityServicesType\",\n       \"OpportunityMODCount\",\n       \"\
+  OpportunityPSRecognizableRevenue\",\n       \"OpportunityStartDateDimension\",\n\
+  \       \"OpportunityRollupServAmount\",\n       \"OpportunityRollupACVAmount\"\
+  ,\n       \"OpportunityConstantFXTtlLicenseValueUSD\",\n       \"OpportunityAllowableDiscountLevel\"\
+  ,\n       \"OpportunityUSDTotalACV\",\n       \"OpportunityRollUpACVUSD\",\n   \
+  \    \"OpportunityChangeOrder\",\n       \"OpportunityQuoteApproved\",\n       \"\
+  OpportunityUSDOtherDiscount\",\n       \"OpportunityUSDConstantFXRenewalACV\",\n\
+  \       \"OpportunityUSDConstantFXTotalNetNewACV\",\n       \"OpportunityMaximumDiscount\"\
+  ,\n       \"OpportunityParentNetNewACV_USD\",\n       \"OpportunityParentRenewalACV_USD\"\
+  ,\n       \"OpportunityParentOwnerName\",\n       \"OpportunityParentOpportunityLinkReason\"\
+  ,\n       \"OpportunityParentTerm\",\n       \"OpportunityParentTotalACV_USD\",\n\
+  \       \"OpportunityParentPSRevenue_USD\",\n       \"OpportunityParentWeightedACV_USD\"\
+  ,\n       \"OpportunityParentOtherDiscountUSD\",\n       \"OpportunityParentOrderTermStartDate\"\
+  ,\n       \"OpportunityParentOrderTermEndDate\",\n       \"OpportunityParentContEndDate\"\
+  ,\n       \"OpportunityParentContractType\",\n       \"OpportunityFieldTerritoryGeo\"\
+  ,\n       \"OpportunityFieldTerritoryMajorArea\",\n       \"OpportunityFieldTerritoryArea\"\
+  ,\n       \"OpportunityFieldTerritoryRegion\",\n       \"OpportunityFieldTerritoryDistrict\"\
+  ,\n       \"OpportunityParentAccountChannelManager\",\n       \"OpportunityParentAccountOverrideSegment\"\
+  ,\n       \"OpportunityParentAccountGeo\",\n       \"OpportunityParentAccountMajorArea\"\
+  ,\n       \"OpportunityParentAccountArea\",\n       \"OpportunityParentAccountRegion\"\
+  ,\n       \"OpportunityParentAccountDistrict\",\n       \"OpportunityParentAccountTerritory\"\
+  ,\n       \"OpportunityParentAccountGlobalParent\",\n       \"OpportunityParentAccountFSPName\"\
+  ,\n       \"OpportunityParentAccountFieldSalesParentSegmentValue\",\n       \"OpportunityParentAccountIndustryCategory\"\
+  ,\n       \"OpportunityUSDRollUpLicense\",\n       \"OpportunityRisk\",\n      \
+  \ \"OpportunityTiming\",\n       \"OpportunityNetNewServer\",\n       \"OpportunityUSDNetPricePerServer\"\
+  ,\n       \"OpportunityNumberofSeats\",\n       \"OpportunityNetNewSeats\",\n  \
+  \     \"OpportunityProductTechnologyPartner\",\n       \"OpportunityDeploymentRegistrationNumber\"\
+  ,\n       \"OpportunityParentDeployment\",\n       \"OpportunityParentUSDConstantFXRenewalACV\"\
+  ,\n       \"OpportunityParentUSDConstantFXTotalNetNewACV\",\n       \"OpportunityParentAccountNewSegment\"\
+  ,\n       \"OpportunityParentAccountIndustrySegment\",\n       \"OpportunityCustomerSuccessRevenue\"\
+  ,\n       \"OpportunityUSDConstantFXTotalWeightedACV\",\n       \"OpportunityUSDConstantFXTotalSubscriptionACV\"\
+  ,\n       \"OpportunityUSDRenewalACV\",\n       \"OpportunityUSDPSRecRevenue\",\n\
+  \       \"OpportunityTotalACV\",\n       \"OpportunityFieldSalesManager\",\n   \
+  \    \"OpportunityFieldSalesRegion\",\n       \"OpportunityFieldSalesBusinessTitle\"\
+  ,\n       \"OpportunityParentAccountName\",\n       \"OpportunityUSDTotalPSRevenue\"\
+  ,\n       \"OpportunityACETerritorySalesOperations\",\n       \"OpportunityParentAccountFSPOverrideSegment\"\
+  ,\n       \"OpportunityUSDTotalValue\",\n       \"OpportunityOrderFormOutputReason\"\
+  ,\n       \"OpportunityACESalesEmployeeNumber\",\n       \"OpportunityACESalesEmployeeManagerName\"\
+  ,\n       \"OpportunityOverlayADRManagerName\",\n       \"OpportunityCustomerOutcomesOwnerManagerName\"\
+  ,\n       \"OpportunityUSDTotalCustomerSuccessRevenue\",\n       \"OpportunityUSDTotalOtherRevenue\"\
+  ,\n       \"OptyUSDTotalServicesRevenue\",\n       \"OpportunityFieldTerritoryRenewalOperations\"\
+  ,\n       \"OpportunityUSDNetPricePerSeat\",\n       \"OpportunityUpsellPercentIncrease\"\
+  ,\n       \"OpportunityRenewalPercentIncrease\",\n       \"OpportunityApprovalTerritoryMarketSegmentation\"\
+  ,\n       \"OpportunityTermMonthsAndDays\",\n       \"OpportunityUSDPSRevenue\"\
+  ,\n       \"OpportunityUpdatedToContract\",\n       \"OpportunityTotalNetNewACV\"\
+  ,\n       \"OpportunityFieldTerritoryMarketSegmentation\",\n       \"OpportunityDoubleCompensationOverlayEmployeeNumber\"\
+  ,\n       \"OpportunityFieldTerritoryCountry\",\n       \"OpportunityParentAccountG2KParentCompanyName\"\
+  ,\n       \"OpportunityRenewalACV\",\n       \"OpportunityUSDTotalTrainingRevenue\"\
+  ,\n       \"OpportunitySolutionConsultantManager\",\n       \"OpportunityParentRisk\"\
+  ,\n       \"OpportunityTotalOtherRevenue\",\n       \"OpportunityForecastLumpSumACV\"\
+  ,\n       \"OpportunityTotalLicenseValue\",\n       \"OpportunityParentLinkReasonFlag\"\
+  ,\n       \"OpportunityContractContractType\",\n       \"OpportunityContractStartDate\"\
+  ,\n       \"OpportunityProbabilityToCloseInQtr\",\n       \"OpportunityFieldTerritorySalesOperations\"\
+  ,\n       \"OpportunityContractUSDTotalACV\",\n       \"OpportunityContractUSDConstantFXTotalSubscriptionACV\"\
+  ,\n       \"OpportunityNetNewACV\",\n       \"OpportunityFieldTerritoryLegalSupport\"\
+  ,\n       \"OptyMasterQuote\",\n       \"OptySalesOperationsNotes\",\n       \"\
+  OpportunityNextSteps\",\n       \"OpportunityApprovalTerritoryDealDesk\",\n    \
+  \   \"OpportunitySolutionConsultantManagerManager\",\n       \"OpportunityACETerritoryDistrict\"\
+  ,\n       \"OpportunityACETerritoryMajorArea\",\n       \"OpportunityACETerritoryArea\"\
+  ,\n       \"OpportunityACETerritoryGeo\",\n       \"OpportunityACETerritoryRegion\"\
+  ,\n       \"OpportunityImplementationMode\",\n       \"OpportunityRiskMitigationSteps\"\
+  ,\n       \"OpportunityRiskReasonCodeName\",\n       \"OpportunityQualityFlag\"\
+  ,\n       \"OpportunityESROwner\",\n       \"OpportunityESRManager\",\n       \"\
+  OpportunityParentAccountCustomerHQ\",\n       \"OpportunityIsBIU\"\nFROM \"EDW_LS\"\
+  .\"SALES_SS_EM\".\"UNIFIEDSS_EM_SALES_OPPORTUNITY_MAT_A\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

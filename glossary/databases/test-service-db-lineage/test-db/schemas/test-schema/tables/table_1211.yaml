@@ -1,0 +1,83 @@
+name: table_1211
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1211
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1211.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_ST_FACT_PIPELINE_AGG01_D(\n\tGEO_ID,\n\
+  \tST_DATE,\n\tOPTY_NUMBER,\n\tOPTY_NAME,\n\tOPTY_PIPELINE_STATUS,\n\tOPTY_TYPE,\n\
+  \tOPTY_STAGE,\n\tOPTY_START_DT,\n\tOPTY_CLOSE_DT,\n\tOPTY_BI_FLAG,\n\tOPTY_PARTNER,\n\
+  \tOPTY_OWNER,\n\tOPTY_PIPELINE_SOURCE,\n\tOPTY_SYS_CREATED_DT,\n\tOPTY_WEIGHTED_PERCENTAGE,\n\
+  \tBASE_CURRENCY,\n\tOPTY_COMANAGE,\n\tQUARTER_YYQQ,\n\tIS_SALES_ACTIVE_PIPELINE,\n\
+  \tIS_PRICE_REST_PRIMARY_LINE,\n\tTERRITORY_NAME,\n\tORDER_NUMBER,\n\tOPTY_ITEM_CREATED_TS,\n\
+  \tNNACV_LC,\n\tNNACV_USD,\n\tRENEWAL_ACV_USD,\n\tRENEWAL_ACV_LC,\n\tTOTAL_VALUE_AMOUNT_USD,\n\
+  \tTOTAL_VALUE_LC,\n\tNNACV_USD_GSD,\n\tNNACV_USD_COREREP,\n\tNNACV_USD_ACE,\n\t\
+  NNACV_USD_SOLUTIONSALES,\n\tNNACV_USD_OTHER,\n\tOPTY_PRODUCT_SYSID,\n\tOPTY_SYSID,\n\
+  \tTERRITORY_SYSID,\n\tOPTY_ACCOUNT_SYSID,\n\tDYNAMICS_GUID,\n\tNNACV_USD_CY_FX,\n\
+  \tCONTRACT_END_DT\n) as (SELECT\nGEO_ID,\n\"STExtractDate\" as ST_DATE,\n\"STOptyNumber\"\
+  \ as OPTY_NUMBER,\n\"STOptyName\" as OPTY_NAME,\n\"STOptyPipelineStatus\" as OPTY_PIPELINE_STATUS,\n\
+  \"STOpportunityType\" as OPTY_TYPE,\n\"STOptyStage\" as OPTY_STAGE,\n\"STOptyStartDate\"\
+  \ as OPTY_START_DT,\n\"STOptyCloseDate\" as OPTY_CLOSE_DT,\n\"SOptyItemBIFlags\"\
+  \ as OPTY_BI_FLAG,\n\"STOptyPartnered\" as OPTY_PARTNER,\n\"STOptyOwner\" as OPTY_OWNER,\n\
+  \"STOptyPipelineSourced\" as OPTY_PIPELINE_SOURCE,\n\"STOptySysCreatedOn\" as OPTY_SYS_CREATED_DT,\n\
+  \"STOptyWeightedPercentage\" as OPTY_WEIGHTED_PERCENTAGE,\n\"STOptyBaseCurrency\"\
+  \ as BASE_CURRENCY,\n\"STOptyCOManaged\" as OPTY_COMANAGE,\n\"STOptySalesQuarter\"\
+  \ as QUARTER_YYQQ,\n\"STOptyActivePipelineFlag\" as IS_SALES_ACTIVE_PIPELINE,\n\"\
+  SOptyPriceRestPrimaryLine\" as IS_PRICE_REST_PRIMARY_LINE,\n\"STOptyTerritory\"\
+  \ as TERRITORY_NAME,\n\"SalesOrderNumber\" as ORDER_NUMBER,\nmin(\"STOptyItemCreatedOn\"\
+  ) as OPTY_ITEM_CREATED_TS,\nsum(\"SOptyItemNetNewACV\") as NNACV_LC,\nsum(\"SOptyItemNetNewACVUSD\"\
+  ) as NNACV_USD,\nsum(\"SOptyitemRenewalACVUSD\") as RENEWAL_ACV_USD,\nsum(\"SOptyItemRenewalACV\"\
+  ) as RENEWAL_ACV_LC,\nsum(\"STOptyItemTotalValueAmount_USD\") as TOTAL_VALUE_AMOUNT_USD,\n\
+  sum(\"STOptyItemTotalValueAmount\") as TOTAL_VALUE_LC,\nsum(case when \"STOptyItemLineCreatedBy\"\
+  \ = 'random' then \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_USD_GSD,\n\
+  sum(case when \"STOptyItemLineCreatedBy\" = 'random' then \"SOptyItemNetNewACVUSD\"\
+  \ else 'random' end) as NNACV_USD_COREREP,\nsum(case when \"STOptyItemLineCreatedBy\"\
+  \ = 'random' then \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_USD_ACE,\n\
+  sum(case when \"STOptyItemLineCreatedBy\" = 'random' then \"SOptyItemNetNewACVUSD\"\
+  \ else 'random' end) as NNACV_USD_SOLUTIONSALES,\nsum(case when (\"STOptyItemLineCreatedBy\"\
+  \ IS NULL or \"STOptyItemLineCreatedBy\" = 'random')  then \"SOptyItemNetNewACVUSD\"\
+  \ else 'random' end) as NNACV_USD_OTHER,\n\"SOptyItemProductSysID\" as OPTY_PRODUCT_SYSID,\n\
+  \"STOptySysID\" as OPTY_SYSID,\n\"STOptyTerritorySysID\" as TERRITORY_SYSID,\n\"\
+  STOptyAccountSysID\" as OPTY_ACCOUNT_SYSID,\n\"STOptyDynamicsGUID\" as DYNAMICS_GUID,\n\
+  \"SOptyItemNetNewACV_FX\" as NNACV_USD_CY_FX,\n\"STOptyContEndDate\" as CONTRACT_END_DT\n\
+  from  EDW_LS.SALES_EM.ST_OPTY_ITEM_COMBINED soic\nleft join EDW.enterprise.dim_territory\
+  \ dte on dte.territory_sysid=soic.\"STOptyTerritorySysID\"\ngroup by all)\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,96 @@
+name: table_1267
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1267
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1267.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_DIM_QUOTE(\n\tQUOTE_ID,\n\tOPTY_ID,\n\
+  \tCONTRACT_ID,\n\tQUOTE_NUMBER,\n\tQUOTE_TYPE,\n\tQUOTE_DETAIL_STATUS,\n\tQUOTE_SOURCE,\n\
+  \tQUOTE_TERM,\n\tQUOTE_INSTANCES,\n\tIS_GUIDELINES_CHECKED,\n\tDG_TYPE,\n\tSAP_CONTRACT_NUMBER,\n\
+  \tORDER_TERM_START_DT,\n\tOF_SUBMITTED_TS,\n\tAPPROVED_TS,\n\tEXPIRATION_TS,\n\t\
+  UPDATED_BY,\n\tCREATED_BY,\n\tUPDATED_TS,\n\tCREATED_TS,\n\tDEAL_DISCRETION_AVG,\n\
+  \tDEAL_APPROVAL_DISCRETION_MAX_AVG,\n\tDEAL_DISCOUNT_AVG,\n\tGUIDELINE_DISCOUNT_AVG,\n\
+  \tIS_MASTER_QUOTE,\n\tIS_DIRECT_SALE,\n\tESCALATION_LEVEL,\n\tQUOTE_SYSID,\n\tOPTY_SYSID,\n\
+  \tCONTRACT_SYSID\n) as\nSELECT\n    DISTINCT HASH(SQ.\"QuoteSysID\") as QUOTE_ID,\n\
+  \    HASH(SQ.\"QuoteOpportunitySysId\") as OPTY_ID,\n    HASH(\"QuoteContractSysID\"\
+  ) as CONTRACT_ID,\n    SQ.\"QuoteNumber\" as QUOTE_NUMBER,\n    SQ.\"QuoteType\"\
+  \ as QUOTE_TYPE,\n    SQ.\"QuoteStatus\" as QUOTE_DETAIL_STATUS,\n    SQ.\"QuoteSource\"\
+  \ as QUOTE_SOURCE,\n    SQ.\"QuoteTerm\" as QUOTE_TERM,\n    SQ.\"QuoteInstances\"\
+  \ as QUOTE_INSTANCES,\n    SQ.\"QuoteIsGuidelinesChecked\" as IS_GUIDELINES_CHECKED,\n\
+  \    SQ.\"QuoteDGType\" as DG_TYPE,\n    SQ.\"QuoteSAPContractNumber\" as SAP_CONTRACT_NUMBER,\n\
+  \    /* SS 1.5/Avantika Keshav/Updated on: 06-03-2024/Release on: 13-03-2024/ Release\
+  \ Type: Regular/ Comment :\n    These columns were added by Accenture team and are\
+  \ derived by joining with EDW_LS.SALES_EM.TF_SALES_DEAL_DASHBOARD and\n    is resulting\
+  \ in 1:many data hence we have commented them out for the time being\n    SDD.\"\
+  ApprovalWaitingDays\"  as APPROVAL_WAITING_DAYS,\n    SDD.\"SubmittedDate\"  as\
+  \ QUOTE_SUBMITTED_DT,\n    SDD.\"NextApprover\"  as NEXT_APPROVER,\n    SDD.\"LastApprover\"\
+  \ as LAST_APPROVER,\n    SDD.\"SysAppCreatedOn\" as SYS_APPROVER_CREATED_TS,\n \
+  \   SDD.\"SysAppComments\" as SYS_APPROVER_COMMENTS,\n    SDD.\"SysAppState\" as\
+  \ SYS_APP_STATUS,\n    SDD.\"QuoteStatus\" as QUOTE_STATUS,\n    IFF(SDD.\"ApprovalWaitingDays\"\
+  \ > 4,1,0) as IS_APPROVAL_STUCK,*/\n    SQ.\"QuoteOrderTermStartDate\" as ORDER_TERM_START_DT,\n\
+  \    SQ.\"QuoteOFSubmitted\" as OF_SUBMITTED_TS,\n    SQ.\"QuoteDateApproved\" as\
+  \ APPROVED_TS,\n    SQ.\"QuoteExpirationDate\" as EXPIRATION_TS,\n    SQ.\"QuoteUpdatedBy\"\
+  \ as UPDATED_BY,\n    SQ.\"QuoteCreatedBy\" as CREATED_BY,\n    SQ.\"QuoteUpdatedOn\"\
+  \ as UPDATED_TS,\n    SQ.\"QuoteCreatedOn\" as CREATED_TS,\n    SQ.\"QuoteDealAVGDiscretion\"\
+  \ as DEAL_DISCRETION_AVG,\n    SQ.\"QuoteDealApprovalDiscretionAvgMax\" as DEAL_APPROVAL_DISCRETION_MAX_AVG,\n\
+  \    SQ.\"QuoteDealDiscountAVG\" as DEAL_DISCOUNT_AVG,\n    SQ.\"QuoteGuidelineDiscountAVG\"\
+  \ as GUIDELINE_DISCOUNT_AVG,\n    SQ.\"QuoteMasterQuote\" as IS_MASTER_QUOTE,\n\
+  \    CASE\n        WHEN SQ.\"QuoteSalesType\" = 'random' THEN 'random'\n       \
+  \ ELSE 'random'\n    END as IS_DIRECT_SALE,\n    CASE\n        WHEN SQ.\"QuoteDealApprovalDiscretionAvgMax\"\
+  \ <= 'random' THEN 'random'\n        WHEN SQ.\"QuoteDealApprovalDiscretionAvgMax\"\
+  \ > 'random'\n        AND SQ.\"QuoteDealApprovalDiscretionAvgMax\" <= 'random' THEN\
+  \ 'random'\n        WHEN SQ.\"QuoteDealApprovalDiscretionAvgMax\" > 'random'\n \
+  \       AND SQ.\"QuoteDealApprovalDiscretionAvgMax\" <= 'random' THEN 'random'\n\
+  \        WHEN SQ.\"QuoteDealApprovalDiscretionAvgMax\" > 'random'\n        AND SQ.\"\
+  QuoteDealApprovalDiscretionAvgMax\" <= 'random' THEN 'random'\n        WHEN SQ.\"\
+  QuoteDealApprovalDiscretionAvgMax\" > 'random'\n        AND SQ.\"QuoteDealApprovalDiscretionAvgMax\"\
+  \ <= 'random' THEN 'random'\n        WHEN SQ.\"QuoteDealApprovalDiscretionAvgMax\"\
+  \ > 'random' THEN 'random'\n        ELSE 'random'\n    END AS ESCALATION_LEVEL,--Added\
+  \ by Accn Jyoti on 04/16 as part of PBI migration.\n    SQ.\"QuoteSysID\" as QUOTE_SYSID,\n\
+  \    SQ.\"QuoteOpportunitySysId\" as OPTY_SYSID,\n    SQ.\"QuoteContractSysID\"\
+  \ as CONTRACT_SYSID\n    --SQ.\"QuoteSalesPatner\" as SALES_PARTNER_SYSID\nfrom\n\
+  \    ODS_LS.SURF.SALES_QUOTE SQ\n    /* SS 1.5/Avantika Keshav/Updated on: 06-03-2024/Release\
+  \ on: 13-03-2024/ Release Type: Regular/ Comment : This join with\n     EDW_LS.SALES_EM.TF_SALES_DEAL_DASHBOARD\
+  \ and is resulting in 1:many data hence we have commented them out for the time\
+  \ being*/\n    --LEFT OUTER JOIN EDW_LS.SALES_EM.TF_SALES_DEAL_DASHBOARD SDD ON\
+  \ SQ.\"QuoteSysID\" = SDD.\"QuoteSysID\" AND SQ.\"QuoteOpportunitySysId\"=SDD.\"\
+  QuoteOpportunitySysId\"\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

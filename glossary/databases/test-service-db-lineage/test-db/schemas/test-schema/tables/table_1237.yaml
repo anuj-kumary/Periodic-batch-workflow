@@ -1,0 +1,1621 @@
+name: table_1237
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1237
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1237.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SN_CUSTOMERSERVICE_CASE_DERIVED_FIELDS(\n\
+  \t\"UCustomerActionNeededCase\",\n\t\"DvURefIncident\",\n\t\"CaseNumber\",\n\t\"\
+  DvImpact\",\n\t\"DvPriority\",\n\t\"DvState\",\n\t\"CalendarSTCCase\",\n\t\"OpenedAt\"\
+  ,\n\t\"ClosedAt\",\n\t\"SysCreatedOn\",\n\t\"DvConsumer\",\n\t\"DvAdditionalAssigneeList\"\
+  ,\n\t\"ULastUpdateToCustomer\",\n\t\"Account\",\n\t\"UDocumentation\",\n\t\"Deliverytask\"\
+  ,\n\t\"DvContactTimeZone\",\n\t\"ExpectedStart\",\n\t\"UOutageEndTime\",\n\t\"Category\"\
+  ,\n\t\"DvUOperationalMistake\",\n\t\"UEscalationCount\",\n\t\"DvBusinessDuration\"\
+  ,\n\t\"DvOpenedBy\",\n\t\"DvCategory\",\n\t\"DvUWorkNotesWatchlist\",\n\t\"DvApproval\"\
+  ,\n\t\"DvPlannedDuration\",\n\t\"DvEntitlement\",\n\t\"Contract\",\n\t\"DvWatchList\"\
+  ,\n\t\"UIncidentState\",\n\t\"EstimatedCost\",\n\t\"SysId\",\n\t\"DvUponReject\"\
+  ,\n\t\"FollowTheSun\",\n\t\"DvDeliveryTask\",\n\t\"DvSupportManager\",\n\t\"Knowledge\"\
+  ,\n\t\"ActionStatus\",\n\t\"UUssoil\",\n\t\"DvIncident\",\n\t\"Priority\",\n\t\"\
+  Problem\",\n\t\"DvUOwnershipCategory\",\n\t\"SubCategory\",\n\t\"SysClassName\"\
+  ,\n\t\"UponApproval\",\n\t\"DvUTotalEscalatedPeriod\",\n\t\"UTemporaryRelief\",\n\
+  \t\"MadeSla\",\n\t\"DvUCaseType\",\n\t\"DvUIncidentState\",\n\t\"PercentComplete\"\
+  ,\n\t\"DvAccount\",\n\t\"UOutageStartTime\",\n\t\"ULegacyId\",\n\t\"DvUrgency\"\
+  ,\n\t\"ActivityDue\",\n\t\"DvRejectionGoto\",\n\t\"UCategoryChanged\",\n\t\"OpenedBy\"\
+  ,\n\t\"DvULanguage\",\n\t\"Product\",\n\t\"DeliveryPlan\",\n\t\"UCaseCategory\"\
+  ,\n\t\"USecurityIncident\",\n\t\"UAssignedOn\",\n\t\"DvUDocumentation\",\n\t\"USyncSrc\"\
+  ,\n\t\"DvParent\",\n\t\"DvProblem\",\n\t\"DvActualDuration\",\n\t\"BusinessDuration\"\
+  ,\n\t\"CaseReport\",\n\t\"UOperationalMistake\",\n\t\"Company\",\n\t\"CausedBy\"\
+  ,\n\t\"DueDate\",\n\t\"DvActionStatus\",\n\t\"AssignedTo\",\n\t\"Parent\",\n\t\"\
+  DvClosedBy\",\n\t\"UTaskResolved\",\n\t\"DvUponApproval\",\n\t\"UIncidentCategory\"\
+  ,\n\t\"Variables\",\n\t\"DvUProductTaxonomyInitial\",\n\t\"DvAssignmentGroup\",\n\
+  \t\"DvCaseContact\",\n\t\"DvSysDomain\",\n\t\"SysCreatedBy\",\n\t\"UCaseType\",\n\
+  \t\"SysUpdatedBy\",\n\t\"AssignmentGroup\",\n\t\"SlaDue\",\n\t\"Consumer\",\n\t\"\
+  DvAssignedTo\",\n\t\"Incident\",\n\t\"ClosedBy\",\n\t\"TimeWorked\",\n\t\"DvUCommunicationsLead\"\
+  ,\n\t\"SnAppCsSocialSocialProfile\",\n\t\"DvTaskFor\",\n\t\"UBtNumber\",\n\t\"ActualStartDate\"\
+  ,\n\t\"DvUOutageDuration\",\n\t\"SyncDriver\",\n\t\"DvActiveAccountEscalation\"\
+  ,\n\t\"UProductTaxonomyInitial\",\n\t\"Case\",\n\t\"DvLocation\",\n\t\"UCategoryPredicted\"\
+  ,\n\t\"CmdbCi\",\n\t\"CorrelationDisplay\",\n\t\"DvUCaseCategory\",\n\t\"PartnerContact\"\
+  ,\n\t\"DvDeliveryPlan\",\n\t\"DvSnAppCsSocialSocialProfile\",\n\t\"PauseEscalation\"\
+  ,\n\t\"NotesToComments\",\n\t\"ApprovalSet\",\n\t\"DvGroupList\",\n\t\"DvUCanDuration\"\
+  ,\n\t\"DvUProductTaxonomyFinal\",\n\t\"WorkEnd\",\n\t\"ActualDuration\",\n\t\"DvNotify\"\
+  ,\n\t\"SysTags\",\n\t\"ContactType\",\n\t\"BusinessService\",\n\t\"DvUOutageType\"\
+  ,\n\t\"State\",\n\t\"UTotalEscalatedPeriod\",\n\t\"DvSkills\",\n\t\"Change\",\n\t\
+  \"DvWfActivity\",\n\t\"ResolvedAt\",\n\t\"SysModCount\",\n\t\"DvCaseReport\",\n\t\
+  \"PspPerDeleteDt\",\n\t\"HasChild\",\n\t\"Approval\",\n\t\"Project\",\n\t\"DvSubcategory\"\
+  ,\n\t\"CalendarDuration\",\n\t\"URefIncident\",\n\t\"RejectionGoto\",\n\t\"DvChange\"\
+  ,\n\t\"ContactLocaltime\",\n\t\"DvPartnerContact\",\n\t\"DvEscalation\",\n\t\"ULanguage\"\
+  ,\n\t\"UOutageType\",\n\t\"DvActiveEscalation\",\n\t\"NeedsAttention\",\n\t\"PspPerUpdateDt\"\
+  ,\n\t\"DvPartner\",\n\t\"DvContact\",\n\t\"DvUAffectedInstances\",\n\t\"Escalation\"\
+  ,\n\t\"CaseContact\",\n\t\"UAssignmentGroupPredicted\",\n\t\"UBtSysId\",\n\t\"CorrelationId\"\
+  ,\n\t\"UProductTaxonomyFinal\",\n\t\"UCanDuration\",\n\t\"ActiveEscalation\",\n\t\
+  \"Notify\",\n\t\"DvResolutionCode\",\n\t\"UponReject\",\n\t\"Asset\",\n\t\"TaskFor\"\
+  ,\n\t\"DvCompany\",\n\t\"WfActivity\",\n\t\"ResolutionCode\",\n\t\"WorkStart\",\n\
+  \t\"Impact\",\n\t\"Urgency\",\n\t\"SysDomain\",\n\t\"UOwnershipCategory\",\n\t\"\
+  SysUpdatedOn\",\n\t\"ContactTimeZone\",\n\t\"Cause\",\n\t\"DvContactType\",\n\t\"\
+  TaskCount\",\n\t\"Contact\",\n\t\"UEscalated\",\n\t\"PlannedEndDate\",\n\t\"Location\"\
+  ,\n\t\"Entitlement\",\n\t\"PlannedStartDate\",\n\t\"Partner\",\n\t\"ActualEndDate\"\
+  ,\n\t\"Active\",\n\t\"FollowUp\",\n\t\"UOutageDuration\",\n\t\"ResolvedBy\",\n\t\
+  \"PspPerInsertDt\",\n\t\"Uid\",\n\t\"ActiveAccountEscalation\",\n\t\"PlannedDuration\"\
+  ,\n\t\"DvCausedBy\",\n\t\"UCommunicationsLead\",\n\t\"Order\",\n\t\"DvCalendarDuration\"\
+  ,\n\t\"DvSysClassName\",\n\t\"SupportManager\",\n\t\"UPredictionAttempted\",\n\t\
+  \"DvResolvedBy\",\n\t\"DvUPrimaryBlocker\",\n\t\"ShortDescription\",\n\t\"DvUEnhancementRequest\"\
+  ,\n\t\"UEnhancementRequest\",\n\t\"WatchList\",\n\t\"Description\",\n\t\"DvContract\"\
+  ,\n\t\"SysDomainpath\",\n\t\"ApprovalHistory\",\n\t\"DvProduct\",\n\t\"DvVariables\"\
+  ,\n\t\"DvCmdbCi\",\n\t\"DvAsset\",\n\t\"UTags\",\n\t\"UAffectedInstances\",\n\t\"\
+  UStepsToReproduce\",\n\t\"UserInput\",\n\t\"GroupList\",\n\t\"Skills\",\n\t\"AdditionalAssigneeList\"\
+  ,\n\t\"CloseNotes\",\n\t\"UWorkNotesWatchlist\",\n\t\"USyncMetadata\",\n\t\"DvProject\"\
+  ,\n\t\"Comments\",\n\t\"WorkNotes\",\n\t\"DvBusinessService\",\n\t\"IsFederal\"\
+  ,\n\t\"DvUUpgradeCase\",\n\t\"UPotentiallyCausedByUpgrade\",\n\t\"UAlertType\",\n\
+  \t\"DvUIncidentCategory\",\n\t\"DvBlockingReason\",\n\t\"ReassignmentCount\",\n\t\
+  \"ESCCount\",\n\t\"DvLanguage\",\n\t\"FirstReponseTime\",\n\t\"DvUReleaseFamily\"\
+  ,\n\t\"USolutionProposedDuration\",\n\t\"DvUSubState\",\n\t\"USRECase\",\n\tU_ENHANCED_SLA,\n\
+  \tU_RESPONSE_TIME_ACHIEVED,\n\t\"PreferredLanguageSupport\",\n\t\"DvUEnhancedSLA\"\
+  ,\n\t\"OriginalAssignedTo\",\n\t\"DvOriginalAssignedTo\",\n\t\"DvUProductFinalTaxonomy\"\
+  ,\n\t\"UProductFinalTaxonomy\",\n\t\"DvUProductInitialTaxonomy\",\n\t\"UProductInitialTaxonomy\"\
+  \n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"UCustomerActionNeededCase\" as \"UCustomerActionNeededCase\"\
+  ,\n       \"DvURefIncident\" as \"DvURefIncident\",\n       \"CaseNumber\" as \"\
+  CaseNumber\",\n       \"DvImpact\" as \"DvImpact\",\n       \"DvPriority\" as \"\
+  DvPriority\",\n       \"DvState\" as \"DvState\",\n       \"CalendarSTCCase\" as\
+  \ \"CalendarSTCCase\",\n       \"OpenedAt\" as \"OpenedAt\",\n       \"ClosedAt\"\
+  \ as \"ClosedAt\",\n       \"SysCreatedOn\" as \"SysCreatedOn\",\n       \"DvConsumer\"\
+  \ as \"DvConsumer\",\n       \"DvAdditionalAssigneeList\" as \"DvAdditionalAssigneeList\"\
+  ,\n       \"ULastUpdateToCustomer\" as \"ULastUpdateToCustomer\",\n       \"Account\"\
+  \ as \"Account\",\n       \"UDocumentation\" as \"UDocumentation\",\n       \"Deliverytask\"\
+  \ as \"Deliverytask\",\n       \"DvContactTimeZone\" as \"DvContactTimeZone\",\n\
+  \       \"ExpectedStart\" as \"ExpectedStart\",\n       \"UOutageEndTime\" as \"\
+  UOutageEndTime\",\n       \"Category\" as \"Category\",\n       \"DvUOperationalMistake\"\
+  \ as \"DvUOperationalMistake\",\n       \"UEscalationCount\" as \"UEscalationCount\"\
+  ,\n       \"DvBusinessDuration\" as \"DvBusinessDuration\",\n       \"DvOpenedBy\"\
+  \ as \"DvOpenedBy\",\n       \"DvCategory\" as \"DvCategory\",\n       \"DvUWorkNotesWatchlist\"\
+  \ as \"DvUWorkNotesWatchlist\",\n       \"DvApproval\" as \"DvApproval\",\n    \
+  \   \"DvPlannedDuration\" as \"DvPlannedDuration\",\n       \"DvEntitlement\" as\
+  \ \"DvEntitlement\",\n       \"Contract\" as \"Contract\",\n       \"DvWatchList\"\
+  \ as \"DvWatchList\",\n       \"UIncidentState\" as \"UIncidentState\",\n      \
+  \ \"EstimatedCost\" as \"EstimatedCost\",\n       \"SysId\" as \"SysId\",\n    \
+  \   \"DvUponReject\" as \"DvUponReject\",\n       \"FollowTheSun\" as \"FollowTheSun\"\
+  ,\n       \"DvDeliveryTask\" as \"DvDeliveryTask\",\n       \"DvSupportManager\"\
+  \ as \"DvSupportManager\",\n       \"Knowledge\" as \"Knowledge\",\n       \"ActionStatus\"\
+  \ as \"ActionStatus\",\n       \"UUssoil\" as \"UUssoil\",\n       \"DvIncident\"\
+  \ as \"DvIncident\",\n       \"Priority\" as \"Priority\",\n       \"Problem\" as\
+  \ \"Problem\",\n       \"DvUOwnershipCategory\" as \"DvUOwnershipCategory\",\n \
+  \      \"SubCategory\" as \"SubCategory\",\n       \"SysClassName\" as \"SysClassName\"\
+  ,\n       \"UponApproval\" as \"UponApproval\",\n       \"DvUTotalEscalatedPeriod\"\
+  \ as \"DvUTotalEscalatedPeriod\",\n       \"UTemporaryRelief\" as \"UTemporaryRelief\"\
+  ,\n       \"MadeSla\" as \"MadeSla\",\n       \"DvUCaseType\" as \"DvUCaseType\"\
+  ,\n       \"DvUIncidentState\" as \"DvUIncidentState\",\n       \"PercentComplete\"\
+  \ as \"PercentComplete\",\n       \"DvAccount\" as \"DvAccount\",\n       \"UOutageStartTime\"\
+  \ as \"UOutageStartTime\",\n       \"ULegacyId\" as \"ULegacyId\",\n       \"DvUrgency\"\
+  \ as \"DvUrgency\",\n       \"ActivityDue\" as \"ActivityDue\",\n       \"DvRejectionGoto\"\
+  \ as \"DvRejectionGoto\",\n       \"UCategoryChanged\" as \"UCategoryChanged\",\n\
+  \       \"OpenedBy\" as \"OpenedBy\",\n       \"DvULanguage\" as \"DvULanguage\"\
+  ,\n       \"Product\" as \"Product\",\n       \"DeliveryPlan\" as \"DeliveryPlan\"\
+  ,\n       \"UCaseCategory\" as \"UCaseCategory\",\n       \"USecurityIncident\"\
+  \ as \"USecurityIncident\",\n       \"UAssignedOn\" as \"UAssignedOn\",\n      \
+  \ \"DvUDocumentation\" as \"DvUDocumentation\",\n       \"USyncSrc\" as \"USyncSrc\"\
+  ,\n       \"DvParent\" as \"DvParent\",\n       \"DvProblem\" as \"DvProblem\",\n\
+  \       \"DvActualDuration\" as \"DvActualDuration\",\n       \"BusinessDuration\"\
+  \ as \"BusinessDuration\",\n       \"CaseReport\" as \"CaseReport\",\n       \"\
+  UOperationalMistake\" as \"UOperationalMistake\",\n       \"Company\" as \"Company\"\
+  ,\n       \"CausedBy\" as \"CausedBy\",\n       \"DueDate\" as \"DueDate\",\n  \
+  \     \"DvActionStatus\" as \"DvActionStatus\",\n\t   \"AssignedTo\" as \"AssignedTo\"\
+  ,\n       \"Parent\" as \"Parent\",\n       \"DvClosedBy\" as \"DvClosedBy\",\n\
+  \       \"UTaskResolved\" as \"UTaskResolved\",\n       \"DvUponApproval\" as \"\
+  DvUponApproval\",\n       \"UIncidentCategory\" as \"UIncidentCategory\",\n    \
+  \   \"Variables\" as \"Variables\",\n       \"DvUProductTaxonomyInitial\" as \"\
+  DvUProductTaxonomyInitial\",\n       \"DvAssignmentGroup\" as \"DvAssignmentGroup\"\
+  ,\n       \"DvCaseContact\" as \"DvCaseContact\",\n       \"DvSysDomain\" as \"\
+  DvSysDomain\",\n       \"SysCreatedBy\" as \"SysCreatedBy\",\n       \"UCaseType\"\
+  \ as \"UCaseType\",\n       \"SysUpdatedBy\" as \"SysUpdatedBy\",\n       \"AssignmentGroup\"\
+  \ as \"AssignmentGroup\",\n       \"SlaDue\" as \"SlaDue\",\n       \"Consumer\"\
+  \ as \"Consumer\",\n\t   \"DvAssignedTo\" as \"DvAssignedTo\",\n       \"Incident\"\
+  \ as \"Incident\",\n       \"ClosedBy\" as \"ClosedBy\",\n       \"TimeWorked\"\
+  \ as \"TimeWorked\",\n       \"DvUCommunicationsLead\" as \"DvUCommunicationsLead\"\
+  ,\n       \"SnAppCsSocialSocialProfile\" as \"SnAppCsSocialSocialProfile\",\n  \
+  \     \"DvTaskFor\" as \"DvTaskFor\",\n       \"UBtNumber\" as \"UBtNumber\",\n\
+  \       \"ActualStartDate\" as \"ActualStartDate\",\n       \"DvUOutageDuration\"\
+  \ as \"DvUOutageDuration\",\n       \"SyncDriver\" as \"SyncDriver\",\n       \"\
+  DvActiveAccountEscalation\" as \"DvActiveAccountEscalation\",\n       \"UProductTaxonomyInitial\"\
+  \ as \"UProductTaxonomyInitial\",\n       \"Case\" as \"Case\",\n       \"DvLocation\"\
+  \ as \"DvLocation\",\n       \"UCategoryPredicted\" as \"UCategoryPredicted\",\n\
+  \       \"CmdbCi\" as \"CmdbCi\",\n       \"CorrelationDisplay\" as \"CorrelationDisplay\"\
+  ,\n       \"DvUCaseCategory\" as \"DvUCaseCategory\",\n       \"PartnerContact\"\
+  \ as \"PartnerContact\",\n       \"DvDeliveryPlan\" as \"DvDeliveryPlan\",\n   \
+  \    \"DvSnAppCsSocialSocialProfile\" as \"DvSnAppCsSocialSocialProfile\",\n   \
+  \    \"PauseEscalation\" as \"PauseEscalation\",\n       \"NotesToComments\" as\
+  \ \"NotesToComments\",\n       \"ApprovalSet\" as \"ApprovalSet\",\n       \"DvGroupList\"\
+  \ as \"DvGroupList\",\n       \"DvUCanDuration\" as \"DvUCanDuration\",\n      \
+  \ \"DvUProductTaxonomyFinal\" as \"DvUProductTaxonomyFinal\",\n       \"WorkEnd\"\
+  \ as \"WorkEnd\",\n       \"ActualDuration\" as \"ActualDuration\",\n       \"DvNotify\"\
+  \ as \"DvNotify\",\n       \"SysTags\" as \"SysTags\",\n       \"ContactType\" as\
+  \ \"ContactType\",\n       \"BusinessService\" as \"BusinessService\",\n       \"\
+  DvUOutageType\" as \"DvUOutageType\",\n       \"State\" as \"State\",\n       \"\
+  UTotalEscalatedPeriod\" as \"UTotalEscalatedPeriod\",\n       \"DvSkills\" as \"\
+  DvSkills\",\n       \"Change\" as \"Change\",\n       \"DvWfActivity\" as \"DvWfActivity\"\
+  ,\n       \"ResolvedAt\" as \"ResolvedAt\",\n       \"SysModCount\" as \"SysModCount\"\
+  ,\n       \"DvCaseReport\" as \"DvCaseReport\",\n       \"PspPerDeleteDt\" as \"\
+  PspPerDeleteDt\",\n       \"HasChild\" as \"HasChild\",\n       \"Approval\" as\
+  \ \"Approval\",\n       \"Project\" as \"Project\",\n       \"DvSubcategory\" as\
+  \ \"DvSubcategory\",\n       \"CalendarDuration\" as \"CalendarDuration\",\n   \
+  \    \"URefIncident\" as \"URefIncident\",\n       \"RejectionGoto\" as \"RejectionGoto\"\
+  ,\n       \"DvChange\" as \"DvChange\",\n       \"ContactLocaltime\" as \"ContactLocaltime\"\
+  ,\n       \"DvPartnerContact\" as \"DvPartnerContact\",\n       \"DvEscalation\"\
+  \ as \"DvEscalation\",\n       \"ULanguage\" as \"ULanguage\",\n       \"UOutageType\"\
+  \ as \"UOutageType\",\n       \"DvActiveEscalation\" as \"DvActiveEscalation\",\n\
+  \       \"NeedsAttention\" as \"NeedsAttention\",\n       \"PspPerUpdateDt\" as\
+  \ \"PspPerUpdateDt\",\n       \"DvPartner\" as \"DvPartner\",\n       \"DvContact\"\
+  \ as \"DvContact\",\n       \"DvUAffectedInstances\" as \"DvUAffectedInstances\"\
+  ,\n       \"Escalation\" as \"Escalation\",\n       \"CaseContact\" as \"CaseContact\"\
+  ,\n       \"UAssignmentGroupPredicted\" as \"UAssignmentGroupPredicted\",\n    \
+  \   \"UBtSysId\" as \"UBtSysId\",\n       \"CorrelationId\" as \"CorrelationId\"\
+  ,\n       \"UProductTaxonomyFinal\" as \"UProductTaxonomyFinal\",\n       \"UCanDuration\"\
+  \ as \"UCanDuration\",\n       \"ActiveEscalation\" as \"ActiveEscalation\",\n \
+  \      \"Notify\" as \"Notify\",\n       \"DvResolutionCode\" as \"DvResolutionCode\"\
+  ,\n       \"UponReject\" as \"UponReject\",\n       \"Asset\" as \"Asset\",\n  \
+  \     \"TaskFor\" as \"TaskFor\",\n       \"DvCompany\" as \"DvCompany\",\n    \
+  \   \"WfActivity\" as \"WfActivity\",\n       \"ResolutionCode\" as \"ResolutionCode\"\
+  ,\n       \"WorkStart\" as \"WorkStart\",\n       \"Impact\" as \"Impact\",\n  \
+  \     \"Urgency\" as \"Urgency\",\n       \"SysDomain\" as \"SysDomain\",\n    \
+  \   \"UOwnershipCategory\" as \"UOwnershipCategory\",\n       \"SysUpdatedOn\" as\
+  \ \"SysUpdatedOn\",\n       \"ContactTimeZone\" as \"ContactTimeZone\",\n      \
+  \ \"Cause\" as \"Cause\",\n       \"DvContactType\" as \"DvContactType\",\n    \
+  \   \"TaskCount\" as \"TaskCount\",\n       \"Contact\" as \"Contact\",\n      \
+  \ \"UEscalated\" as \"UEscalated\",\n       \"PlannedEndDate\" as \"PlannedEndDate\"\
+  ,\n       \"Location\" as \"Location\",\n       \"Entitlement\" as \"Entitlement\"\
+  ,\n       \"PlannedStartDate\" as \"PlannedStartDate\",\n       \"Partner\" as \"\
+  Partner\",\n       \"ActualEndDate\" as \"ActualEndDate\",\n       \"Active\" as\
+  \ \"Active\",\n       \"FollowUp\" as \"FollowUp\",\n       \"UOutageDuration\"\
+  \ as \"UOutageDuration\",\n       \"ResolvedBy\" as \"ResolvedBy\",\n       \"PspPerInsertDt\"\
+  \ as \"PspPerInsertDt\",\n       \"Uid\" as \"Uid\",\n       \"ActiveAccountEscalation\"\
+  \ as \"ActiveAccountEscalation\",\n       \"PlannedDuration\" as \"PlannedDuration\"\
+  ,\n       \"DvCausedBy\" as \"DvCausedBy\",\n       \"UCommunicationsLead\" as \"\
+  UCommunicationsLead\",\n       \"Order\" as \"Order\",\n       \"DvCalendarDuration\"\
+  \ as \"DvCalendarDuration\",\n       \"DvSysClassName\" as \"DvSysClassName\",\n\
+  \       \"SupportManager\" as \"SupportManager\",\n       \"UPredictionAttempted\"\
+  \ as \"UPredictionAttempted\",\n       \"DvResolvedBy\" as \"DvResolvedBy\",\n \
+  \      \"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\",\n       \"ShortDescription\"\
+  \ as \"ShortDescription\",\n       \"DvUEnhancementRequest\" as \"DvUEnhancementRequest\"\
+  ,\n       \"UEnhancementRequest\" as \"UEnhancementRequest\",\n       \"WatchList\"\
+  \ as \"WatchList\",\n       \"Description\" as \"Description\",\n       \"DvContract\"\
+  \ as \"DvContract\",\n       \"SysDomainpath\" as \"SysDomainpath\",\n       \"\
+  ApprovalHistory\" as \"ApprovalHistory\",\n       \"DvProduct\" as \"DvProduct\"\
+  ,\n       \"DvVariables\" as \"DvVariables\",\n       \"DvCmdbCi\" as \"DvCmdbCi\"\
+  ,\n       \"DvAsset\" as \"DvAsset\",\n       \"UTags\" as \"UTags\",\n       \"\
+  UAffectedInstances\" as \"UAffectedInstances\",\n       \"UStepsToReproduce\" as\
+  \ \"UStepsToReproduce\",\n       \"UserInput\" as \"UserInput\",\n       \"GroupList\"\
+  \ as \"GroupList\",\n       \"Skills\" as \"Skills\",\n       \"AdditionalAssigneeList\"\
+  \ as \"AdditionalAssigneeList\",\n       \"CloseNotes\" as \"CloseNotes\",\n   \
+  \    \"UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\",\n       \"USyncMetadata\"\
+  \ as \"USyncMetadata\",\n       \"DvProject\" as \"DvProject\",\n       \"Comments\"\
+  \ as \"Comments\",\n       \"WorkNotes\" as \"WorkNotes\",\n       \"DvBusinessService\"\
+  \ as \"DvBusinessService\",\n       \"IsFederal\" as \"IsFederal\",\n       \"DvUUpgradeCase\"\
+  \ as \"DvUUpgradeCase\",\n       \"UPotentiallyCausedByUpgrade\" as \"UPotentiallyCausedByUpgrade\"\
+  ,\n       \"UAlertType\" as \"UAlertType\",\n       \"DvUIncidentCategory\" as \"\
+  DvUIncidentCategory\",\n       \"DvBlockingReason\" as \"DvBlockingReason\",\n \
+  \      \"ReassignmentCount\" as \"ReassignmentCount\",\n       \"ESCCount\" as \"\
+  ESCCount\",\n       \"DvLanguage\" as \"DvLanguage\",\n       \"FirstResponseTime1\"\
+  \ as \"FirstResponseTime\",\n       \"DvUReleaseFamily\" as \"DvUReleaseFamily\"\
+  ,\n       \"U_SOLUTION_PROPOSED_DURATION\" as \"USolutionProposedDuration\",\n \
+  \      \"DvUSubState\" as \"DvUSubState\",\n       \"SRE\" as \"USRECase\",\n  \
+  \     \"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\",\n       \"U_RESPONSE_TIME_ACHIEVED\"\
+  \ as \"U_RESPONSE_TIME_ACHIEVED\",\n       \"PreferredLanguageSupport\" as \"PreferredLanguageSupport\"\
+  ,\n       \"DvUEnhancedSLA\" as \"DvUEnhancedSLA\",\n       \"OriginalAssignedTo\"\
+  \ as \"OriginalAssignedTo\",\n       \"DvOriginalAssignedTo\" as \"DvOriginalAssignedTo\"\
+  ,\n\t   \"DvUProductFinalTaxonomy\" as \"DvUProductFinalTaxonomy\",\n       \"UProductFinalTaxonomy\"\
+  \ as \"UProductFinalTaxonomy\",\n       \"DvUProductInitialTaxonomy\" as \"DvUProductInitialTaxonomy\"\
+  ,\n       \"UProductInitialTaxonomy\" as \"UProductInitialTaxonomy\"\n FROM\n  (SELECT\
+  \ \"Join_1\".\"UCustomerActionNeededCase\" as \"UCustomerActionNeededCase\",\n \
+  \         \"Join_1\".\"USRECase\" as \"USRECase\",\n          \"Join_1\".\"DvURefIncident\"\
+  \ as \"DvURefIncident\",\n          \"Join_1\".\"CaseNumber\" as \"CaseNumber\"\
+  ,\n          \"Join_1\".\"DvImpact\" as \"DvImpact\",\n          \"Join_1\".\"DvPriority\"\
+  \ as \"DvPriority\",\n          \"Join_1\".\"DvState\" as \"DvState\",\n       \
+  \   \"Join_1\".\"CalendarSTCCase\" as \"CalendarSTCCase\",\n          \"Join_1\"\
+  .\"OpenedAt\" as \"OpenedAt\",\n          \"Join_1\".\"ClosedAt\" as \"ClosedAt\"\
+  ,\n          \"Join_1\".\"SysCreatedOn\" as \"SysCreatedOn\",\n          \"Join_1\"\
+  .\"DvConsumer\" as \"DvConsumer\",\n          \"Join_1\".\"DvAdditionalAssigneeList\"\
+  \ as \"DvAdditionalAssigneeList\",\n          \"Join_1\".\"ULastUpdateToCustomer\"\
+  \ as \"ULastUpdateToCustomer\",\n          \"Join_1\".\"Account\" as \"Account\"\
+  ,\n          \"Join_1\".\"UDocumentation\" as \"UDocumentation\",\n          \"\
+  Join_1\".\"Deliverytask\" as \"Deliverytask\",\n          \"Join_1\".\"DvContactTimeZone\"\
+  \ as \"DvContactTimeZone\",\n          \"Join_1\".\"ExpectedStart\" as \"ExpectedStart\"\
+  ,\n          \"Join_1\".\"UOutageEndTime\" as \"UOutageEndTime\",\n          \"\
+  Join_1\".\"Category\" as \"Category\",\n          \"Join_1\".\"DvUOperationalMistake\"\
+  \ as \"DvUOperationalMistake\",\n          \"Join_1\".\"UEscalationCount\" as \"\
+  UEscalationCount\",\n          \"Join_1\".\"DvBusinessDuration\" as \"DvBusinessDuration\"\
+  ,\n          \"Join_1\".\"DvOpenedBy\" as \"DvOpenedBy\",\n          \"Join_1\"\
+  .\"DvCategory\" as \"DvCategory\",\n          \"Join_1\".\"DvUWorkNotesWatchlist\"\
+  \ as \"DvUWorkNotesWatchlist\",\n          \"Join_1\".\"DvApproval\" as \"DvApproval\"\
+  ,\n          \"Join_1\".\"DvPlannedDuration\" as \"DvPlannedDuration\",\n      \
+  \    \"Join_1\".\"DvEntitlement\" as \"DvEntitlement\",\n          \"Join_1\".\"\
+  Contract\" as \"Contract\",\n          \"Join_1\".\"DvWatchList\" as \"DvWatchList\"\
+  ,\n          \"Join_1\".\"UIncidentState\" as \"UIncidentState\",\n          \"\
+  Join_1\".\"EstimatedCost\" as \"EstimatedCost\",\n          \"Join_1\".\"SysId\"\
+  \ as \"SysId\",\n          \"Join_1\".\"DvUponReject\" as \"DvUponReject\",\n  \
+  \        \"Join_1\".\"FollowTheSun\" as \"FollowTheSun\",\n          \"Join_1\"\
+  .\"DvDeliveryTask\" as \"DvDeliveryTask\",\n          \"Join_1\".\"DvSupportManager\"\
+  \ as \"DvSupportManager\",\n          \"Join_1\".\"Knowledge\" as \"Knowledge\"\
+  ,\n          \"Join_1\".\"ActionStatus\" as \"ActionStatus\",\n          \"Join_1\"\
+  .\"UUssoil\" as \"UUssoil\",\n          \"Join_1\".\"DvIncident\" as \"DvIncident\"\
+  ,\n          \"Join_1\".\"Priority\" as \"Priority\",\n          \"Join_1\".\"Problem\"\
+  \ as \"Problem\",\n          \"Join_1\".\"DvUOwnershipCategory\" as \"DvUOwnershipCategory\"\
+  ,\n          \"Join_1\".\"SubCategory\" as \"SubCategory\",\n          \"Join_1\"\
+  .\"SysClassName\" as \"SysClassName\",\n          \"Join_1\".\"UponApproval\" as\
+  \ \"UponApproval\",\n          \"Join_1\".\"DvUTotalEscalatedPeriod\" as \"DvUTotalEscalatedPeriod\"\
+  ,\n          \"Join_1\".\"UTemporaryRelief\" as \"UTemporaryRelief\",\n        \
+  \  \"Join_1\".\"MadeSla\" as \"MadeSla\",\n          \"Join_1\".\"DvUCaseType\"\
+  \ as \"DvUCaseType\",\n          \"Join_1\".\"DvUIncidentState\" as \"DvUIncidentState\"\
+  ,\n          \"Join_1\".\"PercentComplete\" as \"PercentComplete\",\n          \"\
+  Join_1\".\"DvAccount\" as \"DvAccount\",\n          \"Join_1\".\"UOutageStartTime\"\
+  \ as \"UOutageStartTime\",\n          \"Join_1\".\"ULegacyId\" as \"ULegacyId\"\
+  ,\n          \"Join_1\".\"DvUrgency\" as \"DvUrgency\",\n          \"Join_1\".\"\
+  ActivityDue\" as \"ActivityDue\",\n          \"Join_1\".\"DvRejectionGoto\" as \"\
+  DvRejectionGoto\",\n          \"Join_1\".\"UCategoryChanged\" as \"UCategoryChanged\"\
+  ,\n          \"Join_1\".\"OpenedBy\" as \"OpenedBy\",\n          \"Join_1\".\"DvULanguage\"\
+  \ as \"DvULanguage\",\n          \"Join_1\".\"Product\" as \"Product\",\n      \
+  \    \"Join_1\".\"DeliveryPlan\" as \"DeliveryPlan\",\n          \"Join_1\".\"UCaseCategory\"\
+  \ as \"UCaseCategory\",\n          \"Join_1\".\"USecurityIncident\" as \"USecurityIncident\"\
+  ,\n          \"Join_1\".\"UAssignedOn\" as \"UAssignedOn\",\n          \"Join_1\"\
+  .\"DvUDocumentation\" as \"DvUDocumentation\",\n          \"Join_1\".\"USyncSrc\"\
+  \ as \"USyncSrc\",\n          \"Join_1\".\"DvParent\" as \"DvParent\",\n       \
+  \   \"Join_1\".\"DvProblem\" as \"DvProblem\",\n          \"Join_1\".\"DvActualDuration\"\
+  \ as \"DvActualDuration\",\n          \"Join_1\".\"BusinessDuration\" as \"BusinessDuration\"\
+  ,\n          \"Join_1\".\"CaseReport\" as \"CaseReport\",\n          \"Join_1\"\
+  .\"UOperationalMistake\" as \"UOperationalMistake\",\n          \"Join_1\".\"Company\"\
+  \ as \"Company\",\n          \"Join_1\".\"CausedBy\" as \"CausedBy\",\n        \
+  \  \"Join_1\".\"DueDate\" as \"DueDate\",\n          \"Join_1\".\"DvActionStatus\"\
+  \ as \"DvActionStatus\",\n          \"Join_1\".\"Parent\" as \"Parent\",\n     \
+  \     \"Join_1\".\"DvClosedBy\" as \"DvClosedBy\",\n          \"Join_1\".\"UTaskResolved\"\
+  \ as \"UTaskResolved\",\n          \"Join_1\".\"DvUponApproval\" as \"DvUponApproval\"\
+  ,\n          \"Join_1\".\"UIncidentCategory\" as \"UIncidentCategory\",\n      \
+  \    \"Join_1\".\"Variables\" as \"Variables\",\n          \"Join_1\".\"DvUProductTaxonomyInitial\"\
+  \ as \"DvUProductTaxonomyInitial\",\n          \"Join_1\".\"DvAssignmentGroup\"\
+  \ as \"DvAssignmentGroup\",\n          \"Join_1\".\"DvCaseContact\" as \"DvCaseContact\"\
+  ,\n          \"Join_1\".\"DvSysDomain\" as \"DvSysDomain\",\n          \"Join_1\"\
+  .\"SysCreatedBy\" as \"SysCreatedBy\",\n          \"Join_1\".\"UCaseType\" as \"\
+  UCaseType\",\n          \"Join_1\".\"SysUpdatedBy\" as \"SysUpdatedBy\",\n     \
+  \     \"Join_1\".\"AssignmentGroup\" as \"AssignmentGroup\",\n          \"Join_1\"\
+  .\"SlaDue\" as \"SlaDue\",\n          \"Join_1\".\"Consumer\" as \"Consumer\",\n\
+  \          \"Join_1\".\"Incident\" as \"Incident\",\n          \"Join_1\".\"ClosedBy\"\
+  \ as \"ClosedBy\",\n          \"Join_1\".\"TimeWorked\" as \"TimeWorked\",\n   \
+  \       \"Join_1\".\"DvUCommunicationsLead\" as \"DvUCommunicationsLead\",\n   \
+  \       \"Join_1\".\"SnAppCsSocialSocialProfile\" as \"SnAppCsSocialSocialProfile\"\
+  ,\n          \"Join_1\".\"DvTaskFor\" as \"DvTaskFor\",\n          \"Join_1\".\"\
+  UBtNumber\" as \"UBtNumber\",\n          \"Join_1\".\"ActualStartDate\" as \"ActualStartDate\"\
+  ,\n          \"Join_1\".\"DvUOutageDuration\" as \"DvUOutageDuration\",\n      \
+  \    \"Join_1\".\"SyncDriver\" as \"SyncDriver\",\n          \"Join_1\".\"DvActiveAccountEscalation\"\
+  \ as \"DvActiveAccountEscalation\",\n          \"Join_1\".\"UProductTaxonomyInitial\"\
+  \ as \"UProductTaxonomyInitial\",\n          \"Join_1\".\"Case\" as \"Case\",\n\
+  \          \"Join_1\".\"DvLocation\" as \"DvLocation\",\n          \"Join_1\".\"\
+  UCategoryPredicted\" as \"UCategoryPredicted\",\n          \"Join_1\".\"CmdbCi\"\
+  \ as \"CmdbCi\",\n          \"Join_1\".\"CorrelationDisplay\" as \"CorrelationDisplay\"\
+  ,\n          \"Join_1\".\"DvUCaseCategory\" as \"DvUCaseCategory\",\n          \"\
+  Join_1\".\"PartnerContact\" as \"PartnerContact\",\n          \"Join_1\".\"DvDeliveryPlan\"\
+  \ as \"DvDeliveryPlan\",\n          \"Join_1\".\"DvSnAppCsSocialSocialProfile\"\
+  \ as \"DvSnAppCsSocialSocialProfile\",\n          \"Join_1\".\"PauseEscalation\"\
+  \ as \"PauseEscalation\",\n          \"Join_1\".\"NotesToComments\" as \"NotesToComments\"\
+  ,\n          \"Join_1\".\"ApprovalSet\" as \"ApprovalSet\",\n          \"Join_1\"\
+  .\"DvGroupList\" as \"DvGroupList\",\n          \"Join_1\".\"DvUCanDuration\" as\
+  \ \"DvUCanDuration\",\n          \"Join_1\".\"DvUProductTaxonomyFinal\" as \"DvUProductTaxonomyFinal\"\
+  ,\n          \"Join_1\".\"WorkEnd\" as \"WorkEnd\",\n          \"Join_1\".\"ActualDuration\"\
+  \ as \"ActualDuration\",\n          \"Join_1\".\"DvNotify\" as \"DvNotify\",\n \
+  \         \"Join_1\".\"SysTags\" as \"SysTags\",\n          \"Join_1\".\"ContactType\"\
+  \ as \"ContactType\",\n          \"Join_1\".\"BusinessService\" as \"BusinessService\"\
+  ,\n          \"Join_1\".\"DvUOutageType\" as \"DvUOutageType\",\n          \"Join_1\"\
+  .\"State\" as \"State\",\n          \"Join_1\".\"UTotalEscalatedPeriod\" as \"UTotalEscalatedPeriod\"\
+  ,\n          \"Join_1\".\"DvSkills\" as \"DvSkills\",\n          \"Join_1\".\"Change\"\
+  \ as \"Change\",\n          \"Join_1\".\"DvWfActivity\" as \"DvWfActivity\",\n \
+  \         \"Join_1\".\"ResolvedAt\" as \"ResolvedAt\",\n          \"Join_1\".\"\
+  SysModCount\" as \"SysModCount\",\n          \"Join_1\".\"DvCaseReport\" as \"DvCaseReport\"\
+  ,\n          \"Join_1\".\"PspPerDeleteDt\" as \"PspPerDeleteDt\",\n          \"\
+  Join_1\".\"HasChild\" as \"HasChild\",\n          \"Join_1\".\"Approval\" as \"\
+  Approval\",\n          \"Join_1\".\"Project\" as \"Project\",\n          \"Join_1\"\
+  .\"DvSubcategory\" as \"DvSubcategory\",\n          \"Join_1\".\"CalendarDuration\"\
+  \ as \"CalendarDuration\",\n          \"Join_1\".\"URefIncident\" as \"URefIncident\"\
+  ,\n          \"Join_1\".\"RejectionGoto\" as \"RejectionGoto\",\n          \"Join_1\"\
+  .\"DvChange\" as \"DvChange\",\n          \"Join_1\".\"ContactLocaltime\" as \"\
+  ContactLocaltime\",\n          \"Join_1\".\"DvPartnerContact\" as \"DvPartnerContact\"\
+  ,\n          \"Join_1\".\"DvEscalation\" as \"DvEscalation\",\n          \"Join_1\"\
+  .\"ULanguage\" as \"ULanguage\",\n          \"Join_1\".\"UOutageType\" as \"UOutageType\"\
+  ,\n          \"Join_1\".\"DvActiveEscalation\" as \"DvActiveEscalation\",\n    \
+  \      \"Join_1\".\"NeedsAttention\" as \"NeedsAttention\",\n          \"Join_1\"\
+  .\"PspPerUpdateDt\" as \"PspPerUpdateDt\",\n          \"Join_1\".\"DvPartner\" as\
+  \ \"DvPartner\",\n          \"Join_1\".\"FirstReponseTime\" as \"FirstReponseTime\"\
+  ,\n          \"Join_1\".\"DvContact\" as \"DvContact\",\n          \"Join_1\".\"\
+  DvUAffectedInstances\" as \"DvUAffectedInstances\",\n          \"Join_1\".\"Escalation\"\
+  \ as \"Escalation\",\n          \"Join_1\".\"CaseContact\" as \"CaseContact\",\n\
+  \          \"Join_1\".\"UAssignmentGroupPredicted\" as \"UAssignmentGroupPredicted\"\
+  ,\n          \"Join_1\".\"UBtSysId\" as \"UBtSysId\",\n          \"Join_1\".\"CorrelationId\"\
+  \ as \"CorrelationId\",\n          \"Join_1\".\"UProductTaxonomyFinal\" as \"UProductTaxonomyFinal\"\
+  ,\n          \"Join_1\".\"UCanDuration\" as \"UCanDuration\",\n          \"Join_1\"\
+  .\"ActiveEscalation\" as \"ActiveEscalation\",\n          \"Join_1\".\"Notify\"\
+  \ as \"Notify\",\n          \"Join_1\".\"DvResolutionCode\" as \"DvResolutionCode\"\
+  ,\n          \"Join_1\".\"UponReject\" as \"UponReject\",\n          \"Join_1\"\
+  .\"Asset\" as \"Asset\",\n          \"Join_1\".\"TaskFor\" as \"TaskFor\",\n   \
+  \       \"Join_1\".\"DvCompany\" as \"DvCompany\",\n          \"Join_1\".\"WfActivity\"\
+  \ as \"WfActivity\",\n          \"Join_1\".\"ResolutionCode\" as \"ResolutionCode\"\
+  ,\n          \"Join_1\".\"WorkStart\" as \"WorkStart\",\n          \"Join_1\".\"\
+  Impact\" as \"Impact\",\n          \"Join_1\".\"Urgency\" as \"Urgency\",\n    \
+  \      \"Join_1\".\"SysDomain\" as \"SysDomain\",\n          \"Join_1\".\"UOwnershipCategory\"\
+  \ as \"UOwnershipCategory\",\n          \"Join_1\".\"SysUpdatedOn\" as \"SysUpdatedOn\"\
+  ,\n          \"Join_1\".\"ContactTimeZone\" as \"ContactTimeZone\",\n          \"\
+  Join_1\".\"Cause\" as \"Cause\",\n          \"Join_1\".\"DvContactType\" as \"DvContactType\"\
+  ,\n          \"Join_1\".\"TaskCount\" as \"TaskCount\",\n          \"Join_1\".\"\
+  Contact\" as \"Contact\",\n          \"Join_1\".\"UEscalated\" as \"UEscalated\"\
+  ,\n          \"Join_1\".\"PlannedEndDate\" as \"PlannedEndDate\",\n          \"\
+  Join_1\".\"Location\" as \"Location\",\n          \"Join_1\".\"Entitlement\" as\
+  \ \"Entitlement\",\n          \"Join_1\".\"PlannedStartDate\" as \"PlannedStartDate\"\
+  ,\n          \"Join_1\".\"Partner\" as \"Partner\",\n          \"Join_1\".\"ActualEndDate\"\
+  \ as \"ActualEndDate\",\n          \"Join_1\".\"Active\" as \"Active\",\n      \
+  \    \"Join_1\".\"FollowUp\" as \"FollowUp\",\n          \"Join_1\".\"UOutageDuration\"\
+  \ as \"UOutageDuration\",\n          \"Join_1\".\"ResolvedBy\" as \"ResolvedBy\"\
+  ,\n          \"Join_1\".\"PspPerInsertDt\" as \"PspPerInsertDt\",\n          \"\
+  Join_1\".\"Uid\" as \"Uid\",\n          \"Join_1\".\"ActiveAccountEscalation\" as\
+  \ \"ActiveAccountEscalation\",\n          \"Join_1\".\"PlannedDuration\" as \"PlannedDuration\"\
+  ,\n          \"Join_1\".\"DvCausedBy\" as \"DvCausedBy\",\n          \"Join_1\"\
+  .\"UCommunicationsLead\" as \"UCommunicationsLead\",\n          \"Join_1\".\"Order\"\
+  \ as \"Order\",\n          \"Join_1\".\"DvCalendarDuration\" as \"DvCalendarDuration\"\
+  ,\n          \"Join_1\".\"DvSysClassName\" as \"DvSysClassName\",\n          \"\
+  Join_1\".\"SupportManager\" as \"SupportManager\",\n          \"Join_1\".\"UPredictionAttempted\"\
+  \ as \"UPredictionAttempted\",\n          \"Join_1\".\"DvResolvedBy\" as \"DvResolvedBy\"\
+  ,\n          \"Join_1\".\"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\",\n      \
+  \    \"Join_1\".\"ShortDescription\" as \"ShortDescription\",\n          \"Join_1\"\
+  .\"DvUEnhancementRequest\" as \"DvUEnhancementRequest\",\n          \"Join_1\".\"\
+  UEnhancementRequest\" as \"UEnhancementRequest\",\n          \"Join_1\".\"WatchList\"\
+  \ as \"WatchList\",\n          \"Join_1\".\"Description\" as \"Description\",\n\
+  \          \"Join_1\".\"DvContract\" as \"DvContract\",\n          \"Join_1\".\"\
+  SysDomainpath\" as \"SysDomainpath\",\n          \"Join_1\".\"ApprovalHistory\"\
+  \ as \"ApprovalHistory\",\n          \"Join_1\".\"DvProduct\" as \"DvProduct\",\n\
+  \          \"Join_1\".\"DvVariables\" as \"DvVariables\",\n          \"Join_1\"\
+  .\"DvCmdbCi\" as \"DvCmdbCi\",\n          \"Join_1\".\"DvAsset\" as \"DvAsset\"\
+  ,\n          \"Join_1\".\"UTags\" as \"UTags\",\n          \"Join_1\".\"UAffectedInstances\"\
+  \ as \"UAffectedInstances\",\n          \"Join_1\".\"UStepsToReproduce\" as \"UStepsToReproduce\"\
+  ,\n          \"Join_1\".\"UserInput\" as \"UserInput\",\n          \"Join_1\".\"\
+  GroupList\" as \"GroupList\",\n          \"Join_1\".\"Skills\" as \"Skills\",\n\
+  \          \"Join_1\".\"AdditionalAssigneeList\" as \"AdditionalAssigneeList\",\n\
+  \          \"Join_1\".\"CloseNotes\" as \"CloseNotes\",\n          \"Join_1\".\"\
+  UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\",\n          \"Join_1\".\"USyncMetadata\"\
+  \ as \"USyncMetadata\",\n          \"Join_1\".\"DvProject\" as \"DvProject\",\n\
+  \          \"Join_1\".\"Comments\" as \"Comments\",\n          \"Join_1\".\"WorkNotes\"\
+  \ as \"WorkNotes\",\n          \"Join_1\".\"DvBusinessService\" as \"DvBusinessService\"\
+  ,\n          \"Join_1\".\"IsFederal\" as \"IsFederal\",\n          \"Join_1\".\"\
+  DvUUpgradeCase\" as \"DvUUpgradeCase\",\n          \"Join_1\".\"UPotentiallyCausedByUpgrade\"\
+  \ as \"UPotentiallyCausedByUpgrade\",\n          \"Join_1\".\"UAlertType\" as \"\
+  UAlertType\",\n          \"Join_1\".\"DvUIncidentCategory\" as \"DvUIncidentCategory\"\
+  ,\n          \"Join_1\".\"DvBlockingReason\" as \"DvBlockingReason\",\n        \
+  \  \"Join_1\".\"ReassignmentCount\" as \"ReassignmentCount\",\n          \"Join_1\"\
+  .\"IEscCount\" as \"IEscCount\",\n          \"Join_1\".\"MEscCount\" as \"MEscCount\"\
+  ,\n          \"Join_1\".\"DV_U_LANGUAGE\" as \"DV_U_LANGUAGE\",\n          \"Join_1\"\
+  .\"DvLanguage1\" as \"DvLanguage1\",\n          \"Join_1\".\"U_FIRST_RESPONSE\"\
+  \ as \"U_FIRST_RESPONSE\",\n          \"Join_1\".\"DvUReleaseFamily\" as \"DvUReleaseFamily\"\
+  ,\n          \"Join_1\".\"U_SOLUTION_PROPOSED_DURATION\" as \"U_SOLUTION_PROPOSED_DURATION\"\
+  ,\n          \"Join_1\".\"DV_U_SUB_STATE\" as \"DV_U_SUB_STATE\",\n          \"\
+  Join_1\".\"PrimaryBlocker\" as \"PrimaryBlocker\",\n          \"Join_1\".\"U_SRE\"\
+  \ as \"U_SRE\",\n          \"Join_1\".\"AssignedOn\" as \"AssignedOn\",\n      \
+  \    \"Join_1\".\"PreferredLanguageSupport\" as \"PreferredLanguageSupport\",\n\
+  \          \"Join_1\".\"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\",\n          \"Join_1\"\
+  .\"U_RESPONSE_TIME_ACHIEVED\" as \"U_RESPONSE_TIME_ACHIEVED\",\n          \"Join_1\"\
+  .\"DvUEnhancedSLA\" as \"DvUEnhancedSLA\",\n          \"Join_1\".\"ULastAssignee\"\
+  \ as \"ULastAssignee\",\n          \"Join_1\".\"DvULastAssignee\" as \"DvULastAssignee\"\
+  ,\n          \"Join_1\".\"OriginalAssignedTo\" as \"OriginalAssignedTo\",\n    \
+  \      \"Join_1\".\"DvOriginalAssignedTo\" as \"DvOriginalAssignedTo\",\n      \
+  \    \"Join_1\".\"ESCCount\" as \"ESCCount\",\n          \"Join_1\".\"DvLanguage\"\
+  \ as \"DvLanguage\",\n          \"Join_1\".\"FirstResponseTime1\" as \"FirstResponseTime1\"\
+  ,\n          \"Join_1\".\"DvUSubState\" as \"DvUSubState\",\n          \"Join_1\"\
+  .\"SRE\" as \"SRE\",\n          \"Projection_3\".\"DvUPrincipalAgent\" as \"DvUPrincipalAgent\"\
+  ,\n          \"Projection_3\".\"UPrincipalAgent\" as \"UPrincipalAgent\",\n\t\t\
+  \  \"Join_1\".\"DvUProductFinalTaxonomy\" as \"DvUProductFinalTaxonomy\",\n    \
+  \      \"Join_1\".\"UProductFinalTaxonomy\" as \"UProductFinalTaxonomy\",\n    \
+  \      \"Join_1\".\"DvUProductInitialTaxonomy\" as \"DvUProductInitialTaxonomy\"\
+  ,\n          \"Join_1\".\"UProductInitialTaxonomy\" as \"UProductInitialTaxonomy\"\
+  ,\n          IFF(\"DvOriginalAssignedTo\"= 'random',\"UPrincipalAgent\",\"OriginalAssignedTo\"\
+  ) as \"AssignedTo\",\n          IFF(\"DvOriginalAssignedTo\"= 'random',\"DvUPrincipalAgent\"\
+  ,\"DvOriginalAssignedTo\") as \"DvAssignedTo\"\nFROM\n  (SELECT \"Join_4\".\"UCustomerActionNeededCase\"\
+  \ as \"UCustomerActionNeededCase\",\n             \"Join_4\".\"USRECase\" as \"\
+  USRECase\",\n             \"Join_4\".\"DvURefIncident\" as \"DvURefIncident\",\n\
+  \             \"Join_4\".\"CaseNumber\" as \"CaseNumber\",\n             \"Join_4\"\
+  .\"DvImpact\" as \"DvImpact\",\n             \"Join_4\".\"DvPriority\" as \"DvPriority\"\
+  ,\n             \"Join_4\".\"DvState\" as \"DvState\",\n             \"Join_4\"\
+  .\"CalendarSTCCase\" as \"CalendarSTCCase\",\n             \"Join_4\".\"OpenedAt\"\
+  \ as \"OpenedAt\",\n             \"Join_4\".\"ClosedAt\" as \"ClosedAt\",\n    \
+  \         \"Join_4\".\"SysCreatedOn\" as \"SysCreatedOn\",\n             \"Join_4\"\
+  .\"DvConsumer\" as \"DvConsumer\",\n             \"Join_4\".\"DvAdditionalAssigneeList\"\
+  \ as \"DvAdditionalAssigneeList\",\n             \"Join_4\".\"ULastUpdateToCustomer\"\
+  \ as \"ULastUpdateToCustomer\",\n             \"Join_4\".\"Account\" as \"Account\"\
+  ,\n             \"Join_4\".\"UDocumentation\" as \"UDocumentation\",\n         \
+  \    \"Join_4\".\"Deliverytask\" as \"Deliverytask\",\n             \"Join_4\".\"\
+  DvContactTimeZone\" as \"DvContactTimeZone\",\n             \"Join_4\".\"ExpectedStart\"\
+  \ as \"ExpectedStart\",\n             \"Join_4\".\"UOutageEndTime\" as \"UOutageEndTime\"\
+  ,\n             \"Join_4\".\"Category\" as \"Category\",\n             \"Join_4\"\
+  .\"DvUOperationalMistake\" as \"DvUOperationalMistake\",\n             \"Join_4\"\
+  .\"UEscalationCount\" as \"UEscalationCount\",\n             \"Join_4\".\"DvBusinessDuration\"\
+  \ as \"DvBusinessDuration\",\n             \"Join_4\".\"DvOpenedBy\" as \"DvOpenedBy\"\
+  ,\n             \"Join_4\".\"DvCategory\" as \"DvCategory\",\n             \"Join_4\"\
+  .\"DvUWorkNotesWatchlist\" as \"DvUWorkNotesWatchlist\",\n             \"Join_4\"\
+  .\"DvApproval\" as \"DvApproval\",\n             \"Join_4\".\"DvPlannedDuration\"\
+  \ as \"DvPlannedDuration\",\n             \"Join_4\".\"DvEntitlement\" as \"DvEntitlement\"\
+  ,\n             \"Join_4\".\"Contract\" as \"Contract\",\n             \"Join_4\"\
+  .\"DvWatchList\" as \"DvWatchList\",\n             \"Join_4\".\"UIncidentState\"\
+  \ as \"UIncidentState\",\n             \"Join_4\".\"EstimatedCost\" as \"EstimatedCost\"\
+  ,\n             \"Join_4\".\"SysId\" as \"SysId\",\n             \"Join_4\".\"DvUponReject\"\
+  \ as \"DvUponReject\",\n             \"Join_4\".\"FollowTheSun\" as \"FollowTheSun\"\
+  ,\n             \"Join_4\".\"DvDeliveryTask\" as \"DvDeliveryTask\",\n         \
+  \    \"Join_4\".\"DvSupportManager\" as \"DvSupportManager\",\n             \"Join_4\"\
+  .\"Knowledge\" as \"Knowledge\",\n             \"Join_4\".\"ActionStatus\" as \"\
+  ActionStatus\",\n             \"Join_4\".\"UUssoil\" as \"UUssoil\",\n         \
+  \    \"Join_4\".\"DvIncident\" as \"DvIncident\",\n             \"Join_4\".\"Priority\"\
+  \ as \"Priority\",\n             \"Join_4\".\"Problem\" as \"Problem\",\n      \
+  \       \"Join_4\".\"DvUOwnershipCategory\" as \"DvUOwnershipCategory\",\n     \
+  \        \"Join_4\".\"SubCategory\" as \"SubCategory\",\n             \"Join_4\"\
+  .\"SysClassName\" as \"SysClassName\",\n             \"Join_4\".\"UponApproval\"\
+  \ as \"UponApproval\",\n             \"Join_4\".\"DvUTotalEscalatedPeriod\" as \"\
+  DvUTotalEscalatedPeriod\",\n             \"Join_4\".\"UTemporaryRelief\" as \"UTemporaryRelief\"\
+  ,\n             \"Join_4\".\"MadeSla\" as \"MadeSla\",\n             \"Join_4\"\
+  .\"DvUCaseType\" as \"DvUCaseType\",\n             \"Join_4\".\"DvUIncidentState\"\
+  \ as \"DvUIncidentState\",\n             \"Join_4\".\"PercentComplete\" as \"PercentComplete\"\
+  ,\n             \"Join_4\".\"DvAccount\" as \"DvAccount\",\n             \"Join_4\"\
+  .\"UOutageStartTime\" as \"UOutageStartTime\",\n             \"Join_4\".\"ULegacyId\"\
+  \ as \"ULegacyId\",\n             \"Join_4\".\"DvUrgency\" as \"DvUrgency\",\n \
+  \            \"Join_4\".\"ActivityDue\" as \"ActivityDue\",\n             \"Join_4\"\
+  .\"DvRejectionGoto\" as \"DvRejectionGoto\",\n             \"Join_4\".\"UCategoryChanged\"\
+  \ as \"UCategoryChanged\",\n             \"Join_4\".\"OpenedBy\" as \"OpenedBy\"\
+  ,\n             \"Join_4\".\"DvULanguage\" as \"DvULanguage\",\n             \"\
+  Join_4\".\"Product\" as \"Product\",\n             \"Join_4\".\"DeliveryPlan\" as\
+  \ \"DeliveryPlan\",\n             \"Join_4\".\"UCaseCategory\" as \"UCaseCategory\"\
+  ,\n             \"Join_4\".\"USecurityIncident\" as \"USecurityIncident\",\n   \
+  \          \"Join_4\".\"UAssignedOn\" as \"UAssignedOn\",\n             \"Join_4\"\
+  .\"DvUDocumentation\" as \"DvUDocumentation\",\n             \"Join_4\".\"USyncSrc\"\
+  \ as \"USyncSrc\",\n             \"Join_4\".\"DvParent\" as \"DvParent\",\n    \
+  \         \"Join_4\".\"DvProblem\" as \"DvProblem\",\n             \"Join_4\".\"\
+  DvActualDuration\" as \"DvActualDuration\",\n             \"Join_4\".\"BusinessDuration\"\
+  \ as \"BusinessDuration\",\n             \"Join_4\".\"CaseReport\" as \"CaseReport\"\
+  ,\n             \"Join_4\".\"UOperationalMistake\" as \"UOperationalMistake\",\n\
+  \             \"Join_4\".\"Company\" as \"Company\",\n             \"Join_4\".\"\
+  CausedBy\" as \"CausedBy\",\n             \"Join_4\".\"DueDate\" as \"DueDate\"\
+  ,\n             \"Join_4\".\"DvActionStatus\" as \"DvActionStatus\",\n         \
+  \    \"Join_4\".\"Parent\" as \"Parent\",\n             \"Join_4\".\"DvClosedBy\"\
+  \ as \"DvClosedBy\",\n             \"Join_4\".\"UTaskResolved\" as \"UTaskResolved\"\
+  ,\n             \"Join_4\".\"DvUponApproval\" as \"DvUponApproval\",\n         \
+  \    \"Join_4\".\"UIncidentCategory\" as \"UIncidentCategory\",\n             \"\
+  Join_4\".\"Variables\" as \"Variables\",\n             \"Join_4\".\"DvUProductTaxonomyInitial\"\
+  \ as \"DvUProductTaxonomyInitial\",\n             \"Join_4\".\"DvAssignmentGroup\"\
+  \ as \"DvAssignmentGroup\",\n             \"Join_4\".\"DvCaseContact\" as \"DvCaseContact\"\
+  ,\n             \"Join_4\".\"DvSysDomain\" as \"DvSysDomain\",\n             \"\
+  Join_4\".\"SysCreatedBy\" as \"SysCreatedBy\",\n             \"Join_4\".\"UCaseType\"\
+  \ as \"UCaseType\",\n             \"Join_4\".\"SysUpdatedBy\" as \"SysUpdatedBy\"\
+  ,\n             \"Join_4\".\"AssignmentGroup\" as \"AssignmentGroup\",\n       \
+  \      \"Join_4\".\"SlaDue\" as \"SlaDue\",\n             \"Join_4\".\"Consumer\"\
+  \ as \"Consumer\",\n             \"Join_4\".\"Incident\" as \"Incident\",\n    \
+  \         \"Join_4\".\"ClosedBy\" as \"ClosedBy\",\n             \"Join_4\".\"TimeWorked\"\
+  \ as \"TimeWorked\",\n             \"Join_4\".\"DvUCommunicationsLead\" as \"DvUCommunicationsLead\"\
+  ,\n             \"Join_4\".\"SnAppCsSocialSocialProfile\" as \"SnAppCsSocialSocialProfile\"\
+  ,\n             \"Join_4\".\"DvTaskFor\" as \"DvTaskFor\",\n             \"Join_4\"\
+  .\"UBtNumber\" as \"UBtNumber\",\n             \"Join_4\".\"ActualStartDate\" as\
+  \ \"ActualStartDate\",\n             \"Join_4\".\"DvUOutageDuration\" as \"DvUOutageDuration\"\
+  ,\n             \"Join_4\".\"SyncDriver\" as \"SyncDriver\",\n             \"Join_4\"\
+  .\"DvActiveAccountEscalation\" as \"DvActiveAccountEscalation\",\n             \"\
+  Join_4\".\"UProductTaxonomyInitial\" as \"UProductTaxonomyInitial\",\n         \
+  \    \"Join_4\".\"Case\" as \"Case\",\n             \"Join_4\".\"DvLocation\" as\
+  \ \"DvLocation\",\n             \"Join_4\".\"UCategoryPredicted\" as \"UCategoryPredicted\"\
+  ,\n             \"Join_4\".\"CmdbCi\" as \"CmdbCi\",\n             \"Join_4\".\"\
+  CorrelationDisplay\" as \"CorrelationDisplay\",\n             \"Join_4\".\"DvUCaseCategory\"\
+  \ as \"DvUCaseCategory\",\n             \"Join_4\".\"PartnerContact\" as \"PartnerContact\"\
+  ,\n             \"Join_4\".\"DvDeliveryPlan\" as \"DvDeliveryPlan\",\n         \
+  \    \"Join_4\".\"DvSnAppCsSocialSocialProfile\" as \"DvSnAppCsSocialSocialProfile\"\
+  ,\n             \"Join_4\".\"PauseEscalation\" as \"PauseEscalation\",\n       \
+  \      \"Join_4\".\"NotesToComments\" as \"NotesToComments\",\n             \"Join_4\"\
+  .\"ApprovalSet\" as \"ApprovalSet\",\n             \"Join_4\".\"DvGroupList\" as\
+  \ \"DvGroupList\",\n             \"Join_4\".\"DvUCanDuration\" as \"DvUCanDuration\"\
+  ,\n             \"Join_4\".\"DvUProductTaxonomyFinal\" as \"DvUProductTaxonomyFinal\"\
+  ,\n             \"Join_4\".\"WorkEnd\" as \"WorkEnd\",\n             \"Join_4\"\
+  .\"ActualDuration\" as \"ActualDuration\",\n             \"Join_4\".\"DvNotify\"\
+  \ as \"DvNotify\",\n             \"Join_4\".\"SysTags\" as \"SysTags\",\n      \
+  \       \"Join_4\".\"ContactType\" as \"ContactType\",\n             \"Join_4\"\
+  .\"BusinessService\" as \"BusinessService\",\n             \"Join_4\".\"DvUOutageType\"\
+  \ as \"DvUOutageType\",\n             \"Join_4\".\"State\" as \"State\",\n     \
+  \        \"Join_4\".\"UTotalEscalatedPeriod\" as \"UTotalEscalatedPeriod\",\n  \
+  \           \"Join_4\".\"DvSkills\" as \"DvSkills\",\n             \"Join_4\".\"\
+  Change\" as \"Change\",\n             \"Join_4\".\"DvWfActivity\" as \"DvWfActivity\"\
+  ,\n             \"Join_4\".\"ResolvedAt\" as \"ResolvedAt\",\n             \"Join_4\"\
+  .\"SysModCount\" as \"SysModCount\",\n             \"Join_4\".\"DvCaseReport\" as\
+  \ \"DvCaseReport\",\n             \"Join_4\".\"PspPerDeleteDt\" as \"PspPerDeleteDt\"\
+  ,\n             \"Join_4\".\"HasChild\" as \"HasChild\",\n             \"Join_4\"\
+  .\"Approval\" as \"Approval\",\n             \"Join_4\".\"Project\" as \"Project\"\
+  ,\n             \"Join_4\".\"DvSubcategory\" as \"DvSubcategory\",\n           \
+  \  \"Join_4\".\"CalendarDuration\" as \"CalendarDuration\",\n             \"Join_4\"\
+  .\"URefIncident\" as \"URefIncident\",\n             \"Join_4\".\"RejectionGoto\"\
+  \ as \"RejectionGoto\",\n             \"Join_4\".\"DvChange\" as \"DvChange\",\n\
+  \             \"Join_4\".\"ContactLocaltime\" as \"ContactLocaltime\",\n       \
+  \      \"Join_4\".\"DvPartnerContact\" as \"DvPartnerContact\",\n             \"\
+  Join_4\".\"DvEscalation\" as \"DvEscalation\",\n             \"Join_4\".\"ULanguage\"\
+  \ as \"ULanguage\",\n             \"Join_4\".\"UOutageType\" as \"UOutageType\"\
+  ,\n             \"Join_4\".\"DvActiveEscalation\" as \"DvActiveEscalation\",\n \
+  \            \"Join_4\".\"NeedsAttention\" as \"NeedsAttention\",\n            \
+  \ \"Join_4\".\"PspPerUpdateDt\" as \"PspPerUpdateDt\",\n             \"Join_4\"\
+  .\"DvPartner\" as \"DvPartner\",\n             \"Join_4\".\"FirstReponseTime\" as\
+  \ \"FirstReponseTime\",\n             \"Join_4\".\"DvContact\" as \"DvContact\"\
+  ,\n             \"Join_4\".\"DvUAffectedInstances\" as \"DvUAffectedInstances\"\
+  ,\n             \"Join_4\".\"Escalation\" as \"Escalation\",\n             \"Join_4\"\
+  .\"CaseContact\" as \"CaseContact\",\n             \"Join_4\".\"UAssignmentGroupPredicted\"\
+  \ as \"UAssignmentGroupPredicted\",\n             \"Join_4\".\"UBtSysId\" as \"\
+  UBtSysId\",\n             \"Join_4\".\"CorrelationId\" as \"CorrelationId\",\n \
+  \            \"Join_4\".\"UProductTaxonomyFinal\" as \"UProductTaxonomyFinal\",\n\
+  \             \"Join_4\".\"UCanDuration\" as \"UCanDuration\",\n             \"\
+  Join_4\".\"ActiveEscalation\" as \"ActiveEscalation\",\n             \"Join_4\"\
+  .\"Notify\" as \"Notify\",\n             \"Join_4\".\"DvResolutionCode\" as \"DvResolutionCode\"\
+  ,\n             \"Join_4\".\"UponReject\" as \"UponReject\",\n             \"Join_4\"\
+  .\"Asset\" as \"Asset\",\n             \"Join_4\".\"TaskFor\" as \"TaskFor\",\n\
+  \             \"Join_4\".\"DvCompany\" as \"DvCompany\",\n             \"Join_4\"\
+  .\"WfActivity\" as \"WfActivity\",\n             \"Join_4\".\"ResolutionCode\" as\
+  \ \"ResolutionCode\",\n             \"Join_4\".\"WorkStart\" as \"WorkStart\",\n\
+  \             \"Join_4\".\"Impact\" as \"Impact\",\n             \"Join_4\".\"Urgency\"\
+  \ as \"Urgency\",\n             \"Join_4\".\"SysDomain\" as \"SysDomain\",\n   \
+  \          \"Join_4\".\"UOwnershipCategory\" as \"UOwnershipCategory\",\n      \
+  \       \"Join_4\".\"SysUpdatedOn\" as \"SysUpdatedOn\",\n             \"Join_4\"\
+  .\"ContactTimeZone\" as \"ContactTimeZone\",\n             \"Join_4\".\"Cause\"\
+  \ as \"Cause\",\n             \"Join_4\".\"DvContactType\" as \"DvContactType\"\
+  ,\n             \"Join_4\".\"TaskCount\" as \"TaskCount\",\n             \"Join_4\"\
+  .\"Contact\" as \"Contact\",\n             \"Join_4\".\"UEscalated\" as \"UEscalated\"\
+  ,\n             \"Join_4\".\"PlannedEndDate\" as \"PlannedEndDate\",\n         \
+  \    \"Join_4\".\"Location\" as \"Location\",\n             \"Join_4\".\"Entitlement\"\
+  \ as \"Entitlement\",\n             \"Join_4\".\"PlannedStartDate\" as \"PlannedStartDate\"\
+  ,\n             \"Join_4\".\"Partner\" as \"Partner\",\n             \"Join_4\"\
+  .\"ActualEndDate\" as \"ActualEndDate\",\n             \"Join_4\".\"Active\" as\
+  \ \"Active\",\n             \"Join_4\".\"FollowUp\" as \"FollowUp\",\n         \
+  \    \"Join_4\".\"UOutageDuration\" as \"UOutageDuration\",\n             \"Join_4\"\
+  .\"ResolvedBy\" as \"ResolvedBy\",\n             \"Join_4\".\"PspPerInsertDt\" as\
+  \ \"PspPerInsertDt\",\n             \"Join_4\".\"Uid\" as \"Uid\",\n           \
+  \  \"Join_4\".\"ActiveAccountEscalation\" as \"ActiveAccountEscalation\",\n    \
+  \         \"Join_4\".\"PlannedDuration\" as \"PlannedDuration\",\n             \"\
+  Join_4\".\"DvCausedBy\" as \"DvCausedBy\",\n             \"Join_4\".\"UCommunicationsLead\"\
+  \ as \"UCommunicationsLead\",\n             \"Join_4\".\"Order\" as \"Order\",\n\
+  \             \"Join_4\".\"DvCalendarDuration\" as \"DvCalendarDuration\",\n   \
+  \          \"Join_4\".\"DvSysClassName\" as \"DvSysClassName\",\n             \"\
+  Join_4\".\"SupportManager\" as \"SupportManager\",\n             \"Join_4\".\"UPredictionAttempted\"\
+  \ as \"UPredictionAttempted\",\n             \"Join_4\".\"DvResolvedBy\" as \"DvResolvedBy\"\
+  ,\n             \"Join_4\".\"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\",\n   \
+  \          \"Join_4\".\"ShortDescription\" as \"ShortDescription\",\n          \
+  \   \"Join_4\".\"DvUEnhancementRequest\" as \"DvUEnhancementRequest\",\n       \
+  \      \"Join_4\".\"UEnhancementRequest\" as \"UEnhancementRequest\",\n        \
+  \     \"Join_4\".\"WatchList\" as \"WatchList\",\n             \"Join_4\".\"Description\"\
+  \ as \"Description\",\n             \"Join_4\".\"DvContract\" as \"DvContract\"\
+  ,\n             \"Join_4\".\"SysDomainpath\" as \"SysDomainpath\",\n           \
+  \  \"Join_4\".\"ApprovalHistory\" as \"ApprovalHistory\",\n             \"Join_4\"\
+  .\"DvProduct\" as \"DvProduct\",\n             \"Join_4\".\"DvVariables\" as \"\
+  DvVariables\",\n             \"Join_4\".\"DvCmdbCi\" as \"DvCmdbCi\",\n        \
+  \     \"Join_4\".\"DvAsset\" as \"DvAsset\",\n             \"Join_4\".\"UTags\"\
+  \ as \"UTags\",\n             \"Join_4\".\"UAffectedInstances\" as \"UAffectedInstances\"\
+  ,\n             \"Join_4\".\"UStepsToReproduce\" as \"UStepsToReproduce\",\n   \
+  \          \"Join_4\".\"UserInput\" as \"UserInput\",\n             \"Join_4\".\"\
+  GroupList\" as \"GroupList\",\n             \"Join_4\".\"Skills\" as \"Skills\"\
+  ,\n             \"Join_4\".\"AdditionalAssigneeList\" as \"AdditionalAssigneeList\"\
+  ,\n             \"Join_4\".\"CloseNotes\" as \"CloseNotes\",\n             \"Join_4\"\
+  .\"UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\",\n             \"Join_4\".\"\
+  USyncMetadata\" as \"USyncMetadata\",\n             \"Join_4\".\"DvProject\" as\
+  \ \"DvProject\",\n             \"Join_4\".\"Comments\" as \"Comments\",\n      \
+  \       \"Join_4\".\"WorkNotes\" as \"WorkNotes\",\n             \"Join_4\".\"DvBusinessService\"\
+  \ as \"DvBusinessService\",\n             \"Join_4\".\"IsFederal\" as \"IsFederal\"\
+  ,\n             \"Join_4\".\"DvUUpgradeCase\" as \"DvUUpgradeCase\",\n         \
+  \    \"Join_4\".\"UPotentiallyCausedByUpgrade\" as \"UPotentiallyCausedByUpgrade\"\
+  ,\n             \"Join_4\".\"UAlertType\" as \"UAlertType\",\n             \"Join_4\"\
+  .\"DvUIncidentCategory\" as \"DvUIncidentCategory\",\n             \"Join_4\".\"\
+  DvBlockingReason\" as \"DvBlockingReason\",\n             \"Join_4\".\"ReassignmentCount\"\
+  \ as \"ReassignmentCount\",\n             \"Projection_1\".\"IEscCount\" as \"IEscCount\"\
+  ,\n             \"Join_4\".\"MEscCount\" as \"MEscCount\",\n             \"Projection_1\"\
+  .\"DV_U_LANGUAGE\" as \"DV_U_LANGUAGE\",\n             \"Join_4\".\"DvLanguage1\"\
+  \ as \"DvLanguage1\",\n             \"Projection_1\".\"U_FIRST_RESPONSE\" as \"\
+  U_FIRST_RESPONSE\",\n             \"Join_4\".\"DvUReleaseFamily\" as \"DvUReleaseFamily\"\
+  ,\n             \"Projection_1\".\"U_SOLUTION_PROPOSED_DURATION\" as \"U_SOLUTION_PROPOSED_DURATION\"\
+  ,\n             \"Projection_1\".\"DV_U_SUB_STATE\" as \"DV_U_SUB_STATE\",\n   \
+  \          \"Join_4\".\"PrimaryBlocker\" as \"PrimaryBlocker\",\n             \"\
+  Projection_1\".\"U_SRE\" as \"U_SRE\",\n             \"Join_4\".\"AssignedOn\" as\
+  \ \"AssignedOn\",\n             \"Join_4\".\"PreferredLanguageSupport\" as \"PreferredLanguageSupport\"\
+  ,\n             \"Join_4\".\"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\",\n         \
+  \    \"Join_4\".\"U_RESPONSE_TIME_ACHIEVED\" as \"U_RESPONSE_TIME_ACHIEVED\",\n\
+  \             \"Join_4\".\"DvUEnhancedSLA\" as \"DvUEnhancedSLA\",\n           \
+  \  \"Join_4\".\"ULastAssignee\" as \"ULastAssignee\",\n             \"Join_4\".\"\
+  DvULastAssignee\" as \"DvULastAssignee\",\n             \"Join_4\".\"AssignedTo\"\
+  \ as \"OriginalAssignedTo\",\n             \"Join_4\".\"DvAssignedTo\" as \"DvOriginalAssignedTo\"\
+  ,\n\t\t\t \"Join_4\".\"DvUProductFinalTaxonomy\" as \"DvUProductFinalTaxonomy\"\
+  ,\n             \"Join_4\".\"UProductFinalTaxonomy\" as \"UProductFinalTaxonomy\"\
+  ,\n             \"Join_4\".\"DvUProductInitialTaxonomy\" as \"DvUProductInitialTaxonomy\"\
+  ,\n             \"Join_4\".\"UProductInitialTaxonomy\" as \"UProductInitialTaxonomy\"\
+  ,\n          IFF(to_timestamp(\"SysCreatedOn\")<='random',\"IEscCount\",\"MEscCount\"\
+  ) as \"ESCCount\",\n          IFF(to_timestamp(\"SysCreatedOn\")<='random',\"DV_U_LANGUAGE\"\
+  ,\"DvLanguage1\") as \"DvLanguage\",\n          IFF((to_timestamp(\"SysCreatedOn\"\
+  )<='random' AND \"IsFederal\"='random'),\"U_FIRST_RESPONSE\",\"FirstReponseTime\"\
+  ) as \"FirstResponseTime1\",\n          IFF(to_timestamp(\"SysCreatedOn\")<='random',\"\
+  DV_U_SUB_STATE\",\"PrimaryBlocker\") as \"DvUSubState\",\n          IFF(to_timestamp(\"\
+  SysCreatedOn\")<='random',\"U_SRE\",\"USRECase\") as \"SRE\"\n   FROM\n     (SELECT\
+  \ \"Join_2\".\"UCustomerActionNeededCase\" as \"UCustomerActionNeededCase\",\n \
+  \               \"Join_2\".\"USRECase\" as \"USRECase\",\n                \"Join_2\"\
+  .\"DvURefIncident\" as \"DvURefIncident\",\n                \"Join_2\".\"CaseNumber\"\
+  \ as \"CaseNumber\",\n                \"Join_2\".\"DvImpact\" as \"DvImpact\",\n\
+  \                \"Join_2\".\"DvPriority\" as \"DvPriority\",\n                \"\
+  Join_2\".\"DvState\" as \"DvState\",\n                \"Join_2\".\"CalendarSTCCase\"\
+  \ as \"CalendarSTCCase\",\n                \"Join_2\".\"OpenedAt\" as \"OpenedAt\"\
+  ,\n                \"Join_2\".\"ClosedAt\" as \"ClosedAt\",\n                \"\
+  Join_2\".\"SysCreatedOn\" as \"SysCreatedOn\",\n                \"Join_2\".\"DvConsumer\"\
+  \ as \"DvConsumer\",\n                \"Join_2\".\"DvAdditionalAssigneeList\" as\
+  \ \"DvAdditionalAssigneeList\",\n                \"Join_2\".\"ULastUpdateToCustomer\"\
+  \ as \"ULastUpdateToCustomer\",\n                \"Join_2\".\"Account\" as \"Account\"\
+  ,\n                \"Join_2\".\"UDocumentation\" as \"UDocumentation\",\n      \
+  \          \"Join_2\".\"Deliverytask\" as \"Deliverytask\",\n                \"\
+  Join_2\".\"DvContactTimeZone\" as \"DvContactTimeZone\",\n                \"Join_2\"\
+  .\"ExpectedStart\" as \"ExpectedStart\",\n                \"Join_2\".\"UOutageEndTime\"\
+  \ as \"UOutageEndTime\",\n                \"Join_2\".\"Category\" as \"Category\"\
+  ,\n                \"Join_2\".\"DvUOperationalMistake\" as \"DvUOperationalMistake\"\
+  ,\n                \"Join_2\".\"UEscalationCount\" as \"UEscalationCount\",\n  \
+  \              \"Join_2\".\"DvBusinessDuration\" as \"DvBusinessDuration\",\n  \
+  \              \"Join_2\".\"DvOpenedBy\" as \"DvOpenedBy\",\n                \"\
+  Join_2\".\"DvCategory\" as \"DvCategory\",\n                \"Join_2\".\"DvUWorkNotesWatchlist\"\
+  \ as \"DvUWorkNotesWatchlist\",\n                \"Join_2\".\"DvApproval\" as \"\
+  DvApproval\",\n                \"Join_2\".\"DvPlannedDuration\" as \"DvPlannedDuration\"\
+  ,\n                \"Join_2\".\"DvEntitlement\" as \"DvEntitlement\",\n        \
+  \        \"Join_2\".\"Contract\" as \"Contract\",\n                \"Join_2\".\"\
+  DvWatchList\" as \"DvWatchList\",\n                \"Join_2\".\"UIncidentState\"\
+  \ as \"UIncidentState\",\n                \"Join_2\".\"EstimatedCost\" as \"EstimatedCost\"\
+  ,\n                \"Join_2\".\"SysId\" as \"SysId\",\n                \"Join_2\"\
+  .\"DvUponReject\" as \"DvUponReject\",\n                \"Join_2\".\"FollowTheSun\"\
+  \ as \"FollowTheSun\",\n                \"Join_2\".\"DvDeliveryTask\" as \"DvDeliveryTask\"\
+  ,\n                \"Join_2\".\"DvSupportManager\" as \"DvSupportManager\",\n  \
+  \              \"Join_2\".\"Knowledge\" as \"Knowledge\",\n                \"Join_2\"\
+  .\"ActionStatus\" as \"ActionStatus\",\n                \"Join_2\".\"UUssoil\" as\
+  \ \"UUssoil\",\n                \"Join_2\".\"DvIncident\" as \"DvIncident\",\n \
+  \               \"Join_2\".\"Priority\" as \"Priority\",\n                \"Join_2\"\
+  .\"Problem\" as \"Problem\",\n                \"Join_2\".\"DvUOwnershipCategory\"\
+  \ as \"DvUOwnershipCategory\",\n                \"Join_2\".\"SubCategory\" as \"\
+  SubCategory\",\n                \"Join_2\".\"SysClassName\" as \"SysClassName\"\
+  ,\n                \"Join_2\".\"UponApproval\" as \"UponApproval\",\n          \
+  \      \"Join_2\".\"DvUTotalEscalatedPeriod\" as \"DvUTotalEscalatedPeriod\",\n\
+  \                \"Join_2\".\"UTemporaryRelief\" as \"UTemporaryRelief\",\n    \
+  \            \"Join_2\".\"MadeSla\" as \"MadeSla\",\n                \"Join_2\"\
+  .\"DvUCaseType\" as \"DvUCaseType\",\n                \"Join_2\".\"DvUIncidentState\"\
+  \ as \"DvUIncidentState\",\n                \"Join_2\".\"PercentComplete\" as \"\
+  PercentComplete\",\n                \"Join_2\".\"DvAccount\" as \"DvAccount\",\n\
+  \                \"Join_2\".\"UOutageStartTime\" as \"UOutageStartTime\",\n    \
+  \            \"Join_2\".\"ULegacyId\" as \"ULegacyId\",\n                \"Join_2\"\
+  .\"DvUrgency\" as \"DvUrgency\",\n                \"Join_2\".\"ActivityDue\" as\
+  \ \"ActivityDue\",\n                \"Join_2\".\"DvRejectionGoto\" as \"DvRejectionGoto\"\
+  ,\n                \"Join_2\".\"UCategoryChanged\" as \"UCategoryChanged\",\n  \
+  \              \"Join_2\".\"OpenedBy\" as \"OpenedBy\",\n                \"Join_2\"\
+  .\"DvULanguage\" as \"DvULanguage\",\n                \"Join_2\".\"Product\" as\
+  \ \"Product\",\n                \"Join_2\".\"DeliveryPlan\" as \"DeliveryPlan\"\
+  ,\n                \"Join_2\".\"UCaseCategory\" as \"UCaseCategory\",\n        \
+  \        \"Join_2\".\"USecurityIncident\" as \"USecurityIncident\",\n          \
+  \      \"Join_2\".\"UAssignedOn\" as \"UAssignedOn\",\n                \"Join_2\"\
+  .\"DvUDocumentation\" as \"DvUDocumentation\",\n                \"Join_2\".\"USyncSrc\"\
+  \ as \"USyncSrc\",\n                \"Join_2\".\"DvParent\" as \"DvParent\",\n \
+  \               \"Join_2\".\"DvProblem\" as \"DvProblem\",\n                \"Join_2\"\
+  .\"DvActualDuration\" as \"DvActualDuration\",\n                \"Join_2\".\"BusinessDuration\"\
+  \ as \"BusinessDuration\",\n                \"Join_2\".\"CaseReport\" as \"CaseReport\"\
+  ,\n                \"Join_2\".\"UOperationalMistake\" as \"UOperationalMistake\"\
+  ,\n                \"Join_2\".\"Company\" as \"Company\",\n                \"Join_2\"\
+  .\"CausedBy\" as \"CausedBy\",\n                \"Join_2\".\"DueDate\" as \"DueDate\"\
+  ,\n                \"Join_2\".\"DvActionStatus\" as \"DvActionStatus\",\n      \
+  \          \"Join_2\".\"AssignedTo\" as \"AssignedTo\",\n                \"Join_2\"\
+  .\"Parent\" as \"Parent\",\n                \"Join_2\".\"DvClosedBy\" as \"DvClosedBy\"\
+  ,\n                \"Join_2\".\"UTaskResolved\" as \"UTaskResolved\",\n        \
+  \        \"Join_2\".\"DvUponApproval\" as \"DvUponApproval\",\n                \"\
+  Join_2\".\"UIncidentCategory\" as \"UIncidentCategory\",\n                \"Join_2\"\
+  .\"Variables\" as \"Variables\",\n                \"Join_2\".\"DvUProductTaxonomyInitial\"\
+  \ as \"DvUProductTaxonomyInitial\",\n                \"Join_2\".\"DvAssignmentGroup\"\
+  \ as \"DvAssignmentGroup\",\n                \"Join_2\".\"DvCaseContact\" as \"\
+  DvCaseContact\",\n                \"Join_2\".\"DvSysDomain\" as \"DvSysDomain\"\
+  ,\n                \"Join_2\".\"SysCreatedBy\" as \"SysCreatedBy\",\n          \
+  \      \"Join_2\".\"UCaseType\" as \"UCaseType\",\n                \"Join_2\".\"\
+  SysUpdatedBy\" as \"SysUpdatedBy\",\n                \"Join_2\".\"AssignmentGroup\"\
+  \ as \"AssignmentGroup\",\n                \"Join_2\".\"SlaDue\" as \"SlaDue\",\n\
+  \                \"Join_2\".\"Consumer\" as \"Consumer\",\n                \"Join_2\"\
+  .\"DvAssignedTo\" as \"DvAssignedTo\",\n                \"Join_2\".\"Incident\"\
+  \ as \"Incident\",\n                \"Join_2\".\"ClosedBy\" as \"ClosedBy\",\n \
+  \               \"Join_2\".\"TimeWorked\" as \"TimeWorked\",\n                \"\
+  Join_2\".\"DvUCommunicationsLead\" as \"DvUCommunicationsLead\",\n             \
+  \   \"Join_2\".\"SnAppCsSocialSocialProfile\" as \"SnAppCsSocialSocialProfile\"\
+  ,\n                \"Join_2\".\"DvTaskFor\" as \"DvTaskFor\",\n                \"\
+  Join_2\".\"UBtNumber\" as \"UBtNumber\",\n                \"Join_2\".\"ActualStartDate\"\
+  \ as \"ActualStartDate\",\n                \"Join_2\".\"DvUOutageDuration\" as \"\
+  DvUOutageDuration\",\n                \"Join_2\".\"SyncDriver\" as \"SyncDriver\"\
+  ,\n                \"Join_2\".\"DvActiveAccountEscalation\" as \"DvActiveAccountEscalation\"\
+  ,\n                \"Join_2\".\"UProductTaxonomyInitial\" as \"UProductTaxonomyInitial\"\
+  ,\n                \"Join_2\".\"Case\" as \"Case\",\n                \"Join_2\"\
+  .\"DvLocation\" as \"DvLocation\",\n                \"Join_2\".\"UCategoryPredicted\"\
+  \ as \"UCategoryPredicted\",\n                \"Join_2\".\"CmdbCi\" as \"CmdbCi\"\
+  ,\n                \"Join_2\".\"CorrelationDisplay\" as \"CorrelationDisplay\",\n\
+  \                \"Join_2\".\"DvUCaseCategory\" as \"DvUCaseCategory\",\n      \
+  \          \"Join_2\".\"PartnerContact\" as \"PartnerContact\",\n              \
+  \  \"Join_2\".\"DvDeliveryPlan\" as \"DvDeliveryPlan\",\n                \"Join_2\"\
+  .\"DvSnAppCsSocialSocialProfile\" as \"DvSnAppCsSocialSocialProfile\",\n       \
+  \         \"Join_2\".\"PauseEscalation\" as \"PauseEscalation\",\n             \
+  \   \"Join_2\".\"NotesToComments\" as \"NotesToComments\",\n                \"Join_2\"\
+  .\"ApprovalSet\" as \"ApprovalSet\",\n                \"Join_2\".\"DvGroupList\"\
+  \ as \"DvGroupList\",\n                \"Join_2\".\"DvUCanDuration\" as \"DvUCanDuration\"\
+  ,\n                \"Join_2\".\"DvUProductTaxonomyFinal\" as \"DvUProductTaxonomyFinal\"\
+  ,\n                \"Join_2\".\"WorkEnd\" as \"WorkEnd\",\n                \"Join_2\"\
+  .\"ActualDuration\" as \"ActualDuration\",\n                \"Join_2\".\"DvNotify\"\
+  \ as \"DvNotify\",\n                \"Join_2\".\"SysTags\" as \"SysTags\",\n   \
+  \             \"Join_2\".\"ContactType\" as \"ContactType\",\n                \"\
+  Join_2\".\"BusinessService\" as \"BusinessService\",\n                \"Join_2\"\
+  .\"DvUOutageType\" as \"DvUOutageType\",\n                \"Join_2\".\"State\" as\
+  \ \"State\",\n                \"Join_2\".\"UTotalEscalatedPeriod\" as \"UTotalEscalatedPeriod\"\
+  ,\n                \"Join_2\".\"DvSkills\" as \"DvSkills\",\n                \"\
+  Join_2\".\"Change\" as \"Change\",\n                \"Join_2\".\"DvWfActivity\"\
+  \ as \"DvWfActivity\",\n                \"Join_2\".\"ResolvedAt\" as \"ResolvedAt\"\
+  ,\n                \"Join_2\".\"SysModCount\" as \"SysModCount\",\n            \
+  \    \"Join_2\".\"DvCaseReport\" as \"DvCaseReport\",\n                \"Join_2\"\
+  .\"PspPerDeleteDt\" as \"PspPerDeleteDt\",\n                \"Join_2\".\"HasChild\"\
+  \ as \"HasChild\",\n                \"Join_2\".\"Approval\" as \"Approval\",\n \
+  \               \"Join_2\".\"Project\" as \"Project\",\n                \"Join_2\"\
+  .\"DvSubcategory\" as \"DvSubcategory\",\n                \"Join_2\".\"CalendarDuration\"\
+  \ as \"CalendarDuration\",\n                \"Join_2\".\"URefIncident\" as \"URefIncident\"\
+  ,\n                \"Join_2\".\"RejectionGoto\" as \"RejectionGoto\",\n        \
+  \        \"Join_2\".\"DvChange\" as \"DvChange\",\n                \"Join_2\".\"\
+  ContactLocaltime\" as \"ContactLocaltime\",\n                \"Join_2\".\"DvPartnerContact\"\
+  \ as \"DvPartnerContact\",\n                \"Join_2\".\"DvEscalation\" as \"DvEscalation\"\
+  ,\n                \"Join_2\".\"ULanguage\" as \"ULanguage\",\n                \"\
+  Join_2\".\"UOutageType\" as \"UOutageType\",\n                \"Join_2\".\"DvActiveEscalation\"\
+  \ as \"DvActiveEscalation\",\n                \"Join_2\".\"NeedsAttention\" as \"\
+  NeedsAttention\",\n                \"Join_2\".\"PspPerUpdateDt\" as \"PspPerUpdateDt\"\
+  ,\n                \"Join_2\".\"DvPartner\" as \"DvPartner\",\n                \"\
+  Join_2\".\"FirstReponseTime\" as \"FirstReponseTime\",\n                \"Join_2\"\
+  .\"DvContact\" as \"DvContact\",\n                \"Join_2\".\"DvUAffectedInstances\"\
+  \ as \"DvUAffectedInstances\",\n                \"Join_2\".\"Escalation\" as \"\
+  Escalation\",\n                \"Join_2\".\"CaseContact\" as \"CaseContact\",\n\
+  \                \"Join_2\".\"UAssignmentGroupPredicted\" as \"UAssignmentGroupPredicted\"\
+  ,\n                \"Join_2\".\"UBtSysId\" as \"UBtSysId\",\n                \"\
+  Join_2\".\"CorrelationId\" as \"CorrelationId\",\n                \"Join_2\".\"\
+  UProductTaxonomyFinal\" as \"UProductTaxonomyFinal\",\n                \"Join_2\"\
+  .\"UCanDuration\" as \"UCanDuration\",\n                \"Join_2\".\"ActiveEscalation\"\
+  \ as \"ActiveEscalation\",\n                \"Join_2\".\"Notify\" as \"Notify\"\
+  ,\n                \"Join_2\".\"DvResolutionCode\" as \"DvResolutionCode\",\n  \
+  \              \"Join_2\".\"UponReject\" as \"UponReject\",\n                \"\
+  Join_2\".\"Asset\" as \"Asset\",\n                \"Join_2\".\"TaskFor\" as \"TaskFor\"\
+  ,\n                \"Join_2\".\"DvCompany\" as \"DvCompany\",\n                \"\
+  Join_2\".\"WfActivity\" as \"WfActivity\",\n                \"Join_2\".\"ResolutionCode\"\
+  \ as \"ResolutionCode\",\n                \"Join_2\".\"WorkStart\" as \"WorkStart\"\
+  ,\n                \"Join_2\".\"Impact\" as \"Impact\",\n                \"Join_2\"\
+  .\"Urgency\" as \"Urgency\",\n                \"Join_2\".\"SysDomain\" as \"SysDomain\"\
+  ,\n                \"Join_2\".\"UOwnershipCategory\" as \"UOwnershipCategory\",\n\
+  \                \"Join_2\".\"SysUpdatedOn\" as \"SysUpdatedOn\",\n            \
+  \    \"Join_2\".\"ContactTimeZone\" as \"ContactTimeZone\",\n                \"\
+  Join_2\".\"Cause\" as \"Cause\",\n                \"Join_2\".\"DvContactType\" as\
+  \ \"DvContactType\",\n                \"Join_2\".\"TaskCount\" as \"TaskCount\"\
+  ,\n                \"Join_2\".\"Contact\" as \"Contact\",\n                \"Join_2\"\
+  .\"UEscalated\" as \"UEscalated\",\n                \"Join_2\".\"PlannedEndDate\"\
+  \ as \"PlannedEndDate\",\n                \"Join_2\".\"Location\" as \"Location\"\
+  ,\n                \"Join_2\".\"Entitlement\" as \"Entitlement\",\n            \
+  \    \"Join_2\".\"PlannedStartDate\" as \"PlannedStartDate\",\n                \"\
+  Join_2\".\"Partner\" as \"Partner\",\n                \"Join_2\".\"ActualEndDate\"\
+  \ as \"ActualEndDate\",\n                \"Join_2\".\"Active\" as \"Active\",\n\
+  \                \"Join_2\".\"FollowUp\" as \"FollowUp\",\n                \"Join_2\"\
+  .\"UOutageDuration\" as \"UOutageDuration\",\n                \"Join_2\".\"ResolvedBy\"\
+  \ as \"ResolvedBy\",\n                \"Join_2\".\"PspPerInsertDt\" as \"PspPerInsertDt\"\
+  ,\n                \"Join_2\".\"Uid\" as \"Uid\",\n                \"Join_2\".\"\
+  ActiveAccountEscalation\" as \"ActiveAccountEscalation\",\n                \"Join_2\"\
+  .\"PlannedDuration\" as \"PlannedDuration\",\n                \"Join_2\".\"DvCausedBy\"\
+  \ as \"DvCausedBy\",\n                \"Join_2\".\"UCommunicationsLead\" as \"UCommunicationsLead\"\
+  ,\n                \"Join_2\".\"Order\" as \"Order\",\n                \"Join_2\"\
+  .\"DvCalendarDuration\" as \"DvCalendarDuration\",\n                \"Join_2\".\"\
+  DvSysClassName\" as \"DvSysClassName\",\n                \"Join_2\".\"SupportManager\"\
+  \ as \"SupportManager\",\n                \"Join_2\".\"UPredictionAttempted\" as\
+  \ \"UPredictionAttempted\",\n                \"Join_2\".\"DvResolvedBy\" as \"DvResolvedBy\"\
+  ,\n                \"Join_2\".\"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\",\n\
+  \                \"Join_2\".\"ShortDescription\" as \"ShortDescription\",\n    \
+  \            \"Join_2\".\"DvUEnhancementRequest\" as \"DvUEnhancementRequest\",\n\
+  \                \"Join_2\".\"UEnhancementRequest\" as \"UEnhancementRequest\",\n\
+  \                \"Join_2\".\"WatchList\" as \"WatchList\",\n                \"\
+  Join_2\".\"Description\" as \"Description\",\n                \"Join_2\".\"DvContract\"\
+  \ as \"DvContract\",\n                \"Join_2\".\"SysDomainpath\" as \"SysDomainpath\"\
+  ,\n                \"Join_2\".\"ApprovalHistory\" as \"ApprovalHistory\",\n    \
+  \            \"Join_2\".\"DvProduct\" as \"DvProduct\",\n                \"Join_2\"\
+  .\"DvVariables\" as \"DvVariables\",\n                \"Join_2\".\"DvCmdbCi\" as\
+  \ \"DvCmdbCi\",\n                \"Join_2\".\"DvAsset\" as \"DvAsset\",\n      \
+  \          \"Join_2\".\"UTags\" as \"UTags\",\n                \"Join_2\".\"UAffectedInstances\"\
+  \ as \"UAffectedInstances\",\n                \"Join_2\".\"UStepsToReproduce\" as\
+  \ \"UStepsToReproduce\",\n                \"Join_2\".\"UserInput\" as \"UserInput\"\
+  ,\n                \"Join_2\".\"GroupList\" as \"GroupList\",\n                \"\
+  Join_2\".\"Skills\" as \"Skills\",\n                \"Join_2\".\"AdditionalAssigneeList\"\
+  \ as \"AdditionalAssigneeList\",\n                \"Join_2\".\"CloseNotes\" as \"\
+  CloseNotes\",\n                \"Join_2\".\"UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\"\
+  ,\n                \"Join_2\".\"USyncMetadata\" as \"USyncMetadata\",\n        \
+  \        \"Join_2\".\"DvProject\" as \"DvProject\",\n                \"Join_2\"\
+  .\"Comments\" as \"Comments\",\n                \"Join_2\".\"WorkNotes\" as \"WorkNotes\"\
+  ,\n                \"Join_2\".\"DvBusinessService\" as \"DvBusinessService\",\n\
+  \                \"Join_2\".\"IsFederal\" as \"IsFederal\",\n                \"\
+  Join_2\".\"DvUUpgradeCase\" as \"DvUUpgradeCase\",\n                \"Join_2\".\"\
+  UPotentiallyCausedByUpgrade\" as \"UPotentiallyCausedByUpgrade\",\n            \
+  \    \"Join_2\".\"UAlertType\" as \"UAlertType\",\n                \"Join_2\".\"\
+  DvUIncidentCategory\" as \"DvUIncidentCategory\",\n                \"Join_2\".\"\
+  DvBlockingReason\" as \"DvBlockingReason\",\n                \"Join_2\".\"ReassignmentCount\"\
+  \ as \"ReassignmentCount\",\n                \"Aggregation_1\".\"MEscCount\" as\
+  \ \"MEscCount\",\n                \"Join_2\".\"DvLanguage1\" as \"DvLanguage1\"\
+  ,\n                \"Join_2\".\"DvUReleaseFamily\" as \"DvUReleaseFamily\",\n  \
+  \              \"Join_2\".\"AssignedOn\" as \"AssignedOn\",\n                \"\
+  Join_2\".\"PreferredLanguageSupport\" as \"PreferredLanguageSupport\",\n       \
+  \         \"Join_2\".\"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\",\n               \
+  \ \"Join_2\".\"U_RESPONSE_TIME_ACHIEVED\" as \"U_RESPONSE_TIME_ACHIEVED\",\n   \
+  \             \"Join_2\".\"DvUEnhancedSLA\" as \"DvUEnhancedSLA\",\n           \
+  \     \"Join_2\".\"ULastAssignee\" as \"ULastAssignee\",\n                \"Join_2\"\
+  .\"DvULastAssignee\" as \"DvULastAssignee\",\n\t\t\t\t\"Join_2\".\"DvUProductFinalTaxonomy\"\
+  \ as \"DvUProductFinalTaxonomy\",\n                \"Join_2\".\"UProductFinalTaxonomy\"\
+  \ as \"UProductFinalTaxonomy\",\n                \"Join_2\".\"DvUProductInitialTaxonomy\"\
+  \ as \"DvUProductInitialTaxonomy\",\n                \"Join_2\".\"UProductInitialTaxonomy\"\
+  \ as \"UProductInitialTaxonomy\",\n             SPLIT_PART(\"DvUPrimaryBlocker\"\
+  , 'random', 'random') as \"PrimaryBlocker\"\n      FROM\n        (SELECT \"Join_5\"\
+  .\"DvURefIncident\" as \"DvURefIncident\",\n                   \"Join_5\".\"CaseNumber\"\
+  \ as \"CaseNumber\",\n                   \"Join_5\".\"DvImpact\" as \"DvImpact\"\
+  ,\n                   \"Join_5\".\"DvPriority\" as \"DvPriority\",\n           \
+  \        \"Join_5\".\"DvState\" as \"DvState\",\n                   \"Join_5\".\"\
+  CalendarSTCCase\" as \"CalendarSTCCase\",\n                   \"Join_5\".\"OpenedAt\"\
+  \ as \"OpenedAt\",\n                   \"Join_5\".\"ClosedAt\" as \"ClosedAt\",\n\
+  \                   \"Join_5\".\"SysCreatedOn\" as \"SysCreatedOn\",\n         \
+  \          \"Join_5\".\"DvConsumer\" as \"DvConsumer\",\n                   \"Join_5\"\
+  .\"DvAdditionalAssigneeList\" as \"DvAdditionalAssigneeList\",\n               \
+  \    \"Join_5\".\"ULastUpdateToCustomer\" as \"ULastUpdateToCustomer\",\n      \
+  \             \"Join_5\".\"Account\" as \"Account\",\n                   \"Join_5\"\
+  .\"UDocumentation\" as \"UDocumentation\",\n                   \"Join_5\".\"Deliverytask\"\
+  \ as \"Deliverytask\",\n                   \"Join_5\".\"DvContactTimeZone\" as \"\
+  DvContactTimeZone\",\n                   \"Join_5\".\"ExpectedStart\" as \"ExpectedStart\"\
+  ,\n                   \"Join_5\".\"UOutageEndTime\" as \"UOutageEndTime\",\n   \
+  \                \"Join_5\".\"Category\" as \"Category\",\n                   \"\
+  Join_5\".\"DvUOperationalMistake\" as \"DvUOperationalMistake\",\n             \
+  \      \"Join_5\".\"UEscalationCount\" as \"UEscalationCount\",\n              \
+  \     \"Join_5\".\"DvBusinessDuration\" as \"DvBusinessDuration\",\n           \
+  \        \"Join_5\".\"DvOpenedBy\" as \"DvOpenedBy\",\n                   \"Join_5\"\
+  .\"DvCategory\" as \"DvCategory\",\n                   \"Join_5\".\"DvUWorkNotesWatchlist\"\
+  \ as \"DvUWorkNotesWatchlist\",\n                   \"Join_5\".\"DvApproval\" as\
+  \ \"DvApproval\",\n                   \"Join_5\".\"DvPlannedDuration\" as \"DvPlannedDuration\"\
+  ,\n                   \"Join_5\".\"DvEntitlement\" as \"DvEntitlement\",\n     \
+  \              \"Join_5\".\"Contract\" as \"Contract\",\n                   \"Join_5\"\
+  .\"DvWatchList\" as \"DvWatchList\",\n                   \"Join_5\".\"UIncidentState\"\
+  \ as \"UIncidentState\",\n                   \"Join_5\".\"EstimatedCost\" as \"\
+  EstimatedCost\",\n                   \"Join_5\".\"SysId\" as \"SysId\",\n      \
+  \             \"Join_5\".\"DvUponReject\" as \"DvUponReject\",\n               \
+  \    \"Join_5\".\"FollowTheSun\" as \"FollowTheSun\",\n                   \"Join_5\"\
+  .\"DvDeliveryTask\" as \"DvDeliveryTask\",\n                   \"Join_5\".\"DvSupportManager\"\
+  \ as \"DvSupportManager\",\n                   \"Join_5\".\"Knowledge\" as \"Knowledge\"\
+  ,\n                   \"Join_5\".\"ActionStatus\" as \"ActionStatus\",\n       \
+  \            \"Join_5\".\"UUssoil\" as \"UUssoil\",\n                   \"Join_5\"\
+  .\"DvIncident\" as \"DvIncident\",\n                   \"Join_5\".\"Priority\" as\
+  \ \"Priority\",\n                   \"Join_5\".\"Problem\" as \"Problem\",\n   \
+  \                \"Join_5\".\"DvUOwnershipCategory\" as \"DvUOwnershipCategory\"\
+  ,\n                   \"Join_5\".\"SubCategory\" as \"SubCategory\",\n         \
+  \          \"Join_5\".\"SysClassName\" as \"SysClassName\",\n                  \
+  \ \"Join_5\".\"UponApproval\" as \"UponApproval\",\n                   \"Join_5\"\
+  .\"DvUTotalEscalatedPeriod\" as \"DvUTotalEscalatedPeriod\",\n                 \
+  \  \"Join_5\".\"UTemporaryRelief\" as \"UTemporaryRelief\",\n                  \
+  \ \"Join_5\".\"MadeSla\" as \"MadeSla\",\n                   \"Join_5\".\"DvUCaseType\"\
+  \ as \"DvUCaseType\",\n                   \"Join_5\".\"DvUIncidentState\" as \"\
+  DvUIncidentState\",\n                   \"Join_5\".\"PercentComplete\" as \"PercentComplete\"\
+  ,\n                   \"Join_5\".\"DvAccount\" as \"DvAccount\",\n             \
+  \      \"Join_5\".\"UOutageStartTime\" as \"UOutageStartTime\",\n              \
+  \     \"Join_5\".\"ULegacyId\" as \"ULegacyId\",\n                   \"Join_5\"\
+  .\"DvUrgency\" as \"DvUrgency\",\n                   \"Join_5\".\"ActivityDue\"\
+  \ as \"ActivityDue\",\n                   \"Join_5\".\"DvRejectionGoto\" as \"DvRejectionGoto\"\
+  ,\n                   \"Join_5\".\"UCategoryChanged\" as \"UCategoryChanged\",\n\
+  \                   \"Join_5\".\"OpenedBy\" as \"OpenedBy\",\n                 \
+  \  \"Join_5\".\"DvULanguage\" as \"DvULanguage\",\n                   \"Join_5\"\
+  .\"Product\" as \"Product\",\n                   \"Join_5\".\"DeliveryPlan\" as\
+  \ \"DeliveryPlan\",\n                   \"Join_5\".\"UCaseCategory\" as \"UCaseCategory\"\
+  ,\n                   \"Join_5\".\"USecurityIncident\" as \"USecurityIncident\"\
+  ,\n                   \"Join_5\".\"UAssignedOn\" as \"UAssignedOn\",\n         \
+  \          \"Join_5\".\"DvUDocumentation\" as \"DvUDocumentation\",\n          \
+  \         \"Join_5\".\"USyncSrc\" as \"USyncSrc\",\n                   \"Join_5\"\
+  .\"DvParent\" as \"DvParent\",\n                   \"Join_5\".\"DvProblem\" as \"\
+  DvProblem\",\n                   \"Join_5\".\"DvActualDuration\" as \"DvActualDuration\"\
+  ,\n                   \"Join_5\".\"BusinessDuration\" as \"BusinessDuration\",\n\
+  \                   \"Join_5\".\"CaseReport\" as \"CaseReport\",\n             \
+  \      \"Join_5\".\"UOperationalMistake\" as \"UOperationalMistake\",\n        \
+  \           \"Join_5\".\"Company\" as \"Company\",\n                   \"Join_5\"\
+  .\"CausedBy\" as \"CausedBy\",\n                   \"Join_5\".\"DueDate\" as \"\
+  DueDate\",\n                   \"Join_5\".\"DvActionStatus\" as \"DvActionStatus\"\
+  ,\n                   \"Join_5\".\"AssignedTo\" as \"AssignedTo\",\n           \
+  \        \"Join_5\".\"Parent\" as \"Parent\",\n                   \"Join_5\".\"\
+  DvClosedBy\" as \"DvClosedBy\",\n                   \"Join_5\".\"UTaskResolved\"\
+  \ as \"UTaskResolved\",\n                   \"Join_5\".\"DvUponApproval\" as \"\
+  DvUponApproval\",\n                   \"Join_5\".\"UIncidentCategory\" as \"UIncidentCategory\"\
+  ,\n                   \"Join_5\".\"Variables\" as \"Variables\",\n             \
+  \      \"Join_5\".\"DvUProductTaxonomyInitial\" as \"DvUProductTaxonomyInitial\"\
+  ,\n                   \"Join_5\".\"DvAssignmentGroup\" as \"DvAssignmentGroup\"\
+  ,\n                   \"Join_5\".\"DvCaseContact\" as \"DvCaseContact\",\n     \
+  \              \"Join_5\".\"DvSysDomain\" as \"DvSysDomain\",\n                \
+  \   \"Join_5\".\"SysCreatedBy\" as \"SysCreatedBy\",\n                   \"Join_5\"\
+  .\"UCaseType\" as \"UCaseType\",\n                   \"Join_5\".\"SysUpdatedBy\"\
+  \ as \"SysUpdatedBy\",\n                   \"Join_5\".\"AssignmentGroup\" as \"\
+  AssignmentGroup\",\n                   \"Join_5\".\"SlaDue\" as \"SlaDue\",\n  \
+  \                 \"Join_5\".\"Consumer\" as \"Consumer\",\n                   \"\
+  Join_5\".\"DvAssignedTo\" as \"DvAssignedTo\",\n                   \"Join_5\".\"\
+  Incident\" as \"Incident\",\n                   \"Join_5\".\"ClosedBy\" as \"ClosedBy\"\
+  ,\n                   \"Join_5\".\"TimeWorked\" as \"TimeWorked\",\n           \
+  \        \"Join_5\".\"DvUCommunicationsLead\" as \"DvUCommunicationsLead\",\n  \
+  \                 \"Join_5\".\"SnAppCsSocialSocialProfile\" as \"SnAppCsSocialSocialProfile\"\
+  ,\n                   \"Join_5\".\"DvTaskFor\" as \"DvTaskFor\",\n             \
+  \      \"Join_5\".\"UBtNumber\" as \"UBtNumber\",\n                   \"Join_5\"\
+  .\"ActualStartDate\" as \"ActualStartDate\",\n                   \"Join_5\".\"DvUOutageDuration\"\
+  \ as \"DvUOutageDuration\",\n                   \"Join_5\".\"SyncDriver\" as \"\
+  SyncDriver\",\n                   \"Join_5\".\"DvActiveAccountEscalation\" as \"\
+  DvActiveAccountEscalation\",\n                   \"Join_5\".\"UProductTaxonomyInitial\"\
+  \ as \"UProductTaxonomyInitial\",\n                   \"Join_5\".\"Case\" as \"\
+  Case\",\n                   \"Join_5\".\"DvLocation\" as \"DvLocation\",\n     \
+  \              \"Join_5\".\"UCategoryPredicted\" as \"UCategoryPredicted\",\n  \
+  \                 \"Join_5\".\"CmdbCi\" as \"CmdbCi\",\n                   \"Join_5\"\
+  .\"CorrelationDisplay\" as \"CorrelationDisplay\",\n                   \"Join_5\"\
+  .\"DvUCaseCategory\" as \"DvUCaseCategory\",\n                   \"Join_5\".\"PartnerContact\"\
+  \ as \"PartnerContact\",\n                   \"Join_5\".\"DvDeliveryPlan\" as \"\
+  DvDeliveryPlan\",\n                   \"Join_5\".\"DvSnAppCsSocialSocialProfile\"\
+  \ as \"DvSnAppCsSocialSocialProfile\",\n                   \"Join_5\".\"PauseEscalation\"\
+  \ as \"PauseEscalation\",\n                   \"Join_5\".\"NotesToComments\" as\
+  \ \"NotesToComments\",\n                   \"Join_5\".\"ApprovalSet\" as \"ApprovalSet\"\
+  ,\n                   \"Join_5\".\"DvGroupList\" as \"DvGroupList\",\n         \
+  \          \"Join_5\".\"DvUCanDuration\" as \"DvUCanDuration\",\n              \
+  \     \"Join_5\".\"DvUProductTaxonomyFinal\" as \"DvUProductTaxonomyFinal\",\n \
+  \                  \"Join_5\".\"WorkEnd\" as \"WorkEnd\",\n                   \"\
+  Join_5\".\"ActualDuration\" as \"ActualDuration\",\n                   \"Join_5\"\
+  .\"DvNotify\" as \"DvNotify\",\n                   \"Join_5\".\"SysTags\" as \"\
+  SysTags\",\n                   \"Join_5\".\"ContactType\" as \"ContactType\",\n\
+  \                   \"Join_5\".\"BusinessService\" as \"BusinessService\",\n   \
+  \                \"Join_5\".\"DvUOutageType\" as \"DvUOutageType\",\n          \
+  \         \"Join_5\".\"State\" as \"State\",\n                   \"Join_5\".\"UTotalEscalatedPeriod\"\
+  \ as \"UTotalEscalatedPeriod\",\n                   \"Join_5\".\"DvSkills\" as \"\
+  DvSkills\",\n                   \"Join_5\".\"Change\" as \"Change\",\n         \
+  \          \"Join_5\".\"DvWfActivity\" as \"DvWfActivity\",\n                  \
+  \ \"Join_5\".\"ResolvedAt\" as \"ResolvedAt\",\n                   \"Join_5\".\"\
+  SysModCount\" as \"SysModCount\",\n                   \"Join_5\".\"DvCaseReport\"\
+  \ as \"DvCaseReport\",\n                   \"Join_5\".\"PspPerDeleteDt\" as \"PspPerDeleteDt\"\
+  ,\n                   \"Join_5\".\"HasChild\" as \"HasChild\",\n               \
+  \    \"Join_5\".\"Approval\" as \"Approval\",\n                   \"Join_5\".\"\
+  Project\" as \"Project\",\n                   \"Join_5\".\"DvSubcategory\" as \"\
+  DvSubcategory\",\n                   \"Join_5\".\"CalendarDuration\" as \"CalendarDuration\"\
+  ,\n                   \"Join_5\".\"URefIncident\" as \"URefIncident\",\n       \
+  \            \"Join_5\".\"RejectionGoto\" as \"RejectionGoto\",\n              \
+  \     \"Join_5\".\"DvChange\" as \"DvChange\",\n                   \"Join_5\".\"\
+  ContactLocaltime\" as \"ContactLocaltime\",\n                   \"Join_5\".\"DvPartnerContact\"\
+  \ as \"DvPartnerContact\",\n                   \"Join_5\".\"DvEscalation\" as \"\
+  DvEscalation\",\n                   \"Join_5\".\"ULanguage\" as \"ULanguage\",\n\
+  \                   \"Join_5\".\"UOutageType\" as \"UOutageType\",\n           \
+  \        \"Join_5\".\"DvActiveEscalation\" as \"DvActiveEscalation\",\n        \
+  \           \"Join_5\".\"NeedsAttention\" as \"NeedsAttention\",\n             \
+  \      \"Join_5\".\"PspPerUpdateDt\" as \"PspPerUpdateDt\",\n                  \
+  \ \"Join_5\".\"DvPartner\" as \"DvPartner\",\n                   \"Join_5\".\"FirstReponseTime\"\
+  \ as \"FirstReponseTime\",\n                   \"Join_5\".\"DvContact\" as \"DvContact\"\
+  ,\n                   \"Join_5\".\"DvUAffectedInstances\" as \"DvUAffectedInstances\"\
+  ,\n                   \"Join_5\".\"Escalation\" as \"Escalation\",\n           \
+  \        \"Join_5\".\"CaseContact\" as \"CaseContact\",\n                   \"Join_5\"\
+  .\"UAssignmentGroupPredicted\" as \"UAssignmentGroupPredicted\",\n             \
+  \      \"Join_5\".\"UBtSysId\" as \"UBtSysId\",\n                   \"Join_5\".\"\
+  CorrelationId\" as \"CorrelationId\",\n                   \"Join_5\".\"UProductTaxonomyFinal\"\
+  \ as \"UProductTaxonomyFinal\",\n                   \"Join_5\".\"UCanDuration\"\
+  \ as \"UCanDuration\",\n                   \"Join_5\".\"ActiveEscalation\" as \"\
+  ActiveEscalation\",\n                   \"Join_5\".\"Notify\" as \"Notify\",\n \
+  \                  \"Join_5\".\"DvResolutionCode\" as \"DvResolutionCode\",\n  \
+  \                 \"Join_5\".\"UponReject\" as \"UponReject\",\n               \
+  \    \"Join_5\".\"Asset\" as \"Asset\",\n                   \"Join_5\".\"TaskFor\"\
+  \ as \"TaskFor\",\n                   \"Join_5\".\"DvCompany\" as \"DvCompany\"\
+  ,\n                   \"Join_5\".\"WfActivity\" as \"WfActivity\",\n           \
+  \        \"Join_5\".\"ResolutionCode\" as \"ResolutionCode\",\n                \
+  \   \"Join_5\".\"WorkStart\" as \"WorkStart\",\n                   \"Join_5\".\"\
+  Impact\" as \"Impact\",\n                   \"Join_5\".\"Urgency\" as \"Urgency\"\
+  ,\n                   \"Join_5\".\"SysDomain\" as \"SysDomain\",\n             \
+  \      \"Join_5\".\"UOwnershipCategory\" as \"UOwnershipCategory\",\n          \
+  \         \"Join_5\".\"SysUpdatedOn\" as \"SysUpdatedOn\",\n                   \"\
+  Join_5\".\"ContactTimeZone\" as \"ContactTimeZone\",\n                   \"Join_5\"\
+  .\"Cause\" as \"Cause\",\n                   \"Join_5\".\"DvContactType\" as \"\
+  DvContactType\",\n                   \"Join_5\".\"TaskCount\" as \"TaskCount\",\n\
+  \                   \"Join_5\".\"Contact\" as \"Contact\",\n                   \"\
+  Join_5\".\"UEscalated\" as \"UEscalated\",\n                   \"Join_5\".\"PlannedEndDate\"\
+  \ as \"PlannedEndDate\",\n                   \"Join_5\".\"Location\" as \"Location\"\
+  ,\n                   \"Join_5\".\"Entitlement\" as \"Entitlement\",\n         \
+  \          \"Join_5\".\"PlannedStartDate\" as \"PlannedStartDate\",\n          \
+  \         \"Join_5\".\"Partner\" as \"Partner\",\n                   \"Join_5\"\
+  .\"ActualEndDate\" as \"ActualEndDate\",\n                   \"Join_5\".\"Active\"\
+  \ as \"Active\",\n                   \"Join_5\".\"FollowUp\" as \"FollowUp\",\n\
+  \                   \"Join_5\".\"UOutageDuration\" as \"UOutageDuration\",\n   \
+  \                \"Join_5\".\"ResolvedBy\" as \"ResolvedBy\",\n                \
+  \   \"Join_5\".\"PspPerInsertDt\" as \"PspPerInsertDt\",\n                   \"\
+  Join_5\".\"Uid\" as \"Uid\",\n                   \"Join_5\".\"ActiveAccountEscalation\"\
+  \ as \"ActiveAccountEscalation\",\n                   \"Join_5\".\"PlannedDuration\"\
+  \ as \"PlannedDuration\",\n                   \"Join_5\".\"DvCausedBy\" as \"DvCausedBy\"\
+  ,\n                   \"Join_5\".\"UCommunicationsLead\" as \"UCommunicationsLead\"\
+  ,\n                   \"Join_5\".\"Order\" as \"Order\",\n                   \"\
+  Join_5\".\"DvCalendarDuration\" as \"DvCalendarDuration\",\n                   \"\
+  Join_5\".\"DvSysClassName\" as \"DvSysClassName\",\n                   \"Join_5\"\
+  .\"SupportManager\" as \"SupportManager\",\n                   \"Join_5\".\"UPredictionAttempted\"\
+  \ as \"UPredictionAttempted\",\n                   \"Join_5\".\"DvResolvedBy\" as\
+  \ \"DvResolvedBy\",\n                   \"Join_5\".\"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\"\
+  ,\n                   \"Join_5\".\"ShortDescription\" as \"ShortDescription\",\n\
+  \                   \"Join_5\".\"DvUEnhancementRequest\" as \"DvUEnhancementRequest\"\
+  ,\n                   \"Join_5\".\"UEnhancementRequest\" as \"UEnhancementRequest\"\
+  ,\n                   \"Join_5\".\"WatchList\" as \"WatchList\",\n             \
+  \      \"Join_5\".\"Description\" as \"Description\",\n                   \"Join_5\"\
+  .\"DvContract\" as \"DvContract\",\n                   \"Join_5\".\"SysDomainpath\"\
+  \ as \"SysDomainpath\",\n                   \"Join_5\".\"ApprovalHistory\" as \"\
+  ApprovalHistory\",\n                   \"Join_5\".\"DvProduct\" as \"DvProduct\"\
+  ,\n                   \"Join_5\".\"DvVariables\" as \"DvVariables\",\n         \
+  \          \"Join_5\".\"DvCmdbCi\" as \"DvCmdbCi\",\n                   \"Join_5\"\
+  .\"DvAsset\" as \"DvAsset\",\n                   \"Join_5\".\"UTags\" as \"UTags\"\
+  ,\n                   \"Join_5\".\"UAffectedInstances\" as \"UAffectedInstances\"\
+  ,\n                   \"Join_5\".\"UStepsToReproduce\" as \"UStepsToReproduce\"\
+  ,\n                   \"Join_5\".\"UserInput\" as \"UserInput\",\n             \
+  \      \"Join_5\".\"GroupList\" as \"GroupList\",\n                   \"Join_5\"\
+  .\"Skills\" as \"Skills\",\n                   \"Join_5\".\"AdditionalAssigneeList\"\
+  \ as \"AdditionalAssigneeList\",\n                   \"Join_5\".\"CloseNotes\" as\
+  \ \"CloseNotes\",\n                   \"Join_5\".\"UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\"\
+  ,\n                   \"Join_5\".\"USyncMetadata\" as \"USyncMetadata\",\n     \
+  \              \"Join_5\".\"DvProject\" as \"DvProject\",\n                   \"\
+  Join_5\".\"Comments\" as \"Comments\",\n                   \"Join_5\".\"WorkNotes\"\
+  \ as \"WorkNotes\",\n                   \"Join_5\".\"DvBusinessService\" as \"DvBusinessService\"\
+  ,\n                   \"Join_5\".\"IsFederal\" as \"IsFederal\",\n             \
+  \      \"Join_5\".\"DvUUpgradeCase\" as \"DvUUpgradeCase\",\n                  \
+  \ \"Join_5\".\"UPotentiallyCausedByUpgrade\" as \"UPotentiallyCausedByUpgrade\"\
+  ,\n                   \"Join_5\".\"UAlertType\" as \"UAlertType\",\n           \
+  \        \"Join_5\".\"DvUIncidentCategory\" as \"DvUIncidentCategory\",\n      \
+  \             \"Rank_1\".\"DvBlockingReason\" as \"DvBlockingReason\",\n       \
+  \            \"Join_5\".\"ReassignmentCount\" as \"ReassignmentCount\",\n      \
+  \             \"Join_5\".\"DvLanguage1\" as \"DvLanguage1\",\n                 \
+  \  \"Join_5\".\"DvUReleaseFamily\" as \"DvUReleaseFamily\",\n                  \
+  \ \"Join_5\".\"AssignedOn\" as \"AssignedOn\",\n                   \"Join_5\".\"\
+  PreferredLanguageSupport\" as \"PreferredLanguageSupport\",\n                  \
+  \ \"Join_5\".\"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\",\n                   \"Join_5\"\
+  .\"U_RESPONSE_TIME_ACHIEVED\" as \"U_RESPONSE_TIME_ACHIEVED\",\n               \
+  \    \"Join_5\".\"DvUEnhancedSLA\" as \"DvUEnhancedSLA\",\n                   \"\
+  Join_5\".\"ULastAssignee\" as \"ULastAssignee\",\n                   \"Join_5\"\
+  .\"DvULastAssignee\" as \"DvULastAssignee\",\n\t\t\t\t   \"Join_5\".\"DvUProductFinalTaxonomy\"\
+  \ as \"DvUProductFinalTaxonomy\",\n                   \"Join_5\".\"UProductFinalTaxonomy\"\
+  \ as \"UProductFinalTaxonomy\",\n                   \"Join_5\".\"DvUProductInitialTaxonomy\"\
+  \ as \"DvUProductInitialTaxonomy\",\n                   \"Join_5\".\"UProductInitialTaxonomy\"\
+  \ as \"UProductInitialTaxonomy\",\n                IFF(\"DvState\" = 'random'\n\
+  \                    and \"DvBlockingReason\" = 'random', 'random', 'random') as\
+  \ \"UCustomerActionNeededCase\",\n                IFF((\"DvBlockingReason\") IS\
+  \ NULL , 'random', IFF(\"DvBlockingReason\" = 'random', 'random', 'random')) as\
+  \ \"USRECase\"\n         FROM\n           (SELECT DISTINCT \"Projection_2\".\"DvURefIncident\"\
+  \ as \"DvURefIncident\",\n                           \"Projection_2\".\"CaseNumber\"\
+  \ as \"CaseNumber\",\n                      \"Projection_2\".\"DvImpact\" as \"\
+  DvImpact\",\n                      \"Projection_2\".\"DvPriority\" as \"DvPriority\"\
+  ,\n                      \"Projection_2\".\"DvState\" as \"DvState\",\n        \
+  \              \"Projection_2\".\"CalendarSTCCase\" as \"CalendarSTCCase\",\n  \
+  \                    \"Projection_2\".\"OpenedAt\" as \"OpenedAt\",\n          \
+  \            \"Projection_2\".\"ClosedAt\" as \"ClosedAt\",\n                  \
+  \    \"Projection_2\".\"SysCreatedOn\" as \"SysCreatedOn\",\n                  \
+  \    \"Projection_2\".\"DvConsumer\" as \"DvConsumer\",\n                      \"\
+  Projection_2\".\"DvAdditionalAssigneeList\" as \"DvAdditionalAssigneeList\",\n \
+  \                     \"Projection_2\".\"ULastUpdateToCustomer\" as \"ULastUpdateToCustomer\"\
+  ,\n                      \"Projection_2\".\"Account\" as \"Account\",\n        \
+  \              \"Projection_2\".\"UDocumentation\" as \"UDocumentation\",\n    \
+  \                  \"Projection_2\".\"Deliverytask\" as \"Deliverytask\",\n    \
+  \                  \"Projection_2\".\"DvContactTimeZone\" as \"DvContactTimeZone\"\
+  ,\n                      \"Projection_2\".\"ExpectedStart\" as \"ExpectedStart\"\
+  ,\n                      \"Projection_2\".\"UOutageEndTime\" as \"UOutageEndTime\"\
+  ,\n                      \"Projection_2\".\"Category\" as \"Category\",\n      \
+  \                \"Projection_2\".\"DvUOperationalMistake\" as \"DvUOperationalMistake\"\
+  ,\n                      \"Projection_2\".\"UEscalationCount\" as \"UEscalationCount\"\
+  ,\n                      \"Projection_2\".\"DvBusinessDuration\" as \"DvBusinessDuration\"\
+  ,\n                      \"Projection_2\".\"DvOpenedBy\" as \"DvOpenedBy\",\n  \
+  \                    \"Projection_2\".\"DvCategory\" as \"DvCategory\",\n      \
+  \                \"Projection_2\".\"DvUWorkNotesWatchlist\" as \"DvUWorkNotesWatchlist\"\
+  ,\n                      \"Projection_2\".\"DvApproval\" as \"DvApproval\",\n  \
+  \                    \"Projection_2\".\"DvPlannedDuration\" as \"DvPlannedDuration\"\
+  ,\n                      \"Projection_2\".\"DvEntitlement\" as \"DvEntitlement\"\
+  ,\n                      \"Projection_2\".\"Contract\" as \"Contract\",\n      \
+  \                \"Projection_2\".\"DvWatchList\" as \"DvWatchList\",\n        \
+  \              \"Projection_2\".\"UIncidentState\" as \"UIncidentState\",\n    \
+  \                  \"Projection_2\".\"EstimatedCost\" as \"EstimatedCost\",\n  \
+  \                    \"Projection_2\".\"SysId\" as \"SysId\",\n                \
+  \      \"Projection_2\".\"DvUponReject\" as \"DvUponReject\",\n                \
+  \      \"Projection_2\".\"FollowTheSun\" as \"FollowTheSun\",\n                \
+  \      \"Projection_2\".\"DvDeliveryTask\" as \"DvDeliveryTask\",\n            \
+  \          \"Projection_2\".\"DvSupportManager\" as \"DvSupportManager\",\n    \
+  \                  \"Projection_2\".\"Knowledge\" as \"Knowledge\",\n          \
+  \            \"Projection_2\".\"ActionStatus\" as \"ActionStatus\",\n          \
+  \            \"Projection_2\".\"UUssoil\" as \"UUssoil\",\n                    \
+  \  \"Projection_2\".\"DvIncident\" as \"DvIncident\",\n                      \"\
+  Projection_2\".\"Priority\" as \"Priority\",\n                      \"Projection_2\"\
+  .\"Problem\" as \"Problem\",\n                      \"Projection_2\".\"DvUOwnershipCategory\"\
+  \ as \"DvUOwnershipCategory\",\n                      \"Projection_2\".\"SubCategory\"\
+  \ as \"SubCategory\",\n                      \"Projection_2\".\"SysClassName\" as\
+  \ \"SysClassName\",\n                      \"Projection_2\".\"UponApproval\" as\
+  \ \"UponApproval\",\n                      \"Projection_2\".\"DvUTotalEscalatedPeriod\"\
+  \ as \"DvUTotalEscalatedPeriod\",\n                      \"Projection_2\".\"UTemporaryRelief\"\
+  \ as \"UTemporaryRelief\",\n                      \"Projection_2\".\"MadeSla\" as\
+  \ \"MadeSla\",\n                      \"Projection_2\".\"DvUCaseType\" as \"DvUCaseType\"\
+  ,\n                      \"Projection_2\".\"DvUIncidentState\" as \"DvUIncidentState\"\
+  ,\n                      \"Projection_2\".\"PercentComplete\" as \"PercentComplete\"\
+  ,\n                      \"Projection_2\".\"DvAccount\" as \"DvAccount\",\n    \
+  \                  \"Projection_2\".\"UOutageStartTime\" as \"UOutageStartTime\"\
+  ,\n                      \"Projection_2\".\"ULegacyId\" as \"ULegacyId\",\n    \
+  \                  \"Projection_2\".\"DvUrgency\" as \"DvUrgency\",\n          \
+  \            \"Projection_2\".\"ActivityDue\" as \"ActivityDue\",\n            \
+  \          \"Projection_2\".\"DvRejectionGoto\" as \"DvRejectionGoto\",\n      \
+  \                \"Projection_2\".\"UCategoryChanged\" as \"UCategoryChanged\",\n\
+  \                      \"Projection_2\".\"OpenedBy\" as \"OpenedBy\",\n        \
+  \              \"Projection_2\".\"DvULanguage\" as \"DvULanguage\",\n          \
+  \            \"Projection_2\".\"Product\" as \"Product\",\n                    \
+  \  \"Projection_2\".\"DeliveryPlan\" as \"DeliveryPlan\",\n                    \
+  \  \"Projection_2\".\"UCaseCategory\" as \"UCaseCategory\",\n                  \
+  \    \"Projection_2\".\"USecurityIncident\" as \"USecurityIncident\",\n        \
+  \              \"Projection_2\".\"UAssignedOn\" as \"UAssignedOn\",\n          \
+  \            \"Projection_2\".\"DvUDocumentation\" as \"DvUDocumentation\",\n  \
+  \                    \"Projection_2\".\"USyncSrc\" as \"USyncSrc\",\n          \
+  \            \"Projection_2\".\"DvParent\" as \"DvParent\",\n                  \
+  \    \"Projection_2\".\"DvProblem\" as \"DvProblem\",\n                      \"\
+  Projection_2\".\"DvActualDuration\" as \"DvActualDuration\",\n                 \
+  \     \"Projection_2\".\"BusinessDuration\" as \"BusinessDuration\",\n         \
+  \             \"Projection_2\".\"CaseReport\" as \"CaseReport\",\n             \
+  \         \"Projection_2\".\"UOperationalMistake\" as \"UOperationalMistake\",\n\
+  \                      \"Projection_2\".\"Company\" as \"Company\",\n          \
+  \            \"Projection_2\".\"CausedBy\" as \"CausedBy\",\n                  \
+  \    \"Projection_2\".\"DueDate\" as \"DueDate\",\n                      \"Projection_2\"\
+  .\"DvActionStatus\" as \"DvActionStatus\",\n                      \"Projection_2\"\
+  .\"AssignedTo\" as \"AssignedTo\",\n                      \"Projection_2\".\"Parent\"\
+  \ as \"Parent\",\n                      \"Projection_2\".\"DvClosedBy\" as \"DvClosedBy\"\
+  ,\n                      \"Projection_2\".\"UTaskResolved\" as \"UTaskResolved\"\
+  ,\n                      \"Projection_2\".\"DvUponApproval\" as \"DvUponApproval\"\
+  ,\n                      \"Projection_2\".\"UIncidentCategory\" as \"UIncidentCategory\"\
+  ,\n                      \"Projection_2\".\"Variables\" as \"Variables\",\n    \
+  \                  \"Projection_2\".\"DvUProductTaxonomyInitial\" as \"DvUProductTaxonomyInitial\"\
+  ,\n                      \"Projection_2\".\"DvAssignmentGroup\" as \"DvAssignmentGroup\"\
+  ,\n                      \"Projection_2\".\"DvCaseContact\" as \"DvCaseContact\"\
+  ,\n                      \"Projection_2\".\"DvSysDomain\" as \"DvSysDomain\",\n\
+  \                      \"Projection_2\".\"SysCreatedBy\" as \"SysCreatedBy\",\n\
+  \                      \"Projection_2\".\"UCaseType\" as \"UCaseType\",\n      \
+  \                \"Projection_2\".\"SysUpdatedBy\" as \"SysUpdatedBy\",\n      \
+  \                \"Projection_2\".\"AssignmentGroup\" as \"AssignmentGroup\",\n\
+  \                      \"Projection_2\".\"SlaDue\" as \"SlaDue\",\n            \
+  \          \"Projection_2\".\"Consumer\" as \"Consumer\",\n                    \
+  \  \"Projection_2\".\"DvAssignedTo\" as \"DvAssignedTo\",\n                    \
+  \  \"Projection_2\".\"Incident\" as \"Incident\",\n                      \"Projection_2\"\
+  .\"ClosedBy\" as \"ClosedBy\",\n                      \"Projection_2\".\"TimeWorked\"\
+  \ as \"TimeWorked\",\n                      \"Projection_2\".\"DvUCommunicationsLead\"\
+  \ as \"DvUCommunicationsLead\",\n                      \"Projection_2\".\"SnAppCsSocialSocialProfile\"\
+  \ as \"SnAppCsSocialSocialProfile\",\n                      \"Projection_2\".\"\
+  DvTaskFor\" as \"DvTaskFor\",\n                      \"Projection_2\".\"UBtNumber\"\
+  \ as \"UBtNumber\",\n                      \"Projection_2\".\"ActualStartDate\"\
+  \ as \"ActualStartDate\",\n                      \"Projection_2\".\"DvUOutageDuration\"\
+  \ as \"DvUOutageDuration\",\n                      \"Projection_2\".\"SyncDriver\"\
+  \ as \"SyncDriver\",\n                      \"Projection_2\".\"DvActiveAccountEscalation\"\
+  \ as \"DvActiveAccountEscalation\",\n                      \"Projection_2\".\"UProductTaxonomyInitial\"\
+  \ as \"UProductTaxonomyInitial\",\n                      \"Projection_2\".\"Case\"\
+  \ as \"Case\",\n                      \"Projection_2\".\"DvLocation\" as \"DvLocation\"\
+  ,\n                      \"Projection_2\".\"UCategoryPredicted\" as \"UCategoryPredicted\"\
+  ,\n                      \"Projection_2\".\"CmdbCi\" as \"CmdbCi\",\n          \
+  \            \"Projection_2\".\"CorrelationDisplay\" as \"CorrelationDisplay\",\n\
+  \                      \"Projection_2\".\"DvUCaseCategory\" as \"DvUCaseCategory\"\
+  ,\n                      \"Projection_2\".\"PartnerContact\" as \"PartnerContact\"\
+  ,\n                      \"Projection_2\".\"DvDeliveryPlan\" as \"DvDeliveryPlan\"\
+  ,\n                      \"Projection_2\".\"DvSnAppCsSocialSocialProfile\" as \"\
+  DvSnAppCsSocialSocialProfile\",\n                      \"Projection_2\".\"PauseEscalation\"\
+  \ as \"PauseEscalation\",\n                      \"Projection_2\".\"NotesToComments\"\
+  \ as \"NotesToComments\",\n                      \"Projection_2\".\"ApprovalSet\"\
+  \ as \"ApprovalSet\",\n                      \"Projection_2\".\"DvGroupList\" as\
+  \ \"DvGroupList\",\n                      \"Projection_2\".\"DvUCanDuration\" as\
+  \ \"DvUCanDuration\",\n                      \"Projection_2\".\"DvUProductTaxonomyFinal\"\
+  \ as \"DvUProductTaxonomyFinal\",\n                      \"Projection_2\".\"WorkEnd\"\
+  \ as \"WorkEnd\",\n                      \"Projection_2\".\"ActualDuration\" as\
+  \ \"ActualDuration\",\n                      \"Projection_2\".\"DvNotify\" as \"\
+  DvNotify\",\n                      \"Projection_2\".\"SysTags\" as \"SysTags\",\n\
+  \                      \"Projection_2\".\"ContactType\" as \"ContactType\",\n  \
+  \                    \"Projection_2\".\"BusinessService\" as \"BusinessService\"\
+  ,\n                      \"Projection_2\".\"DvUOutageType\" as \"DvUOutageType\"\
+  ,\n                      \"Projection_2\".\"State\" as \"State\",\n            \
+  \          \"Projection_2\".\"UTotalEscalatedPeriod\" as \"UTotalEscalatedPeriod\"\
+  ,\n                      \"Projection_2\".\"DvSkills\" as \"DvSkills\",\n      \
+  \                \"Projection_2\".\"Change\" as \"Change\",\n                  \
+  \    \"Projection_2\".\"DvWfActivity\" as \"DvWfActivity\",\n                  \
+  \    \"Projection_2\".\"ResolvedAt\" as \"ResolvedAt\",\n                      \"\
+  Projection_2\".\"SysModCount\" as \"SysModCount\",\n                      \"Projection_2\"\
+  .\"DvCaseReport\" as \"DvCaseReport\",\n                      \"Projection_2\".\"\
+  PspPerDeleteDt\" as \"PspPerDeleteDt\",\n                      \"Projection_2\"\
+  .\"HasChild\" as \"HasChild\",\n                      \"Projection_2\".\"Approval\"\
+  \ as \"Approval\",\n                      \"Projection_2\".\"Project\" as \"Project\"\
+  ,\n                      \"Projection_2\".\"DvSubcategory\" as \"DvSubcategory\"\
+  ,\n                      \"Projection_2\".\"CalendarDuration\" as \"CalendarDuration\"\
+  ,\n                      \"Projection_2\".\"URefIncident\" as \"URefIncident\",\n\
+  \                      \"Projection_2\".\"RejectionGoto\" as \"RejectionGoto\",\n\
+  \                      \"Projection_2\".\"DvChange\" as \"DvChange\",\n        \
+  \              \"Projection_2\".\"ContactLocaltime\" as \"ContactLocaltime\",\n\
+  \                      \"Projection_2\".\"DvPartnerContact\" as \"DvPartnerContact\"\
+  ,\n                      \"Projection_2\".\"DvEscalation\" as \"DvEscalation\",\n\
+  \                      \"Projection_2\".\"ULanguage\" as \"ULanguage\",\n      \
+  \                \"Projection_2\".\"UOutageType\" as \"UOutageType\",\n        \
+  \              \"Projection_2\".\"DvActiveEscalation\" as \"DvActiveEscalation\"\
+  ,\n                      \"Projection_2\".\"NeedsAttention\" as \"NeedsAttention\"\
+  ,\n                      \"Projection_2\".\"PspPerUpdateDt\" as \"PspPerUpdateDt\"\
+  ,\n                      \"Projection_2\".\"DvPartner\" as \"DvPartner\",\n    \
+  \                  \"Projection_2\".\"FirstReponseTime\" as \"FirstReponseTime\"\
+  ,\n                      \"Projection_2\".\"DvContact\" as \"DvContact\",\n    \
+  \                  \"Projection_2\".\"DvUAffectedInstances\" as \"DvUAffectedInstances\"\
+  ,\n                      \"Projection_2\".\"Escalation\" as \"Escalation\",\n  \
+  \                    \"Projection_2\".\"CaseContact\" as \"CaseContact\",\n    \
+  \                  \"Projection_2\".\"UAssignmentGroupPredicted\" as \"UAssignmentGroupPredicted\"\
+  ,\n                      \"Projection_2\".\"UBtSysId\" as \"UBtSysId\",\n      \
+  \                \"Projection_2\".\"CorrelationId\" as \"CorrelationId\",\n    \
+  \                  \"Projection_2\".\"UProductTaxonomyFinal\" as \"UProductTaxonomyFinal\"\
+  ,\n                      \"Projection_2\".\"UCanDuration\" as \"UCanDuration\",\n\
+  \                      \"Projection_2\".\"ActiveEscalation\" as \"ActiveEscalation\"\
+  ,\n                      \"Projection_2\".\"Notify\" as \"Notify\",\n          \
+  \            \"Projection_2\".\"DvResolutionCode\" as \"DvResolutionCode\",\n  \
+  \                    \"Projection_2\".\"UponReject\" as \"UponReject\",\n      \
+  \                \"Projection_2\".\"Asset\" as \"Asset\",\n                    \
+  \  \"Projection_2\".\"TaskFor\" as \"TaskFor\",\n                      \"Projection_2\"\
+  .\"DvCompany\" as \"DvCompany\",\n                      \"Projection_2\".\"WfActivity\"\
+  \ as \"WfActivity\",\n                      \"Projection_2\".\"ResolutionCode\"\
+  \ as \"ResolutionCode\",\n                      \"Projection_2\".\"WorkStart\" as\
+  \ \"WorkStart\",\n                      \"Projection_2\".\"Impact\" as \"Impact\"\
+  ,\n                      \"Projection_2\".\"Urgency\" as \"Urgency\",\n        \
+  \              \"Projection_2\".\"SysDomain\" as \"SysDomain\",\n              \
+  \        \"Projection_2\".\"UOwnershipCategory\" as \"UOwnershipCategory\",\n  \
+  \                    \"Projection_2\".\"SysUpdatedOn\" as \"SysUpdatedOn\",\n  \
+  \                    \"Projection_2\".\"ContactTimeZone\" as \"ContactTimeZone\"\
+  ,\n                      \"Projection_2\".\"Cause\" as \"Cause\",\n            \
+  \          \"Projection_2\".\"DvContactType\" as \"DvContactType\",\n          \
+  \            \"Projection_2\".\"TaskCount\" as \"TaskCount\",\n                \
+  \      \"Projection_2\".\"Contact\" as \"Contact\",\n                      \"Projection_2\"\
+  .\"UEscalated\" as \"UEscalated\",\n                      \"Projection_2\".\"PlannedEndDate\"\
+  \ as \"PlannedEndDate\",\n                      \"Projection_2\".\"Location\" as\
+  \ \"Location\",\n                      \"Projection_2\".\"Entitlement\" as \"Entitlement\"\
+  ,\n                      \"Projection_2\".\"PlannedStartDate\" as \"PlannedStartDate\"\
+  ,\n                      \"Projection_2\".\"Partner\" as \"Partner\",\n        \
+  \              \"Projection_2\".\"ActualEndDate\" as \"ActualEndDate\",\n      \
+  \                \"Projection_2\".\"Active\" as \"Active\",\n                  \
+  \    \"Projection_2\".\"FollowUp\" as \"FollowUp\",\n                      \"Projection_2\"\
+  .\"UOutageDuration\" as \"UOutageDuration\",\n                      \"Projection_2\"\
+  .\"ResolvedBy\" as \"ResolvedBy\",\n                      \"Projection_2\".\"PspPerInsertDt\"\
+  \ as \"PspPerInsertDt\",\n                      \"Projection_2\".\"Uid\" as \"Uid\"\
+  ,\n                      \"Projection_2\".\"ActiveAccountEscalation\" as \"ActiveAccountEscalation\"\
+  ,\n                      \"Projection_2\".\"PlannedDuration\" as \"PlannedDuration\"\
+  ,\n                      \"Projection_2\".\"DvCausedBy\" as \"DvCausedBy\",\n  \
+  \                    \"Projection_2\".\"UCommunicationsLead\" as \"UCommunicationsLead\"\
+  ,\n                      \"Projection_2\".\"Order\" as \"Order\",\n            \
+  \          \"Projection_2\".\"DvCalendarDuration\" as \"DvCalendarDuration\",\n\
+  \                      \"Projection_2\".\"DvSysClassName\" as \"DvSysClassName\"\
+  ,\n                      \"Projection_2\".\"SupportManager\" as \"SupportManager\"\
+  ,\n                      \"Projection_2\".\"UPredictionAttempted\" as \"UPredictionAttempted\"\
+  ,\n                      \"Projection_2\".\"DvResolvedBy\" as \"DvResolvedBy\",\n\
+  \                      \"Projection_2\".\"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\"\
+  ,\n                      \"Projection_2\".\"ShortDescription\" as \"ShortDescription\"\
+  ,\n                      \"Projection_2\".\"DvUEnhancementRequest\" as \"DvUEnhancementRequest\"\
+  ,\n                      \"Projection_2\".\"UEnhancementRequest\" as \"UEnhancementRequest\"\
+  ,\n                      \"Projection_2\".\"WatchList\" as \"WatchList\",\n    \
+  \                  \"Projection_2\".\"Description\" as \"Description\",\n      \
+  \                \"Projection_2\".\"DvContract\" as \"DvContract\",\n          \
+  \            \"Projection_2\".\"SysDomainpath\" as \"SysDomainpath\",\n        \
+  \              \"Projection_2\".\"ApprovalHistory\" as \"ApprovalHistory\",\n  \
+  \                    \"Projection_2\".\"DvProduct\" as \"DvProduct\",\n        \
+  \              \"Projection_2\".\"DvVariables\" as \"DvVariables\",\n          \
+  \            \"Projection_2\".\"DvCmdbCi\" as \"DvCmdbCi\",\n                  \
+  \    \"Projection_2\".\"DvAsset\" as \"DvAsset\",\n                      \"Projection_2\"\
+  .\"UTags\" as \"UTags\",\n                      \"Projection_2\".\"UAffectedInstances\"\
+  \ as \"UAffectedInstances\",\n                      \"Projection_2\".\"UStepsToReproduce\"\
+  \ as \"UStepsToReproduce\",\n                      \"Projection_2\".\"UserInput\"\
+  \ as \"UserInput\",\n                      \"Projection_2\".\"GroupList\" as \"\
+  GroupList\",\n                      \"Projection_2\".\"Skills\" as \"Skills\",\n\
+  \                      \"Projection_2\".\"AdditionalAssigneeList\" as \"AdditionalAssigneeList\"\
+  ,\n                      \"Projection_2\".\"CloseNotes\" as \"CloseNotes\",\n  \
+  \                    \"Projection_2\".\"UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\"\
+  ,\n                      \"Projection_2\".\"USyncMetadata\" as \"USyncMetadata\"\
+  ,\n                      \"Projection_2\".\"DvProject\" as \"DvProject\",\n    \
+  \                  \"Projection_2\".\"Comments\" as \"Comments\",\n            \
+  \          \"Projection_2\".\"WorkNotes\" as \"WorkNotes\",\n                  \
+  \    \"Projection_2\".\"DvBusinessService\" as \"DvBusinessService\",\n        \
+  \              \"Projection_2\".\"IsFederal\" as \"IsFederal\",\n              \
+  \        \"Projection_2\".\"DvUUpgradeCase\" as \"DvUUpgradeCase\",\n          \
+  \            \"Projection_2\".\"UPotentiallyCausedByUpgrade\" as \"UPotentiallyCausedByUpgrade\"\
+  ,\n                      \"Projection_2\".\"UAlertType\" as \"UAlertType\",\n  \
+  \                    \"Projection_2\".\"DvUIncidentCategory\" as \"DvUIncidentCategory\"\
+  ,\n                      \"Projection_2\".\"ReassignmentCount_CC\" as \"ReassignmentCount\"\
+  ,\n                      \"Projection_7\".\"DvLanguage1\" as \"DvLanguage1\",\n\
+  \                      \"Projection_2\".\"DvUReleaseFamily\" as \"DvUReleaseFamily\"\
+  ,\n                      \"Projection_2\".\"AssignedOn\" as \"AssignedOn\",\n  \
+  \                    \"Projection_2\".\"PreferredLanguageSupport\" as \"PreferredLanguageSupport\"\
+  ,\n                      \"Projection_2\".\"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\"\
+  ,\n                      \"Projection_2\".\"U_RESPONSE_TIME_ACHIEVED\" as \"U_RESPONSE_TIME_ACHIEVED\"\
+  ,\n                      \"Projection_2\".\"DvUEnhancedSLA\" as \"DvUEnhancedSLA\"\
+  ,\n                      \"Projection_2\".\"ULastAssignee\" as \"ULastAssignee\"\
+  ,\n                      \"Projection_2\".\"DvULastAssignee\" as \"DvULastAssignee\"\
+  ,\n\t\t\t\t\t  \"Projection_2\".\"DvUProductFinalTaxonomy\" as \"DvUProductFinalTaxonomy\"\
+  ,\n                      \"Projection_2\".\"UProductFinalTaxonomy\" as \"UProductFinalTaxonomy\"\
+  ,\n                      \"Projection_2\".\"DvUProductInitialTaxonomy\" as \"DvUProductInitialTaxonomy\"\
+  ,\n                      \"Projection_2\".\"UProductInitialTaxonomy\" as \"UProductInitialTaxonomy\"\
+  \n            FROM\n              (SELECT \"DvURefIncident\" as \"DvURefIncident\"\
+  ,\n                         \"Number\" as \"CaseNumber\",\n                    \
+  \     \"DvImpact\" as \"DvImpact\",\n                         \"OpenedAt\" as \"\
+  OpenedAt\",\n                         \"ClosedAt\" as \"ClosedAt\",\n          \
+  \               \"DvPriority\" as \"DvPriority\",\n                         \"DvState\"\
+  \ as \"DvState\",\n                         \"SysCreatedOn\" as \"SysCreatedOn\"\
+  ,\n                         \"DvConsumer\" as \"DvConsumer\",\n                \
+  \         \"DvAdditionalAssigneeList\" as \"DvAdditionalAssigneeList\",\n      \
+  \                   \"ULastUpdateToCustomer\" as \"ULastUpdateToCustomer\",\n  \
+  \                       \"Account\" as \"Account\",\n                         \"\
+  UDocumentation\" as \"UDocumentation\",\n                         \"Deliverytask\"\
+  \ as \"Deliverytask\",\n                         \"DueDate\" as \"DueDate\",\n \
+  \                        \"DvActionStatus\" as \"DvActionStatus\",\n           \
+  \              \"AssignedTo\" as \"AssignedTo\",\n                         \"Parent\"\
+  \ as \"Parent\",\n                         \"DvClosedBy\" as \"DvClosedBy\",\n \
+  \                        \"UTaskResolved\" as \"UTaskResolved\",\n             \
+  \            \"DvUponApproval\" as \"DvUponApproval\",\n                       \
+  \  \"UIncidentCategory\" as \"UIncidentCategory\",\n                         \"\
+  Variables\" as \"Variables\",\n                         \"DvUProductTaxonomyInitial\"\
+  \ as \"DvUProductTaxonomyInitial\",\n                         \"DvAssignmentGroup\"\
+  \ as \"DvAssignmentGroup\",\n                         \"DvCaseContact\" as \"DvCaseContact\"\
+  ,\n                         \"DvSysDomain\" as \"DvSysDomain\",\n              \
+  \           \"SysCreatedBy\" as \"SysCreatedBy\",\n                         \"UCaseType\"\
+  \ as \"UCaseType\",\n                         \"SysUpdatedBy\" as \"SysUpdatedBy\"\
+  ,\n                         \"AssignmentGroup\" as \"AssignmentGroup\",\n      \
+  \                   \"SlaDue\" as \"SlaDue\",\n                         \"Consumer\"\
+  \ as \"Consumer\",\n                         \"DvAssignedTo\" as \"DvAssignedTo\"\
+  ,\n                         \"Incident\" as \"Incident\",\n                    \
+  \     \"ReassignmentCount\" as \"ReassignmentCount\",\n                        \
+  \ \"ClosedBy\" as \"ClosedBy\",\n                         \"TimeWorked\" as \"TimeWorked\"\
+  ,\n                         \"DvUCommunicationsLead\" as \"DvUCommunicationsLead\"\
+  ,\n                         \"SnAppCsSocialSocialProfile\" as \"SnAppCsSocialSocialProfile\"\
+  ,\n                         \"DvTaskFor\" as \"DvTaskFor\",\n                  \
+  \       \"UBtNumber\" as \"UBtNumber\",\n                         \"ActualStartDate\"\
+  \ as \"ActualStartDate\",\n                         \"DvUOutageDuration\" as \"\
+  DvUOutageDuration\",\n                         \"SyncDriver\" as \"SyncDriver\"\
+  ,\n                         \"DvActiveAccountEscalation\" as \"DvActiveAccountEscalation\"\
+  ,\n                         \"UProductTaxonomyInitial\" as \"UProductTaxonomyInitial\"\
+  ,\n                         \"Case\" as \"Case\",\n                         \"DvLocation\"\
+  \ as \"DvLocation\",\n                         \"UCategoryPredicted\" as \"UCategoryPredicted\"\
+  ,\n                         \"CmdbCi\" as \"CmdbCi\",\n                        \
+  \ \"CorrelationDisplay\" as \"CorrelationDisplay\",\n                         \"\
+  DvUCaseCategory\" as \"DvUCaseCategory\",\n                         \"PartnerContact\"\
+  \ as \"PartnerContact\",\n                         \"DvDeliveryPlan\" as \"DvDeliveryPlan\"\
+  ,\n                         \"DvSnAppCsSocialSocialProfile\" as \"DvSnAppCsSocialSocialProfile\"\
+  ,\n                         \"PauseEscalation\" as \"PauseEscalation\",\n      \
+  \                   \"NotesToComments\" as \"NotesToComments\",\n              \
+  \           \"ApprovalSet\" as \"ApprovalSet\",\n                         \"DvGroupList\"\
+  \ as \"DvGroupList\",\n                         \"DvUCanDuration\" as \"DvUCanDuration\"\
+  ,\n                         \"DvUProductTaxonomyFinal\" as \"DvUProductTaxonomyFinal\"\
+  ,\n                         \"WorkEnd\" as \"WorkEnd\",\n                      \
+  \   \"ActualDuration\" as \"ActualDuration\",\n                         \"DvNotify\"\
+  \ as \"DvNotify\",\n                         \"SysTags\" as \"SysTags\",\n     \
+  \                    \"ContactType\" as \"ContactType\",\n                     \
+  \    \"BusinessService\" as \"BusinessService\",\n                         \"DvUOutageType\"\
+  \ as \"DvUOutageType\",\n                         \"State\" as \"State\",\n    \
+  \                     \"UTotalEscalatedPeriod\" as \"UTotalEscalatedPeriod\",\n\
+  \                         \"DvSkills\" as \"DvSkills\",\n                      \
+  \   \"Change\" as \"Change\",\n                         \"DvWfActivity\" as \"DvWfActivity\"\
+  ,\n                         \"ResolvedAt\" as \"ResolvedAt\",\n                \
+  \         \"SysModCount\" as \"SysModCount\",\n                         \"DvCaseReport\"\
+  \ as \"DvCaseReport\",\n                         \"PspPerDeleteDt\" as \"PspPerDeleteDt\"\
+  ,\n                         \"HasChild\" as \"HasChild\",\n                    \
+  \     \"Approval\" as \"Approval\",\n                         \"Project\" as \"\
+  Project\",\n                         \"DvSubcategory\" as \"DvSubcategory\",\n \
+  \                        \"CalendarDuration\" as \"CalendarDuration\",\n       \
+  \                  \"URefIncident\" as \"URefIncident\",\n                     \
+  \    \"RejectionGoto\" as \"RejectionGoto\",\n                         \"DvChange\"\
+  \ as \"DvChange\",\n                         \"ContactLocaltime\" as \"ContactLocaltime\"\
+  ,\n                         \"DvPartnerContact\" as \"DvPartnerContact\",\n    \
+  \                     \"DvEscalation\" as \"DvEscalation\",\n                  \
+  \       \"ULanguage\" as \"ULanguage\",\n                         \"UOutageType\"\
+  \ as \"UOutageType\",\n                         \"DvActiveEscalation\" as \"DvActiveEscalation\"\
+  ,\n                         \"NeedsAttention\" as \"NeedsAttention\",\n        \
+  \                 \"PspPerUpdateDt\" as \"PspPerUpdateDt\",\n                  \
+  \       \"DvPartner\" as \"DvPartner\",\n                         \"FirstReponseTime\"\
+  \ as \"FirstReponseTime\",\n                         \"DvContact\" as \"DvContact\"\
+  ,\n                         \"DvUAffectedInstances\" as \"DvUAffectedInstances\"\
+  ,\n                         \"Escalation\" as \"Escalation\",\n                \
+  \         \"CaseContact\" as \"CaseContact\",\n                         \"UAssignmentGroupPredicted\"\
+  \ as \"UAssignmentGroupPredicted\",\n                         \"UBtSysId\" as \"\
+  UBtSysId\",\n                         \"CorrelationId\" as \"CorrelationId\",\n\
+  \                         \"UProductTaxonomyFinal\" as \"UProductTaxonomyFinal\"\
+  ,\n                         \"UCanDuration\" as \"UCanDuration\",\n            \
+  \             \"ActiveEscalation\" as \"ActiveEscalation\",\n                  \
+  \       \"Notify\" as \"Notify\",\n                         \"DvResolutionCode\"\
+  \ as \"DvResolutionCode\",\n                         \"UponReject\" as \"UponReject\"\
+  ,\n                         \"Asset\" as \"Asset\",\n                         \"\
+  TaskFor\" as \"TaskFor\",\n                         \"DvCompany\" as \"DvCompany\"\
+  ,\n                         \"WfActivity\" as \"WfActivity\",\n                \
+  \         \"ResolutionCode\" as \"ResolutionCode\",\n                         \"\
+  WorkStart\" as \"WorkStart\",\n                         \"Impact\" as \"Impact\"\
+  ,\n                         \"Urgency\" as \"Urgency\",\n                      \
+  \   \"SysDomain\" as \"SysDomain\",\n                         \"DvContactTimeZone\"\
+  \ as \"DvContactTimeZone\",\n                         \"ExpectedStart\" as \"ExpectedStart\"\
+  ,\n                         \"UOutageEndTime\" as \"UOutageEndTime\",\n        \
+  \                 \"Category\" as \"Category\",\n                         \"DvUOperationalMistake\"\
+  \ as \"DvUOperationalMistake\",\n                         \"UEscalationCount\" as\
+  \ \"UEscalationCount\",\n                         \"DvBusinessDuration\" as \"DvBusinessDuration\"\
+  ,\n                         \"DvOpenedBy\" as \"DvOpenedBy\",\n                \
+  \         \"DvCategory\" as \"DvCategory\",\n                         \"DvUWorkNotesWatchlist\"\
+  \ as \"DvUWorkNotesWatchlist\",\n                         \"DvApproval\" as \"DvApproval\"\
+  ,\n                         \"DvPlannedDuration\" as \"DvPlannedDuration\",\n  \
+  \                       \"UOwnershipCategory\" as \"UOwnershipCategory\",\n    \
+  \                     \"SysUpdatedOn\" as \"SysUpdatedOn\",\n                  \
+  \       \"ContactTimeZone\" as \"ContactTimeZone\",\n                         \"\
+  Cause\" as \"Cause\",\n                         \"DvContactType\" as \"DvContactType\"\
+  ,\n                         \"TaskCount\" as \"TaskCount\",\n                  \
+  \       \"Contact\" as \"Contact\",\n                         \"UEscalated\" as\
+  \ \"UEscalated\",\n                         \"PlannedEndDate\" as \"PlannedEndDate\"\
+  ,\n                         \"Location\" as \"Location\",\n                    \
+  \     \"Entitlement\" as \"Entitlement\",\n                         \"PlannedStartDate\"\
+  \ as \"PlannedStartDate\",\n                         \"Partner\" as \"Partner\"\
+  ,\n                         \"ActualEndDate\" as \"ActualEndDate\",\n          \
+  \               \"Active\" as \"Active\",\n                         \"FollowUp\"\
+  \ as \"FollowUp\",\n                         \"UOutageDuration\" as \"UOutageDuration\"\
+  ,\n                         \"ResolvedBy\" as \"ResolvedBy\",\n                \
+  \         \"PspPerInsertDt\" as \"PspPerInsertDt\",\n                         \"\
+  Uid\" as \"Uid\",\n                         \"ActiveAccountEscalation\" as \"ActiveAccountEscalation\"\
+  ,\n                         \"PlannedDuration\" as \"PlannedDuration\",\n      \
+  \                   \"DvEntitlement\" as \"DvEntitlement\",\n                  \
+  \       \"Contract\" as \"Contract\",\n                         \"DvWatchList\"\
+  \ as \"DvWatchList\",\n                         \"UIncidentState\" as \"UIncidentState\"\
+  ,\n                         \"EstimatedCost\" as \"EstimatedCost\",\n          \
+  \               \"SysId\" as \"SysId\",\n                         \"DvUponReject\"\
+  \ as \"DvUponReject\",\n                         \"FollowTheSun\" as \"FollowTheSun\"\
+  ,\n                         \"DvDeliveryTask\" as \"DvDeliveryTask\",\n        \
+  \                 \"DvSupportManager\" as \"DvSupportManager\",\n              \
+  \           \"Knowledge\" as \"Knowledge\",\n                         \"ActionStatus\"\
+  \ as \"ActionStatus\",\n                         \"UUssoil\" as \"UUssoil\",\n \
+  \                        \"DvIncident\" as \"DvIncident\",\n                   \
+  \      \"Priority\" as \"Priority\",\n                         \"Problem\" as \"\
+  Problem\",\n                         \"DvUOwnershipCategory\" as \"DvUOwnershipCategory\"\
+  ,\n                         \"SubCategory\" as \"SubCategory\",\n              \
+  \           \"SysClassName\" as \"SysClassName\",\n                         \"UponApproval\"\
+  \ as \"UponApproval\",\n                         \"DvUTotalEscalatedPeriod\" as\
+  \ \"DvUTotalEscalatedPeriod\",\n                         \"UTemporaryRelief\" as\
+  \ \"UTemporaryRelief\",\n                         \"MadeSla\" as \"MadeSla\",\n\
+  \                         \"DvUCaseType\" as \"DvUCaseType\",\n                \
+  \         \"DvUIncidentState\" as \"DvUIncidentState\",\n                      \
+  \   \"PercentComplete\" as \"PercentComplete\",\n                         \"DvAccount\"\
+  \ as \"DvAccount\",\n                         \"UOutageStartTime\" as \"UOutageStartTime\"\
+  ,\n                         \"ULegacyId\" as \"ULegacyId\",\n                  \
+  \       \"DvUrgency\" as \"DvUrgency\",\n                         \"ActivityDue\"\
+  \ as \"ActivityDue\",\n                         \"DvRejectionGoto\" as \"DvRejectionGoto\"\
+  ,\n                         \"UCategoryChanged\" as \"UCategoryChanged\",\n    \
+  \                     \"OpenedBy\" as \"OpenedBy\",\n                         \"\
+  DvULanguage\" as \"DvULanguage\",\n                         \"Product\" as \"Product\"\
+  ,\n                         \"DeliveryPlan\" as \"DeliveryPlan\",\n            \
+  \             \"UCaseCategory\" as \"UCaseCategory\",\n                        \
+  \ \"USecurityIncident\" as \"USecurityIncident\",\n                         \"UAssignedOn\"\
+  \ as \"UAssignedOn\",\n                         \"DvUDocumentation\" as \"DvUDocumentation\"\
+  ,\n                         \"USyncSrc\" as \"USyncSrc\",\n                    \
+  \     \"DvParent\" as \"DvParent\",\n                         \"DvProblem\" as \"\
+  DvProblem\",\n                         \"DvActualDuration\" as \"DvActualDuration\"\
+  ,\n                         \"BusinessDuration\" as \"BusinessDuration\",\n    \
+  \                     \"CaseReport\" as \"CaseReport\",\n                      \
+  \   \"UOperationalMistake\" as \"UOperationalMistake\",\n                      \
+  \   \"Company\" as \"Company\",\n                         \"CausedBy\" as \"CausedBy\"\
+  ,\n                         \"DvCausedBy\" as \"DvCausedBy\",\n                \
+  \         \"UCommunicationsLead\" as \"UCommunicationsLead\",\n                \
+  \         \"Order\" as \"Order\",\n                         \"DvCalendarDuration\"\
+  \ as \"DvCalendarDuration\",\n                         \"DvSysClassName\" as \"\
+  DvSysClassName\",\n                         \"SupportManager\" as \"SupportManager\"\
+  ,\n                         \"UPredictionAttempted\" as \"UPredictionAttempted\"\
+  ,\n                         \"DvResolvedBy\" as \"DvResolvedBy\",\n            \
+  \             \"DvUPrimaryBlocker\" as \"DvUPrimaryBlocker\",\n                \
+  \         \"ShortDescription\" as \"ShortDescription\",\n                      \
+  \   \"DvUEnhancementRequest\" as \"DvUEnhancementRequest\",\n                  \
+  \       \"UEnhancementRequest\" as \"UEnhancementRequest\",\n                  \
+  \       \"WatchList\" as \"WatchList\",\n                         \"Description\"\
+  \ as \"Description\",\n                         \"DvContract\" as \"DvContract\"\
+  ,\n                         \"SysDomainpath\" as \"SysDomainpath\",\n          \
+  \               \"ApprovalHistory\" as \"ApprovalHistory\",\n                  \
+  \       \"DvProduct\" as \"DvProduct\",\n                         \"DvVariables\"\
+  \ as \"DvVariables\",\n                         \"DvCmdbCi\" as \"DvCmdbCi\",\n\
+  \                         \"DvAsset\" as \"DvAsset\",\n                        \
+  \ \"UTags\" as \"UTags\",\n                         \"UAffectedInstances\" as \"\
+  UAffectedInstances\",\n                         \"UStepsToReproduce\" as \"UStepsToReproduce\"\
+  ,\n                         \"UserInput\" as \"UserInput\",\n                  \
+  \       \"GroupList\" as \"GroupList\",\n                         \"Skills\" as\
+  \ \"Skills\",\n                         \"AdditionalAssigneeList\" as \"AdditionalAssigneeList\"\
+  ,\n                         \"CloseNotes\" as \"CloseNotes\",\n                \
+  \         \"UWorkNotesWatchlist\" as \"UWorkNotesWatchlist\",\n                \
+  \         \"USyncMetadata\" as \"USyncMetadata\",\n                         \"DvProject\"\
+  \ as \"DvProject\",\n                         \"Comments\" as \"Comments\",\n  \
+  \                       \"WorkNotes\" as \"WorkNotes\",\n                      \
+  \   \"DvBusinessService\" as \"DvBusinessService\",\n                         \"\
+  IsFederal\" as \"IsFederal\",\n                         \"DvUUpgradeCase\" as \"\
+  DvUUpgradeCase\",\n                         \"UPotentiallyCausedByUpgrade\" as \"\
+  UPotentiallyCausedByUpgrade\",\n                         \"UAlertType\" as \"UAlertType\"\
+  ,\n                         \"DvUIncidentCategory\" as \"DvUIncidentCategory\",\n\
+  \                         \"DvUReleaseFamily\" as \"DvUReleaseFamily\",\n      \
+  \                   \"AssignedOnTimestamp\" as \"AssignedOn\",\n               \
+  \          \"PreferredLanguageSupport\" as \"PreferredLanguageSupport\",\n     \
+  \                    \"U_ENHANCED_SLA\" as \"U_ENHANCED_SLA\",\n               \
+  \          \"U_RESPONSE_TIME_ACHIEVED\" as \"U_RESPONSE_TIME_ACHIEVED\",\n     \
+  \                    \"DvUEnhancedSLA\" as \"DvUEnhancedSLA\",\n               \
+  \          \"ULastAssignee\" as \"ULastAssignee\",\n                         \"\
+  DvULastAssignee\" as \"DvULastAssignee\",\n\t\t\t\t\t\t \"DvUProductFinalTaxonomy\"\
+  \ as \"DvUProductFinalTaxonomy\",\n                         \"UProductFinalTaxonomy\"\
+  \ as \"UProductFinalTaxonomy\",\n                         \"DvUProductInitialTaxonomy\"\
+  \ as \"DvUProductInitialTaxonomy\",\n                         \"UProductInitialTaxonomy\"\
+  \ as \"UProductInitialTaxonomy\",\n                      convert_timezone('random',\
+  \ \"OpenedAt\") as \"OpenedAtUTC\",\n                      convert_timezone('random',\
+  \ \"ClosedAt\") as \"ClosedAtUTC\", --secondsbetween(\"OpenedAtUTC\",\"ClosedAtUTC\"\
+  )  as \"CalendarSTCCase\",\ndatediff(second, \"OpenedAtUTC\", \"ClosedAtUTC\") as\
+  \ \"CalendarSTCCase\",\n         \"ReassignmentCount\" as \"ReassignmentCount_CC\"\
+  \n               FROM ODS_LS.HI.SN_CUSTOMERSERVICE_CASE_WITH_USG)\"Projection_2\"\
+  \n            LEFT JOIN\n              (SELECT \"DvTask\" as \"DvTask\",\n     \
+  \                 \"DvSkill\" as \"DvSkill\",\n                      SUBSTR(\"DvSkill\"\
+  ,(REGEXP_INSTR(\"DvSkill\", 'random')+len('random'))) as \"DvLanguage1\"\n     \
+  \          FROM ODS_LS.HI.TASK_M2M_SKILL\n               WHERE (\"DvSkill\" like\
+  \ 'random') )\"Projection_7\" ON \"Projection_2\".\"CaseNumber\" = \"Projection_7\"\
+  .\"DvTask\")\"Join_5\"\n         LEFT JOIN\n           (SELECT \"DvBlockingReason\"\
+  \ as \"DvBlockingReason\",\n                   \"SysUpdatedOn\" as \"SysUpdatedOn\"\
+  ,\n                   \"DvBlockedTask\" as \"DvBlockedTask\",\n                \
+  \   ROW_NUMBER() OVER(PARTITION BY \"DvBlockedTask\"\n                         \
+  \            ORDER BY \"SysUpdatedOn\" DESC)\"Rank_Column\"\n            FROM\n\
+  \              (SELECT \"SysId\" as \"SysId\",\n                      \"DvBlockingReason\"\
+  \ as \"DvBlockingReason\",\n                      \"DvBlockingTask\" as \"DvBlockingTask\"\
+  ,\n                      \"SysUpdatedOn\" as \"SysUpdatedOn\",\n               \
+  \       \"DvBlockedTask\" as \"DvBlockedTask\"\n               FROM ODS_LS.HI.SN_ACTION_STATUS_BLOCKED_BY\n\
+  \               GROUP BY \"SysId\",\n                        \"DvBlockingReason\"\
+  ,\n                        \"DvBlockingTask\",\n                        \"SysUpdatedOn\"\
+  ,\n                        \"DvBlockedTask\")\"Aggregation_2\" QUALIFY \"Rank_Column\"\
+  \ = 'random')\"Rank_1\" ON \"Join_5\".\"CaseNumber\" = \"Rank_1\".\"DvBlockedTask\"\
+  )\"Join_2\"\n      LEFT JOIN\n        (SELECT \"DvUTask\" as \"DvUTask\",\n    \
+  \            SUM(\"ESCCount\") as \"MEscCount\"\n         FROM\n           (SELECT\
+  \ \"DvDefinition\" as \"DvDefinition\",\n                   \"Table\" as \"Table\"\
+  ,\n                   \"DvUTask\" as \"DvUTask\",\n                   \"Value\"\
+  \ as \"Value\",\n                   IFF((\"Value\") IS NULL , 'random', 'random')\
+  \ as \"ESCCount\"\n            FROM ODS_LS.HI.METRIC_INSTANCE\n            WHERE\
+  \ \"DvDefinition\" = 'random'\n              AND \"Table\" = 'random' )\"Projection_5\"\
+  \n         GROUP BY \"DvUTask\")\"Aggregation_1\" ON \"Join_2\".\"CaseNumber\" =\
+  \ \"Aggregation_1\".\"DvUTask\")\"Join_4\"\n   LEFT JOIN\n     (SELECT \"NUMBER\"\
+  \ as \"NUMBER\",\n             \"U_ESCALATION_COUNT\" as \"IEscCount\",\n      \
+  \       \"DV_U_LANGUAGE\" as \"DV_U_LANGUAGE\",\n             \"U_FIRST_RESPONSE\"\
+  \ as \"U_FIRST_RESPONSE\",\n             \"U_SOLUTION_PROPOSED_DURATION\" as \"\
+  U_SOLUTION_PROPOSED_DURATION\",\n             \"DV_U_SUB_STATE\" as \"DV_U_SUB_STATE\"\
+  ,\n             \"U_SRE\" as \"U_SRE\",\n             REPLACE(\"NUMBER\", 'random',\
+  \ 'random') as \"CaseNumber\"\n      FROM ODS_LS.HI.INCIDENT)\"Projection_1\" ON\
+  \ \"Join_4\".\"CaseNumber\" = \"Projection_1\".\"CaseNumber\")\"Join_1\"\n\t   LEFT\
+  \ JOIN\n     (SELECT \"DV_U_PRINCIPAL_AGENT\" as \"DvUPrincipalAgent\",\n      \
+  \       \"U_PRINCIPAL_AGENT\" as \"UPrincipalAgent\",\n             \"DV_CASE\"\
+  \ as \"DvCase\"\n      FROM ODS_LS.HI.SN_CUSTOMERSERVICE_CASE_REPORT)\"Projection_3\"\
+  \ ON \"Join_1\".\"CaseNumber\" = \"Projection_3\".\"DvCase\")Join_3;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

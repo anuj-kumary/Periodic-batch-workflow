@@ -1,0 +1,2167 @@
+name: table_1250
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1250
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1250.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view RPT_PRM_DEAL_REG(\n\t\"RecordType\",\n\t\
+  \"Source\",\n\t\"OptyTerrGeo\",\n\t\"OptyTerrMajorArea\",\n\t\"OptyTerrArea\",\n\
+  \t\"OptyTerrRegion\",\n\t\"OptyTerrDistrict\",\n\t\"OptyTerritory\",\n\t\"PartnerTerritoryGeo\"\
+  ,\n\t\"PartnerTerritoryMajorArea\",\n\t\"PartnerTerritoryArea\",\n\t\"PartnerTerritoryRegion\"\
+  ,\n\t\"PartnerTerritoryDistrict\",\n\t\"PartnerTerritory\",\n\t\"ReportingTerritoryGeo\"\
+  ,\n\t\"Quarter\",\n\t\"DealRegCloseQuarter\",\n\t\"DealRegSubmissionDate\",\n\t\"\
+  DealRegQualifiedDate\",\n\t\"DealRegApprovalDate\",\n\t\"DealRegClosedDate\",\n\t\
+  \"QuarterStartDate\",\n\t\"PRLNumber\",\n\t\"PartnerPercentageAllocated\",\n\t\"\
+  BUGroup\",\n\t\"BUWorkflow\",\n\t\"PartnerUltimateParentAccountSysid\",\n\t\"OptyTerritorySysID\"\
+  ,\n\t\"PartnerAccountSysID\",\n\t\"PRLTerritorySysID\",\n\t\"DealRegistrationSysID\"\
+  ,\n\t\"ParentPartnerSysID\",\n\t\"ParentPartnerNumber\",\n\t\"ParentPartner\",\n\
+  \t\"OptyNumber\",\n\t\"DealRegistrationNumber\",\n\t\"DealRegistrationName\",\n\t\
+  \"DealRegistrationOptyPartnershipType\",\n\t\"DealRegistrationOptyType\",\n\t\"\
+  DealRegistrationOptyStage\",\n\t\"DealRegistrationStatus\",\n\t\"DealRegCustomerAccountName\"\
+  ,\n\t\"DealRegistrationType\",\n\t\"AccountIndustryCategory\",\n\t\"ParentPartnerStrategicGroupName\"\
+  ,\n\t\"ParentPartnerSegment\",\n\t\"SubmissionFlag\",\n\t\"QualifiedFlag\",\n\t\"\
+  ApprovedFlag\",\n\t\"ClosedFlag\",\n\t\"DeniedFlag\",\n\t\"DealRegistrationCoSellingFlag\"\
+  ,\n\t\"DealRegNotNull\",\n\t\"PartnerPipelineSourced\",\n\t\"DealRegClosed\",\n\t\
+  \"OptyStageFlag\",\n\t\"ApprovedSourcedFlag\",\n\t\"ApprovedAcceleratedFlag\",\n\
+  \t\"InfluencedACV\",\n\t\"SourcedACV\",\n\t\"AcceleratedACV\",\n\tUSDNNACV,\n\t\"\
+  PartnerAllocatedNNACV\",\n\t\"TagsOptyItemNetNewACV_USD\",\n\t\"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n\t\"ActiveSalesDesignatedPatnerImpactedNNACV\",\n\t\"ClosedSourcedACV\",\n\t\"\
+  ActiveSourcedACV\",\n\t\"ClosedInfluencedACV\",\n\t\"ActiveInfluencedACV\",\n\t\"\
+  ClosedDelRegACV\",\n\t\"ApprovedDelRegACV\",\n\t\"ClosedACV\",\n\t\"ClosedWithDealRegACV\"\
+  ,\n\t\"ClosedWithoutDealRegACV\",\n\t\"AcctNewSegment\",\n\t\"OptySysID\",\n\t\"\
+  OptyDynamicsGUID\",\n\t\"AccountNumber\",\n\t\"AccountName\",\n\t\"OptyCOManaged\"\
+  ,\n\t\"OptyItemNetNewACV_USD\",\n\t\"DR_Flag\",\n\t\"DealRegAutoApprovedAE\",\n\t\
+  \"DealRegAutoApprovedRAM\",\n\t\"DaystoQualify\",\n\t\"DaystoApproval\",\n\t\"DaystoDenied\"\
+  ,\n\t\"DaystoApprovalfromSubmission\",\n\t\"Number\",\n\t\"SecondstoResponse\",\n\
+  \t\"DaystoResolve\",\n\t\"PartnerNumber\",\n\tSLA,\n\t\"SLAFlag\",\n\t\"State\"\
+  ,\n\t\"ClosedAt\",\n\t\"Category\",\n\t\"SubCategory\",\n\t\"AssignedTo\",\n\t\"\
+  AssignmentGroup\",\n\t\"ReassignmentCount\",\n\t\"ReOpenCount\",\n\t\"ContactType\"\
+  ,\n\t\"PartnerAccount\",\n\t\"Type\",\n\t\"UpdatedOn\",\n\t\"UpdatedBy\",\n\t\"\
+  Location\",\n\t\"OpenedBy\",\n\t\"AgentAverageResponseTime\",\n\t\"FirstResponseWaitTime\"\
+  ,\n\t\"ShortDescription\",\n\t\"CreatedOn\",\n\t\"ResolvedAt\",\n\t\"FirstContactResolution\"\
+  ,\n\t\"OptyPipelineSourced\",\n\t\"CaseSysId\",\n\t\"PartnerCompanyName\",\n\t\"\
+  PartAcctRegion\",\n\t\"DealRegExpirationDate\",\n\t\"FirstResponseSLA\",\n\t\"OptySourcedFlag\"\
+  ,\n\t\"OptySalesDesignatedFlag\",\n\t\"CallsSysId\",\n\t\"PRMPotentialACVValue\"\
+  ,\n\t\"PrimaryBU\",\n\t\"PendingApproavlFlag\",\n\t\"ExpiredFlag\",\n\t\"MarketingActivityNumber\"\
+  ,\n\t\"RegistrationClassification\",\n\t\"OptyACVNotZeroFlag\",\n\t\"RegistrationSubStatus\"\
+  ,\n\t\"PendingApproverName\",\n\t\"OpsResolutionCode\",\n\t\"OptyHeaderACV\",\n\t\
+  \"DaystoDeniedfromSubmission\",\n\t\"DeniedSLAFlag\",\n\t\"USDNetNewACVPartner\"\
+  ,\n\t\"SolutionOfferingFlag\",\n\t\"SolutionOfferingType\",\n\t\"PRMRejectionCode\"\
+  ,\n\t\"PrimarySalesRep\",\n\t\"PRMDealRegionalAllianceManager\",\n\t\"PartnerActive\"\
+  ,\n\t\"PRMChannelManager\",\n\t\"SolutionOfferingNumber\",\n\t\"SolutionOfferingName\"\
+  ,\n\t\"AcctFieldSalesParentAccount\",\n\t\"FSPNewLogoFlag\",\n\t\"BusinessImperative\"\
+  ,\n\t\"SolutionOfferingTypeOpty\",\n\t\"DemandAccelerator\",\n\t\"ProgramType\"\
+  ,\n\t\"ApprovalStatus\",\n\t\"ApprovedDate\",\n\t\"RejectedDate\",\n\t\"CreatedDate\"\
+  ,\n\t\"TaskSysID\",\n\t\"SurfSalesContact\",\n\t\"SubmittedBy\",\n\t\"CampaignType\"\
+  ,\n\t\"PrimaryCampaign\",\n\t\"SecondaryCampaign\",\n\t\"AcctIndustry\",\n\t\"SourcedClosedACV_FullCredit\"\
+  ,\n\t\"PartnerSourcedACV_FullCredit\",\n\t\"SubmittedPartnerSourcedACV_FullCredit\"\
+  ,\n\t\"CommitPartnerSourcedACV_FullCredit\",\n\t\"ExpectPartnerSourcedACV_FullCredit\"\
+  ,\n\t\"UpsidePartnerSourcedACV_FullCredit\",\n\t\"WeightedPartnerSourcedACV_FullCredit\"\
+  ,\n\t\"DealRegVelocity\",\n\t\"MarqueeAccount\"\n) as -- SEMANTIC LAYER BEGINS\n\
+  \n/****************************************************************************************************************************\n\
+  \         * Project  Name              :\n         * Project                   \
+  \         :\n         * Object Name                  :\n         * Development Request\
+  \ #      :\n         * Brief Description          :\n         * Developed By   \
+  \            :\n         * Date Created                :\n         * --------------------------------------------------------------------------------------------------------------------\n\
+  \         * REVISION HISTORY:\n         *----------------------------------------------------------------------------------------------------------------------\n\
+  \         *STRY # : STRY2513970 - To show the SO flag and SO type in PRM dash, \
+  \ SO Flag and type is taken from\n         *industrysolutionandoffering model as\
+  \ part of Solutions/Offerings - Deal Reg Q1 Release ( HANA / Snowflake)\n      \
+  \   *STRY # :STRY2515366 - To enable new fileds in PRM Deatil Dashboard\n      \
+  \   * 31-05-2023 ::  SFSTRY0080039,SFSTRY0071978 -> NewLogo for Domestic Parent,\
+  \ SO Name,SONumber,DemandAccelerator,BusinessImperative\n         * SFSTRY0094945\
+  \ :: 6-Sep :: CosellEnhancements\n         *SFSTRY0094945 :: 26-Oct ::CoSellEnahancements\
+  \ (tasks)\n         * 04-Dec-2023 :: Enabled \"SurfSalesContact\",\"SubmittedBy\"\
+  \ as part of SFSTRY0108059\n         * 20-Dec-2023 :: SFSTRY0110099 - CampaignType,Primary\
+  \ Campaign and Secondary Campaign\n          * 10-Jun-2024 :: SFSTRY0136643 -> DealRegVelocity,\
+  \ OptyACVNotZeroFlag Logic Update,\"MarqueeAccount\"\n********************************************************************************************************************************/\n\
+  \nSELECT \"RecordType\" as \"RecordType\",\n       \"Source\" as \"Source\",\n \
+  \      \"OptyTerrGeo\" as \"OptyTerrGeo\",\n       \"OptyTerrMajorArea\" as \"OptyTerrMajorArea\"\
+  ,\n       \"OptyTerrArea\" as \"OptyTerrArea\",\n       \"OptyTerrRegion\" as \"\
+  OptyTerrRegion\",\n       \"OptyTerrDistrict\" as \"OptyTerrDistrict\",\n      \
+  \ \"OptyTerritory\" as \"OptyTerritory\",\n       \"PartnerTerritoryGeo\" as \"\
+  PartnerTerritoryGeo\",\n       \"PartnerTerritoryMajorArea\" as \"PartnerTerritoryMajorArea\"\
+  ,\n       \"PartnerTerritoryArea\" as \"PartnerTerritoryArea\",\n       \"PartnerTerritoryRegion\"\
+  \ as \"PartnerTerritoryRegion\",\n       \"PartnerTerritoryDistrict\" as \"PartnerTerritoryDistrict\"\
+  ,\n       \"PartnerTerritory\" as \"PartnerTerritory\",\n       \"ReportingTerritoryGeo\"\
+  \ as \"ReportingTerritoryGeo\",\n       \"Quarter\" as \"Quarter\",\n       \"DealRegCloseQuarter\"\
+  \ as \"DealRegCloseQuarter\",\n       \"DealRegSubmissionDate\" as \"DealRegSubmissionDate\"\
+  ,\n       \"DealRegQualifiedDate\" as \"DealRegQualifiedDate\",\n       \"DealRegApprovalDate\"\
+  \ as \"DealRegApprovalDate\",\n       \"DealRegClosedDate\" as \"DealRegClosedDate\"\
+  ,\n       \"QuarterStartDate\" as \"QuarterStartDate\",\n       \"PRLNumber\" as\
+  \ \"PRLNumber\",\n       \"PartnerPercentageAllocated\" as \"PartnerPercentageAllocated\"\
+  ,\n       \"BUGroup\" as \"BUGroup\",\n       \"BUWorkflow\" as \"BUWorkflow\",\n\
+  \       \"PartnerUltimateParentAccountSysid\" as \"PartnerUltimateParentAccountSysid\"\
+  ,\n       \"OptyTerritorySysID\" as \"OptyTerritorySysID\",\n       \"PartnerAccountSysID\"\
+  \ as \"PartnerAccountSysID\",\n       \"PRLTerritorySysID\" as \"PRLTerritorySysID\"\
+  ,\n       \"DealRegistrationSysID\" as \"DealRegistrationSysID\",\n       \"ParentPartnerSysID\"\
+  \ as \"ParentPartnerSysID\",\n       \"ParentPartnerNumber\" as \"ParentPartnerNumber\"\
+  ,\n       \"ParentPartner\" as \"ParentPartner\",\n       \"OptyNumber\" as \"OptyNumber\"\
+  ,\n       \"DealRegistrationNumber\" as \"DealRegistrationNumber\",\n       \"DealRegistrationName\"\
+  \ as \"DealRegistrationName\",\n       \"DealRegistrationOptyPartnershipType\" as\
+  \ \"DealRegistrationOptyPartnershipType\",\n       \"DealRegistrationOptyType\"\
+  \ as \"DealRegistrationOptyType\",\n       \"DealRegistrationOptyStage\" as \"DealRegistrationOptyStage\"\
+  ,\n       \"DealRegistrationStatus\" as \"DealRegistrationStatus\",\n       \"DealRegCustomerAccountName\"\
+  \ as \"DealRegCustomerAccountName\",\n       \"DealRegistrationType\" as \"DealRegistrationType\"\
+  ,\n       \"AccountIndustryCategory\" as \"AccountIndustryCategory\",\n       \"\
+  ParentPartnerStrategicGroupName\" as \"ParentPartnerStrategicGroupName\",\n    \
+  \   \"ParentPartnerSegment\" as \"ParentPartnerSegment\",\n       \"SubmissionFlag\"\
+  \ as \"SubmissionFlag\",\n       \"QualifiedFlag\" as \"QualifiedFlag\",\n     \
+  \  \"ApprovedFlag\" as \"ApprovedFlag\",\n       \"ClosedFlag\" as \"ClosedFlag\"\
+  ,\n       \"DeniedFlag\" as \"DeniedFlag\",\n       \"DealRegistrationCoSellingFlag\"\
+  \ as \"DealRegistrationCoSellingFlag\",\n       \"DealRegNotNull\" as \"DealRegNotNull\"\
+  ,\n       \"PartnerPipelineSourced\" as \"PartnerPipelineSourced\",\n       \"DealRegClosed\"\
+  \ as \"DealRegClosed\",\n       \"OptyStageFlag\" as \"OptyStageFlag\",\n      \
+  \ \"ApprovedSourcedFlag\" as \"ApprovedSourcedFlag\",\n       \"ApprovedAcceleratedFlag\"\
+  \ as \"ApprovedAcceleratedFlag\",\n       \"InfluencedACV\" as \"InfluencedACV\"\
+  ,\n       \"SourcedACV\" as \"SourcedACV\",\n       \"AcceleratedACV\" as \"AcceleratedACV\"\
+  ,\n       \"USDNNACV\" as \"USDNNACV\",\n       \"PartnerAllocatedNNACV\" as \"\
+  PartnerAllocatedNNACV\",\n       \"TagsOptyItemNetNewACV_USD\" as \"TagsOptyItemNetNewACV_USD\"\
+  ,\n       \"ClosedSalesDesignatedPatnerImpactedNNACV\" as \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n       \"ActiveSalesDesignatedPatnerImpactedNNACV\" as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n       \"ClosedSourcedACV\" as \"ClosedSourcedACV\",\n       \"ActiveSourcedACV\"\
+  \ as \"ActiveSourcedACV\",\n       \"ClosedInfluencedACV\" as \"ClosedInfluencedACV\"\
+  ,\n       \"ActiveInfluencedACV\" as \"ActiveInfluencedACV\",\n       \"ClosedDelRegACV\"\
+  \ as \"ClosedDelRegACV\",\n       \"ApprovedDelRegACV\" as \"ApprovedDelRegACV\"\
+  ,\n       \"ClosedACV\" as \"ClosedACV\",\n       \"ClosedWithDealRegACV\" as \"\
+  ClosedWithDealRegACV\",\n       \"ClosedWithoutDealRegACV\" as \"ClosedWithoutDealRegACV\"\
+  ,\n       \"AcctNewSegment\" as \"AcctNewSegment\",\n       \"OptySysID\" as \"\
+  OptySysID\",\n       \"OptyDynamicsGUID\" as \"OptyDynamicsGUID\",\n       \"AccountNumber\"\
+  \ as \"AccountNumber\",\n       \"AccountName\" as \"AccountName\",\n       \"OptyCOManaged\"\
+  \ as \"OptyCOManaged\",\n       \"OptyItemNetNewACV_USD\" as \"OptyItemNetNewACV_USD\"\
+  ,\n       \"DR_Flag\" as \"DR_Flag\",\n       \"DealRegAutoApprovedAE\" as \"DealRegAutoApprovedAE\"\
+  ,\n       \"DealRegAutoApprovedRAM\" as \"DealRegAutoApprovedRAM\",\n       \"DaystoQualify\"\
+  \ as \"DaystoQualify\",\n       \"DaystoApproval\" as \"DaystoApproval\",\n    \
+  \   \"DaystoDenied\" as \"DaystoDenied\",\n       \"DaystoApprovalfromSubmission\"\
+  \ as \"DaystoApprovalfromSubmission\",\n       \"Number\" as \"Number\",\n     \
+  \  \"SecondstoResponse\" as \"SecondstoResponse\",\n       \"DaystoResolve\" as\
+  \ \"DaystoResolve\",\n       \"PartnerNumber\" as \"PartnerNumber\",\n       \"\
+  SLA\" as \"SLA\",\n       \"SLAFlag\" as \"SLAFlag\",\n       \"State\" as \"State\"\
+  ,\n       \"ClosedAt\" as \"ClosedAt\",\n       \"Category\" as \"Category\",\n\
+  \       \"SubCategory\" as \"SubCategory\",\n       \"AssignedTo\" as \"AssignedTo\"\
+  ,\n       \"AssignmentGroup\" as \"AssignmentGroup\",\n       \"ReassignmentCount\"\
+  \ as \"ReassignmentCount\",\n       \"ReOpenCount\" as \"ReOpenCount\",\n      \
+  \ \"ContactType\" as \"ContactType\",\n       \"PartnerAccount\" as \"PartnerAccount\"\
+  ,\n       \"Type\" as \"Type\",\n       \"UpdatedOn\" as \"UpdatedOn\",\n      \
+  \ \"UpdatedBy\" as \"UpdatedBy\",\n       \"Location\" as \"Location\",\n      \
+  \ \"OpenedBy\" as \"OpenedBy\",\n       \"AgentAverageResponseTime\" as \"AgentAverageResponseTime\"\
+  ,\n       \"FirstResponseWaitTime\" as \"FirstResponseWaitTime\",\n       \"ShortDescription\"\
+  \ as \"ShortDescription\",\n       \"CreatedOn\" as \"CreatedOn\",\n       \"ResolvedAt\"\
+  \ as \"ResolvedAt\",\n       \"FirstContactResolution\" as \"FirstContactResolution\"\
+  ,\n       \"OptyPipelineSourced\" as \"OptyPipelineSourced\",\n       \"CaseSysId\"\
+  \ as \"CaseSysId\",\n       \"PartnerCompanyName\" as \"PartnerCompanyName\",\n\
+  \       \"PartAcctRegion\" as \"PartAcctRegion\",\n       \"DealRegExpirationDate\"\
+  \ as \"DealRegExpirationDate\",\n       \"FirstResponseSLA\" as \"FirstResponseSLA\"\
+  ,\n       \"OptySourcedFlag\" as \"OptySourcedFlag\",\n       \"OptySalesDesignatedFlag\"\
+  \ as \"OptySalesDesignatedFlag\",\n       \"CallsSysId\" as \"CallsSysId\",\n  \
+  \     \"PRMPotentialACVValue\" as \"PRMPotentialACVValue\",\n       \"PrimaryBU\"\
+  \ as \"PrimaryBU\",\n       \"PendingApproavlFlag\" as \"PendingApproavlFlag\",\n\
+  \       \"ExpiredFlag\" as \"ExpiredFlag\",\n       \"MarketingActivityNumber\"\
+  \ as \"MarketingActivityNumber\",\n       \"RegistrationClassification\" as \"RegistrationClassification\"\
+  ,\n       \"OptyACVNotZeroFlag\" as \"OptyACVNotZeroFlag\",\n       \"RegistrationSubStatus\"\
+  \ as \"RegistrationSubStatus\",\n       \"PendingApproverName\" as \"PendingApproverName\"\
+  ,\n       \"OpsResolutionCode\" as \"OpsResolutionCode\",\n       \"OptyHeaderACV\"\
+  \ as \"OptyHeaderACV\",\n       \"DaystoDeniedfromSubmission\" as \"DaystoDeniedfromSubmission\"\
+  ,\n       \"DeniedSLAFlag\" as \"DeniedSLAFlag\",\n       \"USDNetNewACVPartner\"\
+  \ as \"USDNetNewACVPartner\",\n       \"SolutionOfferingFlag\" as \"SolutionOfferingFlag\"\
+  ,\n       \"SolutionOfferingType\" as  \"SolutionOfferingType\",\n       \"PRMRejectionCode\"\
+  \ as \"PRMRejectionCode\",   --STRY2515366\n       \"PrimarySalesRep\" as \"PrimarySalesRep\"\
+  ,  --STRY2515366\n       \"PRMDealRegionalAllianceManager\" as \"PRMDealRegionalAllianceManager\"\
+  , --STRY2515366\n       \"PartnerActive\" as \"PartnerActive\",   --STRY2515366\n\
+  \       \"PRMChannelManager\" as \"PRMChannelManager\", --STRY2515366\n       \"\
+  SolutionOfferingNumber\" as \"SolutionOfferingNumber\", --SFSTRY0071978\n      \
+  \ \"SolutionOfferingName\" as \"SolutionOfferingName\", --SFSTRY0071978\n      \
+  \ \"AcctFieldSalesParentAccount\" as \"AcctFieldSalesParentAccount\", --SFSTRY0080039\n\
+  \t   \"FSPNewLogoFlag\" as \"FSPNewLogoFlag\", --SFSTRY0080039\n       \"BusinessImperative\"\
+  \ as \"BusinessImperative\",\n       \"SolutionOfferingTypeOpty\" as \"SolutionOfferingTypeOpty\"\
+  ,\n       \"DemandAccelerator\" as \"DemandAccelerator\",\n       \"ProgramType\"\
+  \ as \"ProgramType\",\n        \"ApprovalStatus\" as \"ApprovalStatus\",\n     \
+  \   \"ApprovedDate\" as \"ApprovedDate\",\n        \"RejectedDate\" as \"RejectedDate\"\
+  ,\n        \"CreatedDate\" as \"CreatedDate\",\n        \"TaskSysID\" as \"TaskSysID\"\
+  ,\n        \"SurfSalesContact\" as \"SurfSalesContact\",\n        \"SubmittedBy\"\
+  \ as \"SubmittedBy\",\n        \"CampaignType\" as \"CampaignType\",\n        \"\
+  PrimaryCampaign\" as \"PrimaryCampaign\",\n        \"SecondaryCampaign\" as \"SecondaryCampaign\"\
+  ,\n\t\t\"AcctIndustry\" as \"AcctIndustry\",\n        \"SourcedClosedACV_FullCredit\"\
+  \ as \"SourcedClosedACV_FullCredit\",\n\t    \"PartnerSourcedACV_FullCredit\" as\
+  \ \"PartnerSourcedACV_FullCredit\",\n\t    \"SubmittedPartnerSourcedACV_FullCredit\"\
+  \ as \"SubmittedPartnerSourcedACV_FullCredit\",\n\t    \"CommitPartnerSourcedACV_FullCredit\"\
+  \ as \"CommitPartnerSourcedACV_FullCredit\",\n\t    \"ExpectPartnerSourcedACV_FullCredit\"\
+  \ as \"ExpectPartnerSourcedACV_FullCredit\",\n\t    \"UpsidePartnerSourcedACV_FullCredit\"\
+  \ as \"UpsidePartnerSourcedACV_FullCredit\",\n\t    \"WeightedPartnerSourcedACV_FullCredit\"\
+  \ as \"WeightedPartnerSourcedACV_FullCredit\",\n        \"DealRegVelocity\" as \"\
+  DealRegVelocity\",\n        \"MarqueeAccount\" as \"MarqueeAccount\"\n\n\nFROM\n\
+  \  (SELECT \"RecordType\" as \"RecordType\",\n          \"Source\" as \"Source\"\
+  ,\n          \"OptyTerrGeo\" as \"OptyTerrGeo\",\n          \"OptyTerrMajorArea\"\
+  \ as \"OptyTerrMajorArea\",\n          \"OptyTerrArea\" as \"OptyTerrArea\",\n \
+  \         \"OptyTerrRegion\" as \"OptyTerrRegion\",\n          \"OptyTerrDistrict\"\
+  \ as \"OptyTerrDistrict\",\n          \"OptyTerritory\" as \"OptyTerritory\",\n\
+  \          \"PartnerTerritoryGeo\" as \"PartnerTerritoryGeo\",\n          \"PartnerTerritoryMajorArea\"\
+  \ as \"PartnerTerritoryMajorArea\",\n          \"PartnerTerritoryArea\" as \"PartnerTerritoryArea\"\
+  ,\n          \"PartnerTerritoryRegion\" as \"PartnerTerritoryRegion\",\n       \
+  \   \"PartnerTerritoryDistrict\" as \"PartnerTerritoryDistrict\",\n          \"\
+  PartnerTerritory\" as \"PartnerTerritory\",\n          \"ReportingTerritoryGeo\"\
+  \ as \"ReportingTerritoryGeo\",\n          \"Quarter\" as \"Quarter\",\n       \
+  \   \"DealRegCloseQuarter\" as \"DealRegCloseQuarter\",\n          \"DealRegSubmissionDate\"\
+  \ as \"DealRegSubmissionDate\",\n          \"DealRegQualifiedDate\" as \"DealRegQualifiedDate\"\
+  ,\n          \"DealRegApprovalDate\" as \"DealRegApprovalDate\",\n          \"DealRegClosedDate\"\
+  \ as \"DealRegClosedDate\",\n          \"QuarterStartDate\" as \"QuarterStartDate\"\
+  ,\n          \"PRLNumber\" as \"PRLNumber\",\n          \"PartnerPercentageAllocated\"\
+  \ as \"PartnerPercentageAllocated\",\n          \"BUWorkflow\" as \"BUWorkflow_1\"\
+  ,\n          \"BUGroup\" as \"BUGroup_1\",\n          \"PartnerUltimateParentAccountSysid\"\
+  \ as \"PartnerUltimateParentAccountSysid\",\n          \"OptyTerritorySysID\" as\
+  \ \"OptyTerritorySysID\",\n          \"PartnerAccountSysID\" as \"PartnerAccountSysID\"\
+  ,\n          \"PRLTerritorySysID\" as \"PRLTerritorySysID\",\n          \"DealRegistrationSysID\"\
+  \ as \"DealRegistrationSysID\",\n          \"ParentPartnerSysID\" as \"ParentPartnerSysID\"\
+  ,\n          \"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n          \"ParentPartner\"\
+  \ as \"ParentPartner\",\n          \"OptyNumber\" as \"OptyNumber\",\n         \
+  \ \"DealRegistrationNumber\" as \"DealRegistrationNumber\",\n          \"DealRegistrationName\"\
+  \ as \"DealRegistrationName\",\n          \"DealRegistrationOptyPartnershipType\"\
+  \ as \"DealRegistrationOptyPartnershipType\",\n          \"DealRegistrationOptyType\"\
+  \ as \"DealRegistrationOptyType\",\n          \"DealRegistrationOptyStage\" as \"\
+  DealRegistrationOptyStage\",\n          \"DealRegistrationStatus\" as \"DealRegistrationStatus\"\
+  ,\n          \"DealRegCustomerAccountName\" as \"DealRegCustomerAccountName\",\n\
+  \          \"DealRegistrationType\" as \"DealRegistrationType\",\n          \"AccountIndustryCategory\"\
+  \ as \"AccountIndustryCategory\",\n          \"ParentPartnerCategoryCode\" as \"\
+  ParentPartnerCategoryCode\",\n          \"ParentPartnerSegment\" as \"ParentPartnerSegment\"\
+  ,\n          \"SubmissionFlag\" as \"SubmissionFlag\",\n          \"QualifiedFlag\"\
+  \ as \"QualifiedFlag\",\n          \"ApprovedFlag\" as \"ApprovedFlag\",\n     \
+  \     \"ClosedFlag\" as \"ClosedFlag\",\n          \"DeniedFlag\" as \"DeniedFlag\"\
+  ,\n          \"DealRegistrationCoSellingFlag\" as \"DealRegistrationCoSellingFlag\"\
+  ,\n          \"DealRegNotNull\" as \"DealRegNotNull\",\n          \"PartnerPipelineSourced\"\
+  \ as \"PartnerPipelineSourced\",\n          \"DealRegClosed\" as \"DealRegClosed\"\
+  ,\n          \"OptyStageFlag\" as \"OptyStageFlag\",\n          \"ApprovedSourcedFlag\"\
+  \ as \"ApprovedSourcedFlag\",\n          \"ApprovedAcceleratedFlag\" as \"ApprovedAcceleratedFlag\"\
+  ,\n          \"InfluencedACV\" as \"InfluencedACV\",\n          \"SourcedACV\" as\
+  \ \"SourcedACV\",\n          \"AcceleratedACV\" as \"AcceleratedACV\",\n       \
+  \   \"USDNNACV\" as \"USDNNACV\",\n          \"PartnerAllocatedNNACV\" as \"PartnerAllocatedNNACV\"\
+  ,\n          \"TagsOptyItemNetNewACV_USD\" as \"TagsOptyItemNetNewACV_USD\",\n \
+  \         \"ClosedSalesDesignatedPatnerImpactedNNACV\" as \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n          \"ActiveSalesDesignatedPatnerImpactedNNACV\" as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n          \"ClosedSourcedACV\" as \"ClosedSourcedACV\",\n          \"ActiveSourcedACV\"\
+  \ as \"ActiveSourcedACV\",\n          \"ClosedInfluencedACV\" as \"ClosedInfluencedACV\"\
+  ,\n          \"ActiveInfluencedACV\" as \"ActiveInfluencedACV\",\n          \"ClosedDelRegACV\"\
+  \ as \"ClosedDelRegACV\",\n          \"ApprovedDelRegACV\" as \"ApprovedDelRegACV\"\
+  ,\n          \"ClosedACV\" as \"ClosedACV\",\n          \"ClosedWithDealRegACV\"\
+  \ as \"ClosedWithDealRegACV\",\n          \"ClosedWithoutDealRegACV\" as \"ClosedWithoutDealRegACV\"\
+  ,\n          \"AcctNewSegment\" as \"AcctNewSegment\",\n          \"OptySysID\"\
+  \ as \"OptySysID\",\n          \"OptyDynamicsGUID\" as \"OptyDynamicsGUID\",\n \
+  \         \"AccountNumber\" as \"AccountNumber\",\n          \"AccountName\" as\
+  \ \"AccountName\",\n          \"OptyCOManaged\" as \"OptyCOManaged\",\n        \
+  \  \"OptyItemNetNewACV_USD\" as \"OptyItemNetNewACV_USD\",\n          \"DR_Flag\"\
+  \ as \"DR_Flag\",\n          \"DealRegAutoApprovedAE\" as \"DealRegAutoApprovedAE\"\
+  ,\n          \"DealRegAutoApprovedRAM\" as \"DealRegAutoApprovedRAM\",\n       \
+  \   \"DaystoQualify\" as \"DaystoQualify\",\n          \"DaystoApproval\" as \"\
+  DaystoApproval\",\n          \"DaystoDenied\" as \"DaystoDenied\",\n          \"\
+  DaystoApprovalfromSubmission\" as \"DaystoApprovalfromSubmission\",\n          \"\
+  Number\" as \"Number\",\n          \"SecondstoResponse\" as \"SecondstoResponse\"\
+  ,\n          \"DaystoResolve\" as \"DaystoResolve\",\n          \"PartnerNumber\"\
+  \ as \"PartnerNumber\",\n          \"SLA\" as \"SLA\",\n          \"SLAFlag\" as\
+  \ \"SLAFlag\",\n          \"State\" as \"State\",\n          \"ClosedAt\" as \"\
+  ClosedAt\",\n          \"Category\" as \"Category\",\n          \"SubCategory\"\
+  \ as \"SubCategory\",\n          \"AssignedTo\" as \"AssignedTo\",\n          \"\
+  AssignmentGroup\" as \"AssignmentGroup\",\n          \"ReassignmentCount\" as \"\
+  ReassignmentCount\",\n          \"ReOpenCount\" as \"ReOpenCount\",\n          \"\
+  ContactType\" as \"ContactType\",\n          \"PartnerAccount\" as \"PartnerAccount\"\
+  ,\n          \"Type\" as \"Type\",\n          \"UpdatedOn\" as \"UpdatedOn\",\n\
+  \          \"UpdatedBy\" as \"UpdatedBy\",\n          \"Location\" as \"Location\"\
+  ,\n          \"OpenedBy\" as \"OpenedBy\",\n          \"AgentAverageResponseTime\"\
+  \ as \"AgentAverageResponseTime\",\n          \"FirstResponseWaitTime\" as \"FirstResponseWaitTime\"\
+  ,\n          \"ShortDescription\" as \"ShortDescription\",\n          \"CreatedOn\"\
+  \ as \"CreatedOn\",\n          \"ResolvedAt\" as \"ResolvedAt\",\n          \"FirstContactResolution\"\
+  \ as \"FirstContactResolution\",\n          \"OptyPipelineSourced\" as \"OptyPipelineSourced\"\
+  ,\n          \"CaseSysId\" as \"CaseSysId\",\n          \"PartnerCompanyName\" as\
+  \ \"PartnerCompanyName\",\n          \"PartAcctRegion\" as \"PartAcctRegion\",\n\
+  \          \"DealRegExpirationDate\" as \"DealRegExpirationDate\",\n          \"\
+  FirstResponseSLA\" as \"FirstResponseSLA\",\n          \"OptySourcedFlag\" as \"\
+  OptySourcedFlag\",\n          \"OptySalesDesignatedFlag\" as \"OptySalesDesignatedFlag\"\
+  ,\n          \"CallsSysId\" as \"CallsSysId\",\n          \"PRMPotentialACVValue\"\
+  \ as \"PRMPotentialACVValue\",\n          \"PrimaryBU\" as \"PrimaryBU\",\n    \
+  \      \"PendingApproavlFlag\" as \"PendingApproavlFlag\",\n          \"ExpiredFlag\"\
+  \ as \"ExpiredFlag\",\n          \"MarketingActivityNumber\" as \"MarketingActivityNumber\"\
+  ,\n          \"RegistrationClassification\" as \"RegistrationClassification\",\n\
+  \          \"OptyACVNotZeroFlag\" as \"OptyACVNotZeroFlag\",\n          \"RegistrationSubStatus\"\
+  \ as \"RegistrationSubStatus\",\n          \"PendingApproverName\" as \"PendingApproverName\"\
+  ,\n          \"OpsResolutionCode\" as \"OpsResolutionCode\",\n          \"OptyHeaderACV\"\
+  \ as \"OptyHeaderACV\",\n          \"DeniedSLAFlag\" as \"DeniedSLAFlag\",\n   \
+  \       \"DaystoDeniedfromSubmission\" as \"DaystoDeniedfromSubmission\",\n    \
+  \      \"USDNetNewACVPartner\" as \"USDNetNewACVPartner\",\n          IFF((\"ParentPartnerCategoryCode\"\
+  ) IS NULL\n              OR \"ParentPartnerCategoryCode\" = 'random', 'random',\
+  \ IFF(\"ParentPartnerCategoryCode\"='random', 'random', IFF(\"ParentPartnerCategoryCode\"\
+  ='random', 'random', IFF(\"ParentPartnerCategoryCode\"='random', 'random', \"ParentPartnerCategoryCode\"\
+  )))) as \"ParentPartnerStrategicGroupName_CC\",\n\n /*\n         CASE\n        \
+  \      WHEN \"ParentPartnerStrategicGroupName_CC\" ='PDC' THEN 'Partner Development\
+  \ Center/Concierge'\n              WHEN \"ParentPartnerStrategicGroupName_CC\" ='G10'\
+  \ THEN 'Global 10'\n              WHEN \"ParentPartnerStrategicGroupName_CC\" ='G6'\
+  \ THEN 'Global 6'\n              WHEN \"ParentPartnerStrategicGroupName_CC\" ='Incubation'\
+  \ THEN 'Global Incubation'\n              WHEN \"ParentPartnerStrategicGroupName_CC\"\
+  \ ='Primary SP' THEN 'Primary Service Providers'\n              WHEN \"ParentPartnerStrategicGroupName_CC\"\
+  \ ='RSI' THEN 'Regional/National Partners'\n              WHEN \"ParentPartnerStrategicGroupName_CC\"\
+  \ ='Concierge' THEN 'PDC Lite'\n              ELSE \"ParentPartnerStrategicGroupName_CC\"\
+  \n          END as \"ParentPartnerStrategicGroupName\", */\n\n          \"ParentPartnerStrategicGroupName_CC\"\
+  \ as \"ParentPartnerStrategicGroupName\",\n\n          IFF((\"BUGroup_1\") IS NULL,\
+  \ 'random', \"BUGroup_1\") as \"BUGroup\",\n          IFF((\"BUWorkflow_1\") IS\
+  \ NULL, 'random', \"BUWorkflow_1\") as \"BUWorkflow\",\n        \"SolutionOfferingFlag\"\
+  \ as \"SolutionOfferingFlag\",\n         \"SolutionOfferingType\" as  \"SolutionOfferingType\"\
+  ,\n         \"PRMRejectionCode\" as \"PRMRejectionCode\",\n         \"PrimarySalesRep\"\
+  \ as \"PrimarySalesRep\",\n         \"PRMDealRegionalAllianceManager\" as \"PRMDealRegionalAllianceManager\"\
+  ,\n         \"PartnerActive\" as \"PartnerActive\",\n         \"PRMChannelManager\"\
+  \ as \"PRMChannelManager\",\n          \"SolutionOfferingNumber\" as \"SolutionOfferingNumber\"\
+  ,\n         \"SolutionOfferingName\" as \"SolutionOfferingName\",\n         \"AcctFieldSalesParentAccount\"\
+  \ as \"AcctFieldSalesParentAccount\",\n\t    \"FSPNewLogoFlag\" as \"FSPNewLogoFlag\"\
+  ,\n        \"BusinessImperative\" as \"BusinessImperative\",\n        \"SolutionOfferingTypeOpty\"\
+  \ as \"SolutionOfferingTypeOpty\",\n        \"DemandAccelerator\" as \"DemandAccelerator\"\
+  ,\n        \"ProgramType\" as \"ProgramType\",\n         \"ApprovalStatus\" as \"\
+  ApprovalStatus\",\n        \"ApprovedDate\" as \"ApprovedDate\",\n        \"RejectedDate\"\
+  \ as \"RejectedDate\",\n        \"CreatedDate\" as \"CreatedDate\",\n        \"\
+  TaskSysID\" as \"TaskSysID\",\n        \"SurfSalesContact\" as \"SurfSalesContact\"\
+  ,\n        \"SubmittedBy\" as \"SubmittedBy\",\n        \"CampaignType\" as \"CampaignType\"\
+  ,\n        \"PrimaryCampaign\" as \"PrimaryCampaign\",\n        \"SecondaryCampaign\"\
+  \ as \"SecondaryCampaign\",\n\t\t\"AcctIndustry\" as \"AcctIndustry\",\n       \
+  \  \"SourcedClosedACV_FullCredit\" as \"SourcedClosedACV_FullCredit\",\n\t    \"\
+  PartnerSourcedACV_FullCredit\" as \"PartnerSourcedACV_FullCredit\",\n\t    \"SubmittedPartnerSourcedACV_FullCredit\"\
+  \ as \"SubmittedPartnerSourcedACV_FullCredit\",\n\t    \"CommitPartnerSourcedACV_FullCredit\"\
+  \ as \"CommitPartnerSourcedACV_FullCredit\",\n\t    \"ExpectPartnerSourcedACV_FullCredit\"\
+  \ as \"ExpectPartnerSourcedACV_FullCredit\",\n\t    \"UpsidePartnerSourcedACV_FullCredit\"\
+  \ as \"UpsidePartnerSourcedACV_FullCredit\",\n\t    \"WeightedPartnerSourcedACV_FullCredit\"\
+  \ as \"WeightedPartnerSourcedACV_FullCredit\",\n        \"DealRegVelocity\" as \"\
+  DealRegVelocity\",\n        \"MarqueeAccount\" as \"MarqueeAccount\"\n   FROM\n\
+  \     (SELECT *\n      FROM\n        (SELECT \"OptyTerrGeo\" as \"OptyTerrGeo\"\
+  ,\n                \"OptyTerrMajorArea\" as \"OptyTerrMajorArea\",\n           \
+  \     \"OptyTerrArea\" as \"OptyTerrArea\",\n                \"OptyTerrRegion\"\
+  \ as \"OptyTerrRegion\",\n                \"OptyTerrDistrict\" as \"OptyTerrDistrict\"\
+  ,\n                \"OptyTerritory\" as \"OptyTerritory\",\n                \"PartnerTerritoryGeo\"\
+  \ as \"PartnerTerritoryGeo\",\n                \"PartnerTerritoryMajorArea\" as\
+  \ \"PartnerTerritoryMajorArea\",\n                \"PartnerTerritoryArea\" as \"\
+  PartnerTerritoryArea\",\n                \"PartnerTerritoryRegion\" as \"PartnerTerritoryRegion\"\
+  ,\n                \"PartnerTerritoryDistrict\" as \"PartnerTerritoryDistrict\"\
+  ,\n                \"PartnerTerritory\" as \"PartnerTerritory\",\n             \
+  \   \"ReportingTerritoryGeo\" as \"ReportingTerritoryGeo\",\n                \"\
+  DealRegCloseQuarter\" as \"DealRegCloseQuarter\",\n                \"DealRegSubmissionDate\"\
+  \ as \"DealRegSubmissionDate\",\n                \"DealRegQualifiedDate\" as \"\
+  DealRegQualifiedDate\",\n                \"DealRegApprovalDate\" as \"DealRegApprovalDate\"\
+  ,\n                \"DealRegClosedDate\" as \"DealRegClosedDate\",\n           \
+  \     \"PRLNumber\" as \"PRLNumber\",\n                \"PartnerPercentageAllocated\"\
+  \ as \"PartnerPercentageAllocated\",\n                \"BUWorkflow\" as \"BUWorkflow\"\
+  ,\n                \"BUGroup\" as \"BUGroup\",\n                \"PartnerUltimateParentAccountSysid\"\
+  \ as \"PartnerUltimateParentAccountSysid\",\n                \"OptyTerritorySysID\"\
+  \ as \"OptyTerritorySysID\",\n                \"PartnerAccountSysID\" as \"PartnerAccountSysID\"\
+  ,\n                \"PRLTerritorySysID\" as \"PRLTerritorySysID\",\n           \
+  \     \"DealRegistrationSysID\" as \"DealRegistrationSysID\",\n                \"\
+  ParentPartnerSysID\" as \"ParentPartnerSysID\",\n                \"ParentPartnerNumber\"\
+  \ as \"ParentPartnerNumber\",\n                \"ParentPartner\" as \"ParentPartner\"\
+  ,\n                \"OptyNumber\" as \"OptyNumber\",\n                \"DealRegistrationNumber\"\
+  \ as \"DealRegistrationNumber\",\n                \"DealRegistrationName\" as \"\
+  DealRegistrationName\",\n                \"DealRegistrationOptyPartnershipType\"\
+  \ as \"DealRegistrationOptyPartnershipType\",\n                \"DealRegistrationOptyType\"\
+  \ as \"DealRegistrationOptyType\",\n                \"DealRegistrationOptyStage\"\
+  \ as \"DealRegistrationOptyStage\",\n                \"DealRegistrationStatus\"\
+  \ as \"DealRegistrationStatus\",\n                \"DealRegCustomerAccountName\"\
+  \ as \"DealRegCustomerAccountName\",\n                \"DealRegistrationType\" as\
+  \ \"DealRegistrationType\",\n                \"AccountIndustryCategory\" as \"AccountIndustryCategory\"\
+  ,\n                \"ParentPartnerCategoryCode\" as \"ParentPartnerCategoryCode\"\
+  ,\n                \"ParentPartnerSegment\" as \"ParentPartnerSegment\",\n     \
+  \           \"SubmissionFlag\" as \"SubmissionFlag\",\n                \"QualifiedFlag\"\
+  \ as \"QualifiedFlag\",\n                \"ApprovedFlag\" as \"ApprovedFlag\",\n\
+  \                \"ClosedFlag\" as \"ClosedFlag\",\n                \"DeniedFlag\"\
+  \ as \"DeniedFlag\",\n                \"DealRegistrationCoSellingFlag\" as \"DealRegistrationCoSellingFlag\"\
+  ,\n                \"DealRegNotNull\" as \"DealRegNotNull\",\n                \"\
+  PartnerPipelineSourced\" as \"PartnerPipelineSourced\",\n                \"DealRegClosed\"\
+  \ as \"DealRegClosed\",\n                \"OptyStageFlag\" as \"OptyStageFlag\"\
+  ,\n                \"ApprovedSourcedFlag\" as \"ApprovedSourcedFlag\",\n       \
+  \         \"ApprovedAcceleratedFlag\" as \"ApprovedAcceleratedFlag\",\n        \
+  \        \"InfluencedACV\" as \"InfluencedACV\",\n                \"SourcedACV\"\
+  \ as \"SourcedACV\",\n                \"AcceleratedACV\" as \"AcceleratedACV\",\n\
+  \                \"USDNNACV\" as \"USDNNACV\",\n                \"PartnerAllocatedNNACV\"\
+  \ as \"PartnerAllocatedNNACV\",\n                \"TagsOptyItemNetNewACV_USD\" as\
+  \ \"TagsOptyItemNetNewACV_USD\",\n                \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  \ as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n                \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  \ as \"ActiveSalesDesignatedPatnerImpactedNNACV\",\n                \"ClosedSourcedACV\"\
+  \ as \"ClosedSourcedACV\",\n                \"ActiveSourcedACV\" as \"ActiveSourcedACV\"\
+  ,\n                \"ClosedInfluencedACV\" as \"ClosedInfluencedACV\",\n       \
+  \         \"ActiveInfluencedACV\" as \"ActiveInfluencedACV\",\n                \"\
+  ClosedDelRegACV\" as \"ClosedDelRegACV\",\n                \"ApprovedDelRegACV\"\
+  \ as \"ApprovedDelRegACV\",\n                \"ClosedACV\" as \"ClosedACV\",\n \
+  \               \"ClosedWithDealRegACV\" as \"ClosedWithDealRegACV\",\n        \
+  \        \"ClosedWithoutDealRegACV\" as \"ClosedWithoutDealRegACV\",\n         \
+  \       \"AcctNewSegment\" as \"AcctNewSegment\",\n                \"OptySysID\"\
+  \ as \"OptySysID\",\n                \"OptyDynamicsGUID\" as \"OptyDynamicsGUID\"\
+  ,\n                \"AccountNumber\" as \"AccountNumber\",\n                \"AccountName\"\
+  \ as \"AccountName\",\n                \"OptyCOManaged\" as \"OptyCOManaged\",\n\
+  \                \"OptyItemNetNewACV_USD\" as \"OptyItemNetNewACV_USD\",\n     \
+  \           \"DealRegAutoApprovedAE\" as \"DealRegAutoApprovedAE\",\n          \
+  \      \"DealRegAutoApprovedRAM\" as \"DealRegAutoApprovedRAM\",\n             \
+  \   \"DaystoQualify\" as \"DaystoQualify\",\n                \"DaystoApproval\"\
+  \ as \"DaystoApproval\",\n                \"DaystoDenied\" as \"DaystoDenied\",\n\
+  \                \"DaystoApprovalfromSubmission\" as \"DaystoApprovalfromSubmission\"\
+  ,\n                \"OptyPipelineSourced\" as \"OptyPipelineSourced\",\n       \
+  \         'random' as \"DaystoResolve\",\n                'random' as \"AssignmentGroup\"\
+  ,\n                'random' as \"ReassignmentCount\",\n                'random'\
+  \ as \"ReOpenCount\",\n                'random' as \"ContactType\",\n          \
+  \      'random' as \"PartnerAccount\",\n                'random' as \"CreatedOn\"\
+  ,\n                'random' as \"ResolvedAt\",\n                'random' as \"FirstContactResolution\"\
+  ,\n                'random' as \"CaseSysId\",\n                'random' as \"PartnerCompanyName\"\
+  ,\n                'random' as \"PartAcctRegion\",\n                \"DealRegExpirationDate\"\
+  \ as \"DealRegExpirationDate\",\n                'random' as \"FirstResponseSLA\"\
+  ,\n                \"OptySourcedFlag\" as \"OptySourcedFlag\",\n               \
+  \ \"OptySalesDesignatedFlag\" as \"OptySalesDesignatedFlag\",\n                'random'\
+  \ as \"PartnerNumber\",\n                \"PRMPotentialACVValue\" as \"PRMPotentialACVValue\"\
+  ,\n                \"PrimaryBU\" as \"PrimaryBU\",\n                'random' as\
+  \ \"SecondstoResponse\",\n                'random' as \"Type\",\n              \
+  \  'random' as \"UpdatedOn\",\n                'random' as \"UpdatedBy\",\n    \
+  \            'random' as \"Location\",\n                'random' as \"OpenedBy\"\
+  ,\n                'random' as \"AgentAverageResponseTime\",\n                'random'\
+  \ as \"FirstResponseWaitTime\",\n                'random' as \"ShortDescription\"\
+  ,\n                'random' as \"Number\",\n                \"SLA\" as \"SLA\",\n\
+  \                \"SLAFlag\" as \"SLAFlag\",\n                'random' as \"State\"\
+  ,\n                'random' as \"ClosedAt\",\n                'random' as \"Category\"\
+  ,\n                'random' as \"SubCategory\",\n                'random' as \"\
+  AssignedTo\",\n                \"RecordType\" as \"RecordType\",\n             \
+  \   \"Source\" as \"Source\",\n                \"Quarter\" as \"Quarter\",\n   \
+  \             \"QuarterStartDate\" as \"QuarterStartDate\",\n                \"\
+  DR_Flag\" as \"DR_Flag\",\n                'random' as \"CallsSysId\",\n       \
+  \         \"PendingApproavlFlag\" as \"PendingApproavlFlag\",\n                \"\
+  ExpiredFlag\" as \"ExpiredFlag\",\n                \"MarketingActivityNumber\" as\
+  \ \"MarketingActivityNumber\",\n                \"RegistrationClassification\" as\
+  \ \"RegistrationClassification\",\n                \"RegistrationSubStatus\" as\
+  \ \"RegistrationSubStatus\",\n                \"OptyACVNotZeroFlag\" as \"OptyACVNotZeroFlag\"\
+  ,\n                \"PendingApproverName\" as \"PendingApproverName\",\n       \
+  \         'random' as \"OpsResolutionCode\",\n                \"OptyHeaderACV\"\
+  \ as \"OptyHeaderACV\",\n                \"DaystoDeniedfromSubmission\" as \"DaystoDeniedfromSubmission\"\
+  ,\n                \"DeniedSLAFlag\" as \"DeniedSLAFlag\",\n                \"USDNetNewACVPartner\"\
+  \ as \"USDNetNewACVPartner\",\n                \"SolutionOfferingFlag\" as \"SolutionOfferingFlag\"\
+  ,\n                \"SolutionOfferingType\" as \"SolutionOfferingType\",\n     \
+  \           \"PRMRejectionCode\" as \"PRMRejectionCode\",\n                \"PrimarySalesRep\"\
+  \ as \"PrimarySalesRep\",\n                \"PRMDealRegionalAllianceManager\" as\
+  \ \"PRMDealRegionalAllianceManager\",\n                \"PartnerActive\" as \"PartnerActive\"\
+  ,\n                \"PRMChannelManager\" as \"PRMChannelManager\",\n           \
+  \      \"SolutionOfferingNumber\" as \"SolutionOfferingNumber\",\n             \
+  \   \"SolutionOfferingName\" as \"SolutionOfferingName\",\n                 \"AcctFieldSalesParentAccount\"\
+  \ as \"AcctFieldSalesParentAccount\",\n\t             \"FSPNewLogoFlag\" as \"FSPNewLogoFlag\"\
+  ,\n                 \"BusinessImperative\" as \"BusinessImperative\",\n        \
+  \         \"SolutionOfferingTypeOpty\" as \"SolutionOfferingTypeOpty\",\n      \
+  \           \"DemandAccelerator\" as \"DemandAccelerator\",\n                 \"\
+  ProgramType\" as \"ProgramType\",\n                  \"ApprovalStatus\" as \"ApprovalStatus\"\
+  ,\n                \"ApprovedDate\" as \"ApprovedDate\",\n                \"RejectedDate\"\
+  \ as \"RejectedDate\",\n                \"CreatedDate\" as \"CreatedDate\",\n  \
+  \              \"TaskSysID\" as \"TaskSysID\",\n                \"SurfSalesContact\"\
+  \ as \"SurfSalesContact\",\n                \"SubmittedBy\" as \"SubmittedBy\",\n\
+  \                \"CampaignType\" as \"CampaignType\",\n                \"PrimaryCampaign\"\
+  \ as \"PrimaryCampaign\",\n                \"SecondaryCampaign\" as \"SecondaryCampaign\"\
+  ,\n\t\t\t\t\"AcctIndustry\" as \"AcctIndustry\",\n                 \"SourcedClosedACV_FullCredit\"\
+  \ as \"SourcedClosedACV_FullCredit\",\n                \"PartnerSourcedACV_FullCredit\"\
+  \ as \"PartnerSourcedACV_FullCredit\",\n                \"SubmittedPartnerSourcedACV_FullCredit\"\
+  \ as \"SubmittedPartnerSourcedACV_FullCredit\",\n                \"CommitPartnerSourcedACV_FullCredit\"\
+  \ as \"CommitPartnerSourcedACV_FullCredit\",\n                \"ExpectPartnerSourcedACV_FullCredit\"\
+  \ as \"ExpectPartnerSourcedACV_FullCredit\",\n                \"UpsidePartnerSourcedACV_FullCredit\"\
+  \ as \"UpsidePartnerSourcedACV_FullCredit\",\n                \"WeightedPartnerSourcedACV_FullCredit\"\
+  \ as \"WeightedPartnerSourcedACV_FullCredit\",\n                \"DealRegVelocity\"\
+  \ as \"DealRegVelocity\",\n                \"MarqueeAccount\" as \"MarqueeAccount\"\
+  \n         FROM\n         (SELECT \"OptyTerrGeo\" as \"OptyTerrGeo\",\n        \
+  \        \"OptyTerrMajorArea\" as \"OptyTerrMajorArea\",\n                \"OptyTerrArea\"\
+  \ as \"OptyTerrArea\",\n                \"OptyTerrRegion\" as \"OptyTerrRegion\"\
+  ,\n                \"OptyTerrDistrict\" as \"OptyTerrDistrict\",\n             \
+  \   \"OptyTerritory\" as \"OptyTerritory\",\n                \"PartnerTerritoryGeo\"\
+  \ as \"PartnerTerritoryGeo\",\n                \"PartnerTerritoryMajorArea\" as\
+  \ \"PartnerTerritoryMajorArea\",\n                \"PartnerTerritoryArea\" as \"\
+  PartnerTerritoryArea\",\n                \"PartnerTerritoryRegion\" as \"PartnerTerritoryRegion\"\
+  ,\n                \"PartnerTerritoryDistrict\" as \"PartnerTerritoryDistrict\"\
+  ,\n                \"PartnerTerritory\" as \"PartnerTerritory\",\n             \
+  \   \"ReportingTerritoryGeo\" as \"ReportingTerritoryGeo\",\n                \"\
+  DealRegCloseQuarter\" as \"DealRegCloseQuarter\",\n                \"DealRegSubmissionDate\"\
+  \ as \"DealRegSubmissionDate\",\n                \"DealRegQualifiedDate\" as \"\
+  DealRegQualifiedDate\",\n                \"DealRegApprovalDate\" as \"DealRegApprovalDate\"\
+  ,\n                \"DealRegClosedDate\" as \"DealRegClosedDate\",\n           \
+  \     \"PRLNumber\" as \"PRLNumber\",\n                \"PartnerPercentageAllocated\"\
+  \ as \"PartnerPercentageAllocated\",\n                \"BUWorkflow\" as \"BUWorkflow\"\
+  ,\n                \"BUGroup\" as \"BUGroup\",\n                \"PartnerUltimateParentAccountSysid\"\
+  \ as \"PartnerUltimateParentAccountSysid\",\n                \"OptyTerritorySysID\"\
+  \ as \"OptyTerritorySysID\",\n                \"PartnerAccountSysID\" as \"PartnerAccountSysID\"\
+  ,\n                \"PRLTerritorySysID\" as \"PRLTerritorySysID\",\n           \
+  \     \"DealRegistrationSysID\" as \"DealRegistrationSysID\",\n                \"\
+  ParentPartnerSysID\" as \"ParentPartnerSysID\",\n                \"ParentPartnerNumber\"\
+  \ as \"ParentPartnerNumber\",\n                \"ParentPartner\" as \"ParentPartner\"\
+  ,\n                \"OptyNumber\" as \"OptyNumber\",\n                \"DealRegistrationNumber\"\
+  \ as \"DealRegistrationNumber\",\n                \"DealRegistrationName\" as \"\
+  DealRegistrationName\",\n                \"DealRegistrationOptyPartnershipType\"\
+  \ as \"DealRegistrationOptyPartnershipType\",\n                \"DealRegistrationOptyType\"\
+  \ as \"DealRegistrationOptyType\",\n                \"DealRegistrationOptyStage\"\
+  \ as \"DealRegistrationOptyStage\",\n                \"DealRegistrationStatus\"\
+  \ as \"DealRegistrationStatus\",\n                \"DealRegCustomerAccountName\"\
+  \ as \"DealRegCustomerAccountName\",\n                \"DealRegistrationType\" as\
+  \ \"DealRegistrationType\",\n                \"AccountIndustryCategory\" as \"AccountIndustryCategory\"\
+  ,\n                \"ParentPartnerCategoryCode\" as \"ParentPartnerCategoryCode\"\
+  ,\n                \"ParentPartnerSegment\" as \"ParentPartnerSegment\",\n     \
+  \           \"SubmissionFlag\" as \"SubmissionFlag\",\n                \"QualifiedFlag\"\
+  \ as \"QualifiedFlag\",\n                \"ApprovedFlag\" as \"ApprovedFlag\",\n\
+  \                \"ClosedFlag\" as \"ClosedFlag\",\n                \"DeniedFlag\"\
+  \ as \"DeniedFlag\",\n                \"DealRegistrationCoSellingFlag\" as \"DealRegistrationCoSellingFlag\"\
+  ,\n                \"DealRegNotNull\" as \"DealRegNotNull\",\n                \"\
+  PartnerPipelineSourced\" as \"PartnerPipelineSourced\",\n                \"DealRegClosed\"\
+  \ as \"DealRegClosed\",\n                \"OptyStageFlag\" as \"OptyStageFlag\"\
+  ,\n                \"ApprovedSourcedFlag\" as \"ApprovedSourcedFlag\",\n       \
+  \         \"ApprovedAcceleratedFlag\" as \"ApprovedAcceleratedFlag\",\n        \
+  \        \"InfluencedACV\" as \"InfluencedACV\",\n                \"SourcedACV\"\
+  \ as \"SourcedACV\",\n                \"AcceleratedACV\" as \"AcceleratedACV\",\n\
+  \                \"USDNNACV\" as \"USDNNACV\",\n                \"PartnerAllocatedNNACV\"\
+  \ as \"PartnerAllocatedNNACV\",\n                \"TagsOptyItemNetNewACV_USD\" as\
+  \ \"TagsOptyItemNetNewACV_USD\",\n                \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  \ as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n                \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  \ as \"ActiveSalesDesignatedPatnerImpactedNNACV\",\n                \"ClosedSourcedACV\"\
+  \ as \"ClosedSourcedACV\",\n                \"ActiveSourcedACV\" as \"ActiveSourcedACV\"\
+  ,\n                \"ClosedInfluencedACV\" as \"ClosedInfluencedACV\",\n       \
+  \         \"ActiveInfluencedACV\" as \"ActiveInfluencedACV\",\n                \"\
+  ClosedDelRegACV\" as \"ClosedDelRegACV\",\n                \"ApprovedDelRegACV\"\
+  \ as \"ApprovedDelRegACV\",\n                \"ClosedACV\" as \"ClosedACV\",\n \
+  \               \"ClosedWithDealRegACV\" as \"ClosedWithDealRegACV\",\n        \
+  \        \"ClosedWithoutDealRegACV\" as \"ClosedWithoutDealRegACV\",\n         \
+  \       \"AcctNewSegment\" as \"AcctNewSegment\",\n                PRMD.\"OptySysID\"\
+  \ as \"OptySysID\",\n                \"OptyDynamicsGUID\" as \"OptyDynamicsGUID\"\
+  ,\n                \"AccountNumber\" as \"AccountNumber\",\n                \"AccountName\"\
+  \ as \"AccountName\",\n                \"OptyCOManaged\" as \"OptyCOManaged\",\n\
+  \                \"OptyItemNetNewACV_USD\" as \"OptyItemNetNewACV_USD\",\n     \
+  \           \"DealRegAutoApprovedAE\" as \"DealRegAutoApprovedAE\",\n          \
+  \      \"DealRegAutoApprovedRAM\" as \"DealRegAutoApprovedRAM\",\n             \
+  \   \"DaystoQualify\" as \"DaystoQualify\",\n                \"DaystoApproval\"\
+  \ as \"DaystoApproval\",\n                \"DaystoDenied\" as \"DaystoDenied\",\n\
+  \                \"DaystoApprovalfromSubmission\" as \"DaystoApprovalfromSubmission\"\
+  ,\n                \"OptyPipelineSourced\" as \"OptyPipelineSourced\",\n       \
+  \         'random' as \"DaystoResolve\",\n                'random' as \"AssignmentGroup\"\
+  ,\n                'random' as \"ReassignmentCount\",\n                'random'\
+  \ as \"ReOpenCount\",\n                'random' as \"ContactType\",\n          \
+  \      'random' as \"PartnerAccount\",\n                'random' as \"CreatedOn\"\
+  ,\n                'random' as \"ResolvedAt\",\n                'random' as \"FirstContactResolution\"\
+  ,\n                'random' as \"CaseSysId\",\n                'random' as \"PartnerCompanyName\"\
+  ,\n                'random' as \"PartAcctRegion\",\n                \"DealRegExpirationDate\"\
+  \ as \"DealRegExpirationDate\",\n                'random' as \"FirstResponseSLA\"\
+  ,\n                \"OptySourcedFlag\" as \"OptySourcedFlag\",\n               \
+  \ \"OptySalesDesignatedFlag\" as \"OptySalesDesignatedFlag\",\n                'random'\
+  \ as \"PartnerNumber\",\n                \"PRMPotentialACVValue\" as \"PRMPotentialACVValue\"\
+  ,\n                \"PrimaryBU\" as \"PrimaryBU\",\n                'random' as\
+  \ \"SecondstoResponse\",\n                'random' as \"Type\",\n              \
+  \  'random' as \"UpdatedOn\",\n                'random' as \"UpdatedBy\",\n    \
+  \            'random' as \"Location\",\n                'random' as \"OpenedBy\"\
+  ,\n                'random' as \"AgentAverageResponseTime\",\n                'random'\
+  \ as \"FirstResponseWaitTime\",\n                'random' as \"ShortDescription\"\
+  ,\n                'random' as \"Number\",\n                \"SLA\" as \"SLA\",\n\
+  \                \"SLAFlag\" as \"SLAFlag\",\n                'random' as \"State\"\
+  ,\n                'random' as \"ClosedAt\",\n                'random' as \"Category\"\
+  ,\n                'random' as \"SubCategory\",\n                'random' as \"\
+  AssignedTo\",\n                \"RecordType\" as \"RecordType\",\n             \
+  \   \"Source\" as \"Source\",\n                \"Quarter\" as \"Quarter\",\n   \
+  \             \"QuarterStartDate\" as \"QuarterStartDate\",\n                \"\
+  DR_Flag\" as \"DR_Flag\",\n                'random' as \"CallsSysId\",\n       \
+  \         \"PendingApproavlFlag\" as \"PendingApproavlFlag\",\n                \"\
+  ExpiredFlag\" as \"ExpiredFlag\",\n                \"MarketingActivityNumber\" as\
+  \ \"MarketingActivityNumber\",\n                \"RegistrationClassification\" as\
+  \ \"RegistrationClassification\",\n                \"RegistrationSubStatus\" as\
+  \ \"RegistrationSubStatus\",\n                \"OptyACVNotZeroFlag\" as \"OptyACVNotZeroFlag\"\
+  ,\n                \"PendingApproverName\" as \"PendingApproverName\",\n       \
+  \         'random' as \"OpsResolutionCode\",\n                \"OptyHeaderACV\"\
+  \ as \"OptyHeaderACV\",\n                \"DaystoDeniedfromSubmission\" as \"DaystoDeniedfromSubmission\"\
+  ,\n                \"DeniedSLAFlag\" as \"DeniedSLAFlag\",\n                \"USDNetNewACVPartner\"\
+  \ as \"USDNetNewACVPartner\",\n                 \"SolutionOfferingFlag\" as \"SolutionOfferingFlag\"\
+  ,\n                \"SolutionOfferingType\" as \"SolutionOfferingType\",\n     \
+  \           \"PRMRejectionCode\" as \"PRMRejectionCode\",\n                \"PrimarySalesRep\"\
+  \ as \"PrimarySalesRep\",\n                \"PRMDealRegionalAllianceManager\" as\
+  \ \"PRMDealRegionalAllianceManager\",\n                \"PartnerActive\" as \"PartnerActive\"\
+  ,\n                \"PRMChannelManager\" as \"PRMChannelManager\",\n           \
+  \     \"SolutionOfferingNumber\" as \"SolutionOfferingNumber\",\n              \
+  \  \"SolutionOfferingName\" as \"SolutionOfferingName\",\n                \"AcctFieldSalesParentAccount\"\
+  \ as \"AcctFieldSalesParentAccount\",\n\t            \"FSPNewLogoFlag\" as \"FSPNewLogoFlag\"\
+  ,\n                \"BusinessImperative\" as \"BusinessImperative\",\n         \
+  \       \"SolutionOfferingTypeOpty\" as \"SolutionOfferingTypeOpty\",\n        \
+  \        \"DemandAccelerator\" as \"DemandAccelerator\",\n                \"ProgramType\"\
+  \ as \"ProgramType\",\n                 \"ApprovalStatus\" as \"ApprovalStatus\"\
+  ,\n                \"ApprovedDate\" as \"ApprovedDate\",\n                \"RejectedDate\"\
+  \ as \"RejectedDate\",\n                \"CreatedDate\" as \"CreatedDate\",\n  \
+  \              \"TaskSysID\" as \"TaskSysID\",\n                \"SurfSalesContact\"\
+  \ as \"SurfSalesContact\",\n                \"SubmittedBy\" as \"SubmittedBy\",\n\
+  \                \"CampaignType\" as \"CampaignType\",\n                \"PrimaryCampaign\"\
+  \ as \"PrimaryCampaign\",\n                \"SecondaryCampaign\" as \"SecondaryCampaign\"\
+  ,\n\t\t\t\t\"AcctIndustry\" as \"AcctIndustry\",\n                 \"SourcedClosedACV_FullCredit\"\
+  \ as \"SourcedClosedACV_FullCredit\",\n                \"PartnerSourcedACV_FullCredit\"\
+  \ as \"PartnerSourcedACV_FullCredit\",\n                \"SubmittedPartnerSourcedACV_FullCredit\"\
+  \ as \"SubmittedPartnerSourcedACV_FullCredit\",\n                \"CommitPartnerSourcedACV_FullCredit\"\
+  \ as \"CommitPartnerSourcedACV_FullCredit\",\n                \"ExpectPartnerSourcedACV_FullCredit\"\
+  \ as \"ExpectPartnerSourcedACV_FullCredit\",\n                \"UpsidePartnerSourcedACV_FullCredit\"\
+  \ as \"UpsidePartnerSourcedACV_FullCredit\",\n                \"WeightedPartnerSourcedACV_FullCredit\"\
+  \ as \"WeightedPartnerSourcedACV_FullCredit\",\n                \"DealRegVelocity\"\
+  \ as \"DealRegVelocity\",\n                \"MarqueeAccount\" as \"MarqueeAccount\"\
+  \n\n         FROM\n           (SELECT distinct \"RecordType\" as \"RecordType\"\
+  ,\n                   \"Source\" as \"Source\",\n                   \"OptyTerrGeo\"\
+  \ as \"OptyTerrGeo\",\n                   \"OptyTerrMajorArea\" as \"OptyTerrMajorArea\"\
+  ,\n                   \"OptyTerrArea\" as \"OptyTerrArea\",\n                  \
+  \ \"OptyTerrRegion\" as \"OptyTerrRegion\",\n                   \"OptyTerrDistrict\"\
+  \ as \"OptyTerrDistrict\",\n                   \"OptyTerritory\" as \"OptyTerritory\"\
+  ,\n                   \"PartnerTerritoryGeo\" as \"PartnerTerritoryGeo\",\n    \
+  \               \"PartnerTerritoryMajorArea\" as \"PartnerTerritoryMajorArea\",\n\
+  \                   \"PartnerTerritoryArea\" as \"PartnerTerritoryArea\",\n    \
+  \               \"PartnerTerritoryRegion\" as \"PartnerTerritoryRegion\",\n    \
+  \               \"PartnerTerritoryDistrict\" as \"PartnerTerritoryDistrict\",\n\
+  \                   \"PartnerTerritory\" as \"PartnerTerritory\",\n            \
+  \       \"ReportingTerritoryGeo\" as \"ReportingTerritoryGeo\",\n              \
+  \     \"Quarter\" as \"Quarter\",\n                   \"DealRegCloseQuarter\" as\
+  \ \"DealRegCloseQuarter\",\n                   \"DealRegSubmissionDate\" as \"DealRegSubmissionDate\"\
+  ,\n                   \"DealRegQualifiedDate\" as \"DealRegQualifiedDate\",\n  \
+  \                 \"DealRegApprovalDate\" as \"DealRegApprovalDate\",\n        \
+  \           \"DealRegClosedDate\" as \"DealRegClosedDate\",\n                  \
+  \ \"QuarterStartDate\" as \"QuarterStartDate\",\n                   \"PRLNumber\"\
+  \ as \"PRLNumber\",\n                   \"PartnerPercentageAllocated\" as \"PartnerPercentageAllocated\"\
+  ,\n                   \"BUWorkflow\" as \"BUWorkflow\",\n                   \"BUGroup\"\
+  \ as \"BUGroup\",\n                   \"PartnerUltimateParentAccountSysid\" as \"\
+  PartnerUltimateParentAccountSysid\",\n                   \"OptyTerritorySysID\"\
+  \ as \"OptyTerritorySysID\",\n                   \"PartnerAccountSysID\" as \"PartnerAccountSysID\"\
+  ,\n                   \"PRLTerritorySysID\" as \"PRLTerritorySysID\",\n        \
+  \           \"DealRegistrationSysID\" as \"DealRegistrationSysID\",\n          \
+  \         \"ParentPartnerSysID\" as \"ParentPartnerSysID\",\n                  \
+  \ \"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n                   \"ParentPartner\"\
+  \ as \"ParentPartner\",\n                   \"OptyNumber\" as \"OptyNumber\",\n\
+  \                   \"DealRegistrationNumber\" as \"DealRegistrationNumber\",\n\
+  \                   \"DealRegistrationName\" as \"DealRegistrationName\",\n    \
+  \               \"DealRegistrationOptyPartnershipType\" as \"DealRegistrationOptyPartnershipType\"\
+  ,\n                   \"DealRegistrationOptyType\" as \"DealRegistrationOptyType\"\
+  ,\n                   \"DealRegistrationOptyStage\" as \"DealRegistrationOptyStage\"\
+  ,\n                   \"DealRegistrationStatus\" as \"DealRegistrationStatus\",\n\
+  \                   \"DealRegCustomerAccountName\" as \"DealRegCustomerAccountName\"\
+  ,\n                   \"DealRegistrationType\" as \"DealRegistrationType\",\n  \
+  \                 \"AccountIndustryCategory\" as \"AccountIndustryCategory\",\n\
+  \                   \"ParentPartnerCategoryCode\" as \"ParentPartnerCategoryCode\"\
+  ,\n                   \"ParentPartnerSegment\" as \"ParentPartnerSegment\",\n  \
+  \                 \"SubmissionFlag\" as \"SubmissionFlag\",\n                  \
+  \ \"QualifiedFlag\" as \"QualifiedFlag\",\n                   \"ApprovedFlag\" as\
+  \ \"ApprovedFlag\",\n                   \"ClosedFlag\" as \"ClosedFlag\",\n    \
+  \               \"DeniedFlag\" as \"DeniedFlag\",\n                   \"DealRegistrationCoSellingFlag\"\
+  \ as \"DealRegistrationCoSellingFlag\",\n                   \"DealRegNotNull\" as\
+  \ \"DealRegNotNull\",\n                   \"PartnerPipelineSourced\" as \"PartnerPipelineSourced\"\
+  ,\n                   \"DealRegClosed\" as \"DealRegClosed\",\n                \
+  \   \"OptyStageFlag\" as \"OptyStageFlag\",\n                   \"ApprovedSourcedFlag\"\
+  \ as \"ApprovedSourcedFlag\",\n                   \"ApprovedAcceleratedFlag\" as\
+  \ \"ApprovedAcceleratedFlag\",\n                   \"InfluencedACV\" as \"InfluencedACV\"\
+  ,\n                   \"SourcedACV\" as \"SourcedACV\",\n                   \"AcceleratedACV\"\
+  \ as \"AcceleratedACV\",\n                   \"USDNNACV\" as \"USDNNACV\",\n   \
+  \                \"PartnerAllocatedNNACV\" as \"PartnerAllocatedNNACV\",\n     \
+  \              \"TagsOptyItemNetNewACV_USD\" as \"TagsOptyItemNetNewACV_USD\",\n\
+  \                   \"ClosedSalesDesignatedPatnerImpactedNNACV\" as \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                   \"ActiveSalesDesignatedPatnerImpactedNNACV\" as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                   \"ClosedSourcedACV\" as \"ClosedSourcedACV\",\n          \
+  \         \"ActiveSourcedACV\" as \"ActiveSourcedACV\",\n                   \"ClosedInfluencedACV\"\
+  \ as \"ClosedInfluencedACV\",\n                   \"ActiveInfluencedACV\" as \"\
+  ActiveInfluencedACV\",\n                   \"ClosedDelRegACV\" as \"ClosedDelRegACV\"\
+  ,\n                   \"ApprovedDelRegACV\" as \"ApprovedDelRegACV\",\n        \
+  \           \"ClosedACV\" as \"ClosedACV\",\n                   \"ClosedWithDealRegACV\"\
+  \ as \"ClosedWithDealRegACV\",\n                   \"ClosedWithoutDealRegACV\" as\
+  \ \"ClosedWithoutDealRegACV\",\n                   \"AcctNewSegment\" as \"AcctNewSegment\"\
+  ,\n                   \"OptySysID\" as \"OptySysID\",\n                   \"OptyDynamicsGUID\"\
+  \ as \"OptyDynamicsGUID\",\n                   \"AccountNumber\" as \"AccountNumber\"\
+  ,\n                   \"AccountName\" as \"AccountName\",\n                   \"\
+  OptyCOManaged\" as \"OptyCOManaged\",\n                   \"OptyItemNetNewACV_USD\"\
+  \ as \"OptyItemNetNewACV_USD\",\n                   \"DR_Flag\" as \"DR_Flag\",\n\
+  \                   \"DealRegAutoApprovedAE\" as \"DealRegAutoApprovedAE\",\n  \
+  \                 \"DealRegAutoApprovedRAM\" as \"DealRegAutoApprovedRAM\",\n  \
+  \                 \"DaystoQualify\" as \"DaystoQualify\",\n                   \"\
+  DaystoApproval\" as \"DaystoApproval\",\n                   \"DaystoDenied\" as\
+  \ \"DaystoDenied\",\n                   \"DaystoApprovalfromSubmission\" as \"DaystoApprovalfromSubmission\"\
+  ,\n                   \"OptyPipelineSourced\" as \"OptyPipelineSourced\",\n    \
+  \               \"DealRegExpirationDate\" as \"DealRegExpirationDate\",\n      \
+  \             \"OptySourcedFlag\" as \"OptySourcedFlag\",\n                   \"\
+  OptySalesDesignatedFlag\" as \"OptySalesDesignatedFlag\",\n                   \"\
+  PRMPotentialACVValue\" as \"PRMPotentialACVValue\",\n                   \"PrimaryBU\"\
+  \ as \"PrimaryBU\",\n                   \"PendingApproavlFlag\" as \"PendingApproavlFlag\"\
+  ,\n                   \"ExpiredFlag\" as \"ExpiredFlag\",\n                   \"\
+  MarketingActivityNumber\" as \"MarketingActivityNumber\",\n                   \"\
+  RegistrationClassification\" as \"RegistrationClassification\",\n              \
+  \     \"RegistrationSubStatus\" as \"RegistrationSubStatus\",\n                \
+  \   \"OptyACVNotZeroFlag\" as \"OptyACVNotZeroFlag_CC\",\n                   \"\
+  PendingApproverName\" as \"PendingApproverName\",\n                   \"OptyHeaderACV\"\
+  \ as \"OptyHeaderACV\",\n                   \"DaystoDeniedfromSubmission\" as \"\
+  DaystoDeniedfromSubmission\",\n                   \"USDNetNewACVPartner\" as \"\
+  USDNetNewACVPartner\",\n                   'random' as \"SLA\",\n              \
+  \    CASE WHEN \"DaystoApprovalfromSubmission\" IS NULL then 'random' else IFF(\"\
+  DaystoApprovalfromSubmission\"<=\"SLA\", 'random', 'random')END as \"SLAFlag\",\n\
+  \                  CASE WHEN \"DaystoDeniedfromSubmission\" IS NULL then 'random'\
+  \ else  IFF(\"DaystoDeniedfromSubmission\"<=\"SLA\", 'random', 'random')END as \"\
+  DeniedSLAFlag\",\n                  CASE WHEN \"OptyACVNotZeroFlag_CC\" IS NULL\
+  \ OR \"OptyHeaderACV\" IS NULL then 'random' else  IFF((\"OptyACVNotZeroFlag_CC\"\
+  ='random'\n                        and (Round((\"OptyHeaderACV\"/'random') ,'random')\
+  \ >'random')) ,'random', \"OptyACVNotZeroFlag_CC\") END as \"OptyACVNotZeroFlag\"\
+  ,\n                   \"PRMRejectionCode\" as \"PRMRejectionCode\",\n          \
+  \         \"PrimarySalesRep\" as \"PrimarySalesRep\",\n                   \"PRMDealRegionalAllianceManager\"\
+  \ as \"PRMDealRegionalAllianceManager\",\n                   \"PartnerActive\" as\
+  \ \"PartnerActive\",\n                   \"PRMChannelManager\" as \"PRMChannelManager\"\
+  ,\n                   \"SolutionOfferingNumber\" as \"SolutionOfferingNumber\",\n\
+  \                   \"SolutionOfferingName\" as \"SolutionOfferingName\",\n    \
+  \               \"SolutionOfferingType\" as \"SolutionOfferingType\",\n        \
+  \           \"SolutionOfferingFlag\" as \"SolutionOfferingFlag\",\n            \
+  \        \"AcctFieldSalesParentAccount\" as \"AcctFieldSalesParentAccount\",\n\t\
+  \                \"FSPNewLogoFlag\" as \"FSPNewLogoFlag\",\n                   \
+  \ \"BusinessImperative\" as \"BusinessImperative\",\n                    \"DemandAccelerator\"\
+  \ as \"DemandAccelerator\",\n                    'random' as \"ProgramType\",\n\
+  \                    'random' as \"ApprovalStatus\",\n                    'random'\
+  \ as \"ApprovedDate\",\n                    'random' as \"RejectedDate\",\n    \
+  \                'random' as \"CreatedDate\",\n                    'random' as \"\
+  TaskSysID\",\n                    \"SurfSalesContact\" as \"SurfSalesContact\",\n\
+  \                    \"SubmittedBy\" as \"SubmittedBy\",\n                    \"\
+  CampaignType\" as \"CampaignType\",\n                    \"PrimaryCampaign\" as\
+  \ \"PrimaryCampaign\",\n                    \"SecondaryCampaign\" as \"SecondaryCampaign\"\
+  ,\n\t\t\t\t\t\"AcctIndustry\" as \"AcctIndustry\",\n                     \"SourcedClosedACV_FullCredit\"\
+  \ as \"SourcedClosedACV_FullCredit\",\n                    \"PartnerSourcedACV_FullCredit\"\
+  \ as \"PartnerSourcedACV_FullCredit\",\n                    \"SubmittedPartnerSourcedACV_FullCredit\"\
+  \ as \"SubmittedPartnerSourcedACV_FullCredit\",\n                    \"CommitPartnerSourcedACV_FullCredit\"\
+  \ as \"CommitPartnerSourcedACV_FullCredit\",\n                    \"ExpectPartnerSourcedACV_FullCredit\"\
+  \ as \"ExpectPartnerSourcedACV_FullCredit\",\n                    \"UpsidePartnerSourcedACV_FullCredit\"\
+  \ as \"UpsidePartnerSourcedACV_FullCredit\",\n                    \"WeightedPartnerSourcedACV_FullCredit\"\
+  \ as \"WeightedPartnerSourcedACV_FullCredit\",\n                    \"DealRegVelocity\"\
+  \ as \"DealRegVelocity\",\n                    \"MarqueeAccount\" as \"MarqueeAccount\"\
+  \n            FROM EDW_LS.\"PARTNER_EM\".\"PRMDEALREGISTRATIONS\" ) PRMD\n     \
+  \       left join\n                (select distinct \"OptySysID\",\n           \
+  \             \"IdeaTypePP\" as \"SolutionOfferingTypeOpty\"\n                from\
+  \ EDW_LS.PARTNER_EM.INDUSTRYSOLUTIONSANDOFFERINGS) SO\n                on PRMD.\"\
+  OptySysID\" = SO.\"OptySysID\"\n           )\"Deal_Registration\"\n         UNION\
+  \ ALL SELECT 'random' as \"OptyTerrGeo\",\n                          'random' as\
+  \ \"OptyTerrMajorArea\",\n                          'random' as \"OptyTerrArea\"\
+  ,\n                          'random' as \"OptyTerrRegion\",\n                 \
+  \         'random' as \"OptyTerrDistrict\",\n                          'random'\
+  \ as \"OptyTerritory\",\n                          'random' as \"PartnerTerritoryGeo\"\
+  ,\n                          'random' as \"PartnerTerritoryMajorArea\",\n      \
+  \                    'random' as \"PartnerTerritoryArea\",\n                   \
+  \       'random' as \"PartnerTerritoryRegion\",\n                          'random'\
+  \ as \"PartnerTerritoryDistrict\",\n                          'random' as \"PartnerTerritory\"\
+  ,\n                          'random' as \"ReportingTerritoryGeo\",\n          \
+  \                'random' as \"DealRegCloseQuarter\",\n                        \
+  \  'random' as \"DealRegSubmissionDate\",\n                          'random' as\
+  \ \"DealRegQualifiedDate\",\n                          'random' as \"DealRegApprovalDate\"\
+  ,\n                          'random' as \"DealRegClosedDate\",\n              \
+  \            'random' as \"PRLNumber\",\n                          'random' as \"\
+  PartnerPercentageAllocated\",\n                          'random' as \"BUWorkflow\"\
+  ,\n                          'random' as \"BUGroup\",\n                        \
+  \  'random' as \"PartnerUltimateParentAccountSysid\",\n                        \
+  \  'random' as \"OptyTerritorySysID\",\n                          'random' as \"\
+  PartnerAccountSysID\",\n                          'random' as \"PRLTerritorySysID\"\
+  ,\n                          'random' as \"DealRegistrationSysID\",\n          \
+  \                'random' as \"ParentPartnerSysID\",\n                         \
+  \ \"PartnerNumber\" as \"ParentPartnerNumber\",\n                          'random'\
+  \ as \"ParentPartner\",\n                          'random' as \"OptyNumber\",\n\
+  \                          'random' as \"DealRegistrationNumber\",\n           \
+  \               'random' as \"DealRegistrationName\",\n                        \
+  \  'random' as \"DealRegistrationOptyPartnershipType\",\n                      \
+  \    'random' as \"DealRegistrationOptyType\",\n                          'random'\
+  \ as \"DealRegistrationOptyStage\",\n                          'random' as \"DealRegistrationStatus\"\
+  ,\n                          'random' as \"DealRegCustomerAccountName\",\n     \
+  \                     'random' as \"DealRegistrationType\",\n                  \
+  \        'random' as \"AccountIndustryCategory\",\n                          'random'\
+  \ as \"ParentPartnerCategoryCode\",\n                          \"PartnerHistorySegment\"\
+  \ as \"ParentPartnerSegment\",\n                          'random' as \"SubmissionFlag\"\
+  ,\n                          'random' as \"QualifiedFlag\",\n                  \
+  \        'random' as \"ApprovedFlag\",\n                          'random' as \"\
+  ClosedFlag\",\n                          'random' as \"DeniedFlag\",\n         \
+  \                 'random' as \"DealRegistrationCoSellingFlag\",\n             \
+  \             'random' as \"DealRegNotNull\",\n                          'random'\
+  \ as \"PartnerPipelineSourced\",\n                          'random' as \"DealRegClosed\"\
+  ,\n                          'random' as \"OptyStageFlag\",\n                  \
+  \        'random' as \"ApprovedSourcedFlag\",\n                          'random'\
+  \ as \"ApprovedAcceleratedFlag\",\n                          'random' as \"InfluencedACV\"\
+  ,\n                          'random' as \"SourcedACV\",\n                     \
+  \     'random' as \"AcceleratedACV\",\n                          'random' as \"\
+  USDNNACV\",\n                          'random' as \"PartnerAllocatedNNACV\",\n\
+  \                          'random' as \"TagsOptyItemNetNewACV_USD\",\n        \
+  \                  'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n \
+  \                         'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          'random' as \"\
+  DaystoResolve\",\n                          'random' as \"AssignmentGroup\",\n \
+  \                         'random' as \"ReassignmentCount\",\n                 \
+  \         'random' as \"ReOpenCount\",\n                          'random' as \"\
+  ContactType\",\n                          'random' as \"PartnerAccount\",\n    \
+  \                      'random' as \"CreatedOn\",\n                          'random'\
+  \ as \"ResolvedAt\",\n                          'random' as \"FirstContactResolution\"\
+  ,\n                          'random' as \"CaseSysId\",\n                      \
+  \    'random' as \"PartnerCompanyName\",\n                          \"PartAcctRegion\"\
+  \ as \"PartAcctRegion\",\n                          'random' as \"DealRegExpirationDate\"\
+  ,\n                          'random' as \"FirstResponseSLA\",\n               \
+  \           'random' as \"OptySourcedFlag\",\n                          'random'\
+  \ as \"OptySalesDesignatedFlag\",\n                          'random' as \"PartnerNumber\"\
+  ,\n                          'random' as \"PRMPotentialACVValue\",\n           \
+  \               'random' as \"PrimaryBU\",\n                          'random' as\
+  \ \"SecondstoResponse\",\n                          'random' as \"Type\",\n    \
+  \                      'random' as \"UpdatedOn\",\n                          'random'\
+  \ as \"UpdatedBy\",\n                          'random' as \"Location\",\n     \
+  \                     'random' as \"OpenedBy\",\n                          'random'\
+  \ as \"AgentAverageResponseTime\",\n                          'random' as \"FirstResponseWaitTime\"\
+  ,\n                          'random' as \"ShortDescription\",\n               \
+  \           'random' as \"Number\",\n                          'random' as \"SLA\"\
+  ,\n                          'random' as \"SLAFlag\",\n                        \
+  \  'random' as \"State\",\n                          'random' as \"ClosedAt\",\n\
+  \                          'random' as \"Category\",\n                         \
+  \ 'random' as \"SubCategory\",\n                          'random' as \"AssignedTo\"\
+  ,\n                          \"RecordType\" as \"RecordType\",\n               \
+  \           \"Source\" as \"Source\",\n                          \"Quarter\" as\
+  \ \"Quarter\",\n                          \"QuarterStartDate\" as \"QuarterStartDate\"\
+  ,\n                          \"DR_Flag\" as \"DR_Flag\",\n                     \
+  \     'random' as \"CallsSysId\",\n                          'random' as \"PendingApproavlFlag\"\
+  ,\n                          'random' as \"ExpiredFlag\",\n                    \
+  \      'random' as \"MarketingActivityNumber\",\n                          'random'\
+  \ as \"RegistrationClassification\",\n                          'random' as \"RegistrationSubStatus\"\
+  ,\n                          'random' as \"OptyACVNotZeroFlag\",\n             \
+  \             'random' as \"PendingApproverName\",\n                          'random'\
+  \ as \"OpsResolutionCode\",\n                          'random' as \"OptyHeaderACV\"\
+  ,\n                          'random' as \"DaystoDeniedfromSubmission\",\n     \
+  \                     'random' as \"DeniedSLAFlag\",\n                         \
+  \ 'random' as \"USDNetNewACVPartner\",\n                          'random' as \"\
+  SolutionOfferingFlag\",\n                          'random' as \"SolutionOfferingType\"\
+  ,\n                          'random' as \"PRMRejectionCode\",\n               \
+  \           'random' as \"PrimarySalesRep\",\n                          'random'\
+  \ as \"PRMDealRegionalAllianceManager\",\n                          'random' as\
+  \ \"PartnerActive\",\n                          'random' as \"PRMChannelManager\"\
+  ,\n                          'random' as \"SolutionOfferingNumber\",\n         \
+  \                 'random' as \"SolutionOfferingName\",\n                      \
+  \    'random' as \"AcctFieldSalesParentAccount\",\n\t                      'random'\
+  \ as  \"FSPNewLogoFlag\",\n                          'random' as \"BusinessImperative\"\
+  ,\n                          'random' as \"SolutionOfferingTypeOpty\",\n       \
+  \                   'random' as \"DemandAccelerator\",\n                       \
+  \   \"PartnerHistoryProgramType\" as \"ProgramType\",\n                        \
+  \   'random' as \"ApprovalStatus\",\n                          'random' as \"ApprovedDate\"\
+  ,\n                          'random' as \"RejectedDate\",\n                   \
+  \       'random' as \"CreatedDate\",\n                          'random' as \"TaskSysID\"\
+  ,\n                          'random' as  \"SurfSalesContact\",\n              \
+  \            'random' as \"SubmittedBy\",\n                          'random' as\
+  \ \"CampaignType\",\n                          'random' as \"PrimaryCampaign\",\n\
+  \                          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random'\
+  \ as \"AcctIndustry\",\n                          'random' as \"SourcedClosedACV_FullCredit\"\
+  ,\n                          'random' as \"PartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"CommitPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"WeightedPartnerSourcedACV_FullCredit\"\
+  ,\n                          'random' AS \"DealRegVelocity\",\n                \
+  \          'random' as \"MarqueeAccount\"\n         FROM\n           (SELECT \"\
+  Partner\" as \"Partner\",\n                   \"PartnerNumber\" as \"PartnerNumber\"\
+  ,\n                   \"Quarter\" as \"Quarter\",\n                   \"PartnerHistorySegment\"\
+  \ as \"PartnerHistorySegment\",\n                   \"PartnerHistorySegmentAchievedDate\"\
+  \ as \"PartnerHistorySegmentAchievedDate\",\n                   \"PartAcctRegion\"\
+  \ as \"PartAcctRegion\",\n                   'random' as \"RecordType\",\n     \
+  \              'random' as \"Source\",\n                   'random' as \"DR_Flag\"\
+  ,\n                   CONCAT(CONCAT('random', LEFT(\"Quarter\", 'random')) ,(CASE\n\
+  \                                                                 WHEN RIGHT(\"\
+  Quarter\", 'random') ='random' THEN 'random'\n                                 \
+  \                                WHEN RIGHT(\"Quarter\", 'random') ='random' THEN\
+  \ 'random'\n                                                                 WHEN\
+  \ RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n                       \
+  \                                          ELSE 'random'\n                     \
+  \                                        END)) as \"QuarterStartDate\",\n      \
+  \              \"PartnerHistoryProgramType\" as \"PartnerHistoryProgramType\"\n\
+  \            FROM\n              (SELECT \"Join_1\".\"Partner\" as \"Partner\",\n\
+  \                      \"Join_1\".\"PartnerNumber\" as \"PartnerNumber\",\n    \
+  \                  \"Projection_5\".\"PartnerHistorySegmentPartnerSysID\" as \"\
+  SysID\",\n                      \"Projection_5\".\"PartnerHistorySegment\" as \"\
+  PartnerHistorySegment\",\n                      \"Projection_5\".\"PartnerHistorySegmentAchievedDate\"\
+  \ as \"PartnerHistorySegmentAchievedDate\",\n                      \"Join_1\".\"\
+  PartAcctRegion\" as \"PartAcctRegion\",\n                      RIGHT(YEAR(\"PartnerHistorySegmentAchievedDate\"\
+  ) ||'random'|| QUARTER(\"PartnerHistorySegmentAchievedDate\"), 'random') as \"Quarter\"\
+  ,\n                      \"Projection_5\".\"PartnerHistoryProgramType\" as \"PartnerHistoryProgramType\"\
+  \n               FROM\n                 (SELECT \"Projection_1\".\"Partner\" as\
+  \ \"Partner\",\n                         \"Projection_1\".\"PartnerNumber\" as \"\
+  PartnerNumber\",\n                         \"Projection_2\".\"SysID\" as \"SysID\"\
+  ,\n                         \"Projection_2\".\"PartAcctRegion\" as \"PartAcctRegion\"\
+  \n                  FROM\n                    (SELECT \"PartnerSysID\" as \"PartnerSysID\"\
+  ,\n                            \"Partner\" as \"Partner\",\n                   \
+  \         \"PartnerNumber\" as \"PartnerNumber\"\n                     FROM EDW_LS.\"\
+  PARTNER_EM\".\"PARTNERS\")\"Projection_1\"\n                  INNER JOIN\n     \
+  \               (SELECT \"PartAcctSurfAcctSysID\" as \"PartAcctSurfAcctSysID\",\n\
+  \                            \"PartnerRegistrationSubstatus\" as \"PartnerRegistrationSubstatus\"\
+  ,\n                            \"SysID\" as \"SysID\",\n                       \
+  \     --\"PartAcctRegion\" as \"PartAcctRegion\" COMMENTED to enable JPN SFSTRY0094945\n\
+  \                             CASE WHEN \"PartAcctRegion\" in ('random','random')\
+  \ OR \"PartAcctRegion\" IS NULL then \"PartAcctRegion\"\n                      \
+  \            WHEN \"PartAcctRegion\" ='random' AND \"PartnerCountry\" = 'random'\
+  \ THEN 'random' ELSE 'random' END as \"PartAcctRegion\"  --JPN has been enabled\
+  \ seperately SFSTRY0094945\n                     FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\"\
+  )\"Projection_2\" ON \"Projection_1\".\"PartnerSysID\" = \"Projection_2\".\"PartAcctSurfAcctSysID\"\
+  )\"Join_1\"\n               INNER JOIN\n                 (SELECT \"PartnerHistorySegmentPartnerSysID\"\
+  \ as \"PartnerHistorySegmentPartnerSysID\",\n                         \"PartnerHistorySegmentAchievedDate\"\
+  \ as \"PartnerHistorySegmentAchievedDate\",\n                         \"PartnerHistoryPartnerSegment\"\
+  \ as \"PartnerHistorySegment\",\n                         \"PartnerHistorySegmentActive\"\
+  \ as \"PartnerHistorySegmentActive\",\n                         \"PartnerHistoryProgramType\"\
+  \ as \"PartnerHistoryProgramType\"\n                  FROM ODS_LS.\"PARTNER\".\"\
+  U_PARTNER_SEGMENT_HISTORY\"\n                  WHERE (\"PartnerHistorySegmentActive\"\
+  \ ='random') )\"Projection_5\" ON \"Join_1\".\"SysID\" = \"Projection_5\".\"PartnerHistorySegmentPartnerSysID\"\
+  )\"Join_2\")\"PartnerSegment\"\n         UNION ALL SELECT 'random' as \"OptyTerrGeo\"\
+  ,\n                          'random' as \"OptyTerrMajorArea\",\n              \
+  \            'random' as \"OptyTerrArea\",\n                          'random' as\
+  \ \"OptyTerrRegion\",\n                          'random' as \"OptyTerrDistrict\"\
+  ,\n                          'random' as \"OptyTerritory\",\n                  \
+  \        'random' as \"PartnerTerritoryGeo\",\n                          'random'\
+  \ as \"PartnerTerritoryMajorArea\",\n                          'random' as \"PartnerTerritoryArea\"\
+  ,\n                          'random' as \"PartnerTerritoryRegion\",\n         \
+  \                 'random' as \"PartnerTerritoryDistrict\",\n                  \
+  \        'random' as \"PartnerTerritory\",\n                          'random' as\
+  \ \"ReportingTerritoryGeo\",\n                          'random' as \"DealRegCloseQuarter\"\
+  ,\n                          'random' as \"DealRegSubmissionDate\",\n          \
+  \                'random' as \"DealRegQualifiedDate\",\n                       \
+  \   'random' as \"DealRegApprovalDate\",\n                          'random' as\
+  \ \"DealRegClosedDate\",\n                          'random' as \"PRLNumber\",\n\
+  \                          'random' as \"PartnerPercentageAllocated\",\n       \
+  \                   'random' as \"BUWorkflow\",\n                          'random'\
+  \ as \"BUGroup\",\n                          'random' as \"PartnerUltimateParentAccountSysid\"\
+  ,\n                          'random' as \"OptyTerritorySysID\",\n             \
+  \             'random' as \"PartnerAccountSysID\",\n                          'random'\
+  \ as \"PRLTerritorySysID\",\n                          'random' as \"DealRegistrationSysID\"\
+  ,\n                          'random' as \"ParentPartnerSysID\",\n             \
+  \             \"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n            \
+  \              \"ParentPartner\" as \"ParentPartner\",\n                       \
+  \   'random' as \"OptyNumber\",\n                          'random' as \"DealRegistrationNumber\"\
+  ,\n                          'random' as \"DealRegistrationName\",\n           \
+  \               'random' as \"DealRegistrationOptyPartnershipType\",\n         \
+  \                 'random' as \"DealRegistrationOptyType\",\n                  \
+  \        'random' as \"DealRegistrationOptyStage\",\n                          'random'\
+  \ as \"DealRegistrationStatus\",\n                          'random' as \"DealRegCustomerAccountName\"\
+  ,\n                          'random' as \"DealRegistrationType\",\n           \
+  \               'random' as \"AccountIndustryCategory\",\n                     \
+  \     'random' as \"ParentPartnerCategoryCode\",\n                          'random'\
+  \ as \"ParentPartnerSegment\",\n                          'random' as \"SubmissionFlag\"\
+  ,\n                          'random' as \"QualifiedFlag\",\n                  \
+  \        'random' as \"ApprovedFlag\",\n                          'random' as \"\
+  ClosedFlag\",\n                          'random' as \"DeniedFlag\",\n         \
+  \                 'random' as \"DealRegistrationCoSellingFlag\",\n             \
+  \             'random' as \"DealRegNotNull\",\n                          'random'\
+  \ as \"PartnerPipelineSourced\",\n                          'random' as \"DealRegClosed\"\
+  ,\n                          'random' as \"OptyStageFlag\",\n                  \
+  \        'random' as \"ApprovedSourcedFlag\",\n                          'random'\
+  \ as \"ApprovedAcceleratedFlag\",\n                          'random' as \"InfluencedACV\"\
+  ,\n                          'random' as \"SourcedACV\",\n                     \
+  \     'random' as \"AcceleratedACV\",\n                          'random' as \"\
+  USDNNACV\",\n                          'random' as \"PartnerAllocatedNNACV\",\n\
+  \                          'random' as \"TagsOptyItemNetNewACV_USD\",\n        \
+  \                  'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n \
+  \                         'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          \"DaystoResolve\"\
+  \ as \"DaystoResolve\",\n                          \"AssignmentGroup\" as \"AssignmentGroup\"\
+  ,\n                          \"ReassignmentCount\" as \"ReassignmentCount\",\n \
+  \                         \"ReOpenCount\" as \"ReOpenCount\",\n                \
+  \          \"ContactType\" as \"ContactType\",\n                          \"PartnerAccount\"\
+  \ as \"PartnerAccount\",\n                          \"CreatedOn\" as \"CreatedOn\"\
+  ,\n                          \"ResolvedAt\" as \"ResolvedAt\",\n               \
+  \           \"FirstContactResolution\" as \"FirstContactResolution\",\n        \
+  \                  \"CaseSysId\" as \"CaseSysId\",\n                          \"\
+  PartnerCompanyName\" as \"PartnerCompanyName\",\n                          \"PartAcctRegion\"\
+  \ as \"PartAcctRegion\",\n                          'random' as \"DealRegExpirationDate\"\
+  ,\n                          \"FirstResponseSLA\" as \"FirstResponseSLA\",\n   \
+  \                       'random' as \"OptySourcedFlag\",\n                     \
+  \     'random' as \"OptySalesDesignatedFlag\",\n                          'random'\
+  \ as \"PartnerNumber\",\n                          'random' as \"PRMPotentialACVValue\"\
+  ,\n                          'random' as \"PrimaryBU\",\n                      \
+  \    'random' as \"SecondstoResponse\",\n                          'random' as \"\
+  Type\",\n                          'random' as \"UpdatedOn\",\n                \
+  \          'random' as \"UpdatedBy\",\n                          'random' as \"\
+  Location\",\n                          'random' as \"OpenedBy\",\n             \
+  \             'random' as \"AgentAverageResponseTime\",\n                      \
+  \    'random' as \"FirstResponseWaitTime\",\n                          'random'\
+  \ as \"ShortDescription\",\n                          \"Number\" as \"Number\",\n\
+  \                          \"SLA\" as \"SLA\",\n                          \"SLAFlag\"\
+  \ as \"SLAFlag\",\n                          \"State\" as \"State\",\n         \
+  \                 \"ClosedAt\" as \"ClosedAt\",\n                          \"Category\"\
+  \ as \"Category\",\n                          \"SubCategory\" as \"SubCategory\"\
+  ,\n                          \"AssignedTo\" as \"AssignedTo\",\n               \
+  \           \"RecordType\" as \"RecordType\",\n                          \"Source\"\
+  \ as \"Source\",\n                          \"Quarter\" as \"Quarter\",\n      \
+  \                    \"QuarterStartDate\" as \"QuarterStartDate\",\n           \
+  \               \"DR_Flag\" as \"DR_Flag\",\n                          'random'\
+  \ as \"CallsSysId\",\n                          'random' as \"PendingApproavlFlag\"\
+  ,\n                          'random' as \"ExpiredFlag\",\n                    \
+  \      'random' as \"MarketingActivityNumber\",\n                          'random'\
+  \ as \"RegistrationClassification\",\n                          'random' as \"RegistrationSubStatus\"\
+  ,\n                          'random' as \"OptyACVNotZeroFlag\",\n             \
+  \             'random' as \"PendingApproverName\",\n                          \"\
+  OpsResolutionCode\" as \"OpsResolutionCode\",\n                          'random'\
+  \ as \"OptyHeaderACV\",\n                          'random' as \"DaystoDeniedfromSubmission\"\
+  ,\n                          'random' as \"DeniedSLAFlag\",\n                  \
+  \        'random' as \"USDNetNewACVPartner\",\n                          'random'\
+  \ as \"SolutionOfferingFlag\",\n                          'random' as \"SolutionOfferingType\"\
+  ,\n                          'random' as \"PRMRejectionCode\",\n               \
+  \           'random' as \"PrimarySalesRep\",\n                          'random'\
+  \ as \"PRMDealRegionalAllianceManager\",\n                          'random' as\
+  \ \"PartnerActive\",\n                          'random' as \"PRMChannelManager\"\
+  ,\n                          'random' as \"SolutionOfferingNumber\",\n         \
+  \                 'random' as \"SolutionOfferingName\",\n                      \
+  \    'random' as \"AcctFieldSalesParentAccount\",\n\t                      'random'\
+  \ as  \"FSPNewLogoFlag\",\n                          'random' as \"BusinessImperative\"\
+  ,\n                          'random' as \"SolutionOfferingTypeOpty\",\n       \
+  \                   'random' as \"DemandAccelerator\",\n                       \
+  \   'random' as \"ProgramType\",\n                          'random' as \"ApprovalStatus\"\
+  ,\n                          'random' as \"ApprovedDate\",\n                   \
+  \       'random' as \"RejectedDate\",\n                          'random' as \"\
+  CreatedDate\",\n                          'random' as \"TaskSysID\",\n         \
+  \                  'random' as  \"SurfSalesContact\",\n                        \
+  \  'random' as \"SubmittedBy\",\n                          'random' as \"CampaignType\"\
+  ,\n                          'random' as \"PrimaryCampaign\",\n                \
+  \          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random' as \"AcctIndustry\"\
+  ,\n                          'random' as \"SourcedClosedACV_FullCredit\",\n    \
+  \                      'random' as \"PartnerSourcedACV_FullCredit\",\n         \
+  \                 'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n     \
+  \                     'random' as \"CommitPartnerSourcedACV_FullCredit\",\n    \
+  \                      'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n  \
+  \                        'random' as \"WeightedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' AS \"DealRegVelocity\",\n                  \
+  \        'random' as \"MarqueeAccount\"\n         FROM\n           (SELECT \"P_Case\"\
+  .\"RecordType\" as \"RecordType\",\n                   \"P_Case\".\"Source\" as\
+  \ \"Source\",\n                   \"P_Case\".\"Quarter\" as \"Quarter\",\n     \
+  \              \"P_Case\".\"QuarterStartDate\" as \"QuarterStartDate\",\n      \
+  \             \"P_Case\".\"DR_Flag\" as \"DR_Flag\",\n                   \"P_Case\"\
+  .\"Number\" as \"Number\",\n                   \"P_Case\".\"DaystoResolve\" as \"\
+  DaystoResolve\",\n                   \"P_Case\".\"SLA\" as \"SLA\",\n          \
+  \         \"P_Case\".\"SLAFlag\" as \"SLAFlag\",\n                   \"P_Case\"\
+  .\"State\" as \"State\",\n                   \"P_Case\".\"ClosedAt\" as \"ClosedAt\"\
+  ,\n                   \"P_Case\".\"Category\" as \"Category\",\n               \
+  \    \"P_Case\".\"SubCategory\" as \"SubCategory\",\n                   \"P_Case\"\
+  .\"AssignedTo\" as \"AssignedTo\",\n                   \"P_Case\".\"AssignmentGroup\"\
+  \ as \"AssignmentGroup\",\n                   \"P_Case\".\"ReassignmentCount\" as\
+  \ \"ReassignmentCount\",\n                   \"P_Case\".\"ReOpenCount\" as \"ReOpenCount\"\
+  ,\n                   \"P_Case\".\"ContactType\" as \"ContactType\",\n         \
+  \          \"P_Case\".\"PartnerAccount\" as \"PartnerAccount\",\n              \
+  \     \"P_Case\".\"CreatedOn\" as \"CreatedOn\",\n                   \"P_Case\"\
+  .\"ResolvedAt\" as \"ResolvedAt\",\n                   \"P_Case\".\"FirstContactResolution\"\
+  \ as \"FirstContactResolution\",\n                   \"P_Case\".\"PartnerAccountId\"\
+  \ as \"PartnerAccountId\",\n                   \"P_Case\".\"CaseSysId\" as \"CaseSysId\"\
+  ,\n                   \"PartnerAccount\".\"PartnerCompanyName\" as \"PartnerCompanyName\"\
+  ,\n                   \"PartnerAccount\".\"PartAcctRegion\" as \"PartAcctRegion\"\
+  ,\n                   \"P_Case\".\"FirstResponseSLA\" as \"FirstResponseSLA\",\n\
+  \                   \"P_Case\".\"OpsResolutionCode\" as \"OpsResolutionCode\",\n\
+  \                   \"Partners\".\"ParentPartnerNumber\" as \"ParentPartnerNumber\"\
+  ,\n                   \"Partners\".\"ParentPartner\" as \"ParentPartner\"\n    \
+  \        FROM\n              (SELECT  convert_timezone('random', \"ResolvedAt\"\
+  ) as \"ResolvedAt\",\n                      \"Number\" as \"Number\",\n        \
+  \              convert_timezone('random', \"CreatedOn\") as \"CreatedOn\",\n   \
+  \                   \"State\" as \"State\",\n                      \"ClosedAt\"\
+  \ as \"ClosedAt\",\n                      \"Category\" as \"Category\",\n      \
+  \                \"SubCategory\" as \"SubCategory\",\n                      \"FirstResponseSLA\"\
+  \ as \"FirstResponseSLA1\",\n                      \"AssignedTo\" as \"AssignedTo\"\
+  ,\n                      \"AssignmentGroup\" as \"AssignmentGroup\",\n         \
+  \             \"ReassignmentCount\" as \"ReassignmentCount\",\n                \
+  \      \"ReOpenCount\" as \"ReOpenCount\",\n                      \"ContactType\"\
+  \ as \"ContactType\",\n                      \"PartnerAccount\" as \"PartnerAccount\"\
+  ,\n                      \"OpenedAt\" as \"OpenedAt\",\n                      \"\
+  FirstResponseTime\" as \"FirstResponseTime\",\n                      \"PartnerAccountId\"\
+  \ as \"PartnerAccountId\",\n                      \"CaseSysId\" as \"CaseSysId\"\
+  ,\n                      \"OpsResolutionCode\" as \"OpsResolutionCode\",\n     \
+  \                 RIGHT(YEAR(\"CreatedOn\") ||'random'|| QUARTER(\"CreatedOn\"),\
+  \ 'random') as \"Quarter\",\n                      --TRUNC((TIMEDIFF(second, \"\
+  CreatedOn\", \"ResolvedAt\")) /3600) as \"DaystoResolve\", Removed as part of new\
+  \ ignoring weekends in SLA\n                      'random' as \"RecordType\",\n\
+  \                      'random' as \"Source\",\n                      'random' as\
+  \ \"DR_Flag\",\n                      CONCAT(CONCAT('random', LEFT(\"Quarter\",\
+  \ 'random')) ,(CASE\n                                                          \
+  \          WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n         \
+  \                                                           WHEN RIGHT(\"Quarter\"\
+  , 'random') ='random' THEN 'random'\n                                          \
+  \                          WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n\
+  \                                                                    ELSE 'random'\n\
+  \                                                                END)) as \"QuarterStartDate\"\
+  ,\n                     CASE WHEN (\"Category\" IS NULL OR \"Category\" ='random')\
+  \ AND \"SubCategory\" IS NULL THEN 'random' ELSE\n\t\t\t\t\t\tCASE WHEN \"Category\"\
+  \  = 'random' AND \"SubCategory\" = 'random' THEN 'random'*'random'*'random' ELSE\
+  \ 'random'*'random'*'random' END END as \"SLA\" , --SLA in Seconds\n           \
+  \         ( DATEDIFF(DAY, \"CreatedOn\", DATEADD(DAY, 'random', \"ResolvedAt\"))\
+  \ - DATEDIFF(WEEK, \"CreatedOn\", DATEADD(DAY, 'random', \"ResolvedAt\"))*'random'\n\
+  \                            - (CASE WHEN DAYNAME(\"CreatedOn\") != 'random' THEN\
+  \ 'random' ELSE 'random' END)\n                            + (CASE WHEN DAYNAME(\"\
+  ResolvedAt\") != 'random' THEN 'random' ELSE 'random' END) ) AS \"WeekDays\", --Created\
+  \ for new SLA to ignore weekends  SFSTRY0094945\n                     DATEDIFF('random',\
+  \ \"CreatedOn\", DATEADD('random', 'random', \"ResolvedAt\")) as \"DaysBetween\"\
+  , --Created for new SLA to ignore weekends SFSTRY0094945\n                     (\"\
+  DaysBetween\"-\"WeekDays\")*'random' as \"WeekendHrs\", --Created for new SLA to\
+  \ ignore weekends SFSTRY0094945\n                    -- TRUNC((TIMEDIFF(second,\
+  \ \"CreatedOn\", \"ResolvedAt\")) /3600)-\"WeekendHrs\" as \"DaystoResolve\", Created\
+  \ for new SLA to ignore weekends SFSTRY0094945\n                     Case when (DAYNAME(\"\
+  CreatedOn\") not in ('random','random') and DAYNAME(\"ResolvedAt\") not in ('random','random')\
+  \ ) then TRUNC((TIMEDIFF(second, \"CreatedOn\", \"ResolvedAt\")))-\n           \
+  \                     (\"WeekendHrs\"*'random')\n                          when\
+  \ DAYNAME(\"CreatedOn\") = 'random' AND \"WeekDays\"<='random' then TRUNC((TIMEDIFF(second,\
+  \ \"CreatedOn\", \"ResolvedAt\")))- ('random'*'random') -  hour(\"CreatedOn\")*'random'*'random'\
+  \ - minute(\"CreatedOn\")*'random' - SECOND(\"CreatedOn\")\n                   \
+  \       WHEN  DAYNAME(\"CreatedOn\") = 'random' AND \"WeekDays\">'random' then \"\
+  SLA\"+'random'\n                          when DAYNAME(\"CreatedOn\") = 'random'\
+  \ AND \"WeekDays\"<='random' then TRUNC((TIMEDIFF(second, \"CreatedOn\", \"ResolvedAt\"\
+  ))) -  hour(\"CreatedOn\")*'random'*'random' - minute(\"CreatedOn\")*'random' -\
+  \ SECOND(\"CreatedOn\")\n                          WHEN  DAYNAME(\"CreatedOn\")\
+  \ = 'random' AND \"WeekDays\">'random' then \"SLA\"+'random'\n                 \
+  \         when DAYNAME(\"ResolvedAt\") = 'random' AND \"WeekDays\"<='random' then\
+  \ TRUNC((TIMEDIFF(second, \"CreatedOn\", \"ResolvedAt\"))) -  hour(\"ResolvedAt\"\
+  )*'random'*'random' - minute(\"ResolvedAt\")*'random' - SECOND(\"ResolvedAt\")\n\
+  \                          WHEN  DAYNAME(\"ResolvedAt\") = 'random' AND \"WeekDays\"\
+  >'random' then \"SLA\"+'random'\n                          when DAYNAME(\"ResolvedAt\"\
+  ) = 'random' AND \"WeekDays\"<='random' then TRUNC((TIMEDIFF(second, \"CreatedOn\"\
+  , \"ResolvedAt\"))) - ('random'*'random') -  hour(\"ResolvedAt\")*'random'*'random'\
+  \ - minute(\"ResolvedAt\")*'random' - SECOND(\"ResolvedAt\")\n                 \
+  \         WHEN  DAYNAME(\"ResolvedAt\") = 'random' AND \"WeekDays\">'random' then\
+  \ \"SLA\"+'random'\n                          end as\"DaystoResolve\",  --Created\
+  \ for new SLA to ignore weekends SFSTRY0094945\n                     CASE WHEN \"\
+  DaystoResolve\" IS NULL then 'random' else IFF(\"DaystoResolve\"<=\"SLA\", 'random',\
+  \ 'random') END as \"SLAFlag\" , --Created for new SLA to ignore weekends SFSTRY0094945\n\
+  \                     --CASE WHEN \"DaystoResolve\" IS NULL then NULL else IFF(\"\
+  DaystoResolve\"<=\"SLA\", 1, 0) END as \"SLAFlag\",       Removed as part of new\
+  \ ignoring weekends in SLA SFSTRY0094945\n                     CASE WHEN \"FirstResponseTime\"\
+  \ IS NULL then 'random' else  IFF(\"FirstResponseTime\"=\"ResolvedAt\", 'random',\
+  \ 'random') END as \"FirstContactResolution\",\n                    -- CASE WHEN\
+  \ \"FirstResponseSLA1\" IS NULL OR \"DaystoResolve\" IS NULL then NULL else  IFF(\"\
+  FirstResponseSLA1\"=1, 1, IFF(\"DaystoResolve\"<=24, 1, 0))END as \"FirstResponseSLA\"\
+  \n\t\t\t\t\tCASE WHEN \"FirstResponseSLA1\" IS NULL THEN 'random' ELSE\n\t\t\t\t\
+  \t\t CASE WHEN \"FirstResponseSLA1\" = 'random' THEN 'random' ELSE\n\t\t\t\t\t\t\
+  \t\tCASE WHEN \"DaystoResolve\" IS NULL THEN 'random' ELSE\n\t\t\t\t\t\t\t\t\tCASE\
+  \ WHEN \"DaystoResolve\" <= 'random' THEN 'random' ELSE 'random' END END END END\
+  \ as \"FirstResponseSLA\"\n               FROM ODS_LS.\"PARTNER\".\"SN_CUSTOMERSERVICE_CASE\"\
+  \n               WHERE TO_date(\"CreatedOn\") >=TO_date(YEAR(DATEADD(YEAR, 'random',\
+  \ to_date(convert_timezone('random', current_timestamp))))||'random'||'random')\n\
+  \                 AND (\"AssignmentGroup\"='random'\n                      OR \"\
+  AssignmentGroup\"='random') )\"P_Case\"\n            LEFT JOIN\n              (SELECT\
+  \ \"SysID\" as \"SysID\",\n                      \"PartnerCompanyName\" as \"PartnerCompanyName\"\
+  ,\n                      --\"PartAcctRegion\" as \"PartAcctRegion\" COMMENTED to\
+  \ enable JPN SFSTRY0094945\n                      CASE WHEN \"PartAcctRegion\" in\
+  \ ('random','random') OR \"PartAcctRegion\" IS NULL then \"PartAcctRegion\"\n  \
+  \                         WHEN \"PartAcctRegion\" ='random' AND \"PartnerCountry\"\
+  \ = 'random' THEN 'random' ELSE 'random' END as \"PartAcctRegion\", --JPN has been\
+  \ enabled seperately SFSTRY0094945\n                      \"PartAcctSurfAcctSysID\"\
+  \ as \"PartAcctSurfAcctSysID\"\n               FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\"\
+  )\"PartnerAccount\" ON \"P_Case\".\"PartnerAccountId\" = \"PartnerAccount\".\"SysID\"\
+  \n            LEFT JOIN\n              (SELECT distinct \"PartnerSysID\",\"ParentPartnerNumber\"\
+  ,\"ParentPartner\"\n               from EDW_LS.\"PARTNER_EM\".\"PARTNERS\")\"Partners\"\
+  \ ON \"PartnerAccount\".\"PartAcctSurfAcctSysID\" = \"Partners\".\"PartnerSysID\"\
+  )\"Case\"\n         UNION ALL SELECT 'random' as \"OptyTerrGeo\",\n            \
+  \              'random' as \"OptyTerrMajorArea\",\n                          'random'\
+  \ as \"OptyTerrArea\",\n                          'random' as \"OptyTerrRegion\"\
+  ,\n                          'random' as \"OptyTerrDistrict\",\n               \
+  \           'random' as \"OptyTerritory\",\n                          'random' as\
+  \ \"PartnerTerritoryGeo\",\n                          'random' as \"PartnerTerritoryMajorArea\"\
+  ,\n                          'random' as \"PartnerTerritoryArea\",\n           \
+  \               'random' as \"PartnerTerritoryRegion\",\n                      \
+  \    'random' as \"PartnerTerritoryDistrict\",\n                          'random'\
+  \ as \"PartnerTerritory\",\n                          'random' as \"ReportingTerritoryGeo\"\
+  ,\n                          'random' as \"DealRegCloseQuarter\",\n            \
+  \              'random' as \"DealRegSubmissionDate\",\n                        \
+  \  'random' as \"DealRegQualifiedDate\",\n                          'random' as\
+  \ \"DealRegApprovalDate\",\n                          'random' as \"DealRegClosedDate\"\
+  ,\n                          'random' as \"PRLNumber\",\n                      \
+  \    'random' as \"PartnerPercentageAllocated\",\n                          'random'\
+  \ as \"BUWorkflow\",\n                          'random' as \"BUGroup\",\n     \
+  \                     'random' as \"PartnerUltimateParentAccountSysid\",\n     \
+  \                     'random' as \"OptyTerritorySysID\",\n                    \
+  \      'random' as \"PartnerAccountSysID\",\n                          'random'\
+  \ as \"PRLTerritorySysID\",\n                          'random' as \"DealRegistrationSysID\"\
+  ,\n                          'random' as \"ParentPartnerSysID\",\n             \
+  \             'random' as \"ParentPartnerNumber\",\n                          'random'\
+  \ as \"ParentPartner\",\n                          'random' as \"OptyNumber\",\n\
+  \                          'random' as \"DealRegistrationNumber\",\n           \
+  \               'random' as \"DealRegistrationName\",\n                        \
+  \  'random' as \"DealRegistrationOptyPartnershipType\",\n                      \
+  \    'random' as \"DealRegistrationOptyType\",\n                          'random'\
+  \ as \"DealRegistrationOptyStage\",\n                          'random' as \"DealRegistrationStatus\"\
+  ,\n                          'random' as \"DealRegCustomerAccountName\",\n     \
+  \                     'random' as \"DealRegistrationType\",\n                  \
+  \        'random' as \"AccountIndustryCategory\",\n                          'random'\
+  \ as \"ParentPartnerCategoryCode\",\n                          'random' as \"ParentPartnerSegment\"\
+  ,\n                          'random' as \"SubmissionFlag\",\n                 \
+  \         'random' as \"QualifiedFlag\",\n                          'random' as\
+  \ \"ApprovedFlag\",\n                          'random' as \"ClosedFlag\",\n   \
+  \                       'random' as \"DeniedFlag\",\n                          'random'\
+  \ as \"DealRegistrationCoSellingFlag\",\n                          'random' as \"\
+  DealRegNotNull\",\n                          'random' as \"PartnerPipelineSourced\"\
+  ,\n                          'random' as \"DealRegClosed\",\n                  \
+  \        'random' as \"OptyStageFlag\",\n                          'random' as \"\
+  ApprovedSourcedFlag\",\n                          'random' as \"ApprovedAcceleratedFlag\"\
+  ,\n                          'random' as \"InfluencedACV\",\n                  \
+  \        'random' as \"SourcedACV\",\n                          'random' as \"AcceleratedACV\"\
+  ,\n                          'random' as \"USDNNACV\",\n                       \
+  \   'random' as \"PartnerAllocatedNNACV\",\n                          'random' as\
+  \ \"TagsOptyItemNetNewACV_USD\",\n                          'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          'random' as \"\
+  DaystoResolve\",\n                          'random' as \"AssignmentGroup\",\n \
+  \                         'random' as \"ReassignmentCount\",\n                 \
+  \         'random' as \"ReOpenCount\",\n                          'random' as \"\
+  ContactType\",\n                          'random' as \"PartnerAccount\",\n    \
+  \                      'random' as \"CreatedOn\",\n                          'random'\
+  \ as \"ResolvedAt\",\n                          'random' as \"FirstContactResolution\"\
+  ,\n                          'random' as \"CaseSysId\",\n                      \
+  \    'random' as \"PartnerCompanyName\",\n                          \"PartAcctRegion\"\
+  \ as \"PartAcctRegion\",\n                          'random' as \"DealRegExpirationDate\"\
+  ,\n                          'random' as \"FirstResponseSLA\",\n               \
+  \           'random' as \"OptySourcedFlag\",\n                          'random'\
+  \ as \"OptySalesDesignatedFlag\",\n                          \"PartnerNumber\" as\
+  \ \"PartnerNumber\",\n                          'random' as \"PRMPotentialACVValue\"\
+  ,\n                          'random' as \"PrimaryBU\",\n                      \
+  \    'random' as \"SecondstoResponse\",\n                          'random' as \"\
+  Type\",\n                          'random' as \"UpdatedOn\",\n                \
+  \          'random' as \"UpdatedBy\",\n                          'random' as \"\
+  Location\",\n                          'random' as \"OpenedBy\",\n             \
+  \             'random' as \"AgentAverageResponseTime\",\n                      \
+  \    'random' as \"FirstResponseWaitTime\",\n                          'random'\
+  \ as \"ShortDescription\",\n                          'random' as \"Number\",\n\
+  \                          'random' as \"SLA\",\n                          'random'\
+  \ as \"SLAFlag\",\n                          'random' as \"State\",\n          \
+  \                'random' as \"ClosedAt\",\n                          'random' as\
+  \ \"Category\",\n                          'random' as \"SubCategory\",\n      \
+  \                    'random' as \"AssignedTo\",\n                          \"RecordType\"\
+  \ as \"RecordType\",\n                          \"Source\" as \"Source\",\n    \
+  \                      \"Quarter\" as \"Quarter\",\n                          \"\
+  QuarterStartDate\" as \"QuarterStartDate\",\n                          \"DR_Flag\"\
+  \ as \"DR_Flag\",\n                          'random' as \"CallsSysId\",\n     \
+  \                     'random' as \"PendingApproavlFlag\",\n                   \
+  \       'random' as \"ExpiredFlag\",\n                          'random' as \"MarketingActivityNumber\"\
+  ,\n                          'random' as \"RegistrationClassification\",\n     \
+  \                     'random' as \"RegistrationSubStatus\",\n                 \
+  \         'random' as \"OptyACVNotZeroFlag\",\n                          'random'\
+  \ as \"PendingApproverName\",\n                          'random' as \"OpsResolutionCode\"\
+  ,\n                          'random' as \"OptyHeaderACV\",\n                  \
+  \        'random' as \"DaystoDeniedfromSubmission\",\n                         \
+  \ 'random' as \"DeniedSLAFlag\",\n                          'random' as \"USDNetNewACVPartner\"\
+  ,\n                          'random' as \"SolutionOfferingFlag\",\n           \
+  \               'random' as \"SolutionOfferingType\",\n                        \
+  \  'random' as \"PRMRejectionCode\",\n                          'random' as \"PrimarySalesRep\"\
+  ,\n                          'random' as \"PRMDealRegionalAllianceManager\",\n \
+  \                         'random' as \"PartnerActive\",\n                     \
+  \     'random' as \"PRMChannelManager\",\n                          'random' as\
+  \ \"SolutionOfferingNumber\",\n                          'random' as \"SolutionOfferingName\"\
+  ,\n                          'random' as \"AcctFieldSalesParentAccount\",\n\t  \
+  \                    'random' as  \"FSPNewLogoFlag\",\n                        \
+  \  'random' as \"BusinessImperative\",\n                          'random' as \"\
+  SolutionOfferingTypeOpty\",\n                          'random' as \"DemandAccelerator\"\
+  ,\n                          'random' as \"ProgramType\",\n                    \
+  \      'random' as \"ApprovalStatus\",\n                          'random' as \"\
+  ApprovedDate\",\n                          'random' as \"RejectedDate\",\n     \
+  \                     'random' as \"CreatedDate\",\n                          'random'\
+  \ as \"TaskSysID\",\n                           'random' as  \"SurfSalesContact\"\
+  ,\n                          'random' as \"SubmittedBy\",\n                    \
+  \      'random' as \"CampaignType\",\n                          'random' as \"PrimaryCampaign\"\
+  ,\n                          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random'\
+  \ as \"AcctIndustry\",\n                          'random' as \"SourcedClosedACV_FullCredit\"\
+  ,\n                          'random' as \"PartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"CommitPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"WeightedPartnerSourcedACV_FullCredit\"\
+  ,\n                          'random' AS \"DealRegVelocity\",\n                \
+  \          'random' as \"MarqueeAccount\"\n         FROM\n           (SELECT \"\
+  P_PartnerOnBoard\".\"PartnerNumber\" as \"PartnerNumber\",\n                   \"\
+  P_PartnerOnBoard\".\"RecordType\" as \"RecordType\",\n                   \"P_PartnerOnBoard\"\
+  .\"Source\" as \"Source\",\n                   \"P_PartnerOnBoard\".\"Quarter\"\
+  \ as \"Quarter\",\n                   \"P_PartnerOnBoard\".\"QuarterStartDate\"\
+  \ as \"QuarterStartDate\",\n                   \"P_PartnerOnBoard\".\"DR_Flag\"\
+  \ as \"DR_Flag\",\n                   \"Projection_4\".\"PartAcctRegion\" as \"\
+  PartAcctRegion\"\n            FROM\n              (SELECT \"PartnerNumber\" as \"\
+  PartnerNumber\",\n                      \"PartnerOnBoardedDate\" as \"PartnerOnBoardedDate\"\
+  ,\n                      \"PartnerSysID\" as \"PartnerSysID\",\n               \
+  \       'random' as \"RecordType\",\n                      'random' as \"Source\"\
+  ,\n                      'random' as \"DR_Flag\",\n                      RIGHT(YEAR(\"\
+  PartnerOnBoardedDate\") ||'random'|| QUARTER(\"PartnerOnBoardedDate\"), 'random')\
+  \ as \"Quarter\",\n                      CONCAT(CONCAT('random', LEFT(\"Quarter\"\
+  , 'random')) ,(CASE\n                                                          \
+  \          WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n         \
+  \                                                           WHEN RIGHT(\"Quarter\"\
+  , 'random') ='random' THEN 'random'\n                                          \
+  \                          WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n\
+  \                                                                    ELSE 'random'\n\
+  \                                                                END)) as \"QuarterStartDate\"\
+  \n               FROM EDW_LS.\"PARTNER_EM\".\"PARTNERS\"\n               WHERE \"\
+  PartnerOnBoardedDate\" >=TO_date(YEAR(DATEADD(YEAR, 'random', to_date(convert_timezone('random',\
+  \ current_timestamp))))||'random'||'random') )\"P_PartnerOnBoard\"\n           \
+  \ INNER JOIN\n              (SELECT \"PartAcctSurfAcctSysID\" as \"PartAcctSurfAcctSysID\"\
+  ,\n                      --\"PartAcctRegion\" as \"PartAcctRegion\" COMMENTED to\
+  \ enable JPN SFSTRY0094945\n                      CASE WHEN \"PartAcctRegion\" in\
+  \ ('random','random') OR \"PartAcctRegion\" IS NULL then \"PartAcctRegion\"\n  \
+  \                         WHEN \"PartAcctRegion\" ='random' AND \"PartnerCountry\"\
+  \ = 'random' THEN 'random' ELSE 'random' END as \"PartAcctRegion\" --JPN has been\
+  \ enabled seperately SFSTRY0094945\n               FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\"\
+  )\"Projection_4\" ON \"P_PartnerOnBoard\".\"PartnerSysID\" = \"Projection_4\".\"\
+  PartAcctSurfAcctSysID\")\"PartnerOnBoard\"\n         --SFSTRY0094945 -> Seperating\
+  \ Calls and Chats\n         UNION ALL SELECT 'random' as \"OptyTerrGeo\",\n    \
+  \                      'random' as \"OptyTerrMajorArea\",\n                    \
+  \      'random' as \"OptyTerrArea\",\n                          'random' as \"OptyTerrRegion\"\
+  ,\n                          'random' as \"OptyTerrDistrict\",\n               \
+  \           'random' as \"OptyTerritory\",\n                          'random' as\
+  \ \"PartnerTerritoryGeo\",\n                          'random' as \"PartnerTerritoryMajorArea\"\
+  ,\n                          'random' as \"PartnerTerritoryArea\",\n           \
+  \               'random' as \"PartnerTerritoryRegion\",\n                      \
+  \    'random' as \"PartnerTerritoryDistrict\",\n                          'random'\
+  \ as \"PartnerTerritory\",\n                          'random' as \"ReportingTerritoryGeo\"\
+  ,\n                          'random' as \"DealRegCloseQuarter\",\n            \
+  \              'random' as \"DealRegSubmissionDate\",\n                        \
+  \  'random' as \"DealRegQualifiedDate\",\n                          'random' as\
+  \ \"DealRegApprovalDate\",\n                          'random' as \"DealRegClosedDate\"\
+  ,\n                          'random' as \"PRLNumber\",\n                      \
+  \    'random' as \"PartnerPercentageAllocated\",\n                          'random'\
+  \ as \"BUWorkflow\",\n                          'random' as \"BUGroup\",\n     \
+  \                     'random' as \"PartnerUltimateParentAccountSysid\",\n     \
+  \                     'random' as \"OptyTerritorySysID\",\n                    \
+  \      'random' as \"PartnerAccountSysID\",\n                          'random'\
+  \ as \"PRLTerritorySysID\",\n                          'random' as \"DealRegistrationSysID\"\
+  ,\n                          'random' as \"ParentPartnerSysID\",\n             \
+  \             \"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n            \
+  \              \"ParentPartner\" as \"ParentPartner\",\n                       \
+  \   'random' as \"OptyNumber\",\n                          'random' as \"DealRegistrationNumber\"\
+  ,\n                          'random' as \"DealRegistrationName\",\n           \
+  \               'random' as \"DealRegistrationOptyPartnershipType\",\n         \
+  \                 'random' as \"DealRegistrationOptyType\",\n                  \
+  \        'random' as \"DealRegistrationOptyStage\",\n                          'random'\
+  \ as \"DealRegistrationStatus\",\n                          'random' as \"DealRegCustomerAccountName\"\
+  ,\n                          'random' as \"DealRegistrationType\",\n           \
+  \               'random' as \"AccountIndustryCategory\",\n                     \
+  \     'random' as \"ParentPartnerCategoryCode\",\n                          'random'\
+  \ as \"ParentPartnerSegment\",\n                          'random' as \"SubmissionFlag\"\
+  ,\n                          'random' as \"QualifiedFlag\",\n                  \
+  \        'random' as \"ApprovedFlag\",\n                          'random' as \"\
+  ClosedFlag\",\n                          'random' as \"DeniedFlag\",\n         \
+  \                 'random' as \"DealRegistrationCoSellingFlag\",\n             \
+  \             'random' as \"DealRegNotNull\",\n                          'random'\
+  \ as \"PartnerPipelineSourced\",\n                          'random' as \"DealRegClosed\"\
+  ,\n                          'random' as \"OptyStageFlag\",\n                  \
+  \        'random' as \"ApprovedSourcedFlag\",\n                          'random'\
+  \ as \"ApprovedAcceleratedFlag\",\n                          'random' as \"InfluencedACV\"\
+  ,\n                          'random' as \"SourcedACV\",\n                     \
+  \     'random' as \"AcceleratedACV\",\n                          'random' as \"\
+  USDNNACV\",\n                          'random' as \"PartnerAllocatedNNACV\",\n\
+  \                          'random' as \"TagsOptyItemNetNewACV_USD\",\n        \
+  \                  'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n \
+  \                         'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          'random' as \"\
+  DaystoResolve\",\n                          'random' as \"AssignmentGroup\",\n \
+  \                         'random' as \"ReassignmentCount\",\n                 \
+  \         'random' as \"ReOpenCount\",\n                          'random' as \"\
+  ContactType\",\n                          'random' as \"PartnerAccount\",\n    \
+  \                      'random' as \"CreatedOn\",\n                          'random'\
+  \ as \"ResolvedAt\",\n                          'random' as \"FirstContactResolution\"\
+  ,\n                          'random' as \"CaseSysId\",\n                      \
+  \    \"PartnerCompanyName\" as \"PartnerCompanyName\",\n                       \
+  \   \"PartAcctRegion\" as \"PartAcctRegion\",\n                          'random'\
+  \ as \"DealRegExpirationDate\",\n                          'random' as \"FirstResponseSLA\"\
+  ,\n                          'random' as \"OptySourcedFlag\",\n                \
+  \          'random' as \"OptySalesDesignatedFlag\",\n                          'random'\
+  \ as \"PartnerNumber\",\n                          'random' as \"PRMPotentialACVValue\"\
+  ,\n                          'random' as \"PrimaryBU\",\n                      \
+  \    \"SecondstoResponse\" as \"SecondstoResponse\",\n                         \
+  \ \"Type\" as \"Type\",\n                          \"UpdatedOn\" as \"UpdatedOn\"\
+  ,\n                          \"UpdatedBy\" as \"UpdatedBy\",\n                 \
+  \         \"Location\" as \"Location\",\n                          \"OpenedBy\"\
+  \ as \"OpenedBy\",\n                          \"AgentAverageResponseTime\" as \"\
+  AgentAverageResponseTime\",\n                          \"FirstResponseWaitTime\"\
+  \ as \"FirstResponseWaitTime\",\n                          \"ShortDescription\"\
+  \ as \"ShortDescription\",\n                          \"Number\" as \"Number\",\n\
+  \                          \"SLA\" as \"SLA\",\n                          \"SLAFlag\"\
+  \ as \"SLAFlag\",\n                          \"State\" as \"State\",\n         \
+  \                 \"ClosedAt\" as \"ClosedAt\",\n                          \"Category\"\
+  \ as \"Category\",\n                          \"SubCategory\" as \"SubCategory\"\
+  ,\n                          \"AssignedTo\" as \"AssignedTo\",\n               \
+  \           \"RecordType\" as \"RecordType\",\n                          \"Source\"\
+  \ as \"Source\",\n                          \"Quarter\" as \"Quarter\",\n      \
+  \                    \"QuarterStartDate\" as \"QuarterStartDate\",\n           \
+  \               \"DR_Flag\" as \"DR_Flag\",\n                          \"CallsSysId\"\
+  \ as \"CallsSysId\",\n                          'random' as \"PendingApproavlFlag\"\
+  ,\n                          'random' as \"ExpiredFlag\",\n                    \
+  \      'random' as \"MarketingActivityNumber\",\n                          'random'\
+  \ as \"RegistrationClassification\",\n                          'random' as \"RegistrationSubStatus\"\
+  ,\n                          'random' as \"OptyACVNotZeroFlag\",\n             \
+  \             'random' as \"PendingApproverName\",\n                          'random'\
+  \ as \"OpsResolutionCode\",\n                          'random' as \"OptyHeaderACV\"\
+  ,\n                          'random' as \"DaystoDeniedfromSubmission\",\n     \
+  \                     'random' as \"DeniedSLAFlag\",\n                         \
+  \ 'random' as \"USDNetNewACVPartner\",\n                          'random' as \"\
+  SolutionOfferingFlag\",\n                          'random' as \"SolutionOfferingType\"\
+  ,\n                          'random' as \"PRMRejectionCode\",\n               \
+  \           'random' as \"PrimarySalesRep\",\n                          'random'\
+  \ as \"PRMDealRegionalAllianceManager\",\n                          'random' as\
+  \ \"PartnerActive\",\n                          'random' as \"PRMChannelManager\"\
+  ,\n                          'random' as \"SolutionOfferingNumber\",\n         \
+  \                 'random' as \"SolutionOfferingName\",\n                      \
+  \    'random' as \"AcctFieldSalesParentAccount\",\n\t                      'random'\
+  \ as  \"FSPNewLogoFlag\",\n                          'random' as \"BusinessImperative\"\
+  ,\n                          'random' as \"SolutionOfferingTypeOpty\",\n       \
+  \                   'random' as \"DemandAccelerator\",\n                       \
+  \   'random' as \"ProgramType\",\n                          'random' as \"ApprovalStatus\"\
+  ,\n                          'random' as \"ApprovedDate\",\n                   \
+  \       'random' as \"RejectedDate\",\n                          'random' as \"\
+  CreatedDate\",\n                          'random' as \"TaskSysID\",\n         \
+  \                  'random' as  \"SurfSalesContact\",\n                        \
+  \  'random' as \"SubmittedBy\",\n                          'random' as \"CampaignType\"\
+  ,\n                          'random' as \"PrimaryCampaign\",\n                \
+  \          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random' as \"AcctIndustry\"\
+  ,\n                          'random' as \"SourcedClosedACV_FullCredit\",\n    \
+  \                      'random' as \"PartnerSourcedACV_FullCredit\",\n         \
+  \                 'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n     \
+  \                     'random' as \"CommitPartnerSourcedACV_FullCredit\",\n    \
+  \                      'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n  \
+  \                        'random' as \"WeightedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' AS \"DealRegVelocity\",\n                  \
+  \        'random' as \"MarqueeAccount\"\n         FROM\n           (SELECT \"P_Calls\"\
+  .\"SecondstoResponse\" as \"SecondstoResponse\",\n                   \"P_Calls\"\
+  .\"Type\" as \"Type\",\n                   \"P_Calls\".\"UpdatedOn\" as \"UpdatedOn\"\
+  ,\n                   \"P_Calls\".\"UpdatedBy\" as \"UpdatedBy\",\n            \
+  \       \"P_Calls\".\"Location\" as \"Location\",\n                   \"P_Calls\"\
+  .\"OpenedBy\" as \"OpenedBy\",\n                   \"P_Calls\".\"AgentAverageResponseTime\"\
+  \ as \"AgentAverageResponseTime\",\n                   \"P_Calls\".\"FirstResponseWaitTime\"\
+  \ as \"FirstResponseWaitTime\",\n                   \"P_Calls\".\"ShortDescription\"\
+  \ as \"ShortDescription\",\n                   \"P_Calls\".\"Number\" as \"Number\"\
+  ,\n                   \"P_Calls\".\"SLA\" as \"SLA\",\n                   \"P_Calls\"\
+  .\"SLAFlag\" as \"SLAFlag\",\n                   \"P_Calls\".\"State\" as \"State\"\
+  ,\n                   \"P_Calls\".\"ClosedAt\" as \"ClosedAt\",\n              \
+  \     \"P_Calls\".\"Category\" as \"Category\",\n                   \"P_Calls\"\
+  .\"SubCategory\" as \"SubCategory\",\n                   \"P_Calls\".\"AssignedTo\"\
+  \ as \"AssignedTo\",\n                   \"P_Calls\".\"RecordType\" as \"RecordType\"\
+  ,\n                   \"P_Calls\".\"Source\" as \"Source\",\n                  \
+  \ \"P_Calls\".\"Quarter\" as \"Quarter\",\n                   \"P_Calls\".\"QuarterStartDate\"\
+  \ as \"QuarterStartDate\",\n                   \"P_Calls\".\"DR_Flag\" as \"DR_Flag\"\
+  ,\n                   \"P_Calls\".\"CallsSysId\" as \"CallsSysId\",\n          \
+  \         \"Projection_6\".\"PartAcctRegion\" as \"PartAcctRegion\",\n         \
+  \          \"Projection_6\".\"PartnerCompanyName\" as \"PartnerCompanyName\",\n\
+  \                   \"Partners\".\"ParentPartnerNumber\" as \"ParentPartnerNumber\"\
+  ,\n                   \"Partners\".\"ParentPartner\" as \"ParentPartner\"\n    \
+  \        FROM\n              (SELECT convert_timezone('random', \"CreatedOn\") as\
+  \ \"CreatedOn\",\n                      \"Number\" as \"Number\",\n            \
+  \          \"OpenedAt\" as \"OpenedAt\",\n                      \"ClosedAt\" as\
+  \ \"ClosedAt\",\n                      \"OpenedFor\" as \"OpenedFor\",\n       \
+  \               \"AssignedTo\" as \"AssignedTo\",\n                      \"Category\"\
+  \ as \"Category\",\n                      \"SubCategory\" as \"SubCategory\",\n\
+  \                      \"ShortDescription\" as \"ShortDescription\",\n         \
+  \             \"State\" as \"State\",\n                      \"Type\" as \"Type\"\
+  ,\n                      \"UpdatedOn\" as \"UpdatedOn\",\n                     \
+  \ \"UpdatedBy\" as \"UpdatedBy\",\n                      \"Location\" as \"Location\"\
+  ,\n                      \"OpenedBy\" as \"OpenedBy\",\n                      \"\
+  AgentAverageResponseTime\" as \"AgentAverageResponseTime\",\n                  \
+  \    \"FirstResponseWaitTime\" as \"FirstResponseWaitTime\",\n                 \
+  \     \"WaitTime\" as \"WaitTime\",\n                      \"PartnerAccountId\"\
+  \ as \"PartnerAccountId\",\n                      \"SysId\" as \"CallsSysId\",\n\
+  \                      RIGHT(YEAR(\"CreatedOn\") ||'random'|| QUARTER(\"CreatedOn\"\
+  ), 'random') as \"Quarter\",\n                      TIMEDIFF(second, TO_TIMESTAMP('random'),\
+  \ \"WaitTime\") as \"SecondstoResponse\",\n                      'random' as \"\
+  RecordType\",\n                      'random' as \"Source\",\n                 \
+  \     'random' as \"DR_Flag\",\n                      CONCAT(CONCAT('random', LEFT(\"\
+  Quarter\", 'random')) ,(CASE\n                                                 \
+  \                   WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n\
+  \                                                                    WHEN RIGHT(\"\
+  Quarter\", 'random') ='random' THEN 'random'\n                                 \
+  \                                   WHEN RIGHT(\"Quarter\", 'random') ='random'\
+  \ THEN 'random'\n                                                              \
+  \      ELSE 'random'\n                                                         \
+  \       END)) as \"QuarterStartDate\",\n                      'random' as \"SLA\"\
+  ,\n                     CASE WHEN \"SecondstoResponse\" IS NULL then 'random' else\
+  \ IFF(\"SecondstoResponse\"<=\"SLA\", 'random', 'random')END as \"SLAFlag\"\n  \
+  \             FROM ODS_LS.\"PARTNER\".\"INTERACTION\"\n               WHERE (\"\
+  AssignedTo\" !='random')\n                 --AND (\"Type\" ='Chat' OR \"Type\" ='Phone')\n\
+  \                   AND (\"Type\" ='random' OR \"Type\" ='random')  --SFSTRY0094945\
+  \ ( Considering only Phone,Zoom Call)\n                 AND TO_date(\"CreatedOn\"\
+  ) >=TO_date(YEAR(DATEADD(YEAR, 'random', to_date(convert_timezone('random', current_timestamp))))||'random'||'random')\
+  \ )\"P_Calls\"\n            LEFT JOIN\n              (SELECT --\"PartAcctRegion\"\
+  \ as \"PartAcctRegion\" COMMENTED to enable JPN SFSTRY0094945\n                \
+  \      CASE WHEN \"PartAcctRegion\" in ('random','random') OR \"PartAcctRegion\"\
+  \ IS NULL then \"PartAcctRegion\"\n                           WHEN \"PartAcctRegion\"\
+  \ ='random' AND \"PartnerCountry\" = 'random' THEN 'random' ELSE 'random' END as\
+  \ \"PartAcctRegion\", --JPN has been enabled seperately SFSTRY0094945\n        \
+  \              \"PartnerCompanyName\" as \"PartnerCompanyName\",\n             \
+  \         \"SysID\" as \"SysID\",\n                      \"PartAcctSurfAcctSysID\"\
+  \ as \"PartAcctSurfAcctSysID\"\n               FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\"\
+  )\"Projection_6\" ON \"P_Calls\".\"PartnerAccountId\" = \"Projection_6\".\"SysID\"\
+  \n            LEFT JOIN\n              (SELECT distinct \"PartnerSysID\",\"ParentPartnerNumber\"\
+  ,\"ParentPartner\"\n               from EDW_LS.\"PARTNER_EM\".\"PARTNERS\")\"Partners\"\
+  \ ON \"Projection_6\".\"PartAcctSurfAcctSysID\" = \"Partners\".\"PartnerSysID\"\
+  )\"Calls\"\n               --SFSTRY0094945 -> Seperating Calls and Chats\n     \
+  \           UNION ALL SELECT 'random' as \"OptyTerrGeo\",\n                    \
+  \      'random' as \"OptyTerrMajorArea\",\n                          'random' as\
+  \ \"OptyTerrArea\",\n                          'random' as \"OptyTerrRegion\",\n\
+  \                          'random' as \"OptyTerrDistrict\",\n                 \
+  \         'random' as \"OptyTerritory\",\n                          'random' as\
+  \ \"PartnerTerritoryGeo\",\n                          'random' as \"PartnerTerritoryMajorArea\"\
+  ,\n                          'random' as \"PartnerTerritoryArea\",\n           \
+  \               'random' as \"PartnerTerritoryRegion\",\n                      \
+  \    'random' as \"PartnerTerritoryDistrict\",\n                          'random'\
+  \ as \"PartnerTerritory\",\n                          'random' as \"ReportingTerritoryGeo\"\
+  ,\n                          'random' as \"DealRegCloseQuarter\",\n            \
+  \              'random' as \"DealRegSubmissionDate\",\n                        \
+  \  'random' as \"DealRegQualifiedDate\",\n                          'random' as\
+  \ \"DealRegApprovalDate\",\n                          'random' as \"DealRegClosedDate\"\
+  ,\n                          'random' as \"PRLNumber\",\n                      \
+  \    'random' as \"PartnerPercentageAllocated\",\n                          'random'\
+  \ as \"BUWorkflow\",\n                          'random' as \"BUGroup\",\n     \
+  \                     'random' as \"PartnerUltimateParentAccountSysid\",\n     \
+  \                     'random' as \"OptyTerritorySysID\",\n                    \
+  \      'random' as \"PartnerAccountSysID\",\n                          'random'\
+  \ as \"PRLTerritorySysID\",\n                          'random' as \"DealRegistrationSysID\"\
+  ,\n                          'random' as \"ParentPartnerSysID\",\n             \
+  \             \"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n            \
+  \              \"ParentPartner\" as \"ParentPartner\",\n                       \
+  \   'random' as \"OptyNumber\",\n                          'random' as \"DealRegistrationNumber\"\
+  ,\n                          'random' as \"DealRegistrationName\",\n           \
+  \               'random' as \"DealRegistrationOptyPartnershipType\",\n         \
+  \                 'random' as \"DealRegistrationOptyType\",\n                  \
+  \        'random' as \"DealRegistrationOptyStage\",\n                          'random'\
+  \ as \"DealRegistrationStatus\",\n                          'random' as \"DealRegCustomerAccountName\"\
+  ,\n                          'random' as \"DealRegistrationType\",\n           \
+  \               'random' as \"AccountIndustryCategory\",\n                     \
+  \     'random' as \"ParentPartnerCategoryCode\",\n                          'random'\
+  \ as \"ParentPartnerSegment\",\n                          'random' as \"SubmissionFlag\"\
+  ,\n                          'random' as \"QualifiedFlag\",\n                  \
+  \        'random' as \"ApprovedFlag\",\n                          'random' as \"\
+  ClosedFlag\",\n                          'random' as \"DeniedFlag\",\n         \
+  \                 'random' as \"DealRegistrationCoSellingFlag\",\n             \
+  \             'random' as \"DealRegNotNull\",\n                          'random'\
+  \ as \"PartnerPipelineSourced\",\n                          'random' as \"DealRegClosed\"\
+  ,\n                          'random' as \"OptyStageFlag\",\n                  \
+  \        'random' as \"ApprovedSourcedFlag\",\n                          'random'\
+  \ as \"ApprovedAcceleratedFlag\",\n                          'random' as \"InfluencedACV\"\
+  ,\n                          'random' as \"SourcedACV\",\n                     \
+  \     'random' as \"AcceleratedACV\",\n                          'random' as \"\
+  USDNNACV\",\n                          'random' as \"PartnerAllocatedNNACV\",\n\
+  \                          'random' as \"TagsOptyItemNetNewACV_USD\",\n        \
+  \                  'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n \
+  \                         'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          'random' as \"\
+  DaystoResolve\",\n                          'random' as \"AssignmentGroup\",\n \
+  \                         'random' as \"ReassignmentCount\",\n                 \
+  \         'random' as \"ReOpenCount\",\n                          'random' as \"\
+  ContactType\",\n                          'random' as \"PartnerAccount\",\n    \
+  \                      'random' as \"CreatedOn\",\n                          'random'\
+  \ as \"ResolvedAt\",\n                          'random' as \"FirstContactResolution\"\
+  ,\n                          'random' as \"CaseSysId\",\n                      \
+  \    \"PartnerCompanyName\" as \"PartnerCompanyName\",\n                       \
+  \   \"PartAcctRegion\" as \"PartAcctRegion\",\n                          'random'\
+  \ as \"DealRegExpirationDate\",\n                          'random' as \"FirstResponseSLA\"\
+  ,\n                          'random' as \"OptySourcedFlag\",\n                \
+  \          'random' as \"OptySalesDesignatedFlag\",\n                          'random'\
+  \ as \"PartnerNumber\",\n                          'random' as \"PRMPotentialACVValue\"\
+  ,\n                          'random' as \"PrimaryBU\",\n                      \
+  \    \"SecondstoResponse\" as \"SecondstoResponse\",\n                         \
+  \ \"Type\" as \"Type\",\n                          \"UpdatedOn\" as \"UpdatedOn\"\
+  ,\n                          \"UpdatedBy\" as \"UpdatedBy\",\n                 \
+  \         \"Location\" as \"Location\",\n                          \"OpenedBy\"\
+  \ as \"OpenedBy\",\n                          \"AgentAverageResponseTime\" as \"\
+  AgentAverageResponseTime\",\n                          \"FirstResponseWaitTime\"\
+  \ as \"FirstResponseWaitTime\",\n                          \"ShortDescription\"\
+  \ as \"ShortDescription\",\n                          \"Number\" as \"Number\",\n\
+  \                          \"SLA\" as \"SLA\",\n                          \"SLAFlag\"\
+  \ as \"SLAFlag\",\n                          \"State\" as \"State\",\n         \
+  \                 \"ClosedAt\" as \"ClosedAt\",\n                          \"Category\"\
+  \ as \"Category\",\n                          \"SubCategory\" as \"SubCategory\"\
+  ,\n                          \"AssignedTo\" as \"AssignedTo\",\n               \
+  \           \"RecordType\" as \"RecordType\",\n                          \"Source\"\
+  \ as \"Source\",\n                          \"Quarter\" as \"Quarter\",\n      \
+  \                    \"QuarterStartDate\" as \"QuarterStartDate\",\n           \
+  \               \"DR_Flag\" as \"DR_Flag\",\n                          \"CallsSysId\"\
+  \ as \"CallsSysId\",\n                          'random' as \"PendingApproavlFlag\"\
+  ,\n                          'random' as \"ExpiredFlag\",\n                    \
+  \      'random' as \"MarketingActivityNumber\",\n                          'random'\
+  \ as \"RegistrationClassification\",\n                          'random' as \"RegistrationSubStatus\"\
+  ,\n                          'random' as \"OptyACVNotZeroFlag\",\n             \
+  \             'random' as \"PendingApproverName\",\n                          'random'\
+  \ as \"OpsResolutionCode\",\n                          'random' as \"OptyHeaderACV\"\
+  ,\n                          'random' as \"DaystoDeniedfromSubmission\",\n     \
+  \                     'random' as \"DeniedSLAFlag\",\n                         \
+  \ 'random' as \"USDNetNewACVPartner\",\n                          'random' as \"\
+  SolutionOfferingFlag\",\n                          'random' as \"SolutionOfferingType\"\
+  ,\n                          'random' as \"PRMRejectionCode\",\n               \
+  \           'random' as \"PrimarySalesRep\",\n                          'random'\
+  \ as \"PRMDealRegionalAllianceManager\",\n                          'random' as\
+  \ \"PartnerActive\",\n                          'random' as \"PRMChannelManager\"\
+  ,\n                          'random' as \"SolutionOfferingNumber\",\n         \
+  \                 'random' as \"SolutionOfferingName\",\n                      \
+  \    'random' as \"AcctFieldSalesParentAccount\",\n\t                      'random'\
+  \ as  \"FSPNewLogoFlag\",\n                          'random' as \"BusinessImperative\"\
+  ,\n                          'random' as \"SolutionOfferingTypeOpty\",\n       \
+  \                   'random' as \"DemandAccelerator\",\n                       \
+  \   'random' as \"ProgramType\",\n                          'random' as \"ApprovalStatus\"\
+  ,\n                          'random' as \"ApprovedDate\",\n                   \
+  \       'random' as \"RejectedDate\",\n                          'random' as \"\
+  CreatedDate\",\n                          'random' as \"TaskSysID\",\n         \
+  \                  'random' as  \"SurfSalesContact\",\n                        \
+  \  'random' as \"SubmittedBy\",\n                          'random' as \"CampaignType\"\
+  ,\n                          'random' as \"PrimaryCampaign\",\n                \
+  \          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random' as \"AcctIndustry\"\
+  ,\n                          'random' as \"SourcedClosedACV_FullCredit\",\n    \
+  \                      'random' as \"PartnerSourcedACV_FullCredit\",\n         \
+  \                 'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n     \
+  \                     'random' as \"CommitPartnerSourcedACV_FullCredit\",\n    \
+  \                      'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n  \
+  \                        'random' as \"WeightedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' AS \"DealRegVelocity\",\n                  \
+  \        'random' as \"MarqueeAccount\"\n         FROM\n           (SELECT \"P_Chat\"\
+  .\"SecondstoResponse\" as \"SecondstoResponse\",\n                   \"P_Chat\"\
+  .\"Type\" as \"Type\",\n                   \"P_Chat\".\"UpdatedOn\" as \"UpdatedOn\"\
+  ,\n                   \"P_Chat\".\"UpdatedBy\" as \"UpdatedBy\",\n             \
+  \      \"P_Chat\".\"Location\" as \"Location\",\n                   \"P_Chat\".\"\
+  OpenedBy\" as \"OpenedBy\",\n                   \"P_Chat\".\"AgentAverageResponseTime\"\
+  \ as \"AgentAverageResponseTime\",\n                   \"P_Chat\".\"FirstResponseWaitTime\"\
+  \ as \"FirstResponseWaitTime\",\n                   \"P_Chat\".\"ShortDescription\"\
+  \ as \"ShortDescription\",\n                   \"P_Chat\".\"Number\" as \"Number\"\
+  ,\n                   \"P_Chat\".\"SLA\" as \"SLA\",\n                   \"P_Chat\"\
+  .\"SLAFlag\" as \"SLAFlag\",\n                   \"P_Chat\".\"State\" as \"State\"\
+  ,\n                   \"P_Chat\".\"ClosedAt\" as \"ClosedAt\",\n               \
+  \    \"P_Chat\".\"Category\" as \"Category\",\n                   \"P_Chat\".\"\
+  SubCategory\" as \"SubCategory\",\n                   \"P_Chat\".\"AssignedTo\"\
+  \ as \"AssignedTo\",\n                   \"P_Chat\".\"RecordType\" as \"RecordType\"\
+  ,\n                   \"P_Chat\".\"Source\" as \"Source\",\n                   \"\
+  P_Chat\".\"Quarter\" as \"Quarter\",\n                   \"P_Chat\".\"QuarterStartDate\"\
+  \ as \"QuarterStartDate\",\n                   \"P_Chat\".\"DR_Flag\" as \"DR_Flag\"\
+  ,\n                   \"P_Chat\".\"CallsSysId\" as \"CallsSysId\",\n           \
+  \        \"Projection_7\".\"PartAcctRegion\" as \"PartAcctRegion\",\n          \
+  \         \"Projection_7\".\"PartnerCompanyName\" as \"PartnerCompanyName\",\n \
+  \                  \"Partners\".\"ParentPartnerNumber\" as \"ParentPartnerNumber\"\
+  ,\n                   \"Partners\".\"ParentPartner\" as \"ParentPartner\"\n    \
+  \        FROM\n              (SELECT convert_timezone('random', \"CreatedOn\") as\
+  \ \"CreatedOn\",\n                      \"Number\" as \"Number\",\n            \
+  \          \"OpenedAt\" as \"OpenedAt\",\n                      \"ClosedAt\" as\
+  \ \"ClosedAt\",\n                      \"OpenedFor\" as \"OpenedFor\",\n       \
+  \               \"AssignedTo\" as \"AssignedTo\",\n                      \"Category\"\
+  \ as \"Category\",\n                      \"SubCategory\" as \"SubCategory\",\n\
+  \                      \"ShortDescription\" as \"ShortDescription\",\n         \
+  \             \"State\" as \"State\",\n                      \"Type\" as \"Type\"\
+  ,\n                      \"UpdatedOn\" as \"UpdatedOn\",\n                     \
+  \ \"UpdatedBy\" as \"UpdatedBy\",\n                      \"Location\" as \"Location\"\
+  ,\n                      \"OpenedBy\" as \"OpenedBy\",\n                      \"\
+  AgentAverageResponseTime\" as \"AgentAverageResponseTime\",\n                  \
+  \    \"FirstResponseWaitTime\" as \"FirstResponseWaitTime\",\n                 \
+  \     \"WaitTime\" as \"WaitTime\",\n                      \"PartnerAccountId\"\
+  \ as \"PartnerAccountId\",\n                      \"SysId\" as \"CallsSysId\",\n\
+  \                      RIGHT(YEAR(\"CreatedOn\") ||'random'|| QUARTER(\"CreatedOn\"\
+  ), 'random') as \"Quarter\",\n                      TIMEDIFF(second, TO_TIMESTAMP('random'),\
+  \ \"WaitTime\") as \"SecondstoResponse\",\n                      'random' as \"\
+  RecordType\",\n                      'random' as \"Source\",\n                 \
+  \     'random' as \"DR_Flag\",\n                      CONCAT(CONCAT('random', LEFT(\"\
+  Quarter\", 'random')) ,(CASE\n                                                 \
+  \                   WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n\
+  \                                                                    WHEN RIGHT(\"\
+  Quarter\", 'random') ='random' THEN 'random'\n                                 \
+  \                                   WHEN RIGHT(\"Quarter\", 'random') ='random'\
+  \ THEN 'random'\n                                                              \
+  \      ELSE 'random'\n                                                         \
+  \       END)) as \"QuarterStartDate\",\n                      'random' as \"SLA\"\
+  ,\n                     CASE WHEN \"SecondstoResponse\" IS NULL then 'random' else\
+  \ IFF(\"SecondstoResponse\"<=\"SLA\", 'random', 'random')END as \"SLAFlag\"\n  \
+  \             FROM ODS_LS.\"PARTNER\".\"INTERACTION\"\n               WHERE (\"\
+  Type\" ='random' OR \"Type\" ='random')\n                 AND TO_date(\"CreatedOn\"\
+  ) >=TO_date(YEAR(DATEADD(YEAR, 'random', to_date(convert_timezone('random', current_timestamp))))||'random'||'random')\
+  \ )\"P_Chat\"\n            LEFT JOIN\n              (SELECT --\"PartAcctRegion\"\
+  \ as \"PartAcctRegion\" COMMENTED to enable JPN SFSTRY0094945\n                \
+  \      CASE WHEN \"PartAcctRegion\" in ('random','random') OR \"PartAcctRegion\"\
+  \ IS NULL then \"PartAcctRegion\"\n                           WHEN \"PartAcctRegion\"\
+  \ ='random' AND \"PartnerCountry\" = 'random' THEN 'random' ELSE 'random' END as\
+  \ \"PartAcctRegion\", --JPN has been enabled seperately SFSTRY0094945\n        \
+  \              \"PartnerCompanyName\" as \"PartnerCompanyName\",\n             \
+  \         \"SysID\" as \"SysID\",\n                      \"PartAcctSurfAcctSysID\"\
+  \ as \"PartAcctSurfAcctSysID\"\n               FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\"\
+  )\"Projection_7\" ON \"P_Chat\".\"PartnerAccountId\" = \"Projection_7\".\"SysID\"\
+  \n            LEFT JOIN\n              (SELECT distinct \"PartnerSysID\",\"ParentPartnerNumber\"\
+  ,\"ParentPartner\"\n               from EDW_LS.\"PARTNER_EM\".\"PARTNERS\")\"Partners\"\
+  \ ON \"Projection_7\".\"PartAcctSurfAcctSysID\" = \"Partners\".\"PartnerSysID\"\
+  )\"Chat\"\n                --SFSTRY0094945 -> Tasks\n                UNION ALL SELECT\
+  \ 'random' as \"OptyTerrGeo\",\n                          'random' as \"OptyTerrMajorArea\"\
+  ,\n                          'random' as \"OptyTerrArea\",\n                   \
+  \       'random' as \"OptyTerrRegion\",\n                          'random' as \"\
+  OptyTerrDistrict\",\n                          'random' as \"OptyTerritory\",\n\
+  \                          'random' as \"PartnerTerritoryGeo\",\n              \
+  \            'random' as \"PartnerTerritoryMajorArea\",\n                      \
+  \    'random' as \"PartnerTerritoryArea\",\n                          'random' as\
+  \ \"PartnerTerritoryRegion\",\n                          'random' as \"PartnerTerritoryDistrict\"\
+  ,\n                          'random' as \"PartnerTerritory\",\n               \
+  \           'random' as \"ReportingTerritoryGeo\",\n                          'random'\
+  \ as \"DealRegCloseQuarter\",\n                          'random' as \"DealRegSubmissionDate\"\
+  ,\n                          'random' as \"DealRegQualifiedDate\",\n           \
+  \               'random' as \"DealRegApprovalDate\",\n                         \
+  \ 'random' as \"DealRegClosedDate\",\n                          'random' as \"PRLNumber\"\
+  ,\n                          'random' as \"PartnerPercentageAllocated\",\n     \
+  \                     'random' as \"BUWorkflow\",\n                          'random'\
+  \ as \"BUGroup\",\n                          'random' as \"PartnerUltimateParentAccountSysid\"\
+  ,\n                          'random' as \"OptyTerritorySysID\",\n             \
+  \             'random' as \"PartnerAccountSysID\",\n                          'random'\
+  \ as \"PRLTerritorySysID\",\n                          'random' as \"DealRegistrationSysID\"\
+  ,\n                          'random' as \"ParentPartnerSysID\",\n             \
+  \             \"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n            \
+  \              \"ParentPartner\" as \"ParentPartner\",\n                       \
+  \   'random' as \"OptyNumber\",\n                          'random' as \"DealRegistrationNumber\"\
+  ,\n                          'random' as \"DealRegistrationName\",\n           \
+  \               'random' as \"DealRegistrationOptyPartnershipType\",\n         \
+  \                 'random' as \"DealRegistrationOptyType\",\n                  \
+  \        'random' as \"DealRegistrationOptyStage\",\n                          'random'\
+  \ as \"DealRegistrationStatus\",\n                          'random' as \"DealRegCustomerAccountName\"\
+  ,\n                          'random' as \"DealRegistrationType\",\n           \
+  \               'random' as \"AccountIndustryCategory\",\n                     \
+  \     'random' as \"ParentPartnerCategoryCode\",\n                          'random'\
+  \ as \"ParentPartnerSegment\",\n                          'random' as \"SubmissionFlag\"\
+  ,\n                          'random' as \"QualifiedFlag\",\n                  \
+  \        'random' as \"ApprovedFlag\",\n                          'random' as \"\
+  ClosedFlag\",\n                          'random' as \"DeniedFlag\",\n         \
+  \                 'random' as \"DealRegistrationCoSellingFlag\",\n             \
+  \             'random' as \"DealRegNotNull\",\n                          'random'\
+  \ as \"PartnerPipelineSourced\",\n                          'random' as \"DealRegClosed\"\
+  ,\n                          'random' as \"OptyStageFlag\",\n                  \
+  \        'random' as \"ApprovedSourcedFlag\",\n                          'random'\
+  \ as \"ApprovedAcceleratedFlag\",\n                          'random' as \"InfluencedACV\"\
+  ,\n                          'random' as \"SourcedACV\",\n                     \
+  \     'random' as \"AcceleratedACV\",\n                          'random' as \"\
+  USDNNACV\",\n                          'random' as \"PartnerAllocatedNNACV\",\n\
+  \                          'random' as \"TagsOptyItemNetNewACV_USD\",\n        \
+  \                  'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\",\n \
+  \                         'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          \"DaystoResolve\"\
+  \ as \"DaystoResolve\",\n                          \"AssignmentGroup\" as \"AssignmentGroup\"\
+  ,\n                          'random' as \"ReassignmentCount\",\n              \
+  \            'random' as \"ReOpenCount\",\n                          'random' as\
+  \ \"ContactType\",\n                          'random' as \"PartnerAccount\",\n\
+  \                          \"CreatedOn\" as \"CreatedOn\",\n                   \
+  \       \"ResolvedAt\" as \"ResolvedAt\",\n                          'random' as\
+  \ \"FirstContactResolution\",\n                          'random' as \"CaseSysId\"\
+  ,\n                          \"PartnerCompanyName\" as \"PartnerCompanyName\",\n\
+  \                          \"PartAcctRegion\" as \"PartAcctRegion\",\n         \
+  \                 'random' as \"DealRegExpirationDate\",\n                     \
+  \     'random' as \"FirstResponseSLA\",\n                          'random' as \"\
+  OptySourcedFlag\",\n                          'random' as \"OptySalesDesignatedFlag\"\
+  ,\n                          'random' as \"PartnerNumber\",\n                  \
+  \        'random' as \"PRMPotentialACVValue\",\n                          'random'\
+  \ as \"PrimaryBU\",\n                          'random' as \"SecondstoResponse\"\
+  ,\n                          \"Type\" as \"Type\",\n                          'random'\
+  \ as \"UpdatedOn\",\n                          'random' as \"UpdatedBy\",\n    \
+  \                      'random' as \"Location\",\n                          'random'\
+  \ as \"OpenedBy\",\n                          'random' as \"AgentAverageResponseTime\"\
+  ,\n                          'random' as \"FirstResponseWaitTime\",\n          \
+  \                'random' as \"ShortDescription\",\n                          \"\
+  Number\" as \"Number\",\n                          \"SLA\" as \"SLA\",\n       \
+  \                   \"SLAFlag\" as \"SLAFlag\",\n                          \"State\"\
+  \ as \"State\",\n                          'random' as \"ClosedAt\",\n         \
+  \                 'random' as \"Category\",\n                          'random'\
+  \ as \"SubCategory\",\n                          \"AssignedTo\" as \"AssignedTo\"\
+  ,\n                          \"RecordType\" as \"RecordType\",\n               \
+  \           \"Source\" as \"Source\",\n                          \"Quarter\" as\
+  \ \"Quarter\",\n                          \"Quarter\" as \"QuarterStartDate\",\n\
+  \                          \"DR_Flag\" as \"DR_Flag\",\n                       \
+  \   'random' as \"CallsSysId\",\n                          'random' as \"PendingApproavlFlag\"\
+  ,\n                          'random' as \"ExpiredFlag\",\n                    \
+  \      'random' as \"MarketingActivityNumber\",\n                          'random'\
+  \ as \"RegistrationClassification\",\n                          'random' as \"RegistrationSubStatus\"\
+  ,\n                          'random' as \"OptyACVNotZeroFlag\",\n             \
+  \             'random' as \"PendingApproverName\",\n                          'random'\
+  \ as \"OpsResolutionCode\",\n                          'random' as \"OptyHeaderACV\"\
+  ,\n                          'random' as \"DaystoDeniedfromSubmission\",\n     \
+  \                     'random' as \"DeniedSLAFlag\",\n                         \
+  \ 'random' as \"USDNetNewACVPartner\",\n                          'random' as \"\
+  SolutionOfferingFlag\",\n                          'random' as \"SolutionOfferingType\"\
+  ,\n                          'random' as \"PRMRejectionCode\",\n               \
+  \           'random' as \"PrimarySalesRep\",\n                          'random'\
+  \ as \"PRMDealRegionalAllianceManager\",\n                          'random' as\
+  \ \"PartnerActive\",\n                          'random' as \"PRMChannelManager\"\
+  ,\n                          'random' as \"SolutionOfferingNumber\",\n         \
+  \                 'random' as \"SolutionOfferingName\",\n                      \
+  \    'random' as \"AcctFieldSalesParentAccount\",\n\t                      'random'\
+  \ as  \"FSPNewLogoFlag\",\n                          'random' as \"BusinessImperative\"\
+  ,\n                          'random' as \"SolutionOfferingTypeOpty\",\n       \
+  \                   'random' as \"DemandAccelerator\",\n                       \
+  \   'random' as \"ProgramType\",\n                          \"Approval\" as \"ApprovalStatus\"\
+  ,\n                          'random' as \"ApprovedDate\",\n                   \
+  \       'random' as \"RejectedDate\",\n                          'random' as \"\
+  CreatedDate\",\n                          \"TaskSysID\" as \"TaskSysID\",\n    \
+  \                       'random' as  \"SurfSalesContact\",\n                   \
+  \       'random' as \"SubmittedBy\",\n                          'random' as \"CampaignType\"\
+  ,\n                          'random' as \"PrimaryCampaign\",\n                \
+  \          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random' as \"AcctIndustry\"\
+  ,\n                          'random' as \"SourcedClosedACV_FullCredit\",\n    \
+  \                      'random' as \"PartnerSourcedACV_FullCredit\",\n         \
+  \                 'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n     \
+  \                     'random' as \"CommitPartnerSourcedACV_FullCredit\",\n    \
+  \                      'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n  \
+  \                        'random' as \"WeightedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' AS \"DealRegVelocity\",\n                  \
+  \        'random' as \"MarqueeAccount\"\n         FROM\n           (SELECT \"P_Tasks\"\
+  .\"Number\" as \"Number\",\n                   \"P_Tasks\".\"State\" as \"State\"\
+  ,\n                   \"P_Tasks\".\"AssignmentGroup\" as \"AssignmentGroup\",\n\
+  \                   \"P_Tasks\".\"AssignedTo\" as \"AssignedTo\",\n            \
+  \       \"P_Tasks\".\"Type\" as \"Type\",\n                   \"P_Tasks\".\"Approval\"\
+  \ as \"Approval\",\n                   \"P_Tasks\".\"CreatedOn\" as \"CreatedOn\"\
+  ,\n                   \"P_Tasks\".\"ResolvedAt\" as \"ResolvedAt\",\n          \
+  \         \"P_Tasks\".\"TaskSysID\" as \"TaskSysID\",\n                   \"P_Tasks\"\
+  .\"Quarter\" as \"Quarter\",\n                   \"P_Tasks\".\"Quarter\" as \"QuarterStartDate\"\
+  ,\n                   \"P_Tasks\".\"RecordType\" as \"RecordType\",\n          \
+  \         \"P_Tasks\".\"Source\" as \"Source\",\n                   \"P_Tasks\"\
+  .\"DR_Flag\" as \"DR_Flag\",\n                   \"P_Tasks\".\"SLA\" as \"SLA\"\
+  ,\n                   \"P_Tasks\".\"SLAFlag\" as \"SLAFlag\",\n                \
+  \   \"P_Tasks\".\"DaystoResolve\" as \"DaystoResolve\",\n                   \"Projection_10\"\
+  .\"PartAcctRegion\" as \"PartAcctRegion\",\n                   \"Projection_10\"\
+  .\"PartnerCompanyName\" as \"PartnerCompanyName\",\n                   \"Partners\"\
+  .\"ParentPartnerNumber\" as \"ParentPartnerNumber\",\n                   \"Partners\"\
+  .\"ParentPartner\" as \"ParentPartner\"\n            FROM\n              (SELECT\n\
+  \                    \"Number\" as \"Number\",\n                    \"PartnerAccountId\"\
+  \ as \"PartnerAccountId\",\n                    \"State\" as \"State\",\n      \
+  \              \"AssignmentGroup\" as \"AssignmentGroup\",\n                   \
+  \ \"AssignedTo\" as \"AssignedTo\",\n                    \"Type\" as \"Type\",\n\
+  \                    \"Approval\" as \"Approval\",\n                    convert_timezone('random',\
+  \ \"CreatedOn\") as \"CreatedOn\",\n                    Case when  \"ClosedAt\"\
+  \ IS NULL then convert_timezone('random', CURRENT_DATE()) else convert_timezone('random',\
+  \ \"ClosedAt\") end as \"ResolvedAt\",\n                    \"TaskSysID\" as \"\
+  TaskSysID\",\n                     RIGHT(YEAR(\"CreatedOn\") ||'random'|| QUARTER(\"\
+  CreatedOn\"), 'random') as \"Quarter\",\n                     CONCAT(CONCAT('random',\
+  \ LEFT(\"Quarter\", 'random')) ,(CASE\n                                        \
+  \                            WHEN RIGHT(\"Quarter\", 'random') ='random' THEN 'random'\n\
+  \                                                                    WHEN RIGHT(\"\
+  Quarter\", 'random') ='random' THEN 'random'\n                                 \
+  \                                   WHEN RIGHT(\"Quarter\", 'random') ='random'\
+  \ THEN 'random'\n                                                              \
+  \      ELSE 'random'\n                                                         \
+  \       END)) as \"QuarterStartDate\",\n\n                    'random' as \"RecordType\"\
+  ,\n                    'random' as \"Source\",\n                    'random' as\
+  \ \"DR_Flag\",\n                     'random' as \"SLA\" , --SLA is 72 hrs in seconds\n\
+  \                    ( DATEDIFF(DAY, \"CreatedOn\", DATEADD(DAY, 'random', \"ResolvedAt\"\
+  )) - DATEDIFF(WEEK, \"CreatedOn\", DATEADD(DAY, 'random', \"ResolvedAt\"))*'random'\n\
+  \                            - (CASE WHEN DAYNAME(\"CreatedOn\") != 'random' THEN\
+  \ 'random' ELSE 'random' END)\n                            + (CASE WHEN DAYNAME(\"\
+  ResolvedAt\") != 'random' THEN 'random' ELSE 'random' END) ) AS \"WeekDays\",\n\
+  \                     DATEDIFF('random', \"CreatedOn\", DATEADD('random', 'random',\
+  \ \"ResolvedAt\")) as \"DaysBetween\",\n                     (\"DaysBetween\"-\"\
+  WeekDays\")*'random' as \"WeekendHrs\",\n                     Case when (DAYNAME(\"\
+  CreatedOn\") not in ('random','random') and DAYNAME(\"ResolvedAt\") not in ('random','random')\
+  \ ) then TRUNC((TIMEDIFF(second, \"CreatedOn\", \"ResolvedAt\")))-\n           \
+  \                     (\"WeekendHrs\"*'random')\n                          when\
+  \ DAYNAME(\"CreatedOn\") = 'random' AND \"WeekDays\"<='random' then TRUNC((TIMEDIFF(second,\
+  \ \"CreatedOn\", \"ResolvedAt\")))- ('random'*'random') -  hour(\"CreatedOn\")*'random'*'random'\
+  \ - minute(\"CreatedOn\")*'random' - SECOND(\"CreatedOn\")\n                   \
+  \       WHEN  DAYNAME(\"CreatedOn\") = 'random' AND \"WeekDays\">'random' then \"\
+  SLA\"+'random'\n                          when DAYNAME(\"CreatedOn\") = 'random'\
+  \ AND \"WeekDays\"<='random' then TRUNC((TIMEDIFF(second, \"CreatedOn\", \"ResolvedAt\"\
+  ))) -  hour(\"CreatedOn\")*'random'*'random' - minute(\"CreatedOn\")*'random' -\
+  \ SECOND(\"CreatedOn\")\n                          WHEN  DAYNAME(\"CreatedOn\")\
+  \ = 'random' AND \"WeekDays\">'random' then \"SLA\"+'random'\n                 \
+  \         when DAYNAME(\"ResolvedAt\") = 'random' AND \"WeekDays\"<='random' then\
+  \ TRUNC((TIMEDIFF(second, \"CreatedOn\", \"ResolvedAt\"))) -  hour(\"ResolvedAt\"\
+  )*'random'*'random' - minute(\"ResolvedAt\")*'random' - SECOND(\"ResolvedAt\")\n\
+  \                          WHEN  DAYNAME(\"ResolvedAt\") = 'random' AND \"WeekDays\"\
+  >'random' then \"SLA\"+'random'\n                          when DAYNAME(\"ResolvedAt\"\
+  ) = 'random' AND \"WeekDays\"<='random' then TRUNC((TIMEDIFF(second, \"CreatedOn\"\
+  , \"ResolvedAt\"))) - ('random'*'random') -  hour(\"ResolvedAt\")*'random'*'random'\
+  \ - minute(\"ResolvedAt\")*'random' - SECOND(\"ResolvedAt\")\n                 \
+  \         WHEN  DAYNAME(\"ResolvedAt\") = 'random' AND \"WeekDays\">'random' then\
+  \ \"SLA\"+'random'\n                          end as\"DaystoResolve\",\n       \
+  \              CASE WHEN \"DaystoResolve\" IS NULL then 'random' else IFF(\"DaystoResolve\"\
+  <=\"SLA\", 'random', 'random') END as \"SLAFlag\"\n               FROM ODS_LS.PARTNER.PARTNERSHIP_REVIEW_TASK\n\
+  \               WHERE TO_date(\"CreatedOn\") >=TO_date(YEAR(DATEADD(YEAR, 'random',\
+  \ to_date(convert_timezone('random', current_timestamp))))||'random'||'random')\
+  \ )\"P_Tasks\"\n            LEFT JOIN\n              (SELECT --\"PartAcctRegion\"\
+  \ as \"PartAcctRegion\" COMMENTED to enable JPN SFSTRY0094945\n                \
+  \      CASE WHEN \"PartAcctRegion\" in ('random','random') OR \"PartAcctRegion\"\
+  \ IS NULL then \"PartAcctRegion\"\n                           WHEN \"PartAcctRegion\"\
+  \ ='random' AND \"PartnerCountry\" = 'random' THEN 'random' ELSE 'random' END as\
+  \ \"PartAcctRegion\", --JPN has been enabled seperately SFSTRY0094945\n        \
+  \              \"PartnerCompanyName\" as \"PartnerCompanyName\",\n             \
+  \         \"SysID\" as \"SysID\",\n                      \"PartAcctSurfAcctSysID\"\
+  \ as \"PartAcctSurfAcctSysID\"\n               FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\"\
+  )\"Projection_10\" ON \"P_Tasks\".\"PartnerAccountId\" = \"Projection_10\".\"SysID\"\
+  \n            LEFT JOIN\n              (SELECT distinct \"PartnerSysID\",\"ParentPartnerNumber\"\
+  ,\"ParentPartner\"\n               from EDW_LS.\"PARTNER_EM\".\"PARTNERS\")\"Partners\"\
+  \ ON \"Projection_10\".\"PartAcctSurfAcctSysID\" = \"Partners\".\"PartnerSysID\"\
+  )\"Tasks\"\n               ---SFSTRY0094945 -> PartnerShip ( All Partners are considered\
+  \ irrespective of ObBoard Status)\n            UNION ALL SELECT 'random' as \"OptyTerrGeo\"\
+  ,\n                          'random' as \"OptyTerrMajorArea\",\n              \
+  \            'random' as \"OptyTerrArea\",\n                          'random' as\
+  \ \"OptyTerrRegion\",\n                          'random' as \"OptyTerrDistrict\"\
+  ,\n                          'random' as \"OptyTerritory\",\n                  \
+  \        'random' as \"PartnerTerritoryGeo\",\n                          'random'\
+  \ as \"PartnerTerritoryMajorArea\",\n                          'random' as \"PartnerTerritoryArea\"\
+  ,\n                          'random' as \"PartnerTerritoryRegion\",\n         \
+  \                 'random' as \"PartnerTerritoryDistrict\",\n                  \
+  \        'random' as \"PartnerTerritory\",\n                          'random' as\
+  \ \"ReportingTerritoryGeo\",\n                          'random' as \"DealRegCloseQuarter\"\
+  ,\n                          'random' as \"DealRegSubmissionDate\",\n          \
+  \                'random' as \"DealRegQualifiedDate\",\n                       \
+  \   'random' as \"DealRegApprovalDate\",\n                          'random' as\
+  \ \"DealRegClosedDate\",\n                          'random' as \"PRLNumber\",\n\
+  \                          'random' as \"PartnerPercentageAllocated\",\n       \
+  \                   'random' as \"BUWorkflow\",\n                          'random'\
+  \ as \"BUGroup\",\n                          'random' as \"PartnerUltimateParentAccountSysid\"\
+  ,\n                          'random' as \"OptyTerritorySysID\",\n             \
+  \             'random' as \"PartnerAccountSysID\",\n                          'random'\
+  \ as \"PRLTerritorySysID\",\n                          'random' as \"DealRegistrationSysID\"\
+  ,\n                          'random' as \"ParentPartnerSysID\",\n             \
+  \             'random' as \"ParentPartnerNumber\",\n                          'random'\
+  \ as \"ParentPartner\",\n                          'random' as \"OptyNumber\",\n\
+  \                          'random' as \"DealRegistrationNumber\",\n           \
+  \               'random' as \"DealRegistrationName\",\n                        \
+  \  'random' as \"DealRegistrationOptyPartnershipType\",\n                      \
+  \    'random' as \"DealRegistrationOptyType\",\n                          'random'\
+  \ as \"DealRegistrationOptyStage\",\n                          'random' as \"DealRegistrationStatus\"\
+  ,\n                          'random' as \"DealRegCustomerAccountName\",\n     \
+  \                     'random' as \"DealRegistrationType\",\n                  \
+  \        'random' as \"AccountIndustryCategory\",\n                          'random'\
+  \ as \"ParentPartnerCategoryCode\",\n                          'random' as \"ParentPartnerSegment\"\
+  ,\n                          'random' as \"SubmissionFlag\",\n                 \
+  \         'random' as \"QualifiedFlag\",\n                          'random' as\
+  \ \"ApprovedFlag\",\n                          'random' as \"ClosedFlag\",\n   \
+  \                       'random' as \"DeniedFlag\",\n                          'random'\
+  \ as \"DealRegistrationCoSellingFlag\",\n                          'random' as \"\
+  DealRegNotNull\",\n                          'random' as \"PartnerPipelineSourced\"\
+  ,\n                          'random' as \"DealRegClosed\",\n                  \
+  \        'random' as \"OptyStageFlag\",\n                          'random' as \"\
+  ApprovedSourcedFlag\",\n                          'random' as \"ApprovedAcceleratedFlag\"\
+  ,\n                          'random' as \"InfluencedACV\",\n                  \
+  \        'random' as \"SourcedACV\",\n                          'random' as \"AcceleratedACV\"\
+  ,\n                          'random' as \"USDNNACV\",\n                       \
+  \   'random' as \"PartnerAllocatedNNACV\",\n                          'random' as\
+  \ \"TagsOptyItemNetNewACV_USD\",\n                          'random' as \"ClosedSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ActiveSalesDesignatedPatnerImpactedNNACV\"\
+  ,\n                          'random' as \"ClosedSourcedACV\",\n               \
+  \           'random' as \"ActiveSourcedACV\",\n                          'random'\
+  \ as \"ClosedInfluencedACV\",\n                          'random' as \"ActiveInfluencedACV\"\
+  ,\n                          'random' as \"ClosedDelRegACV\",\n                \
+  \          'random' as \"ApprovedDelRegACV\",\n                          'random'\
+  \ as \"ClosedACV\",\n                          'random' as \"ClosedWithDealRegACV\"\
+  ,\n                          'random' as \"ClosedWithoutDealRegACV\",\n        \
+  \                  'random' as \"AcctNewSegment\",\n                          'random'\
+  \ as \"OptySysID\",\n                          'random' as \"OptyDynamicsGUID\"\
+  ,\n                          'random' as \"AccountNumber\",\n                  \
+  \        'random' as \"AccountName\",\n                          'random' as \"\
+  OptyCOManaged\",\n                          'random' as \"OptyItemNetNewACV_USD\"\
+  ,\n                          'random' as \"DealRegAutoApprovedAE\",\n          \
+  \                'random' as \"DealRegAutoApprovedRAM\",\n                     \
+  \     'random' as \"DaystoQualify\",\n                          'random' as \"DaystoApproval\"\
+  ,\n                          'random' as \"DaystoDenied\",\n                   \
+  \       'random' as \"DaystoApprovalfromSubmission\",\n                        \
+  \  'random' as \"OptyPipelineSourced\",\n                          'random' as \"\
+  DaystoResolve\",\n                          'random' as \"AssignmentGroup\",\n \
+  \                         'random' as \"ReassignmentCount\",\n                 \
+  \         'random' as \"ReOpenCount\",\n                          'random' as \"\
+  ContactType\",\n                          'random' as \"PartnerAccount\",\n    \
+  \                      'random' as \"CreatedOn\",\n                          'random'\
+  \ as \"ResolvedAt\",\n                          'random' as \"FirstContactResolution\"\
+  ,\n                          'random' as \"CaseSysId\",\n                      \
+  \    'random' as \"PartnerCompanyName\",\n                          \"PartAcctRegion\"\
+  \ as \"PartAcctRegion\",\n                          'random' as \"DealRegExpirationDate\"\
+  ,\n                          'random' as \"FirstResponseSLA\",\n               \
+  \           'random' as \"OptySourcedFlag\",\n                          'random'\
+  \ as \"OptySalesDesignatedFlag\",\n                          'random' as \"PartnerNumber\"\
+  ,\n                          'random' as \"PRMPotentialACVValue\",\n           \
+  \               'random' as \"PrimaryBU\",\n                          'random' as\
+  \ \"SecondstoResponse\",\n                          'random' as \"Type\",\n    \
+  \                      'random' as \"UpdatedOn\",\n                          'random'\
+  \ as \"UpdatedBy\",\n                          'random' as \"Location\",\n     \
+  \                     'random' as \"OpenedBy\",\n                          'random'\
+  \ as \"AgentAverageResponseTime\",\n                          'random' as \"FirstResponseWaitTime\"\
+  ,\n                          'random' as \"ShortDescription\",\n               \
+  \           \"Number\" as \"Number\",\n                          'random' as \"\
+  SLA\",\n                          'random' as \"SLAFlag\",\n                   \
+  \       'random' as \"State\",\n                          'random' as \"ClosedAt\"\
+  ,\n                          'random' as \"Category\",\n                       \
+  \   'random' as \"SubCategory\",\n                          'random' as \"AssignedTo\"\
+  ,\n                          \"RecordType\" as \"RecordType\",\n               \
+  \           \"Source\" as \"Source\",\n                          \"Quarter\" as\
+  \ \"Quarter\",\n                          'random' as \"QuarterStartDate\",\n  \
+  \                        \"DR_Flag\" as \"DR_Flag\",\n                         \
+  \ 'random' as \"CallsSysId\",\n                          'random' as \"PendingApproavlFlag\"\
+  ,\n                          'random' as \"ExpiredFlag\",\n                    \
+  \      'random' as \"MarketingActivityNumber\",\n                          'random'\
+  \ as \"RegistrationClassification\",\n                          'random' as \"RegistrationSubStatus\"\
+  ,\n                          'random' as \"OptyACVNotZeroFlag\",\n             \
+  \             'random' as \"PendingApproverName\",\n                          'random'\
+  \ as \"OpsResolutionCode\",\n                          'random' as \"OptyHeaderACV\"\
+  ,\n                          'random' as \"DaystoDeniedfromSubmission\",\n     \
+  \                     'random' as \"DeniedSLAFlag\",\n                         \
+  \ 'random' as \"USDNetNewACVPartner\",\n                          'random' as \"\
+  SolutionOfferingFlag\",\n                          'random' as \"SolutionOfferingType\"\
+  ,\n                          'random' as \"PRMRejectionCode\",\n               \
+  \           'random' as \"PrimarySalesRep\",\n                          'random'\
+  \ as \"PRMDealRegionalAllianceManager\",\n                          'random' as\
+  \ \"PartnerActive\",\n                          'random' as \"PRMChannelManager\"\
+  ,\n                          'random' as \"SolutionOfferingNumber\",\n         \
+  \                 'random' as \"SolutionOfferingName\",\n                      \
+  \    'random' as \"AcctFieldSalesParentAccount\",\n\t                      'random'\
+  \ as  \"FSPNewLogoFlag\",\n                          'random' as \"BusinessImperative\"\
+  ,\n                          'random' as \"SolutionOfferingTypeOpty\",\n       \
+  \                   'random' as \"DemandAccelerator\",\n                       \
+  \   \"ProgramType\" as \"ProgramType\",\n                          \"ApprovalStatus\"\
+  ,\n                          \"ApprovedDate\",\n                          \"RejectedDate\"\
+  ,\n                          \"CreatedDate\",\n                          'random'\
+  \ as \"TaskSysID\",\n                           'random' as  \"SurfSalesContact\"\
+  ,\n                          'random' as \"SubmittedBy\",\n                    \
+  \      'random' as \"CampaignType\",\n                          'random' as \"PrimaryCampaign\"\
+  ,\n                          'random' as \"SecondaryCampaign\",\n\t\t\t\t\t\t  'random'\
+  \ as \"AcctIndustry\",\n                          'random' as \"SourcedClosedACV_FullCredit\"\
+  ,\n                          'random' as \"PartnerSourcedACV_FullCredit\",\n   \
+  \                       'random' as \"SubmittedPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"CommitPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"ExpectPartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"UpsidePartnerSourcedACV_FullCredit\",\n\
+  \                          'random' as \"WeightedPartnerSourcedACV_FullCredit\"\
+  ,\n                          'random' AS \"DealRegVelocity\",\n                \
+  \          'random' as \"MarqueeAccount\"\n\n         FROM\n           (SELECT \"\
+  Number\" as \"Number\",\n                   RIGHT(YEAR(\"CreatedDate\") ||'random'||\
+  \ QUARTER(\"CreatedDate\"), 'random') as \"Quarter\",\n                   \"PartAcctRegion\"\
+  \ as \"PartAcctRegion\",\n                   'random' as \"RecordType\",\n     \
+  \              'random' as \"Source\",\n                   'random' as \"DR_Flag\"\
+  ,\n                    CASE WHEN \"ProgramPartnerShip\" IN ('random','random') THEN\
+  \ 'random'\n                         WHEN \"ProgramPartnerShip\"='random' THEN 'random'\n\
+  \                         ELSE \"ProgramPartnerShip\" END AS \"ProgramType\",\n\
+  \                    \"ApprovalStatus\" AS \"ApprovalStatus\",\n               \
+  \     \"ApprovedDate\" as \"ApprovedDate\",\n                    \"RejectedDate\"\
+  \ as \"RejectedDate\",\n                    \"CreatedDate\" as \"CreatedDate\"\n\
+  \            FROM\n              (SELECT \"Projection_8\".\"PartAcctRegion\" as\
+  \ \"PartAcctRegion\",\n                      \"Projection_9\". \"ProgramPartnerShip\"\
+  ,\n                      \"Projection_8\".\"Number\",\n                      \"\
+  Projection_9\".\"ApprovalStatus\",\n                      \"Projection_9\".\"ApprovedDate\"\
+  ,\n                      \"Projection_9\". \"RejectedDate\",\n                 \
+  \     \"Projection_9\". \"CreatedDate\"\n                  FROM\n              \
+  \    (\n                    (SELECT distinct \"PartAcctSurfAcctSysID\" as \"PartAcctSurfAcctSysID\"\
+  ,\n                            \"SysID\" as \"SysID\",\n                       \
+  \     --\"PartAcctRegion\" as \"PartAcctRegion\" COMMENTED to enable JPN SFSTRY0094945\n\
+  \                            CASE WHEN \"PartAcctRegion\" in ('random','random')\
+  \ OR \"PartAcctRegion\" IS NULL then \"PartAcctRegion\"\n                      \
+  \           WHEN \"PartAcctRegion\" ='random' AND \"PartnerCountry\" = 'random'\
+  \ THEN 'random' ELSE 'random' END as \"PartAcctRegion\", --JPN has been enabled\
+  \ seperately SFSTRY0094945\n                            \"PartnerUNumber\" as \"\
+  Number\"\n                     FROM ODS_LS.\"PARTNER\".\"U_PARTNER_ACCOUNT\")\"\
+  Projection_8\"\n                    INNER JOIN\n                    (SELECT distinct\n\
+  \                           \"U_PARTNER_ACCOUNT\" as \"PartnerAcctSysID\",\n   \
+  \                        \"DV_U_PROGRAM_PARTNERSHIP\" as \"ProgramPartnerShip\"\
+  ,\n                           \"DV_U_APPROVAL_STATUS\" as \"ApprovalStatus\",\n\
+  \                           \"U_APPROVED_DATE\" as \"ApprovedDate\",\n         \
+  \                  \"U_REJECTED_DATE\" as \"RejectedDate\",\n                  \
+  \         \"SYS_CREATED_ON\" as \"CreatedDate\"\n                    FROM RDS.\"\
+  PARTNER_PORTAL\".\"U_ACCOUNT_PARTNERSHIP\") \"Projection_9\"\n                 \
+  \   ON \"Projection_8\".\"SysID\" = \"Projection_9\".\"PartnerAcctSysID\")\n   \
+  \                 WHERE \"ProgramPartnerShip\" IS NULL OR  \"ProgramPartnerShip\"\
+  \ IN ('random','random','random','random',\n                                   \
+  \               'random','random','random','random','random','random')\n       \
+  \             ) where left(\"Quarter\",'random') >= right(year(CURRENT_DATE)-'random','random')\n\
+  \                    ) \"AcctPartnerShip\"\n               ))\"Union_1\")Projection_3;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

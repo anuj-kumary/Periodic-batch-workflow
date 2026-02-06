@@ -1,0 +1,124 @@
+name: table_1199
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1199
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1199.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_ST_FACT_PIPELINE_AGG01_D_YASH(\n\t\
+  ST_DATE,\n\tOPTY_NUMBER,\n\tOPTY_NAME,\n\tOPTY_PIPELINE_STATUS,\n\tOPTY_TYPE,\n\t\
+  OPTY_SYSID,\n\tOPTY_STAGE,\n\tOPTY_START_DT,\n\tOPTY_CLOSE_DT,\n\tOPTY_PIPELINE_SOURCE,\n\
+  \tIS_SALES_ACTIVE_PIPELINE,\n\tQUARTER_YYQQ,\n\tBU_GROUP,\n\tBU_VALUE,\n\tTERRITORY_SYSID,\n\
+  \tOPTY_ACCOUNT_SYSID,\n\tORDER_NUMBER,\n\tOPTY_SYS_CREATED_ON,\n\tTERRITORY_NAME,\n\
+  \tOPTY_OWNER,\n\tBASE_CURRENCY,\n\tOPTY_COMANAGE,\n\tDYNAMICS_GUID,\n\tOPTY_WEIGHTED_PERCENTAGE,\n\
+  \tOPTY_BI_FLAG,\n\tIS_PRICE_REST_PRIMARY_LINE,\n\tOPTY_PARTNER,\n\tPARENT_MARQUEE_FLAG,\n\
+  \tOPTY_ITEM_CREATED_ON,\n\tNNACV_USD_CFX,\n\tNNACV_USD,\n\tRENEWAL_ACV_USD,\n\t\
+  RENEWAL_ACV_USD_CFX,\n\tTOTAL_VALUE_AMOUNT_USD,\n\tTOTAL_VALUE_CFX,\n\tNNACV_USD_GSD,\n\
+  \tNNACV_USD_COREREP,\n\tNNACV_USD_ACE,\n\tNNACV_USD_SOLUTIONSALES,\n\tNNACV_USD_OTHER,\n\
+  \tNNACV_UPSIDE_USD,\n\tNNACV_OPEN_USD,\n\tNNACV_CLOSED_USD,\n\tNNACV_EXPECT_USD,\n\
+  \tNNACV_MATURED_USD,\n\tNNACV_SUBMITTED_USD,\n\tNNACV_WEIGHTED_USD,\n\tNNACV_CLOSED_CFX,\n\
+  \tNNACV_EXPECT_CFX,\n\tNNACV_MATURED_CFX,\n\tNNACV_SUBMITTED_CFX,\n\tNNACV_WEIGHTED_CFX,\n\
+  \tNNACV_UPSIDE_CFX,\n\tNNACV_OPEN_CFX\n) as\n(SELECT\n\"STExtractDate\" as ST_DATE,\n\
+  \"STOptyNumber\" as OPTY_NUMBER,\n\"STOptyName\" as OPTY_NAME,\n\"STOptyPipelineStatus\"\
+  \ as OPTY_PIPELINE_STATUS,\n\"STOpportunityType\" as OPTY_TYPE,\n\"STOptySysID\"\
+  \ as OPTY_SYSID,\n\"STOptyStage\" as OPTY_STAGE,\n\"STOptyStartDate\" as OPTY_START_DT,\n\
+  \"STOptyCloseDate\" as OPTY_CLOSE_DT,\n\"STOptyPipelineSourced\" as OPTY_PIPELINE_SOURCE,\n\
+  \"STOptyActivePipelineFlag\" as IS_SALES_ACTIVE_PIPELINE,\n\"STOptySalesQuarter\"\
+  \ as QUARTER_YYQQ,\n\"BUGroup\" as BU_GROUP,\n\"ProductBusinessUnitValue\" as BU_VALUE,\n\
+  \"STOptyTerritorySysID\" as TERRITORY_SYSID,\n\"STOptyAccountSysID\" as OPTY_ACCOUNT_SYSID,\n\
+  \"SalesOrderNumber\" as ORDER_NUMBER,\n\"STOptySysCreatedOn\" as OPTY_SYS_CREATED_ON,\n\
+  \"STOptyTerritory\" as TERRITORY_NAME,\n\"STOptyOwner\" as OPTY_OWNER,\n\"STOptyBaseCurrency\"\
+  \ as BASE_CURRENCY,\n\"STOptyCOManaged\" as OPTY_COMANAGE,\n\"STOptyDynamicsGUID\"\
+  \ as DYNAMICS_GUID,\n\"STOptyWeightedPercentage\" as OPTY_WEIGHTED_PERCENTAGE,\n\
+  \"SOptyItemBIFlags\" as OPTY_BI_FLAG,\n\"SOptyPriceRestPrimaryLine\" as IS_PRICE_REST_PRIMARY_LINE,\n\
+  \"STOptyPartnered\" as OPTY_PARTNER,\nsa.\"ParentMarqueeFlag\" as PARENT_MARQUEE_FLAG,\n\
+  min(\"STOptyItemCreatedOn\") as OPTY_ITEM_CREATED_ON,\nsum(\"SOptyItemNetNewACV\"\
+  ) as NNACV_USD_CFX,\nsum(\"SOptyItemNetNewACVUSD\") as NNACV_USD,\nsum(\"SOptyitemRenewalACVUSD\"\
+  ) as RENEWAL_ACV_USD,\nsum(\"SOptyItemRenewalACV\") as RENEWAL_ACV_USD_CFX,\nsum(\"\
+  STOptyItemTotalValueAmount_USD\") as TOTAL_VALUE_AMOUNT_USD,\nsum(\"STOptyItemTotalValueAmount\"\
+  ) as TOTAL_VALUE_CFX,\nsum(case when \"STOptyItemLineCreatedBy\" = 'random' then\
+  \ \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_USD_GSD,\nsum(case when\
+  \ \"STOptyItemLineCreatedBy\" = 'random' then \"SOptyItemNetNewACVUSD\" else 'random'\
+  \ end) as NNACV_USD_COREREP,\nsum(case when \"STOptyItemLineCreatedBy\" = 'random'\
+  \ then \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_USD_ACE,\nsum(case\
+  \ when \"STOptyItemLineCreatedBy\" = 'random' then \"SOptyItemNetNewACVUSD\" else\
+  \ 'random' end) as NNACV_USD_SOLUTIONSALES,\nsum(case when (\"STOptyItemLineCreatedBy\"\
+  \ IS NULL or \"STOptyItemLineCreatedBy\" = 'random')  then \"SOptyItemNetNewACVUSD\"\
+  \ else 'random' end) as NNACV_USD_OTHER,\nsum(CASE when (\"STOptyPipelineStatus\"\
+  \ in ('random', 'random', 'random', 'random')) THEN \"SOptyItemNetNewACVUSD\" else\
+  \ 'random'\n                END) AS NNACV_UPSIDE_USD,\n    sum(CASE when \"STOptyPipelineStatus\"\
+  \ <> 'random' THEN \"SOptyItemNetNewACVUSD\" else 'random'\n                END)\
+  \ AS NNACV_OPEN_USD\n    ,SUM(case when (\"STOptyStage\"='random') then \"SOptyItemNetNewACVUSD\"\
+  \n              when (\"STOptyStage\"='random' and \"STOpportunityType\"='random')\
+  \ then \"SOptyItemNetNewACVUSD\" end) as NNACV_CLOSED_USD\n    ,sum(case when (\"\
+  STOptyPipelineStatus\" IN ('random', 'random', 'random')) then \"SOptyItemNetNewACVUSD\"\
+  \n              else 'random' end ) as NNACV_EXPECT_USD,\n     sum(case when \"\
+  STOptyStage\" in ('random',\n                                     'random',\n  \
+  \                                   'random',\n                                \
+  \     'random',\n                                     'random')\n              \
+  \                       then \"SOptyItemNetNewACVUSD\" else 'random' end) as NNACV_MATURED_USD,\n\
+  \    sum(case when (\"STOptyPipelineStatus\" IN ('random')) then \"SOptyItemNetNewACVUSD\"\
+  \n              else 'random' end ) as NNACV_SUBMITTED_USD\n    ,sum(\"STOptyWeightedPercentage\"\
+  *\"SOptyItemNetNewACVUSD\"/'random') as NNACV_WEIGHTED_USD\n\t--------------Local\
+  \ Currency---------------\n\t,SUM(case when (\"STOptyStage\"='random') then \"SOptyItemNetNewACV\"\
+  \n              when (\"STOptyStage\"='random' and \"STOpportunityType\"='random')\
+  \ then \"SOptyItemNetNewACV\" end) as NNACV_CLOSED_CFX\n    ,sum(case when (\"STOptyPipelineStatus\"\
+  \ IN ('random', 'random', 'random')) then \"SOptyItemNetNewACV\"\n             \
+  \ else 'random' end ) as NNACV_EXPECT_CFX,\n     sum(case when \"STOptyStage\" in\
+  \ ('random',\n                                     'random',\n                 \
+  \                    'random',\n                                     'random',\n\
+  \                                     'random')\n                              \
+  \       then \"SOptyItemNetNewACV\" else 'random' end) as NNACV_MATURED_CFX,\n \
+  \   sum(case when (\"STOptyPipelineStatus\" IN ('random')) then \"SOptyItemNetNewACV\"\
+  \n              else 'random' end ) as NNACV_SUBMITTED_CFX\n    ,sum(\"STOptyWeightedPercentage\"\
+  *\"SOptyItemNetNewACV\"/'random') as NNACV_WEIGHTED_CFX,\n\tsum(CASE when (\"STOptyPipelineStatus\"\
+  \ in ('random', 'random', 'random', 'random')) THEN \"SOptyItemNetNewACV\" else\
+  \ 'random'\n                END) AS NNACV_UPSIDE_CFX,\n    sum(CASE when \"STOptyPipelineStatus\"\
+  \ <> 'random' THEN \"SOptyItemNetNewACV\" else 'random'\n                END) AS\
+  \ NNACV_OPEN_CFX\nfrom EDW_LS.SALES_EM.ST_OPTY_ITEM_COMBINED soic\n  left outer\
+  \ join\n  (SELECT distinct \"ProductSysID\" as \"ProductSysID\",\n    \"ProductBusinessUnitValue\"\
+  \ as \"ProductBusinessUnitValue\",\n--\"ProductFamily3Value\" as \"ProductFamily3Value\"\
+  ,\nIFF((\"BUGroup\") IS NULL,'random', \"BUGroup\") as \"BUGroup\" FROM ODS_LS.\"\
+  SURF\".\"SALES_PRODUCT\"\nWHERE ((\"ProductFamily3Value\"!='random' or (\"ProductFamily3Value\"\
+  ) IS NULL)) and \"BUGroup\" <> 'random') sp\non soic.\"SOptyItemProductSysID\"=sp.\"\
+  ProductSysID\"\nleft join EDW_LS.SALES_EM.EM_SALES_ACCOUNT_RT sa on sa.\"AcctSysID\"\
+  =soic.\"STOptyAccountSysID\"\n--where \"STExtractDate\"=current_date-2\ngroup by\
+  \ all)\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

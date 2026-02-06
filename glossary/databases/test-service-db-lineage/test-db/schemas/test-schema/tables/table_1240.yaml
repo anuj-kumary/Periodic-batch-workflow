@@ -1,0 +1,76 @@
+name: table_1240
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1240
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1240.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_EXPENSE_REPORT_COMPLIANCE(\n\t\
+  EXPENSE_ID,\n\tREPORT_ID,\n\tUSER_ID,\n\tEMPLOYEE_NUMBER,\n\tEMP_JOB_LEVEL,\n\t\
+  JOB_FUNCTION,\n\tGEO,\n\tMAJOR_AREA,\n\tAREA,\n\tMANAGER_NAME,\n\tTARGET_ID,\n\t\
+  QUARTER_ID,\n\tQUARTER_DT,\n\tQUARTER_YYQQ,\n\tWEEK_STARTS_ON_DT,\n\tEXPENSE_REPORT_NAME,\n\
+  \tAPPROVED_AMOUNT_USD,\n\tEXPENSE_TRANSACTION_DT,\n\tTRANSACTION_QUARTER,\n\tEXPENSE_DATE_FIRST_SUBMITTED_DT,\n\
+  \tSUBMITTED_DAYS,\n\tLATE_EXPENSE_REPORTS,\n\tEXPENSE_REPORTS,\n\tAPPROVED_AMOUNT_LC,\n\
+  \tDEPARTMENT_NAME,\n\tUSER_SYSID,\n\tREPORT_SYSID\n) as\nSELECT\n\tHASH(\n     \
+  \   ifnull(\"EmployeeNumber\", 'random') || ifnull(\"ReportKey\", 'random') || \"\
+  ExpenseTransactionDate\"\n    ) as EXPENSE_ID,\n    HASH(\"ReportKey\") AS REPORT_ID,\n\
+  \t\"DIM_USER\".\"USER_ID\" as USER_ID,\n    \"EmployeeNumber\" AS EMPLOYEE_NUMBER,\n\
+  \t\"EmpJobLevel\" as EMP_JOB_LEVEL,\n\t\"JobFunction\" as JOB_FUNCTION,\n\t\"Geo\"\
+  \ as GEO,\n\t\"MajorArea\" as MAJOR_AREA,\n\t\"Area\" as AREA,\n\t\"DrivingData\"\
+  .\"Manager\" as MANAGER_NAME,\n    \"DIM_TARGETS\".TARGET_ID as TARGET_ID,\n   \
+  \ \"DIM_QUARTER\".QUARTER_ID as QUARTER_ID,\n    \"DIM_QUARTER\".QUARTER_DT as QUARTER_DT,\n\
+  \    \"DIM_QUARTER\".QUARTER_YYQQ as QUARTER_YYQQ,\n    \"WeekStartsOn\" as WEEK_STARTS_ON_DT,\n\
+  \    \"ExpenseReportName\" as EXPENSE_REPORT_NAME,\n    \"ApprovedAmountUSD\" as\
+  \ APPROVED_AMOUNT_USD,\n    \"ExpenseTransactionDate\" as EXPENSE_TRANSACTION_DT,\n\
+  \    \"TransactionQuarter\" as TRANSACTION_QUARTER,\n    \"ExpenseDateFirstSubmitted\"\
+  \ as EXPENSE_DATE_FIRST_SUBMITTED_DT,\n    \"SubmittedDays\" as SUBMITTED_DAYS,\n\
+  \    \"LateExpenseReports\" as LATE_EXPENSE_REPORTS,\n    \"TotalExpenseReports\"\
+  \ as EXPENSE_REPORTS,\n    \"ApprovedAmount\" as APPROVED_AMOUNT_LC,\n\t\"DrivingData\"\
+  .\"DepartmentName\" as DEPARTMENT_NAME,\n\t\"DIM_USER\".USER_SYSID AS USER_SYSID,\n\
+  \t\"ReportKey\" as REPORT_SYSID\n\nfrom CDL_LS.\"CUSTOMER_PSANEW_RPT\".\"RPT_PSKPI_EXPENSE_REPORTS_COMPLIANCE\"\
+  \ as \"DrivingData\"\n   LEFT JOIN CDL.CUSTOMER_OUTCOMES.V_DIM_USER AS \"DIM_USER\"\
+  \n   on \"DrivingData\".\"EmployeeNumber\"= \"DIM_USER\".EMPLOYEE_NUMBER\n   LEFT\
+  \ JOIN CDL.CUSTOMER_OUTCOMES.V_DIM_TARGETS AS \"DIM_TARGETS\"\n   ON \"DrivingData\"\
+  .\"Geo\"= \"DIM_TARGETS\".GEO\n   AND \"DrivingData\".\"JobFunction\"= \"DIM_TARGETS\"\
+  .JOB_FUNCTION\n   AND RIGHT(\"DrivingData\".\"QTR\",'random')=\"DIM_TARGETS\".QUARTER_YYQQ\n\
+  \   AND \"DrivingData\".\"EmpJobLevel\" =\"DIM_TARGETS\".JOB_LEVEL\n   LEFT JOIN\
+  \ CDL.ENTERPRISE.V_DIM_QUARTER as \"DIM_QUARTER\"\n   on right(\"DrivingData\".\"\
+  QTR\",'random') =\"DIM_QUARTER\".QUARTER_YYQQ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

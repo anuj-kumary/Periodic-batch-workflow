@@ -1,0 +1,67 @@
+name: table_1232
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1232
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1232.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view MVB_TF_UNIFIEDSS_USER_TERRITORY_SECURITY(\n\
+  \tTERRITORYSYSID,\n\tORIG_USERID,\n\t'random',\n\tBIN,\n\t'random'\n) as\n\n\n\n\
+  \n\n\n\n\n\n\nSELECT\tTERRITORYSYSID, LISTAGG('random','random') AS ORIG_USERID\
+  \ , 'random' ,'random',\n \t        CASE WHEN 'random' IN (SELECT 'random'\n \t\
+  \ \t \t \t \t \t \t \t \t \t FROM 'random'.'random'.'random'\n                 \
+  \                         WHERE ('random' = 'random'\n                         \
+  \                   AND 'random' = 'random'\n                                  \
+  \          AND 'random' = 'random')\n \t                                  )\n\n\n\
+  \n\n\n\n \t             THEN 'random'\n                  ELSE 'random'\n       \
+  \         END AS 'random'\n \t\tFROM ( SELECT\tTERRITORYSYSID, 'random', 'random','random',\
+  \ CONCAT('random',CEIL((LEN)/'random')) 'random'\n \t\t\t\t   FROM (\n \t\t\t\t\t\
+  SELECT DISTINCT TERRITORYSYSID, 'random', 'random'\n \t\t\t\t\t\t\t,SUM (LENGTH('random')+'random')\
+  \ over(partition by TERRITORYSYSID ORDER BY TERRITORYSYSID, LVL, USERID ROWS BETWEEN\
+  \ UNBOUNDED PRECEDING AND CURRENT ROW  ) 'random'\n \t\t\t\t\tFROM (\n \t\t\t\t\t\
+  \t SELECT DISTINCT UE.'random' AS 'random', TERRITORYSYSID,LVL, UE.'random' AS 'random'\n\
+  \ \t \t\t\t\t\t\tFROM 'random'.'random'.'random' UE\n \t \t\tINNER JOIN (\n\n\n\t\
+  \t\t\t\t\t\tWITH TUL AS\n\t\t\t\t\t\t\t\t(SELECT TERRITORYSYSID,USERID,LVL\n\t\t\
+  \t\t\t\t\t\tFROM 'random'.'random'.'random')\n\t\t\t\t\t\t\t\tSELECT TERRITORYSYSID,USERID,LVL\
+  \ FROM TUL\n\t\t\t\t\t\t\t\tUNION\n\t\t\t\t\t\t\t\tSELECT distinct 'random' AS TERRITORYSYSID,USERID,LVL\
+  \ FROM TUL\n\t\t\t\t\t\t\t\t\tWHERE LVL = 'random'\n\n \t\t\t\t\t\t\t) A\n \t\t\t\
+  \t\t\t\tON LOWER(UE.'random') = LOWER(USERID)\n \t\t\t\t\t\t\t)\n \t\t\t\t \t)\n\
+  \ \t\t\t\t) GROUP BY 'random', TERRITORYSYSID, 'random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
