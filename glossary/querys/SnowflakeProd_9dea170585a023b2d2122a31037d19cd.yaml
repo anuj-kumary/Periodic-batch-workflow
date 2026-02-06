@@ -1,0 +1,31 @@
+name: 9dea170585a023b2d2122a31037d19cd
+fullyQualifiedName: SnowflakeProd.9dea170585a023b2d2122a31037d19cd
+owners: []
+duration: 766.0
+users: []
+query: |-
+  select
+      TABLE_SCHEMA "schema",
+      TABLE_NAME "table_name",
+      COMMENT "table_comment"
+  from information_schema.TABLES
+  where TABLE_SCHEMA <> 'INFORMATION_SCHEMA'
+  and comment is not null
+checksum: 9dea170585a023b2d2122a31037d19cd
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 25137c5d-1028-4b2c-9a8c-1dc9fb33d460
+    type: table
+    name: TABLES
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.TABLES
+    displayName: TABLES
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

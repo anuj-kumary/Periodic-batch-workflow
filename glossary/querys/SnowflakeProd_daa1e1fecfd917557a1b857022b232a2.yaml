@@ -1,0 +1,27 @@
+name: daa1e1fecfd917557a1b857022b232a2
+fullyQualifiedName: SnowflakeProd.daa1e1fecfd917557a1b857022b232a2
+owners: []
+duration: 46.0
+users: []
+query: "SELECT percentile_cont(0.50) WITHIN GROUP (ORDER BY \"E2E_TESTDEPARTMENT_ID\"\
+  \ ASC) AS median, percentile_cont(0.25) WITHIN GROUP (ORDER BY \"E2E_TESTDEPARTMENT_ID\"\
+  \ ASC) AS \"firstQuartile\", percentile_cont(0.75) WITHIN GROUP (ORDER BY \"E2E_TESTDEPARTMENT_ID\"\
+  \ ASC) AS \"thirdQuartile\" \nFROM \"E2E_TEST\".\"TEST_DEPARTMENTS\"\n LIMIT 1"
+checksum: daa1e1fecfd917557a1b857022b232a2
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 86b90bf8-71af-4aad-b813-1bf5fa19bdfa
+    type: table
+    name: TEST_DEPARTMENTS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.TEST_DEPARTMENTS
+    displayName: TEST_DEPARTMENTS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

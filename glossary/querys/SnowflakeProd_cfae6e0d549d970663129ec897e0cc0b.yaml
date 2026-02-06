@@ -1,0 +1,28 @@
+name: cfae6e0d549d970663129ec897e0cc0b
+fullyQualifiedName: SnowflakeProd.cfae6e0d549d970663129ec897e0cc0b
+owners: []
+duration: 106.0
+users: []
+query: |-
+  select TAG_NAME, TAG_VALUE, OBJECT_DATABASE, OBJECT_SCHEMA, OBJECT_NAME, COLUMN_NAME
+  from snowflake.account_usage.tag_references
+  where OBJECT_DATABASE = 'SNOWFLAKE_SAMPLE_DATA'
+    and OBJECT_SCHEMA = 'TPCH_SF1000'
+checksum: cfae6e0d549d970663129ec897e0cc0b
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: eb407436-2d74-4632-95ab-ccd513342630
+    type: table
+    name: TAG_REFERENCES
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ACCOUNT_USAGE.TAG_REFERENCES
+    displayName: TAG_REFERENCES
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

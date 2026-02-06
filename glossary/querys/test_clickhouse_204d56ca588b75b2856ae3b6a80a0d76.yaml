@@ -1,0 +1,48 @@
+name: 204d56ca588b75b2856ae3b6a80a0d76
+fullyQualifiedName: test_clickhouse.204d56ca588b75b2856ae3b6a80a0d76
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"fef317c6-1dca-48ae-8c66-2b5852bb4897\",\"type\":\"table\"\
+        ,\"name\":\"trace_log\",\"fullyQualifiedName\":\"test_clickhouse.default.system.trace_log\"\
+        ,\"description\":\"Contains stack traces collected by the sampling query profiler.\\\
+        n\\nIt is safe to truncate or drop this table at any time.\",\"displayName\"\
+        :\"trace_log\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 3.0
+users: []
+query: "SELECT \nnow64(?) as scrape_time_microseconds,\n? AS pod_ident,\n? AS spoken_name,\n\
+  ? AS cell,\n? AS region,\n? AS cloud_provider,\n? AS clickhouse_version,\n? AS control_plane_id,\n\
+  ? AS system_processor,\n* \nFROM system.\"trace_log\" \nWHERE event_time >= toDateTime32(?)\n\
+  AND event_time < toDateTime32(?)\nAND event_date >= toDate(toDateTime32(?))\nAND\
+  \ event_date <= toDate(toDateTime32(?))\nORDER BY event_time ASC"
+checksum: 204d56ca588b75b2856ae3b6a80a0d76
+queryDate: 1768521600000
+usedBy:
+  - observability-internal
+tags: []
+queryUsedIn:
+  - id: fef317c6-1dca-48ae-8c66-2b5852bb4897
+    type: table
+    name: trace_log
+    fullyQualifiedName: test_clickhouse.default.system.trace_log
+    description: |-
+      Contains stack traces collected by the sampling query profiler.
+
+      It is safe to truncate or drop this table at any time.
+    displayName: trace_log
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

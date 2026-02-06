@@ -1,0 +1,45 @@
+name: 207b17b5ce5322de3d2e66e7306c500f
+fullyQualifiedName: test_clickhouse.207b17b5ce5322de3d2e66e7306c500f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"63011f64-9044-42c5-8516-c25d6a265fe0\",\"type\":\"table\"\
+        ,\"name\":\"crash_log\",\"fullyQualifiedName\":\"test_clickhouse.default.system.crash_log\"\
+        ,\"description\":\"Contains information about stack traces for fatal errors.\
+        \ The table does not exist in the database by default, it is created only\
+        \ when fatal errors occur.\\n\\nIt is safe to truncate or drop this table\
+        \ at any time.\",\"displayName\":\"crash_log\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 1.0
+users: []
+query: SELECT hostname FROM system.crash_log LIMIT ?
+checksum: 207b17b5ce5322de3d2e66e7306c500f
+queryDate: 1768521600000
+usedBy:
+  - observability-internal
+tags: []
+queryUsedIn:
+  - id: 63011f64-9044-42c5-8516-c25d6a265fe0
+    type: table
+    name: crash_log
+    fullyQualifiedName: test_clickhouse.default.system.crash_log
+    description: |-
+      Contains information about stack traces for fatal errors. The table does not exist in the database by default, it is created only when fatal errors occur.
+
+      It is safe to truncate or drop this table at any time.
+    displayName: crash_log
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

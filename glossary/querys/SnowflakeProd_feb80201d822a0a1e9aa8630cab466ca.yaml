@@ -1,0 +1,36 @@
+name: feb80201d822a0a1e9aa8630cab466ca
+fullyQualifiedName: SnowflakeProd.feb80201d822a0a1e9aa8630cab466ca
+owners: []
+duration: 64.0
+users: []
+query: "WITH \"JOBS_rnd\" AS \n(SELECT \"E2E_TEST\".\"JOBS\".\"E2E_TESTJOB_ID\" AS\
+  \ \"E2E_TESTJOB_ID\", \"E2E_TEST\".\"JOBS\".\"E2E_TESTJOB_TITLE\" AS \"E2E_TESTJOB_TITLE\"\
+  , \"E2E_TEST\".\"JOBS\".\"E2E_TESTMIN_SALARY\" AS \"E2E_TESTMIN_SALARY\", \"E2E_TEST\"\
+  .\"JOBS\".\"E2E_TESTMAX_SALARY\" AS \"E2E_TESTMAX_SALARY\" \nFROM \"E2E_TEST\".\"\
+  JOBS\" SAMPLE BERNOULLI (100.0) ), \n\"JOBS_sample\" AS \n(SELECT \"JOBS_rnd\".\"\
+  E2E_TESTJOB_ID\" AS \"E2E_TESTJOB_ID\", \"JOBS_rnd\".\"E2E_TESTJOB_TITLE\" AS \"\
+  E2E_TESTJOB_TITLE\", \"JOBS_rnd\".\"E2E_TESTMIN_SALARY\" AS \"E2E_TESTMIN_SALARY\"\
+  , \"JOBS_rnd\".\"E2E_TESTMAX_SALARY\" AS \"E2E_TESTMAX_SALARY\" \nFROM \"JOBS_rnd\"\
+  )\n SELECT \"JOBS_sample\".\"E2E_TESTJOB_ID\" AS \"JOBS_sample_E2E_TESTJOB_ID\"\
+  , \"JOBS_sample\".\"E2E_TESTJOB_TITLE\" AS \"JOBS_sample_E2E_TESTJOB_TITLE\", \"\
+  JOBS_sample\".\"E2E_TESTMIN_SALARY\" AS \"JOBS_sample_E2E_TESTMIN_SALARY\", \"JOBS_sample\"\
+  .\"E2E_TESTMAX_SALARY\" AS \"JOBS_sample_E2E_TESTMAX_SALARY\" \nFROM \"JOBS_sample\"\
+  \n LIMIT 50"
+checksum: feb80201d822a0a1e9aa8630cab466ca
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e8f2b355-62a6-46de-97aa-96738f20bf8e
+    type: table
+    name: JOBS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.JOBS
+    displayName: JOBS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

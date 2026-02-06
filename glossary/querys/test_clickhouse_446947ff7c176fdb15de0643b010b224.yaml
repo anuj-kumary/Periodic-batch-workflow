@@ -1,0 +1,50 @@
+name: 446947ff7c176fdb15de0643b010b224
+fullyQualifiedName: test_clickhouse.446947ff7c176fdb15de0643b010b224
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"48b1657c-662a-4125-b2cf-c781a971a76c\",\"type\":\"table\"\
+        ,\"name\":\"query_log\",\"fullyQualifiedName\":\"test_clickhouse.default.system.query_log\"\
+        ,\"description\":\"Contains information about executed queries, for example,\
+        \ start time, duration of processing, error messages.\\n\\nIt is safe to truncate\
+        \ or drop this table at any time.\",\"displayName\":\"query_log\",\"deleted\"\
+        :false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 3.0
+users: []
+query: |-
+  SELECT min(event_time), now() - INTERVAL ? SECOND maxSettlePoint
+  FROM system.query_log
+  WHERE event_time >= toDateTime32(?)
+  AND event_date >= toDate(toDateTime32(?))
+  AND event_time <= maxSettlePoint
+checksum: 446947ff7c176fdb15de0643b010b224
+queryDate: 1768521600000
+usedBy:
+  - observability-internal
+tags: []
+queryUsedIn:
+  - id: 48b1657c-662a-4125-b2cf-c781a971a76c
+    type: table
+    name: query_log
+    fullyQualifiedName: test_clickhouse.default.system.query_log
+    description: |-
+      Contains information about executed queries, for example, start time, duration of processing, error messages.
+
+      It is safe to truncate or drop this table at any time.
+    displayName: query_log
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

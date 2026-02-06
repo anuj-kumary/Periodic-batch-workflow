@@ -1,0 +1,34 @@
+name: c3ad0b67eeeef82b1df1b86b8991f639
+fullyQualifiedName: SnowflakeProd.c3ad0b67eeeef82b1df1b86b8991f639
+owners: []
+duration: 423.0
+users: []
+query: |-
+  SELECT
+    PROCEDURE_NAME AS name,
+    PROCEDURE_OWNER AS owner,
+    PROCEDURE_LANGUAGE AS language,
+    PROCEDURE_DEFINITION AS definition,
+    ARGUMENT_SIGNATURE AS signature,
+    COMMENT as comment
+  FROM INFORMATION_SCHEMA.PROCEDURES
+  WHERE PROCEDURE_CATALOG = 'SNOWFLAKE_SAMPLE_DATA'
+    AND PROCEDURE_SCHEMA = 'TPCH_SF1000'
+checksum: c3ad0b67eeeef82b1df1b86b8991f639
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 47ee6915-dce6-4376-b022-b695461b4aa6
+    type: table
+    name: PROCEDURES
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.PROCEDURES
+    displayName: PROCEDURES
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

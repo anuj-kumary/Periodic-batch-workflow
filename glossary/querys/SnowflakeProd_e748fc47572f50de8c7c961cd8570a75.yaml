@@ -1,0 +1,31 @@
+name: e748fc47572f50de8c7c961cd8570a75
+fullyQualifiedName: SnowflakeProd.e748fc47572f50de8c7c961cd8570a75
+owners: []
+duration: 831.0
+users: []
+query: "SELECT\n  query_type,\n  query_text,\n  user_name,\n  database_name,\n  schema_name,\n\
+  \  start_time,\n  end_time,\n  total_elapsed_time duration\nfrom snowflake.account_usage.query_history\n\
+  WHERE query_text NOT LIKE '/* {\"app\": \"OpenMetadata\", %%} */%%'\nAND query_text\
+  \ NOT LIKE '/* {\"app\": \"dbt\", %%} */%%'\nAND start_time between to_timestamp_ltz('2024-08-11\
+  \ 00:00:00+00:00') and to_timestamp_ltz('2024-08-13 00:00:00+00:00')\n\n       \
+  \ AND (\n            QUERY_TYPE IN ('MERGE', 'UPDATE','CREATE_TABLE_AS_SELECT')\n\
+  \            OR (QUERY_TYPE = 'INSERT' and query_text ILIKE '%%insert%%into%%select%%')\n\
+  \        )\n    \nLIMIT 1000"
+checksum: e748fc47572f50de8c7c961cd8570a75
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6671cdaf-361a-4457-bd71-5458944584a3
+    type: table
+    name: QUERY_HISTORY
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY
+    displayName: QUERY_HISTORY
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

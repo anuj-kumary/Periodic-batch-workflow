@@ -1,0 +1,40 @@
+name: 37aafc45253ed301d9aec2b20eacb681
+fullyQualifiedName: test_clickhouse.37aafc45253ed301d9aec2b20eacb681
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"8da50832-3bcd-4d92-b191-036dcf01ec98\",\"type\":\"table\"\
+        ,\"name\":\"roles\",\"fullyQualifiedName\":\"test_clickhouse.default.system.roles\"\
+        ,\"description\":\"Contains a list of all roles created at the server.\",\"\
+        displayName\":\"roles\",\"deleted\":false}]"
+  previousVersion: 1.5
+  changeSummary: {}
+owners: []
+duration: 1.0
+users: []
+query: SELECT name FROM system.roles
+checksum: 37aafc45253ed301d9aec2b20eacb681
+queryDate: 1768521600000
+usedBy:
+  - sql-console
+tags: []
+queryUsedIn:
+  - id: 8da50832-3bcd-4d92-b191-036dcf01ec98
+    type: table
+    name: roles
+    fullyQualifiedName: test_clickhouse.default.system.roles
+    description: Contains a list of all roles created at the server.
+    displayName: roles
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

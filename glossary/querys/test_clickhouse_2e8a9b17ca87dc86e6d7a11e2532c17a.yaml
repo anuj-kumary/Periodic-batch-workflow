@@ -1,0 +1,45 @@
+name: 2e8a9b17ca87dc86e6d7a11e2532c17a
+fullyQualifiedName: test_clickhouse.2e8a9b17ca87dc86e6d7a11e2532c17a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"3262c469-2b21-4c79-9a5a-46c8c65ac68a\",\"type\":\"table\"\
+        ,\"name\":\"dictionaries\",\"fullyQualifiedName\":\"test_clickhouse.default.system.dictionaries\"\
+        ,\"description\":\"Contains information about dictionaries.\",\"displayName\"\
+        :\"dictionaries\",\"deleted\":false}]"
+  previousVersion: 1.1
+  changeSummary: {}
+owners: []
+duration: 5.0
+users: []
+query: "WITH (\n            SELECT coalesce(value, ?)\n            FROM system.server_settings\n\
+  \            WHERE name = ?\n        ) as lazy\n\t\tSELECT\n\t\t\tcount() as total,\n\
+  \t\t\tcountIf(status = ?) as loaded,\n\t\t\tcountIf(status = ?) as loading,\n\t\t\
+  \tcountIf(status = ?) as reloading,\n\t\t\tcountIf(status = ?) as failed,\n\t\t\t\
+  countIf(status = ?) as failed_reloading,\n\t\t\tcountIf(status = ?) as not_loaded,\n\
+  \            lazy::Boolean as isLazy\n\t\tFROM system.dictionaries"
+checksum: 2e8a9b17ca87dc86e6d7a11e2532c17a
+queryDate: 1768521600000
+usedBy:
+  - operator-internal
+tags: []
+queryUsedIn:
+  - id: 3262c469-2b21-4c79-9a5a-46c8c65ac68a
+    type: table
+    name: dictionaries
+    fullyQualifiedName: test_clickhouse.default.system.dictionaries
+    description: Contains information about dictionaries.
+    displayName: dictionaries
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed

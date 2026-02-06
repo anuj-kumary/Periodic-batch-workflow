@@ -1,0 +1,28 @@
+name: 9fb5640b9dfff8f0ff51830f0e2cc1b8
+fullyQualifiedName: SnowflakeProd.9fb5640b9dfff8f0ff51830f0e2cc1b8
+owners: []
+duration: 57.0
+users: []
+query: "SELECT avg(\"REGION_ID\") AS mean, count(\"REGION_ID\") AS \"valuesCount\"\
+  , count(DISTINCT \"REGION_ID\") AS \"distinctCount\", MIN(\"REGION_ID\") AS min,\
+  \ MAX(\"REGION_ID\") AS max, SUM(CASE WHEN (\"REGION_ID\" IS NULL) THEN 1 ELSE 0\
+  \ END) AS \"nullCount\", STDDEV_POP(\"REGION_ID\") AS stddev, SUM(\"REGION_ID\"\
+  ) AS sum \nFROM \"E2E_TEST\".\"REGIONS\"\n LIMIT 1"
+checksum: 9fb5640b9dfff8f0ff51830f0e2cc1b8
+queryDate: 1723334400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 25f68e6f-812c-4dd8-9143-cfbd6c865532
+    type: table
+    name: REGIONS
+    fullyQualifiedName: SnowflakeProd.E2E_DB.E2E_TEST.REGIONS
+    displayName: REGIONS
+    deleted: false
+processedLineage: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd

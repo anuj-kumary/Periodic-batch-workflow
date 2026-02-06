@@ -1,0 +1,44 @@
+name: 502aa337809e584b18c99f392c7150ac
+fullyQualifiedName: test_clickhouse.502aa337809e584b18c99f392c7150ac
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b1f82225-109e-446a-a27b-61b4ae92bbe6\",\"type\":\"table\"\
+        ,\"name\":\"backups\",\"fullyQualifiedName\":\"test_clickhouse.default.system.backups\"\
+        ,\"description\":\"Contains a list of all BACKUP or RESTORE operations with\
+        \ their current states and other properties. Note, that table is not persistent\
+        \ and it shows only operations executed after the last server restart.\",\"\
+        displayName\":\"backups\",\"deleted\":false}]"
+  previousVersion: 0.5
+  changeSummary: {}
+owners: []
+duration: 1.0
+users: []
+query: "SELECT count() FROM system.backups where status IN (?,?)"
+checksum: 502aa337809e584b18c99f392c7150ac
+queryDate: 1768521600000
+usedBy:
+  - monitoring-internal
+tags: []
+queryUsedIn:
+  - id: b1f82225-109e-446a-a27b-61b4ae92bbe6
+    type: table
+    name: backups
+    fullyQualifiedName: test_clickhouse.default.system.backups
+    description: "Contains a list of all BACKUP or RESTORE operations with their current\
+      \ states and other properties. Note, that table is not persistent and it shows\
+      \ only operations executed after the last server restart."
+    displayName: backups
+    deleted: false
+processedLineage: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+entityStatus: Unprocessed
