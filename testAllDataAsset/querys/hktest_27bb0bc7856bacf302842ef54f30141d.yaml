@@ -1,0 +1,48 @@
+name: 27bb0bc7856bacf302842ef54f30141d
+fullyQualifiedName: hktest.27bb0bc7856bacf302842ef54f30141d
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"9923bd33-66e3-4a4b-8a79-596d4f5880e8\",\"type\":\"table\"\
+        ,\"name\":\"Trans_warehouse_list\",\"fullyQualifiedName\":\"hktest.MT_DB.OWNERS_TEST.Trans_warehouse_list\"\
+        ,\"displayName\":\"Trans_warehouse_list\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 329.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: |-
+  CREATE OR REPLACE VIEW vw_sf_trans_warehouse_list (
+      "NAME"
+      ) COMMENT = ?
+  AS
+  SELECT
+      NAME
+  FROM mt_db.owners_test.trans_warehouse_list;
+checksum: 27bb0bc7856bacf302842ef54f30141d
+queryDate: 1748563200000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: a220c8c2-646c-4b7e-a89c-4dbba90d0d40
+    type: table
+    name: VW_SF_TRANS_WAREHOUSE_LIST
+    fullyQualifiedName: hktest.MT_DB.OWNERS_TEST.VW_SF_TRANS_WAREHOUSE_LIST
+    description: this is view comment...
+    displayName: VW_SF_TRANS_WAREHOUSE_LIST
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

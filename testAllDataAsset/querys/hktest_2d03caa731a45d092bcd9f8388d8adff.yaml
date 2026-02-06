@@ -1,0 +1,29 @@
+name: 2d03caa731a45d092bcd9f8388d8adff
+fullyQualifiedName: hktest.2d03caa731a45d092bcd9f8388d8adff
+owners: []
+duration: 245.0
+users: []
+query: "SELECT avg(\"R_REGIONKEY\") AS mean, count(\"R_REGIONKEY\") AS \"valuesCount\"\
+  , count(DISTINCT \"R_REGIONKEY\") AS \"distinctCount\", MIN(\"R_REGIONKEY\") AS\
+  \ min, MAX(\"R_REGIONKEY\") AS max, coalesce(SUM(CASE WHEN (\"R_REGIONKEY\" IS ?)\
+  \ THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"R_REGIONKEY\") AS stddev,\
+  \ SUM(\"R_REGIONKEY\") AS sum \nFROM \"TPCH_SF10\".\"REGION\"\n LIMIT ?"
+checksum: 2d03caa731a45d092bcd9f8388d8adff
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8279bb49-0b90-46e6-9c5e-d9053f20f85c
+    type: table
+    name: REGION
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.REGION
+    description: Region data as defined by TPC-H
+    displayName: REGION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

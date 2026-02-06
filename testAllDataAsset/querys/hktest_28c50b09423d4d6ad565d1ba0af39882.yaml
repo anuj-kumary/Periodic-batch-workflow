@@ -1,0 +1,38 @@
+name: 28c50b09423d4d6ad565d1ba0af39882
+fullyQualifiedName: hktest.28c50b09423d4d6ad565d1ba0af39882
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"6ae43fa1-ddf5-4089-92ff-669779d5cd5f\",\"type\":\"table\"\
+        ,\"name\":\"REGION\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION\"\
+        ,\"description\":\"Region data as defined by TPC-H\",\"displayName\":\"REGION\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 163.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"R_REGIONKEY\") AS\
+  \ count_1 \nFROM \"TPCH_SF1\".\"REGION\" GROUP BY \"R_REGIONKEY\" \nHAVING count(\"\
+  R_REGIONKEY\") = ?) AS only_once\n LIMIT ?"
+checksum: 28c50b09423d4d6ad565d1ba0af39882
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6ae43fa1-ddf5-4089-92ff-669779d5cd5f
+    type: table
+    name: REGION
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION
+    description: Region data as defined by TPC-H
+    displayName: REGION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

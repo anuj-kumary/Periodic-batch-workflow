@@ -1,0 +1,26 @@
+name: 291c9c236c05ac3e4a3bc395c22b38d1
+fullyQualifiedName: hktest.291c9c236c05ac3e4a3bc395c22b38d1
+owners: []
+duration: 39.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CONTACTID\") AS\
+  \ count_1 \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERCONTACTHISTORY\" GROUP BY \"\
+  CONTACTID\" \nHAVING count(\"CONTACTID\") = ?) AS only_once\n LIMIT ?"
+checksum: 291c9c236c05ac3e4a3bc395c22b38d1
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 89d6207d-337a-44ca-a3d6-ad1b8a3bfc69
+    type: table
+    name: CUSTOMERCONTACTHISTORY
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERCONTACTHISTORY
+    displayName: CUSTOMERCONTACTHISTORY
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

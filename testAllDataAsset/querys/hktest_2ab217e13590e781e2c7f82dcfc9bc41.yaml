@@ -1,0 +1,26 @@
+name: 2ab217e13590e781e2c7f82dcfc9bc41
+fullyQualifiedName: hktest.2ab217e13590e781e2c7f82dcfc9bc41
+owners: []
+duration: 90.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"DATEOFBIRTH\") AS\
+  \ count_1 \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERINFO\" GROUP BY \"DATEOFBIRTH\"\
+  \ \nHAVING count(\"DATEOFBIRTH\") = ?) AS only_once\n LIMIT ?"
+checksum: 2ab217e13590e781e2c7f82dcfc9bc41
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e4a80c06-2eeb-4d82-8a71-61523f5b7361
+    type: table
+    name: CUSTOMERINFO
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERINFO
+    displayName: CUSTOMERINFO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

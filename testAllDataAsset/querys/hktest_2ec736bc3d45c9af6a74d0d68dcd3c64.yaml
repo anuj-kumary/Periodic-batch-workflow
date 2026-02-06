@@ -1,0 +1,26 @@
+name: 2ec736bc3d45c9af6a74d0d68dcd3c64
+fullyQualifiedName: hktest.2ec736bc3d45c9af6a74d0d68dcd3c64
+owners: []
+duration: 81.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"SECURE_POLICY_CD\"\
+  ) AS count_1 \nFROM \"CURATED\".\"CNTRCT\" GROUP BY \"SECURE_POLICY_CD\" \nHAVING\
+  \ count(\"SECURE_POLICY_CD\") = ?) AS only_once\n LIMIT ?"
+checksum: 2ec736bc3d45c9af6a74d0d68dcd3c64
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

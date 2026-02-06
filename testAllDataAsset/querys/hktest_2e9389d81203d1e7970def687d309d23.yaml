@@ -1,0 +1,44 @@
+name: 2e9389d81203d1e7970def687d309d23
+fullyQualifiedName: hktest.2e9389d81203d1e7970def687d309d23
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"c27ff794-d899-421c-a0d8-d5b1667216d9\",\"type\":\"table\"\
+        ,\"name\":\"SCHEMA_COLUMNS_SNAPSHOT\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SCHEMA_COLUMNS_SNAPSHOT\"\
+        ,\"displayName\":\"SCHEMA_COLUMNS_SNAPSHOT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 1751.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT ? AS anon_1, count(\"DETECTED_AT\") AS \"valuesCount\", count(DISTINCT\
+  \ \"DETECTED_AT\") AS \"distinctCount\", MIN(\"DETECTED_AT\") AS min, MAX(\"DETECTED_AT\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"DETECTED_AT\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", ? AS anon__1, ? AS anon__2 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"\
+  SCHEMA_COLUMNS_SNAPSHOT\"\n LIMIT ?"
+checksum: 2e9389d81203d1e7970def687d309d23
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: c27ff794-d899-421c-a0d8-d5b1667216d9
+    type: table
+    name: SCHEMA_COLUMNS_SNAPSHOT
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SCHEMA_COLUMNS_SNAPSHOT
+    displayName: SCHEMA_COLUMNS_SNAPSHOT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

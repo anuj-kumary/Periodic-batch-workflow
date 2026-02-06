@@ -1,0 +1,32 @@
+name: 2f9378e07a0d191789e850ab1542e3e0
+fullyQualifiedName: hktest.2f9378e07a0d191789e850ab1542e3e0
+owners: []
+duration: 56.0
+users: []
+query: "WITH \"137a01e95d691837511018085782d241_rnd\" AS \n(SELECT \"CUSTOMERLOGIN_1\"\
+  .\"PASSWORDHASH\" AS \"PASSWORDHASH\" \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERLOGIN\"\
+  \ AS \"CUSTOMERLOGIN_1\" TABLESAMPLE ROW(? ROWS)), \n\"137a01e95d691837511018085782d241_sample\"\
+  \ AS \n(SELECT \"137a01e95d691837511018085782d241_rnd\".\"PASSWORDHASH\" AS \"PASSWORDHASH\"\
+  \ \nFROM \"137a01e95d691837511018085782d241_rnd\")\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY LEN(\"PASSWORDHASH\") ASC) AS median, percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY LEN(\"PASSWORDHASH\") ASC) AS \"firstQuartile\", percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY LEN(\"PASSWORDHASH\") ASC) AS \"thirdQuartile\" \nFROM\
+  \ \"137a01e95d691837511018085782d241_sample\"\n LIMIT ?"
+checksum: 2f9378e07a0d191789e850ab1542e3e0
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 362a3c96-9793-4426-b8a0-46295ee4a87b
+    type: table
+    name: CUSTOMERLOGIN
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERLOGIN
+    displayName: CUSTOMERLOGIN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

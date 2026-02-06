@@ -1,0 +1,33 @@
+name: 2e6be05bcc3da88d2b2e8d43963f8f63
+fullyQualifiedName: hktest.2e6be05bcc3da88d2b2e8d43963f8f63
+owners: []
+duration: 128.0
+users: []
+query: "WITH \"251d5be6c2243ba771425aa88477c04d_rnd\" AS \n(SELECT \"PARTSUPP_1\"\
+  .\"PS_AVAILQTY\" AS \"PS_AVAILQTY\" \nFROM \"TPCH_SF1\".\"PARTSUPP\" AS \"PARTSUPP_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"251d5be6c2243ba771425aa88477c04d_sample\" AS \n\
+  (SELECT \"251d5be6c2243ba771425aa88477c04d_rnd\".\"PS_AVAILQTY\" AS \"PS_AVAILQTY\"\
+  \ \nFROM \"251d5be6c2243ba771425aa88477c04d_rnd\")\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"PS_AVAILQTY\" ASC) AS median, percentile_cont(?) WITHIN GROUP\
+  \ (ORDER BY \"PS_AVAILQTY\" ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"PS_AVAILQTY\" ASC) AS \"thirdQuartile\" \nFROM \"251d5be6c2243ba771425aa88477c04d_sample\"\
+  \n LIMIT ?"
+checksum: 2e6be05bcc3da88d2b2e8d43963f8f63
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: ba0b673e-2967-483d-bf95-f4f3b99305c6
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

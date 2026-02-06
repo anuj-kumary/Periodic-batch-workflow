@@ -1,0 +1,34 @@
+name: 2a027467183db483a3769924e799cb05
+fullyQualifiedName: hktest.2a027467183db483a3769924e799cb05
+owners: []
+duration: 675.0
+users: []
+query: "WITH \"251d5be6c2243ba771425aa88477c04d_rnd\" AS \n(SELECT \"PARTSUPP_1\"\
+  .\"PS_AVAILQTY\" AS \"PS_AVAILQTY\" \nFROM \"TPCH_SF1000\".\"PARTSUPP\" AS \"PARTSUPP_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"251d5be6c2243ba771425aa88477c04d_sample\" AS \n\
+  (SELECT \"251d5be6c2243ba771425aa88477c04d_rnd\".\"PS_AVAILQTY\" AS \"PS_AVAILQTY\"\
+  \ \nFROM \"251d5be6c2243ba771425aa88477c04d_rnd\")\n SELECT avg(\"PS_AVAILQTY\"\
+  ) AS mean, count(\"PS_AVAILQTY\") AS \"valuesCount\", count(DISTINCT \"PS_AVAILQTY\"\
+  ) AS \"distinctCount\", MIN(\"PS_AVAILQTY\") AS min, MAX(\"PS_AVAILQTY\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"PS_AVAILQTY\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"PS_AVAILQTY\") AS stddev, SUM(\"PS_AVAILQTY\") AS sum \nFROM \"251d5be6c2243ba771425aa88477c04d_sample\"\
+  \n LIMIT ?"
+checksum: 2a027467183db483a3769924e799cb05
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 91be5eb1-5461-49c7-a1d2-4f8477868386
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

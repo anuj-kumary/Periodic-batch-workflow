@@ -1,0 +1,30 @@
+name: 2e6c738de3bdcb3d934d65b2b8b3db8f
+fullyQualifiedName: hktest.2e6c738de3bdcb3d934d65b2b8b3db8f
+owners: []
+duration: 257.0
+users: []
+query: "SELECT \"HK_SCHEMA\".\"SAMPLE_TABLE\".\"CUSTOMERID\" AS \"HK_SCHEMA_SAMPLE_TABLE_CUSTOMERID\"\
+  , \"HK_SCHEMA\".\"SAMPLE_TABLE\".\"NAME\" AS \"HK_SCHEMA_SAMPLE_TABLE_NAME\", \"\
+  HK_SCHEMA\".\"SAMPLE_TABLE\".\"EMAIL\" AS \"HK_SCHEMA_SAMPLE_TABLE_EMAIL\", \"HK_SCHEMA\"\
+  .\"SAMPLE_TABLE\".\"COUNTRY\" AS \"HK_SCHEMA_SAMPLE_TABLE_COUNTRY\", \"HK_SCHEMA\"\
+  .\"SAMPLE_TABLE\".\"SIGNUPDATE\" AS \"HK_SCHEMA_SAMPLE_TABLE_SIGNUPDATE\", \"HK_SCHEMA\"\
+  .\"SAMPLE_TABLE\".\"PURCHASEAMOUNT\" AS \"HK_SCHEMA_SAMPLE_TABLE_PURCHASEAMOUNT\"\
+  \ \nFROM \"HK_SCHEMA\".\"SAMPLE_TABLE\"\n LIMIT ?"
+checksum: 2e6c738de3bdcb3d934d65b2b8b3db8f
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 2600e3c8-1c5d-4b5c-9357-085ce2833e69
+    type: table
+    name: SAMPLE_TABLE
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.SAMPLE_TABLE
+    displayName: SAMPLE_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

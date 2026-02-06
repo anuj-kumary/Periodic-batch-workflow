@@ -1,0 +1,54 @@
+name: 2a2315ffadc83ea54c006cb6c383313c
+fullyQualifiedName: hktest.2a2315ffadc83ea54c006cb6c383313c
+owners: []
+duration: 698.0
+users: []
+query: "WITH \"7acd5a55767403e4819968ec03121cca_rnd\" AS \n(SELECT \"STORE_RETURNS_1\"\
+  .\"SR_RETURN_SHIP_COST\" AS \"SR_RETURN_SHIP_COST\" \nFROM \"TPCDS_SF10TCL\".\"\
+  STORE_RETURNS\" AS \"STORE_RETURNS_1\" TABLESAMPLE ROW(? ROWS)), \n\"7acd5a55767403e4819968ec03121cca_sample\"\
+  \ AS \n(SELECT \"7acd5a55767403e4819968ec03121cca_rnd\".\"SR_RETURN_SHIP_COST\"\
+  \ AS \"SR_RETURN_SHIP_COST\" \nFROM \"7acd5a55767403e4819968ec03121cca_rnd\")\n\
+  \ SELECT count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\"\
+  \ < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"0 to 242.940\", count(CASE WHEN (\"\
+  SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\"\
+  \ END) AS \"242.940 to 485.879\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ?\
+  \ AND \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"485.879\
+  \ to 728.819\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\"\
+  \ < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"728.819 to 971.758\", count(CASE WHEN\
+  \ (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\"\
+  \ END) AS \"971.758 to 1.215K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND\
+  \ \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"1.215K to\
+  \ 1.458K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\"\
+  \ < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"1.458K to 1.701K\", count(CASE WHEN\
+  \ (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\"\
+  \ END) AS \"1.701K to 1.944K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND\
+  \ \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"1.944K to\
+  \ 2.186K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\"\
+  \ < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"2.186K to 2.429K\", count(CASE WHEN\
+  \ (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\"\
+  \ END) AS \"2.429K to 2.672K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND\
+  \ \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"2.672K to\
+  \ 2.915K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\"\
+  \ < ?) THEN \"SR_RETURN_SHIP_COST\" END) AS \"2.915K to 3.158K\", count(CASE WHEN\
+  \ (\"SR_RETURN_SHIP_COST\" >= ? AND \"SR_RETURN_SHIP_COST\" < ?) THEN \"SR_RETURN_SHIP_COST\"\
+  \ END) AS \"3.158K to 3.401K\", count(CASE WHEN (\"SR_RETURN_SHIP_COST\" >= ?) THEN\
+  \ \"SR_RETURN_SHIP_COST\" END) AS \"3.401K and up\" \nFROM \"7acd5a55767403e4819968ec03121cca_sample\"\
+  \n LIMIT ?"
+checksum: 2a2315ffadc83ea54c006cb6c383313c
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e86ff48f-2b49-4cdf-b51b-651c26d03830
+    type: table
+    name: STORE_RETURNS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE_RETURNS
+    displayName: STORE_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

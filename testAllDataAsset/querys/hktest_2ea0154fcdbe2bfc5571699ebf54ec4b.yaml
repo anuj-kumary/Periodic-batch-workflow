@@ -1,0 +1,27 @@
+name: 2ea0154fcdbe2bfc5571699ebf54ec4b
+fullyQualifiedName: hktest.2ea0154fcdbe2bfc5571699ebf54ec4b
+owners: []
+duration: 70.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONT_COM_DRAW_DAY\"\
+  ) ASC) AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONT_COM_DRAW_DAY\"\
+  ) ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONT_COM_DRAW_DAY\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"CURATED\".\"CONT\"\n LIMIT ?"
+checksum: 2ea0154fcdbe2bfc5571699ebf54ec4b
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

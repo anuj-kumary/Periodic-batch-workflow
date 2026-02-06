@@ -1,0 +1,27 @@
+name: 2be56be741f90c5dd99a30d5496032a4
+fullyQualifiedName: hktest.2be56be741f90c5dd99a30d5496032a4
+owners: []
+duration: 142.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"CC_DIVISION\" ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"CC_DIVISION\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"CC_DIVISION\" ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"TPCDS_SF10TCL\".\"CALL_CENTER\"\n LIMIT ?"
+checksum: 2be56be741f90c5dd99a30d5496032a4
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: ce0a6904-d515-40d5-8ca9-6848df3ef2a4
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

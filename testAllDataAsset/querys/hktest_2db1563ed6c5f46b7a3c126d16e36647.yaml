@@ -1,0 +1,37 @@
+name: 2db1563ed6c5f46b7a3c126d16e36647
+fullyQualifiedName: hktest.2db1563ed6c5f46b7a3c126d16e36647
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d1421023-d4ef-4bea-ad0f-0b3f8a230893\",\"type\":\"table\"\
+        ,\"name\":\"PERSONS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.PERSONS\"\
+        ,\"displayName\":\"PERSONS\",\"deleted\":false}]"
+  previousVersion: 1.2
+  changeSummary: {}
+owners: []
+duration: 101.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"FULL_NAME\") >= ? AND LEN(\"FULL_NAME\") < ?)\
+  \ THEN LEN(\"FULL_NAME\") END) AS \"10.000 to 11.587\", count(CASE WHEN (LEN(\"\
+  FULL_NAME\") >= ?) THEN LEN(\"FULL_NAME\") END) AS \"11.587 and up\" \nFROM \"E2E_TEST\"\
+  .\"PERSONS\"\n LIMIT ?"
+checksum: 2db1563ed6c5f46b7a3c126d16e36647
+queryDate: 1752192000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d1421023-d4ef-4bea-ad0f-0b3f8a230893
+    type: table
+    name: PERSONS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.PERSONS
+    displayName: PERSONS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

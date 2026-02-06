@@ -1,0 +1,36 @@
+name: 2d56c353f2f5d7988325e10d1f9b2eda
+fullyQualifiedName: hktest.2d56c353f2f5d7988325e10d1f9b2eda
+owners: []
+duration: 45.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"FIRSTNAME\") >= ? AND LEN(\"FIRSTNAME\") < ?)\
+  \ THEN LEN(\"FIRSTNAME\") END) AS \"2.000 to 2.928\", count(CASE WHEN (LEN(\"FIRSTNAME\"\
+  ) >= ? AND LEN(\"FIRSTNAME\") < ?) THEN LEN(\"FIRSTNAME\") END) AS \"2.928 to 3.857\"\
+  , count(CASE WHEN (LEN(\"FIRSTNAME\") >= ? AND LEN(\"FIRSTNAME\") < ?) THEN LEN(\"\
+  FIRSTNAME\") END) AS \"3.857 to 4.785\", count(CASE WHEN (LEN(\"FIRSTNAME\") >=\
+  \ ? AND LEN(\"FIRSTNAME\") < ?) THEN LEN(\"FIRSTNAME\") END) AS \"4.785 to 5.713\"\
+  , count(CASE WHEN (LEN(\"FIRSTNAME\") >= ? AND LEN(\"FIRSTNAME\") < ?) THEN LEN(\"\
+  FIRSTNAME\") END) AS \"5.713 to 6.642\", count(CASE WHEN (LEN(\"FIRSTNAME\") >=\
+  \ ? AND LEN(\"FIRSTNAME\") < ?) THEN LEN(\"FIRSTNAME\") END) AS \"6.642 to 7.570\"\
+  , count(CASE WHEN (LEN(\"FIRSTNAME\") >= ? AND LEN(\"FIRSTNAME\") < ?) THEN LEN(\"\
+  FIRSTNAME\") END) AS \"7.570 to 8.498\", count(CASE WHEN (LEN(\"FIRSTNAME\") >=\
+  \ ?) THEN LEN(\"FIRSTNAME\") END) AS \"8.498 and up\" \nFROM \"MSSQLBANKING_CUSTOMER\"\
+  .\"CUSTOMERINFO\"\n LIMIT ?"
+checksum: 2d56c353f2f5d7988325e10d1f9b2eda
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e4a80c06-2eeb-4d82-8a71-61523f5b7361
+    type: table
+    name: CUSTOMERINFO
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERINFO
+    displayName: CUSTOMERINFO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

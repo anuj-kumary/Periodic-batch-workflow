@@ -1,0 +1,43 @@
+name: 2d3d248c210a446061657ed26030930f
+fullyQualifiedName: hktest.2d3d248c210a446061657ed26030930f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"9df2a6b2-7501-4f06-a629-34d4d1c748ab\",\"type\":\"table\"\
+        ,\"name\":\"LINEITEM\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.LINEITEM\"\
+        ,\"description\":\"Lineitem data as defined by TPC-H\",\"displayName\":\"\
+        LINEITEM\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 824.0
+users: []
+query: "WITH d6def3b6c248e09592da506240613bd9_rnd AS \n(SELECT \"LINEITEM_1\".\"L_SUPPKEY\"\
+  \ AS \"L_SUPPKEY\" \nFROM \"TPCH_SF1000\".\"LINEITEM\" AS \"LINEITEM_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nd6def3b6c248e09592da506240613bd9_sample AS \n(SELECT d6def3b6c248e09592da506240613bd9_rnd.\"\
+  L_SUPPKEY\" AS \"L_SUPPKEY\" \nFROM d6def3b6c248e09592da506240613bd9_rnd)\n SELECT\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"L_SUPPKEY\" ASC) AS median, percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"L_SUPPKEY\" ASC) AS \"firstQuartile\", percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"L_SUPPKEY\" ASC) AS \"thirdQuartile\" \nFROM d6def3b6c248e09592da506240613bd9_sample\n\
+  \ LIMIT ?"
+checksum: 2d3d248c210a446061657ed26030930f
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9df2a6b2-7501-4f06-a629-34d4d1c748ab
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

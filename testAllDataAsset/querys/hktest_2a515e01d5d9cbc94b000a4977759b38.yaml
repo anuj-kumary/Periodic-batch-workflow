@@ -1,0 +1,38 @@
+name: 2a515e01d5d9cbc94b000a4977759b38
+fullyQualifiedName: hktest.2a515e01d5d9cbc94b000a4977759b38
+owners: []
+duration: 126.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"NAME\") >= ? AND LEN(\"NAME\") < ?) THEN LEN(\"\
+  NAME\") END) AS \"4.000 to 8.801\", count(CASE WHEN (LEN(\"NAME\") >= ? AND LEN(\"\
+  NAME\") < ?) THEN LEN(\"NAME\") END) AS \"8.801 to 13.601\", count(CASE WHEN (LEN(\"\
+  NAME\") >= ? AND LEN(\"NAME\") < ?) THEN LEN(\"NAME\") END) AS \"13.601 to 18.402\"\
+  , count(CASE WHEN (LEN(\"NAME\") >= ? AND LEN(\"NAME\") < ?) THEN LEN(\"NAME\")\
+  \ END) AS \"18.402 to 23.202\", count(CASE WHEN (LEN(\"NAME\") >= ? AND LEN(\"NAME\"\
+  ) < ?) THEN LEN(\"NAME\") END) AS \"23.202 to 28.003\", count(CASE WHEN (LEN(\"\
+  NAME\") >= ?) THEN LEN(\"NAME\") END) AS \"28.003 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"MODEL_RUN_RESULTS\"\n LIMIT ?"
+checksum: 2a515e01d5d9cbc94b000a4977759b38
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,28 @@
+name: 29e9c5f16e3f77602fd775b4b062e9b4
+fullyQualifiedName: hktest.29e9c5f16e3f77602fd775b4b062e9b4
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"e50cebc6-231c-4a79-ba79-9368b8123aef\",\"type\":\"table\"\
+        ,\"name\":\"RAW_CUSTOMERS\",\"fullyQualifiedName\":\"hktest.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS\"\
+        ,\"displayName\":\"RAW_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.6
+  changeSummary: {}
+owners: []
+duration: 23.0
+users: []
+query: SELECT "FIRST_NAME" FROM CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS
+checksum: 29e9c5f16e3f77602fd775b4b062e9b4
+queryDate: 1751760000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
