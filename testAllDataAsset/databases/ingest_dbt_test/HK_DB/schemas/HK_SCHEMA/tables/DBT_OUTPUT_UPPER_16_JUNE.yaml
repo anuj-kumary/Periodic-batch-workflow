@@ -1,0 +1,297 @@
+name: DBT_OUTPUT_UPPER_16_JUNE
+fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE
+description: "This table stores customer data, including their country, email, and\
+  \ purchase details, enabling businesses to analyze customer behavior, track sales\
+  \ trends, and enhance marketing strategies based on demographic insights."
+tableType: Transient
+columns:
+  - name: CUSTOMERID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: CUSTOMERID is a unique identifier assigned to each customer. It is
+      used to distinguish between different customers in the database.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.CUSTOMERID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: NAME represents the full name of the customer. It is used for personal
+      identification and communication.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.NAME
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: EMAIL contains the email address of the customer. It is used for
+      communication and marketing purposes.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.EMAIL
+    tags:
+      - tagFQN: General.Email
+        name: Email
+        description: Email address.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: COUNTRY represents the geographical location of the customer. It
+      is used to identify the country where the customer resides.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.COUNTRY
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SIGNUPDATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: SIGNUPDATE represents the date when the customer signed up. It is
+      used to track customer acquisition over time.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.SIGNUPDATE
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PURCHASEAMOUNT
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    description: PURCHASEAMOUNT indicates the total amount spent by the customer on
+      purchases. It is used to analyze customer spending behavior.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.PURCHASEAMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME_UPPER_DBT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: NAME_UPPER_DBT is the uppercased version of the customer's name.
+      It is used for standardization and comparison purposes.
+    fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_OUTPUT_UPPER_16_JUNE.NAME_UPPER_DBT
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 8fc4ec4e-2ef5-4587-a9be-a9bc2022934d
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: ingest_dbt_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: df8ef1a1-2462-4388-93d6-af01578defb4
+  type: database
+  name: HK_DB
+  fullyQualifiedName: ingest_dbt_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 47ed96e3-fb2c-4f8e-adeb-7bec14c6a308
+  type: databaseService
+  name: ingest_dbt_test
+  fullyQualifiedName: ingest_dbt_test
+  description: ""
+  displayName: ingest_dbt_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+dataModel:
+  modelType: DBT
+  resourceType: model
+  path: models/example/change_case.sql
+  rawSql: |-
+    {{ config(
+        materialized='table',
+        alias='dbt_output_upper_16_june'
+    ) }}
+
+    select *,
+           upper(NAME) as NAME_UPPER_DBT
+    from {{ ref('dbt_input') }}
+  sql: |2-
+
+
+    select *,
+           upper(NAME) as NAME_UPPER_DBT
+    from HK_DB.HK_SCHEMA.dbt_input
+  upstream:
+    - ingest_dbt_test.HK_DB.HK_SCHEMA.DBT_INPUT
+  tags: []
+  columns: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.CUSTOMERID.description
+      newValue: CUSTOMERID is a unique identifier assigned to each customer. It is
+        used to distinguish between different customers in the database.
+    - name: columns.NAME.description
+      newValue: NAME represents the full name of the customer. It is used for personal
+        identification and communication.
+    - name: columns.EMAIL.description
+      newValue: EMAIL contains the email address of the customer. It is used for communication
+        and marketing purposes.
+    - name: columns.COUNTRY.description
+      newValue: COUNTRY represents the geographical location of the customer. It is
+        used to identify the country where the customer resides.
+    - name: columns.SIGNUPDATE.description
+      newValue: SIGNUPDATE represents the date when the customer signed up. It is
+        used to track customer acquisition over time.
+    - name: columns.PURCHASEAMOUNT.description
+      newValue: PURCHASEAMOUNT indicates the total amount spent by the customer on
+        purchases. It is used to analyze customer spending behavior.
+    - name: columns.NAME_UPPER_DBT.description
+      newValue: NAME_UPPER_DBT is the uppercased version of the customer's name. It
+        is used for standardization and comparison purposes.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892083
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+    columns.EMAIL.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+    columns.COUNTRY.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+    columns.CUSTOMERID.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+    columns.SIGNUPDATE.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+    columns.NAME_UPPER_DBT.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+    columns.PURCHASEAMOUNT.description:
+      changedBy: ingestion-bot
+      changedAt: 1751998892813
+sourceUrl: https://app.snowflake.com/xropqkk/eq96782/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/DBT_OUTPUT_UPPER_16_JUNE
+domains: []
+dataProducts: []
+sourceHash: 4c97cc67d419f46fe27e77a6df9d4abd
+processedLineage: false
+entityStatus: Approved

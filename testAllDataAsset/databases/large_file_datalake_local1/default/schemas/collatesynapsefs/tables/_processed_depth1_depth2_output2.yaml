@@ -1,0 +1,56 @@
+name: processed/depth1/depth2/output2.csv
+fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."processed/depth1/depth2/output2.csv"
+tableType: Regular
+columns:
+  - name: timestamps
+    displayName: timestamps
+    dataType: FLOAT
+    dataTypeDisplay: float
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."processed/depth1/depth2/output2.csv".timestamps
+    tags: []
+    children: []
+    customMetrics: []
+  - name: AcPosCoilSplyEn
+    displayName: AcPosCoilSplyEn
+    dataType: INT
+    dataTypeDisplay: int
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."processed/depth1/depth2/output2.csv".AcPosCoilSplyEn
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 104b1b61-ad1c-466d-a4fd-5f0e2a88fb10
+  type: databaseSchema
+  name: collatesynapsefs
+  fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs
+  displayName: collatesynapsefs
+  deleted: false
+database:
+  id: 53be537c-f002-48a9-a2cc-298de1642788
+  type: database
+  name: default
+  fullyQualifiedName: large_file_datalake_local1.default
+  displayName: default
+  deleted: false
+service:
+  id: 90bbf174-5007-47a1-91bb-7917bc210a84
+  type: databaseService
+  name: large_file_datalake_local1
+  fullyQualifiedName: large_file_datalake_local1
+  displayName: large_file_datalake_local1
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: csv
+sourceHash: 52a7bb96d4d0dd9abcb5dca723aaecc6
+processedLineage: false
+entityStatus: Unprocessed

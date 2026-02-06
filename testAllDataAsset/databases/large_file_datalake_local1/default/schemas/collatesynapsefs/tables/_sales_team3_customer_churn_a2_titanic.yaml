@@ -1,0 +1,136 @@
+name: sales_team3/customer_churn/a2/titanic.parquet
+fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet"
+tableType: Regular
+columns:
+  - name: PassengerId
+    displayName: PassengerId
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".PassengerId
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Survived
+    displayName: Survived
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Survived
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Pclass
+    displayName: Pclass
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Pclass
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Name
+    displayName: Name
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Sex
+    displayName: Sex
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Sex
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Age
+    displayName: Age
+    dataType: FLOAT
+    dataTypeDisplay: double
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Age
+    tags: []
+    children: []
+    customMetrics: []
+  - name: SibSp
+    displayName: SibSp
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".SibSp
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Parch
+    displayName: Parch
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Parch
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Ticket
+    displayName: Ticket
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Ticket
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Fare
+    displayName: Fare
+    dataType: FLOAT
+    dataTypeDisplay: double
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Fare
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Cabin
+    displayName: Cabin
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Cabin
+    tags: []
+    children: []
+    customMetrics: []
+  - name: Embarked
+    displayName: Embarked
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs."sales_team3/customer_churn/a2/titanic.parquet".Embarked
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 104b1b61-ad1c-466d-a4fd-5f0e2a88fb10
+  type: databaseSchema
+  name: collatesynapsefs
+  fullyQualifiedName: large_file_datalake_local1.default.collatesynapsefs
+  displayName: collatesynapsefs
+  deleted: false
+database:
+  id: 53be537c-f002-48a9-a2cc-298de1642788
+  type: database
+  name: default
+  fullyQualifiedName: large_file_datalake_local1.default
+  displayName: default
+  deleted: false
+service:
+  id: 90bbf174-5007-47a1-91bb-7917bc210a84
+  type: databaseService
+  name: large_file_datalake_local1
+  fullyQualifiedName: large_file_datalake_local1
+  displayName: large_file_datalake_local1
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: 43ed34d1fe398042431a71b6116dea59
+processedLineage: false
+entityStatus: Unprocessed

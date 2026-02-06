@@ -1,0 +1,155 @@
+name: STREAM_SOURCE_TABLE_1
+fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1
+tableType: Stream
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMER_NAME
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: text(100)
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.CUSTOMER_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDER_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.ORDER_DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AMOUNT
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 10
+    scale: 2
+    dataTypeDisplay: "number(10,2)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.AMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATUS
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: text(50)
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.STATUS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED_AT
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ntz
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.CREATED_AT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA$ACTION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.METADATA$ACTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA$ISUPDATE
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.METADATA$ISUPDATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA$ROW_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.STREAM_SOURCE_TABLE_1.METADATA$ROW_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 0613a5fa-f1b2-4665-a493-3ed5cf158422
+  type: databaseSchema
+  name: ALL_LINAGE_SCHEMA
+  fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA
+  displayName: ALL_LINAGE_SCHEMA
+  deleted: false
+database:
+  id: f06b513d-043b-4cf9-9a2e-1d9bef419c82
+  type: database
+  name: MT_DB
+  fullyQualifiedName: Hybrid Runner snowflake.MT_DB
+  description: This is a testing database
+  displayName: MT_DB
+  deleted: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+  description: ""
+  displayName: Hybrid Runner snowflake
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: create or replace stream STREAM_SOURCE_TABLE_1 on table SOURCE_TABLE_1;
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"accessed\":{\"timestamp\":1762300800000,\"accessedBy\":{\"id\"\
+        :\"ed8a779f-c6af-4e65-85ca-4e4e018c7027\",\"type\":\"user\",\"fullyQualifiedName\"\
+        :\"mohit\",\"href\":\"https://sandbox-beta.open-metadata.org/v1/users/ed8a779f-c6af-4e65-85ca-4e4e018c7027\"\
+        }}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/MT_DB/schemas/ALL_LINAGE_SCHEMA/stream/STREAM_SOURCE_TABLE_1
+domains:
+  - id: 1f54f7fb-109c-4ae5-997d-1960c41339a4
+    type: domain
+    name: domain%.with%.stuff
+    fullyQualifiedName: '"domain%.with%.stuff"'
+    description: <p>ads</p>
+    displayName: domain%.with%.stuff
+    inherited: true
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1762300800000
+    accessedBy:
+      id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+      type: user
+      fullyQualifiedName: mohit
+      href: https://sandbox-beta.open-metadata.org/v1/users/ed8a779f-c6af-4e65-85ca-4e4e018c7027
+sourceHash: 21a3275ffb814fa77c28b8fedb2d97a8
+processedLineage: true
+entityStatus: Unprocessed

@@ -1,0 +1,183 @@
+name: TARGET_TABLE_1
+fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1
+tableType: Regular
+columns:
+  - name: REPORT_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.REPORT_DATE
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        reason: Chose PII.NonSensitive with a classification score of 1.00
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PRODUCT_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.PRODUCT_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PRODUCT_NAME
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: text(100)
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.PRODUCT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CATEGORY
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: text(50)
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.CATEGORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TOTAL_SALES
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 10
+    scale: 2
+    dataTypeDisplay: "number(10,2)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.TOTAL_SALES
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNITS_SOLD
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.UNITS_SOLD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REMAINING_INVENTORY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.REMAINING_INVENTORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REVENUE_RANK
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.REVENUE_RANK
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PROCESSED_AT
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ntz
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_1.PROCESSED_AT
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 0613a5fa-f1b2-4665-a493-3ed5cf158422
+  type: databaseSchema
+  name: ALL_LINAGE_SCHEMA
+  fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA
+  displayName: ALL_LINAGE_SCHEMA
+  deleted: false
+database:
+  id: f06b513d-043b-4cf9-9a2e-1d9bef419c82
+  type: database
+  name: MT_DB
+  fullyQualifiedName: Hybrid Runner snowflake.MT_DB
+  description: This is a testing database
+  displayName: MT_DB
+  deleted: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+  description: ""
+  displayName: Hybrid Runner snowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/MT_DB/schemas/ALL_LINAGE_SCHEMA/table/TARGET_TABLE_1
+domains:
+  - id: 1f54f7fb-109c-4ae5-997d-1960c41339a4
+    type: domain
+    name: domain%.with%.stuff
+    fullyQualifiedName: '"domain%.with%.stuff"'
+    description: <p>ads</p>
+    displayName: domain%.with%.stuff
+    inherited: true
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1762300800000
+    accessedBy:
+      id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+      type: user
+      fullyQualifiedName: mohit
+      href: https://sandbox-beta.open-metadata.org/v1/users/ed8a779f-c6af-4e65-85ca-4e4e018c7027
+sourceHash: de23def89960660d9a3ede95df009f48
+processedLineage: false
+entityStatus: Unprocessed

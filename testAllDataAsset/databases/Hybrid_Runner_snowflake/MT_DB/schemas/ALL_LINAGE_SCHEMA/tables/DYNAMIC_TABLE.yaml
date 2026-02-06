@@ -1,0 +1,156 @@
+name: DYNAMIC_TABLE
+fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.DYNAMIC_TABLE
+tableType: Dynamic
+columns:
+  - name: PROCESSED
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.DYNAMIC_TABLE.PROCESSED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RECORD_COUNT
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 18
+    scale: 0
+    dataTypeDisplay: "number(18,0)"
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.DYNAMIC_TABLE.RECORD_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ntz
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.DYNAMIC_TABLE.LAST_CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ntz
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.DYNAMIC_TABLE.FIRST_CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: b1fd1fd6-ff2e-4ef3-a40c-363e106b32d7
+    type: team
+    name: Ajith Test
+    fullyQualifiedName: Ajith Test
+    description: ""
+    displayName: Ajith Test
+    deleted: false
+  - id: 4614b5b7-7acc-4b93-96a5-3913903851f8
+    type: user
+    name: aanqueti18
+    fullyQualifiedName: aanqueti18
+    displayName: aanqueti18
+    deleted: false
+  - id: b7c8dcaf-1b29-4b57-8ac5-16f48ec4c096
+    type: team
+    name: abc.def.ghiabc.def.ghiabc.def.ghiabc.def.ghi
+    fullyQualifiedName: '"abc.def.ghiabc.def.ghiabc.def.ghiabc.def.ghi"'
+    description: ""
+    displayName: abc.def.ghiabc.def.ghiabc.def.ghiabc.def.ghi
+    deleted: true
+  - id: d0107fe9-afbe-4966-914f-bfec7dfc5861
+    type: user
+    name: wilsondanny
+    fullyQualifiedName: wilsondanny
+    displayName: Aaron Baker
+    deleted: false
+databaseSchema:
+  id: 0613a5fa-f1b2-4665-a493-3ed5cf158422
+  type: databaseSchema
+  name: ALL_LINAGE_SCHEMA
+  fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA
+  displayName: ALL_LINAGE_SCHEMA
+  deleted: false
+database:
+  id: f06b513d-043b-4cf9-9a2e-1d9bef419c82
+  type: database
+  name: MT_DB
+  fullyQualifiedName: Hybrid Runner snowflake.MT_DB
+  description: This is a testing database
+  displayName: MT_DB
+  deleted: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+  description: ""
+  displayName: Hybrid Runner snowflake
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace dynamic table DYNAMIC_TABLE(\n\tPROCESSED,\n\t\
+  RECORD_COUNT,\n\tLAST_CREATED,\n\tFIRST_CREATED\n) target_lag = '30 days' refresh_mode\
+  \ = AUTO initialize = ON_CREATE warehouse = COMPUTE_WH\n as\nSELECT\n    processed,\n\
+  \    COUNT(*) as record_count,\n    MAX(created_at) as last_created,\n    MIN(created_at)\
+  \ as first_created\nFROM transient_table\nGROUP BY processed;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: dataProducts
+      newValue: "[{\"id\":\"be95df38-d856-44d4-9484-9735f8f87898\",\"type\":\"dataProduct\"\
+        ,\"name\":\"2\",\"fullyQualifiedName\":\"2\",\"description\":\"<p>testing</p>\"\
+        ,\"displayName\":\"2\"},{\"id\":\"7b080acc-2dcd-4073-a0eb-40ede3ae84c5\",\"\
+        type\":\"dataProduct\",\"name\":\"customDataProduct1\",\"fullyQualifiedName\"\
+        :\"customDataProduct1\",\"description\":\"\",\"displayName\":\"customDataProduct1\"\
+        },{\"id\":\"d3fa8a0c-b894-43d8-b0b7-0a8f4ab6a0bf\",\"type\":\"dataProduct\"\
+        ,\"name\":\"Customer 360\",\"fullyQualifiedName\":\"Customer 360\",\"description\"\
+        :\"<p>Master customer table </p>\",\"displayName\":\"C360\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    owners:
+      changedBy: ashish
+      changedAt: 1763977745064
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/MT_DB/schemas/ALL_LINAGE_SCHEMA/dynamic-table/DYNAMIC_TABLE
+domains:
+  - id: 9ebbbfe5-af46-4bc1-a1ff-50c5bc8ea53b
+    type: domain
+    name: Ajith Test
+    fullyQualifiedName: Ajith Test
+    description: <p>Ajith Test</p>
+    displayName: Ajith Test
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+dataProducts:
+  - id: d3fa8a0c-b894-43d8-b0b7-0a8f4ab6a0bf
+    type: dataProduct
+    name: Customer 360
+    fullyQualifiedName: Customer 360
+    description: <p>Master customer table </p>
+    displayName: C360
+lifeCycle:
+  accessed:
+    timestamp: 1762300800000
+    accessedBy:
+      id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+      type: user
+      fullyQualifiedName: mohit
+      href: https://sandbox-beta.open-metadata.org/v1/users/ed8a779f-c6af-4e65-85ca-4e4e018c7027
+sourceHash: 6e82d7874ab02ed54bbc7b66c1085432
+processedLineage: true
+entityStatus: Unprocessed
