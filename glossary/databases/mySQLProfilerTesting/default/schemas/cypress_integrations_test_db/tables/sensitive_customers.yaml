@@ -1,0 +1,86 @@
+name: sensitive_customers
+fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers
+tableType: Regular
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_name
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers.user_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SSN
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers.SSN
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers.address
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DWH_X10
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: varchar(50)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers.DWH_X10
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2ccbe055-80e8-43d8-a17b-89b855877b42
+  type: databaseSchema
+  name: cypress_integrations_test_db
+  fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db
+  displayName: cypress_integrations_test_db
+  deleted: false
+database:
+  id: f7fac649-5083-4577-a08a-dafa62bb722d
+  type: database
+  name: default
+  fullyQualifiedName: mySQLProfilerTesting.default
+  displayName: default
+  deleted: false
+service:
+  id: 97415374-1a91-4fe6-ac3a-d2430e9e98c7
+  type: databaseService
+  name: mySQLProfilerTesting
+  fullyQualifiedName: mySQLProfilerTesting
+  description: ""
+  displayName: mySQLProfilerTesting
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: cdddcc58d23c7287e0e41b8123038c88
+processedLineage: false
+entityStatus: Approved

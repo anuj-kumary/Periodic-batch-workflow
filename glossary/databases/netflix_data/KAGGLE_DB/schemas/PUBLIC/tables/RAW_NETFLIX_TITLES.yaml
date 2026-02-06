@@ -1,0 +1,608 @@
+name: RAW_NETFLIX_TITLES
+fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES
+description: "This table holds extensive data on Netflix titles, including details\
+  \ such as genre, release year, and cast. Users can analyze trends, explore content\
+  \ diversity, and gain insights into viewing preferences."
+tableType: Regular
+columns:
+  - name: C1
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C1 contains the unique identifier for each Netflix title, allowing\
+      \ for easy reference and retrieval of specific records."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C1
+    tags:
+      - tagFQN: General.DriverLicense
+        name: DriverLicense
+        description: Person's driver's license image or number.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: C2
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C2 provides the title of the Netflix content, which is essential\
+      \ for identifying and categorizing the media available on the platform."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: C3
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C3 indicates the type of content, such as movie or series, which\
+      \ helps in categorizing the titles for analysis."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C3
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: C4
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C4 contains the release year of the title, providing temporal context\
+      \ for the content and allowing for time-based analysis."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C4
+    tags:
+      - tagFQN: Finance.asdasdasda
+        name: asdasdasda
+        displayName: ""
+        description: asdasdasda
+        source: Glossary
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: C5
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C5 lists the genres associated with each title, which aids in categorizing\
+      \ and analyzing content based on viewer preferences."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C5
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: C6
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C6 provides the cast members of the titles, which can be used to\
+      \ analyze the popularity and performance of actors in different titles."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C6
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: C7
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C7 contains the directors of the titles, allowing for analysis of\
+      \ content based on directorial influence and style."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C7
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: C8
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C8 provides the country of origin for each title, which is useful\
+      \ for analyzing content distribution and regional preferences."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C8
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: C9
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C9 contains the language of the title, which is important for understanding\
+      \ the accessibility and audience reach of the content."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C9
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: C10
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C10 provides the description or synopsis of the title, offering\
+      \ insights into the content and themes presented."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C10
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: C11
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C11 indicates the duration of the title, which is essential for\
+      \ understanding the time commitment required for viewing."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C11
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: C12
+    displayName: ""
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "C12 contains the rating of the title, which helps in assessing the\
+      \ quality and viewer reception of the content."
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.C12
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+  - id: b1fd1fd6-ff2e-4ef3-a40c-363e106b32d7
+    type: team
+    name: Ajith Test
+    fullyQualifiedName: Ajith Test
+    description: ""
+    displayName: Ajith Test
+    deleted: false
+  - id: 02572492-b9af-4e28-8231-b6d311e81d51
+    type: team
+    name: abc.def.ghi
+    fullyQualifiedName: '"abc.def.ghi"'
+    description: ""
+    displayName: abc.def.ghi
+    deleted: false
+  - id: b7c8dcaf-1b29-4b57-8ac5-16f48ec4c096
+    type: team
+    name: abc.def.ghiabc.def.ghiabc.def.ghiabc.def.ghi
+    fullyQualifiedName: '"abc.def.ghiabc.def.ghiabc.def.ghiabc.def.ghi"'
+    description: ""
+    displayName: abc.def.ghiabc.def.ghiabc.def.ghiabc.def.ghi
+    deleted: true
+databaseSchema:
+  id: cb2eeac8-b211-45ab-aa52-a45e69748563
+  type: databaseSchema
+  name: PUBLIC
+  fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC
+  displayName: PUBLIC
+  deleted: false
+database:
+  id: 7c99e46d-fbe1-4590-87b8-41bf5e40fe06
+  type: database
+  name: KAGGLE_DB
+  fullyQualifiedName: netflix_data.KAGGLE_DB
+  displayName: KAGGLE_DB
+  deleted: false
+service:
+  id: c40f61e1-02e3-4e8c-ac24-14dc1ea00341
+  type: databaseService
+  name: netflix_data
+  fullyQualifiedName: netflix_data
+  description: ""
+  displayName: netflix_data
+  deleted: false
+serviceType: Snowflake
+tags:
+  - tagFQN: '"Bug.Test".dataterm'
+    name: dataterm
+    displayName: dataterm
+    description: <p>dataterm</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '"Bug.Test".test'
+    name: test
+    displayName: ""
+    description: <p>test</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: '"Bug.Test".test1_glossary'
+    name: test1_glossary
+    displayName: test1_glossary
+    description: <p>test1_glossary</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.VATCode
+    name: VATCode
+    description: "VAT code or identification number. See [VAT Identification Number](https://en.wikipedia.org/wiki/VAT_identification_number)."
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: NONSENSITIVE.NonSensitive
+    name: NonSensitive
+    description: SNOWFLAKE TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Tier.Tier3
+    name: Tier3
+    description: |-
+      **Department/group level datasets that are typically non-business and general internal system**
+
+      - Used in product metrics, and dashboards to drive product decisions
+
+      - Used to track operational metrics of internal systems
+
+      - Source used to derive other critical Tier-3 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: imp.prod
+    name: prod
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: none.NONE
+    name: NONE
+    description: DATABRICKS TAG
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: quality.raw
+    name: raw
+    description: Bigquery Dataset Label
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: test_2_policy_tag.test_2_policy_tag
+    name: test_2_policy_tag
+    description: Bigquery Policy Tag
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: b37d3045-6c5f-4bdb-91e7-ff1dfc1db92a
+  type: testSuite
+  name: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.testSuite
+  fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.testSuite
+  displayName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"1d17752e-dc86-4185-9173-a32a7e94a159\",\"type\":\"team\"\
+        ,\"name\":\"Accounting\",\"fullyQualifiedName\":\"Accounting\",\"description\"\
+        :\"\",\"displayName\":\"Accounting\",\"deleted\":false},{\"id\":\"b1fd1fd6-ff2e-4ef3-a40c-363e106b32d7\"\
+        ,\"type\":\"team\",\"name\":\"Ajith Test\",\"fullyQualifiedName\":\"Ajith\
+        \ Test\",\"description\":\"\",\"displayName\":\"Ajith Test\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.9
+  changeSummary:
+    owners:
+      changedBy: reethika
+      changedAt: 1763120370273
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C1.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C2.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C3.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C4.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C5.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C6.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C7.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C8.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C9.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C10.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C11.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+    columns.C12.description:
+      changedBy: ingestion-bot
+      changedAt: 1755435486408
+retentionPeriod: 1
+extension:
+  aanew:
+    - id: 5c910771-ea8a-423b-bc2b-257c01267055
+      name: karthicksharan01
+      type: user
+      deleted: false
+      displayName: karthick sharan
+      fullyQualifiedName: karthicksharan01
+    - id: f4e2f320-61ca-436a-a15d-908d0a8c4220
+      name: karthicksharan02
+      type: user
+      deleted: false
+      displayName: karthick sharan
+      fullyQualifiedName: karthicksharan02
+sourceUrl: https://app.snowflake.com/ocyklou/ye88869/#/data/databases/KAGGLE_DB/schemas/PUBLIC/table/RAW_NETFLIX_TITLES
+domains:
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '
+  - id: 46a38dc6-805a-42bf-90ce-bbf641e75f35
+    type: domain
+    name: Domain Pere
+    fullyQualifiedName: Domain Pere
+    description: asd
+    displayName: Domain Pere
+  - id: 85e932a2-e842-4a68-8db7-abf5f78bbcbd
+    type: domain
+    name: Domain Test
+    fullyQualifiedName: Domain Test
+    description: <p>Domain Test</p>
+    displayName: Domain Test
+  - id: e0c57bf5-9e9c-4757-9a2b-3303af44361e
+    type: domain
+    name: Sub Domain Pere
+    fullyQualifiedName: Domain Pere.Sub Domain Pere
+    description: asd
+    displayName: Sub Domain Pere
+  - id: c5953260-03a0-47dc-a602-7431689b0a3e
+    type: domain
+    name: testing-rbac-sub-domain
+    fullyQualifiedName: Design.testing-rbac-sub-domain
+    description: Testing RBAC SUB DOMAIN
+    displayName: Testing RBAC SUB DOMAIN
+dataProducts:
+  - id: 9d619e97-2f76-436a-aa4e-a2afd8c2d2d7
+    type: dataProduct
+    name: Engin test 2
+    fullyQualifiedName: Engin test 2
+    description: <p>Engin test 2</p>
+    displayName: Engin test 2
+  - id: 6879452a-0139-42ae-8c8c-4a82f578f14c
+    type: dataProduct
+    name: test
+    fullyQualifiedName: test
+    description: <p>test</p>
+    displayName: test
+  - id: 44bc6684-a477-444a-b79d-40d71677c147
+    type: dataProduct
+    name: test_data_product
+    fullyQualifiedName: test_data_product
+    description: <p>desc</p><hr><p></p>
+    displayName: Test Data Product
+certification:
+  tagLabel:
+    tagFQN: Certification.Gold
+    name: Gold
+    description: Gold certified Data Asset.
+    style:
+      color: "#FFCE00"
+      iconURL: GoldCertification.svg
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+  appliedDate: 1755533488813
+  expiryDate: 1758125488813
+sourceHash: a17fb874ba57a7f395ab355ef8cf6451
+processedLineage: false
+entityStatus: Approved

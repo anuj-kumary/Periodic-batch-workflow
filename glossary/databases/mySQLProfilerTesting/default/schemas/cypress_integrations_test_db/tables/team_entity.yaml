@@ -1,0 +1,104 @@
+name: team_entity
+fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.json
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.updatedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.updatedBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: deleted
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: teamType
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity.teamType
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2ccbe055-80e8-43d8-a17b-89b855877b42
+  type: databaseSchema
+  name: cypress_integrations_test_db
+  fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db
+  displayName: cypress_integrations_test_db
+  deleted: false
+database:
+  id: f7fac649-5083-4577-a08a-dafa62bb722d
+  type: database
+  name: default
+  fullyQualifiedName: mySQLProfilerTesting.default
+  displayName: default
+  deleted: false
+service:
+  id: 97415374-1a91-4fe6-ac3a-d2430e9e98c7
+  type: databaseService
+  name: mySQLProfilerTesting
+  fullyQualifiedName: mySQLProfilerTesting
+  description: ""
+  displayName: mySQLProfilerTesting
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2024688197f1e0a98d9a344de4a3d7cf
+processedLineage: false
+entityStatus: Approved

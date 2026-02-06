@@ -1,0 +1,95 @@
+name: chart_entity
+fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity
+tableType: Regular
+columns:
+  - name: id
+    dataType: VARCHAR
+    dataLength: 36
+    dataTypeDisplay: varchar(36)
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity.id
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: fullyQualifiedName
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity.fullyQualifiedName
+    tags: []
+    constraint: UNIQUE
+    children: []
+    customMetrics: []
+  - name: json
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity.json
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: updatedAt
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity.updatedAt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: updatedBy
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity.updatedBy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: deleted
+    dataType: TINYINT
+    dataLength: 1
+    dataTypeDisplay: tinyint
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity.deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 4b20d34c-ba2c-4653-b80d-8b6524346426
+  type: databaseSchema
+  name: cypress_integrations_test_db
+  fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db
+  displayName: cypress_integrations_test_db
+  deleted: false
+database:
+  id: 1bfb79ad-a666-4a00-b057-c34524e94217
+  type: database
+  name: default
+  fullyQualifiedName: MysqlPlaywrightTest.default
+  displayName: default
+  deleted: false
+service:
+  id: 812b101d-0ea3-4abb-b51a-2526de3209e6
+  type: databaseService
+  name: MysqlPlaywrightTest
+  fullyQualifiedName: MysqlPlaywrightTest
+  description: ""
+  displayName: MysqlPlaywrightTest
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fa145742838abd346ed2c0244a6c1693
+processedLineage: false
+entityStatus: Approved
