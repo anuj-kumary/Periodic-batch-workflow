@@ -1,0 +1,198 @@
+name: table_constraints
+fullyQualifiedName: demo_unity.demo.information_schema.table_constraints
+description: Describes metadata for all primary and foreign key constraints within
+  the catalog.
+tableType: View
+columns:
+  - name: constraint_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the constraint.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.constraint_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: constraint_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the constraint.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.constraint_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: constraint_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the constraint.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.constraint_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the table.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.table_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the table.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.table_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the table in which the constraint is defined.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.table_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: constraint_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "One of 'CHECK', 'PRIMARY KEY', 'FOREIGN KEY'"
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.constraint_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_deferrable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always`’YES’`. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.is_deferrable
+    tags: []
+    children: []
+    customMetrics: []
+  - name: initially_deferred
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always 'YES'. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.initially_deferred
+    tags: []
+    children: []
+    customMetrics: []
+  - name: enforced
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "'YES' if constraint is enforced, 'NO' otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.table_constraints.enforced
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Describes metadata for all primary and foreign key constraints within
+        the catalog.
+    - name: columns.constraint_catalog.description
+      newValue: Catalog containing the constraint.
+    - name: columns.constraint_schema.description
+      newValue: Schema containing the constraint.
+    - name: columns.constraint_name.description
+      newValue: Name of the constraint.
+    - name: columns.table_catalog.description
+      newValue: Catalog containing the table.
+    - name: columns.table_schema.description
+      newValue: Schema containing the table.
+    - name: columns.table_name.description
+      newValue: Name of the table in which the constraint is defined.
+    - name: columns.constraint_type.description
+      newValue: "One of 'CHECK', 'PRIMARY KEY', 'FOREIGN KEY'"
+    - name: columns.is_deferrable.description
+      newValue: Always`’YES’`. Reserved for future use.
+    - name: columns.initially_deferred.description
+      newValue: Always 'YES'. Reserved for future use.
+    - name: columns.enforced.description
+      newValue: "'YES' if constraint is enforced, 'NO' otherwise."
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: 7bf3e9dfe86cbe82d997eac1a7833046
+      newValue: 114850d8854c0b1a3f1ec4901105e1c1
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.enforced.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.table_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.table_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.is_deferrable.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.table_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.constraint_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.constraint_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.constraint_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.constraint_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+    columns.initially_deferred.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305863919
+domains: []
+dataProducts: []
+sourceHash: 114850d8854c0b1a3f1ec4901105e1c1
+processedLineage: false
+entityStatus: Approved

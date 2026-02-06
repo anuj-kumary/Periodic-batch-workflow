@@ -1,0 +1,70 @@
+name: my_table2
+fullyQualifiedName: demo_unity.demo.new_schema.my_table2
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: demo_unity.demo.new_schema.my_table2.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: spaced column
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.new_schema.my_table2.spaced column
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 69281bac-c4b7-4c0d-bb42-33ebe79ee68a
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: demo_unity.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns
+      newValue: "[{\"name\":\"spaced column\",\"dataType\":\"STRING\",\"dataLength\"\
+        :1,\"dataTypeDisplay\":\"string\",\"fullyQualifiedName\":\"demo_unity.demo.new_schema.my_table2.spaced\
+        \ column\",\"tags\":[]}]"
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: e2fea02d21f5aedcff4903dc1f5fe901
+      newValue: 0039e7bb1598417a279599d0d73db723
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+sourceHash: 0039e7bb1598417a279599d0d73db723
+processedLineage: false
+entityStatus: Approved

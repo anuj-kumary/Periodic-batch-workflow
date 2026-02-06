@@ -1,0 +1,264 @@
+name: tables
+fullyQualifiedName: demo_unity.demo.information_schema.tables
+description: Describes tables and views defined within the catalog.
+tableType: View
+columns:
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog that contains the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.table_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema that contains the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.table_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.table_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "One of 'BASE TABLE', 'VIEW'."
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.table_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_insertable_into
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "'YES' if the relation can be inserted into, 'NO' otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.is_insertable_into
+    tags: []
+    children: []
+    customMetrics: []
+  - name: commit_action
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always 'PRESERVE'. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.commit_action
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_owner
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: User or group (principal) currently owning the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.table_owner
+    tags: []
+    children: []
+    customMetrics: []
+  - name: comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: An optional comment that describes the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.comment
+    tags: []
+    children: []
+    customMetrics: []
+  - name: created
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: Timestamp when the relation was created.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.created
+    tags: []
+    children: []
+    customMetrics: []
+  - name: created_by
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal which created the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.created_by
+    tags: []
+    children: []
+    customMetrics: []
+  - name: last_altered
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: Timestamp when the relation definition was last altered in any way.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.last_altered
+    tags: []
+    children: []
+    customMetrics: []
+  - name: last_altered_by
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal which last altered the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.last_altered_by
+    tags: []
+    children: []
+    customMetrics: []
+  - name: data_source_format
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Format of the data source such as PARQUET, or CSV."
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.data_source_format
+    tags: []
+    children: []
+    customMetrics: []
+  - name: storage_sub_directory
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Path to the storage of an external table, NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.storage_sub_directory
+    tags: []
+    children: []
+    customMetrics: []
+  - name: storage_path
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.tables.storage_path
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Describes tables and views defined within the catalog.
+    - name: columns
+      newValue: "[{\"name\":\"storage_path\",\"dataType\":\"STRING\",\"dataLength\"\
+        :1,\"dataTypeDisplay\":\"string\",\"fullyQualifiedName\":\"demo_unity.demo.information_schema.tables.storage_path\"\
+        ,\"tags\":[]}]"
+    - name: columns.table_catalog.description
+      newValue: Catalog that contains the relation.
+    - name: columns.table_schema.description
+      newValue: Schema that contains the relation.
+    - name: columns.table_name.description
+      newValue: Name of the relation.
+    - name: columns.table_type.description
+      newValue: "One of 'BASE TABLE', 'VIEW'."
+    - name: columns.is_insertable_into.description
+      newValue: "'YES' if the relation can be inserted into, 'NO' otherwise."
+    - name: columns.commit_action.description
+      newValue: Always 'PRESERVE'. Reserved for future use.
+    - name: columns.table_owner.description
+      newValue: User or group (principal) currently owning the relation.
+    - name: columns.comment.description
+      newValue: An optional comment that describes the relation.
+    - name: columns.created.description
+      newValue: Timestamp when the relation was created.
+    - name: columns.created_by.description
+      newValue: Principal which created the relation.
+    - name: columns.last_altered.description
+      newValue: Timestamp when the relation definition was last altered in any way.
+    - name: columns.last_altered_by.description
+      newValue: Principal which last altered the relation.
+    - name: columns.data_source_format.description
+      newValue: "Format of the data source such as PARQUET, or CSV."
+    - name: columns.storage_sub_directory.description
+      newValue: "Path to the storage of an external table, NULL otherwise."
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: 00c68a7aa2984b94bec93eb3451f0de3
+      newValue: 10dbd2ae5797b9765a7f007320e2a974
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.created.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.created_by.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.table_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.table_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.table_owner.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.last_altered.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.table_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.commit_action.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.table_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.last_altered_by.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.data_source_format.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.is_insertable_into.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+    columns.storage_sub_directory.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866344
+domains: []
+dataProducts: []
+sourceHash: 10dbd2ae5797b9765a7f007320e2a974
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,77 @@
+name: ENABLED_ROLES
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ENABLED_ROLES
+tableType: View
+columns:
+  - name: ROLE_NAME
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ENABLED_ROLES.ROLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROLE_HOST
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ENABLED_ROLES.ROLE_HOST
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_DEFAULT
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ENABLED_ROLES.IS_DEFAULT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_MANDATORY
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ENABLED_ROLES.IS_MANDATORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2d207368cd5811c1e233c00dcd4b00c6
+processedLineage: false
+entityStatus: Approved

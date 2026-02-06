@@ -1,0 +1,367 @@
+name: WebLink
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.WebLink
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Custom Link ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PageOrSobjectType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Page or sObject Type Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.PageOrSobjectType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 240
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: IsProtected
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Protected Component
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.IsProtected
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: Url
+    dataType: VARCHAR
+    dataLength: 1048576
+    dataTypeDisplay: textarea
+    description: URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Url
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: EncodingKey
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Link Encoding
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.EncodingKey
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: LinkType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Content Source
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.LinkType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: OpenType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Behavior
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.OpenType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: Height
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Height (in pixels)
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Height
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: Width
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Width (in pixels)
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Width
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: ShowsLocation
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Show Address Bar
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.ShowsLocation
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: HasScrollbars
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Show Scrollbars
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.HasScrollbars
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: HasToolbar
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Show Toolbars
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.HasToolbar
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: HasMenubar
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Show Menu Bar
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.HasMenubar
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: ShowsStatus
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Show Status Bar
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.ShowsStatus
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: IsResizable
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Resizeable
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.IsResizable
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: Position
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Window Position
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Position
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: ScontrolId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Custom S-Control ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.ScontrolId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: MasterLabel
+    dataType: UNKNOWN
+    dataLength: 240
+    dataTypeDisplay: string
+    description: Label
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.MasterLabel
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 1000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: DisplayType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Display Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.DisplayType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: RequireRowSelection
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Require Row Selection
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.RequireRowSelection
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: NamespacePrefix
+    dataType: UNKNOWN
+    dataLength: 15
+    dataTypeDisplay: string
+    description: Namespace Prefix
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.NamespacePrefix
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.WebLink.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620888484
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/WebLink/list
+domains: []
+dataProducts: []
+sourceHash: 3ac6e8153b64006fd2628842e6e20ca9
+processedLineage: false
+entityStatus: Approved

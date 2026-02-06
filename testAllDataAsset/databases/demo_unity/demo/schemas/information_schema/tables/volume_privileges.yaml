@@ -1,0 +1,105 @@
+name: volume_privileges
+fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges
+tableType: View
+columns:
+  - name: grantor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.grantor
+    tags: []
+    children: []
+    customMetrics: []
+  - name: grantee
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.grantee
+    tags: []
+    children: []
+    customMetrics: []
+  - name: volume_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.volume_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: volume_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.volume_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: volume_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.volume_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: privilege_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.privilege_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_grantable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.is_grantable
+    tags: []
+    children: []
+    customMetrics: []
+  - name: inherited_from
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.volume_privileges.inherited_from
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 322835ae8444832d1e18733572729bf4
+processedLineage: false
+entityStatus: Approved

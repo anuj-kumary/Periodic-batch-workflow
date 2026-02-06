@@ -1,0 +1,154 @@
+name: catalogs
+fullyQualifiedName: demo_unity.demo.information_schema.catalogs
+description: Describes catalogs.
+tableType: View
+columns:
+  - name: catalog_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the catalog.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.catalog_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: catalog_owner
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Owner of the catalog.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.catalog_owner
+    tags: []
+    children: []
+    customMetrics: []
+  - name: comment
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: An optional comment that describes the catalog.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.comment
+    tags: []
+    children: []
+    customMetrics: []
+  - name: created
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: Timestamp when the catalog was created.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.created
+    tags: []
+    children: []
+    customMetrics: []
+  - name: created_by
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal who created the catalog.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.created_by
+    tags: []
+    children: []
+    customMetrics: []
+  - name: last_altered
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    description: Timestamp when the catalog was last altered in any way.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.last_altered
+    tags: []
+    children: []
+    customMetrics: []
+  - name: last_altered_by
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal who last altered the catalog.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalogs.last_altered_by
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Describes catalogs.
+    - name: columns.catalog_name.description
+      newValue: Name of the catalog.
+    - name: columns.catalog_owner.description
+      newValue: Owner of the catalog.
+    - name: columns.comment.description
+      newValue: An optional comment that describes the catalog.
+    - name: columns.created.description
+      newValue: Timestamp when the catalog was created.
+    - name: columns.created_by.description
+      newValue: Principal who created the catalog.
+    - name: columns.last_altered.description
+      newValue: Timestamp when the catalog was last altered in any way.
+    - name: columns.last_altered_by.description
+      newValue: Principal who last altered the catalog.
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: 350b2eac26ad4fe8d553bd5a94bf155c
+      newValue: 5fb57cfb33654663b7a1998a385f043f
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.comment.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.created.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.created_by.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.catalog_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.last_altered.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.catalog_owner.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+    columns.last_altered_by.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305853623
+domains: []
+dataProducts: []
+sourceHash: 5fb57cfb33654663b7a1998a385f043f
+processedLineage: false
+entityStatus: Approved

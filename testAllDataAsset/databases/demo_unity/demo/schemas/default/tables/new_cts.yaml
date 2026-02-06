@@ -1,0 +1,71 @@
+name: new_cts
+fullyQualifiedName: demo_unity.demo.default.new_cts
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.default.new_cts.user_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.default.new_cts.username
+    tags: []
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.default.new_cts.email
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+databaseSchema:
+  id: d41c161d-5e79-4207-8d33-628da9331901
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: demo_unity.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2c4e21fb4f1ddba3e1d7d15f34ef087c
+processedLineage: false
+entityStatus: Approved

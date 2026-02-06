@@ -1,0 +1,181 @@
+name: tasks
+fullyQualifiedName: Druid.default.sys.tasks
+description: ""
+tableType: Regular
+columns:
+  - name: task_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.task_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: group_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.group_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: datasource
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.datasource
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created_time
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.created_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: queue_insertion_time
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.queue_insertion_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: runner_status
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.runner_status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: duration
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.tasks.duration
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: location
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.location
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: host
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.host
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: plaintext_port
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.tasks.plaintext_port
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: tls_port
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Druid.default.sys.tasks.tls_port
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: error_msg
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: Druid.default.sys.tasks.error_msg
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 9cd9a536-ab77-4d73-bb65-cc71ed8a85ac
+    type: user
+    name: sachin
+    fullyQualifiedName: sachin
+    displayName: Sachin Chaurasiya
+    deleted: false
+    inherited: true
+  - id: 59d19d5c-1335-4f09-81a2-528b6f1bb491
+    type: user
+    name: siddhant.t
+    fullyQualifiedName: '"siddhant.t"'
+    displayName: siddhant.t
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: 8c2762de-226e-483a-9ae4-188a2c8b9015
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: Druid.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 735d8e37-f921-42b8-9de6-ca6049d5cd9c
+  type: database
+  name: default
+  fullyQualifiedName: Druid.default
+  displayName: default
+  deleted: false
+service:
+  id: 604e3478-a6c7-41b9-9c58-0303183dbed1
+  type: databaseService
+  name: Druid
+  fullyQualifiedName: Druid
+  displayName: Druid
+  deleted: false
+serviceType: Druid
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2037093e5a67a8d0186545282e12ed44
+processedLineage: false
+entityStatus: Approved

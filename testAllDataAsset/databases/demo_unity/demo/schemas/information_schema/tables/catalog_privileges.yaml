@@ -1,0 +1,140 @@
+name: catalog_privileges
+fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges
+description: Lists principals that have privileges on the catalogs.
+tableType: View
+columns:
+  - name: grantor
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal that granted the privilege.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges.grantor
+    tags: []
+    children: []
+    customMetrics: []
+  - name: grantee
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Principal to which the privilege is granted.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges.grantee
+    tags: []
+    children: []
+    customMetrics: []
+  - name: catalog_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog on which the privilege is granted.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges.catalog_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: privilege_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Privilege being granted.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges.privilege_type
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_grantable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges.is_grantable
+    tags: []
+    children: []
+    customMetrics: []
+  - name: inherited_from
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The ancestor relation that the privilege is inherited from.
+    fullyQualifiedName: demo_unity.demo.information_schema.catalog_privileges.inherited_from
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Lists principals that have privileges on the catalogs.
+    - name: columns.grantor.description
+      newValue: Principal that granted the privilege.
+    - name: columns.grantee.description
+      newValue: Principal to which the privilege is granted.
+    - name: columns.catalog_name.description
+      newValue: Catalog on which the privilege is granted.
+    - name: columns.privilege_type.description
+      newValue: Privilege being granted.
+    - name: columns.is_grantable.description
+      newValue: Always NO. Reserved for future use.
+    - name: columns.inherited_from.description
+      newValue: The ancestor relation that the privilege is inherited from.
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: ba92a8fafbb1be9eb43980c1ca4591e1
+      newValue: 98eea92755eb08f652bdaef91ad10b26
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+    columns.grantee.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+    columns.grantor.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+    columns.catalog_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+    columns.is_grantable.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+    columns.inherited_from.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+    columns.privilege_type.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305852682
+domains: []
+dataProducts: []
+sourceHash: 98eea92755eb08f652bdaef91ad10b26
+processedLineage: false
+entityStatus: Approved

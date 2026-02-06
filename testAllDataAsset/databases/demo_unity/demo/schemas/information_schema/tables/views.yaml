@@ -1,0 +1,176 @@
+name: views
+fullyQualifiedName: demo_unity.demo.information_schema.views
+description: Describes view specific information about the views in the catalog.
+tableType: View
+columns:
+  - name: table_catalog
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Catalog containing the view.
+    fullyQualifiedName: demo_unity.demo.information_schema.views.table_catalog
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Schema containing the view.
+    fullyQualifiedName: demo_unity.demo.information_schema.views.table_schema
+    tags: []
+    children: []
+    customMetrics: []
+  - name: table_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the relation.
+    fullyQualifiedName: demo_unity.demo.information_schema.views.table_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: view_definition
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The view text if the user owns the view, NULL otherwise."
+    fullyQualifiedName: demo_unity.demo.information_schema.views.view_definition
+    tags: []
+    children: []
+    customMetrics: []
+  - name: check_option
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always 'NONE'. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.views.check_option
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_updatable
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use
+    fullyQualifiedName: demo_unity.demo.information_schema.views.is_updatable
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_insertable_into
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NO. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.views.is_insertable_into
+    tags: []
+    children: []
+    customMetrics: []
+  - name: sql_path
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Always NULL. Reserved for future use.
+    fullyQualifiedName: demo_unity.demo.information_schema.views.sql_path
+    tags: []
+    children: []
+    customMetrics: []
+  - name: is_materialized
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: demo_unity.demo.information_schema.views.is_materialized
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a7ca6192-8e99-4971-af78-d200bbfd7c21
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: demo_unity.demo.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: be9d601f-af0c-46da-861d-83f19423c978
+  type: database
+  name: demo
+  fullyQualifiedName: demo_unity.demo
+  displayName: demo
+  deleted: false
+service:
+  id: fc0195a4-9aa5-4620-a28d-c630c9f13051
+  type: databaseService
+  name: demo_unity
+  fullyQualifiedName: demo_unity
+  description: ""
+  displayName: demo_unity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: Describes view specific information about the views in the catalog.
+    - name: columns.table_catalog.description
+      newValue: Catalog containing the view.
+    - name: columns.table_schema.description
+      newValue: Schema containing the view.
+    - name: columns.table_name.description
+      newValue: Name of the relation.
+    - name: columns.view_definition.description
+      newValue: "The view text if the user owns the view, NULL otherwise."
+    - name: columns.check_option.description
+      newValue: Always 'NONE'. Reserved for future use.
+    - name: columns.is_updatable.description
+      newValue: Always NO. Reserved for future use
+    - name: columns.is_insertable_into.description
+      newValue: Always NO. Reserved for future use.
+    - name: columns.sql_path.description
+      newValue: Always NULL. Reserved for future use.
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: e16275ba95e4d81d29a6d725945419f6
+      newValue: f1f6657b0b0c9c0cccc307d9308a925b
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.sql_path.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.table_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.check_option.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.is_updatable.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.table_schema.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.table_catalog.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.view_definition.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+    columns.is_insertable_into.description:
+      changedBy: ingestion-bot
+      changedAt: 1745305866917
+domains: []
+dataProducts: []
+sourceHash: f1f6657b0b0c9c0cccc307d9308a925b
+processedLineage: false
+entityStatus: Approved
