@@ -1,0 +1,164 @@
+name: EXTERNAL_TABLES
+fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database that the external table belongs to
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.TABLE_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema that the external table belongs to
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.TABLE_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.TABLE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.TABLE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last altered time of the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_DDL
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last DDL time of the view
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.LAST_DDL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_DDL_BY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: User name that performed the last DDL of the view
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.LAST_DDL_BY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LOCATION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Location of the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.LOCATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FILE_FORMAT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: File format name (if there is one) of the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.FILE_FORMAT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FILE_FORMAT_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: File format type (if not named) of the external table
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EXTERNAL_TABLES.FILE_FORMAT_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b002d3c1-1583-4118-bd21-aee43a82dff9
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: ef08a354-f59d-4892-9c1a-f7607fdec2af
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/EXTERNAL_TABLES
+domains: []
+dataProducts: []
+sourceHash: 3afdb0f56d978784daf9baac8a3899cd
+processedLineage: false
+entityStatus: Approved
