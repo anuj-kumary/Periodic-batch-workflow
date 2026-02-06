@@ -1,0 +1,51 @@
+name: METADATA
+fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.METADATA
+tableType: Transient
+columns:
+  - name: DBT_PKG_VERSION
+    dataType: VARCHAR
+    dataLength: 6
+    dataTypeDisplay: text(6)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.METADATA.DBT_PKG_VERSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 59ae5f52-bf18-4c7c-a444-16d0d55748df
+  type: databaseSchema
+  name: DBT_SAMPLE_ELEMENTARY
+  fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY
+  displayName: DBT_SAMPLE_ELEMENTARY
+  deleted: false
+database:
+  id: 8a5b200a-0838-4865-b221-ed427537b11d
+  type: database
+  name: DBT_DB
+  fullyQualifiedName: hktest2.DBT_DB
+  displayName: DBT_DB
+  deleted: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2
+  description: ""
+  displayName: hktest2
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/DBT_DB/schemas/DBT_SAMPLE_ELEMENTARY/table/METADATA
+domains: []
+dataProducts: []
+sourceHash: 1c42953f1e27f9cc42b9523a31af1436
+processedLineage: false
+entityStatus: Approved

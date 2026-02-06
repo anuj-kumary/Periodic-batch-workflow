@@ -1,0 +1,109 @@
+name: JOB_RUN_RESULTS
+fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS
+tableType: View
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RUN_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS.RUN_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RUN_STARTED_AT
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ntz
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS.RUN_STARTED_AT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RUN_COMPLETED_AT
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ntz
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS.RUN_COMPLETED_AT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: RUN_EXECUTION_TIME
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 18
+    scale: 0
+    dataTypeDisplay: "number(18,0)"
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.JOB_RUN_RESULTS.RUN_EXECUTION_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 59ae5f52-bf18-4c7c-a444-16d0d55748df
+  type: databaseSchema
+  name: DBT_SAMPLE_ELEMENTARY
+  fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY
+  displayName: DBT_SAMPLE_ELEMENTARY
+  deleted: false
+database:
+  id: 8a5b200a-0838-4865-b221-ed427537b11d
+  type: database
+  name: DBT_DB
+  fullyQualifiedName: hktest2.DBT_DB
+  displayName: DBT_DB
+  deleted: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2
+  description: ""
+  displayName: hktest2
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace   view dbt_db.DBT_SAMPLE_elementary.job_run_results\n\
+  \  \n   as (\n    \n\n\n\n\n\nwith jobs as (\n  select\n    job_name,\n    job_id,\n\
+  \    job_run_id,\n    \nmin(cast(run_started_at as timestamp))\n as job_run_started_at,\n\
+  \    \nmax(cast(run_completed_at as timestamp))\n as job_run_completed_at,\n   \
+  \ \n    datediff(\n        second,\n        \nmin(cast(run_started_at as timestamp))\n\
+  ,\n        \nmax(cast(run_completed_at as timestamp))\n\n        )\n as job_run_execution_time\n\
+  \  from dbt_db.DBT_SAMPLE_elementary.dbt_invocations\n  where job_id is not null\n\
+  \  group by job_name, job_id, job_run_id\n)\n\nselect\n  job_name as name,\n  job_id\
+  \ as id,\n  job_run_id as run_id,\n  job_run_started_at as run_started_at,\n  job_run_completed_at\
+  \ as run_completed_at,\n  job_run_execution_time as run_execution_time\nfrom jobs\n\
+  \  );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/DBT_DB/schemas/DBT_SAMPLE_ELEMENTARY/view/JOB_RUN_RESULTS
+domains: []
+dataProducts: []
+sourceHash: b9f7666c0bfd7555355e6b193063674f
+processedLineage: false
+entityStatus: Approved
