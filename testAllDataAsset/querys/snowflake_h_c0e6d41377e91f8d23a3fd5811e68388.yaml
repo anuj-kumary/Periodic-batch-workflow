@@ -1,0 +1,42 @@
+name: c0e6d41377e91f8d23a3fd5811e68388
+fullyQualifiedName: snowflake_h.c0e6d41377e91f8d23a3fd5811e68388
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.5
+owners: []
+duration: 1.6943216E7
+users: []
+query: "WITH bb70fc319f31ef506fc099f8db12e70f_rnd AS \n(SELECT \"CATALOG_SALES_1\"\
+  .\"CS_CATALOG_PAGE_SK\" AS \"CS_CATALOG_PAGE_SK\" \nFROM \"TPCDS_SF100TCL\".\"CATALOG_SALES\"\
+  \ AS \"CATALOG_SALES_1\" TABLESAMPLE bernoulli(?)), \nbb70fc319f31ef506fc099f8db12e70f_sample\
+  \ AS \n(SELECT bb70fc319f31ef506fc099f8db12e70f_rnd.\"CS_CATALOG_PAGE_SK\" AS \"\
+  CS_CATALOG_PAGE_SK\" \nFROM bb70fc319f31ef506fc099f8db12e70f_rnd)\n SELECT avg(\"\
+  CS_CATALOG_PAGE_SK\") AS mean, count(\"CS_CATALOG_PAGE_SK\") AS \"valuesCount\"\
+  , count(DISTINCT \"CS_CATALOG_PAGE_SK\") AS \"distinctCount\", MIN(\"CS_CATALOG_PAGE_SK\"\
+  ) AS min, MAX(\"CS_CATALOG_PAGE_SK\") AS max, coalesce(SUM(CASE WHEN (\"CS_CATALOG_PAGE_SK\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CS_CATALOG_PAGE_SK\"\
+  ) AS stddev, SUM(\"CS_CATALOG_PAGE_SK\") AS sum \nFROM bb70fc319f31ef506fc099f8db12e70f_sample\n\
+  \ LIMIT ?"
+checksum: c0e6d41377e91f8d23a3fd5811e68388
+queryDate: 1740787200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8429ffb6-97ac-4fdd-9534-55b0d18846ae
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

@@ -1,0 +1,41 @@
+name: 984b93bf7f00d0c50c6c7c07f73bdc56
+fullyQualifiedName: snowflake_h.984b93bf7f00d0c50c6c7c07f73bdc56
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 177734.0
+users: []
+query: "SELECT \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_CATALOG_PAGE_SK\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_CATALOG_PAGE_SK\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_CATALOG_PAGE_ID\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_CATALOG_PAGE_ID\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_START_DATE_SK\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_START_DATE_SK\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_END_DATE_SK\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_END_DATE_SK\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_DEPARTMENT\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_DEPARTMENT\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_CATALOG_NUMBER\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_CATALOG_NUMBER\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_CATALOG_PAGE_NUMBER\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_CATALOG_PAGE_NUMBER\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_DESCRIPTION\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_DESCRIPTION\"\
+  , \"TPCDS_SF100TCL\".\"CATALOG_PAGE\".\"CP_TYPE\" AS \"TPCDS_SF100TCL_CATALOG_PAGE_CP_TYPE\"\
+  \ \nFROM \"TPCDS_SF100TCL\".\"CATALOG_PAGE\"\n LIMIT ?"
+checksum: 984b93bf7f00d0c50c6c7c07f73bdc56
+queryDate: 1740787200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0d56c532-cc1e-4df9-a7f2-d5d0c761d312
+    type: table
+    name: CATALOG_PAGE
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_PAGE
+    displayName: CATALOG_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

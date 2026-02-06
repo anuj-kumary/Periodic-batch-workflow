@@ -1,0 +1,42 @@
+name: 7e28ca6e53b5d0598c7eadf43a9edfea
+fullyQualifiedName: snowflake_h.7e28ca6e53b5d0598c7eadf43a9edfea
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 1808.0
+users: []
+query: "SELECT \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"CATALOG\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_CATALOG\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"SCHEMA\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_SCHEMA\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"NAME\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_NAME\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"OWNER\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_OWNER\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"ROW_COUNT\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_ROW_COUNT\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"BYTES\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_BYTES\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"RETENTION_TIME\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_RETENTION_TIME\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"CREATED\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_CREATED\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"LAST_ALTERED\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_LAST_ALTERED\"\
+  , \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\".\"COMMENT\" AS \"INFORMATION_SCHEMA_HYBRID_TABLES_COMMENT\"\
+  \ \nFROM \"INFORMATION_SCHEMA\".\"HYBRID_TABLES\"\n LIMIT ?"
+checksum: 7e28ca6e53b5d0598c7eadf43a9edfea
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 03bcded9-c688-4f79-9bd7-d4c6207f9b4f
+    type: table
+    name: HYBRID_TABLES
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.HYBRID_TABLES
+    displayName: HYBRID_TABLES
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

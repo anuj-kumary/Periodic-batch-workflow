@@ -1,0 +1,35 @@
+name: 9b786a6586779239253da2d63354d69f
+fullyQualifiedName: snowflake_h.9b786a6586779239253da2d63354d69f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.5
+owners: []
+duration: 66.0
+users: []
+query: "SELECT \"TPCDS_SF100TCL\".\"REASON\".\"R_REASON_SK\" AS \"TPCDS_SF100TCL_REASON_R_REASON_SK\"\
+  , \"TPCDS_SF100TCL\".\"REASON\".\"R_REASON_ID\" AS \"TPCDS_SF100TCL_REASON_R_REASON_ID\"\
+  , \"TPCDS_SF100TCL\".\"REASON\".\"R_REASON_DESC\" AS \"TPCDS_SF100TCL_REASON_R_REASON_DESC\"\
+  \ \nFROM \"TPCDS_SF100TCL\".\"REASON\"\n LIMIT ?"
+checksum: 9b786a6586779239253da2d63354d69f
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 008ae3af-191e-4e9d-9d47-5327de2d7ef1
+    type: table
+    name: REASON
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.REASON
+    displayName: REASON
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

@@ -1,0 +1,38 @@
+name: bc8aa02e3ab13d29802dfe1f53d0a542
+fullyQualifiedName: snowflake_h.bc8aa02e3ab13d29802dfe1f53d0a542
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 562177.0
+users: []
+query: "SELECT \"TPCDS_SF100TCL\".\"SHIP_MODE\".\"SM_SHIP_MODE_SK\" AS \"TPCDS_SF100TCL_SHIP_MODE_SM_SHIP_MODE_SK\"\
+  , \"TPCDS_SF100TCL\".\"SHIP_MODE\".\"SM_SHIP_MODE_ID\" AS \"TPCDS_SF100TCL_SHIP_MODE_SM_SHIP_MODE_ID\"\
+  , \"TPCDS_SF100TCL\".\"SHIP_MODE\".\"SM_TYPE\" AS \"TPCDS_SF100TCL_SHIP_MODE_SM_TYPE\"\
+  , \"TPCDS_SF100TCL\".\"SHIP_MODE\".\"SM_CODE\" AS \"TPCDS_SF100TCL_SHIP_MODE_SM_CODE\"\
+  , \"TPCDS_SF100TCL\".\"SHIP_MODE\".\"SM_CARRIER\" AS \"TPCDS_SF100TCL_SHIP_MODE_SM_CARRIER\"\
+  , \"TPCDS_SF100TCL\".\"SHIP_MODE\".\"SM_CONTRACT\" AS \"TPCDS_SF100TCL_SHIP_MODE_SM_CONTRACT\"\
+  \ \nFROM \"TPCDS_SF100TCL\".\"SHIP_MODE\"\n LIMIT ?"
+checksum: bc8aa02e3ab13d29802dfe1f53d0a542
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9255df5d-e857-406e-a6d0-2175860cb5c3
+    type: table
+    name: SHIP_MODE
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.SHIP_MODE
+    displayName: SHIP_MODE
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

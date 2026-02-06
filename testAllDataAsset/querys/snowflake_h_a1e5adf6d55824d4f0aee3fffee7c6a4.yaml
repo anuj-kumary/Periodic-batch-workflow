@@ -1,0 +1,40 @@
+name: a1e5adf6d55824d4f0aee3fffee7c6a4
+fullyQualifiedName: snowflake_h.a1e5adf6d55824d4f0aee3fffee7c6a4
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 672.0
+users: []
+query: "SELECT \"INFORMATION_SCHEMA\".\"DATABASES\".\"DATABASE_NAME\" AS \"INFORMATION_SCHEMA_DATABASES_DATABASE_NAME\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"DATABASE_OWNER\" AS \"INFORMATION_SCHEMA_DATABASES_DATABASE_OWNER\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"IS_TRANSIENT\" AS \"INFORMATION_SCHEMA_DATABASES_IS_TRANSIENT\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"COMMENT\" AS \"INFORMATION_SCHEMA_DATABASES_COMMENT\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"CREATED\" AS \"INFORMATION_SCHEMA_DATABASES_CREATED\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"LAST_ALTERED\" AS \"INFORMATION_SCHEMA_DATABASES_LAST_ALTERED\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"RETENTION_TIME\" AS \"INFORMATION_SCHEMA_DATABASES_RETENTION_TIME\"\
+  , \"INFORMATION_SCHEMA\".\"DATABASES\".\"TYPE\" AS \"INFORMATION_SCHEMA_DATABASES_TYPE\"\
+  \ \nFROM \"INFORMATION_SCHEMA\".\"DATABASES\"\n LIMIT ?"
+checksum: a1e5adf6d55824d4f0aee3fffee7c6a4
+queryDate: 1740787200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8090668b-a822-4119-9e29-11b4e14e25ad
+    type: table
+    name: DATABASES
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.DATABASES
+    displayName: DATABASES
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

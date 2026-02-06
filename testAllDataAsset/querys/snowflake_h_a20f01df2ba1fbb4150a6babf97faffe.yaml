@@ -1,0 +1,42 @@
+name: a20f01df2ba1fbb4150a6babf97faffe
+fullyQualifiedName: snowflake_h.a20f01df2ba1fbb4150a6babf97faffe
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 1314668.0
+users: []
+query: "WITH \"7492547a05b84d643fd227e52ada40ff_rnd\" AS \n(SELECT \"CATALOG_RETURNS_1\"\
+  .\"CR_REFUNDED_CASH\" AS \"CR_REFUNDED_CASH\" \nFROM \"TPCDS_SF100TCL\".\"CATALOG_RETURNS\"\
+  \ AS \"CATALOG_RETURNS_1\" TABLESAMPLE bernoulli(?)), \n\"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \ AS \n(SELECT \"7492547a05b84d643fd227e52ada40ff_rnd\".\"CR_REFUNDED_CASH\" AS\
+  \ \"CR_REFUNDED_CASH\" \nFROM \"7492547a05b84d643fd227e52ada40ff_rnd\")\n SELECT\
+  \ avg(\"CR_REFUNDED_CASH\") AS mean, count(\"CR_REFUNDED_CASH\") AS \"valuesCount\"\
+  , count(DISTINCT \"CR_REFUNDED_CASH\") AS \"distinctCount\", MIN(\"CR_REFUNDED_CASH\"\
+  ) AS min, MAX(\"CR_REFUNDED_CASH\") AS max, coalesce(SUM(CASE WHEN (\"CR_REFUNDED_CASH\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CR_REFUNDED_CASH\"\
+  ) AS stddev, SUM(\"CR_REFUNDED_CASH\") AS sum \nFROM \"7492547a05b84d643fd227e52ada40ff_sample\"\
+  \n LIMIT ?"
+checksum: a20f01df2ba1fbb4150a6babf97faffe
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7103b5aa-a032-43da-be04-f3459f1ac097
+    type: table
+    name: CATALOG_RETURNS
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_RETURNS
+    displayName: CATALOG_RETURNS
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

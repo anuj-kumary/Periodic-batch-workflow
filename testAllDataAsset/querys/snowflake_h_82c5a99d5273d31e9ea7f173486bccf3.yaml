@@ -1,0 +1,40 @@
+name: 82c5a99d5273d31e9ea7f173486bccf3
+fullyQualifiedName: snowflake_h.82c5a99d5273d31e9ea7f173486bccf3
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 41.0
+users: []
+query: "SELECT \"TPCH_SF1000\".\"SUPPLIER\".\"S_SUPPKEY\" AS \"TPCH_SF1000_SUPPLIER_S_SUPPKEY\"\
+  , \"TPCH_SF1000\".\"SUPPLIER\".\"S_NAME\" AS \"TPCH_SF1000_SUPPLIER_S_NAME\", \"\
+  TPCH_SF1000\".\"SUPPLIER\".\"S_ADDRESS\" AS \"TPCH_SF1000_SUPPLIER_S_ADDRESS\",\
+  \ \"TPCH_SF1000\".\"SUPPLIER\".\"S_NATIONKEY\" AS \"TPCH_SF1000_SUPPLIER_S_NATIONKEY\"\
+  , \"TPCH_SF1000\".\"SUPPLIER\".\"S_PHONE\" AS \"TPCH_SF1000_SUPPLIER_S_PHONE\",\
+  \ \"TPCH_SF1000\".\"SUPPLIER\".\"S_ACCTBAL\" AS \"TPCH_SF1000_SUPPLIER_S_ACCTBAL\"\
+  , \"TPCH_SF1000\".\"SUPPLIER\".\"S_COMMENT\" AS \"TPCH_SF1000_SUPPLIER_S_COMMENT\"\
+  \ \nFROM \"TPCH_SF1000\".\"SUPPLIER\"\n LIMIT ?"
+checksum: 82c5a99d5273d31e9ea7f173486bccf3
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 00da3378-7049-4431-adfb-312c367ffd60
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

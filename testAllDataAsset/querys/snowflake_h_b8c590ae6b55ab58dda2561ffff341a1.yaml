@@ -1,0 +1,41 @@
+name: b8c590ae6b55ab58dda2561ffff341a1
+fullyQualifiedName: snowflake_h.b8c590ae6b55ab58dda2561ffff341a1
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.5
+owners: []
+duration: 100173.0
+users: []
+query: "SELECT \"TPCH_SF10\".\"CUSTOMER\".\"C_CUSTKEY\" AS \"TPCH_SF10_CUSTOMER_C_CUSTKEY\"\
+  , \"TPCH_SF10\".\"CUSTOMER\".\"C_NAME\" AS \"TPCH_SF10_CUSTOMER_C_NAME\", \"TPCH_SF10\"\
+  .\"CUSTOMER\".\"C_ADDRESS\" AS \"TPCH_SF10_CUSTOMER_C_ADDRESS\", \"TPCH_SF10\".\"\
+  CUSTOMER\".\"C_NATIONKEY\" AS \"TPCH_SF10_CUSTOMER_C_NATIONKEY\", \"TPCH_SF10\"\
+  .\"CUSTOMER\".\"C_PHONE\" AS \"TPCH_SF10_CUSTOMER_C_PHONE\", \"TPCH_SF10\".\"CUSTOMER\"\
+  .\"C_ACCTBAL\" AS \"TPCH_SF10_CUSTOMER_C_ACCTBAL\", \"TPCH_SF10\".\"CUSTOMER\".\"\
+  C_MKTSEGMENT\" AS \"TPCH_SF10_CUSTOMER_C_MKTSEGMENT\", \"TPCH_SF10\".\"CUSTOMER\"\
+  .\"C_COMMENT\" AS \"TPCH_SF10_CUSTOMER_C_COMMENT\" \nFROM \"TPCH_SF10\".\"CUSTOMER\"\
+  \n LIMIT ?"
+checksum: b8c590ae6b55ab58dda2561ffff341a1
+queryDate: 1740787200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e2533d6b-a159-4bf5-a62f-e1e4f235f9d3
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

@@ -1,0 +1,41 @@
+name: a7d053299cf40de9b74982909f0c3778
+fullyQualifiedName: snowflake_h.a7d053299cf40de9b74982909f0c3778
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 6827657.0
+users: []
+query: "WITH bb70fc319f31ef506fc099f8db12e70f_rnd AS \n(SELECT \"CATALOG_SALES_1\"\
+  .\"CS_QUANTITY\" AS \"CS_QUANTITY\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_SALES\" AS\
+  \ \"CATALOG_SALES_1\" TABLESAMPLE bernoulli(?)), \nbb70fc319f31ef506fc099f8db12e70f_sample\
+  \ AS \n(SELECT bb70fc319f31ef506fc099f8db12e70f_rnd.\"CS_QUANTITY\" AS \"CS_QUANTITY\"\
+  \ \nFROM bb70fc319f31ef506fc099f8db12e70f_rnd)\n SELECT avg(\"CS_QUANTITY\") AS\
+  \ mean, count(\"CS_QUANTITY\") AS \"valuesCount\", count(DISTINCT \"CS_QUANTITY\"\
+  ) AS \"distinctCount\", MIN(\"CS_QUANTITY\") AS min, MAX(\"CS_QUANTITY\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"CS_QUANTITY\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"CS_QUANTITY\") AS stddev, SUM(\"CS_QUANTITY\") AS sum \nFROM bb70fc319f31ef506fc099f8db12e70f_sample\n\
+  \ LIMIT ?"
+checksum: a7d053299cf40de9b74982909f0c3778
+queryDate: 1740873600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: c461b611-7095-4fe8-80a8-517160d4c2f9
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

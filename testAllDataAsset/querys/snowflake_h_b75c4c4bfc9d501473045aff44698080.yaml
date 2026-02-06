@@ -1,0 +1,41 @@
+name: b75c4c4bfc9d501473045aff44698080
+fullyQualifiedName: snowflake_h.b75c4c4bfc9d501473045aff44698080
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.1
+owners: []
+duration: 8566259.0
+users: []
+query: "WITH bb70fc319f31ef506fc099f8db12e70f_rnd AS \n(SELECT \"CATALOG_SALES_1\"\
+  .\"CS_ORDER_NUMBER\" AS \"CS_ORDER_NUMBER\" \nFROM \"TPCDS_SF100TCL\".\"CATALOG_SALES\"\
+  \ AS \"CATALOG_SALES_1\" TABLESAMPLE bernoulli(?)), \nbb70fc319f31ef506fc099f8db12e70f_sample\
+  \ AS \n(SELECT bb70fc319f31ef506fc099f8db12e70f_rnd.\"CS_ORDER_NUMBER\" AS \"CS_ORDER_NUMBER\"\
+  \ \nFROM bb70fc319f31ef506fc099f8db12e70f_rnd)\n SELECT avg(\"CS_ORDER_NUMBER\"\
+  ) AS mean, count(\"CS_ORDER_NUMBER\") AS \"valuesCount\", count(DISTINCT \"CS_ORDER_NUMBER\"\
+  ) AS \"distinctCount\", MIN(\"CS_ORDER_NUMBER\") AS min, MAX(\"CS_ORDER_NUMBER\"\
+  ) AS max, coalesce(SUM(CASE WHEN (\"CS_ORDER_NUMBER\" IS ?) THEN ? ELSE ? END),\
+  \ ?) AS \"nullCount\", STDDEV_POP(\"CS_ORDER_NUMBER\") AS stddev, SUM(\"CS_ORDER_NUMBER\"\
+  ) AS sum \nFROM bb70fc319f31ef506fc099f8db12e70f_sample\n LIMIT ?"
+checksum: b75c4c4bfc9d501473045aff44698080
+queryDate: 1740787200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8429ffb6-97ac-4fdd-9534-55b0d18846ae
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

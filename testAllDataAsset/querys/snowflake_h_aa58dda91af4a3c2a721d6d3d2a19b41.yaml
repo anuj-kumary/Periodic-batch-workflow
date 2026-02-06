@@ -1,0 +1,35 @@
+name: aa58dda91af4a3c2a721d6d3d2a19b41
+fullyQualifiedName: snowflake_h.aa58dda91af4a3c2a721d6d3d2a19b41
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.5
+owners: []
+duration: 6807198.0
+users: []
+query: "SELECT \"TPCDS_SF10TCL\".\"INCOME_BAND\".\"IB_INCOME_BAND_SK\" AS \"TPCDS_SF10TCL_INCOME_BAND_IB_INCOME_BAND_SK\"\
+  , \"TPCDS_SF10TCL\".\"INCOME_BAND\".\"IB_LOWER_BOUND\" AS \"TPCDS_SF10TCL_INCOME_BAND_IB_LOWER_BOUND\"\
+  , \"TPCDS_SF10TCL\".\"INCOME_BAND\".\"IB_UPPER_BOUND\" AS \"TPCDS_SF10TCL_INCOME_BAND_IB_UPPER_BOUND\"\
+  \ \nFROM \"TPCDS_SF10TCL\".\"INCOME_BAND\"\n LIMIT ?"
+checksum: aa58dda91af4a3c2a721d6d3d2a19b41
+queryDate: 1740873600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: a84543fd-8f61-4a49-a43f-08893ecc9a42
+    type: table
+    name: INCOME_BAND
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.INCOME_BAND
+    displayName: INCOME_BAND
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

@@ -1,0 +1,34 @@
+name: 8788aca43bda2d354fc5579405266087
+fullyQualifiedName: snowflake_h.8788aca43bda2d354fc5579405266087
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.5
+owners: []
+duration: 7197197.0
+users: []
+query: "SELECT \"INFORMATION_SCHEMA\".\"INFORMATION_SCHEMA_CATALOG_NAME\".\"CATALOG_NAME\"\
+  \ AS \"INFORMATION_SCHEMA_INFORMATION_SCHEMA_CATALOG_NAME_CATALOG_NAME\" \nFROM\
+  \ \"INFORMATION_SCHEMA\".\"INFORMATION_SCHEMA_CATALOG_NAME\"\n LIMIT ?"
+checksum: 8788aca43bda2d354fc5579405266087
+queryDate: 1740873600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 657c58da-d80f-4efd-8066-b5959f2692a8
+    type: table
+    name: INFORMATION_SCHEMA_CATALOG_NAME
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INFORMATION_SCHEMA_CATALOG_NAME
+    displayName: INFORMATION_SCHEMA_CATALOG_NAME
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h

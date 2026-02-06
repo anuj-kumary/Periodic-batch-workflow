@@ -1,0 +1,36 @@
+name: a2a0e4f155ecd3af32c0b1c6e80a8fa2
+fullyQualifiedName: snowflake_h.a2a0e4f155ecd3af32c0b1c6e80a8fa2
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: usedBy
+      oldValue: "[]"
+      newValue: "[\"TESTOPENMETADATA\"]"
+  fieldsDeleted: []
+  previousVersion: 0.3
+owners: []
+duration: 3043.0
+users: []
+query: "SELECT \"TPCH_SF1\".\"REGION\".\"R_REGIONKEY\" AS \"TPCH_SF1_REGION_R_REGIONKEY\"\
+  , \"TPCH_SF1\".\"REGION\".\"R_NAME\" AS \"TPCH_SF1_REGION_R_NAME\", \"TPCH_SF1\"\
+  .\"REGION\".\"R_COMMENT\" AS \"TPCH_SF1_REGION_R_COMMENT\" \nFROM \"TPCH_SF1\".\"\
+  REGION\"\n LIMIT ?"
+checksum: a2a0e4f155ecd3af32c0b1c6e80a8fa2
+queryDate: 1740614400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f0df661a-3990-477d-9860-c1db7026a6e2
+    type: table
+    name: REGION
+    fullyQualifiedName: snowflake_h.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION
+    description: Region data as defined by TPC-H
+    displayName: REGION
+    deleted: false
+processedLineage: false
+service:
+  id: cbbdff8d-32ef-4fdd-a383-cc3b8f0a41ea
+  type: databaseService
+  name: snowflake_h
+  fullyQualifiedName: snowflake_h
