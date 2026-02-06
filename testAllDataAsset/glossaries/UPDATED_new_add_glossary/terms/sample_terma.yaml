@@ -1,0 +1,78 @@
+name: sample_terma
+displayName: sample_terma
+description: sample_terma
+style: {}
+fullyQualifiedName: UPDATED_new_add_glossary.sample_terma
+synonyms:
+  - synonym
+glossary:
+  id: 6a46bf37-bcdb-48d7-9754-d23d3245515b
+  type: glossary
+  name: UPDATED_new_add_glossary
+  fullyQualifiedName: UPDATED_new_add_glossary
+  description: 'update description of new_add_glossary - test task '
+  displayName: UPDATED_new_add_glossary
+  deleted: false
+children:
+  - id: 7b79cb85-7438-4982-b54d-d0b9318924a5
+    type: glossaryTerm
+    name: sample_term_b
+    fullyQualifiedName: UPDATED_new_add_glossary.sample_terma.sample_term_b
+    description: sample_term_b
+    displayName: sample_term_b
+    deleted: false
+relatedTerms: []
+references: []
+reviewers:
+  - id: 1fec0260-5ad5-4d56-9d2c-48104368bc10
+    type: user
+    name: sonika.s
+    fullyQualifiedName: '"sonika.s"'
+    displayName: sonika.s
+    deleted: false
+    inherited: true
+  - id: 5aef0524-79a1-4935-93f2-98ac9ee2e5ea
+    type: user
+    name: karan
+    fullyQualifiedName: karan
+    displayName: Karan Hotchandani
+    deleted: false
+    inherited: true
+owners:
+  - id: 1fec0260-5ad5-4d56-9d2c-48104368bc10
+    type: user
+    name: sonika.s
+    fullyQualifiedName: '"sonika.s"'
+    displayName: sonika.s
+    deleted: false
+usageCount: 2
+tags:
+  - tagFQN: General.Gender
+    name: Gender
+    description: Person's gender.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.VATCode
+    name: VATCode
+    description: "VAT code or identification number. See [VAT Identification Number](https://en.wikipedia.org/wiki/VAT_identification_number)."
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PostgresPolicyTags.author_policy
+    name: author_policy
+    description: Postgres Tag Value
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+entityStatus: Approved
+mutuallyExclusive: false
+domains: []
+dataProducts: []
+childrenCount: 2
