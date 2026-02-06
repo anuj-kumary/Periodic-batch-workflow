@@ -1,0 +1,115 @@
+name: load_data_exp
+fullyQualifiedName: dbx - keshav.demo.default.load_data_exp
+tableType: Regular
+columns:
+  - name: customerid
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customername
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.customername
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: city
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.city
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: country
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.country
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: territory
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.territory
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactfirstname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.contactfirstname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactlastname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: dbx - keshav.demo.default.load_data_exp.contactlastname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d6ba1f2a-58d5-43fd-9074-9e09d44a50a5
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: dbx - keshav.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/9923364e-fc64-4871-96a9-bb9cf980d12e
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 1c466b5a3e88c542dd45e31fac01a2ef
+processedLineage: false
+entityStatus: Unprocessed

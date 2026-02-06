@@ -1,0 +1,120 @@
+name: job_execution_metadata
+fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata
+tableType: Regular
+columns:
+  - name: dependent_jobs_count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.dependent_jobs_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: execution_time
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.execution_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.job_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_number
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.job_number
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: records_processed
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.records_processed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: source_tables_count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.source_tables_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: target_tables_count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.lineage_test.job_execution_metadata.target_tables_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: 6d6c3aa4-e180-471a-a259-90933869f030
+  type: databaseSchema
+  name: lineage_test
+  fullyQualifiedName: dbx - keshav.demo.lineage_test
+  displayName: lineage_test
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/32c871de-01f1-4f84-a8e4-d4749c6f8dc9
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f926801e9335b7b1f7c0bc2b80feb07a
+processedLineage: false
+entityStatus: Unprocessed

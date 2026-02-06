@@ -1,0 +1,356 @@
+name: demo_sales_location_table
+fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table
+description: Created by the file upload UI
+tableType: Regular
+columns:
+  - name: date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: location
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.location
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bytes
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: request_ip
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.request_ip
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: method
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.method
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: host
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.host
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: uri
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.uri
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: referrer
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.referrer
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_agent
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.user_agent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: query_string
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.query_string
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cookie
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.cookie
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: result_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.result_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: request_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.request_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: host_header
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.host_header
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: request_protocol
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.request_protocol
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: request_bytes
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.request_bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: time_taken
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.time_taken
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xforwarded_for
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.xforwarded_for
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ssl_protocol
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.ssl_protocol
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ssl_cipher
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.ssl_cipher
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: response_result_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.response_result_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: http_version
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.http_version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fle_status
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.fle_status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fle_encrypted_fields
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.fle_encrypted_fields
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: c_port
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.c_port
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: time_to_first_byte
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.time_to_first_byte
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: x_edge_detailed_result_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.x_edge_detailed_result_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sc_content_type
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.sc_content_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sc_content_len
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.sc_content_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sc_range_start
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.sc_range_start
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sc_range_end
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table.sc_range_end
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _rescued_data
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.demo_sales_location_table._rescued_data
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: d6ba1f2a-58d5-43fd-9074-9e09d44a50a5
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: dbx - keshav.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/422a7fce-8ab3-4eb5-b27c-d274e543e80d
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b524cd3d5ec0d9e28108d65d64a6d907
+processedLineage: false
+entityStatus: Unprocessed

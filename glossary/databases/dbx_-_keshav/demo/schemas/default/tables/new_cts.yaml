@@ -1,0 +1,76 @@
+name: new_cts
+fullyQualifiedName: dbx - keshav.demo.default.new_cts
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.new_cts.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.new_cts.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.default.new_cts.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+databaseSchema:
+  id: d6ba1f2a-58d5-43fd-9074-9e09d44a50a5
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: dbx - keshav.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/7c1c94c6-4ff0-4fbb-b018-414df5dc9425
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fa1e6eb4a2a99b1bbfc1547440340b8a
+processedLineage: false
+entityStatus: Unprocessed

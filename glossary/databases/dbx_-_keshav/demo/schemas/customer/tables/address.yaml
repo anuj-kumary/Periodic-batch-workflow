@@ -1,0 +1,115 @@
+name: address
+fullyQualifiedName: dbx - keshav.demo.customer.address
+tableType: Regular
+columns:
+  - name: zipcode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.customer.address.zipcode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: state
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.customer.address.state
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: street
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.customer.address.street
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: city
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.customer.address.city
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.customer.address.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: addressid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.customer.address.addressid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: dbx - keshav.demo.customer.address._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.customer.address._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 5950d220-5997-44a5-b988-bbda4602e393
+  type: databaseSchema
+  name: customer
+  fullyQualifiedName: dbx - keshav.demo.customer
+  description: reverse metadata description
+  displayName: customer
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/c8540f2b-69fb-4ab5-8683-d6a7a00f1932
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 91197a29ed8273fc0373261a69ada984
+processedLineage: false
+entityStatus: Unprocessed

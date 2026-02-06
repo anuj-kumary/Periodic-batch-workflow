@@ -1,0 +1,109 @@
+name: accountstatement
+fullyQualifiedName: dbx - keshav.demo.account.accountstatement
+description: new description.
+tableType: Regular
+columns:
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement.accountid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: totaldebits
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement.totaldebits
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: totalcredits
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(10,2)"
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement.totalcredits
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: statementid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement.statementid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: statementdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement.statementdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.account.accountstatement._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b46408fd-76c2-49a4-9209-e5b04be39011
+  type: databaseSchema
+  name: account
+  fullyQualifiedName: dbx - keshav.demo.account
+  description: |-
+    test description
+    reverse metadata
+  displayName: account
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/6cab9622-e9f7-455d-a949-c67b983a0259
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3c167011bdd652b872f1ea17b400fac2
+processedLineage: false
+entityStatus: Unprocessed

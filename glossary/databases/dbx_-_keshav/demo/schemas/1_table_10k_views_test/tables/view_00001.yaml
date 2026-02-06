@@ -1,0 +1,105 @@
+name: view_00001
+fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001
+tableType: View
+columns:
+  - name: employee_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001.employee_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: full_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001.full_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: department
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001.department
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: position
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001.position
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: salary
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(10,2)"
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001.salary
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bonus
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(8,2)"
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00001.bonus
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: fd0bd7a8-8b42-461f-b07b-5829e0e9d493
+  type: databaseSchema
+  name: 1_table_10k_views_test
+  fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test
+  displayName: 1_table_10k_views_test
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  SELECT employee_id, full_name, department, position, salary, bonus
+                      FROM demo.1_table_10k_views_test.master_data_source
+                      WHERE salary BETWEEN 70882 AND 99295
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e7360e8e224b8780eaed5d6d9e16dbe8
+processedLineage: false
+entityStatus: Unprocessed

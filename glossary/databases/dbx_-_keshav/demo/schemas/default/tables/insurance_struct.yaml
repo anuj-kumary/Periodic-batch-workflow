@@ -1,0 +1,83 @@
+name: insurance_struct
+fullyQualifiedName: dbx - keshav.demo.default.insurance_struct
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.default.insurance_struct.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: insurance_info
+    dataType: STRUCT
+    dataTypeDisplay: "struct<company:string,plan:string,category:string>"
+    fullyQualifiedName: dbx - keshav.demo.default.insurance_struct.insurance_info
+    tags: []
+    children:
+      - name: company
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: dbx - keshav.demo.default.insurance_struct.insurance_info.company
+        tags: []
+        children: []
+      - name: plan
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: dbx - keshav.demo.default.insurance_struct.insurance_info.plan
+        tags: []
+        children: []
+      - name: category
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: dbx - keshav.demo.default.insurance_struct.insurance_info.category
+        tags: []
+        children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: d6ba1f2a-58d5-43fd-9074-9e09d44a50a5
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: dbx - keshav.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/31173f94-c43e-421a-8790-4a09642f29b8
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2942a18ed947bca17682172d30b30812
+processedLineage: false
+entityStatus: Unprocessed

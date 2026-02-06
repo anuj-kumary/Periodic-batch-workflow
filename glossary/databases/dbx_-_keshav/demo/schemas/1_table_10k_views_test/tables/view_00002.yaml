@@ -1,0 +1,96 @@
+name: view_00002
+fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00002
+tableType: View
+columns:
+  - name: employee_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00002.employee_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: full_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00002.full_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: department
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00002.department
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: years_experience
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00002.years_experience
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: performance_score
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test.view_00002.performance_score
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7bf9aa46-348f-4796-96d5-4d3361717834
+    type: user
+    name: mohit.tilala
+    fullyQualifiedName: '"mohit.tilala"'
+    displayName: mohit.tilala
+    deleted: false
+databaseSchema:
+  id: fd0bd7a8-8b42-461f-b07b-5829e0e9d493
+  type: databaseSchema
+  name: 1_table_10k_views_test
+  fullyQualifiedName: dbx - keshav.demo.1_table_10k_views_test
+  displayName: 1_table_10k_views_test
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+schemaDefinition: |-
+  SELECT employee_id, full_name, department, years_experience, performance_score
+                      FROM demo.1_table_10k_views_test.master_data_source
+                      WHERE years_experience >= 9
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 4525e3359232a0d42188788c7b0d3fff
+processedLineage: false
+entityStatus: Unprocessed
