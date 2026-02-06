@@ -1,0 +1,59 @@
+name: new_glossary_term
+displayName: new glossary term
+description: <p>test</p>
+style: {}
+fullyQualifiedName: testing.new_glossary_term
+synonyms: []
+glossary:
+  id: 5cdcbcfc-38df-434f-b81b-554be6ac7cf4
+  type: glossary
+  name: testing
+  fullyQualifiedName: testing
+  description: <p>test</p>
+  displayName: testing
+  deleted: false
+children: []
+relatedTerms:
+  - id: 395e6074-b3f7-492f-bc1d-487d2263c51f
+    type: glossaryTerm
+    name: testing / glossary term do not use it
+    fullyQualifiedName: testing / glossary do not use it.testing / glossary term do
+      not use it
+    description: testing / glossary term do not use it
+    displayName: testing / glossary term do not use it
+    deleted: false
+references: []
+reviewers:
+  - id: e4dc5d75-08e5-41ca-88f7-214176e08d24
+    type: user
+    name: andrea_reed7
+    fullyQualifiedName: andrea_reed7
+    displayName: Andrea Reed
+    deleted: false
+    inherited: true
+owners:
+  - id: e823b5f0-c9ed-41cf-a8b8-ecc918f82e32
+    type: user
+    name: adria.estivill
+    fullyQualifiedName: '"adria.estivill"'
+    displayName: adria.estivill
+    deleted: false
+usageCount: 1
+tags: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: relatedTerms
+      oldValue: "[{\"id\":\"395e6074-b3f7-492f-bc1d-487d2263c51f\",\"type\":\"glossaryTerm\"\
+        ,\"name\":\"testing / glossary term do not use it\",\"fullyQualifiedName\"\
+        :\"testing / glossary do not use it.testing / glossary term do not use it\"\
+        ,\"description\":\"testing / glossary term do not use it\",\"displayName\"\
+        :\"testing / glossary term do not use it\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+entityStatus: In Review
+mutuallyExclusive: false
+domains: []
+dataProducts: []
+childrenCount: 0
