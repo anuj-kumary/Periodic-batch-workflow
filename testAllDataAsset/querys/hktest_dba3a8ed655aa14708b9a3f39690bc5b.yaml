@@ -1,0 +1,26 @@
+name: dba3a8ed655aa14708b9a3f39690bc5b
+fullyQualifiedName: hktest.dba3a8ed655aa14708b9a3f39690bc5b
+owners: []
+duration: 329.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"LOGINID\") AS count_1\
+  \ \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERLOGIN\" GROUP BY \"LOGINID\" \nHAVING\
+  \ count(\"LOGINID\") = ?) AS only_once\n LIMIT ?"
+checksum: dba3a8ed655aa14708b9a3f39690bc5b
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 362a3c96-9793-4426-b8a0-46295ee4a87b
+    type: table
+    name: CUSTOMERLOGIN
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERLOGIN
+    displayName: CUSTOMERLOGIN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

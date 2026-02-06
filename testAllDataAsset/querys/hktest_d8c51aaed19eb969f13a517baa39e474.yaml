@@ -1,0 +1,46 @@
+name: d8c51aaed19eb969f13a517baa39e474
+fullyQualifiedName: hktest.d8c51aaed19eb969f13a517baa39e474
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0777e470-b01c-42a9-b275-67217059c629\",\"type\":\"table\"\
+        ,\"name\":\"MONITORS_RUNS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MONITORS_RUNS\"\
+        ,\"displayName\":\"MONITORS_RUNS\",\"deleted\":false}]"
+  previousVersion: 0.9
+  changeSummary: {}
+owners: []
+duration: 139.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "create or replace   view dbt_db.DBT_SAMPLE_elementary.monitors_runs\n  \n\
+  \   as (\n    \n\nwith data_monitoring_metrics as (\n\n    select * from dbt_db.DBT_SAMPLE_elementary.data_monitoring_metrics\n\
+  \n),\n\nmax_bucket_end as (\n\n    select full_table_name,\n           column_name,\n\
+  \           metric_name,\n           metric_properties,\n           max(bucket_end)\
+  \ as last_bucket_end,\n           min(bucket_end) as first_bucket_end\n    from\
+  \ data_monitoring_metrics\n    group by ?,?,?,?\n\n)\n\nselect * from max_bucket_end\n\
+  \  );"
+checksum: d8c51aaed19eb969f13a517baa39e474
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 65cf3741-cd7e-47a9-a363-7b20bd64f6e6
+    type: table
+    name: DATA_MONITORING_METRICS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DATA_MONITORING_METRICS
+    displayName: DATA_MONITORING_METRICS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

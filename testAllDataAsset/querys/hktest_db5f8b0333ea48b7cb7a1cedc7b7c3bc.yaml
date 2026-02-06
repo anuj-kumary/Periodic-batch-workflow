@@ -1,0 +1,34 @@
+name: db5f8b0333ea48b7cb7a1cedc7b7c3bc
+fullyQualifiedName: hktest.db5f8b0333ea48b7cb7a1cedc7b7c3bc
+owners: []
+duration: 171.0
+users: []
+query: "WITH ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd AS \n(SELECT \"ORDERS_1\".\"O_ORDERKEY\"\
+  \ AS \"O_ORDERKEY\" \nFROM \"TPCH_SF10\".\"ORDERS\" AS \"ORDERS_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nab2fad6a9f7c58c2c0dabdb6c89213f1_sample AS \n(SELECT ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd.\"\
+  O_ORDERKEY\" AS \"O_ORDERKEY\" \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd)\n SELECT\
+  \ count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"2.254M to 19.470M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"19.470M to 36.686M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"36.686M to 53.901M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ?) THEN \"O_ORDERKEY\" END) AS \"53.901M and\
+  \ up\" \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_sample\n LIMIT ?"
+checksum: db5f8b0333ea48b7cb7a1cedc7b7c3bc
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b7a1e96e-d5da-448b-a809-946f32a21041
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

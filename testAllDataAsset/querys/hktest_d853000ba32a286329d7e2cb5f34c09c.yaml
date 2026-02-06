@@ -1,0 +1,28 @@
+name: d853000ba32a286329d7e2cb5f34c09c
+fullyQualifiedName: hktest.d853000ba32a286329d7e2cb5f34c09c
+owners: []
+duration: 2323.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"C_ACCTBAL\" ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"C_ACCTBAL\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"C_ACCTBAL\" ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"TPCH_SF100\".\"CUSTOMER\"\n LIMIT ?"
+checksum: d853000ba32a286329d7e2cb5f34c09c
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: dc092bc6-2f58-414c-a722-42aa3ec1674e
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,26 @@
+name: dcb473476981f0807f2f4853bcf2f763
+fullyQualifiedName: hktest.dcb473476981f0807f2f4853bcf2f763
+owners: []
+duration: 70.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"NO_BILL_IND\") AS\
+  \ count_1 \nFROM \"CURATED\".\"CNTRCT\" GROUP BY \"NO_BILL_IND\" \nHAVING count(\"\
+  NO_BILL_IND\") = ?) AS only_once\n LIMIT ?"
+checksum: dcb473476981f0807f2f4853bcf2f763
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

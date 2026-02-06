@@ -1,0 +1,32 @@
+name: debca46c43acbf1f8c32fb1f2fa56873
+fullyQualifiedName: hktest.debca46c43acbf1f8c32fb1f2fa56873
+owners: []
+duration: 111.0
+users: []
+query: "WITH \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\" AS \n(SELECT \"CALL_CENTER_1\"\
+  .\"CC_SQ_FT\" AS \"CC_SQ_FT\" \nFROM \"TPCDS_SF100TCL\".\"CALL_CENTER\" AS \"CALL_CENTER_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"6e20a905f6b43f3b0ccd2e5ded96c253_sample\" AS \n\
+  (SELECT \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\".\"CC_SQ_FT\" AS \"CC_SQ_FT\" \n\
+  FROM \"6e20a905f6b43f3b0ccd2e5ded96c253_rnd\")\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"CC_SQ_FT\" ASC) AS median, percentile_cont(?) WITHIN GROUP (ORDER\
+  \ BY \"CC_SQ_FT\" ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER\
+  \ BY \"CC_SQ_FT\" ASC) AS \"thirdQuartile\" \nFROM \"6e20a905f6b43f3b0ccd2e5ded96c253_sample\"\
+  \n LIMIT ?"
+checksum: debca46c43acbf1f8c32fb1f2fa56873
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 531ee58b-4045-4f54-a1b5-eac7668fb709
+    type: table
+    name: CALL_CENTER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CALL_CENTER
+    displayName: CALL_CENTER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

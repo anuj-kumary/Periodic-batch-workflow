@@ -1,0 +1,42 @@
+name: dac8c16e45cae62435d4079a20dc3be0
+fullyQualifiedName: hktest.dac8c16e45cae62435d4079a20dc3be0
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"6d06b218-df90-4b8d-bb6e-2c6c16d87d78\",\"type\":\"table\"\
+        ,\"name\":\"SHIP_MODE\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.SHIP_MODE\"\
+        ,\"displayName\":\"SHIP_MODE\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 148.0
+users: []
+query: "WITH \"6b1ac862f924eabb8462c212fb142c42_rnd\" AS \n(SELECT \"SHIP_MODE_1\"\
+  .\"SM_SHIP_MODE_SK\" AS \"SM_SHIP_MODE_SK\" \nFROM \"TPCDS_SF10TCL\".\"SHIP_MODE\"\
+  \ AS \"SHIP_MODE_1\" TABLESAMPLE ROW(? ROWS)), \n\"6b1ac862f924eabb8462c212fb142c42_sample\"\
+  \ AS \n(SELECT \"6b1ac862f924eabb8462c212fb142c42_rnd\".\"SM_SHIP_MODE_SK\" AS \"\
+  SM_SHIP_MODE_SK\" \nFROM \"6b1ac862f924eabb8462c212fb142c42_rnd\")\n SELECT percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"SM_SHIP_MODE_SK\" ASC) AS median, percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"SM_SHIP_MODE_SK\" ASC) AS \"firstQuartile\", percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"SM_SHIP_MODE_SK\" ASC) AS \"thirdQuartile\" \nFROM \"\
+  6b1ac862f924eabb8462c212fb142c42_sample\"\n LIMIT ?"
+checksum: dac8c16e45cae62435d4079a20dc3be0
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6d06b218-df90-4b8d-bb6e-2c6c16d87d78
+    type: table
+    name: SHIP_MODE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.SHIP_MODE
+    displayName: SHIP_MODE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

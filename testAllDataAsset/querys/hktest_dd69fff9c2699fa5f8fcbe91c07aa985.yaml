@@ -1,0 +1,27 @@
+name: dd69fff9c2699fa5f8fcbe91c07aa985
+fullyQualifiedName: hktest.dd69fff9c2699fa5f8fcbe91c07aa985
+owners: []
+duration: 66.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONT_BILL_TO_DATE\"\
+  ) ASC) AS median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONT_BILL_TO_DATE\"\
+  ) ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"CONT_BILL_TO_DATE\"\
+  ) ASC) AS \"thirdQuartile\" \nFROM \"LANDING\".\"CONT\"\n LIMIT ?"
+checksum: dd69fff9c2699fa5f8fcbe91c07aa985
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: cf2309d8-d7e7-4cd1-b805-b99f1a50f838
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

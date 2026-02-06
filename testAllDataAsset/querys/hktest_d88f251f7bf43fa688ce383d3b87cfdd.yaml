@@ -1,0 +1,32 @@
+name: d88f251f7bf43fa688ce383d3b87cfdd
+fullyQualifiedName: hktest.d88f251f7bf43fa688ce383d3b87cfdd
+owners: []
+duration: 59.0
+users: []
+query: "WITH \"2b7a46f33414da8fedece549604bc0f1_rnd\" AS \n(SELECT \"CREDITCARD_1\"\
+  .\"CARDID\" AS \"CARDID\" \nFROM \"MSSQLBANKING_ACCOUNT\".\"CREDITCARD\" AS \"CREDITCARD_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"2b7a46f33414da8fedece549604bc0f1_sample\" AS \n\
+  (SELECT \"2b7a46f33414da8fedece549604bc0f1_rnd\".\"CARDID\" AS \"CARDID\" \nFROM\
+  \ \"2b7a46f33414da8fedece549604bc0f1_rnd\")\n SELECT count(CASE WHEN (\"CARDID\"\
+  \ >= ? AND \"CARDID\" < ?) THEN \"CARDID\" END) AS \"1.000K to 1.004K\", count(CASE\
+  \ WHEN (\"CARDID\" >= ? AND \"CARDID\" < ?) THEN \"CARDID\" END) AS \"1.004K to\
+  \ 1.008K\", count(CASE WHEN (\"CARDID\" >= ?) THEN \"CARDID\" END) AS \"1.008K and\
+  \ up\" \nFROM \"2b7a46f33414da8fedece549604bc0f1_sample\"\n LIMIT ?"
+checksum: d88f251f7bf43fa688ce383d3b87cfdd
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 90111e7a-d7bb-46c9-976d-2a483c18a2f5
+    type: table
+    name: CREDITCARD
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.CREDITCARD
+    displayName: CREDITCARD
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

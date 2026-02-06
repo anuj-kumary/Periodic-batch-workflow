@@ -1,0 +1,41 @@
+name: dd6f5c4cf88a173e94907fbba26092a1
+fullyQualifiedName: hktest.dd6f5c4cf88a173e94907fbba26092a1
+owners: []
+duration: 117.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"MODEL_EXECUTION_ID\") >= ? AND LEN(\"MODEL_EXECUTION_ID\"\
+  ) < ?) THEN LEN(\"MODEL_EXECUTION_ID\") END) AS \"59.000 to 63.422\", count(CASE\
+  \ WHEN (LEN(\"MODEL_EXECUTION_ID\") >= ? AND LEN(\"MODEL_EXECUTION_ID\") < ?) THEN\
+  \ LEN(\"MODEL_EXECUTION_ID\") END) AS \"63.422 to 67.843\", count(CASE WHEN (LEN(\"\
+  MODEL_EXECUTION_ID\") >= ? AND LEN(\"MODEL_EXECUTION_ID\") < ?) THEN LEN(\"MODEL_EXECUTION_ID\"\
+  ) END) AS \"67.843 to 72.265\", count(CASE WHEN (LEN(\"MODEL_EXECUTION_ID\") >=\
+  \ ? AND LEN(\"MODEL_EXECUTION_ID\") < ?) THEN LEN(\"MODEL_EXECUTION_ID\") END) AS\
+  \ \"72.265 to 76.686\", count(CASE WHEN (LEN(\"MODEL_EXECUTION_ID\") >= ? AND LEN(\"\
+  MODEL_EXECUTION_ID\") < ?) THEN LEN(\"MODEL_EXECUTION_ID\") END) AS \"76.686 to\
+  \ 81.108\", count(CASE WHEN (LEN(\"MODEL_EXECUTION_ID\") >= ?) THEN LEN(\"MODEL_EXECUTION_ID\"\
+  ) END) AS \"81.108 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"MODEL_RUN_RESULTS\"\
+  \n LIMIT ?"
+checksum: dd6f5c4cf88a173e94907fbba26092a1
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

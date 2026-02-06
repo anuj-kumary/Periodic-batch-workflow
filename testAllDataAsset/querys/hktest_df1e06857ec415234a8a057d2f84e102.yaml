@@ -1,0 +1,40 @@
+name: df1e06857ec415234a8a057d2f84e102
+fullyQualifiedName: hktest.df1e06857ec415234a8a057d2f84e102
+owners: []
+duration: 161.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"ALIAS\") >= ? AND LEN(\"ALIAS\") < ?) THEN LEN(\"\
+  ALIAS\") END) AS \"4.000 to 8.043\", count(CASE WHEN (LEN(\"ALIAS\") >= ? AND LEN(\"\
+  ALIAS\") < ?) THEN LEN(\"ALIAS\") END) AS \"8.043 to 12.085\", count(CASE WHEN (LEN(\"\
+  ALIAS\") >= ? AND LEN(\"ALIAS\") < ?) THEN LEN(\"ALIAS\") END) AS \"12.085 to 16.128\"\
+  , count(CASE WHEN (LEN(\"ALIAS\") >= ? AND LEN(\"ALIAS\") < ?) THEN LEN(\"ALIAS\"\
+  ) END) AS \"16.128 to 20.170\", count(CASE WHEN (LEN(\"ALIAS\") >= ? AND LEN(\"\
+  ALIAS\") < ?) THEN LEN(\"ALIAS\") END) AS \"20.170 to 24.213\", count(CASE WHEN\
+  \ (LEN(\"ALIAS\") >= ? AND LEN(\"ALIAS\") < ?) THEN LEN(\"ALIAS\") END) AS \"24.213\
+  \ to 28.255\", count(CASE WHEN (LEN(\"ALIAS\") >= ?) THEN LEN(\"ALIAS\") END) AS\
+  \ \"28.255 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"MODEL_RUN_RESULTS\"\n LIMIT\
+  \ ?"
+checksum: df1e06857ec415234a8a057d2f84e102
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b47b343a-03e8-409a-9861-bffd086dce6c
+    type: table
+    name: MODEL_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MODEL_RUN_RESULTS
+    displayName: MODEL_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

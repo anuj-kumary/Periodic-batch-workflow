@@ -1,0 +1,39 @@
+name: dd6d5361b812a59cad05f92030358f13
+fullyQualifiedName: hktest.dd6d5361b812a59cad05f92030358f13
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d47eec01-bfb8-49b6-8964-8515c551934d\",\"type\":\"table\"\
+        ,\"name\":\"TEST_DEPENDENTS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.TEST_DEPENDENTS\"\
+        ,\"displayName\":\"TEST_DEPENDENTS\",\"deleted\":false}]"
+  previousVersion: 1.1
+  changeSummary: {}
+owners: []
+duration: 103.0
+users: []
+query: "SELECT \"E2E_TEST\".\"TEST_DEPENDENTS\".\"E2E_TESTDEPENDENT_ID\" AS \"E2E_TEST_TEST_DEPENDENTS_E2E_TESTDEPENDENT_ID\"\
+  , \"E2E_TEST\".\"TEST_DEPENDENTS\".\"E2E_TESTFIRST_NAME\" AS \"E2E_TEST_TEST_DEPENDENTS_E2E_TESTFIRST_NAME\"\
+  , \"E2E_TEST\".\"TEST_DEPENDENTS\".\"E2E_TESTLAST_NAME\" AS \"E2E_TEST_TEST_DEPENDENTS_E2E_TESTLAST_NAME\"\
+  , \"E2E_TEST\".\"TEST_DEPENDENTS\".\"E2E_TESTRELATIONSHIP\" AS \"E2E_TEST_TEST_DEPENDENTS_E2E_TESTRELATIONSHIP\"\
+  , \"E2E_TEST\".\"TEST_DEPENDENTS\".\"E2E_TESTEMPLOYEE_ID\" AS \"E2E_TEST_TEST_DEPENDENTS_E2E_TESTEMPLOYEE_ID\"\
+  \ \nFROM \"E2E_TEST\".\"TEST_DEPENDENTS\"\n LIMIT ?"
+checksum: dd6d5361b812a59cad05f92030358f13
+queryDate: 1752624000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d47eec01-bfb8-49b6-8964-8515c551934d
+    type: table
+    name: TEST_DEPENDENTS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.TEST_DEPENDENTS
+    displayName: TEST_DEPENDENTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,29 @@
+name: ddd4746041ac3082ab9b73280bfe0de4
+fullyQualifiedName: hktest.ddd4746041ac3082ab9b73280bfe0de4
+owners: []
+duration: 71.0
+users: []
+query: "SELECT avg(LEN(\"STAGE_FILE_NAME\")) AS mean, count(\"STAGE_FILE_NAME\") AS\
+  \ \"valuesCount\", count(DISTINCT \"STAGE_FILE_NAME\") AS \"distinctCount\", MIN(LEN(\"\
+  STAGE_FILE_NAME\")) AS min, MAX(LEN(\"STAGE_FILE_NAME\")) AS max, coalesce(SUM(CASE\
+  \ WHEN (\"STAGE_FILE_NAME\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  STAGE_FILE_NAME\")) AS stddev, SUM(LEN(\"STAGE_FILE_NAME\")) AS sum \nFROM \"LANDING\"\
+  .\"COBE_ETI\"\n LIMIT ?"
+checksum: ddd4746041ac3082ab9b73280bfe0de4
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7177a74e-7bdc-4ef4-86d3-f41e58404c78
+    type: table
+    name: COBE_ETI
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.COBE_ETI
+    displayName: COBE_ETI
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,29 @@
+name: d9ead503d0a802fed3801d76321e5bbb
+fullyQualifiedName: hktest.d9ead503d0a802fed3801d76321e5bbb
+owners: []
+duration: 1674.0
+users: []
+query: "SELECT avg(LEN(\"P_BRAND\")) AS mean, count(\"P_BRAND\") AS \"valuesCount\"\
+  , count(DISTINCT \"P_BRAND\") AS \"distinctCount\", MIN(LEN(\"P_BRAND\")) AS min,\
+  \ MAX(LEN(\"P_BRAND\")) AS max, coalesce(SUM(CASE WHEN (\"P_BRAND\" IS ?) THEN ?\
+  \ ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"P_BRAND\")) AS stddev, SUM(LEN(\"\
+  P_BRAND\")) AS sum \nFROM \"TPCH_SF100\".\"PART\"\n LIMIT ?"
+checksum: d9ead503d0a802fed3801d76321e5bbb
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d8f39a9b-4f53-4c0d-acb2-d61f40c5b1ea
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

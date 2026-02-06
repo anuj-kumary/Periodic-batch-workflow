@@ -1,0 +1,35 @@
+name: dae5efee05c12d80e90aa804dd672dfb
+fullyQualifiedName: hktest.dae5efee05c12d80e90aa804dd672dfb
+owners: []
+duration: 91.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"GUID_C\"\
+  \ AS \"GUID_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE ROW(?\
+  \ ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  GUID_C\" AS \"GUID_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n SELECT avg(LEN(\"\
+  GUID_C\")) AS mean, count(\"GUID_C\") AS \"valuesCount\", count(DISTINCT \"GUID_C\"\
+  ) AS \"distinctCount\", MIN(LEN(\"GUID_C\")) AS min, MAX(LEN(\"GUID_C\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"GUID_C\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(LEN(\"GUID_C\")) AS stddev, SUM(LEN(\"GUID_C\")) AS sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n\
+  \ LIMIT ?"
+checksum: dae5efee05c12d80e90aa804dd672dfb
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

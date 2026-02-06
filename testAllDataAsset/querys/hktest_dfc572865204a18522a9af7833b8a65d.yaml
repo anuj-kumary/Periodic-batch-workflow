@@ -1,0 +1,24 @@
+name: dfc572865204a18522a9af7833b8a65d
+fullyQualifiedName: hktest.dfc572865204a18522a9af7833b8a65d
+owners: []
+duration: 45.0
+users: []
+query: create stream my_new_stream on table test_table;
+checksum: dfc572865204a18522a9af7833b8a65d
+queryDate: 1744761600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 1d22d001-8666-4a58-9a4b-712dc2b06d4c
+    type: table
+    name: TEST_TABLE
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.TEST_TABLE
+    displayName: TEST_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,36 @@
+name: ddcb36d3bba4010c11d6dbac0394a5a4
+fullyQualifiedName: hktest.ddcb36d3bba4010c11d6dbac0394a5a4
+owners: []
+duration: 1652.0
+users: []
+query: "WITH \"251d5be6c2243ba771425aa88477c04d_rnd\" AS \n(SELECT \"PARTSUPP_1\"\
+  .\"PS_COMMENT\" AS \"PS_COMMENT\" \nFROM \"TPCH_SF100\".\"PARTSUPP\" AS \"PARTSUPP_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"251d5be6c2243ba771425aa88477c04d_sample\" AS \n\
+  (SELECT \"251d5be6c2243ba771425aa88477c04d_rnd\".\"PS_COMMENT\" AS \"PS_COMMENT\"\
+  \ \nFROM \"251d5be6c2243ba771425aa88477c04d_rnd\")\n SELECT count(CASE WHEN (LEN(\"\
+  PS_COMMENT\") >= ? AND LEN(\"PS_COMMENT\") < ?) THEN LEN(\"PS_COMMENT\") END) AS\
+  \ \"49.000 to 91.752\", count(CASE WHEN (LEN(\"PS_COMMENT\") >= ? AND LEN(\"PS_COMMENT\"\
+  ) < ?) THEN LEN(\"PS_COMMENT\") END) AS \"91.752 to 134.504\", count(CASE WHEN (LEN(\"\
+  PS_COMMENT\") >= ? AND LEN(\"PS_COMMENT\") < ?) THEN LEN(\"PS_COMMENT\") END) AS\
+  \ \"134.504 to 177.256\", count(CASE WHEN (LEN(\"PS_COMMENT\") >= ?) THEN LEN(\"\
+  PS_COMMENT\") END) AS \"177.256 and up\" \nFROM \"251d5be6c2243ba771425aa88477c04d_sample\"\
+  \n LIMIT ?"
+checksum: ddcb36d3bba4010c11d6dbac0394a5a4
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: da30e791-0511-4df8-b440-750ab7f36363
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

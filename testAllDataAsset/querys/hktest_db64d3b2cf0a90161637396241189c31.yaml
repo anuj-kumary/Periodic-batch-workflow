@@ -1,0 +1,21 @@
+name: db64d3b2cf0a90161637396241189c31
+fullyQualifiedName: hktest.db64d3b2cf0a90161637396241189c31
+owners: []
+duration: 108.0
+users: []
+query: |-
+  SELECT DATE_PART(?,"ORDERS"."ORDER_DATE") AS "yr:ORDER_DATE:ok"
+  FROM "CUSTOMERS"."JAFFLE_SHOP"."ORDERS" "ORDERS"
+  GROUP BY ?
+checksum: db64d3b2cf0a90161637396241189c31
+queryDate: 1744588800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

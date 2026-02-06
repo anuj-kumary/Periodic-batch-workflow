@@ -1,0 +1,21 @@
+name: deb3cfb00716d6099075fa83d4034e56
+fullyQualifiedName: hktest.deb3cfb00716d6099075fa83d4034e56
+owners: []
+duration: 59.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"GIFT_CARD_AMOUNT\" ASC)\
+  \ AS median, percentile_cont(?) WITHIN GROUP (ORDER BY \"GIFT_CARD_AMOUNT\" ASC)\
+  \ AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY \"GIFT_CARD_AMOUNT\"\
+  \ ASC) AS \"thirdQuartile\" \nFROM \"JAFFLE_SHOP\".\"ORDERS\"\n LIMIT ?"
+checksum: deb3cfb00716d6099075fa83d4034e56
+queryDate: 1751932800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
