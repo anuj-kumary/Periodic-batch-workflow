@@ -1,0 +1,255 @@
+name: INNODB_BUFFER_PAGE
+fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE
+tableType: View
+columns:
+  - name: POOL_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.POOL_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: BLOCK_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.BLOCK_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SPACE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.SPACE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PAGE_NUMBER
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.PAGE_NUMBER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PAGE_TYPE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.PAGE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FLUSH_TYPE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.FLUSH_TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: FIX_COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.FIX_COUNT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_HASHED
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.IS_HASHED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NEWEST_MODIFICATION
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.NEWEST_MODIFICATION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OLDEST_MODIFICATION
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.OLDEST_MODIFICATION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ACCESS_TIME
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.ACCESS_TIME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: varchar(1024)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INDEX_NAME
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: varchar(1024)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.INDEX_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NUMBER_RECORDS
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.NUMBER_RECORDS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DATA_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.DATA_SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COMPRESSED_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.COMPRESSED_SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PAGE_STATE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.PAGE_STATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IO_FIX
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.IO_FIX
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_OLD
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.IS_OLD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FREE_PAGE_CLOCK
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.FREE_PAGE_CLOCK
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_STALE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE.IS_STALE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `INNODB_BUFFER_PAGE` (
+    `POOL_ID` bigint unsigned NOT NULL DEFAULT '0',
+    `BLOCK_ID` bigint unsigned NOT NULL DEFAULT '0',
+    `SPACE` bigint unsigned NOT NULL DEFAULT '0',
+    `PAGE_NUMBER` bigint unsigned NOT NULL DEFAULT '0',
+    `PAGE_TYPE` varchar(64) DEFAULT NULL,
+    `FLUSH_TYPE` bigint unsigned NOT NULL DEFAULT '0',
+    `FIX_COUNT` bigint unsigned NOT NULL DEFAULT '0',
+    `IS_HASHED` varchar(3) DEFAULT NULL,
+    `NEWEST_MODIFICATION` bigint unsigned NOT NULL DEFAULT '0',
+    `OLDEST_MODIFICATION` bigint unsigned NOT NULL DEFAULT '0',
+    `ACCESS_TIME` bigint unsigned NOT NULL DEFAULT '0',
+    `TABLE_NAME` varchar(1024) DEFAULT NULL,
+    `INDEX_NAME` varchar(1024) DEFAULT NULL,
+    `NUMBER_RECORDS` bigint unsigned NOT NULL DEFAULT '0',
+    `DATA_SIZE` bigint unsigned NOT NULL DEFAULT '0',
+    `COMPRESSED_SIZE` bigint unsigned NOT NULL DEFAULT '0',
+    `PAGE_STATE` varchar(64) DEFAULT NULL,
+    `IO_FIX` varchar(64) DEFAULT NULL,
+    `IS_OLD` varchar(3) DEFAULT NULL,
+    `FREE_PAGE_CLOCK` bigint unsigned NOT NULL DEFAULT '0',
+    `IS_STALE` varchar(3) DEFAULT NULL
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: fcf5e604843b457886d775a368402408
+processedLineage: false
+entityStatus: Approved

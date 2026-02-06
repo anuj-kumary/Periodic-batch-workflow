@@ -1,0 +1,105 @@
+name: INNODB_SESSION_TEMP_TABLESPACES
+fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES
+tableType: View
+columns:
+  - name: ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES.ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SPACE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES.SPACE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PATH
+    dataType: VARCHAR
+    dataLength: 4001
+    dataTypeDisplay: varchar(4001)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES.PATH
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES.SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 192
+    dataTypeDisplay: varchar(192)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES.STATE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PURPOSE
+    dataType: VARCHAR
+    dataLength: 192
+    dataTypeDisplay: varchar(192)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES.PURPOSE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `INNODB_SESSION_TEMP_TABLESPACES` (
+    `ID` int unsigned NOT NULL DEFAULT '0',
+    `SPACE` int unsigned NOT NULL DEFAULT '0',
+    `PATH` varchar(4001) NOT NULL DEFAULT '',
+    `SIZE` bigint unsigned NOT NULL DEFAULT '0',
+    `STATE` varchar(192) NOT NULL DEFAULT '',
+    `PURPOSE` varchar(192) NOT NULL DEFAULT ''
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 854d215d3e4351caeaa47c322688dfc4
+processedLineage: false
+entityStatus: Approved

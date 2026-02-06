@@ -1,0 +1,366 @@
+name: ROUTINES
+fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES
+tableType: View
+columns:
+  - name: SPECIFIC_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.SPECIFIC_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_TYPE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(9)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATA_TYPE
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.DATA_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_MAXIMUM_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.CHARACTER_MAXIMUM_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_OCTET_LENGTH
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.CHARACTER_OCTET_LENGTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NUMERIC_PRECISION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.NUMERIC_PRECISION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NUMERIC_SCALE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.NUMERIC_SCALE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATETIME_PRECISION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.DATETIME_PRECISION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_SET_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.CHARACTER_SET_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLLATION_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.COLLATION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DTD_IDENTIFIER
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.DTD_IDENTIFIER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_BODY
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_BODY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_DEFINITION
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_DEFINITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXTERNAL_NAME
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.EXTERNAL_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXTERNAL_LANGUAGE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.EXTERNAL_LANGUAGE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARAMETER_STYLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.PARAMETER_STYLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_DETERMINISTIC
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.IS_DETERMINISTIC
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SQL_DATA_ACCESS
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(17)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.SQL_DATA_ACCESS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SQL_PATH
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.SQL_PATH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SECURITY_TYPE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(7)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.SECURITY_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SQL_MODE
+    dataType: SET
+    dataLength: 1
+    dataTypeDisplay: set(26)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.SQL_MODE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROUTINE_COMMENT
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: text
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.ROUTINE_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFINER
+    dataType: VARCHAR
+    dataLength: 288
+    dataTypeDisplay: varchar(288)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.DEFINER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CHARACTER_SET_CLIENT
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.CHARACTER_SET_CLIENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLLATION_CONNECTION
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.COLLATION_CONNECTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATABASE_COLLATION
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES.DATABASE_COLLATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`ROUTINES` AS select `rtn`.`name`\
+  \ AS `SPECIFIC_NAME`,`cat`.`name` AS `ROUTINE_CATALOG`,`sch`.`name` AS `ROUTINE_SCHEMA`,`rtn`.`name`\
+  \ AS `ROUTINE_NAME`,`rtn`.`type` AS `ROUTINE_TYPE`,if((`rtn`.`type` = 'PROCEDURE'),'',substring_index(substring_index(`rtn`.`result_data_type_utf8`,'(',1),'\
+  \ ',1)) AS `DATA_TYPE`,internal_dd_char_length(`rtn`.`result_data_type`,`rtn`.`result_char_length`,`coll_result`.`name`,0)\
+  \ AS `CHARACTER_MAXIMUM_LENGTH`,internal_dd_char_length(`rtn`.`result_data_type`,`rtn`.`result_char_length`,`coll_result`.`name`,1)\
+  \ AS `CHARACTER_OCTET_LENGTH`,`rtn`.`result_numeric_precision` AS `NUMERIC_PRECISION`,`rtn`.`result_numeric_scale`\
+  \ AS `NUMERIC_SCALE`,`rtn`.`result_datetime_precision` AS `DATETIME_PRECISION`,(case\
+  \ `rtn`.`result_data_type` when 'MYSQL_TYPE_STRING' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_VAR_STRING' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_VARCHAR' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_TINY_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_MEDIUM_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_LONG_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_ENUM' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) when 'MYSQL_TYPE_SET' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`cs_result`.`name`) else NULL end) AS `CHARACTER_SET_NAME`,(case\
+  \ `rtn`.`result_data_type` when 'MYSQL_TYPE_STRING' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_VAR_STRING' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_VARCHAR' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_TINY_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_MEDIUM_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_LONG_BLOB' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_ENUM' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) when 'MYSQL_TYPE_SET' then if((`cs_result`.`name`\
+  \ = 'binary'),NULL,`coll_result`.`name`) else NULL end) AS `COLLATION_NAME`,if((`rtn`.`type`\
+  \ = 'PROCEDURE'),NULL,`rtn`.`result_data_type_utf8`) AS `DTD_IDENTIFIER`,'SQL' AS\
+  \ `ROUTINE_BODY`,if(can_access_routine(`sch`.`name`,`rtn`.`name`,`rtn`.`type`,`rtn`.`definer`,true),`rtn`.`definition_utf8`,NULL)\
+  \ AS `ROUTINE_DEFINITION`,NULL AS `EXTERNAL_NAME`,`rtn`.`external_language` AS `EXTERNAL_LANGUAGE`,'SQL'\
+  \ AS `PARAMETER_STYLE`,if((`rtn`.`is_deterministic` = 0),'NO','YES') AS `IS_DETERMINISTIC`,`rtn`.`sql_data_access`\
+  \ AS `SQL_DATA_ACCESS`,NULL AS `SQL_PATH`,`rtn`.`security_type` AS `SECURITY_TYPE`,`rtn`.`created`\
+  \ AS `CREATED`,`rtn`.`last_altered` AS `LAST_ALTERED`,`rtn`.`sql_mode` AS `SQL_MODE`,`rtn`.`comment`\
+  \ AS `ROUTINE_COMMENT`,`rtn`.`definer` AS `DEFINER`,`cs_client`.`name` AS `CHARACTER_SET_CLIENT`,`coll_conn`.`name`\
+  \ AS `COLLATION_CONNECTION`,`coll_db`.`name` AS `DATABASE_COLLATION` from ((((((((`mysql`.`routines`\
+  \ `rtn` join `mysql`.`schemata` `sch` on((`rtn`.`schema_id` = `sch`.`id`))) join\
+  \ `mysql`.`catalogs` `cat` on((`cat`.`id` = `sch`.`catalog_id`))) join `mysql`.`collations`\
+  \ `coll_client` on((`coll_client`.`id` = `rtn`.`client_collation_id`))) join `mysql`.`character_sets`\
+  \ `cs_client` on((`cs_client`.`id` = `coll_client`.`character_set_id`))) join `mysql`.`collations`\
+  \ `coll_conn` on((`coll_conn`.`id` = `rtn`.`connection_collation_id`))) join `mysql`.`collations`\
+  \ `coll_db` on((`coll_db`.`id` = `rtn`.`schema_collation_id`))) left join `mysql`.`collations`\
+  \ `coll_result` on((`coll_result`.`id` = `rtn`.`result_collation_id`))) left join\
+  \ `mysql`.`character_sets` `cs_result` on((`cs_result`.`id` = `coll_result`.`character_set_id`)))\
+  \ where (0 <> can_access_routine(`sch`.`name`,`rtn`.`name`,`rtn`.`type`,`rtn`.`definer`,false))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 4fe4ecd0387c0fda01a4671377c731a9
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,144 @@
+name: ADMINISTRABLE_ROLE_AUTHORIZATIONS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS
+tableType: View
+columns:
+  - name: USER
+    dataType: VARCHAR
+    dataLength: 97
+    dataTypeDisplay: varchar(97)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.USER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: HOST
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.HOST
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRANTEE
+    dataType: VARCHAR
+    dataLength: 97
+    dataTypeDisplay: varchar(97)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.GRANTEE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: GRANTEE_HOST
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.GRANTEE_HOST
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROLE_NAME
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.ROLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROLE_HOST
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.ROLE_HOST
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_GRANTABLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.IS_GRANTABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_DEFAULT
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.IS_DEFAULT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_MANDATORY
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS.IS_MANDATORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 97d19a8c-a568-47bd-b10d-633583a312fc
+    type: user
+    name: aniket
+    fullyQualifiedName: aniket
+    displayName: Aniket Katkar
+    deleted: false
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`ADMINISTRABLE_ROLE_AUTHORIZATIONS`\
+  \ AS select `information_schema`.`APPLICABLE_ROLES`.`USER` AS `USER`,`information_schema`.`APPLICABLE_ROLES`.`HOST`\
+  \ AS `HOST`,`information_schema`.`APPLICABLE_ROLES`.`GRANTEE` AS `GRANTEE`,`information_schema`.`APPLICABLE_ROLES`.`GRANTEE_HOST`\
+  \ AS `GRANTEE_HOST`,`information_schema`.`APPLICABLE_ROLES`.`ROLE_NAME` AS `ROLE_NAME`,`information_schema`.`APPLICABLE_ROLES`.`ROLE_HOST`\
+  \ AS `ROLE_HOST`,`information_schema`.`APPLICABLE_ROLES`.`IS_GRANTABLE` AS `IS_GRANTABLE`,`information_schema`.`APPLICABLE_ROLES`.`IS_DEFAULT`\
+  \ AS `IS_DEFAULT`,`information_schema`.`APPLICABLE_ROLES`.`IS_MANDATORY` AS `IS_MANDATORY`\
+  \ from `information_schema`.`APPLICABLE_ROLES` where (`information_schema`.`APPLICABLE_ROLES`.`IS_GRANTABLE`\
+  \ = 'YES')"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts:
+  - id: f3f13592-8c5f-4924-9066-a0bf056acd47
+    type: dataProduct
+    name: Banking Catalogue
+    fullyQualifiedName: Banking Catalogue
+    description: Banking Catalogue
+    displayName: banks
+sourceHash: da2d4863377539a809df5c34582ca042
+processedLineage: false
+entityStatus: Approved

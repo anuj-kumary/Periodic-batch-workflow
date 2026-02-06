@@ -1,0 +1,86 @@
+name: lsn_time_mapping
+fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping
+tableType: Regular
+columns:
+  - name: start_lsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping.start_lsn
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: tran_begin_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping.tran_begin_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tran_end_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping.tran_end_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tran_id
+    dataType: VARBINARY
+    dataLength: 10
+    dataTypeDisplay: varbinary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping.tran_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tran_begin_lsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping.tran_begin_lsn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 0193585f-522c-446a-92d8-9bd59b1da890
+  type: databaseSchema
+  name: cdc
+  fullyQualifiedName: MSSQL_TEST.mydb.cdc
+  displayName: cdc
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: dcc84d9c1beaf75928ab072be2a1a58d
+processedLineage: false
+entityStatus: Approved

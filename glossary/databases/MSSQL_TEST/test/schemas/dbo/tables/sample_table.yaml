@@ -1,0 +1,50 @@
+name: sample table
+fullyQualifiedName: MSSQL_TEST.test.dbo.sample table
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.test.dbo.sample table.id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 619916bf-befd-4e3f-8bbf-0cb599234c75
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.test.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: a407d061-62da-4707-9db1-87cd5ca6e438
+  type: database
+  name: test
+  fullyQualifiedName: MSSQL_TEST.test
+  displayName: test
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f438637df69da1444dc64dc18d49d17b
+processedLineage: false
+entityStatus: Approved

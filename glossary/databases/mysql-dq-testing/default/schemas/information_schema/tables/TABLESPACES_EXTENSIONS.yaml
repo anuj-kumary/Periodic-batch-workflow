@@ -1,0 +1,64 @@
+name: TABLESPACES_EXTENSIONS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES_EXTENSIONS
+tableType: View
+columns:
+  - name: TABLESPACE_NAME
+    dataType: VARCHAR
+    dataLength: 268
+    dataTypeDisplay: varchar(268)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES_EXTENSIONS.TABLESPACE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ENGINE_ATTRIBUTE
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: json
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES_EXTENSIONS.ENGINE_ATTRIBUTE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`TABLESPACES_EXTENSIONS` AS select\
+  \ `tsps`.`name` AS `TABLESPACE_NAME`,`tsps`.`engine_attribute` AS `ENGINE_ATTRIBUTE`\
+  \ from `mysql`.`tablespaces` `tsps`"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 0e433cae2519280a3816fc839e5c00c0
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,158 @@
+name: change_tables
+fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables
+tableType: Regular
+columns:
+  - name: object_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.object_id
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: source_object_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.source_object_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: capture_instance
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.capture_instance
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: start_lsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.start_lsn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end_lsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.end_lsn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: supports_net_changes
+    dataType: BIT
+    dataLength: 1
+    dataTypeDisplay: bit
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.supports_net_changes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: has_drop_pending
+    dataType: BIT
+    dataLength: 1
+    dataTypeDisplay: bit
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.has_drop_pending
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: role_name
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.role_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: index_name
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.index_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: filegroup_name
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: nvarchar(128)
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.filegroup_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: create_date
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.create_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition_switch
+    dataType: BIT
+    dataLength: 1
+    dataTypeDisplay: bit
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables.partition_switch
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 0193585f-522c-446a-92d8-9bd59b1da890
+  type: databaseSchema
+  name: cdc
+  fullyQualifiedName: MSSQL_TEST.mydb.cdc
+  displayName: cdc
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a2c46289a06f77794b575e31f512aea3
+processedLineage: false
+entityStatus: Approved

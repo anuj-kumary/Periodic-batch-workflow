@@ -1,0 +1,175 @@
+name: KEY_COLUMN_USAGE
+fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE
+tableType: View
+columns:
+  - name: CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLUMN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.COLUMN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDINAL_POSITION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.ORDINAL_POSITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: POSITION_IN_UNIQUE_CONSTRAINT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.POSITION_IN_UNIQUE_CONSTRAINT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.REFERENCED_TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.REFERENCED_TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_COLUMN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE.REFERENCED_COLUMN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`KEY_COLUMN_USAGE` AS select `cat`.`name`\
+  \ AS `CONSTRAINT_CATALOG`,`sch`.`name` AS `CONSTRAINT_SCHEMA`,`constraints`.`CONSTRAINT_NAME`\
+  \ AS `CONSTRAINT_NAME`,`cat`.`name` AS `TABLE_CATALOG`,`sch`.`name` AS `TABLE_SCHEMA`,`tbl`.`name`\
+  \ AS `TABLE_NAME`,(`col`.`name` collate utf8mb3_tolower_ci) AS `COLUMN_NAME`,`constraints`.`ORDINAL_POSITION`\
+  \ AS `ORDINAL_POSITION`,`constraints`.`POSITION_IN_UNIQUE_CONSTRAINT` AS `POSITION_IN_UNIQUE_CONSTRAINT`,`constraints`.`REFERENCED_TABLE_SCHEMA`\
+  \ AS `REFERENCED_TABLE_SCHEMA`,`constraints`.`REFERENCED_TABLE_NAME` AS `REFERENCED_TABLE_NAME`,`constraints`.`REFERENCED_COLUMN_NAME`\
+  \ AS `REFERENCED_COLUMN_NAME` from (((`mysql`.`tables` `tbl` join `mysql`.`schemata`\
+  \ `sch` on((`tbl`.`schema_id` = `sch`.`id`))) join `mysql`.`catalogs` `cat` on((`cat`.`id`\
+  \ = `sch`.`catalog_id`))) join (lateral (select `idx`.`name` AS `CONSTRAINT_NAME`,`icu`.`ordinal_position`\
+  \ AS `ORDINAL_POSITION`,NULL AS `POSITION_IN_UNIQUE_CONSTRAINT`,NULL AS `REFERENCED_TABLE_SCHEMA`,NULL\
+  \ AS `REFERENCED_TABLE_NAME`,NULL AS `REFERENCED_COLUMN_NAME`,`icu`.`column_id`\
+  \ AS `column_id`,((0 <> `idx`.`hidden`) or (0 <> `icu`.`hidden`)) AS `HIDDEN` from\
+  \ (`mysql`.`indexes` `idx` join `mysql`.`index_column_usage` `icu` on((`icu`.`index_id`\
+  \ = `idx`.`id`))) where ((`idx`.`table_id` = `tbl`.`id`) and (`idx`.`type` in ('PRIMARY','UNIQUE')))\
+  \ union all select (`fk`.`name` collate utf8mb3_tolower_ci) AS `CONSTRAINT_NAME`,`fkcu`.`ordinal_position`\
+  \ AS `ORDINAL_POSITION`,`fkcu`.`ordinal_position` AS `POSITION_IN_UNIQUE_CONSTRAINT`,`fk`.`referenced_table_schema`\
+  \ AS `REFERENCED_TABLE_SCHEMA`,`fk`.`referenced_table_name` AS `REFERENCED_TABLE_NAME`,`fkcu`.`referenced_column_name`\
+  \ AS `REFERENCED_COLUMN_NAME`,`fkcu`.`column_id` AS `column_id`,false AS `HIDDEN`\
+  \ from (`mysql`.`foreign_keys` `fk` join `mysql`.`foreign_key_column_usage` `fkcu`\
+  \ on((`fkcu`.`foreign_key_id` = `fk`.`id`))) where (`fk`.`table_id` = `tbl`.`id`))\
+  \ `constraints` join `mysql`.`columns` `col` on((`constraints`.`column_id` = `col`.`id`))))\
+  \ where ((0 <> can_access_column(`sch`.`name`,`tbl`.`name`,`col`.`name`)) and (0\
+  \ <> is_visible_dd_object(`tbl`.`hidden`,((`col`.`hidden` not in ('Visible','User'))\
+  \ or (0 <> `constraints`.`HIDDEN`)),`col`.`options`)))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 53f435cb9957951fa1ced4aa321ec313
+processedLineage: false
+entityStatus: Approved

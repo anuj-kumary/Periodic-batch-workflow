@@ -1,0 +1,105 @@
+name: INNODB_CMPMEM_RESET
+fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET
+tableType: View
+columns:
+  - name: page_size
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET.page_size
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: buffer_pool_instance
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET.buffer_pool_instance
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pages_used
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET.pages_used
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pages_free
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET.pages_free
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: relocation_ops
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET.relocation_ops
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: relocation_time
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET.relocation_time
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `INNODB_CMPMEM_RESET` (
+    `page_size` int NOT NULL DEFAULT '0',
+    `buffer_pool_instance` int NOT NULL DEFAULT '0',
+    `pages_used` int NOT NULL DEFAULT '0',
+    `pages_free` int NOT NULL DEFAULT '0',
+    `relocation_ops` bigint NOT NULL DEFAULT '0',
+    `relocation_time` int NOT NULL DEFAULT '0'
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d931342fc10172182f334ff9142293b7
+processedLineage: false
+entityStatus: Approved

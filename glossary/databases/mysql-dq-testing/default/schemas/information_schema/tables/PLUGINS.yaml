@@ -1,0 +1,155 @@
+name: PLUGINS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS
+tableType: View
+columns:
+  - name: PLUGIN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PLUGIN_VERSION
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PLUGIN_STATUS
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar(10)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_STATUS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PLUGIN_TYPE
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: varchar(80)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PLUGIN_TYPE_VERSION
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_TYPE_VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PLUGIN_LIBRARY
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_LIBRARY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PLUGIN_LIBRARY_VERSION
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_LIBRARY_VERSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PLUGIN_AUTHOR
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_AUTHOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PLUGIN_DESCRIPTION
+    dataType: TEXT
+    dataLength: 1
+    dataTypeDisplay: longtext
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_DESCRIPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PLUGIN_LICENSE
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: varchar(80)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.PLUGIN_LICENSE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LOAD_OPTION
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS.LOAD_OPTION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `PLUGINS` (
+    `PLUGIN_NAME` varchar(64) NOT NULL DEFAULT '',
+    `PLUGIN_VERSION` varchar(20) NOT NULL DEFAULT '',
+    `PLUGIN_STATUS` varchar(10) NOT NULL DEFAULT '',
+    `PLUGIN_TYPE` varchar(80) NOT NULL DEFAULT '',
+    `PLUGIN_TYPE_VERSION` varchar(20) NOT NULL DEFAULT '',
+    `PLUGIN_LIBRARY` varchar(64) DEFAULT NULL,
+    `PLUGIN_LIBRARY_VERSION` varchar(20) DEFAULT NULL,
+    `PLUGIN_AUTHOR` varchar(64) DEFAULT NULL,
+    `PLUGIN_DESCRIPTION` longtext,
+    `PLUGIN_LICENSE` varchar(80) DEFAULT NULL,
+    `LOAD_OPTION` varchar(64) NOT NULL DEFAULT ''
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: eb8276928c57f406b8e89ba144554802
+processedLineage: false
+entityStatus: Approved

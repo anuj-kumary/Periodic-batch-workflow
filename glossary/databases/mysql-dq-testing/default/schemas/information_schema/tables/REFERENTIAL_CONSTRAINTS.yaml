@@ -1,0 +1,152 @@
+name: REFERENTIAL_CONSTRAINTS
+fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS
+tableType: View
+columns:
+  - name: CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UNIQUE_CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.UNIQUE_CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MATCH_OPTION
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(7)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.MATCH_OPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: UPDATE_RULE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(11)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.UPDATE_RULE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DELETE_RULE
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: enum(11)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.DELETE_RULE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS.REFERENCED_TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: "CREATE ALGORITHM=UNDEFINED DEFINER=`mysql.infoschema`@`localhost`\
+  \ SQL SECURITY DEFINER VIEW `information_schema`.`REFERENTIAL_CONSTRAINTS` AS select\
+  \ `cat`.`name` AS `CONSTRAINT_CATALOG`,`sch`.`name` AS `CONSTRAINT_SCHEMA`,(`fk`.`name`\
+  \ collate utf8mb3_tolower_ci) AS `CONSTRAINT_NAME`,`fk`.`referenced_table_catalog`\
+  \ AS `UNIQUE_CONSTRAINT_CATALOG`,`fk`.`referenced_table_schema` AS `UNIQUE_CONSTRAINT_SCHEMA`,`fk`.`unique_constraint_name`\
+  \ AS `UNIQUE_CONSTRAINT_NAME`,`fk`.`match_option` AS `MATCH_OPTION`,`fk`.`update_rule`\
+  \ AS `UPDATE_RULE`,`fk`.`delete_rule` AS `DELETE_RULE`,`tbl`.`name` AS `TABLE_NAME`,`fk`.`referenced_table_name`\
+  \ AS `REFERENCED_TABLE_NAME` from (((`mysql`.`foreign_keys` `fk` join `mysql`.`tables`\
+  \ `tbl` on((`fk`.`table_id` = `tbl`.`id`))) join `mysql`.`schemata` `sch` on((`fk`.`schema_id`\
+  \ = `sch`.`id`))) join `mysql`.`catalogs` `cat` on((`cat`.`id` = `sch`.`catalog_id`)))\
+  \ where ((0 <> can_access_table(`sch`.`name`,`tbl`.`name`)) and (0 <> is_visible_dd_object(`tbl`.`hidden`)))"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 668a0a3e0c2e5733fccbd453ee825007
+processedLineage: false
+entityStatus: Approved

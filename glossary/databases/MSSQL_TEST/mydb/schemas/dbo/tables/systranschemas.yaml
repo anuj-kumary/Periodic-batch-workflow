@@ -1,0 +1,77 @@
+name: systranschemas
+fullyQualifiedName: MSSQL_TEST.mydb.dbo.systranschemas
+tableType: Regular
+columns:
+  - name: tabid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.dbo.systranschemas.tabid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: startlsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.dbo.systranschemas.startlsn
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: endlsn
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: binary(10)
+    fullyQualifiedName: MSSQL_TEST.mydb.dbo.systranschemas.endlsn
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: typeid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: MSSQL_TEST.mydb.dbo.systranschemas.typeid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 6ef3d2b4-0469-44fe-8395-f613b72a8da7
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.mydb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 57d367d325910d08080e5ff9fb631b68
+processedLineage: false
+entityStatus: Approved

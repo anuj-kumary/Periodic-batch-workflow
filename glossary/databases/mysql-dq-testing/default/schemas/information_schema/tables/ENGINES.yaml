@@ -1,0 +1,105 @@
+name: ENGINES
+fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES
+tableType: View
+columns:
+  - name: ENGINE
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES.ENGINE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SUPPORT
+    dataType: VARCHAR
+    dataLength: 8
+    dataTypeDisplay: varchar(8)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES.SUPPORT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: varchar(80)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES.COMMENT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TRANSACTIONS
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES.TRANSACTIONS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: XA
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES.XA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SAVEPOINTS
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: varchar(3)
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES.SAVEPOINTS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: ac62dc9b-d51b-48c0-a96b-a1121c069368
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: mysql-dq-testing.default.information_schema
+  description: <p>test description</p>
+  displayName: information_schema
+  deleted: false
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+schemaDefinition: |-
+  CREATE TEMPORARY TABLE `ENGINES` (
+    `ENGINE` varchar(64) NOT NULL DEFAULT '',
+    `SUPPORT` varchar(8) NOT NULL DEFAULT '',
+    `COMMENT` varchar(80) NOT NULL DEFAULT '',
+    `TRANSACTIONS` varchar(3) DEFAULT NULL,
+    `XA` varchar(3) DEFAULT NULL,
+    `SAVEPOINTS` varchar(3) DEFAULT NULL
+  ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb3
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6624ac3be669f28ca6b634a0ead9f58e
+processedLineage: false
+entityStatus: Approved
