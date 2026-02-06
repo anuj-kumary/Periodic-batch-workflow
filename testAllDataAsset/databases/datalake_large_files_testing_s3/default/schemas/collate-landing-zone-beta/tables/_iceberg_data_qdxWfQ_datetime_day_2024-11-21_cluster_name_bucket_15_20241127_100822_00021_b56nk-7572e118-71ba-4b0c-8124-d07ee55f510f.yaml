@@ -1,0 +1,57 @@
+name: iceberg/data/qdxWfQ/datetime_day=2024-11-21/cluster_name_bucket=15/20241127_100822_00021_b56nk-7572e118-71ba-4b0c-8124-d07ee55f510f.parquet
+fullyQualifiedName: datalake large files testing s3.default.collate-landing-zone-beta."iceberg/data/qdxWfQ/datetime_day=2024-11-21/cluster_name_bucket=15/20241127_100822_00021_b56nk-7572e118-71ba-4b0c-8124-d07ee55f510f.parquet"
+tableType: Regular
+columns:
+  - name: file_path
+    displayName: file_path
+    dataType: STRING
+    dataTypeDisplay: string
+    fullyQualifiedName: datalake large files testing s3.default.collate-landing-zone-beta."iceberg/data/qdxWfQ/datetime_day=2024-11-21/cluster_name_bucket=15/20241127_100822_00021_b56nk-7572e118-71ba-4b0c-8124-d07ee55f510f.parquet".file_path
+    tags: []
+    children: []
+    customMetrics: []
+  - name: pos
+    displayName: pos
+    dataType: INT
+    dataTypeDisplay: int64
+    fullyQualifiedName: datalake large files testing s3.default.collate-landing-zone-beta."iceberg/data/qdxWfQ/datetime_day=2024-11-21/cluster_name_bucket=15/20241127_100822_00021_b56nk-7572e118-71ba-4b0c-8124-d07ee55f510f.parquet".pos
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 2d6fd81f-dc71-4ab9-84c5-69aae64175ab
+  type: databaseSchema
+  name: collate-landing-zone-beta
+  fullyQualifiedName: datalake large files testing s3.default.collate-landing-zone-beta
+  displayName: collate-landing-zone-beta
+  deleted: false
+database:
+  id: 8697ff50-039d-4fb9-803d-175db4088581
+  type: database
+  name: default
+  fullyQualifiedName: datalake large files testing s3.default
+  displayName: default
+  deleted: false
+service:
+  id: 1260697d-6d10-4b82-b4a6-ca95bab8c257
+  type: databaseService
+  name: datalake large files testing s3
+  fullyQualifiedName: datalake large files testing s3
+  description: ""
+  displayName: datalake large files testing s3
+  deleted: false
+serviceType: Datalake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+fileFormat: parquet
+sourceHash: 633c98f340360ae3f920b90ab298d9e6
+processedLineage: false
+entityStatus: Unprocessed
