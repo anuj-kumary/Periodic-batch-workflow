@@ -1,0 +1,38 @@
+name: sysmail_help_status_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_help_status_sp
+storedProcedureCode:
+  language: SQL
+  code: "CREATE   PROCEDURE sysmail_help_status_sp\r\n  WITH EXECUTE AS 'dbo'\r\n\
+    AS\r\nBEGIN\r\n    IF NOT EXISTS (SELECT * FROM sys.service_queues WHERE name\
+    \ = N'ExternalMailQueue' AND is_receive_enabled = 1)\r\n       SELECT 'STOPPED'\
+    \ AS Status\r\n    ELSE\r\n       SELECT 'STARTED' AS Status\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 79768554d1c8edb71628cf3b9e61bfab
+processedLineage: false
+entityStatus: Approved

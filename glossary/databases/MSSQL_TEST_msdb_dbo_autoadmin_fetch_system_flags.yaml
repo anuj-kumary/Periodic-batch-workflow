@@ -1,0 +1,56 @@
+name: autoadmin_fetch_system_flags
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_fetch_system_flags
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_fetch_system_flags\r\nAS\r\nBEGIN\r\n\t\
+    BEGIN TRANSACTION\r\n\t\tDECLARE @value NVARCHAR(MAX)\r\n\r\n\t\tSELECT @value\
+    \ = value FROM autoadmin_system_flags WHERE LOWER(name) = LOWER(N'SSMBackup2WAEverConfigured')\r\
+    \n\t\t\r\n\t\tIF (LOWER(ISNULL(@value, '')) <> N'true')\r\n\t\tBEGIN\r\n\t\t\t\
+    DECLARE @is_configured BIT\r\n\t\t\tSET @is_configured = 0\r\n\t\t\t\r\n\t\t\t\
+    IF EXISTS (SELECT TOP 1 container_url FROM managed_backup.fn_backup_db_config(NULL)\
+    \ WHERE container_url IS NOT NULL)\r\n\t\t\tBEGIN\r\n\t\t\t\tSET @is_configured\
+    \ = 1\t\r\n\t\t\tEND\r\n\t\t\tELSE IF EXISTS (SELECT TOP 1 container_url FROM\
+    \ managed_backup.fn_backup_instance_config() WHERE container_url IS NOT NULL)\r\
+    \n\t\t\tBEGIN\r\n\t\t\t\tSET @is_configured = 1\t\r\n\t\t\tEND\r\n\t\t\tELSE IF\
+    \ EXISTS (SELECT TOP 1 credential_name FROM smart_admin.fn_backup_db_config(NULL)\
+    \ WHERE credential_name IS NOT NULL)\r\n\t\t\tBEGIN\r\n\t\t\t\tSET @is_configured\
+    \ = 1\t\r\n\t\t\tEND\r\n\t\t\tELSE IF EXISTS (SELECT TOP 1 credential_name FROM\
+    \ smart_admin.fn_backup_instance_config() WHERE credential_name IS NOT NULL)\r\
+    \n\t\t\tBEGIN\r\n\t\t\t\tSET @is_configured = 1\t\r\n\t\t\tEND\r\n\t\t\t\r\n\t\
+    \t\tIF (@is_configured = 1)\r\n\t\t\tBEGIN\r\n\t\t\t\tMERGE autoadmin_system_flags\
+    \ AS target\r\n\t\t\t\tUSING (SELECT LOWER(N'SSMBackup2WAEverConfigured') as name)\
+    \ AS source\r\n\t\t\t\tON source.name = target.name\r\n\t\t\t\tWHEN MATCHED THEN\
+    \ UPDATE SET target.value = N'true'\r\n\t\t\t\tWHEN NOT MATCHED THEN INSERT VALUES\
+    \ (N'SSMBackup2WAEverConfigured', N'true');\r\n\t\t\tEND\r\n\t\tEND\r\n\tCOMMIT\
+    \ TRANSACTION\r\n\t\r\n    SELECT name,\r\n\tvalue \r\n\tFROM autoadmin_system_flags\r\
+    \nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: f281d2993d0d7cb4d22497d45b7959a7
+processedLineage: false
+entityStatus: Approved

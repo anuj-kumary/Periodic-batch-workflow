@@ -1,0 +1,43 @@
+name: uspUpdateEmployeePersonalInfo
+fullyQualifiedName: mssql_er_diag.AdventureWorks.HumanResources.uspUpdateEmployeePersonalInfo
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE PROCEDURE [HumanResources].[uspUpdateEmployeePersonalInfo]\r\n\
+    \    @BusinessEntityID [int], \r\n    @NationalIDNumber [nvarchar](15), \r\n \
+    \   @BirthDate [datetime], \r\n    @MaritalStatus [nchar](1), \r\n    @Gender\
+    \ [nchar](1)\r\nWITH EXECUTE AS CALLER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\
+    \n\r\n    BEGIN TRY\r\n        UPDATE [HumanResources].[Employee] \r\n       \
+    \ SET [NationalIDNumber] = @NationalIDNumber \r\n            ,[BirthDate] = @BirthDate\
+    \ \r\n            ,[MaritalStatus] = @MaritalStatus \r\n            ,[Gender]\
+    \ = @Gender \r\n        WHERE [BusinessEntityID] = @BusinessEntityID;\r\n    END\
+    \ TRY\r\n    BEGIN CATCH\r\n        EXECUTE [dbo].[uspLogError];\r\n    END CATCH;\r\
+    \nEND;\r\n"
+dataProducts: []
+databaseSchema:
+  id: 0566ea61-1e79-49dd-89d7-07248aae613f
+  type: databaseSchema
+  name: HumanResources
+  fullyQualifiedName: mssql_er_diag.AdventureWorks.HumanResources
+  displayName: HumanResources
+  deleted: false
+database:
+  id: 1e3c79a9-c852-4475-87ab-b32cd25abb0f
+  type: database
+  name: AdventureWorks
+  fullyQualifiedName: mssql_er_diag.AdventureWorks
+  displayName: AdventureWorks
+  deleted: false
+service:
+  id: 1fed7fdb-1405-4a27-b2e0-1f420f2be98b
+  type: databaseService
+  name: mssql_er_diag
+  fullyQualifiedName: mssql_er_diag
+  displayName: mssql_er_diag
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 6522fc98005e2c31ffc3b57654a07aab
+processedLineage: false
+entityStatus: Approved

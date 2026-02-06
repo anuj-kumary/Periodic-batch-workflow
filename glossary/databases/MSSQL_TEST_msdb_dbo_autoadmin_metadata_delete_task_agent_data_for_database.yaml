@@ -1,0 +1,70 @@
+name: autoadmin_metadata_delete_task_agent_data_for_database
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_delete_task_agent_data_for_database
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_metadata_delete_task_agent_data_for_database\r\
+    \n        @schema_version  INT,\r\n        @task_agent_guid UNIQUEIDENTIFIER,\r\
+    \n        @db_name         NVARCHAR(128),\r\n        @db_id           INT,\r\n\
+    \        @db_guid         UNIQUEIDENTIFIER\r\nAS\r\nBEGIN\r\n    IF (@schema_version\
+    \ IS NULL) OR \r\n\t\t(@task_agent_guid IS NULL) OR \r\n\t\t(@db_name IS NULL)\
+    \ OR \r\n\t\t(@db_id IS NULL) OR \r\n\t\t(@db_guid IS NULL)\r\n    BEGIN\r\n \
+    \       RAISERROR ('All parameters must be specified and non-NULL. Cannot complete\
+    \ task agent metadata deletion for database.', -- Message text.\r\n          \
+    \         17, -- Severity,\r\n                   1); -- State\r\n        RETURN\r\
+    \n    END\r\n\r\n    SET NOCOUNT OFF\r\n\r\n    BEGIN TRANSACTION\r\n        --\
+    \ Step 1: Delete the task agent's row in autoadmin_task_agent_metadata for the\
+    \ specified database\r\n        -- Note: deletes are only executed for a database\
+    \ that has been dropped.\r\n        --\r\n        DELETE autoadmin_task_agent_metadata\
+    \ \r\n\t\tFROM autoadmin_task_agent_metadata aatam\r\n        WHERE aatam.task_agent_guid\
+    \ = @task_agent_guid\r\n\t\t\t\tAND aatam.schema_version = @schema_version\r\n\
+    \                AND aatam.autoadmin_id IN\r\n        (SELECT aamd.autoadmin_id\
+    \ FROM autoadmin_managed_databases aamd\r\n            WHERE aamd.db_id = @db_id\
+    \ \r\n              AND QUOTENAME(aamd.db_name) = QUOTENAME(@db_name)\r\n    \
+    \          AND aamd.db_guid = @db_guid\r\n              AND aamd.drop_date IS\
+    \ NOT NULL)\r\n\r\n        IF (@@ROWCOUNT = 0)\r\n        BEGIN\r\n          \
+    \  DECLARE @Msg NVARCHAR(256)\r\n            SET @Msg = N'The database %s (ID\
+    \ = %d) has either not been dropped, never existed, or its task agent data was\
+    \ deleted earlier. Cannot delete task agent data from auto-admin tables.';\r\n\
+    \r\n            RAISERROR (@Msg, -- Message text.\r\n                       17,\
+    \ -- Severity,\r\n                       1, -- State,\r\n                    \
+    \   @db_name, @db_id); -- formatting arguments\r\n            GOTO QuitWithRollback\r\
+    \n        END\r\n\r\n        SET NOCOUNT ON\r\n\r\n        -- Step 2: Garbage\
+    \ collection on autoadmin_managed_databases.\r\n        -- Delete rows from autoadmin_managed_databases\
+    \ that do not have any corresponding rows left in autoadmin_task_agent_metadata\r\
+    \n\r\n        DELETE autoadmin_managed_databases FROM autoadmin_managed_databases\
+    \ aamd\r\n            WHERE aamd.drop_date IS NOT NULL\r\n            AND aamd.autoadmin_id\
+    \ NOT IN (SELECT autoadmin_id \r\n                                           \
+    \ FROM autoadmin_task_agent_metadata\r\n                                     \
+    \       WHERE schema_version = @schema_version)\r\n\r\n\tQuitWithCommit:\r\n\t\
+    \tCOMMIT TRANSACTION\r\n\t\tGOTO ProcEnd\r\n\r\n\tQuitWithRollback:\r\n\t\tIF\
+    \ (@@TRANCOUNT > 0) ROLLBACK TRANSACTION\r\n\r\n\tProcEnd:\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: a52cfacf3a0eab4b4b97cf881ff00bbf
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,45 @@
+name: TurnOffAllIdentityInsert
+fullyQualifiedName: MSSQL_TEST.master.dbo.TurnOffAllIdentityInsert
+storedProcedureCode:
+  language: SQL
+  code: "-- Helper procedure to turn OFF IDENTITY_INSERT if needed\nCREATE PROCEDURE\
+    \ TurnOffAllIdentityInsert\nAS\nBEGIN\n    -- Loop through all tables with active\
+    \ identity columns and turn OFF IDENTITY_INSERT\n    DECLARE @sql NVARCHAR(MAX)\
+    \ = N'';\n\n    -- Identify all tables with identity columns\n    SELECT @sql\
+    \ += 'IF EXISTS (SELECT 1 FROM sys.columns \n                    WHERE is_identity\
+    \ = 1 \n                    AND object_id = OBJECT_ID(''' + s.name + '.' + t.name\
+    \ + ''')) \n                    BEGIN \n                        SET IDENTITY_INSERT\
+    \ ' + s.name + '.' + t.name + ' OFF;\n                    END;'\n    FROM sys.tables\
+    \ t\n    INNER JOIN sys.schemas s ON t.schema_id = s.schema_id;\n\n    -- Execute\
+    \ the generated SQL to turn OFF all identity inserts\n    EXEC sp_executesql @sql;\n\
+    END;"
+dataProducts: []
+databaseSchema:
+  id: 5e0e1eb7-ae85-47a4-ae3b-ad5cc39c69c8
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.master.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: de2d3569-14e3-4115-838c-1cc71139205e
+  type: database
+  name: master
+  fullyQualifiedName: MSSQL_TEST.master
+  displayName: master
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 9cf90c0f737d94baffdf1b8687705bf4
+processedLineage: false
+entityStatus: Approved

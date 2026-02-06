@@ -1,0 +1,59 @@
+name: sysmail_delete_principalprofile_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_delete_principalprofile_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_delete_principalprofile_sp\r\n   @principal_id\
+    \ int = NULL, -- must provide id or name\r\n   @principal_name sysname = NULL,\r\
+    \n   @profile_id int = NULL, -- must provide id or name\r\n   @profile_name sysname\
+    \ = NULL\r\nAS\r\n   SET NOCOUNT ON\r\n\r\n   DECLARE @rc int\r\n   DECLARE @principal_sid\
+    \ varbinary(85)\r\n   DECLARE @profileid int\r\n\r\n   IF (@principal_id IS NOT\
+    \ NULL AND @principal_id = 0) OR (@principal_name IS NOT NULL AND @principal_name\
+    \ = N'public')\r\n   BEGIN\r\n      IF (@principal_id IS NOT NULL AND @principal_id\
+    \ <> 0) OR (@principal_name IS NOT NULL AND @principal_name <> N'public')\r\n\
+    \      BEGIN\r\n         RAISERROR(14605, -1, -1, 'principal')  -- id and name\
+    \ do not match\r\n      END\r\n      SET @principal_sid = 0x00 -- public\r\n \
+    \  END\r\n   ELSE\r\n   BEGIN\r\n      IF (@principal_id IS NOT NULL OR @principal_name\
+    \ IS NOT NULL) \r\n      BEGIN\r\n         exec @rc = msdb.dbo.sysmail_verify_principal_sp\
+    \ @principal_id, @principal_name, 1, @principal_sid OUTPUT\r\n         IF @rc\
+    \ <> 0\r\n            RETURN(1)\r\n      END\r\n   END\r\n   \r\n   exec @rc =\
+    \ msdb.dbo.sysmail_verify_profile_sp @profile_id, @profile_name, 1, 0, @profileid\
+    \ OUTPUT\r\n   IF @rc <> 0\r\n      RETURN(2)\r\n\r\n   IF ((@principal_id IS\
+    \ NOT NULL OR @principal_name IS NOT NULL) AND @profileid IS NOT NULL)\r\n   BEGIN\r\
+    \n      DELETE FROM msdb.dbo.sysmail_principalprofile WHERE principal_sid=@principal_sid\
+    \ AND profile_id = @profileid\r\n   END\r\n   ELSE IF (@principal_id IS NOT NULL\
+    \ OR @principal_name IS NOT NULL)\r\n   BEGIN\r\n      DELETE FROM msdb.dbo.sysmail_principalprofile\
+    \ WHERE principal_sid=@principal_sid\r\n   END\r\n   ELSE IF (@profileid IS NOT\
+    \ NULL)\r\n   BEGIN\r\n      DELETE FROM msdb.dbo.sysmail_principalprofile WHERE\
+    \ profile_id = @profileid\r\n   END\r\n   ELSE -- no parameters are supplied for\
+    \ deletion\r\n   BEGIN\r\n      RAISERROR(14608, -1, -1, 'principal', 'profile')\
+    \ \r\n      RETURN(6)\r\n   END\r\n   \r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 8765bf0bbf2d93c9d51f65798798dbd8
+processedLineage: false
+entityStatus: Approved

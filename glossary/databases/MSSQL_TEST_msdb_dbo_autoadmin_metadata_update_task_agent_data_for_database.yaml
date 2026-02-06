@@ -1,0 +1,62 @@
+name: autoadmin_metadata_update_task_agent_data_for_database
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_update_task_agent_data_for_database
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_metadata_update_task_agent_data_for_database\r\
+    \n        @schema_version  INT,\r\n        @task_agent_guid UNIQUEIDENTIFIER,\r\
+    \n        @db_name         NVARCHAR(128),\r\n        @db_id           INT,\r\n\
+    \        @db_guid         UNIQUEIDENTIFIER,\r\n        @last_modified   DATETIME,\r\
+    \n        @task_agent_data XML\r\nAS\r\nBEGIN\r\n    IF (@schema_version IS NULL)\
+    \ OR \r\n\t\t(@task_agent_guid IS NULL) OR \r\n\t\t(@db_name IS NULL) OR \r\n\t\
+    \t(@db_id IS NULL) OR \r\n\t\t(@db_guid IS NULL) OR \r\n\t\t(@task_agent_data\
+    \ IS NULL)\r\n    BEGIN\r\n        RAISERROR ('All parameters must be specified\
+    \ and non-NULL. Cannot complete task agent metadata update for database.', --\
+    \ Message text.\r\n                   17, -- Severity,\r\n                   1);\
+    \ -- State\r\n        RETURN\r\n    END\r\n\r\n    DECLARE @last_modified_time\
+    \ DATETIME\r\n    SET NOCOUNT OFF\r\n\r\n    BEGIN TRANSACTION\r\n\r\n\t\t-- Get\
+    \ last modifed time for database record,  it could be v1 or v2; that is why we\
+    \ dont filter based on schema version\r\n        SELECT @last_modified_time =\
+    \ last_modified \r\n        FROM autoadmin_task_agent_metadata aatam, autoadmin_managed_databases\
+    \ aamd\r\n            WHERE aamd.db_id = @db_id \r\n                AND QUOTENAME(aamd.db_name)\
+    \ = QUOTENAME(@db_name)\r\n                AND aamd.db_guid = @db_guid\r\n   \
+    \             AND aamd.autoadmin_id = aatam.autoadmin_id\r\n                AND\
+    \ aatam.task_agent_guid = @task_agent_guid\r\n\r\n        IF (@last_modified >\
+    \ @last_modified_time) \r\n        BEGIN\r\n            UPDATE autoadmin_task_agent_metadata\
+    \ \r\n\t        SET task_agent_data = @task_agent_data, \r\n\t            last_modified\
+    \ = @last_modified,\r\n\t\t        schema_version = @schema_version\r\n      \
+    \          FROM autoadmin_task_agent_metadata aatam, autoadmin_managed_databases\
+    \ aamd\r\n                WHERE aamd.db_id = @db_id \r\n                    AND\
+    \ QUOTENAME(aamd.db_name) = QUOTENAME(@db_name)\r\n                    AND aamd.db_guid\
+    \ = @db_guid\r\n                    AND aamd.autoadmin_id = aatam.autoadmin_id\r\
+    \n                    AND aatam.task_agent_guid = @task_agent_guid \r\n      \
+    \  END\r\n    COMMIT TRANSACTION\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 02af8430cc3fa73a9c7f23b2d936c80d
+processedLineage: false
+entityStatus: Approved

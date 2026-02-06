@@ -1,0 +1,36 @@
+name: copy_table
+fullyQualifiedName: MSSQL_TEST.test.dbo.copy_table
+storedProcedureCode:
+  language: SQL
+  code: "CREATE PROCEDURE dbo.copy_table\nAS\n\t select * INTO [new_table25] from\
+    \ [new_table];"
+dataProducts: []
+databaseSchema:
+  id: 619916bf-befd-4e3f-8bbf-0cb599234c75
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.test.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: a407d061-62da-4707-9db1-87cd5ca6e438
+  type: database
+  name: test
+  fullyQualifiedName: MSSQL_TEST.test
+  displayName: test
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: a715177dd6d33ea72690aec340d89522
+processedLineage: false
+entityStatus: Approved

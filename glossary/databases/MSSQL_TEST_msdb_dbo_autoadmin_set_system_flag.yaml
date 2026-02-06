@@ -1,0 +1,61 @@
+name: autoadmin_set_system_flag
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_set_system_flag
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_set_system_flag\r\n    @flag_name\t\tNVARCHAR(128),\r\
+    \n    @flag_value\t\tNVARCHAR(MAX)\r\nAS\r\nBEGIN\r\n    DECLARE @TranCounter\
+    \ INT\r\n    SET @TranCounter = @@TRANCOUNT\r\n    IF (@TranCounter > 0)\r\n \
+    \   BEGIN\r\n        SAVE TRANSACTION tran_autoadmin_set_system_flag\r\n    END\r\
+    \n    ELSE\r\n    BEGIN\r\n        BEGIN TRANSACTION\r\n    END\r\n\r\n    BEGIN\
+    \ TRY\r\n        -- Check if we are updating / adding Notification email ID \r\
+    \n        IF(@flag_name IS NOT NULL)\r\n        BEGIN\r\n            IF(@flag_name\
+    \ = N'SSMBackup2WANotificationEmailIds')\r\n            BEGIN\r\n            \
+    \    EXEC sp_autoadmin_configure_notification \r\n            END\r\n        END\r\
+    \n\r\n        IF EXISTS (SELECT TOP 1 * FROM autoadmin_system_flags WHERE name\
+    \ = @flag_name)\r\n        BEGIN\r\n            UPDATE autoadmin_system_flags\
+    \ SET value = @flag_value WHERE name = @flag_name\r\n        END\r\n        ELSE\r\
+    \n        BEGIN\r\n            INSERT autoadmin_system_flags VALUES (@flag_name,\
+    \ @flag_value)\r\n        END\r\n\r\n        IF (@TranCounter = 0)\r\n       \
+    \     COMMIT TRANSACTION\r\n        RETURN (0)\r\n\r\n    END TRY\r\n    BEGIN\
+    \ CATCH\r\n        IF (@TranCounter = 0 OR XACT_STATE() = -1)\r\n            ROLLBACK\
+    \ TRANSACTION\r\n        ELSE IF (XACT_STATE() = 1)\r\n            ROLLBACK TRANSACTION\
+    \ tran_autoadmin_set_system_flag\r\n\r\n        DECLARE @ErrorMessage   NVARCHAR(4000);\r\
+    \n        DECLARE @ErrorSeverity  INT;\r\n        DECLARE @ErrorState     INT;\r\
+    \n        DECLARE @ErrorNumber    INT;\r\n        DECLARE @ErrorLine      INT;\r\
+    \n        DECLARE @ErrorProcedure NVARCHAR(200);\r\n        SELECT @ErrorLine\
+    \ = ERROR_LINE(),\r\n               @ErrorSeverity = ERROR_SEVERITY(),\r\n   \
+    \            @ErrorState = ERROR_STATE(),\r\n               @ErrorNumber = ERROR_NUMBER(),\r\
+    \n               @ErrorMessage = ERROR_MESSAGE(),\r\n               @ErrorProcedure\
+    \ = ISNULL(ERROR_PROCEDURE(), '-');\r\n\r\n        RAISERROR (14684, @ErrorSeverity,\
+    \ -1 , @ErrorNumber, @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine,\
+    \ @ErrorMessage);\r\n\r\n        RETURN (1)\r\n    END CATCH\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 657399f9d1f8627577d5b29d9e5cc76a
+processedLineage: false
+entityStatus: Approved

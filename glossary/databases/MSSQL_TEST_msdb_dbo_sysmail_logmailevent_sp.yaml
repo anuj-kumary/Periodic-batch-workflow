@@ -1,0 +1,51 @@
+name: sysmail_logmailevent_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_logmailevent_sp
+storedProcedureCode:
+  language: SQL
+  code: "-- sysmail_logmailevent_sp : inserts an entry in the sysmail_log table\r\n\
+    CREATE   PROCEDURE sysmail_logmailevent_sp\r\n    @event_type     INT,\r\n   \
+    \ @description    NVARCHAR(max)   = NULL, \r\n    @process_id     INT        \
+    \     = NULL,\r\n    @mailitem_id    INT             = NULL,\r\n    @account_id\
+    \     INT             = NULL\r\nAS\r\n    SET NOCOUNT ON\r\n\r\n    --Try and\
+    \ get the optional logging level for the DatabaseMail process\r\n    DECLARE @loggingLevel\
+    \ nvarchar(256)\r\n    EXEC msdb.dbo.sysmail_help_configure_value_sp @parameter_name\
+    \ = N'LoggingLevel', \r\n                                                  @parameter_value\
+    \ = @loggingLevel OUTPUT\r\n\r\n    DECLARE @loggingLevelInt int   \r\n    SET\
+    \ @loggingLevelInt = dbo.ConvertToInt(@loggingLevel, 3, 2) \r\n\r\n    IF (@event_type\
+    \ = 3) OR                           -- error\r\n       (@event_type = 2 AND @loggingLevelInt\
+    \ >= 2) OR -- warning with extended logging\r\n       (@event_type = 1 AND @loggingLevelInt\
+    \ >= 2) OR -- info with extended logging\r\n       (@event_type = 0 AND @loggingLevelInt\
+    \ >= 3)    -- success with verbose logging\r\n    BEGIN\r\n       INSERT sysmail_log(event_type,\
+    \ description, process_id, mailitem_id, account_id) \r\n       VALUES(@event_type,\
+    \ @description, @process_id , @mailitem_id, @account_id)\r\n    END\r\nRETURN\
+    \ 0\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: a4f3fcc3f2f33fafc437805ad531a6b4
+processedLineage: false
+entityStatus: Approved

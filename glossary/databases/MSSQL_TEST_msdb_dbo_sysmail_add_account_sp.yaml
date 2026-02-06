@@ -1,0 +1,68 @@
+name: sysmail_add_account_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_add_account_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_add_account_sp\r\n   @account_name sysname,\r\
+    \n   @email_address nvarchar(128),\r\n   @display_name nvarchar(128) = NULL,\r\
+    \n   @replyto_address nvarchar(128) = NULL,\r\n   @description nvarchar(256) =\
+    \ NULL,  \r\n   @mailserver_name sysname = NULL, -- the following fields are part\
+    \ of server definition\r\n   @mailserver_type sysname = N'SMTP',\r\n   @port int\
+    \ = 25,\r\n   @username nvarchar(128) = NULL,\r\n   @password nvarchar(128) =\
+    \ NULL,\r\n   @use_default_credentials bit = 0,\r\n   @enable_ssl bit = 0,\r\n\
+    \   @account_id int = NULL OUTPUT\r\nAS\r\n   SET NOCOUNT ON\r\n   DECLARE @rc\
+    \ int\r\n   DECLARE @credential_id int\r\n\r\n   EXEC @rc = msdb.dbo.sysmail_verify_accountparams_sp\r\
+    \n            @use_default_credentials = @use_default_credentials,\r\n       \
+    \     @mailserver_type = @mailserver_type OUTPUT, -- validates and returns trimmed\
+    \ value\r\n            @username = @username OUTPUT, -- returns trimmed value,\
+    \ NULL if empty\r\n            @password = @password OUTPUT  -- returns trimmed\
+    \ value, NULL if empty\r\n   IF(@rc <> 0)\r\n      RETURN (1)\r\n\r\n   EXEC @rc\
+    \ = msdb.dbo.sysmail_verify_addressparams_sp @address = @replyto_address, @parameter_name='@replyto_address'\r\
+    \n   IF (@rc <> 0)\r\n      RETURN @rc\r\n\r\n   --transact this in case sysmail_create_user_credential_sp\
+    \ fails\r\n   BEGIN TRANSACTION\r\n\r\n   -- insert new account record, rely on\
+    \ primary key constraint to error out\r\n   INSERT INTO msdb.dbo.sysmail_account\
+    \ (name,description,email_address,display_name,replyto_address) \r\n   VALUES\
+    \ (@account_name,@description,@email_address,@display_name,@replyto_address)\r\
+    \n   IF (@@ERROR <> 0)\r\n   BEGIN\r\n      ROLLBACK TRANSACTION\r\n      RETURN\
+    \ (2)\r\n   END\r\n   \r\n   -- fetch back account_id\r\n   SELECT @account_id\
+    \ = account_id FROM msdb.dbo.sysmail_account WHERE name = @account_name\r\n\r\n\
+    \   IF (@mailserver_name IS NULL) -- use local server as default\r\n      SELECT\
+    \ @mailserver_name=@@SERVERNAME\r\n\r\n   --create a credential in the credential\
+    \ store if a password needs to be stored\r\n   IF(@username IS NOT NULL)\r\n \
+    \  BEGIN\r\n      EXEC @rc = msdb.dbo.sysmail_create_user_credential_sp\r\n  \
+    \                   @username,\r\n                     @password,\r\n        \
+    \             @credential_id OUTPUT\r\n      IF(@rc <> 0)\r\n      BEGIN \r\n\
+    \         ROLLBACK TRANSACTION\r\n         RETURN (3)\r\n      END\r\n   END\r\
+    \n   \r\n   INSERT INTO msdb.dbo.sysmail_server (account_id,servertype,servername,port,username,credential_id,use_default_credentials,enable_ssl)\
+    \ \r\n   VALUES (@account_id,@mailserver_type,@mailserver_name,@port,@username,@credential_id,@use_default_credentials,@enable_ssl)\r\
+    \n   IF (@@ERROR <> 0)\r\n   BEGIN\r\n      ROLLBACK TRANSACTION\r\n      RETURN\
+    \ (4)\r\n   END\r\n\r\n   COMMIT TRANSACTION\r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 5971ea1789c6dd430e18bfcf8b28e28a
+processedLineage: false
+entityStatus: Approved

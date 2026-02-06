@@ -1,0 +1,39 @@
+name: autoadmin_metadata_query_schema_version
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_query_schema_version
+storedProcedureCode:
+  language: SQL
+  code: "CREATE   PROCEDURE autoadmin_metadata_query_schema_version\r\n        @current_schema_version\t\
+    \t\tINT OUT,\r\n        @min_schema_version_supported\tINT OUT\r\nAS\r\nBEGIN\r\
+    \n    SET NOCOUNT ON\r\n\r\n    SET @current_schema_version = dbo.fn_autoadmin_schema_version()\r\
+    \n    SET @min_schema_version_supported = dbo.fn_autoadmin_min_schema_version()\r\
+    \nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 8dff06f734d20630db3e3a38a339b2df
+processedLineage: false
+entityStatus: Approved

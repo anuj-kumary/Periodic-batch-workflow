@@ -1,0 +1,68 @@
+name: TRANSFER_PERSON_DATA1
+fullyQualifiedName: oracle_test.default.admin.TRANSFER_PERSON_DATA1
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE       transfer_person_data1
+    IS
+    BEGIN
+        -- Insert data from employees into archived_employees
+        INSERT INTO PERSONS  (person_id, first_name, last_name)
+        SELECT *
+        FROM PERSONS_FROM;
+        -- Commit the transaction
+        COMMIT;
+
+        DBMS_OUTPUT.PUT_LINE('Data transfer from PERSONS_FROM to PERSONS successful.');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+            ROLLBACK;
+    END transfer_person_data1;
+dataProducts: []
+storedProcedureType: StoredProcedure
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: storedProcedureType
+      newValue: StoredProcedure
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: 06a50899d965737478678eadbff3d095
+      newValue: 0f67f7fb0e3100c64e7436ee5df3cf5a
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+databaseSchema:
+  id: f641e097-d2e8-4e7f-9b92-f4b8b6b87a7e
+  type: databaseSchema
+  name: admin
+  fullyQualifiedName: oracle_test.default.admin
+  displayName: admin
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners:
+  - id: f14f17bf-0923-4234-8e73-2dcc051f2adc
+    type: user
+    name: admin
+    fullyQualifiedName: admin
+    displayName: admin
+    deleted: false
+tags: []
+domains: []
+sourceHash: 0f67f7fb0e3100c64e7436ee5df3cf5a
+processedLineage: false
+entityStatus: Approved

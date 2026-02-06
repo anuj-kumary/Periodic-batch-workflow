@@ -1,0 +1,50 @@
+name: sysmail_delete_log_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_delete_log_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE sysmail_delete_log_sp\r\n   @logged_before DATETIME\
+    \   = NULL, \r\n   @event_type varchar(15)   = NULL\r\nAS\r\nBEGIN\r\n\r\n   SET\
+    \ @event_type       = LTRIM(RTRIM(@event_type))\r\n   IF @event_type        =\
+    \ '' SET @event_type = NULL\r\n   DECLARE @event_type_numeric INT\r\n\r\n   IF\
+    \ ( (@event_type IS NOT NULL) AND\r\n         (LOWER(@event_type collate SQL_Latin1_General_CP1_CS_AS)\
+    \ NOT IN ( 'success', 'warning', 'error', 'information' ) ) )\r\n   BEGIN\r\n\
+    \        RAISERROR(14266, -1, -1, '@event_type', 'success, warning, error, information')\r\
+    \n      RETURN(1) -- Failure\r\n   END   \r\n   \r\n   IF ( @event_type IS NOT\
+    \ NULL)\r\n   BEGIN\r\n      SET @event_type_numeric = ( SELECT CASE \r\n    \
+    \                       WHEN @event_type = 'success' THEN 0\r\n              \
+    \             WHEN @event_type = 'information' THEN 1\r\n                    \
+    \       WHEN @event_type = 'warning' THEN 2\r\n                           ELSE\
+    \ 3 END \r\n                        )\r\n   END\r\n   ELSE\r\n      SET @event_type_numeric\
+    \ = NULL\r\n\r\n   DELETE FROM msdb.dbo.sysmail_log \r\n   WHERE \r\n        ((@logged_before\
+    \ IS NULL) OR ( log_date < @logged_before))\r\n   AND ((@event_type_numeric IS\
+    \ NULL) OR (@event_type_numeric = event_type))\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 44fc52741400455396f793af09da5429
+processedLineage: false
+entityStatus: Approved

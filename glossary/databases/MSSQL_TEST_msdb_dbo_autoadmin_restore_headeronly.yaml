@@ -1,0 +1,57 @@
+name: autoadmin_restore_headeronly
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_restore_headeronly
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_restore_headeronly    \r\n\t@backupFile\
+    \ NVARCHAR(260),\r\n\t@credName SYSNAME,\r\n\t@blocksize INT = 65536\r\nAS   \
+    \ \r\nBEGIN    \r\n    -- Validations    \r\n    IF(@backupFile IS NULL)    \r\
+    \n    BEGIN    \r\n        RAISERROR ('@backupFile cannot be NULL', -- Message\
+    \ text    \r\n           17, -- Severity,    \r\n           1); -- State    \r\
+    \n        RETURN    \r\n    END    \r\n     \r\n    IF(@credName IS NULL)    \r\
+    \n    BEGIN    \r\n        RAISERROR ('@credName cannot be NULL', -- Message text\
+    \    \r\n           17, -- Severity,    \r\n           1); -- State    \r\n  \
+    \      RETURN    \r\n    END    \r\n     \r\n DECLARE @restore_sql  NVARCHAR(MAX);\
+    \    \r\n    \r\n    -- Check if we are using SAS based credentials    \r\n  \
+    \  IF EXISTS ( SELECT name FROM sys.credentials    \r\n        WHERE name = @credName\
+    \     \r\n        AND  credential_identity = 'Shared Access Signature')    \r\n\
+    \    BEGIN    \r\n        -- for SAS based credentials, it is not required to\
+    \ specify credential name in restore statement    \r\n        SET @restore_sql\
+    \ = 'RESTORE HEADERONLY FROM URL = @backupFile WITH BLOCKSIZE = @blocksize'  \
+    \  \r\n  EXEC sp_executesql @restore_sql, N'@backupFile NVARCHAR(260),  @blocksize\
+    \ INT', @backupFile, @blocksize    \r\n    END    \r\n    ELSE    \r\n    BEGIN\
+    \    \r\n        -- Backup to Url - requires credential name to be specificed\
+    \ in RESTORE statement    \r\n        SET @restore_sql = 'RESTORE HEADERONLY FROM\
+    \ URL = @backupFile WITH CREDENTIAL = @@credName, BLOCKSIZE = @@blocksize'   \
+    \ \r\n  EXEC sp_executesql @restore_sql, N'@backupFile NVARCHAR(260), @@credName\
+    \ SYSNAME, @@blocksize INT', @backupFile, @credName, @blocksize    \r\n    END\
+    \    \r\n    \r\n    RETURN    \r\nEND    \r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: c1f61f280a88e07b69256a4232e4cb00
+processedLineage: false
+entityStatus: Approved

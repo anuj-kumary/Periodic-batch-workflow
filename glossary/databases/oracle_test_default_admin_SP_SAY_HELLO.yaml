@@ -1,0 +1,47 @@
+name: SP_SAY_HELLO
+fullyQualifiedName: oracle_test.default.admin.SP_SAY_HELLO
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE sp_say_hello (
+        p_name IN VARCHAR2
+    ) AS
+    BEGIN
+        DBMS_OUTPUT.PUT_LINE('Hello, ' || p_name || '!');
+    END;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: f641e097-d2e8-4e7f-9b92-f4b8b6b87a7e
+  type: databaseSchema
+  name: admin
+  fullyQualifiedName: oracle_test.default.admin
+  displayName: admin
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners:
+  - id: 244538d1-c1f7-4351-96d3-ca020535afa4
+    type: user
+    name: shilpa
+    fullyQualifiedName: shilpa
+    displayName: Admin
+    deleted: false
+tags: []
+domains: []
+sourceHash: a8738d511b86d2cbb65fb64b884a45e2
+processedLineage: false
+entityStatus: Approved

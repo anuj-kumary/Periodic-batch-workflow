@@ -1,0 +1,43 @@
+name: uspPrintError
+fullyQualifiedName: mssql_er_diag.AdventureWorks.dbo.uspPrintError
+storedProcedureCode:
+  language: SQL
+  code: "\r\n-- uspPrintError prints error information about the error that caused\
+    \ \r\n-- execution to jump to the CATCH block of a TRY...CATCH construct. \r\n\
+    -- Should be executed from within the scope of a CATCH block otherwise \r\n--\
+    \ it will return without printing any error information.\r\nCREATE PROCEDURE [dbo].[uspPrintError]\
+    \ \r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Print error information.\
+    \ \r\n    PRINT 'Error ' + CONVERT(varchar(50), ERROR_NUMBER()) +\r\n        \
+    \  ', Severity ' + CONVERT(varchar(5), ERROR_SEVERITY()) +\r\n          ', State\
+    \ ' + CONVERT(varchar(5), ERROR_STATE()) + \r\n          ', Procedure ' + ISNULL(ERROR_PROCEDURE(),\
+    \ '-') + \r\n          ', Line ' + CONVERT(varchar(5), ERROR_LINE());\r\n    PRINT\
+    \ ERROR_MESSAGE();\r\nEND;\r\n"
+dataProducts: []
+databaseSchema:
+  id: 132f7568-1b61-4741-b025-fcb70f1abf0b
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: mssql_er_diag.AdventureWorks.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: 1e3c79a9-c852-4475-87ab-b32cd25abb0f
+  type: database
+  name: AdventureWorks
+  fullyQualifiedName: mssql_er_diag.AdventureWorks
+  displayName: AdventureWorks
+  deleted: false
+service:
+  id: 1fed7fdb-1405-4a27-b2e0-1f420f2be98b
+  type: databaseService
+  name: mssql_er_diag
+  fullyQualifiedName: mssql_er_diag
+  displayName: mssql_er_diag
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: c7d20023b06fead3c0e9e331bbe55fc6
+processedLineage: false
+entityStatus: Approved

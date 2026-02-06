@@ -1,0 +1,94 @@
+name: sysmail_help_principalprofile_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_help_principalprofile_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_help_principalprofile_sp\r\n   @principal_id\
+    \ int = NULL, -- must provide id or name\r\n   @principal_name sysname = NULL,\r\
+    \n   @profile_id int = NULL, -- must provide id or name\r\n   @profile_name sysname\
+    \ = NULL\r\nAS\r\n   SET NOCOUNT ON\r\n\r\n   DECLARE @rc int\r\n   DECLARE @principal_sid\
+    \ varbinary(85)\r\n   DECLARE @profileid int\r\n\r\n   exec @rc = msdb.dbo.sysmail_verify_profile_sp\
+    \ @profile_id, @profile_name, 1, 0, @profileid OUTPUT\r\n   IF @rc <> 0\r\n  \
+    \    RETURN(1)\r\n\r\n   IF (@principal_id IS NOT NULL AND @principal_id = 0)\
+    \ OR (@principal_name IS NOT NULL AND @principal_name = N'public')\r\n   BEGIN\r\
+    \n      IF (@principal_id IS NOT NULL AND @principal_id <> 0) OR (@principal_name\
+    \ IS NOT NULL AND @principal_name <> N'public')\r\n      BEGIN\r\n         RAISERROR(14605,\
+    \ -1, -1, 'principal')  -- id and name do not match\r\n      END\r\n      SET\
+    \ @principal_sid = 0x00 -- public\r\n\r\n      IF (@profileid IS NOT NULL)\r\n\
+    \      BEGIN\r\n         SELECT principal_id=0, \r\n                principal_name\
+    \ = N'public', \r\n                prof.profile_id, \r\n                profile_name=prof.name,\
+    \ \r\n                prin.is_default\r\n         FROM msdb.dbo.sysmail_principalprofile\
+    \ prin, msdb.dbo.sysmail_profile prof \r\n         WHERE prin.profile_id=prof.profile_id\
+    \ AND \r\n               prin.principal_sid = @principal_sid AND \r\n        \
+    \       prof.profile_id=@profileid\r\n      END\r\n      ELSE\r\n      BEGIN\r\
+    \n         SELECT principal_id=0, \r\n                principal_name = N'public',\
+    \ \r\n                prof.profile_id, \r\n                profile_name=prof.name,\
+    \ \r\n                prin.is_default\r\n         FROM msdb.dbo.sysmail_principalprofile\
+    \ prin, msdb.dbo.sysmail_profile prof \r\n         WHERE prin.profile_id=prof.profile_id\
+    \ AND \r\n               prin.principal_sid = @principal_sid\r\n      END\r\n\
+    \   END\r\n   ELSE -- non-public profiles\r\n   BEGIN\r\n      IF (@principal_id\
+    \ IS NOT NULL OR @principal_name IS NOT NULL)      \r\n      BEGIN\r\n       \
+    \     exec @rc = msdb.dbo.sysmail_verify_principal_sp @principal_id, @principal_name,\
+    \ 1, @principal_sid OUTPUT\r\n            IF @rc <> 0\r\n               RETURN(2)\r\
+    \n      END\r\n\r\n      IF ((@principal_id IS NOT NULL OR @principal_name IS\
+    \ NOT NULL) AND @profileid IS NOT NULL)\r\n      BEGIN\r\n            SELECT principal_id=dbprin.principal_id,\r\
+    \n                   principal_name=dbprin.name,\r\n                   prof.profile_id,\r\
+    \n                   profile_name=prof.name,\r\n                   prinprof.is_default\r\
+    \n            FROM sys.database_principals dbprin, msdb.dbo.sysmail_principalprofile\
+    \ prinprof, msdb.dbo.sysmail_profile prof\r\n            WHERE dbprin.principal_id\
+    \ = dbo.get_principal_id(prinprof.principal_sid) AND\r\n                  (prinprof.principal_sid\
+    \ = @principal_sid OR prinprof.principal_sid = 0x00) AND\r\n                 \
+    \ prof.profile_id = prinprof.profile_id AND\r\n                  prinprof.profile_id\
+    \ = @profileid\r\n      END\r\n      ELSE IF (@principal_id IS NOT NULL OR @principal_name\
+    \ IS NOT NULL)\r\n      BEGIN\r\n            SELECT principal_id=dbprin.principal_id,\r\
+    \n                   principal_name=dbprin.name,\r\n                   prof.profile_id,\r\
+    \n                   profile_name=prof.name,\r\n                   prinprof.is_default\r\
+    \n            FROM sys.database_principals dbprin, msdb.dbo.sysmail_principalprofile\
+    \ prinprof, msdb.dbo.sysmail_profile prof\r\n            WHERE dbprin.principal_id\
+    \ = dbo.get_principal_id(prinprof.principal_sid) AND\r\n                  (prinprof.principal_sid\
+    \ = @principal_sid OR prinprof.principal_sid = 0x00) AND\r\n                 \
+    \ prof.profile_id = prinprof.profile_id\r\n      END\r\n      ELSE IF (@profileid\
+    \ IS NOT NULL)\r\n      BEGIN\r\n            SELECT principal_id=dbprin.principal_id,\r\
+    \n                   principal_name=dbprin.name,\r\n                   prof.profile_id,\r\
+    \n                   profile_name=prof.name,\r\n                   prinprof.is_default\r\
+    \n            FROM sys.database_principals dbprin, msdb.dbo.sysmail_principalprofile\
+    \ prinprof, msdb.dbo.sysmail_profile prof\r\n            WHERE dbprin.principal_id\
+    \ = dbo.get_principal_id(prinprof.principal_sid) AND\r\n                  prof.profile_id\
+    \ = prinprof.profile_id AND\r\n                  prinprof.profile_id = @profileid\r\
+    \n      END\r\n      ELSE -- no parameters are supplied for filtering\r\n    \
+    \  BEGIN\r\n            SELECT principal_id=dbprin.principal_id,\r\n         \
+    \          principal_name=dbprin.name,\r\n                   prof.profile_id,\r\
+    \n                   profile_name=prof.name,\r\n                   prinprof.is_default\r\
+    \n            FROM sys.database_principals dbprin, msdb.dbo.sysmail_principalprofile\
+    \ prinprof, msdb.dbo.sysmail_profile prof\r\n            WHERE dbprin.principal_id\
+    \ = dbo.get_principal_id(prinprof.principal_sid) AND\r\n                  prof.profile_id\
+    \ = prinprof.profile_id\r\n      END\r\n   END\r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 0e41682e95eef6d62c912aa9f8c7bffe
+processedLineage: false
+entityStatus: Approved

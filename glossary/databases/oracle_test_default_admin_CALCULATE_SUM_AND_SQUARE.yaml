@@ -1,0 +1,66 @@
+name: CALCULATE_SUM_AND_SQUARE
+fullyQualifiedName: oracle_test.default.admin.CALCULATE_SUM_AND_SQUARE
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE calculate_sum_and_square (
+        p_number1 IN NUMBER,
+        p_number2 IN NUMBER,
+        p_sum OUT NUMBER,
+        p_square OUT NUMBER
+    )
+    IS
+    BEGIN
+        -- Calculate the sum of the two numbers
+        p_sum := p_number1 + p_number2;
+
+        -- Calculate the square of the sum
+        p_square := p_sum * p_sum;
+    END calculate_sum_and_square;
+dataProducts: []
+storedProcedureType: StoredProcedure
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: storedProcedureType
+      newValue: StoredProcedure
+  fieldsUpdated:
+    - name: sourceHash
+      oldValue: 35a48e1e4121894e7b1782eee8a6b4bc
+      newValue: c33137099569d6daf64167b248044f6c
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+databaseSchema:
+  id: f641e097-d2e8-4e7f-9b92-f4b8b6b87a7e
+  type: databaseSchema
+  name: admin
+  fullyQualifiedName: oracle_test.default.admin
+  displayName: admin
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners:
+  - id: f14f17bf-0923-4234-8e73-2dcc051f2adc
+    type: user
+    name: admin
+    fullyQualifiedName: admin
+    displayName: admin
+    deleted: false
+tags: []
+domains: []
+sourceHash: c33137099569d6daf64167b248044f6c
+processedLineage: false
+entityStatus: Approved

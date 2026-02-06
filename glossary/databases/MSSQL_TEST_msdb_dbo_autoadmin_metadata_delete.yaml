@@ -1,0 +1,43 @@
+name: autoadmin_metadata_delete
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_delete
+storedProcedureCode:
+  language: SQL
+  code: "-- Procedure to delete entries in metadata tables\r\nCREATE   PROC autoadmin_metadata_delete\r\
+    \nAS\r\nBEGIN\r\n\tPRINT 'Cleaning up managed backup metadata tables...'\r\n\r\
+    \n\tPRINT 'Deleting entries from autoadmin_managed_databases...'\r\n\tDELETE FROM\
+    \ autoadmin_managed_databases\r\n\r\n\tPRINT 'Deleting entries from autoadmin_task_agent_metadata...'\r\
+    \n\tDELETE FROM autoadmin_task_agent_metadata\r\n\r\n\tPRINT 'Deleting entries\
+    \ from autoadmin_system_flags...'\r\n\tDELETE FROM autoadmin_system_flags\r\n\r\
+    \n\tPRINT 'Deleting entries from autoadmin_master_switch...'\r\n\tDELETE FROM\
+    \ autoadmin_master_switch\r\n\r\n\tPRINT 'Deleting entries from smart_backup_files...'\r\
+    \n\tDELETE FROM smart_backup_files\r\n\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 9c3b8182588953d094186a721a069946
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,50 @@
+name: autoadmin_metadata_query_task_agent_global_data
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_query_task_agent_global_data
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_metadata_query_task_agent_global_data\r\n\
+    \        @schema_version\t\t\t\t\t\tINT,\r\n        @task_agent_guid\t\t\t\t\t\
+    UNIQUEIDENTIFIER,\r\n        @task_agent_data\t\t\t\t\tXML OUTPUT,\r\n\t\t@task_agent_data_schema_version\t\
+    \tINT OUTPUT\r\nAS\r\nBEGIN\r\n    IF (@task_agent_guid IS NULL)\r\n    BEGIN\r\
+    \n        RAISERROR ('All parameters must be specified. Cannot complete task agent\
+    \ global metadata query', -- Message text.\r\n                   17, -- Severity,\r\
+    \n                   1); -- State\r\n        RETURN\r\n    END\r\n\r\n    SET\
+    \ NOCOUNT ON\r\n\r\n\t-- if no records were found, null is returned in @task_agent_data..\
+    \ it is upto caller's responsbility to handle this case\r\n    SELECT @task_agent_data\
+    \ = aatam.task_agent_data,\r\n\t\t\t@task_agent_data_schema_version = aatam.schema_version\r\
+    \n\t\tFROM autoadmin_task_agent_metadata aatam\r\n\t\tWHERE aatam.task_agent_guid\
+    \ = @task_agent_guid \r\n\t\tAND aatam.autoadmin_id = 0\r\n\t\tAND (ISNULL(@schema_version,\
+    \ 0 ) = 0\r\n\t\t\tOR aatam.schema_version = @schema_version)\r\n\r\n\tIF(@task_agent_data_schema_version\
+    \ IS NULL)\r\n\tBEGIN\r\n\t    -- If null was returned in above query, Get latest\
+    \ schema version & return\r\n\t\tSET @task_agent_data_schema_version = dbo.fn_autoadmin_schema_version()\r\
+    \n\tEND\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 427e30d7edf0779813a05251e4875c09
+processedLineage: false
+entityStatus: Approved

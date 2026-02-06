@@ -1,0 +1,69 @@
+name: sysmail_help_admin_account_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_help_admin_account_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_help_admin_account_sp\r\n   @account_id\
+    \ int\r\nAS\r\n   SET NOCOUNT ON\r\n\r\n   DECLARE @rc         int,\r\n      @acc_id\
+    \         int,\r\n      @name           sysname,\r\n      @description    nvarchar(256),\r\
+    \n      @email_address  nvarchar(128),\r\n      @display_name   nvarchar(128),\r\
+    \n      @replyto_address nvarchar(128),  \r\n      @servertype     sysname,\r\n\
+    \      @servername     sysname,\r\n      @port           int,\r\n      @username\
+    \       nvarchar(128),\r\n      @passwordsize   int,  \r\n      @cryptpassword\
+    \  varbinary(1024),\r\n      @credential_id  int,\r\n      @use_default_credentials\
+    \ bit,\r\n      @enable_ssl     bit,\r\n      @timeout     int\r\n\r\n    SET\
+    \ @passwordsize = 0\r\n\r\n   EXEC @rc = msdb.dbo.sysmail_verify_account_sp @account_id,\
+    \ NULL, 1, 0, NULL\r\n   IF @rc <> 0\r\n      RETURN(1)\r\n\r\n   SELECT \r\n\
+    \      @acc_id         = a.account_id,\r\n      @name           = a.name, \r\n\
+    \      @description    = a.description, \r\n      @email_address  = a.email_address,\
+    \ \r\n      @display_name   = a.display_name, \r\n      @replyto_address= a.replyto_address,\r\
+    \n      @servertype     = s.servertype, \r\n      @servername     = s.servername,\
+    \ \r\n      @port           = s.port, \r\n      @username       = s.username,\r\
+    \n      @credential_id  = s.credential_id,\r\n      @use_default_credentials =\
+    \ s.use_default_credentials,\r\n      @enable_ssl     = s.enable_ssl,\r\n    \
+    \  @timeout        = s.timeout\r\n   FROM msdb.dbo.sysmail_account a, msdb.dbo.sysmail_server\
+    \ s\r\n   WHERE (a.account_id = s.account_id) AND \r\n      (a.account_id = @account_id)\r\
+    \n    \r\n    --get the encrypted password if required \r\n    IF(@username IS\
+    \ NOT NULL)\r\n    BEGIN\r\n        DECLARE @cred TABLE([size] INT, blob VARBINARY(1024));\r\
+    \n\r\n        INSERT @cred\r\n        EXEC @rc = master.dbo.sp_PostAgentInfo @credential_id\r\
+    \n        IF @rc <> 0\r\n        BEGIN\r\n          RETURN(1)\r\n        END\r\
+    \n        \r\n        SELECT @passwordsize = [size], @cryptpassword = [blob] \r\
+    \n        FROM @cred\r\n    END\r\n    \r\n    --All done return result\r\n  \
+    \  SELECT\r\n        @acc_id         as 'account_id',\r\n        @name       \
+    \    as 'name',  \r\n        @description    as 'description',\r\n        @email_address\
+    \  as 'email_address',\r\n        @display_name   as 'display_name',\r\n     \
+    \   @replyto_address as 'replyto_address',\r\n        @servertype     as 'servertype',\r\
+    \n        @servername     as 'servername',\r\n        @port           as 'port',\r\
+    \n        @username       as 'username',\r\n        @passwordsize   as 'password_size',\r\
+    \n        @cryptpassword  as 'password_crypt',\r\n        @use_default_credentials\
+    \ as 'use_default_credentials',\r\n        @enable_ssl     as 'enable_ssl',\r\n\
+    \        @timeout        as 'timeout'\r\n\r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: cf79f4ad2ba3fd273c7c04e779450d49
+processedLineage: false
+entityStatus: Approved

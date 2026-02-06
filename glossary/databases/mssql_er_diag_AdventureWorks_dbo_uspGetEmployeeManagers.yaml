@@ -1,0 +1,56 @@
+name: uspGetEmployeeManagers
+fullyQualifiedName: mssql_er_diag.AdventureWorks.dbo.uspGetEmployeeManagers
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE PROCEDURE [dbo].[uspGetEmployeeManagers]\r\n    @BusinessEntityID\
+    \ [int]\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    -- Use recursive query\
+    \ to list out all Employees required for a particular Manager\r\n    WITH [EMP_cte]([BusinessEntityID],\
+    \ [OrganizationNode], [FirstName], [LastName], [JobTitle], [RecursionLevel]) --\
+    \ CTE name and columns\r\n    AS (\r\n        SELECT e.[BusinessEntityID], e.[OrganizationNode],\
+    \ p.[FirstName], p.[LastName], e.[JobTitle], 0 -- Get the initial Employee\r\n\
+    \        FROM [HumanResources].[Employee] e \r\n\t\t\tINNER JOIN [Person].[Person]\
+    \ as p\r\n\t\t\tON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n        WHERE\
+    \ e.[BusinessEntityID] = @BusinessEntityID\r\n        UNION ALL\r\n        SELECT\
+    \ e.[BusinessEntityID], e.[OrganizationNode], p.[FirstName], p.[LastName], e.[JobTitle],\
+    \ [RecursionLevel] + 1 -- Join recursive member to anchor\r\n        FROM [HumanResources].[Employee]\
+    \ e \r\n            INNER JOIN [EMP_cte]\r\n            ON e.[OrganizationNode]\
+    \ = [EMP_cte].[OrganizationNode].GetAncestor(1)\r\n            INNER JOIN [Person].[Person]\
+    \ p \r\n            ON p.[BusinessEntityID] = e.[BusinessEntityID]\r\n    )\r\n\
+    \    -- Join back to Employee to return the manager name \r\n    SELECT [EMP_cte].[RecursionLevel],\
+    \ [EMP_cte].[BusinessEntityID], [EMP_cte].[FirstName], [EMP_cte].[LastName], \r\
+    \n        [EMP_cte].[OrganizationNode].ToString() AS [OrganizationNode], p.[FirstName]\
+    \ AS 'ManagerFirstName', p.[LastName] AS 'ManagerLastName'  -- Outer select from\
+    \ the CTE\r\n    FROM [EMP_cte] \r\n        INNER JOIN [HumanResources].[Employee]\
+    \ e \r\n        ON [EMP_cte].[OrganizationNode].GetAncestor(1) = e.[OrganizationNode]\r\
+    \n        INNER JOIN [Person].[Person] p \r\n        ON p.[BusinessEntityID] =\
+    \ e.[BusinessEntityID]\r\n    ORDER BY [RecursionLevel], [EMP_cte].[OrganizationNode].ToString()\r\
+    \n    OPTION (MAXRECURSION 25) \r\nEND;\r\n"
+dataProducts: []
+databaseSchema:
+  id: 132f7568-1b61-4741-b025-fcb70f1abf0b
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: mssql_er_diag.AdventureWorks.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: 1e3c79a9-c852-4475-87ab-b32cd25abb0f
+  type: database
+  name: AdventureWorks
+  fullyQualifiedName: mssql_er_diag.AdventureWorks
+  displayName: AdventureWorks
+  deleted: false
+service:
+  id: 1fed7fdb-1405-4a27-b2e0-1f420f2be98b
+  type: databaseService
+  name: mssql_er_diag
+  fullyQualifiedName: mssql_er_diag
+  displayName: mssql_er_diag
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: f06dd3d9844bed0bdc90f6cd03d1d102
+processedLineage: false
+entityStatus: Approved

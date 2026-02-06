@@ -1,0 +1,46 @@
+name: sysmail_add_profileaccount_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_add_profileaccount_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_add_profileaccount_sp\r\n   @profile_id\
+    \ int = NULL, -- must provide id or name\r\n   @profile_name sysname = NULL,\r\
+    \n   @account_id int = NULL, -- must provide id or name\r\n   @account_name sysname\
+    \ = NULL,\r\n   @sequence_number int -- account with the lowest sequence number\
+    \ is picked as default\r\nAS\r\n   SET NOCOUNT ON\r\n\r\n   DECLARE @rc int\r\n\
+    \   DECLARE @profileid int\r\n   DECLARE @accountid int\r\n\r\n   exec @rc = msdb.dbo.sysmail_verify_profile_sp\
+    \ @profile_id, @profile_name, 0, 0, @profileid OUTPUT\r\n   IF @rc <> 0\r\n  \
+    \    RETURN(1)\r\n\r\n   exec @rc = msdb.dbo.sysmail_verify_account_sp @account_id,\
+    \ @account_name, 0, 0, @accountid OUTPUT\r\n   IF @rc <> 0\r\n      RETURN(2)\r\
+    \n\r\n   -- insert new account record, rely on primary key constraint to error\
+    \ out\r\n   INSERT INTO msdb.dbo.sysmail_profileaccount (profile_id,account_id,sequence_number)\r\
+    \n   VALUES (@profileid,@accountid,@sequence_number)\r\n   \r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: aff3d2d488697b705c0287cb6daf7fb1
+processedLineage: false
+entityStatus: Approved

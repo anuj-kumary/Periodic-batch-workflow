@@ -1,0 +1,42 @@
+name: UPDATE_SALARY
+fullyQualifiedName: Oracle.default.new_user.UPDATE_SALARY
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE UPDATE_SALARY AS
+    BEGIN
+       -- This procedure updates the SALARY column in the EMPLOYEE table.
+       UPDATE EMPLOYEE SET SALARY = SALARY * 1.1;
+       COMMIT;
+    END UPDATE_SALARY;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: 157d14a5-61e1-4cd0-9627-59d35b29869a
+  type: databaseSchema
+  name: new_user
+  fullyQualifiedName: Oracle.default.new_user
+  displayName: new_user
+  deleted: false
+database:
+  id: 5cc7d696-de57-49db-853f-0371a2f469d2
+  type: database
+  name: default
+  fullyQualifiedName: Oracle.default
+  displayName: default
+  deleted: false
+service:
+  id: 7d002661-4f00-44d2-9f3f-7521a52df6f0
+  type: databaseService
+  name: Oracle
+  fullyQualifiedName: Oracle
+  description: ""
+  displayName: Oracle
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 61e66c675e8a94d7d85b7a7aa44b85c4
+processedLineage: false
+entityStatus: Approved

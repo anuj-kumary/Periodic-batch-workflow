@@ -1,0 +1,50 @@
+name: uspUpdateEmployeeHireInfo
+fullyQualifiedName: mssql_er_diag.AdventureWorks.HumanResources.uspUpdateEmployeeHireInfo
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE PROCEDURE [HumanResources].[uspUpdateEmployeeHireInfo]\r\n   \
+    \ @BusinessEntityID [int], \r\n    @JobTitle [nvarchar](50), \r\n    @HireDate\
+    \ [datetime], \r\n    @RateChangeDate [datetime], \r\n    @Rate [money], \r\n\
+    \    @PayFrequency [tinyint], \r\n    @CurrentFlag [dbo].[Flag] \r\nWITH EXECUTE\
+    \ AS CALLER\r\nAS\r\nBEGIN\r\n    SET NOCOUNT ON;\r\n\r\n    BEGIN TRY\r\n   \
+    \     BEGIN TRANSACTION;\r\n\r\n        UPDATE [HumanResources].[Employee] \r\n\
+    \        SET [JobTitle] = @JobTitle \r\n            ,[HireDate] = @HireDate \r\
+    \n            ,[CurrentFlag] = @CurrentFlag \r\n        WHERE [BusinessEntityID]\
+    \ = @BusinessEntityID;\r\n\r\n        INSERT INTO [HumanResources].[EmployeePayHistory]\
+    \ \r\n            ([BusinessEntityID]\r\n            ,[RateChangeDate]\r\n   \
+    \         ,[Rate]\r\n            ,[PayFrequency]) \r\n        VALUES (@BusinessEntityID,\
+    \ @RateChangeDate, @Rate, @PayFrequency);\r\n\r\n        COMMIT TRANSACTION;\r\
+    \n    END TRY\r\n    BEGIN CATCH\r\n        -- Rollback any active or uncommittable\
+    \ transactions before\r\n        -- inserting information in the ErrorLog\r\n\
+    \        IF @@TRANCOUNT > 0\r\n        BEGIN\r\n            ROLLBACK TRANSACTION;\r\
+    \n        END\r\n\r\n        EXECUTE [dbo].[uspLogError];\r\n    END CATCH;\r\n\
+    END;\r\n"
+dataProducts: []
+databaseSchema:
+  id: 0566ea61-1e79-49dd-89d7-07248aae613f
+  type: databaseSchema
+  name: HumanResources
+  fullyQualifiedName: mssql_er_diag.AdventureWorks.HumanResources
+  displayName: HumanResources
+  deleted: false
+database:
+  id: 1e3c79a9-c852-4475-87ab-b32cd25abb0f
+  type: database
+  name: AdventureWorks
+  fullyQualifiedName: mssql_er_diag.AdventureWorks
+  displayName: AdventureWorks
+  deleted: false
+service:
+  id: 1fed7fdb-1405-4a27-b2e0-1f420f2be98b
+  type: databaseService
+  name: mssql_er_diag
+  fullyQualifiedName: mssql_er_diag
+  displayName: mssql_er_diag
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 9db7514b275e037795e44ccf0d948514
+processedLineage: false
+entityStatus: Approved

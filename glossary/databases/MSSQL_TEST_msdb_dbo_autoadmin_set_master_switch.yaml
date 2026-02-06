@@ -1,0 +1,40 @@
+name: autoadmin_set_master_switch
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_set_master_switch
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_set_master_switch\r\n\t\t@state BIT \r\n\
+    AS\r\nBEGIN\r\n\tIF @state IS NULL\r\n\tBEGIN\r\n\t\tRAISERROR (45203, 17, 1);\r\
+    \n\t\tRETURN\r\n\tEND\r\n\r\n\tBEGIN TRAN \r\n\t\tIF NOT EXISTS (SELECT TOP 1\
+    \ state FROM autoadmin_master_switch)\r\n\t\tBEGIN\r\n\t\t\tINSERT INTO autoadmin_master_switch\
+    \ VALUES (@state)\r\n\t\tEND\r\n\t\tELSE\r\n\t\tBEGIN\r\n\t\t\tUPDATE autoadmin_master_switch\
+    \ SET [state] = @state\r\n\t\tEND\r\n\tCOMMIT\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: bd08f65784c2350bd9953d02bca02bd3
+processedLineage: false
+entityStatus: Approved

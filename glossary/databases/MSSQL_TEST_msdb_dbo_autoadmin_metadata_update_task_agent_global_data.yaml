@@ -1,0 +1,47 @@
+name: autoadmin_metadata_update_task_agent_global_data
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_update_task_agent_global_data
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE autoadmin_metadata_update_task_agent_global_data\r\
+    \n        @schema_version          INT,\r\n        @task_agent_guid         UNIQUEIDENTIFIER,\r\
+    \n        @task_agent_data         XML\r\nAS\r\nBEGIN\r\n    IF (@schema_version\
+    \ IS NULL) OR \r\n\t\t(@task_agent_guid IS NULL) OR \r\n\t\t(@task_agent_data\
+    \ IS NULL)\r\n    BEGIN\r\n        RAISERROR ('All parameters must be specified\
+    \ and non-NULL. Cannot complete task agent global metadata update', -- Message\
+    \ text.\r\n                   17, -- Severity,\r\n                   1); -- State\r\
+    \n        RETURN\r\n    END\r\n\r\n    SET NOCOUNT OFF\r\n\r\n    BEGIN TRANSACTION\r\
+    \n\r\n        UPDATE autoadmin_task_agent_metadata \r\n\t\tSET task_agent_data\
+    \ = @task_agent_data,\r\n\t\tschema_version = @schema_version\r\n        WHERE\
+    \ autoadmin_task_agent_metadata.task_agent_guid = @task_agent_guid \r\n\t\tAND\
+    \ autoadmin_task_agent_metadata.autoadmin_id = 0\r\n    \r\n\tCOMMIT TRANSACTION\r\
+    \n\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 9181aeeef8324f72d33f5a05f072da3b
+processedLineage: false
+entityStatus: Approved

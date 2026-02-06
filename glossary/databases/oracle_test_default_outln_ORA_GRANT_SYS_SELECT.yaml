@@ -1,0 +1,43 @@
+name: ORA$GRANT_SYS_SELECT
+fullyQualifiedName: oracle_test.default.outln.ORA$GRANT_SYS_SELECT
+storedProcedureCode:
+  language: SQL
+  code: |-
+    procedure       ora$grant_sys_select as
+    begin
+      EXECUTE IMMEDIATE 'GRANT SELECT ON OUTLN.OL$ TO SELECT_CATALOG_ROLE';
+      EXECUTE IMMEDIATE 'GRANT SELECT ON OUTLN.OL$HINTS TO SELECT_CATALOG_ROLE';
+      EXECUTE IMMEDIATE 'GRANT SELECT ON OUTLN.OL$NODES TO SELECT_CATALOG_ROLE';
+      EXECUTE IMMEDIATE 'GRANT SELECT ON OUTLN.OL$ TO SYS WITH GRANT OPTION';
+      EXECUTE IMMEDIATE 'GRANT SELECT ON OUTLN.OL$HINTS TO SYS WITH GRANT OPTION';
+      EXECUTE IMMEDIATE 'GRANT SELECT ON OUTLN.OL$NODES TO SYS WITH GRANT OPTION';
+    end;
+dataProducts: []
+databaseSchema:
+  id: 245c6165-b16d-4091-be5d-5d7d1e6024e5
+  type: databaseSchema
+  name: outln
+  fullyQualifiedName: oracle_test.default.outln
+  displayName: outln
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: dbc1f82eccebf43d28c14089f97571ee
+processedLineage: false
+entityStatus: Approved

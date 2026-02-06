@@ -1,0 +1,40 @@
+name: sysmail_help_configure_value_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_help_configure_value_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_help_configure_value_sp\r\n   @parameter_name\
+    \ nvarchar(256),\r\n   @parameter_value nvarchar(256) OUTPUT\r\nAS\r\n   SET NOCOUNT\
+    \ ON\r\n   SET @parameter_value = NULL\r\n    \r\n   IF (@parameter_name IS NULL)\r\
+    \n   BEGIN\r\n      RAISERROR(14618, 16, 1, '@parameter_name')\r\n      RETURN(1)\
+    \   \r\n   END\r\n\r\n    SELECT @parameter_value = paramvalue\r\n    FROM msdb.dbo.sysmail_configuration\r\
+    \n    WHERE paramname = @parameter_name\r\n\r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 5184e0e8f020e6612e105ab8d88de6ed
+processedLineage: false
+entityStatus: Approved

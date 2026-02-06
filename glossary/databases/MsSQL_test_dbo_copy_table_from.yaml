@@ -1,0 +1,37 @@
+name: copy_table_from
+fullyQualifiedName: MsSQL.test.dbo.copy_table_from
+storedProcedureCode:
+  language: SQL
+  code: "CREATE PROCEDURE dbo.copy_table_from @from nvarchar(50), @to nvarchar(50)\n\
+    WITH EXECUTE AS OWNER\nAS\nBEGIN \n  SET NOCOUNT ON;\n  DECLARE @Sql NVARCHAR(MAX);\n\
+    \  SET @Sql = N'select * INTO ' + QUOTENAME(@to) + ' from ' + QUOTENAME(@from)\n\
+    \  EXECUTE sp_executesql @Sql\nEND;"
+dataProducts: []
+databaseSchema:
+  id: 8712bdab-f756-471f-b73c-3a01b438d5ef
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MsSQL.test.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: b030bce4-bdd0-4db6-8212-a49e8ca09079
+  type: database
+  name: test
+  fullyQualifiedName: MsSQL.test
+  displayName: test
+  deleted: false
+service:
+  id: 37fe843d-b482-484c-b77f-fd13d7c2300e
+  type: databaseService
+  name: MsSQL
+  fullyQualifiedName: MsSQL
+  displayName: MsSQL
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 54cf70e07c92bf660d5fe1baaf9539b2
+processedLineage: false
+entityStatus: Approved

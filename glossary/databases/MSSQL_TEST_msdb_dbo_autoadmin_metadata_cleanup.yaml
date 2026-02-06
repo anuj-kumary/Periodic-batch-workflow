@@ -1,0 +1,91 @@
+name: autoadmin_metadata_cleanup
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.autoadmin_metadata_cleanup
+storedProcedureCode:
+  language: SQL
+  code: "-- Procedure to cleanup managed backup metadata( internal only ) \r\nCREATE\
+    \   PROC autoadmin_metadata_cleanup\r\n\t@schema_version INT,\r\n\t@agent_started\
+    \ BIT       = 0, -- flag to specify if agent was started atleast once\r\n\t@instance_configured\
+    \ BIT = 0  -- flag to specify managed backup was configured at instance level\r\
+    \nAS\r\nBEGIN\r\n    -- Validations\r\n\r\n    -- If agent is running state, let\
+    \ us not proceed\r\n    DECLARE @agent_service_status INT\r\n    SELECT @agent_service_status\
+    \ = [status]\r\n    FROM sys.dm_server_services\r\n    WHERE servicename like'%SQL\
+    \ Server Agent%'\r\n    \r\n    -- Status 4 is running - http://msdn.microsoft.com/en-us/library/hh204542.aspx\r\
+    \n    IF(@agent_service_status = 4)\r\n    BEGIN\r\n\t\tRAISERROR ('Cannot perform\
+    \ cleanup while SQL Server Agent is currently running', -- Message text\r\n\t\t\
+    \t\t   17, -- Severity,\r\n\t\t\t\t   1); -- State\r\n        RETURN\r\n    END\r\
+    \n\t\r\n\t-- if schema version is 2 & @instance_configured is 1, then report back\
+    \ that user can configure managed backup via V2 API\r\n\tIF((@schema_version =\
+    \ 2) AND (@instance_configured = 1))\r\n\tBEGIN\r\n\t\tRAISERROR ('Managed backup\
+    \ V2 instance configuration as part of cleanup is not supported', -- Message text\r\
+    \n\t\t\t\t   17, -- Severity,\r\n\t\t\t\t   2); -- State\r\n        RETURN\r\n\
+    \tEND\r\n\r\n\tBEGIN TRANSACTION\r\n\r\n\tDECLARE @task_agent_data xml\r\n\r\n\
+    \tIF(@schema_version = 2)\r\n\tBEGIN\r\n\t    -- V2 default task data xml\r\n\t\
+    \tSET @task_agent_data = '<AutoBackupGlobalDataV2 xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"\
+    \ xmlns=\"http://schemas.datacontract.org/2004/07/Microsoft.SqlServer.SmartAdmin.SmartBackupAgent\"\
+    >\r\n  <defaultAutoBackupSetting>false</defaultAutoBackupSetting>\r\n  <defaultBackupBeginTime>0001-01-01T00:00:00</defaultBackupBeginTime>\r\
+    \n  <defaultBackupDuration>-P10675199DT2H48M5.4775808S</defaultBackupDuration>\r\
+    \n  <defaultContainerUrl i:nil=\"true\" />\r\n  <defaultDaysOfWeek>NoDay</defaultDaysOfWeek>\r\
+    \n  <defaultEncryptionAlgorithm i:nil=\"true\" />\r\n  <defaultEncryptorName i:nil=\"\
+    true\" />\r\n  <defaultEncryptorType i:nil=\"true\" />\r\n  <defaultFullBackupFreqType\
+    \ i:nil=\"true\" />\r\n  <defaultLocalCachePath i:nil=\"true\" />\r\n  <defaultLogBackupFreq>-P10675199DT2H48M5.4775808S</defaultLogBackupFreq>\r\
+    \n  <defaultRetentionPeriod>0</defaultRetentionPeriod>\r\n  <defaultSchedulingOption>SYSTEM</defaultSchedulingOption>\r\
+    \n  <firstConfiguredAt>0001-01-01T00:00:00</firstConfiguredAt>\r\n</AutoBackupGlobalDataV2>'\r\
+    \n\r\n\t\tEXEC autoadmin_metadata_delete\r\n\r\n\tEND\r\n\tELSE\r\n\tBEGIN\r\n\
+    \t\tIF(@instance_configured = 0)\r\n\t\tBEGIN\r\n\t\t\t-- V1 default task data\
+    \ -instance not configured\r\n\t\t\tSET @task_agent_data = '<AutoBackupGlobalData\
+    \ xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Microsoft.SqlServer.SmartAdmin.SmartBackupAgent\"\
+    >\r\n\t  <defaultAutoBackupSetting>false</defaultAutoBackupSetting>\r\n\t  <defaultCredentialName\
+    \ i:nil=\"true\" />\r\n\t  <defaultEncryptionAlgorithm i:nil=\"true\" />\r\n\t\
+    \  <defaultEncryptorName i:nil=\"true\" />\r\n\t  <defaultEncryptorType i:nil=\"\
+    true\" />\r\n\t  <defaultRetentionPeriod>0</defaultRetentionPeriod>\r\n\t  <defaultURL\
+    \ i:nil=\"true\" />\r\n\t  <firstConfiguredAt>0001-01-01T00:00:00</firstConfiguredAt>\r\
+    \n\t</AutoBackupGlobalData>'\r\n\t\tEND\r\n\t\tELSE\r\n\t\tBEGIN\r\n\t\t    --\
+    \ V1 default task data -instance configured\r\n\t\t\tSET @task_agent_data = '<AutoBackupGlobalData\
+    \ xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Microsoft.SqlServer.SmartAdmin.SmartBackupAgent\"\
+    >\r\n  <defaultAutoBackupSetting>false</defaultAutoBackupSetting>\r\n   <defaultCredentialName>AzureCredential</defaultCredentialName>\r\
+    \n  <defaultEncryptionAlgorithm i:nil=\"true\" />\r\n  <defaultEncryptorName i:nil=\"\
+    true\" />\r\n  <defaultEncryptorType i:nil=\"true\" />\r\n  <defaultRetentionPeriod>0</defaultRetentionPeriod>\r\
+    \n  <defaultURL i:nil=\"true\" />\r\n  <firstConfiguredAt>0001-01-01T00:00:00</firstConfiguredAt>\r\
+    \n</AutoBackupGlobalData>'\r\n\t\tEND\r\n\r\n\t\tIF(ISNULL(@agent_started, 0)\
+    \ = 0)\r\n\t\tBEGIN\r\n\t\t    -- SQL Agent was never started, Remove all entries\
+    \ in managed backup tables\r\n\t\t\tEXEC autoadmin_metadata_delete\r\n\t\tEND\r\
+    \n\t\tELSE\r\n\t\tBEGIN\r\n\t\t\tUPDATE autoadmin_task_agent_metadata\r\n\t\t\t\
+    SET schema_version = 1\r\n\t\t\tWHERE  task_agent_data IS NULL\r\n\t\tEND\r\n\t\
+    END\r\n\t\t\r\n\t-- Only if SQL Agent was started atleast once, or instance was\
+    \ configured\r\n\t-- we could see default V1/V2 in table autoadmin_metadata_insert_task_agent_global_data\r\
+    \n\tIF(ISNULL(@agent_started, 0) = 1) OR (ISNULL(@instance_configured, 0) = 1)\r\
+    \n\tBEGIN\r\n\t   -- Insert or update global instance metadata\r\n\t\tEXEC autoadmin_metadata_insert_task_agent_global_data\
+    \ @schema_version = @schema_version, \r\n\t\t\t@task_agent_guid = '6DF5825B-945C-4081-A4E3-292556E99B99',\r\
+    \n\t\t\t@task_agent_data = @task_agent_data\r\n\r\n\t\t-- Turn on Master Switch\r\
+    \n\t\tEXEC autoadmin_set_master_switch @state = 1\r\n\tEND\r\n\r\n\tCOMMIT TRANSACTION\r\
+    \nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: f97f64a7c4750c3c43c4ba5cf23c3d52
+processedLineage: false
+entityStatus: Approved

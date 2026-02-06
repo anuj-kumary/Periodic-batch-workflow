@@ -1,0 +1,36 @@
+name: test_lineage
+fullyQualifiedName: MSSQL_TEST.master.new_schema.test_lineage
+storedProcedureCode:
+  language: SQL
+  code: "CREATE PROCEDURE new_schema.test_lineage\nAS\nBEGIN\n\tinsert into new_schema.demo1\
+    \ select id from new_schema.demo1_src;\nEND\n\n"
+dataProducts: []
+databaseSchema:
+  id: f6db0174-147a-40c7-b041-1d3cd314c081
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: MSSQL_TEST.master.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: de2d3569-14e3-4115-838c-1cc71139205e
+  type: database
+  name: master
+  fullyQualifiedName: MSSQL_TEST.master
+  displayName: master
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 0e75f55a00452bef39953ba90030768b
+processedLineage: false
+entityStatus: Approved

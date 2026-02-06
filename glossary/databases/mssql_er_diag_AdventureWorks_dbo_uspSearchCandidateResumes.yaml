@@ -1,0 +1,64 @@
+name: uspSearchCandidateResumes
+fullyQualifiedName: mssql_er_diag.AdventureWorks.dbo.uspSearchCandidateResumes
+storedProcedureCode:
+  language: SQL
+  code: "\r\n--A stored procedure which demonstrates integrated full text search\r\
+    \n\r\nCREATE PROCEDURE [dbo].[uspSearchCandidateResumes]\r\n    @searchString\
+    \ [nvarchar](1000),   \r\n    @useInflectional [bit]=0,\r\n    @useThesaurus [bit]=0,\r\
+    \n    @language[int]=0\r\n\r\n\r\nWITH EXECUTE AS CALLER\r\nAS\r\nBEGIN\r\n  \
+    \  SET NOCOUNT ON;\r\n\r\n      DECLARE @string nvarchar(1050)\r\n      --setting\
+    \ the lcid to the default instance LCID if needed\r\n      IF @language = NULL\
+    \ OR @language = 0 \r\n      BEGIN \r\n            SELECT @language =CONVERT(int,\
+    \ serverproperty('lcid'))  \r\n      END\r\n      \r\n\r\n            --FREETEXTTABLE\
+    \ case as inflectional and Thesaurus were required\r\n      IF @useThesaurus =\
+    \ 1 AND @useInflectional = 1  \r\n        BEGIN\r\n                  SELECT FT_TBL.[JobCandidateID],\
+    \ KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate] AS FT_TBL \r\n         \
+    \               INNER JOIN FREETEXTTABLE([HumanResources].[JobCandidate],*, @searchString,LANGUAGE\
+    \ @language) AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\
+    \n            END\r\n\r\n      ELSE IF @useThesaurus = 1\r\n            BEGIN\r\
+    \n                  SELECT @string ='FORMSOF(THESAURUS,\"'+@searchString +'\"\
+    '+')'      \r\n                  SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK]\
+    \ FROM [HumanResources].[JobCandidate] AS FT_TBL \r\n                        INNER\
+    \ JOIN CONTAINSTABLE([HumanResources].[JobCandidate],*, @string,LANGUAGE @language)\
+    \ AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\
+    \n        END\r\n\r\n      ELSE IF @useInflectional = 1\r\n            BEGIN\r\
+    \n                  SELECT @string ='FORMSOF(INFLECTIONAL,\"'+@searchString +'\"\
+    '+')'\r\n                  SELECT FT_TBL.[JobCandidateID], KEY_TBL.[RANK] FROM\
+    \ [HumanResources].[JobCandidate] AS FT_TBL \r\n                        INNER\
+    \ JOIN CONTAINSTABLE([HumanResources].[JobCandidate],*, @string,LANGUAGE @language)\
+    \ AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\
+    \n        END\r\n  \r\n      ELSE --base case, plain CONTAINSTABLE\r\n       \
+    \     BEGIN\r\n                  SELECT @string='\"'+@searchString +'\"'\r\n \
+    \                 SELECT FT_TBL.[JobCandidateID],KEY_TBL.[RANK] FROM [HumanResources].[JobCandidate]\
+    \ AS FT_TBL \r\n                        INNER JOIN CONTAINSTABLE([HumanResources].[JobCandidate],*,@string,LANGUAGE\
+    \ @language) AS KEY_TBL\r\n                   ON  FT_TBL.[JobCandidateID] =KEY_TBL.[KEY]\r\
+    \n            END\r\n\r\nEND;\r\n"
+dataProducts: []
+databaseSchema:
+  id: 132f7568-1b61-4741-b025-fcb70f1abf0b
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: mssql_er_diag.AdventureWorks.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: 1e3c79a9-c852-4475-87ab-b32cd25abb0f
+  type: database
+  name: AdventureWorks
+  fullyQualifiedName: mssql_er_diag.AdventureWorks
+  displayName: AdventureWorks
+  deleted: false
+service:
+  id: 1fed7fdb-1405-4a27-b2e0-1f420f2be98b
+  type: databaseService
+  name: mssql_er_diag
+  fullyQualifiedName: mssql_er_diag
+  displayName: mssql_er_diag
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: d4c67994d1bbbb43581da198faf57584
+processedLineage: false
+entityStatus: Approved

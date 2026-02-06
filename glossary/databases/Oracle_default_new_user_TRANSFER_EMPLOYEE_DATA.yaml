@@ -1,0 +1,53 @@
+name: TRANSFER_EMPLOYEE_DATA
+fullyQualifiedName: Oracle.default.new_user.TRANSFER_EMPLOYEE_DATA
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE          transfer_employee_data
+    IS
+    BEGIN
+        -- Insert data from employees into archived_employees
+        INSERT INTO archived_employees (employee_id, first_name, last_name, salary)
+        SELECT employee_id, first_name, last_name, salary
+        FROM employees;
+
+        -- Commit the transaction
+        COMMIT;
+
+        DBMS_OUTPUT.PUT_LINE('Data transfer from employees to archived_employees successful.');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error: ' || SQLERRM);
+            ROLLBACK;
+    END transfer_employee_data;
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: 157d14a5-61e1-4cd0-9627-59d35b29869a
+  type: databaseSchema
+  name: new_user
+  fullyQualifiedName: Oracle.default.new_user
+  displayName: new_user
+  deleted: false
+database:
+  id: 5cc7d696-de57-49db-853f-0371a2f469d2
+  type: database
+  name: default
+  fullyQualifiedName: Oracle.default
+  displayName: default
+  deleted: false
+service:
+  id: 7d002661-4f00-44d2-9f3f-7521a52df6f0
+  type: databaseService
+  name: Oracle
+  fullyQualifiedName: Oracle
+  description: ""
+  displayName: Oracle
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 35d20b03f947dbe11266ff8656f0c9f9
+processedLineage: false
+entityStatus: Approved

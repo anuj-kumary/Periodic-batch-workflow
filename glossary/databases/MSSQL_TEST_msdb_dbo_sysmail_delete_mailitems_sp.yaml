@@ -1,0 +1,49 @@
+name: sysmail_delete_mailitems_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_delete_mailitems_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE sysmail_delete_mailitems_sp\r\n   @sent_before DATETIME\
+    \   = NULL, -- sent before\r\n   @sent_status varchar(8)   = NULL -- sent status\r\
+    \nAS\r\nBEGIN\r\n\r\n   SET @sent_status       = LTRIM(RTRIM(@sent_status))\r\n\
+    \   IF @sent_status           = '' SET @sent_status = NULL\r\n\r\n   IF ( (@sent_status\
+    \ IS NOT NULL) AND\r\n         (LOWER(@sent_status collate SQL_Latin1_General_CP1_CS_AS)\
+    \ NOT IN ( 'unsent', 'sent', 'failed', 'retrying') ) )\r\n   BEGIN\r\n      RAISERROR(14266,\
+    \ -1, -1, '@sent_status', 'unsent, sent, failed, retrying')\r\n      RETURN(1)\
+    \ -- Failure\r\n   END\r\n\r\n   IF ( @sent_before IS NULL AND @sent_status IS\
+    \ NULL )\r\n   BEGIN\r\n      RAISERROR(14608, -1, -1, '@sent_before', '@sent_status')\
+    \  \r\n      RETURN(1) -- Failure\r\n   END\r\n\r\n   DELETE FROM msdb.dbo.sysmail_allitems\
+    \ \r\n   WHERE \r\n        ((@sent_before IS NULL) OR ( send_request_date < @sent_before))\r\
+    \n   AND ((@sent_status IS NULL) OR (sent_status = @sent_status))\r\n\r\n   DECLARE\
+    \ @localmessage nvarchar(255)\r\n    SET @localmessage = FORMATMESSAGE(14665,\
+    \ SUSER_SNAME(), @@ROWCOUNT)\r\n    exec msdb.dbo.sysmail_logmailevent_sp @event_type=1,\
+    \ @description=@localmessage\r\n\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 700ebe89f2da6897929c71cc8f7e87fd
+processedLineage: false
+entityStatus: Approved

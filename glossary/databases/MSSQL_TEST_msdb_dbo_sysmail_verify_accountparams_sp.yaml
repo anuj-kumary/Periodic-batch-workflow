@@ -1,0 +1,50 @@
+name: sysmail_verify_accountparams_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_verify_accountparams_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_verify_accountparams_sp\r\n   @use_default_credentials\
+    \ bit,\r\n   @mailserver_type sysname      OUTPUT,  -- @mailserver_type must be\
+    \ provided. Usually SMTP\r\n   @username      nvarchar(128)  OUTPUT, -- returns\
+    \ trimmed value, NULL if empty\r\n   @password      nvarchar(128)  OUTPUT  --\
+    \ returns trimmed value,  NULL if empty\r\nAS\r\n   SET @username = LTRIM(RTRIM(@username))\r\
+    \n   SET @password = LTRIM(RTRIM(@password))\r\n   SET @mailserver_type = LTRIM(RTRIM(@mailserver_type))\r\
+    \n\r\n    IF(@username = N'')         SET @username = NULL\r\n    IF(@password\
+    \ = N'')         SET @password = NULL\r\n    IF(@mailserver_type = N'')  SET @mailserver_type\
+    \ = NULL\r\n\r\n   IF(@mailserver_type IS NULL)\r\n   BEGIN\r\n      RAISERROR(14614,\
+    \ -1, -1, @mailserver_type)   \r\n      RETURN (1)  \r\n   END\r\n\r\n   -- default\
+    \ credentials should supercede any explicit credentials passed in\r\n   IF((@use_default_credentials\
+    \ = 1) AND (@username IS NOT NULL))\r\n   BEGIN\r\n      RAISERROR(14666, -1,\
+    \ -1)   \r\n      RETURN (1)\r\n   END  \r\n\r\n   --If a password is specified\
+    \ then @username must be a non empty string\r\n   IF((@password IS NOT NULL) AND\
+    \ (@username IS NULL))\r\n   BEGIN\r\n      RAISERROR(14615, -1, -1)   \r\n  \
+    \    RETURN (1)\r\n   END  \r\n\r\n   RETURN(0) -- SUCCESS\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 7a6ddec9ad037e8ddf39bb88e5560547
+processedLineage: false
+entityStatus: Approved

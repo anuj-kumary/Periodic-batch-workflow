@@ -1,0 +1,57 @@
+name: sysmail_verify_principal_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_verify_principal_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_verify_principal_sp\r\n   @principal_id\
+    \ int,\r\n   @principal_name sysname,\r\n   @allow_both_nulls bit,\r\n   @principal_sid\
+    \ varbinary(85) OUTPUT\r\nAS\r\n   IF @allow_both_nulls = 0\r\n   BEGIN\r\n  \
+    \    -- at least one parameter must be supplied\r\n      IF (@principal_id IS\
+    \ NULL AND @principal_name IS NULL)\r\n      BEGIN\r\n         RAISERROR(14604,\
+    \ -1, -1, 'principal')  \r\n         RETURN(1)\r\n      END\r\n   END\r\n\r\n\
+    \   DECLARE @principalid int\r\n\r\n   IF (@principal_id IS NOT NULL AND @principal_name\
+    \ IS NOT NULL) -- both parameters supplied\r\n   BEGIN\r\n     SELECT @principalid=principal_id\
+    \ FROM msdb.sys.database_principals \r\n            WHERE type in ('U','S','G')\
+    \ AND principal_id = @principal_id AND name = @principal_name\r\n\r\n      IF\
+    \ (@principalid IS NULL)\r\n      BEGIN\r\n         RAISERROR(14605, -1, -1, 'principal')\
+    \  \r\n         RETURN(2)\r\n      END\r\n   END\r\n   ELSE IF (@principal_id\
+    \ IS NOT NULL) -- use id\r\n   BEGIN\r\n     SELECT @principalid=principal_id\
+    \ FROM msdb.sys.database_principals \r\n            WHERE type in ('U','S','G')\
+    \ AND principal_id = @principal_id\r\n\r\n      IF (@principalid IS NULL)\r\n\
+    \      BEGIN\r\n         RAISERROR(14606, -1, -1, 'principal')\r\n         RETURN(3)\r\
+    \n      END      \r\n   END\r\n   ELSE IF (@principal_name IS NOT NULL)  -- use\
+    \ name\r\n   BEGIN\r\n     SELECT @principalid=principal_id FROM msdb.sys.database_principals\
+    \ \r\n            WHERE type in ('U','S','G') AND name = @principal_name\r\n\r\
+    \n      IF (@principalid IS NULL)\r\n      BEGIN\r\n         RAISERROR(14607,\
+    \ -1, -1, 'principal')\r\n         RETURN(4)\r\n      END      \r\n   END\r\n\r\
+    \n   -- populate return variable\r\n   SELECT @principal_sid = dbo.get_principal_sid(@principalid)\r\
+    \n\r\n   RETURN(0) -- SUCCESS\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: f4f19f56cde5f8648aaf2ac8c7b0ef6e
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,49 @@
+name: DBMS_FEATURE_EM_INT
+fullyQualifiedName: oracle_test.default.dbsnmp.DBMS_FEATURE_EM_INT
+storedProcedureCode:
+  language: SQL
+  code: |-
+    PROCEDURE dbms_feature_em_int
+    (feature_boolean OUT number,
+     aux_count       OUT number,
+     info            OUT clob,
+     l_src           IN  varchar2)
+    AS
+    BEGIN
+     select count(1), null, null
+       into feature_boolean, aux_count, info
+       from dbsnmp.mgmt_db_feature_log a
+      where a.source = l_src
+        and CAST(a.last_update_date AS DATE) >=
+             (select nvl(max(last_sample_date), sysdate-7)
+                from sys.wri$_dbu_usage_sample);
+    END;
+dataProducts: []
+databaseSchema:
+  id: 456c1329-65cb-4a23-ae5d-ffe945897b97
+  type: databaseSchema
+  name: dbsnmp
+  fullyQualifiedName: oracle_test.default.dbsnmp
+  displayName: dbsnmp
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+owners: []
+tags: []
+domains: []
+sourceHash: 53f1a639b1d94c2a443920e507470d51
+processedLineage: false
+entityStatus: Approved

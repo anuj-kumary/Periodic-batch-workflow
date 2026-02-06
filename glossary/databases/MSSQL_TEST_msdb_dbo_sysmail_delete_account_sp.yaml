@@ -1,0 +1,48 @@
+name: sysmail_delete_account_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_delete_account_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_delete_account_sp\r\n   @account_id int\
+    \ = NULL, -- must provide either id or name\r\n   @account_name sysname = NULL\r\
+    \nAS\r\n   SET NOCOUNT ON\r\n  \r\n   DECLARE @rc int\r\n   DECLARE @accountid\
+    \ int\r\n   DECLARE @credential_name sysname\r\n\r\n   exec @rc = msdb.dbo.sysmail_verify_account_sp\
+    \ @account_id, @account_name, 0, 0, @accountid OUTPUT\r\n   IF @rc <> 0\r\n  \
+    \    RETURN(1)\r\n\r\n   -- Get all the credentials has been stored for this account\r\
+    \n   DECLARE cur CURSOR FOR\r\n      SELECT c.name\r\n      FROM sys.credentials\
+    \ as c\r\n      JOIN msdb.dbo.sysmail_server as ms\r\n         ON c.credential_id\
+    \ = ms.credential_id\r\n      WHERE account_id = @accountid\r\n\r\n   OPEN cur\r\
+    \n   FETCH NEXT FROM cur INTO @credential_name\r\n   WHILE @@FETCH_STATUS = 0\r\
+    \n   BEGIN\r\n      -- drop the credential\r\n      EXEC msdb.dbo.sysmail_drop_user_credential_sp\
+    \ @credential_name = @credential_name\r\n\r\n      FETCH NEXT FROM cur INTO @credential_name\r\
+    \n   END\r\n\r\n   CLOSE cur\r\n   DEALLOCATE cur\r\n     \r\n   DELETE FROM msdb.dbo.sysmail_account\r\
+    \n   WHERE account_id = @accountid\r\n   \r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: c624d3613d7c70d19aff89cf89739b79
+processedLineage: false
+entityStatus: Approved

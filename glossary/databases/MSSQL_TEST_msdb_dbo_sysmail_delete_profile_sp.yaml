@@ -1,0 +1,48 @@
+name: sysmail_delete_profile_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_delete_profile_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\n\r\nCREATE   PROCEDURE [dbo].[sysmail_delete_profile_sp]\r\n   @profile_id\
+    \ int = NULL, -- must provide either id or name\r\n   @profile_name sysname =\
+    \ NULL,\r\n   @force_delete BIT = 1\r\nAS\r\n   SET NOCOUNT ON\r\n  \r\n   DECLARE\
+    \ @rc int\r\n   DECLARE @profileid int\r\n   exec @rc = msdb.dbo.sysmail_verify_profile_sp\
+    \ @profile_id, @profile_name, 0, 0, @profileid OUTPUT\r\n   IF @rc <> 0\r\n  \
+    \    RETURN(1)\r\n\r\nIF(EXISTS (select * from sysmail_unsentitems WHERE \r\n\
+    \   sysmail_unsentitems.profile_id = @profileid) AND @force_delete <> 1)\r\nBEGIN\r\
+    \n    IF(@profile_name IS NULL)\r\n    BEGIN\r\n        select @profile_name =\
+    \ name from dbo.sysmail_profile WHERE profile_id = @profileid\r\n    END\r\n \
+    \   RAISERROR(14668, -1, -1, @profile_name)\r\n    RETURN (1)   \r\nEND\r\n\r\n\
+    UPDATE [msdb].[dbo].[sysmail_mailitems]\r\nSET [sent_status] = 2, [sent_date]\
+    \ = getdate()\r\nWHERE profile_id = @profileid AND sent_status <> 1\r\n     \r\
+    \n   DELETE FROM msdb.dbo.sysmail_profile \r\n   WHERE profile_id = @profileid\r\
+    \n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 430576c3b3e5324a2be0037dbc6cee69
+processedLineage: false
+entityStatus: Approved

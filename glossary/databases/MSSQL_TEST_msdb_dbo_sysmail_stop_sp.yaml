@@ -1,0 +1,43 @@
+name: sysmail_stop_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_stop_sp
+storedProcedureCode:
+  language: SQL
+  code: "-- sysmail_stop_sp : stops the DatabaseMail process. Mail items remain in\
+    \ the queue until sqlmail started \r\nCREATE   PROCEDURE sysmail_stop_sp\r\nAS\r\
+    \n    SET NOCOUNT ON\r\n    DECLARE @rc INT\r\n   DECLARE @localmessage nvarchar(255)\r\
+    \n  \r\n    ALTER QUEUE ExternalMailQueue WITH ACTIVATION (STATUS = OFF);\r\n\
+    \    SELECT @rc = @@ERROR\r\n    IF(@rc = 0)\r\n    BEGIN\r\n       ALTER QUEUE\
+    \ ExternalMailQueue WITH STATUS = OFF;\r\n       SELECT @rc = @@ERROR\r\n    \
+    \   IF(@rc = 0)\r\n       BEGIN\r\n          SET @localmessage = FORMATMESSAGE(14640,\
+    \ SUSER_SNAME())\r\n          exec msdb.dbo.sysmail_logmailevent_sp @event_type=1,\
+    \ @description=@localmessage\r\n       END\r\n    END\r\nRETURN @rc\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: b9dc033807f49eed7ec4c8f2e0ff2051
+processedLineage: false
+entityStatus: Approved

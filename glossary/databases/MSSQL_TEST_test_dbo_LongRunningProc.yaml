@@ -1,0 +1,37 @@
+name: LongRunningProc
+fullyQualifiedName: MSSQL_TEST.test.dbo.LongRunningProc
+storedProcedureCode:
+  language: SQL
+  code: "CREATE PROCEDURE LongRunningProc \nAS \nBEGIN \n    WAITFOR DELAY '00:01:00'\
+    \  -- 1-minute delay\nEND"
+dataProducts: []
+storedProcedureType: StoredProcedure
+databaseSchema:
+  id: 619916bf-befd-4e3f-8bbf-0cb599234c75
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.test.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: a407d061-62da-4707-9db1-87cd5ca6e438
+  type: database
+  name: test
+  fullyQualifiedName: MSSQL_TEST.test
+  displayName: test
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 77d4eb8085bd48f6ec1c5bfcbe2282fe
+processedLineage: false
+entityStatus: Approved

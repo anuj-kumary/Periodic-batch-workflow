@@ -1,0 +1,125 @@
+name: sysmail_update_account_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_update_account_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE [dbo].[sysmail_update_account_sp]\r\n   @account_id\
+    \ int = NULL, -- must provide either id or name\r\n   @account_name sysname =\
+    \ NULL,\r\n   @email_address nvarchar(128) = NULL,\r\n   @display_name nvarchar(128)\
+    \ = NULL,\r\n   @replyto_address nvarchar(128) = NULL,\r\n   @description nvarchar(256)\
+    \ = NULL,\r\n   @mailserver_name sysname = NULL,  \r\n   @mailserver_type sysname\
+    \ = NULL,  \r\n   @port int = NULL,\r\n   @username sysname = NULL,\r\n   @password\
+    \ sysname = NULL,\r\n   @use_default_credentials bit = NULL,\r\n   @enable_ssl\
+    \ bit = NULL,\r\n   @timeout int = NULL,\r\n   @no_credential_change bit = NULL\
+    \  -- BOOL\r\n  -- WITH EXECUTE AS OWNER --Allows access to sys.credentials\r\n\
+    AS\r\n   SET NOCOUNT ON\r\n\r\n   DECLARE @rc int\r\n   DECLARE @accountid int\r\
+    \n   DECLARE @credential_id int\r\n   DECLARE @credential_name sysname\r\n\r\n\
+    \   SELECT @no_credential_change = ISNULL(@no_credential_change, 0)\r\n\r\n  \
+    \ exec @rc = msdb.dbo.sysmail_verify_account_sp @account_id, @account_name, 0,\
+    \ 1, @accountid OUTPUT\r\n   IF @rc <> 0\r\n      RETURN(1)\r\n\r\n   IF(@email_address\
+    \ IS NULL)\r\n   BEGIN\r\n   SELECT @email_address = email_address FROM msdb.dbo.sysmail_account\
+    \ WHERE account_id=@accountid\r\n   END\r\n\r\n\r\n   IF(@display_name IS NULL)\r\
+    \n   BEGIN\r\n   SELECT @display_name = display_name FROM msdb.dbo.sysmail_account\
+    \ WHERE account_id=@accountid\r\n   END\r\n\r\n   IF(@replyto_address IS NULL)\r\
+    \n   BEGIN\r\n   SELECT @replyto_address = replyto_address FROM msdb.dbo.sysmail_account\
+    \ WHERE account_id=@accountid\r\n   END\r\n\r\n   EXEC @rc = msdb.dbo.sysmail_verify_addressparams_sp\
+    \ @address = @replyto_address, @parameter_name='@replyto_address' \r\n   IF (@rc\
+    \ <> 0)\r\n      RETURN @rc\r\n\r\n   IF(@description IS NULL)\r\n   BEGIN\r\n\
+    \   SELECT @description = description FROM msdb.dbo.sysmail_account WHERE account_id=@accountid\r\
+    \n   END\r\n\r\n\r\n   IF(@port IS NULL)\r\n   BEGIN\r\n   SELECT @port = port\
+    \ FROM msdb.dbo.sysmail_server WHERE account_id=@accountid\r\n   END\r\n\r\n \
+    \  IF(@use_default_credentials IS NULL)\r\n   BEGIN\r\n   SELECT @use_default_credentials\
+    \ = use_default_credentials FROM msdb.dbo.sysmail_server WHERE account_id=@accountid\r\
+    \n   END\r\n\r\n   IF(@enable_ssl IS NULL)\r\n   BEGIN\r\n   SELECT @enable_ssl\
+    \ = enable_ssl FROM msdb.dbo.sysmail_server WHERE account_id=@accountid\r\n  \
+    \ END\r\n\r\n   IF(@timeout IS NULL)\r\n   BEGIN\r\n   SELECT @timeout = timeout\
+    \ FROM msdb.dbo.sysmail_server WHERE account_id=@accountid\r\n   END\r\n   \r\n\
+    \   IF(@mailserver_type IS NULL)\r\n   BEGIN\r\n   SELECT @mailserver_type = servertype\
+    \ FROM msdb.dbo.sysmail_server WHERE account_id=@accountid\r\n   END\r\n\r\n \r\
+    \n   EXEC @rc = msdb.dbo.sysmail_verify_accountparams_sp \r\n            @use_default_credentials\
+    \ = @use_default_credentials,\r\n            @mailserver_type = @mailserver_type\
+    \ OUTPUT, -- validates and returns trimmed value\r\n            @username = @username\
+    \ OUTPUT, -- returns trimmed value\r\n            @password = @password OUTPUT\
+    \  -- returns empty string if @username is given and @password is null \r\n  \
+    \ IF(@rc <> 0)\r\n      RETURN (1)\r\n\r\n   --transact this in case credential\
+    \ updates fail\r\n   BEGIN TRAN\r\n   -- update account table\r\n   IF (@account_name\
+    \ IS NOT NULL)\r\n      IF (@email_address IS NOT NULL)\r\n         UPDATE msdb.dbo.sysmail_account\r\
+    \n         SET name=@account_name, description=@description, email_address=@email_address,\
+    \ display_name=@display_name, replyto_address=@replyto_address\r\n         WHERE\
+    \ account_id=@accountid\r\n      ELSE\r\n         UPDATE msdb.dbo.sysmail_account\r\
+    \n         SET name=@account_name, description=@description, display_name=@display_name,\
+    \ replyto_address=@replyto_address\r\n         WHERE account_id=@accountid\r\n\
+    \r\n   ELSE\r\n      IF (@email_address IS NOT NULL)\r\n         UPDATE msdb.dbo.sysmail_account\r\
+    \n         SET description=@description, email_address=@email_address, display_name=@display_name,\
+    \ replyto_address=@replyto_address\r\n         WHERE account_id=@accountid\r\n\
+    \      ELSE\r\n         UPDATE msdb.dbo.sysmail_account\r\n         SET description=@description,\
+    \ display_name=@display_name, replyto_address=@replyto_address\r\n         WHERE\
+    \ account_id=@accountid\r\n      \r\n   -- see if a credential has been stored\
+    \ for this account\r\n   SELECT @credential_name = name,\r\n         @credential_id\
+    \ = c.credential_id\r\n   FROM sys.credentials as c\r\n     JOIN msdb.dbo.sysmail_server\
+    \ as ms\r\n       ON c.credential_id = ms.credential_id\r\n   WHERE account_id\
+    \ = @accountid \r\n     AND servertype = @mailserver_type\r\n\r\n   --update the\
+    \ credential store\r\n   IF((@credential_name IS NOT NULL) AND (@no_credential_change\
+    \ = 0))\r\n   BEGIN\r\n      --Remove the unneed credential\r\n      IF(@username\
+    \ IS NULL)\r\n      BEGIN\r\n         SET @credential_id = NULL\r\n         EXEC\
+    \ @rc = msdb.dbo.sysmail_drop_user_credential_sp \r\n                        @credential_name\
+    \ = @credential_name\r\n      END\r\n      -- Update the credential\r\n      ELSE\r\
+    \n      BEGIN\r\n         EXEC @rc = msdb.dbo.sysmail_alter_user_credential_sp\r\
+    \n                        @credential_name = @credential_name,\r\n           \
+    \             @username = @username,\r\n                        @password = @password\r\
+    \n      END\r\n\r\n      IF(@rc <> 0)\r\n      BEGIN \r\n         ROLLBACK TRAN\r\
+    \n         RETURN (1)\r\n      END\r\n   END\r\n   -- create a new credential\
+    \ if one doesn't exist\r\n   ELSE IF(@credential_name IS NULL AND @username IS\
+    \ NOT NULL)\r\n   BEGIN\r\n      EXEC @rc = msdb.dbo.sysmail_create_user_credential_sp\r\
+    \n                     @username = @username,\r\n                     @password\
+    \ = @password,\r\n                     @credential_id = @credential_id  OUTPUT\r\
+    \n      IF(@rc <> 0)\r\n      BEGIN \r\n         ROLLBACK TRAN\r\n         RETURN\
+    \ (1)\r\n      END\r\n   END\r\n\r\n   -- update server table\r\n   IF (@no_credential_change\
+    \ = 0)\r\n   BEGIN\r\n   IF (@mailserver_name IS NOT NULL)\r\n      UPDATE msdb.dbo.sysmail_server\
+    \ \r\n         SET servername=@mailserver_name, port=@port, username=@username,\
+    \ credential_id = @credential_id, use_default_credentials = @use_default_credentials,\
+    \ enable_ssl = @enable_ssl, timeout = @timeout\r\n      WHERE account_id=@accountid\
+    \ AND servertype=@mailserver_type\r\n   \r\n   ELSE\r\n      UPDATE msdb.dbo.sysmail_server\
+    \ \r\n         SET port=@port, username=@username, credential_id = @credential_id,\
+    \ use_default_credentials = @use_default_credentials, enable_ssl = @enable_ssl,\
+    \ timeout = @timeout\r\n      WHERE account_id=@accountid AND servertype=@mailserver_type\r\
+    \n   END\r\n   ELSE\r\n   BEGIN\r\n      -- Since no_credential_change is true,\
+    \ @username is empty. Do not pass it.\r\n      -- If we gave @username, sysmail_server\
+    \ would be set with the empty @username.\r\n      IF (@mailserver_name IS NOT\
+    \ NULL)\r\n         UPDATE msdb.dbo.sysmail_server \r\n         SET servername=@mailserver_name,\
+    \ port=@port, credential_id = @credential_id, use_default_credentials = @use_default_credentials,\
+    \ enable_ssl = @enable_ssl, timeout = @timeout\r\n         WHERE account_id=@accountid\
+    \ AND servertype=@mailserver_type\r\n   \r\n      ELSE\r\n         UPDATE msdb.dbo.sysmail_server\
+    \ \r\n         SET port=@port, credential_id = @credential_id, use_default_credentials\
+    \ = @use_default_credentials, enable_ssl = @enable_ssl, timeout = @timeout\r\n\
+    \         WHERE account_id=@accountid AND servertype=@mailserver_type\r\n   END\r\
+    \n      \r\n   COMMIT TRAN\r\n   RETURN(0)\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 9a580f18d34efe9007a081ec5b3b39b5
+processedLineage: false
+entityStatus: Approved

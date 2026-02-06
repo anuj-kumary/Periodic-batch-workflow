@@ -1,0 +1,62 @@
+name: sysmail_help_queue_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_help_queue_sp
+storedProcedureCode:
+  language: SQL
+  code: "CREATE   PROCEDURE sysmail_help_queue_sp\r\n   @queue_type nvarchar(6) =\
+    \ NULL -- Type of queue\r\nAS\r\nBEGIN\r\n\r\n   SELECT @queue_type       = LTRIM(RTRIM(@queue_type))\r\
+    \n   IF @queue_type           = '' SELECT @queue_type = NULL\r\n\r\n   IF ( (@queue_type\
+    \ IS NOT NULL) AND\r\n         (LOWER(@queue_type collate SQL_Latin1_General_CP1_CS_AS)\
+    \ NOT IN ( N'mail', N'status') ) )\r\n   BEGIN\r\n        RAISERROR(14266, -1,\
+    \ -1, '@queue_type', 'mail, status')\r\n      RETURN(1) -- Failure\r\n   END \
+    \  \r\n\r\n   DECLARE @depth      int\r\n   DECLARE @temp TABLE (\r\n        \
+    \                queue_type nvarchar(6),\r\n                        length INT\
+    \ NOT NULL, \r\n                        state nvarchar(64), \r\n             \
+    \           last_empty_rowset_time DATETIME,\r\n                        last_activated_time\
+    \ DATETIME\r\n                       )\r\n  \r\n   IF ( (@queue_type IS NULL)\
+    \ OR (LOWER(@queue_type collate SQL_Latin1_General_CP1_CS_AS) = N'mail' ) )\r\n\
+    \   BEGIN\r\n      SET @depth = (SELECT COUNT(*) FROM ExternalMailQueue WITH (NOWAIT\
+    \ NOLOCK READUNCOMMITTED))\r\n\r\n      INSERT INTO @temp\r\n         SELECT \r\
+    \n                N'mail',\r\n                @depth, \r\n            qm.state\
+    \ as state,\r\n            qm.last_empty_rowset_time as last_empty_rowset_time,\r\
+    \n            qm.last_activated_time as last_activated_time\r\n         FROM sys.dm_broker_queue_monitors\
+    \ qm\r\n         JOIN sys.service_queues sq ON sq.object_id = qm.queue_id\r\n\
+    \         WHERE sq.name = 'ExternalMailQueue'\r\n   END\r\n\r\n   IF ( (@queue_type\
+    \ IS NULL) OR (LOWER(@queue_type collate SQL_Latin1_General_CP1_CS_AS) = N'status'\
+    \ ) )\r\n   BEGIN\r\n      SET @depth = (SELECT COUNT(*) FROM InternalMailQueue\
+    \ WITH (NOWAIT NOLOCK READUNCOMMITTED))\r\n\r\n      INSERT INTO @temp\r\n   \
+    \      SELECT \r\n                N'status',\r\n                @depth, \r\n \
+    \           qm.state as state,\r\n            qm.last_empty_rowset_time as last_empty_rowset_time,\r\
+    \n            qm.last_activated_time as last_activated_time\r\n         FROM sys.dm_broker_queue_monitors\
+    \ qm\r\n         JOIN sys.service_queues sq ON sq.object_id = qm.queue_id\r\n\
+    \         WHERE sq.name = 'InternalMailQueue'\r\n   END\r\n\r\n   SELECT * from\
+    \ @temp\r\nEND\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 59427b5b4d3d4855d9a4beb85dd49960
+processedLineage: false
+entityStatus: Approved

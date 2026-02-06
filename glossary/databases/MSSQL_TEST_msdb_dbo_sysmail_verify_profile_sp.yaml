@@ -1,0 +1,54 @@
+name: sysmail_verify_profile_sp
+fullyQualifiedName: MSSQL_TEST.msdb.dbo.sysmail_verify_profile_sp
+storedProcedureCode:
+  language: SQL
+  code: "\r\nCREATE   PROCEDURE dbo.sysmail_verify_profile_sp\r\n   @profile_id int,\r\
+    \n   @profile_name sysname,\r\n   @allow_both_nulls bit,\r\n   @allow_id_name_mismatch\
+    \ bit,\r\n   @profileid int OUTPUT\r\nAS\r\n   IF @allow_both_nulls = 0\r\n  \
+    \ BEGIN\r\n      -- at least one parameter must be supplied\r\n      IF (@profile_id\
+    \ IS NULL AND @profile_name IS NULL)\r\n      BEGIN\r\n         RAISERROR(14604,\
+    \ -1, -1, 'profile') \r\n         RETURN(1)\r\n      END\r\n   END\r\n   \r\n\
+    \   IF ((@allow_id_name_mismatch = 0) AND (@profile_id IS NOT NULL AND @profile_name\
+    \ IS NOT NULL)) -- use both parameters\r\n   BEGIN\r\n      SELECT @profileid\
+    \ = profile_id FROM msdb.dbo.sysmail_profile WHERE profile_id=@profile_id AND\
+    \ name=@profile_name\r\n      IF (@profileid IS NULL) -- id and name do not match\r\
+    \n      BEGIN\r\n         RAISERROR(14605, -1, -1, 'profile')\r\n         RETURN(2)\r\
+    \n      END      \r\n   END\r\n   ELSE IF (@profile_id IS NOT NULL) -- use id\r\
+    \n   BEGIN\r\n      SELECT @profileid = profile_id FROM msdb.dbo.sysmail_profile\
+    \ WHERE profile_id=@profile_id\r\n      IF (@profileid IS NULL) -- id is invalid\r\
+    \n      BEGIN\r\n         RAISERROR(14606, -1, -1, 'profile')\r\n         RETURN(3)\r\
+    \n      END      \r\n   END\r\n   ELSE IF (@profile_name IS NOT NULL) -- use name\r\
+    \n   BEGIN\r\n      SELECT @profileid = profile_id FROM msdb.dbo.sysmail_profile\
+    \ WHERE name=@profile_name\r\n      IF (@profileid IS NULL) -- name is invalid\r\
+    \n      BEGIN\r\n         RAISERROR(14607, -1, -1, 'profile')\r\n         RETURN(4)\r\
+    \n      END      \r\n   END\r\n   RETURN(0) -- SUCCESS\r\n"
+dataProducts: []
+databaseSchema:
+  id: 57c2f396-9b05-4e00-9903-62b0219fbc25
+  type: databaseSchema
+  name: dbo
+  fullyQualifiedName: MSSQL_TEST.msdb.dbo
+  displayName: dbo
+  deleted: false
+database:
+  id: af8db866-dbb4-4bd5-a2ea-22202fbc71ef
+  type: database
+  name: msdb
+  fullyQualifiedName: MSSQL_TEST.msdb
+  displayName: msdb
+  deleted: false
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+owners: []
+tags: []
+domains: []
+sourceHash: 8934201bd14a67d5f8160283dc3d7326
+processedLineage: false
+entityStatus: Approved
