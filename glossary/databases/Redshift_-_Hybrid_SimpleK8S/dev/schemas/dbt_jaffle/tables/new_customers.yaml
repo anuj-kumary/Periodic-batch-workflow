@@ -1,0 +1,201 @@
+name: new_customers
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers
+description: "This table provides insights into new customers, detailing their order\
+  \ history and lifetime value, enabling businesses to analyze customer behavior,\
+  \ optimize marketing strategies, and enhance customer retention efforts."
+tableType: Regular
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The unique identifier for each customer in the database. This column
+      is used to distinguish between different customers.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_name
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: character varying(20)
+    description: The first name of the customer. This column is used for personalizing
+      communication and marketing efforts.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.first_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    description: "The last name of the customer. Similar to the first name, it is\
+      \ used for personalizing communication."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.last_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The date when the customer made their first purchase. This information
+      is crucial for analyzing customer acquisition and retention.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.first_order
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: most_recent_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The date of the customer's most recent purchase. This helps in understanding
+      customer engagement and activity.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.most_recent_order
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: number_of_orders
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The total number of orders placed by the customer. This metric is
+      important for analyzing customer behavior and loyalty.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.number_of_orders
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_lifetime_value
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The total revenue that a customer is expected to generate during
+      their relationship with the company. This metric helps in understanding the
+      value of a customer over time.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.customer_lifetime_value
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: row_count
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The count of records associated with the customer in the database.
+      This can be used for operational purposes.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.row_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 2e7e7167-115c-4c21-83d0-05d34afdc6dc
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.new_customers.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.customer_id.description
+      newValue: The unique identifier for each customer in the database. This column
+        is used to distinguish between different customers.
+    - name: columns.first_name.description
+      newValue: The first name of the customer. This column is used for personalizing
+        communication and marketing efforts.
+    - name: columns.last_name.description
+      newValue: "The last name of the customer. Similar to the first name, it is used\
+        \ for personalizing communication."
+    - name: columns.first_order.description
+      newValue: The date when the customer made their first purchase. This information
+        is crucial for analyzing customer acquisition and retention.
+    - name: columns.most_recent_order.description
+      newValue: The date of the customer's most recent purchase. This helps in understanding
+        customer engagement and activity.
+    - name: columns.number_of_orders.description
+      newValue: The total number of orders placed by the customer. This metric is
+        important for analyzing customer behavior and loyalty.
+    - name: columns.customer_lifetime_value.description
+      newValue: The total revenue that a customer is expected to generate during their
+        relationship with the company. This metric helps in understanding the value
+        of a customer over time.
+    - name: columns.row_count.description
+      newValue: The count of records associated with the customer in the database.
+        This can be used for operational purposes.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946432
+    columns.last_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.row_count.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.first_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.first_order.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.number_of_orders.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.most_recent_order.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+    columns.customer_lifetime_value.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946609
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1709646126375
+sourceHash: dda95d87a378a5cc0dcc842f9e685937
+processedLineage: false
+entityStatus: Unprocessed

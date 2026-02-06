@@ -1,0 +1,122 @@
+name: stg_customers
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers
+description: "This table stores essential customer information, including unique identifiers\
+  \ and names, enabling businesses to manage customer relationships, analyze demographics,\
+  \ and enhance marketing strategies effectively."
+tableType: View
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The customer_id is a unique identifier assigned to each customer
+      in the database. It is used to distinguish one customer from another and is
+      essential for maintaining data integrity.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_name
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: character varying(10)
+    description: The first_name column stores the first name of the customer. It is
+      used to personalize communications and identify customers in a more friendly
+      manner.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers.first_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    description: The last_name column contains the last name of the customer. It is
+      important for identification and can be used in conjunction with the first name
+      for full customer identification.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers.last_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+schemaDefinition: |-
+  CREATE VIEW dbt_jaffle.stg_customers AS  SELECT renamed.customer_id, renamed.first_name, renamed.last_name
+     FROM ( SELECT source.id AS customer_id, source.first_name, source.last_name
+             FROM ( SELECT raw_customers.id, raw_customers.first_name, raw_customers.last_name
+                     FROM dbt_jaffle.raw_customers) source) renamed;
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 8afc40ce-8068-4f71-9577-7060bea85aa6
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_customers.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.customer_id.description
+      newValue: The customer_id is a unique identifier assigned to each customer in
+        the database. It is used to distinguish one customer from another and is essential
+        for maintaining data integrity.
+    - name: columns.first_name.description
+      newValue: The first_name column stores the first name of the customer. It is
+        used to personalize communications and identify customers in a more friendly
+        manner.
+    - name: columns.last_name.description
+      newValue: The last_name column contains the last name of the customer. It is
+        important for identification and can be used in conjunction with the first
+        name for full customer identification.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756939971
+    columns.last_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940191
+    columns.first_name.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940191
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756940191
+domains: []
+dataProducts: []
+sourceHash: acc85828b363e58a7c4f709d093f8c8a
+processedLineage: true
+entityStatus: Unprocessed

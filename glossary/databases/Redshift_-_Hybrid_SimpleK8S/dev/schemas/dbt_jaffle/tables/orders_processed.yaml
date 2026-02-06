@@ -1,0 +1,202 @@
+name: orders_processed
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed
+description: "This table stores processed order details, including amounts paid through\
+  \ various methods, customer identifiers, and order statuses, enabling businesses\
+  \ to analyze sales performance and customer behavior effectively."
+tableType: Regular
+columns:
+  - name: order_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: A unique identifier for each order processed.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.order_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: A unique identifier for the customer who placed the order.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The date when the order was placed.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.order_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 14
+    dataTypeDisplay: character varying(14)
+    description: "The current status of the order, indicating whether it is pending,\
+      \ completed, or canceled."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: credit_card_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The portion of the order amount that was paid using a credit card.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.credit_card_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: coupon_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The discount amount applied to the order through a coupon.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.coupon_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bank_transfer_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The portion of the order amount that was paid via bank transfer.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.bank_transfer_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: gift_card_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The portion of the order amount that was paid using a gift card.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.gift_card_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "The total amount of the order, representing the overall value of\
+      \ the transaction."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: a5abb976-b92a-4fff-97df-5c5c58ea0b97
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders_processed.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.order_id.description
+      newValue: A unique identifier for each order processed.
+    - name: columns.customer_id.description
+      newValue: A unique identifier for the customer who placed the order.
+    - name: columns.order_date.description
+      newValue: The date when the order was placed.
+    - name: columns.status.description
+      newValue: "The current status of the order, indicating whether it is pending,\
+        \ completed, or canceled."
+    - name: columns.credit_card_amount.description
+      newValue: The portion of the order amount that was paid using a credit card.
+    - name: columns.coupon_amount.description
+      newValue: The discount amount applied to the order through a coupon.
+    - name: columns.bank_transfer_amount.description
+      newValue: The portion of the order amount that was paid via bank transfer.
+    - name: columns.gift_card_amount.description
+      newValue: The portion of the order amount that was paid using a gift card.
+    - name: columns.amount.description
+      newValue: "The total amount of the order, representing the overall value of\
+        \ the transaction."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944206
+    columns.amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.status.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.order_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.order_date.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.coupon_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.gift_card_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.credit_card_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+    columns.bank_transfer_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944423
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1674221107838
+sourceHash: dbc71344ae07d96c7e9ee0bd0087fbd7
+processedLineage: false
+entityStatus: Unprocessed

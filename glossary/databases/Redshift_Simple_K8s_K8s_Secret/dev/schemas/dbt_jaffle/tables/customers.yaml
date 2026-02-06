@@ -1,0 +1,253 @@
+name: customers
+fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers
+description: "This table stores detailed information about customers, including their\
+  \ lifetime value, order history, and number of orders. It can be used to analyze\
+  \ customer behavior, track customer loyalty, and personalize marketing strategies.\
+  \ this is a better description"
+tableType: Regular
+columns:
+  - name: customer_id
+    displayName: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: New ID from Collate UI
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.customer_id
+    tags:
+      - tagFQN: MY_TAG2ND_2.2nd eight
+        name: 2nd eight
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1768847386000
+        appliedBy: prajwal
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: first_name
+    displayName: first_name
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: character varying(20)
+    description: |-
+      <p>Customer's first name as provided during account registration
+      </p>
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.first_name
+    tags:
+      - tagFQN: MY_TAG2ND.2nd_two
+        name: 2nd_two
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1768847386000
+        appliedBy: prajwal
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: last_name
+    displayName: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    description: <p>Customer's last name as provided during account registration</p>
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.last_name
+    tags:
+      - tagFQN: my_tag2nd_2.2nd eight
+        name: 2nd eight
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1768847386000
+        appliedBy: prajwal
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: first_order
+    displayName: first_order
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: <p>Date of the customer's first order transaction</p>
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.first_order
+    tags:
+      - tagFQN: MY_TAG2ND_2.2nd eight
+        name: 2nd eight
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1768847386000
+        appliedBy: prajwal
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: most_recent_order
+    displayName: most_recent_order
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: <p>Date of the customer's most recent order transaction</p>
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.most_recent_order
+    tags:
+      - tagFQN: MY_TAG2ND.2nd_two
+        name: 2nd_two
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1769441448000
+        appliedBy: james
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: number_of_orders
+    displayName: number_of_orders
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: <p>Total count of orders placed by the customer across their lifetime</p>
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.number_of_orders
+    tags:
+      - tagFQN: MY_TAG2ND.2nd_two
+        name: 2nd_two
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1768847386000
+        appliedBy: prajwal
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: customer_lifetime_value
+    displayName: customer_lifetime_value
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: "<p>Total monetary value of all orders placed by the customer, calculated\
+      \ as the sum of all order amounts</p>"
+    fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.customer_lifetime_value
+    tags:
+      - tagFQN: my_tag2nd.2nd_two
+        name: 2nd_two
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1768847386000
+        appliedBy: prajwal
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+owners:
+  - id: 71117be9-c30d-46f7-ba7b-d63a8ed9b31d
+    type: user
+    name: prajwal
+    fullyQualifiedName: prajwal
+    displayName: prajwal
+    deleted: false
+databaseSchema:
+  id: 5087da02-fa63-4d41-9f7d-23b7ba9b3f34
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: 512cf596-9c86-4fa8-9610-8adbece7e611
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev
+  displayName: dev
+  deleted: false
+service:
+  id: 9e98204b-a6fd-4bf7-9fba-6a2867b7a664
+  type: databaseService
+  name: Redshift Simple K8s K8s Secret
+  fullyQualifiedName: Redshift Simple K8s K8s Secret
+  description: ""
+  displayName: Redshift Simple K8s K8s Secret
+  deleted: false
+serviceType: Redshift
+tags:
+  - tagFQN: Tier.Tier4
+    name: Tier4
+    description: |-
+      **Team level datasets that are typically non-business and general internal system**
+
+      - Used in product metrics, and dashboards to drive team decisions
+
+      - Used to track operational metrics of internal systems owned by the team
+
+      - Source used to derive other critical Tier-4 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1769689371000
+    appliedBy: himanshu
+  - tagFQN: '`custom`.tag1'
+    name: tag1
+    displayName: tag1
+    description: <p>tag1</p>
+    style:
+      color: "#fd3f3f"
+      iconURL: https://cdn-icons-png.flaticon.com/512/9029/9029931.png
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 2d66ad65-4a01-42e3-b642-253ee10975b2
+  type: testSuite
+  name: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.testSuite
+  fullyQualifiedName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.testSuite
+  displayName: Redshift Simple K8s K8s Secret.dev.dbt_jaffle.customers.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"Tier.Tier4\",\"name\":\"Tier4\",\"description\":\"\
+        **Team level datasets that are typically non-business and general internal\
+        \ system**\\n\\n- Used in product metrics, and dashboards to drive team decisions\\\
+        n\\n- Used to track operational metrics of internal systems owned by the team\\\
+        n\\n- Source used to derive other critical Tier-4 datasets\",\"source\":\"\
+        Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\",\"appliedBy\"\
+        :\"himanshu\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 2.0
+  changeSummary: {}
+domains:
+  - id: 060bcc29-d788-4065-bb60-0745526aa6b2
+    type: domain
+    name: hk dom 1
+    fullyQualifiedName: hk dom 1
+    description: <p>hk dom 1</p>
+    displayName: hk dom 1
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1700477489486
+  accessed:
+    timestamp: 1759708800000
+    accessedByAProcess: openmetadata
+sourceHash: 5dd093947eeac30a007ffd260b6a4272
+processedLineage: false
+entityStatus: Unprocessed

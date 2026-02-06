@@ -1,0 +1,212 @@
+name: orders
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders
+description: testing comments here
+tableType: Partitioned
+columns:
+  - name: order_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The order ID is a unique identifier for each order placed in the
+      system.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.order_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The customer ID uniquely identifies the customer who placed the order.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The order date represents the date on which the order was placed.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.order_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 14
+    dataTypeDisplay: character varying(14)
+    description: "The status indicates the current state of the order, such as 'pending',\
+      \ 'completed', or 'canceled'."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: credit_card_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The credit card amount shows the portion of the order amount that
+      was paid using a credit card.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.credit_card_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: coupon_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The coupon amount reflects any discounts applied to the order through
+      coupon codes.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.coupon_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bank_transfer_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The bank transfer amount indicates the portion of the order amount
+      that was paid via bank transfer.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.bank_transfer_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: gift_card_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The gift card amount indicates the portion of the order amount that
+      was paid using a gift card.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.gift_card_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    description: The amount represents the total value of the order placed by the
+      customer.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: DIST_KEY
+    columns:
+      - order_id
+tablePartition:
+  columns:
+    - columnName: order_id
+      intervalType: COLUMN-VALUE
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 593d3537-e948-4b46-8e0b-5b1cd08ff6f1
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.orders.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.order_id.description
+      newValue: The order ID is a unique identifier for each order placed in the system.
+    - name: columns.customer_id.description
+      newValue: The customer ID uniquely identifies the customer who placed the order.
+    - name: columns.order_date.description
+      newValue: The order date represents the date on which the order was placed.
+    - name: columns.status.description
+      newValue: "The status indicates the current state of the order, such as 'pending',\
+        \ 'completed', or 'canceled'."
+    - name: columns.credit_card_amount.description
+      newValue: The credit card amount shows the portion of the order amount that
+        was paid using a credit card.
+    - name: columns.coupon_amount.description
+      newValue: The coupon amount reflects any discounts applied to the order through
+        coupon codes.
+    - name: columns.bank_transfer_amount.description
+      newValue: The bank transfer amount indicates the portion of the order amount
+        that was paid via bank transfer.
+    - name: columns.gift_card_amount.description
+      newValue: The gift card amount indicates the portion of the order amount that
+        was paid using a gift card.
+    - name: columns.amount.description
+      newValue: The amount represents the total value of the order placed by the customer.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    columns.amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.status.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.order_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.order_date.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.coupon_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.gift_card_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.credit_card_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+    columns.bank_transfer_amount.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756944811
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1700477489334
+sourceHash: 1f26060f98aed95ea545760c859ec04d
+processedLineage: false
+entityStatus: Unprocessed

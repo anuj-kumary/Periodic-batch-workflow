@@ -1,0 +1,134 @@
+name: raw_orders
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders
+description: "This table stores order information, including unique identifiers, order\
+  \ dates, statuses, and associated user IDs, enabling analysis of customer purchasing\
+  \ behavior and order management."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: "The 'id' column serves as a unique identifier for each order in\
+      \ the dataset, ensuring that every order can be distinctly referenced."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: "The 'user_id' column identifies the user who placed the order, linking\
+      \ the order to a specific customer in the system."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "The 'order_date' column records the date on which the order was\
+      \ placed, providing a temporal context for the order."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.order_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 14
+    dataTypeDisplay: character varying(14)
+    description: "The 'status' column indicates the current state of the order, such\
+      \ as 'pending', 'shipped', or 'completed', reflecting the order's progress."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 8cb44c64-9077-4b6c-80c2-12d3fa4dc5bc
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.raw_orders.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "The 'id' column serves as a unique identifier for each order in the\
+        \ dataset, ensuring that every order can be distinctly referenced."
+    - name: columns.user_id.description
+      newValue: "The 'user_id' column identifies the user who placed the order, linking\
+        \ the order to a specific customer in the system."
+    - name: columns.order_date.description
+      newValue: "The 'order_date' column records the date on which the order was placed,\
+        \ providing a temporal context for the order."
+    - name: columns.status.description
+      newValue: "The 'status' column indicates the current state of the order, such\
+        \ as 'pending', 'shipped', or 'completed', reflecting the order's progress."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.4
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756941935
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756942351
+    columns.status.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756942351
+    columns.user_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756942351
+    columns.order_date.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756942351
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1667996111994
+  accessed:
+    timestamp: 1759708800000
+    accessedByAProcess: openmetadata
+sourceHash: 4d16b119f803865adf9d913af3440e22
+processedLineage: false
+entityStatus: Unprocessed

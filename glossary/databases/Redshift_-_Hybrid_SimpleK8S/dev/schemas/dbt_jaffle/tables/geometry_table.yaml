@@ -1,0 +1,112 @@
+name: geometry_table
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table
+description: Geometry test changed here
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The id column serves as a unique identifier for each record in the
+      geometry_table. It is essential for distinguishing between different entries
+      and maintaining data integrity.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: geo_col
+    dataType: GEOMETRY
+    dataLength: 1
+    dataTypeDisplay: geometry
+    description: "The geo_col column contains geometric data representing spatial\
+      \ features such as points, lines, or polygons. It is used to store and analyze\
+      \ geographical information."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table.geo_col
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hll
+    dataType: HLLSKETCH
+    dataLength: 1
+    dataTypeDisplay: hllsketch
+    description: "The hll column stores HyperLogLog sketches, which are used for approximate\
+      \ counting of distinct elements in a dataset. This is useful for analyzing large\
+      \ datasets where exact counts are not feasible."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table.hll
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 01230ca7-ce45-4b22-b59a-33446fc2a0f5
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.geometry_table.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: The id column serves as a unique identifier for each record in the
+        geometry_table. It is essential for distinguishing between different entries
+        and maintaining data integrity.
+    - name: columns.geo_col.description
+      newValue: "The geo_col column contains geometric data representing spatial features\
+        \ such as points, lines, or polygons. It is used to store and analyze geographical\
+        \ information."
+    - name: columns.hll.description
+      newValue: "The hll column stores HyperLogLog sketches, which are used for approximate\
+        \ counting of distinct elements in a dataset. This is useful for analyzing\
+        \ large datasets where exact counts are not feasible."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946952
+    columns.hll.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946952
+    columns.geo_col.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756946952
+domains: []
+dataProducts: []
+sourceHash: 831be9d247b344424d5100df7f082514
+processedLineage: false
+entityStatus: Unprocessed

@@ -1,0 +1,137 @@
+name: stg_orders
+fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders
+description: "This table stores order details, including customer IDs, order dates,\
+  \ and statuses, enabling users to analyze purchasing patterns, track order fulfillment,\
+  \ and manage customer relationships effectively."
+tableType: View
+columns:
+  - name: order_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The order_id serves as a unique identifier for each order placed.
+      It is crucial for tracking and referencing specific orders within the system.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.order_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: The customer_id represents a unique identifier for each customer
+      who places an order. It is used to associate orders with specific customers.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_date
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The order_date indicates the date on which the order was placed.
+      It is essential for tracking order timelines and analyzing sales trends over
+      time.
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.order_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 14
+    dataTypeDisplay: character varying(14)
+    description: "The status indicates the current state of the order, such as 'pending',\
+      \ 'shipped', or 'completed'. It helps in understanding the order's progress\
+      \ and managing fulfillment."
+    fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 161976f4-3cb7-46cd-8e78-80aa24fbb8f7
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c1bb230b-bac2-48ff-a3aa-2fb40c556c0d
+  type: database
+  name: dev
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev
+  displayName: dev
+  deleted: false
+service:
+  id: eda3999d-dc23-488e-bb2f-7174bd5af143
+  type: databaseService
+  name: Redshift - Hybrid SimpleK8S
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S
+  description: ""
+  displayName: Redshift - Hybrid SimpleK8S
+  deleted: false
+serviceType: Redshift
+schemaDefinition: |-
+  CREATE VIEW dbt_jaffle.stg_orders AS  SELECT renamed.order_id, renamed.customer_id, renamed.order_date, renamed.status
+     FROM ( SELECT source.id AS order_id, source.user_id AS customer_id, source.order_date, source.status
+             FROM ( SELECT raw_orders.id, raw_orders.user_id, raw_orders.order_date, raw_orders.status
+                     FROM dbt_jaffle.raw_orders) source) renamed;
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: a7b77990-f1b3-469f-bb70-f8f418d78cb3
+  type: testSuite
+  name: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.testSuite
+  fullyQualifiedName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.testSuite
+  displayName: Redshift - Hybrid SimpleK8S.dev.dbt_jaffle.stg_orders.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.order_id.description
+      newValue: The order_id serves as a unique identifier for each order placed.
+        It is crucial for tracking and referencing specific orders within the system.
+    - name: columns.customer_id.description
+      newValue: The customer_id represents a unique identifier for each customer who
+        places an order. It is used to associate orders with specific customers.
+    - name: columns.order_date.description
+      newValue: The order_date indicates the date on which the order was placed. It
+        is essential for tracking order timelines and analyzing sales trends over
+        time.
+    - name: columns.status.description
+      newValue: "The status indicates the current state of the order, such as 'pending',\
+        \ 'shipped', or 'completed'. It helps in understanding the order's progress\
+        \ and managing fulfillment."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1759756939400
+    columns.status.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756939585
+    columns.order_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756939585
+    columns.order_date.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756939585
+    columns.customer_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1759756939585
+domains: []
+dataProducts: []
+sourceHash: afde1b6a5217877afd38619a2b52ab3b
+processedLineage: true
+entityStatus: Unprocessed
