@@ -1,0 +1,81 @@
+name: dim_data_columns
+fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns
+tableType: Regular
+columns:
+  - name: id
+    dataType: DECIMAL
+    dataLength: 38
+    dataTypeDisplay: "decimal(38,0)"
+    fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns.id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: name_column_name
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar
+    fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns.name_column_name
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_id
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar
+    fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns._fivetran_id
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns._fivetran_deleted
+    tags: []
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test.dim_data_columns._fivetran_synced
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2c997e7b-7d68-4b00-9be3-1da7c79e6f30
+  type: databaseSchema
+  name: snowflake_db_test
+  fullyQualifiedName: testUnity.postgres_catalog.snowflake_db_test
+  displayName: snowflake_db_test
+  deleted: false
+database:
+  id: 631ee5ac-ca75-4695-9cb0-9c82bd02a746
+  type: database
+  name: postgres_catalog
+  fullyQualifiedName: testUnity.postgres_catalog
+  displayName: postgres_catalog
+  deleted: false
+service:
+  id: 686dc5da-a770-4d95-92be-34544ad38d95
+  type: databaseService
+  name: testUnity
+  fullyQualifiedName: testUnity
+  description: ""
+  displayName: testUnity
+  deleted: false
+serviceType: UnityCatalog
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7a77f82e653a7c752b2a9115d6eefbe1
+processedLineage: false
+entityStatus: Approved
