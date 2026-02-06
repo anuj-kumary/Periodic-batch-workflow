@@ -1,0 +1,76 @@
+name: posts_db
+fullyQualifiedName: mysql_sample.default.posts_db
+dataProducts: []
+owners: []
+service:
+  id: 683b5223-5348-4286-afee-a1ac6f4f4627
+  type: databaseService
+  name: mysql_sample
+  fullyQualifiedName: mysql_sample
+  displayName: mysql_sample
+  deleted: false
+serviceType: Mysql
+database:
+  id: 9f1ad53c-90bd-4b49-acb3-be1cbfcadfcd
+  type: database
+  name: default
+  fullyQualifiedName: mysql_sample.default
+  displayName: default
+  deleted: false
+tables:
+  - id: adaa2862-c4a2-4826-96fc-dd107456ffa0
+    type: table
+    name: Categories
+    fullyQualifiedName: mysql_sample.default.posts_db.Categories
+    displayName: Categories
+    deleted: false
+  - id: 900f220b-8eeb-4433-a88d-8b8080c42027
+    type: table
+    name: Comments
+    fullyQualifiedName: mysql_sample.default.posts_db.Comments
+    displayName: Comments
+    deleted: false
+  - id: bd82b4c8-94f0-4df2-bba9-123bea9848b9
+    type: table
+    name: PostTags
+    fullyQualifiedName: mysql_sample.default.posts_db.PostTags
+    description: testdesc2
+    displayName: PostTags
+    deleted: false
+  - id: 34c0de07-7d37-4a33-9f5c-8860fb75819b
+    type: table
+    name: Posts
+    fullyQualifiedName: mysql_sample.default.posts_db.Posts
+    displayName: Posts
+    deleted: false
+  - id: a8970c95-da85-4822-84af-d998a900b903
+    type: table
+    name: Profiles
+    fullyQualifiedName: mysql_sample.default.posts_db.Profiles
+    displayName: Profiles
+    deleted: false
+  - id: 8cf44f81-03d1-4a74-a9b3-6c4a53092a65
+    type: table
+    name: Tags
+    fullyQualifiedName: mysql_sample.default.posts_db.Tags
+    displayName: Tags
+    deleted: false
+  - id: f5e188da-8d5f-49e2-8c6f-67975170d36f
+    type: table
+    name: Users
+    fullyQualifiedName: mysql_sample.default.posts_db.Users
+    displayName: Users
+    deleted: false
+tags: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: entityStatus
+      oldValue: Approved
+      newValue: Unprocessed
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+sourceUrl: https://localhost:3306/posts_db
+domains: []
+entityStatus: Unprocessed

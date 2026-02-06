@@ -1,0 +1,54 @@
+name: cypress_integrations_test_db
+fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db
+dataProducts: []
+owners: []
+service:
+  id: 97415374-1a91-4fe6-ac3a-d2430e9e98c7
+  type: databaseService
+  name: mySQLProfilerTesting
+  fullyQualifiedName: mySQLProfilerTesting
+  description: ""
+  displayName: mySQLProfilerTesting
+  deleted: false
+serviceType: Mysql
+database:
+  id: f7fac649-5083-4577-a08a-dafa62bb722d
+  type: database
+  name: default
+  fullyQualifiedName: mySQLProfilerTesting.default
+  displayName: default
+  deleted: false
+tables:
+  - id: c9bdf5a4-0c52-4c1d-96e2-66d8c1fb9247
+    type: table
+    name: sensitive_customers
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.sensitive_customers
+    displayName: sensitive_customers
+    deleted: false
+  - id: 38df417a-9227-4c60-8307-0b5bcaaabf1f
+    type: table
+    name: team_entity
+    fullyQualifiedName: mySQLProfilerTesting.default.cypress_integrations_test_db.team_entity
+    displayName: team_entity
+    deleted: false
+tags:
+  - tagFQN: test_2_policy_tag.test_2_policy_tag
+    name: test_2_policy_tag
+    description: Bigquery Policy Tag
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: tags
+      newValue: "[{\"tagFQN\":\"test_2_policy_tag.test_2_policy_tag\",\"name\":\"\
+        test_2_policy_tag\",\"description\":\"Bigquery Policy Tag\",\"source\":\"\
+        Classification\",\"labelType\":\"Manual\",\"state\":\"Confirmed\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+domains: []
+sourceHash: 1e3609f6fffbb46fc46cfaa01fd98d56
+entityStatus: Approved

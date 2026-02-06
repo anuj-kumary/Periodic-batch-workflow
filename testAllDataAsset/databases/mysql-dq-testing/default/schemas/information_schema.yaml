@@ -1,0 +1,515 @@
+name: information_schema
+fullyQualifiedName: mysql-dq-testing.default.information_schema
+description: <p>test description</p>
+dataProducts: []
+owners: []
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+tables:
+  - id: a767f6c5-5202-4659-9192-eadff823e532
+    type: table
+    name: ADMINISTRABLE_ROLE_AUTHORIZATIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ADMINISTRABLE_ROLE_AUTHORIZATIONS
+    displayName: ADMINISTRABLE_ROLE_AUTHORIZATIONS
+    deleted: false
+  - id: 0598cc31-c882-47e0-84e9-8722c18c2296
+    type: table
+    name: APPLICABLE_ROLES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.APPLICABLE_ROLES
+    description: <p>new</p>
+    displayName: APPLICABLE_ROLES
+    deleted: false
+  - id: 77390b06-fc03-41e3-80fb-dbf90ef4c8bf
+    type: table
+    name: CHARACTER_SETS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.CHARACTER_SETS
+    displayName: CHARACTER_SETS
+    deleted: false
+  - id: ae63af4a-0af3-464a-b6c7-adf128e9f763
+    type: table
+    name: CHECK_CONSTRAINTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.CHECK_CONSTRAINTS
+    displayName: CHECK_CONSTRAINTS
+    deleted: false
+  - id: 4d2c89ff-7ec2-4818-a619-b9a3cafbff1e
+    type: table
+    name: COLLATIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.COLLATIONS
+    displayName: COLLATIONS
+    deleted: false
+  - id: 6418280b-c47f-4468-ba3e-d6a270e4b741
+    type: table
+    name: COLLATION_CHARACTER_SET_APPLICABILITY
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.COLLATION_CHARACTER_SET_APPLICABILITY
+    displayName: COLLATION_CHARACTER_SET_APPLICABILITY
+    deleted: false
+  - id: aec1ed1f-c473-4441-ac0c-3cf906293517
+    type: table
+    name: COLUMNS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.COLUMNS
+    displayName: COLUMNS
+    deleted: false
+  - id: d163b94c-fd7a-4327-bdf6-651f15b1e64f
+    type: table
+    name: COLUMNS_EXTENSIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.COLUMNS_EXTENSIONS
+    displayName: COLUMNS_EXTENSIONS
+    deleted: false
+  - id: 8dbdabda-2749-4da5-b9b8-0e626ced9e98
+    type: table
+    name: COLUMN_PRIVILEGES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.COLUMN_PRIVILEGES
+    displayName: COLUMN_PRIVILEGES
+    deleted: false
+  - id: ada05937-7e3a-4745-81ce-0ebdc8ec58a3
+    type: table
+    name: COLUMN_STATISTICS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.COLUMN_STATISTICS
+    displayName: COLUMN_STATISTICS
+    deleted: false
+  - id: a6822e4e-5b7b-4e74-8318-56a9f7bfe6c2
+    type: table
+    name: ENABLED_ROLES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENABLED_ROLES
+    displayName: ENABLED_ROLES
+    deleted: false
+  - id: 2c4599f9-e493-43a0-afa6-fee631f8ad08
+    type: table
+    name: ENGINES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ENGINES
+    displayName: ENGINES
+    deleted: false
+  - id: 278723dd-af4e-4b26-afa2-509ad324a9ac
+    type: table
+    name: EVENTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.EVENTS
+    displayName: EVENTS
+    deleted: false
+  - id: 27165086-b498-4e32-af9c-7376b241c863
+    type: table
+    name: INNODB_BUFFER_PAGE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE
+    displayName: INNODB_BUFFER_PAGE
+    deleted: false
+  - id: dca2f91d-679e-4f8e-b858-606cdc5bfebd
+    type: table
+    name: INNODB_BUFFER_PAGE_LRU
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_PAGE_LRU
+    displayName: INNODB_BUFFER_PAGE_LRU
+    deleted: false
+  - id: c37694e8-72b5-4e12-a42f-a38c41f6959e
+    type: table
+    name: INNODB_BUFFER_POOL_STATS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_BUFFER_POOL_STATS
+    displayName: INNODB_BUFFER_POOL_STATS
+    deleted: false
+  - id: b4660d0d-adf7-473d-abcd-9520a9b6cc39
+    type: table
+    name: INNODB_CACHED_INDEXES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CACHED_INDEXES
+    displayName: INNODB_CACHED_INDEXES
+    deleted: false
+  - id: 8bb59671-65e7-482a-98be-4b2a64d072e4
+    type: table
+    name: INNODB_CMP
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMP
+    displayName: INNODB_CMP
+    deleted: false
+  - id: 8b0e3cdf-d517-4700-a417-d05e449cc497
+    type: table
+    name: INNODB_CMPMEM
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM
+    displayName: INNODB_CMPMEM
+    deleted: false
+  - id: 4f441ab6-87b4-41fe-b25d-b05d7fe5168c
+    type: table
+    name: INNODB_CMPMEM_RESET
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMPMEM_RESET
+    displayName: INNODB_CMPMEM_RESET
+    deleted: false
+  - id: 1e89f52d-e1f1-43c0-af5a-3636a3ce3def
+    type: table
+    name: INNODB_CMP_PER_INDEX
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMP_PER_INDEX
+    displayName: INNODB_CMP_PER_INDEX
+    deleted: false
+  - id: d81e1900-f93c-4db2-a861-4d3bf0131338
+    type: table
+    name: INNODB_CMP_PER_INDEX_RESET
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMP_PER_INDEX_RESET
+    displayName: INNODB_CMP_PER_INDEX_RESET
+    deleted: false
+  - id: df7a7092-d486-4ef3-ab76-6d20d299b4fa
+    type: table
+    name: INNODB_CMP_RESET
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_CMP_RESET
+    displayName: INNODB_CMP_RESET
+    deleted: false
+  - id: 35f4eb51-cc54-4b80-957d-ba56a55eb8d9
+    type: table
+    name: INNODB_COLUMNS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_COLUMNS
+    displayName: INNODB_COLUMNS
+    deleted: false
+  - id: 78ce4079-2be1-4ed1-8bed-cf7a69990e75
+    type: table
+    name: INNODB_DATAFILES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_DATAFILES
+    displayName: INNODB_DATAFILES
+    deleted: false
+  - id: d0bf398a-f23d-409f-92a9-c240f1de69fd
+    type: table
+    name: INNODB_FIELDS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FIELDS
+    displayName: INNODB_FIELDS
+    deleted: false
+  - id: f76c897c-771b-4dcf-aa83-c188a05c7791
+    type: table
+    name: INNODB_FOREIGN
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FOREIGN
+    displayName: INNODB_FOREIGN
+    deleted: false
+  - id: 7e054d50-ebbc-4831-8937-d623ff4d3315
+    type: table
+    name: INNODB_FOREIGN_COLS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FOREIGN_COLS
+    displayName: INNODB_FOREIGN_COLS
+    deleted: false
+  - id: 5bb17b98-daed-4bd9-900b-2e6b02dc3a2c
+    type: table
+    name: INNODB_FT_BEING_DELETED
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FT_BEING_DELETED
+    displayName: INNODB_FT_BEING_DELETED
+    deleted: false
+  - id: 7c976603-1085-4dca-aba7-4b472e20eb48
+    type: table
+    name: INNODB_FT_CONFIG
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FT_CONFIG
+    displayName: INNODB_FT_CONFIG
+    deleted: false
+  - id: bb7443e1-97bb-4ca0-a76c-f4a862527eff
+    type: table
+    name: INNODB_FT_DEFAULT_STOPWORD
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FT_DEFAULT_STOPWORD
+    displayName: INNODB_FT_DEFAULT_STOPWORD
+    deleted: false
+  - id: f3acb481-dcc9-4bca-a94d-39c2cf343c2d
+    type: table
+    name: INNODB_FT_DELETED
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FT_DELETED
+    displayName: INNODB_FT_DELETED
+    deleted: false
+  - id: 2162db0f-a53a-449e-9479-d4435da9cea6
+    type: table
+    name: INNODB_FT_INDEX_CACHE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FT_INDEX_CACHE
+    displayName: INNODB_FT_INDEX_CACHE
+    deleted: false
+  - id: ecc49508-5ae3-4ddb-afd7-e0609a2993e9
+    type: table
+    name: INNODB_FT_INDEX_TABLE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_FT_INDEX_TABLE
+    displayName: INNODB_FT_INDEX_TABLE
+    deleted: false
+  - id: 5f847b5a-3ff9-41d6-9991-9e14a5d987c2
+    type: table
+    name: INNODB_INDEXES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_INDEXES
+    displayName: INNODB_INDEXES
+    deleted: false
+  - id: 1a46326a-387f-4fce-8713-ebd7db8c9aea
+    type: table
+    name: INNODB_METRICS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_METRICS
+    displayName: INNODB_METRICS
+    deleted: false
+  - id: 0915f063-d8dd-4fd4-b922-ee4c584a2f73
+    type: table
+    name: INNODB_SESSION_TEMP_TABLESPACES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_SESSION_TEMP_TABLESPACES
+    displayName: INNODB_SESSION_TEMP_TABLESPACES
+    deleted: false
+  - id: 82f53cdf-4cfb-4c86-a595-97981168b645
+    type: table
+    name: INNODB_TABLES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TABLES
+    displayName: INNODB_TABLES
+    deleted: false
+  - id: 1725a687-fa5d-4ec6-b0cd-7611b2f2c191
+    type: table
+    name: INNODB_TABLESPACES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TABLESPACES
+    displayName: INNODB_TABLESPACES
+    deleted: false
+  - id: 8df7548e-4fd5-4a83-b30d-6ee56ffec292
+    type: table
+    name: INNODB_TABLESPACES_BRIEF
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TABLESPACES_BRIEF
+    displayName: INNODB_TABLESPACES_BRIEF
+    deleted: false
+  - id: d3aad204-1223-49ac-b205-76cedbe0fd02
+    type: table
+    name: INNODB_TABLESTATS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TABLESTATS
+    displayName: INNODB_TABLESTATS
+    deleted: false
+  - id: da4d2667-b9db-48b8-a2ff-5e77906278a4
+    type: table
+    name: INNODB_TEMP_TABLE_INFO
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TEMP_TABLE_INFO
+    displayName: INNODB_TEMP_TABLE_INFO
+    deleted: false
+  - id: 4c2c039c-378d-45c9-8862-5d783e9f1985
+    type: table
+    name: INNODB_TRX
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_TRX
+    displayName: INNODB_TRX
+    deleted: false
+  - id: 3483e290-3184-4a86-aa83-db6cc13175f5
+    type: table
+    name: INNODB_VIRTUAL
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.INNODB_VIRTUAL
+    displayName: INNODB_VIRTUAL
+    deleted: false
+  - id: 9cd7cfbc-0d8b-4d0a-83d6-740c8730b277
+    type: table
+    name: KEYWORDS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEYWORDS
+    displayName: KEYWORDS
+    deleted: false
+  - id: 42f38abe-e8cf-4aa8-9bba-6df91438f7be
+    type: table
+    name: KEY_COLUMN_USAGE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.KEY_COLUMN_USAGE
+    displayName: KEY_COLUMN_USAGE
+    deleted: false
+  - id: 794319a2-32fb-4522-a84a-227dfc2515ec
+    type: table
+    name: OPTIMIZER_TRACE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.OPTIMIZER_TRACE
+    displayName: OPTIMIZER_TRACE
+    deleted: false
+  - id: 4ed86516-09c4-4db8-9966-b3b377aa70aa
+    type: table
+    name: PARAMETERS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARAMETERS
+    displayName: PARAMETERS
+    deleted: false
+  - id: d9c973d8-49f0-4372-b7d8-c2e76508f48e
+    type: table
+    name: PARTITIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PARTITIONS
+    displayName: PARTITIONS
+    deleted: false
+  - id: 2579cda1-b3cd-4200-8675-c7a7e8995624
+    type: table
+    name: PLUGINS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PLUGINS
+    displayName: PLUGINS
+    deleted: false
+  - id: 99a63696-95de-40cb-a6b5-d28774e6a46a
+    type: table
+    name: PROCESSLIST
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROCESSLIST
+    displayName: PROCESSLIST
+    deleted: false
+  - id: 07dd823a-347a-4784-abbe-7626c3e76710
+    type: table
+    name: PROFILING
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.PROFILING
+    displayName: PROFILING
+    deleted: false
+  - id: 495497b7-75f0-455c-bb6f-22b1c1c525a2
+    type: table
+    name: RDS_EVENTS_THREADS_WAITS_CURRENT
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_EVENTS_THREADS_WAITS_CURRENT
+    displayName: RDS_EVENTS_THREADS_WAITS_CURRENT
+    deleted: false
+  - id: 6eb34bf6-0a1e-454f-ab7c-77e7972101bb
+    type: table
+    name: RDS_PROCESSLIST
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RDS_PROCESSLIST
+    displayName: RDS_PROCESSLIST
+    deleted: false
+  - id: 5edef292-5999-408f-9d8a-90f70d45ef98
+    type: table
+    name: REFERENTIAL_CONSTRAINTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.REFERENTIAL_CONSTRAINTS
+    displayName: REFERENTIAL_CONSTRAINTS
+    deleted: false
+  - id: 105bf227-daf4-4854-9238-26e3ce18c945
+    type: table
+    name: RESOURCE_GROUPS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.RESOURCE_GROUPS
+    displayName: RESOURCE_GROUPS
+    deleted: false
+  - id: 77b08a0b-f805-4cc4-b6d0-b45ed2277ccd
+    type: table
+    name: ROLE_COLUMN_GRANTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_COLUMN_GRANTS
+    displayName: ROLE_COLUMN_GRANTS
+    deleted: false
+  - id: e2e4bd8e-6b77-4e53-9d4b-4be1bad4737a
+    type: table
+    name: ROLE_ROUTINE_GRANTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_ROUTINE_GRANTS
+    displayName: ROLE_ROUTINE_GRANTS
+    deleted: false
+  - id: b4bd9b8e-acbd-429b-980d-242792942c96
+    type: table
+    name: ROLE_TABLE_GRANTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROLE_TABLE_GRANTS
+    displayName: ROLE_TABLE_GRANTS
+    deleted: false
+  - id: 176cd06f-5f6f-4f55-acef-b0a5fd117e86
+    type: table
+    name: ROUTINES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ROUTINES
+    displayName: ROUTINES
+    deleted: false
+  - id: 19548bdb-758d-4274-85a1-bde34a395cea
+    type: table
+    name: SCHEMATA
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.SCHEMATA
+    displayName: SCHEMATA
+    deleted: false
+  - id: 176e5ab0-da68-4181-9124-fa1e95a9fce8
+    type: table
+    name: SCHEMATA_EXTENSIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.SCHEMATA_EXTENSIONS
+    displayName: SCHEMATA_EXTENSIONS
+    deleted: false
+  - id: 27af5481-f321-449e-beca-fd8d3f215df4
+    type: table
+    name: SCHEMA_PRIVILEGES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.SCHEMA_PRIVILEGES
+    displayName: SCHEMA_PRIVILEGES
+    deleted: false
+  - id: 26b02aaa-43aa-4c9b-b313-bc0119fe713f
+    type: table
+    name: STATISTICS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.STATISTICS
+    displayName: STATISTICS
+    deleted: false
+  - id: 31f513bf-5863-4c76-9fcd-3a0064687ff9
+    type: table
+    name: ST_GEOMETRY_COLUMNS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_GEOMETRY_COLUMNS
+    displayName: ST_GEOMETRY_COLUMNS
+    deleted: false
+  - id: 62e4b80e-ac03-4d3d-9347-26cadf66a2cb
+    type: table
+    name: ST_SPATIAL_REFERENCE_SYSTEMS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS
+    displayName: ST_SPATIAL_REFERENCE_SYSTEMS
+    deleted: false
+  - id: 51fa8872-d756-42fa-97c4-456460390ad8
+    type: table
+    name: ST_UNITS_OF_MEASURE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.ST_UNITS_OF_MEASURE
+    displayName: ST_UNITS_OF_MEASURE
+    deleted: false
+  - id: a9b03e25-0b03-4b89-8520-d9449bbce9b6
+    type: table
+    name: TABLES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES
+    displayName: TABLES
+    deleted: false
+  - id: a40a649d-0eb3-4f79-8a8f-fafb031aaee0
+    type: table
+    name: TABLESPACES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES
+    displayName: TABLESPACES
+    deleted: false
+  - id: de3e1410-2421-4d09-a722-3ce355dc7f48
+    type: table
+    name: TABLESPACES_EXTENSIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLESPACES_EXTENSIONS
+    displayName: TABLESPACES_EXTENSIONS
+    deleted: false
+  - id: fef571b1-d400-44f3-b4de-cd0294ba71cc
+    type: table
+    name: TABLES_EXTENSIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLES_EXTENSIONS
+    displayName: TABLES_EXTENSIONS
+    deleted: false
+  - id: ad96aeb5-0472-4d24-8a67-39d5cf270243
+    type: table
+    name: TABLE_CONSTRAINTS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS
+    displayName: TABLE_CONSTRAINTS
+    deleted: false
+  - id: f3256e43-7017-462d-ade0-9d3c981e23bf
+    type: table
+    name: TABLE_CONSTRAINTS_EXTENSIONS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_CONSTRAINTS_EXTENSIONS
+    displayName: TABLE_CONSTRAINTS_EXTENSIONS
+    deleted: false
+  - id: 6b25595f-43de-4dde-ab44-679a81a8a56b
+    type: table
+    name: TABLE_PRIVILEGES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TABLE_PRIVILEGES
+    displayName: TABLE_PRIVILEGES
+    deleted: false
+  - id: 0d819dcb-f647-4e7d-a54d-e9f6ae478b79
+    type: table
+    name: TRIGGERS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.TRIGGERS
+    displayName: TRIGGERS
+    deleted: false
+  - id: b1fcc015-8b9c-4ef0-81eb-7270c8cb3347
+    type: table
+    name: USER_ATTRIBUTES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.USER_ATTRIBUTES
+    displayName: USER_ATTRIBUTES
+    deleted: false
+  - id: 9827c4b5-0901-4a9a-bcc5-4d8650a229e5
+    type: table
+    name: USER_PRIVILEGES
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.USER_PRIVILEGES
+    displayName: USER_PRIVILEGES
+    deleted: false
+  - id: d6d9792f-918f-45ca-84b4-18dfae21cd79
+    type: table
+    name: VIEWS
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEWS
+    displayName: VIEWS
+    deleted: false
+  - id: 2bcc0bbf-d4e7-4f5b-bd63-27642119c9fb
+    type: table
+    name: VIEW_ROUTINE_USAGE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEW_ROUTINE_USAGE
+    displayName: VIEW_ROUTINE_USAGE
+    deleted: false
+  - id: a8ada3cf-fedd-4da8-9552-438a78f503ed
+    type: table
+    name: VIEW_TABLE_USAGE
+    fullyQualifiedName: mysql-dq-testing.default.information_schema.VIEW_TABLE_USAGE
+    displayName: VIEW_TABLE_USAGE
+    deleted: false
+tags: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: <p>test description</p>
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+sourceHash: fded7ae3db4f4ec30fcf2c5368b556dd
+entityStatus: Approved

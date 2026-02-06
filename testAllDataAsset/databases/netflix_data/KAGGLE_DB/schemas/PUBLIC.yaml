@@ -1,0 +1,35 @@
+name: PUBLIC
+fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC
+dataProducts: []
+owners: []
+service:
+  id: c40f61e1-02e3-4e8c-ac24-14dc1ea00341
+  type: databaseService
+  name: netflix_data
+  fullyQualifiedName: netflix_data
+  description: ""
+  displayName: netflix_data
+  deleted: false
+serviceType: Snowflake
+database:
+  id: 7c99e46d-fbe1-4590-87b8-41bf5e40fe06
+  type: database
+  name: KAGGLE_DB
+  fullyQualifiedName: netflix_data.KAGGLE_DB
+  displayName: KAGGLE_DB
+  deleted: false
+tables:
+  - id: 48eaa45a-95a2-443a-a56c-ef5605148015
+    type: table
+    name: RAW_NETFLIX_TITLES
+    fullyQualifiedName: netflix_data.KAGGLE_DB.PUBLIC.RAW_NETFLIX_TITLES
+    description: "This table holds extensive data on Netflix titles, including details\
+      \ such as genre, release year, and cast. Users can analyze trends, explore content\
+      \ diversity, and gain insights into viewing preferences."
+    displayName: RAW_NETFLIX_TITLES
+    deleted: false
+tags: []
+sourceUrl: https://app.snowflake.com/ocyklou/ye88869/#/data/databases/KAGGLE_DB/schemas/PUBLIC
+domains: []
+sourceHash: abcaf46221f945778101b3428ada75fe
+entityStatus: Approved

@@ -1,0 +1,55 @@
+name: cdc
+fullyQualifiedName: MSSQL_TEST.mydb.cdc
+dataProducts: []
+owners: []
+service:
+  id: 1ef4c8da-1280-42c0-8b83-142c3a019de7
+  type: databaseService
+  name: MSSQL_TEST
+  fullyQualifiedName: MSSQL_TEST
+  description: ""
+  displayName: MSSQL_TEST
+  deleted: false
+serviceType: Mssql
+database:
+  id: af035a46-cf92-4f37-94cb-404849fb0152
+  type: database
+  name: mydb
+  fullyQualifiedName: MSSQL_TEST.mydb
+  displayName: mydb
+  deleted: false
+tables:
+  - id: d8576252-a3ac-4e34-aabf-e1cec69ec014
+    type: table
+    name: captured_columns
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.captured_columns
+    displayName: captured_columns
+    deleted: false
+  - id: ec8ef0b5-b422-40aa-85b5-382432617341
+    type: table
+    name: change_tables
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.change_tables
+    displayName: change_tables
+    deleted: false
+  - id: 32c4580d-ecf9-494a-a2c2-712f5cce804b
+    type: table
+    name: ddl_history
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.ddl_history
+    displayName: ddl_history
+    deleted: false
+  - id: e7590685-723c-4729-863b-e4578e728992
+    type: table
+    name: index_columns
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.index_columns
+    displayName: index_columns
+    deleted: false
+  - id: fdf7b59f-e1a7-4c77-9298-ccd50b711a71
+    type: table
+    name: lsn_time_mapping
+    fullyQualifiedName: MSSQL_TEST.mydb.cdc.lsn_time_mapping
+    displayName: lsn_time_mapping
+    deleted: false
+tags: []
+domains: []
+sourceHash: 23fdfd1a04dfa686c5726a47702f8e99
+entityStatus: Approved

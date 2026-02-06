@@ -1,0 +1,319 @@
+name: openmetadata
+fullyQualifiedName: mysql-dq-testing.default.openmetadata
+dataProducts: []
+owners: []
+service:
+  id: 1941656b-2a1e-4b70-bca5-02d5aa036a86
+  type: databaseService
+  name: mysql-dq-testing
+  fullyQualifiedName: mysql-dq-testing
+  description: ""
+  displayName: mysql-dq-testing
+  deleted: false
+serviceType: Mysql
+database:
+  id: 2dc91e0a-9aa2-4330-aada-7fc024ee6025
+  type: database
+  name: default
+  fullyQualifiedName: mysql-dq-testing.default
+  displayName: default
+  deleted: false
+tables:
+  - id: 572a3121-19f4-40e9-a85a-614700335c3b
+    type: table
+    name: DATABASE_CHANGE_LOG
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.DATABASE_CHANGE_LOG
+    displayName: DATABASE_CHANGE_LOG
+    deleted: false
+  - id: f385ff84-d571-4421-89d3-17b9ebb82393
+    type: table
+    name: alert_action_def
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_action_def
+    displayName: alert_action_def
+    deleted: false
+  - id: 5c2ccccd-3d52-4254-94c8-e39ea6d5b202
+    type: table
+    name: alert_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.alert_entity
+    displayName: alert_entity
+    deleted: false
+  - id: 5d659751-8f75-43f7-89d9-8565ad811b2a
+    type: table
+    name: bot_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.bot_entity
+    displayName: bot_entity
+    deleted: false
+  - id: 97c11f82-366c-4159-808b-cdfe9f55fe67
+    type: table
+    name: change_event
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.change_event
+    displayName: change_event
+    deleted: false
+  - id: 14028d80-f6d1-402f-9401-0ebefe4f74f4
+    type: table
+    name: chart_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.chart_entity
+    displayName: chart_entity
+    deleted: false
+  - id: 910bb107-d131-4bd5-8bfe-f6b43bd43be2
+    type: table
+    name: dashboard_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.dashboard_entity
+    displayName: dashboard_entity
+    deleted: false
+  - id: ce798482-1274-43d6-86d0-e562d92cfc8a
+    type: table
+    name: dashboard_service_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.dashboard_service_entity
+    displayName: dashboard_service_entity
+    deleted: false
+  - id: a487a4b6-75a3-4547-8523-8a7b45d09ad9
+    type: table
+    name: data_insight_chart
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.data_insight_chart
+    displayName: data_insight_chart
+    deleted: false
+  - id: f03fca0c-a2d3-4746-af06-70dad54debf4
+    type: table
+    name: database_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.database_entity
+    displayName: database_entity
+    deleted: false
+  - id: be4745ae-479f-4aa9-9fda-83654447eca3
+    type: table
+    name: database_schema_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.database_schema_entity
+    displayName: database_schema_entity
+    deleted: false
+  - id: 4e847088-de11-42e1-b984-bad338fea97e
+    type: table
+    name: dbservice_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.dbservice_entity
+    displayName: dbservice_entity
+    deleted: false
+  - id: 3d2a2cdf-578b-4656-923e-efc6deb04604
+    type: table
+    name: entity_extension
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_extension
+    displayName: entity_extension
+    deleted: false
+  - id: b61705bc-0409-4bd2-95d7-43b840427d3d
+    type: table
+    name: entity_extension_time_series
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_extension_time_series
+    displayName: entity_extension_time_series
+    deleted: false
+  - id: 083f131c-b9a7-4921-a01c-2b803f55d8fc
+    type: table
+    name: entity_relationship
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_relationship
+    displayName: entity_relationship
+    deleted: false
+  - id: 0b187385-4e24-491f-981b-db49ad20e9a3
+    type: table
+    name: entity_usage
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.entity_usage
+    displayName: entity_usage
+    deleted: false
+  - id: 3e21c788-4bcd-447d-9e23-963faea07d09
+    type: table
+    name: field_relationship
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.field_relationship
+    displayName: field_relationship
+    deleted: false
+  - id: 15fcba66-7010-4e2b-a3fa-2ed89b1dd492
+    type: table
+    name: glossary_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.glossary_entity
+    displayName: glossary_entity
+    deleted: false
+  - id: b46a5cb7-fdb1-4b6c-ae16-665f198ec4c6
+    type: table
+    name: glossary_term_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.glossary_term_entity
+    displayName: glossary_term_entity
+    deleted: false
+  - id: ec02de03-cef6-4d46-8a29-ff4fff5d6644
+    type: table
+    name: ingestion_pipeline_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.ingestion_pipeline_entity
+    displayName: ingestion_pipeline_entity
+    deleted: false
+  - id: 9c1db002-0714-4589-9c74-61368f775541
+    type: table
+    name: kpi_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.kpi_entity
+    displayName: kpi_entity
+    deleted: false
+  - id: a3bd8ffa-d840-4621-9e3b-0806f13f29e3
+    type: table
+    name: location_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.location_entity
+    displayName: location_entity
+    deleted: false
+  - id: a3f39a31-c06a-4f81-a36f-961a10730b97
+    type: table
+    name: messaging_service_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.messaging_service_entity
+    displayName: messaging_service_entity
+    deleted: false
+  - id: 2a5ee0f0-c399-4065-ad63-883126d65066
+    type: table
+    name: metadata_service_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.metadata_service_entity
+    displayName: metadata_service_entity
+    deleted: false
+  - id: 218aa018-b89f-4f25-bbf3-40edd730b347
+    type: table
+    name: metric_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.metric_entity
+    displayName: metric_entity
+    deleted: false
+  - id: 4ec7a758-5103-447f-ae43-81ed6ac043bd
+    type: table
+    name: ml_model_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.ml_model_entity
+    displayName: ml_model_entity
+    deleted: false
+  - id: 85338784-27b8-4156-8080-20ea4bae1151
+    type: table
+    name: mlmodel_service_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.mlmodel_service_entity
+    displayName: mlmodel_service_entity
+    deleted: false
+  - id: 17a9b4d6-d9c3-44a1-91c7-b264592c7362
+    type: table
+    name: openmetadata_settings
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.openmetadata_settings
+    displayName: openmetadata_settings
+    deleted: false
+  - id: f8049930-3216-4ed4-a87e-a8d40537960f
+    type: table
+    name: pipeline_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.pipeline_entity
+    displayName: pipeline_entity
+    deleted: false
+  - id: c96504a3-cd33-4c63-b34a-e4f6f484da6b
+    type: table
+    name: pipeline_service_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.pipeline_service_entity
+    displayName: pipeline_service_entity
+    deleted: false
+  - id: 0aac3b15-9925-4e17-a94c-d91823a79061
+    type: table
+    name: policy_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.policy_entity
+    displayName: policy_entity
+    deleted: false
+  - id: 90543310-76cd-490f-a850-1d86c5a7b8f7
+    type: table
+    name: report_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.report_entity
+    displayName: report_entity
+    deleted: false
+  - id: 0c3b302f-7dd2-4a54-aa3e-27e8e4301d84
+    type: table
+    name: role_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.role_entity
+    displayName: role_entity
+    deleted: false
+  - id: f2013571-0d1b-4877-978b-fe3ec4ec1d91
+    type: table
+    name: storage_service_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.storage_service_entity
+    displayName: storage_service_entity
+    deleted: false
+  - id: 1a5716da-bbe6-42a5-af69-40cd2a1abd88
+    type: table
+    name: table_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.table_entity
+    displayName: table_entity
+    deleted: false
+  - id: 23705a22-0193-4a69-867f-c6ea43ff4d66
+    type: table
+    name: tag
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.tag
+    displayName: tag
+    deleted: false
+  - id: 61bedceb-954c-4b10-9730-49f9fee1a8e5
+    type: table
+    name: tag_category
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.tag_category
+    displayName: tag_category
+    deleted: false
+  - id: 2a744c57-d015-4a30-b548-eb3d9a5142fe
+    type: table
+    name: tag_usage
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.tag_usage
+    displayName: tag_usage
+    deleted: false
+  - id: 23d55a4a-ae30-4a5b-aaf1-c821e88ea9d8
+    type: table
+    name: task_sequence
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.task_sequence
+    displayName: task_sequence
+    deleted: false
+  - id: cf715f5c-f9d4-4cef-bc5e-1b5e69f0194a
+    type: table
+    name: team_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.team_entity
+    displayName: team_entity
+    deleted: false
+  - id: b9f64f0b-6853-4e80-81c7-1e984894b6cb
+    type: table
+    name: test_case
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.test_case
+    displayName: test_case
+    deleted: false
+  - id: 8c584f03-0f16-4701-83c9-01bd8631298e
+    type: table
+    name: test_definition
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.test_definition
+    displayName: test_definition
+    deleted: false
+  - id: d6076a1b-82fa-4fc5-b7fa-7c8d2139e3b3
+    type: table
+    name: test_suite
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.test_suite
+    displayName: test_suite
+    deleted: false
+  - id: 9cedeae2-303a-4e52-8f38-01b13c50731b
+    type: table
+    name: thread_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.thread_entity
+    displayName: thread_entity
+    deleted: false
+  - id: d1dd5368-c568-42c0-bdb5-7246c31cd1e1
+    type: table
+    name: topic_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.topic_entity
+    displayName: topic_entity
+    deleted: false
+  - id: c5e0791d-de24-4d65-b0d4-4ab7779804a7
+    type: table
+    name: type_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.type_entity
+    displayName: type_entity
+    deleted: false
+  - id: cdaa39e0-8404-4a4c-a93b-9871519493f3
+    type: table
+    name: user_entity
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.user_entity
+    displayName: user_entity
+    deleted: false
+  - id: 13aaae0c-56e7-4937-834e-87acf839ceca
+    type: table
+    name: user_tokens
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.user_tokens
+    displayName: user_tokens
+    deleted: false
+  - id: 29781883-3c04-4e33-9552-133e04bbc48e
+    type: table
+    name: web_analytic_event
+    fullyQualifiedName: mysql-dq-testing.default.openmetadata.web_analytic_event
+    displayName: web_analytic_event
+    deleted: false
+tags: []
+domains: []
+sourceHash: 8e725cc7769f36b6b6ed0cb99e990872
+entityStatus: Approved

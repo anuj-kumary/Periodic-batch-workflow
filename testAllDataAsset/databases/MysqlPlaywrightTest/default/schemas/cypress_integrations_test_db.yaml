@@ -1,0 +1,43 @@
+name: cypress_integrations_test_db
+fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db
+dataProducts: []
+owners: []
+service:
+  id: 812b101d-0ea3-4abb-b51a-2526de3209e6
+  type: databaseService
+  name: MysqlPlaywrightTest
+  fullyQualifiedName: MysqlPlaywrightTest
+  description: ""
+  displayName: MysqlPlaywrightTest
+  deleted: false
+serviceType: Mysql
+database:
+  id: 1bfb79ad-a666-4a00-b057-c34524e94217
+  type: database
+  name: default
+  fullyQualifiedName: MysqlPlaywrightTest.default
+  displayName: default
+  deleted: false
+tables:
+  - id: 0401d5b1-126a-4b46-a3da-5899e3b3f00a
+    type: table
+    name: alert_entity
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.alert_entity
+    displayName: alert_entity
+    deleted: false
+  - id: b542ac2c-d278-4b01-9408-baa61dc7b0a7
+    type: table
+    name: bot_entity
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.bot_entity
+    displayName: bot_entity
+    deleted: false
+  - id: 3ec113c0-affd-43b0-974b-7797ede05d8b
+    type: table
+    name: chart_entity
+    fullyQualifiedName: MysqlPlaywrightTest.default.cypress_integrations_test_db.chart_entity
+    displayName: chart_entity
+    deleted: false
+tags: []
+domains: []
+sourceHash: 8da4c39d21d18b846ce96fc0e8d35363
+entityStatus: Approved
