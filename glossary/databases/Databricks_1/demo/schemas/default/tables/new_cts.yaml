@@ -1,0 +1,122 @@
+name: new_cts
+fullyQualifiedName: Databricks 1.demo.default.new_cts
+description: "This table stores user-related information, including email addresses,\
+  \ user IDs, and usernames, enabling applications to manage user accounts, facilitate\
+  \ authentication, and personalize user experiences effectively."
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The user_id column serves as a unique identifier for each user in\
+      \ the system, allowing for efficient tracking and management of user-related\
+      \ data."
+    fullyQualifiedName: Databricks 1.demo.default.new_cts.user_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The username column contains the chosen display name of the user,\
+      \ which is often used for identification within the application and can be visible\
+      \ to other users."
+    fullyQualifiedName: Databricks 1.demo.default.new_cts.username
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The email column stores the email address of the user, which is\
+      \ typically used for communication, account verification, and login purposes."
+    fullyQualifiedName: Databricks 1.demo.default.new_cts.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+databaseSchema:
+  id: 7547e1c9-a21e-4a65-be7e-a2a5f7886e23
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: Databricks 1.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: 9946200d-d277-474e-ba59-210b4665ed32
+  type: database
+  name: demo
+  fullyQualifiedName: Databricks 1.demo
+  displayName: demo
+  deleted: false
+service:
+  id: aed8be03-c783-454d-bae1-0bd8c2680c9e
+  type: databaseService
+  name: Databricks 1
+  fullyQualifiedName: Databricks 1
+  description: ""
+  displayName: DatabricKS
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/7c1c94c6-4ff0-4fbb-b018-414df5dc9425
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.user_id.description
+      newValue: "The user_id column serves as a unique identifier for each user in\
+        \ the system, allowing for efficient tracking and management of user-related\
+        \ data."
+    - name: columns.username.description
+      newValue: "The username column contains the chosen display name of the user,\
+        \ which is often used for identification within the application and can be\
+        \ visible to other users."
+    - name: columns.email.description
+      newValue: "The email column stores the email address of the user, which is typically\
+        \ used for communication, account verification, and login purposes."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.4
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743152871899
+    columns.email.description:
+      changedBy: ingestion-bot
+      changedAt: 1743152872076
+    columns.user_id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743152872076
+    columns.username.description:
+      changedBy: ingestion-bot
+      changedAt: 1743152872076
+domains:
+  - id: c5953260-03a0-47dc-a602-7431689b0a3e
+    type: domain
+    name: testing-rbac-sub-domain
+    fullyQualifiedName: Design.testing-rbac-sub-domain
+    description: Testing RBAC SUB DOMAIN
+    displayName: Testing RBAC SUB DOMAIN
+    inherited: true
+dataProducts: []
+sourceHash: afa9c1435ca02e0234e7bab15f0e8e96
+processedLineage: false
+entityStatus: Approved
