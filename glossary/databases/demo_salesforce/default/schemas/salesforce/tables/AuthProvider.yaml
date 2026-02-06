@@ -1,0 +1,280 @@
+name: AuthProvider
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Auth. Provider ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: ProviderType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Provider Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.ProviderType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FriendlyName
+    dataType: UNKNOWN
+    dataLength: 32
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.FriendlyName
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: DeveloperName
+    dataType: UNKNOWN
+    dataLength: 32
+    dataTypeDisplay: string
+    description: URL Suffix
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.DeveloperName
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: ExecutionUserId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.ExecutionUserId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: ConsumerKey
+    dataType: UNKNOWN
+    dataLength: 256
+    dataTypeDisplay: string
+    description: Consumer Key
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.ConsumerKey
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: ConsumerSecret
+    dataType: UNKNOWN
+    dataLength: 100
+    dataTypeDisplay: string
+    description: Consumer Secret
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.ConsumerSecret
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: ErrorUrl
+    dataType: UNKNOWN
+    dataLength: 500
+    dataTypeDisplay: string
+    description: Custom Error URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.ErrorUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: AuthorizeUrl
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: url
+    description: Authorize Endpoint URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.AuthorizeUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: TokenUrl
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: url
+    description: Token Endpoint URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.TokenUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: UserInfoUrl
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: url
+    description: User Info Endpoint URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.UserInfoUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: DefaultScopes
+    dataType: UNKNOWN
+    dataLength: 256
+    dataTypeDisplay: string
+    description: Default Scopes
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.DefaultScopes
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IdTokenIssuer
+    dataType: UNKNOWN
+    dataLength: 1024
+    dataTypeDisplay: string
+    description: Token Issuer
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.IdTokenIssuer
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: OptionsSendAccessTokenInHeader
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Send access token in header
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.OptionsSendAccessTokenInHeader
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: OptionsSendClientCredentialsInHeader
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Send client credentials in header
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.OptionsSendClientCredentialsInHeader
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: OptionsIncludeOrgIdInId
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Include identity organization's Organization ID for third-party account
+      linkage
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.OptionsIncludeOrgIdInId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: IconUrl
+    dataType: VARCHAR
+    dataLength: 1024
+    dataTypeDisplay: url
+    description: Icon URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.IconUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: LogoutUrl
+    dataType: VARCHAR
+    dataLength: 1500
+    dataTypeDisplay: url
+    description: Custom Logout URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.LogoutUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: CustomMetadataTypeRecord
+    dataType: UNKNOWN
+    dataLength: 15
+    dataTypeDisplay: string
+    description: Custom Metadata Type Record
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthProvider.CustomMetadataTypeRecord
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620815294
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/AuthProvider/list
+domains: []
+dataProducts: []
+sourceHash: 4ac22f74bef2a8b52c1bd9c03e4837b0
+processedLineage: false
+entityStatus: Approved

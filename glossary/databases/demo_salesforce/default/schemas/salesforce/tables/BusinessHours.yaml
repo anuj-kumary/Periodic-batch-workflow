@@ -1,0 +1,334 @@
+name: BusinessHours
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Business Hours ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Business Hours Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: IsActive
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Active
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.IsActive
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: IsDefault
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Default Business Hours
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.IsDefault
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: SundayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Sunday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.SundayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: SundayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Sunday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.SundayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: MondayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Monday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.MondayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MondayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Monday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.MondayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: TuesdayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Tuesday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.TuesdayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: TuesdayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Tuesday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.TuesdayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: WednesdayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Wednesday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.WednesdayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: WednesdayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Wednesday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.WednesdayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: ThursdayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Thursday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.ThursdayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: ThursdayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Thursday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.ThursdayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: FridayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Friday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.FridayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: FridayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Friday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.FridayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: SaturdayStartTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Saturday Start
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.SaturdayStartTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: SaturdayEndTime
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: time
+    description: Saturday End
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.SaturdayEndTime
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: TimeZoneSidKey
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Time Zone
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.TimeZoneSidKey
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: LastViewedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.BusinessHours.LastViewedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620816757
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/BusinessHours/list
+domains: []
+dataProducts: []
+sourceHash: c3f08d0571394430329003f192eb6e4f
+processedLineage: false
+entityStatus: Approved

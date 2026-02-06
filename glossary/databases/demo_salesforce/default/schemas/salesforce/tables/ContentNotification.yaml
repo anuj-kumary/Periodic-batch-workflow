@@ -1,0 +1,147 @@
+name: ContentNotification
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: ContentNotification ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: Nature
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Nature
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.Nature
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: UsersId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.UsersId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: EntityType
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Entity Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.EntityType
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: EntityIdentifierId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Entity ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.EntityIdentifierId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Subject
+    dataType: VARCHAR
+    dataLength: 333
+    dataTypeDisplay: textarea
+    description: Subject
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.Subject
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Text
+    dataType: VARCHAR
+    dataLength: 666
+    dataTypeDisplay: textarea
+    description: Text
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentNotification.Text
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620827577
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/ContentNotification/list
+domains: []
+dataProducts: []
+sourceHash: d72076876d1128db7416c5959a795787
+processedLineage: false
+entityStatus: Approved

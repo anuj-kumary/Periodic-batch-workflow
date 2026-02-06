@@ -1,0 +1,521 @@
+name: ContentVersion
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: ContentVersion ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ContentDocumentId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: ContentDocument ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentDocumentId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: IsLatest
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Latest
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.IsLatest
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ContentUrl
+    dataType: VARCHAR
+    dataLength: 1333
+    dataTypeDisplay: url
+    description: Content URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: ContentBodyId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Content Body ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentBodyId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: VersionNumber
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Version Number
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.VersionNumber
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Title
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Title
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.Title
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 1000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: ReasonForChange
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: Reason For Change
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ReasonForChange
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SharingOption
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Prevent others from sharing and unsharing
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.SharingOption
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: SharingPrivacy
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: File Privacy on Records
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.SharingPrivacy
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: PathOnClient
+    dataType: UNKNOWN
+    dataLength: 500
+    dataTypeDisplay: string
+    description: Path On Client
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.PathOnClient
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: RatingCount
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Rating Count
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.RatingCount
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Deleted
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: ContentModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Content Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentModifiedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: ContentModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentModifiedById
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: PositiveRatingCount
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Positive Rating Count
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.PositiveRatingCount
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: NegativeRatingCount
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Negative Rating Count
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.NegativeRatingCount
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: FeaturedContentBoost
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Featured Content Boost
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.FeaturedContentBoost
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: FeaturedContentDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Featured Content Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.FeaturedContentDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.OwnerId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: TagCsv
+    dataType: VARCHAR
+    dataLength: 2000
+    dataTypeDisplay: textarea
+    description: Tags
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.TagCsv
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: FileType
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: File Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.FileType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: PublishStatus
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Publish Status
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.PublishStatus
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: VersionData
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: base64
+    description: Version Data
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.VersionData
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: ContentSize
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Size
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentSize
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: FileExtension
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: File Extension
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.FileExtension
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: FirstPublishLocationId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: First Publish Location ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.FirstPublishLocationId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: Origin
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Content Origin
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.Origin
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: ContentLocation
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Content Location
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ContentLocation
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: TextPreview
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Text Preview
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.TextPreview
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: ExternalDocumentInfo1
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: External Document Info1
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ExternalDocumentInfo1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 37
+    children: []
+    customMetrics: []
+  - name: ExternalDocumentInfo2
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: External Document Info2
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ExternalDocumentInfo2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 38
+    children: []
+    customMetrics: []
+  - name: ExternalDataSourceId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: External Data Source ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.ExternalDataSourceId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 39
+    children: []
+    customMetrics: []
+  - name: Checksum
+    dataType: UNKNOWN
+    dataLength: 50
+    dataTypeDisplay: string
+    description: Checksum
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.Checksum
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 40
+    children: []
+    customMetrics: []
+  - name: IsMajorVersion
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Major Version
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.IsMajorVersion
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 41
+    children: []
+    customMetrics: []
+  - name: IsAssetEnabled
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Asset File Enabled
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContentVersion.IsAssetEnabled
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 42
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620828340
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/ContentVersion/list
+domains: []
+dataProducts: []
+sourceHash: 3f0e296fc24f7f76e9f497e529d967ea
+processedLineage: false
+entityStatus: Approved
