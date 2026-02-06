@@ -1,0 +1,74 @@
+name: REGION
+fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.REGION
+description: Region data as defined by TPC-H
+tableType: Regular
+columns:
+  - name: R_REGIONKEY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.REGION.R_REGIONKEY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: R_NAME
+    dataType: VARCHAR
+    dataLength: 25
+    dataTypeDisplay: text(25)
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.REGION.R_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: R_COMMENT
+    dataType: VARCHAR
+    dataLength: 152
+    dataTypeDisplay: text(152)
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.REGION.R_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7a351c97-936c-498d-9c78-1e44f4f7295b
+  type: databaseSchema
+  name: TPCH_SF100
+  fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100
+  description: TPC-H scaling factor 100
+  displayName: TPCH_SF100
+  deleted: false
+database:
+  id: 490481fc-d1a0-4d18-87a3-bc6c8c69a46e
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: HK snowflake sample
+  deleted: false
+service:
+  id: bac8305b-a253-4ae2-9ca8-6009c7ebcdce
+  type: databaseService
+  name: hktest1
+  fullyQualifiedName: hktest1
+  description: ""
+  displayName: hktest1
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF100/table/REGION
+domains: []
+dataProducts: []
+sourceHash: 02b3a0dbfd1f47cc0d0454aeff3e0280
+processedLineage: false
+entityStatus: Approved

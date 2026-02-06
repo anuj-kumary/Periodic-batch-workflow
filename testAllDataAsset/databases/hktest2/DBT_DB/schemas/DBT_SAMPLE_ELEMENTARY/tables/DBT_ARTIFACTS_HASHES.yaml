@@ -1,0 +1,74 @@
+name: DBT_ARTIFACTS_HASHES
+fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_ARTIFACTS_HASHES
+tableType: View
+columns:
+  - name: ARTIFACTS_MODEL
+    dataType: VARCHAR
+    dataLength: 13
+    dataTypeDisplay: text(13)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_ARTIFACTS_HASHES.ARTIFACTS_MODEL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: METADATA_HASH
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_ARTIFACTS_HASHES.METADATA_HASH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 59ae5f52-bf18-4c7c-a444-16d0d55748df
+  type: databaseSchema
+  name: DBT_SAMPLE_ELEMENTARY
+  fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE_ELEMENTARY
+  displayName: DBT_SAMPLE_ELEMENTARY
+  deleted: false
+database:
+  id: 8a5b200a-0838-4865-b221-ed427537b11d
+  type: database
+  name: DBT_DB
+  fullyQualifiedName: hktest2.DBT_DB
+  displayName: DBT_DB
+  deleted: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2
+  description: ""
+  displayName: hktest2
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace   view dbt_db.DBT_SAMPLE_elementary.dbt_artifacts_hashes\n\
+  \  \n   as (\n    \n\n\n\n\nselect\n  'dbt_models' as artifacts_model,\n   metadata_hash\n\
+  from dbt_db.DBT_SAMPLE_elementary.dbt_models\n union all \n\nselect\n  'dbt_tests'\
+  \ as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_tests\n\
+  \ union all \n\nselect\n  'dbt_sources' as artifacts_model,\n   metadata_hash\n\
+  from dbt_db.DBT_SAMPLE_elementary.dbt_sources\n union all \n\nselect\n  'dbt_snapshots'\
+  \ as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_snapshots\n\
+  \ union all \n\nselect\n  'dbt_metrics' as artifacts_model,\n   metadata_hash\n\
+  from dbt_db.DBT_SAMPLE_elementary.dbt_metrics\n union all \n\nselect\n  'dbt_exposures'\
+  \ as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_exposures\n\
+  \ union all \n\nselect\n  'dbt_seeds' as artifacts_model,\n   metadata_hash\nfrom\
+  \ dbt_db.DBT_SAMPLE_elementary.dbt_seeds\n union all \n\nselect\n  'dbt_columns'\
+  \ as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_columns\n\
+  \n\norder by metadata_hash\n  );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/DBT_DB/schemas/DBT_SAMPLE_ELEMENTARY/view/DBT_ARTIFACTS_HASHES
+domains: []
+dataProducts: []
+sourceHash: a8fb2bf307ada2c12182efffc140d68b
+processedLineage: false
+entityStatus: Approved

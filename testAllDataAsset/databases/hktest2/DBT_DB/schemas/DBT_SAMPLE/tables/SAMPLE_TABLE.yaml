@@ -1,0 +1,98 @@
+name: SAMPLE_TABLE
+fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE.CUSTOMERID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE.EMAIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE.COUNTRY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SIGNUPDATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE.SIGNUPDATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PURCHASEAMOUNT
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE.SAMPLE_TABLE.PURCHASEAMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 0381dd84-feec-4fc0-93a1-a1938e9613fd
+  type: databaseSchema
+  name: DBT_SAMPLE
+  fullyQualifiedName: hktest2.DBT_DB.DBT_SAMPLE
+  displayName: DBT_SAMPLE
+  deleted: false
+database:
+  id: 8a5b200a-0838-4865-b221-ed427537b11d
+  type: database
+  name: DBT_DB
+  fullyQualifiedName: hktest2.DBT_DB
+  displayName: DBT_DB
+  deleted: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2
+  description: ""
+  displayName: hktest2
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/DBT_DB/schemas/DBT_SAMPLE/table/SAMPLE_TABLE
+domains: []
+dataProducts: []
+sourceHash: 911f336a00c5a5797a7a4f95650662f7
+processedLineage: false
+entityStatus: Approved

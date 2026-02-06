@@ -1,0 +1,98 @@
+name: PARTSUPP
+fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP
+description: Partsupp data as defined by TPC-H
+tableType: Regular
+columns:
+  - name: PS_PARTKEY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP.PS_PARTKEY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PS_SUPPKEY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP.PS_SUPPKEY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PS_AVAILQTY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP.PS_AVAILQTY
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PS_SUPPLYCOST
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 12
+    scale: 2
+    dataTypeDisplay: "number(12,2)"
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP.PS_SUPPLYCOST
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PS_COMMENT
+    dataType: VARCHAR
+    dataLength: 199
+    dataTypeDisplay: text(199)
+    fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP.PS_COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b9d5c79a-cb82-409d-8971-cc128507bae3
+  type: databaseSchema
+  name: TPCH_SF1
+  fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1
+  description: TPC-H scaling factor 1
+  displayName: TPCH_SF1
+  deleted: false
+database:
+  id: 490481fc-d1a0-4d18-87a3-bc6c8c69a46e
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: hktest1.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: HK snowflake sample
+  deleted: false
+service:
+  id: bac8305b-a253-4ae2-9ca8-6009c7ebcdce
+  type: databaseService
+  name: hktest1
+  fullyQualifiedName: hktest1
+  description: ""
+  displayName: hktest1
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/vcgkhnh/ic95276/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/table/PARTSUPP
+domains: []
+dataProducts: []
+sourceHash: e13ae1f460a72e83f6b8f938f218f524
+processedLineage: false
+entityStatus: Approved
