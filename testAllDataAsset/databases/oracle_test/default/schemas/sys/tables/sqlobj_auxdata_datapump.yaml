@@ -1,0 +1,373 @@
+name: sqlobj$auxdata_datapump
+fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump
+tableType: View
+columns:
+  - name: signature
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.signature
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: category
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.category
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: obj_type
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.obj_type
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: plan_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.plan_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: description
+    dataType: VARCHAR
+    dataLength: 500
+    dataTypeDisplay: varchar2(500)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.description
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: creator
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.creator
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: origin
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.origin
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.created
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: last_modified
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.last_modified
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_verified
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.last_verified
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: parse_cpu_time
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.parse_cpu_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: optimizer_cost
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.optimizer_cost
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: module
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.module
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: action
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.action
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: priority
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.priority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: optimizer_env
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.optimizer_env
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bind_data
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.bind_data
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: parsing_schema_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.parsing_schema_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: executions
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.executions
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: elapsed_time
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.elapsed_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cpu_time
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.cpu_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: buffer_gets
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.buffer_gets
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: disk_reads
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.disk_reads
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: direct_writes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.direct_writes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rows_processed
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.rows_processed
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fetches
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.fetches
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end_of_fetch_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.end_of_fetch_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: task_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.task_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: task_exec_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.task_exec_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: task_obj_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.task_obj_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: task_fnd_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.task_fnd_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: task_rec_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.task_rec_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare1
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.spare1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: spare2
+    dataType: CLOB
+    dataLength: 1
+    dataTypeDisplay: clob
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.spare2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: task_con_dbid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sqlobj$auxdata_datapump.task_con_dbid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 420d0041ddbf40fb109e20835c9ddaa4
+processedLineage: false
+entityStatus: Approved

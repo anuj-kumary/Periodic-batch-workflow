@@ -1,0 +1,139 @@
+name: sys_uncompressed_segs
+fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs
+tableType: View
+columns:
+  - name: tabowner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.tabowner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tabname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.tabname
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: partname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.partname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tsname
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar2(30)
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.tsname
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: tbsid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.tbsid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: segsize
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.segsize
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segobjd
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.segobjd
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segobjn
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.segobjn
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: segment_type
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: varchar2(18)
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.segment_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: total_indexes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.total_indexes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: has_lobs
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.sys_uncompressed_segs.has_lobs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: ea5055c0e40769406f54de328396fd25
+processedLineage: false
+entityStatus: Approved

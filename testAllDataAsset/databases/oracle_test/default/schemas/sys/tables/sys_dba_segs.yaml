@@ -1,0 +1,328 @@
+name: sys_dba_segs
+fullyQualifiedName: oracle_test.default.sys.sys_dba_segs
+tableType: View
+columns:
+  - name: owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.partition_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_type
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: varchar2(18)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: object_type_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.object_type_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_type_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_type_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_subtype
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar2(10)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_subtype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tablespace_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.tablespace_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: tablespace_name
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar2(30)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.tablespace_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocksize
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.blocksize
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: header_file
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.header_file
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: header_block
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.header_block
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bytes
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.bytes
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocks
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.blocks
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: extents
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.extents
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: initial_extent
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.initial_extent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: next_extent
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.next_extent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: min_extents
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.min_extents
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_extents
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.max_extents
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_size
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.max_size
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: retention
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.retention
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: minretention
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.minretention
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pct_increase
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.pct_increase
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: freelists
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.freelists
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: freelist_groups
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.freelist_groups
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: relative_fno
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.relative_fno
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: buffer_pool_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.buffer_pool_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flash_cache
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.flash_cache
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cell_flash_cache
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.cell_flash_cache
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_objd
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_objd
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: segment_objn
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.sys_dba_segs.segment_objn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 720de43bdb40035b1dedaa20443d2823
+processedLineage: false
+entityStatus: Approved

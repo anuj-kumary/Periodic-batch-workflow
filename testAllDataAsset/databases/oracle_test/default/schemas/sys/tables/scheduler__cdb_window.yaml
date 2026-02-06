@@ -1,0 +1,239 @@
+name: scheduler$_cdb_window
+fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window
+tableType: View
+columns:
+  - name: OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.OBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: res_plan
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.res_plan
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: next_start_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.next_start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: manual_open_time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.manual_open_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: duration
+    dataType: INTERVAL
+    dataLength: 1
+    dataTypeDisplay: interval day(3) to second(0)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.duration
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: manual_duration
+    dataType: INTERVAL
+    dataLength: 1
+    dataTypeDisplay: interval day(3) to second(0)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.manual_duration
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schedule_expr
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.schedule_expr
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: start_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.end_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_start_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.last_start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: actual_start_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.actual_start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: scaling_factor
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.scaling_factor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: creator
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.creator
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: unused_slave_policy
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.unused_slave_policy
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: min_slave_percent
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.min_slave_percent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_slave_percent
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.max_slave_percent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schedule_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.schedule_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_conc_jobs
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.max_conc_jobs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: priority
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.priority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: comments
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.comments
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: container id
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_window.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: dc28dd15102c73bc2eaa6999c8c261cd
+processedLineage: false
+entityStatus: Approved

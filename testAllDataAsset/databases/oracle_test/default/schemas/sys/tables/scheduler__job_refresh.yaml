@@ -1,0 +1,166 @@
+name: scheduler$_job_refresh
+fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh
+tableType: View
+columns:
+  - name: OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.OBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: class_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.class_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.job_flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: class_flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.class_flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: run_time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.run_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: priority
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.priority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_status
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.job_status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: running_instance
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.running_instance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schedule_limit
+    dataType: INTERVAL
+    dataLength: 1
+    dataTypeDisplay: interval day(3) to second(0)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.schedule_limit
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_weight
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.job_weight
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: instance_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.instance_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: affinity
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.affinity
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: database_role
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar2(16)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.database_role
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: service_flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_job_refresh.service_flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 65c42d07bf9bfbb7dc9bb9c440c22a72
+processedLineage: false
+entityStatus: Approved

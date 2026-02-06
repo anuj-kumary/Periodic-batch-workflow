@@ -1,0 +1,572 @@
+name: scheduler$_cdb_job
+fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job
+tableType: View
+columns:
+  - name: OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.OBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: program_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.program_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: program_action
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.program_action
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schedule_expr
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.schedule_expr
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: queue_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.queue_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: queue_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.queue_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: queue_agent
+    dataType: VARCHAR
+    dataLength: 523
+    dataTypeDisplay: varchar2(523)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.queue_agent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: event_rule
+    dataType: VARCHAR
+    dataLength: 261
+    dataTypeDisplay: varchar2(261)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.event_rule
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schedule_limit
+    dataType: INTERVAL
+    dataLength: 1
+    dataTypeDisplay: interval day(3) to second(0)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.schedule_limit
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schedule_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.schedule_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: start_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: end_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.end_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_enabled_time
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.last_enabled_time
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: class_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.class_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: priority
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.priority
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_weight
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.job_weight
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: number_of_args
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.number_of_args
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_runs
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.max_runs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_failures
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.max_failures
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max_run_duration
+    dataType: INTERVAL
+    dataLength: 1
+    dataTypeDisplay: interval day(3) to second(0)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.max_run_duration
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: mxdur_msgid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.mxdur_msgid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: comments
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.comments
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_callback
+    dataType: VARCHAR
+    dataLength: 386
+    dataTypeDisplay: varchar2(386)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.user_callback
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_callback_ctx
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.user_callback_ctx
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: creator
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.creator
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: client_id
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar2(64)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.client_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: guid
+    dataType: VARCHAR
+    dataLength: 32
+    dataTypeDisplay: varchar2(32)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.guid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: nls_env
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.nls_env
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: env
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.env
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: char_env
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.char_env
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: source
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.source
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dest_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.dest_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: destination
+    dataType: VARCHAR
+    dataLength: 261
+    dataTypeDisplay: varchar2(261)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.destination
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: database_role
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: varchar2(16)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.database_role
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: instance_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.instance_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: credential_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.credential_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: credential_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.credential_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: credential_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.credential_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: owner_udn
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.owner_udn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fw_name
+    dataType: VARCHAR
+    dataLength: 261
+    dataTypeDisplay: varchar2(261)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.fw_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: fw_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.fw_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_status
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.job_status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: next_run_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.next_run_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_start_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.last_start_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_end_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6) with time zone
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.last_end_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: retry_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.retry_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: run_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.run_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: failure_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.failure_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: running_instance
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.running_instance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: running_slave
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.running_slave
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dist_flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.dist_flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: job_dest_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.job_dest_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: run_invoker
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.run_invoker
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connect_credential_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.connect_credential_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connect_credential_owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.connect_credential_owner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connect_credential_oid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.connect_credential_oid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pdb_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.pdb_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: container id
+    fullyQualifiedName: oracle_test.default.sys.scheduler$_cdb_job.con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e9b6da60a495b582ff2005c638c6e987
+processedLineage: false
+entityStatus: Approved
