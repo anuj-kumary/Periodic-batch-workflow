@@ -1,0 +1,220 @@
+name: exu8vewi
+fullyQualifiedName: oracle_test.default.sys.exu8vewi
+tableType: View
+columns:
+  - name: vobjid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vobjid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: vname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vname
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: vtext
+    dataType: LONG
+    dataLength: 1
+    dataTypeDisplay: long
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vtext
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: vowner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vowner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: vownerid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vownerid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: vaudit
+    dataType: VARCHAR
+    dataLength: 38
+    dataTypeDisplay: varchar2(38)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vaudit
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: vcomment
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vcomment
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: vcname
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vcname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: vlevel
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vlevel
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: property
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.property
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: defer
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.defer
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.flags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: oidlen
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.oidlen
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: oidclause
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.oidclause
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typeowner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.typeowner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typename
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.typename
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: vlen
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.vlen
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sqlver
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.sqlver
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: underlen
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.underlen
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: underclause
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.exu8vewi.underclause
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 143ba1b05325cc508187178999d10c73
+processedLineage: false
+entityStatus: Approved

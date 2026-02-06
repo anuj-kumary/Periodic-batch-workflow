@@ -1,0 +1,112 @@
+name: exu9inhcolcons
+fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons
+tableType: View
+columns:
+  - name: tobjid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.tobjid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: intcolid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.intcolid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: cname
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.cname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typeflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.typeflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: subtypeflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.subtypeflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typeownerid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.typeownerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typeowner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.typeowner
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typename
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.exu9inhcolcons.typename
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b29826c5345314e5385a78a0589c1224
+processedLineage: false
+entityStatus: Approved
