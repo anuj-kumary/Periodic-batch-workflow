@@ -1,0 +1,36 @@
+name: 85b85e42ea479620aef7f014ded9b705
+fullyQualifiedName: hktest.85b85e42ea479620aef7f014ded9b705
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b53a9c36-844d-4499-979b-6f0b6cd2b454\",\"type\":\"table\"\
+        ,\"name\":\"TRANSACT\",\"fullyQualifiedName\":\"hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.TRANSACT\"\
+        ,\"displayName\":\"TRANSACT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 70.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"_FIVETRAN_SYNCED\"\
+  ) AS count_1 \nFROM \"MSSQLBANKING_ACCOUNT\".\"TRANSACT\" GROUP BY \"_FIVETRAN_SYNCED\"\
+  \ \nHAVING count(\"_FIVETRAN_SYNCED\") = ?) AS only_once\n LIMIT ?"
+checksum: 85b85e42ea479620aef7f014ded9b705
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b53a9c36-844d-4499-979b-6f0b6cd2b454
+    type: table
+    name: TRANSACT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.TRANSACT
+    displayName: TRANSACT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

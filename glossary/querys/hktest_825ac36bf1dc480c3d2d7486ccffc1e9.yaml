@@ -1,0 +1,28 @@
+name: 825ac36bf1dc480c3d2d7486ccffc1e9
+fullyQualifiedName: hktest.825ac36bf1dc480c3d2d7486ccffc1e9
+owners: []
+duration: 340.0
+users: []
+query: "SELECT avg(LEN(\"USERNAME\")) AS mean, count(\"USERNAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"USERNAME\") AS \"distinctCount\", MIN(LEN(\"USERNAME\")) AS min,\
+  \ MAX(LEN(\"USERNAME\")) AS max, coalesce(SUM(CASE WHEN (\"USERNAME\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"USERNAME\")) AS stddev, SUM(LEN(\"\
+  USERNAME\")) AS sum \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERLOGIN\"\n LIMIT ?"
+checksum: 825ac36bf1dc480c3d2d7486ccffc1e9
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 362a3c96-9793-4426-b8a0-46295ee4a87b
+    type: table
+    name: CUSTOMERLOGIN
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERLOGIN
+    displayName: CUSTOMERLOGIN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,37 @@
+name: 87165732eeb105b7d5dafa2693e435c8
+fullyQualifiedName: hktest.87165732eeb105b7d5dafa2693e435c8
+owners: []
+duration: 74.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"YOY_AVG_MONTHLY_VIEWS_C\"\
+  \ AS \"YOY_AVG_MONTHLY_VIEWS_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT\
+  \ c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"YOY_AVG_MONTHLY_VIEWS_C\" AS \"YOY_AVG_MONTHLY_VIEWS_C\"\
+  \ \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n SELECT avg(\"YOY_AVG_MONTHLY_VIEWS_C\"\
+  ) AS mean, count(\"YOY_AVG_MONTHLY_VIEWS_C\") AS \"valuesCount\", count(DISTINCT\
+  \ \"YOY_AVG_MONTHLY_VIEWS_C\") AS \"distinctCount\", MIN(\"YOY_AVG_MONTHLY_VIEWS_C\"\
+  ) AS min, MAX(\"YOY_AVG_MONTHLY_VIEWS_C\") AS max, coalesce(SUM(CASE WHEN (\"YOY_AVG_MONTHLY_VIEWS_C\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"YOY_AVG_MONTHLY_VIEWS_C\"\
+  ) AS stddev, SUM(\"YOY_AVG_MONTHLY_VIEWS_C\") AS sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n\
+  \ LIMIT ?"
+checksum: 87165732eeb105b7d5dafa2693e435c8
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

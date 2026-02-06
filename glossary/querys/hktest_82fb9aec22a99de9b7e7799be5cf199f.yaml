@@ -1,0 +1,32 @@
+name: 82fb9aec22a99de9b7e7799be5cf199f
+fullyQualifiedName: hktest.82fb9aec22a99de9b7e7799be5cf199f
+owners: []
+duration: 199.0
+users: []
+query: "WITH d6872606714d25fbbda7b70a0d67ebf8_rnd AS \n(SELECT \"SUPPLIER_1\".\"S_PHONE\"\
+  \ AS \"S_PHONE\" \nFROM \"TPCH_SF100\".\"SUPPLIER\" AS \"SUPPLIER_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nd6872606714d25fbbda7b70a0d67ebf8_sample AS \n(SELECT d6872606714d25fbbda7b70a0d67ebf8_rnd.\"\
+  S_PHONE\" AS \"S_PHONE\" \nFROM d6872606714d25fbbda7b70a0d67ebf8_rnd)\n SELECT percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY LEN(\"S_PHONE\") ASC) AS median, percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY LEN(\"S_PHONE\") ASC) AS \"firstQuartile\", percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY LEN(\"S_PHONE\") ASC) AS \"thirdQuartile\" \nFROM d6872606714d25fbbda7b70a0d67ebf8_sample\n\
+  \ LIMIT ?"
+checksum: 82fb9aec22a99de9b7e7799be5cf199f
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b34210ba-5818-4ae4-95a1-4f393705da90
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

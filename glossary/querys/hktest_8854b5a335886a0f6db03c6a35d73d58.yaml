@@ -1,0 +1,53 @@
+name: 8854b5a335886a0f6db03c6a35d73d58
+fullyQualifiedName: hktest.8854b5a335886a0f6db03c6a35d73d58
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"a265fd92-175b-4b4e-a716-f6b1b8f9af4c\",\"type\":\"table\"\
+        ,\"name\":\"SRC_SYS\",\"fullyQualifiedName\":\"hktest.INDIVIDUAL.CURATED.SRC_SYS\"\
+        ,\"displayName\":\"SRC_SYS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 422.0
+users: []
+query: "SELECT \"CURATED\".\"SRC_SYS\".\"SRC_SYS_KY\" AS \"CURATED_SRC_SYS_SRC_SYS_KY\"\
+  , \"CURATED\".\"SRC_SYS\".\"SRC_SYS_VRSN_KY\" AS \"CURATED_SRC_SYS_SRC_SYS_VRSN_KY\"\
+  , \"CURATED\".\"SRC_SYS\".\"SRC_SYS_CD\" AS \"CURATED_SRC_SYS_SRC_SYS_CD\", \"CURATED\"\
+  .\"SRC_SYS\".\"SRC_SYS_NM\" AS \"CURATED_SRC_SYS_SRC_SYS_NM\", \"CURATED\".\"SRC_SYS\"\
+  .\"EXTRCT_DTTM\" AS \"CURATED_SRC_SYS_EXTRCT_DTTM\", \"CURATED\".\"SRC_SYS\".\"\
+  VRSN_STRT_DTTM\" AS \"CURATED_SRC_SYS_VRSN_STRT_DTTM\", \"CURATED\".\"SRC_SYS\"\
+  .\"VRSN_END_DTTM\" AS \"CURATED_SRC_SYS_VRSN_END_DTTM\", \"CURATED\".\"SRC_SYS\"\
+  .\"CRNT_IND\" AS \"CURATED_SRC_SYS_CRNT_IND\", \"CURATED\".\"SRC_SYS\".\"ACTV_IND\"\
+  \ AS \"CURATED_SRC_SYS_ACTV_IND\", \"CURATED\".\"SRC_SYS\".\"ACTION_CD\" AS \"CURATED_SRC_SYS_ACTION_CD\"\
+  , \"CURATED\".\"SRC_SYS\".\"REC_HSH_KY\" AS \"CURATED_SRC_SYS_REC_HSH_KY\", \"CURATED\"\
+  .\"SRC_SYS\".\"TABLE_RUN_ID\" AS \"CURATED_SRC_SYS_TABLE_RUN_ID\", \"CURATED\".\"\
+  SRC_SYS\".\"REC_CRT_DTTM\" AS \"CURATED_SRC_SYS_REC_CRT_DTTM\", \"CURATED\".\"SRC_SYS\"\
+  .\"REC_CRT_BY_NM\" AS \"CURATED_SRC_SYS_REC_CRT_BY_NM\", \"CURATED\".\"SRC_SYS\"\
+  .\"REC_LST_MODIF_DTTM\" AS \"CURATED_SRC_SYS_REC_LST_MODIF_DTTM\", \"CURATED\".\"\
+  SRC_SYS\".\"REC_LST_MODIF_BY_NM\" AS \"CURATED_SRC_SYS_REC_LST_MODIF_BY_NM\", \"\
+  CURATED\".\"SRC_SYS\".\"SRC_SYS_DESC\" AS \"CURATED_SRC_SYS_SRC_SYS_DESC\", \"CURATED\"\
+  .\"SRC_SYS\".\"SRC_DTTM\" AS \"CURATED_SRC_SYS_SRC_DTTM\", \"CURATED\".\"SRC_SYS\"\
+  .\"ME_NO\" AS \"CURATED_SRC_SYS_ME_NO\", \"CURATED\".\"SRC_SYS\".\"CYCLE_START_DTTM\"\
+  \ AS \"CURATED_SRC_SYS_CYCLE_START_DTTM\", \"CURATED\".\"SRC_SYS\".\"CYCLE_END_DTTM\"\
+  \ AS \"CURATED_SRC_SYS_CYCLE_END_DTTM\" \nFROM \"CURATED\".\"SRC_SYS\"\n LIMIT ?"
+checksum: 8854b5a335886a0f6db03c6a35d73d58
+queryDate: 1749254400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: a265fd92-175b-4b4e-a716-f6b1b8f9af4c
+    type: table
+    name: SRC_SYS
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.SRC_SYS
+    displayName: SRC_SYS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

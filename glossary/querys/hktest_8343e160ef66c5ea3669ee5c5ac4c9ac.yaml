@@ -1,0 +1,31 @@
+name: 8343e160ef66c5ea3669ee5c5ac4c9ac
+fullyQualifiedName: hktest.8343e160ef66c5ea3669ee5c5ac4c9ac
+owners: []
+duration: 878.0
+users: []
+query: "WITH \"534e5b12fce522f81d9c91fd466b84a9_rnd\" AS \n(SELECT \"STORE_SALES_1\"\
+  .\"SS_NET_PAID\" AS \"SS_NET_PAID\" \nFROM \"TPCDS_SF10TCL\".\"STORE_SALES\" AS\
+  \ \"STORE_SALES_1\" TABLESAMPLE ROW(? ROWS)), \n\"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \ AS \n(SELECT \"534e5b12fce522f81d9c91fd466b84a9_rnd\".\"SS_NET_PAID\" AS \"SS_NET_PAID\"\
+  \ \nFROM \"534e5b12fce522f81d9c91fd466b84a9_rnd\")\n SELECT count(*) AS \"uniqueCount\"\
+  \ \nFROM (SELECT count(\"SS_NET_PAID\") AS count_1 \nFROM \"534e5b12fce522f81d9c91fd466b84a9_sample\"\
+  \ GROUP BY \"SS_NET_PAID\" \nHAVING count(\"SS_NET_PAID\") = ?) AS only_once\n LIMIT\
+  \ ?"
+checksum: 8343e160ef66c5ea3669ee5c5ac4c9ac
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 56c7b35b-10b9-406e-8fb5-9324de94e5a1
+    type: table
+    name: STORE_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.STORE_SALES
+    displayName: STORE_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

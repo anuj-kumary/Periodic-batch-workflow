@@ -1,0 +1,32 @@
+name: 863fb69e4410c8c5f13b6e1f733fcabb
+fullyQualifiedName: hktest.863fb69e4410c8c5f13b6e1f733fcabb
+owners: []
+duration: 173.0
+users: []
+query: "WITH bdb835de0019b8733914495dee1df1bb_rnd AS \n(SELECT \"DEMO_TABLE_1\".\"\
+  ID\" AS \"ID\" \nFROM \"PUBLIC\".\"DEMO_TABLE\" AS \"DEMO_TABLE_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nbdb835de0019b8733914495dee1df1bb_sample AS \n(SELECT bdb835de0019b8733914495dee1df1bb_rnd.\"\
+  ID\" AS \"ID\" \nFROM bdb835de0019b8733914495dee1df1bb_rnd)\n SELECT percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"ID\" ASC) AS median, percentile_cont(?) WITHIN GROUP\
+  \ (ORDER BY \"ID\" ASC) AS \"firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER\
+  \ BY \"ID\" ASC) AS \"thirdQuartile\" \nFROM bdb835de0019b8733914495dee1df1bb_sample\n\
+  \ LIMIT ?"
+checksum: 863fb69e4410c8c5f13b6e1f733fcabb
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 10739a08-ee82-4dd9-a7eb-2678436e8a1d
+    type: table
+    name: DEMO_TABLE
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.DEMO_TABLE
+    description: new description - reverse metadata
+    displayName: DEMO_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

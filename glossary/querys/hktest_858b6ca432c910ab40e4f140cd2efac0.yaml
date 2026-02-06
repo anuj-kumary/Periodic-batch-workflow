@@ -1,0 +1,84 @@
+name: 858b6ca432c910ab40e4f140cd2efac0
+fullyQualifiedName: hktest.858b6ca432c910ab40e4f140cd2efac0
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"1f508427-80b3-49cc-a1fe-0eb4dee09b71\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 171.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"5.000 to 5.345\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"5.345 to 5.690\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"5.690 to\
+  \ 6.034\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"6.034 to 6.379\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"6.379 to 6.724\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"6.724 to\
+  \ 7.069\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"7.069 to 7.414\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"7.414 to 7.759\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"7.759 to\
+  \ 8.103\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"8.103 to 8.448\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"8.448 to 8.793\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"8.793 to\
+  \ 9.138\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"9.138 to 9.483\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"9.483 to 9.828\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"9.828 to\
+  \ 10.172\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"10.172 to 10.517\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"10.517 to 10.862\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"10.862 to\
+  \ 11.207\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"11.207 to 11.552\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"11.552 to 11.897\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"11.897 to\
+  \ 12.241\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"12.241 to 12.586\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"12.586 to 12.931\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"12.931 to\
+  \ 13.276\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"13.276 to 13.621\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\"\
+  ) END) AS \"13.621 to 13.966\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND\
+  \ LEN(\"O_ORDERPRIORITY\") < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"13.966 to\
+  \ 14.310\", count(CASE WHEN (LEN(\"O_ORDERPRIORITY\") >= ? AND LEN(\"O_ORDERPRIORITY\"\
+  ) < ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"14.310 to 14.655\", count(CASE WHEN\
+  \ (LEN(\"O_ORDERPRIORITY\") >= ?) THEN LEN(\"O_ORDERPRIORITY\") END) AS \"14.655\
+  \ and up\" \nFROM \"TPCH_SF100\".\"ORDERS\"\n LIMIT ?"
+checksum: 858b6ca432c910ab40e4f140cd2efac0
+queryDate: 1752105600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 1f508427-80b3-49cc-a1fe-0eb4dee09b71
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

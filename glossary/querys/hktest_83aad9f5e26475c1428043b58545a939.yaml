@@ -1,0 +1,32 @@
+name: 83aad9f5e26475c1428043b58545a939
+fullyQualifiedName: hktest.83aad9f5e26475c1428043b58545a939
+owners: []
+duration: 43.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"TEST_ORIGINAL_NAME\") >= ?) THEN LEN(\"TEST_ORIGINAL_NAME\"\
+  ) END) AS \"6.000 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_TESTS\"\n LIMIT\
+  \ ?"
+checksum: 83aad9f5e26475c1428043b58545a939
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 7d74658f-d1ee-451a-b639-f1dca08b142d
+    type: table
+    name: DBT_TESTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_TESTS
+    displayName: DBT_TESTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

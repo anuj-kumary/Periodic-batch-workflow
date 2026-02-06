@@ -1,0 +1,68 @@
+name: 88c1efb352881eb363c80971af2ba64c
+fullyQualifiedName: hktest.88c1efb352881eb363c80971af2ba64c
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0b565859-50f2-4c96-b4f3-2abd5feeecb1\",\"type\":\"table\"\
+        ,\"name\":\"LINEITEM\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM\"\
+        ,\"description\":\"Lineitem data as defined by TPC-H\",\"displayName\":\"\
+        LINEITEM\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 61.0
+users: []
+query: "SELECT count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"\
+  L_DISCOUNT\" END) AS \"0 to 4.167T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"\
+  L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"4.167T to 8.333T\", count(CASE WHEN\
+  \ (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"8.333T\
+  \ to 12.500T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN\
+  \ \"L_DISCOUNT\" END) AS \"12.500T to 16.667T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"16.667T to 20.833T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\"\
+  \ END) AS \"20.833T to 25.000T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\"\
+  \ < ?) THEN \"L_DISCOUNT\" END) AS \"25.000T to 29.167T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"29.167T to 33.333T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\"\
+  \ END) AS \"33.333T to 37.500T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\"\
+  \ < ?) THEN \"L_DISCOUNT\" END) AS \"37.500T to 41.667T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"41.667T to 45.833T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\"\
+  \ END) AS \"45.833T to 50.000T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\"\
+  \ < ?) THEN \"L_DISCOUNT\" END) AS \"50.000T to 54.167T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"54.167T to 58.333T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\"\
+  \ END) AS \"58.333T to 62.500T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\"\
+  \ < ?) THEN \"L_DISCOUNT\" END) AS \"62.500T to 66.667T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"66.667T to 70.833T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\"\
+  \ END) AS \"70.833T to 75.000T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\"\
+  \ < ?) THEN \"L_DISCOUNT\" END) AS \"75.000T to 79.167T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"79.167T to 83.333T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\"\
+  \ END) AS \"83.333T to 87.500T\", count(CASE WHEN (\"L_DISCOUNT\" >= ? AND \"L_DISCOUNT\"\
+  \ < ?) THEN \"L_DISCOUNT\" END) AS \"87.500T to 91.667T\", count(CASE WHEN (\"L_DISCOUNT\"\
+  \ >= ? AND \"L_DISCOUNT\" < ?) THEN \"L_DISCOUNT\" END) AS \"91.667T to 95.833T\"\
+  , count(CASE WHEN (\"L_DISCOUNT\" >= ?) THEN \"L_DISCOUNT\" END) AS \"95.833T and\
+  \ up\" \nFROM \"TPCH_SF1\".\"LINEITEM\"\n LIMIT ?"
+checksum: 88c1efb352881eb363c80971af2ba64c
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b565859-50f2-4c96-b4f3-2abd5feeecb1
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

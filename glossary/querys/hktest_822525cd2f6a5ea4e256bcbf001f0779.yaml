@@ -1,0 +1,42 @@
+name: 822525cd2f6a5ea4e256bcbf001f0779
+fullyQualifiedName: hktest.822525cd2f6a5ea4e256bcbf001f0779
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"bbdbbc83-43e5-48b4-9af3-27172e7fd259\",\"type\":\"table\"\
+        ,\"name\":\"DBT_ARTIFACTS_HASHES\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_ARTIFACTS_HASHES\"\
+        ,\"displayName\":\"DBT_ARTIFACTS_HASHES\",\"deleted\":false}]"
+  previousVersion: 0.8
+  changeSummary: {}
+owners: []
+duration: 379.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: |-
+  select artifacts_model, metadata_hash from "DBT_DB"."DBT_SAMPLE_ELEMENTARY"."DBT_ARTIFACTS_HASHES"
+      order by metadata_hash
+checksum: 822525cd2f6a5ea4e256bcbf001f0779
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: bbdbbc83-43e5-48b4-9af3-27172e7fd259
+    type: table
+    name: DBT_ARTIFACTS_HASHES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_ARTIFACTS_HASHES
+    displayName: DBT_ARTIFACTS_HASHES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

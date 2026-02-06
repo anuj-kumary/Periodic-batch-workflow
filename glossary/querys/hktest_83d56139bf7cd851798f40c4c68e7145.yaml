@@ -1,0 +1,34 @@
+name: 83d56139bf7cd851798f40c4c68e7145
+fullyQualifiedName: hktest.83d56139bf7cd851798f40c4c68e7145
+owners: []
+duration: 100.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"NAME\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"OWNERS_TEST\".\"VW_SF_TRANS_WAREHOUSE_LIST\"\n LIMIT ?"
+checksum: 83d56139bf7cd851798f40c4c68e7145
+queryDate: 1748908800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: a220c8c2-646c-4b7e-a89c-4dbba90d0d40
+    type: table
+    name: VW_SF_TRANS_WAREHOUSE_LIST
+    fullyQualifiedName: hktest.MT_DB.OWNERS_TEST.VW_SF_TRANS_WAREHOUSE_LIST
+    description: this is view comment...
+    displayName: VW_SF_TRANS_WAREHOUSE_LIST
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,34 @@
+name: 837a67a0c71ac1706c8db97125a0e468
+fullyQualifiedName: hktest.837a67a0c71ac1706c8db97125a0e468
+owners: []
+duration: 80.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"BOARDING_C\"\
+  \ AS \"BOARDING_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE ROW(?\
+  \ ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  BOARDING_C\" AS \"BOARDING_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n SELECT\
+  \ ? AS anon_1, count(\"BOARDING_C\") AS \"valuesCount\", count(DISTINCT \"BOARDING_C\"\
+  ) AS \"distinctCount\", ? AS anon__1, ? AS anon__2, coalesce(SUM(CASE WHEN (\"BOARDING_C\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", ? AS anon__3, ? AS anon__4 \nFROM\
+  \ c40eb667c7e828cfdcfb437c5d221bf6_sample\n LIMIT ?"
+checksum: 837a67a0c71ac1706c8db97125a0e468
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

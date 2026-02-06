@@ -1,0 +1,40 @@
+name: 87ff371453ec00e025d219d7157b218a
+fullyQualifiedName: hktest.87ff371453ec00e025d219d7157b218a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"3f948976-e437-44ba-a8ed-576af3cb0807\",\"type\":\"table\"\
+        ,\"name\":\"CONT\",\"fullyQualifiedName\":\"hktest.INDIVIDUAL.CURATED.CONT\"\
+        ,\"displayName\":\"CONT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 85.0
+users: []
+query: "WITH \"53f6b3ace3aa40916de167636293ac80_rnd\" AS \n(SELECT \"CONT_1\".\"CONT_CASH_VAL_1YR_TM\"\
+  \ AS \"CONT_CASH_VAL_1YR_TM\" \nFROM \"CURATED\".\"CONT\" AS \"CONT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \n\"53f6b3ace3aa40916de167636293ac80_sample\" AS \n(SELECT \"53f6b3ace3aa40916de167636293ac80_rnd\"\
+  .\"CONT_CASH_VAL_1YR_TM\" AS \"CONT_CASH_VAL_1YR_TM\" \nFROM \"53f6b3ace3aa40916de167636293ac80_rnd\"\
+  )\n SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CONT_CASH_VAL_1YR_TM\"\
+  ) AS count_1 \nFROM \"53f6b3ace3aa40916de167636293ac80_sample\" GROUP BY \"CONT_CASH_VAL_1YR_TM\"\
+  \ \nHAVING count(\"CONT_CASH_VAL_1YR_TM\") = ?) AS only_once\n LIMIT ?"
+checksum: 87ff371453ec00e025d219d7157b218a
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 3f948976-e437-44ba-a8ed-576af3cb0807
+    type: table
+    name: CONT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CONT
+    displayName: CONT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,32 @@
+name: 838d025025207170fee57c6dbc2f8ff3
+fullyQualifiedName: hktest.838d025025207170fee57c6dbc2f8ff3
+owners: []
+duration: 53.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"TAGS\") AS count_1\
+  \ \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_MODELS\" GROUP BY \"TAGS\" \nHAVING count(\"\
+  TAGS\") = ?) AS only_once\n LIMIT ?"
+checksum: 838d025025207170fee57c6dbc2f8ff3
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: ae833c0b-5dc6-41d8-ab5d-f0c043a45959
+    type: table
+    name: DBT_MODELS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_MODELS
+    displayName: DBT_MODELS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

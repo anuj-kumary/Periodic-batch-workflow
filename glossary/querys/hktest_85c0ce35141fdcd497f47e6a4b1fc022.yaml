@@ -1,0 +1,33 @@
+name: 85c0ce35141fdcd497f47e6a4b1fc022
+fullyQualifiedName: hktest.85c0ce35141fdcd497f47e6a4b1fc022
+owners: []
+duration: 190.0
+users: []
+query: "WITH \"2b911c015ed17a423c74ab9987330e60_rnd\" AS \n(SELECT \"ITEM_1\".\"I_MANAGER_ID\"\
+  \ AS \"I_MANAGER_ID\" \nFROM \"TPCDS_SF100TCL\".\"ITEM\" AS \"ITEM_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \n\"2b911c015ed17a423c74ab9987330e60_sample\" AS \n(SELECT \"2b911c015ed17a423c74ab9987330e60_rnd\"\
+  .\"I_MANAGER_ID\" AS \"I_MANAGER_ID\" \nFROM \"2b911c015ed17a423c74ab9987330e60_rnd\"\
+  )\n SELECT avg(\"I_MANAGER_ID\") AS mean, count(\"I_MANAGER_ID\") AS \"valuesCount\"\
+  , count(DISTINCT \"I_MANAGER_ID\") AS \"distinctCount\", MIN(\"I_MANAGER_ID\") AS\
+  \ min, MAX(\"I_MANAGER_ID\") AS max, coalesce(SUM(CASE WHEN (\"I_MANAGER_ID\" IS\
+  \ ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"I_MANAGER_ID\") AS stddev,\
+  \ SUM(\"I_MANAGER_ID\") AS sum \nFROM \"2b911c015ed17a423c74ab9987330e60_sample\"\
+  \n LIMIT ?"
+checksum: 85c0ce35141fdcd497f47e6a4b1fc022
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: a20953ec-ac01-4b78-a92c-7d8e0cc25281
+    type: table
+    name: ITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.ITEM
+    displayName: ITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

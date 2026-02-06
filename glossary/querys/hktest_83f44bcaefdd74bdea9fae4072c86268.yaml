@@ -1,0 +1,34 @@
+name: 83f44bcaefdd74bdea9fae4072c86268
+fullyQualifiedName: hktest.83f44bcaefdd74bdea9fae4072c86268
+owners: []
+duration: 78.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"PATH\")) AS mean, count(\"PATH\") AS \"valuesCount\", count(DISTINCT\
+  \ \"PATH\") AS \"distinctCount\", MIN(LEN(\"PATH\")) AS min, MAX(LEN(\"PATH\"))\
+  \ AS max, coalesce(SUM(CASE WHEN (\"PATH\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(LEN(\"PATH\")) AS stddev, SUM(LEN(\"PATH\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_SOURCES\"\n LIMIT ?"
+checksum: 83f44bcaefdd74bdea9fae4072c86268
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: b21cf3a8-f359-4fc0-bb37-9adc6339b7cc
+    type: table
+    name: DBT_SOURCES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SOURCES
+    displayName: DBT_SOURCES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

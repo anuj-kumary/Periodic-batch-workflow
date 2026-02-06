@@ -1,0 +1,44 @@
+name: 84565e4390e891f1dd31c326c37d9314
+fullyQualifiedName: hktest.84565e4390e891f1dd31c326c37d9314
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"9284f038-34bc-4130-b89d-85a6789181b7\",\"type\":\"table\"\
+        ,\"name\":\"TEST_EMPLOYEES\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.TEST_EMPLOYEES\"\
+        ,\"displayName\":\"TEST_EMPLOYEES\",\"deleted\":false}]"
+  previousVersion: 0.8
+  changeSummary: {}
+owners: []
+duration: 92.0
+users: []
+query: "SELECT \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTEMPLOYEE_ID\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTEMPLOYEE_ID\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTFIRST_NAME\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTFIRST_NAME\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTLAST_NAME\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTLAST_NAME\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTEMAIL\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTEMAIL\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTPHONE_NUMBER\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTPHONE_NUMBER\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTHIRE_DATE\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTHIRE_DATE\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTJOB_ID\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTJOB_ID\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTSALARY\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTSALARY\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTMANAGER_ID\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTMANAGER_ID\"\
+  , \"E2E_TEST\".\"TEST_EMPLOYEES\".\"E2E_TESTDEPARTMENT_ID\" AS \"E2E_TEST_TEST_EMPLOYEES_E2E_TESTDEPARTMENT_ID\"\
+  \ \nFROM \"E2E_TEST\".\"TEST_EMPLOYEES\"\n LIMIT ?"
+checksum: 84565e4390e891f1dd31c326c37d9314
+queryDate: 1752537600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9284f038-34bc-4130-b89d-85a6789181b7
+    type: table
+    name: TEST_EMPLOYEES
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.TEST_EMPLOYEES
+    displayName: TEST_EMPLOYEES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

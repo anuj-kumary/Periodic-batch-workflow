@@ -1,0 +1,32 @@
+name: 89505cf97bf7d4ba76bac09f07ead759
+fullyQualifiedName: hktest.89505cf97bf7d4ba76bac09f07ead759
+owners: []
+duration: 62.0
+users: []
+query: "WITH \"4c9e7581028a01fc71dfc3997bd40912_rnd\" AS \n(SELECT \"LOAN_1\".\"REPAY_IND\"\
+  \ AS \"REPAY_IND\" \nFROM \"CURATED\".\"LOAN\" AS \"LOAN_1\" TABLESAMPLE ROW(? ROWS)),\
+  \ \n\"4c9e7581028a01fc71dfc3997bd40912_sample\" AS \n(SELECT \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  .\"REPAY_IND\" AS \"REPAY_IND\" \nFROM \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  )\n SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"REPAY_IND\") ASC) AS\
+  \ median, percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"REPAY_IND\") ASC) AS \"\
+  firstQuartile\", percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"REPAY_IND\") ASC)\
+  \ AS \"thirdQuartile\" \nFROM \"4c9e7581028a01fc71dfc3997bd40912_sample\"\n LIMIT\
+  \ ?"
+checksum: 89505cf97bf7d4ba76bac09f07ead759
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 169cbc9c-563e-4142-b5cb-099e6afdb44a
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
