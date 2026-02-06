@@ -1,0 +1,156 @@
+name: INDEX_COLUMNS
+fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database that the table belongs to
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.TABLE_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema that the table belongs to
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.TABLE_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the table
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.TABLE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: INDEX_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the index
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.INDEX_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the column
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: KEY_SEQUENCE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: Position of the column in the index
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.KEY_SEQUENCE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: INDEX_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the index
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.INDEX_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_UNIQUE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Whether this index is unique
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.IS_UNIQUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "Name of the constraint associated with this index, if any"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STATUS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The status of the index
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.STATUS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the index
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.INDEX_COLUMNS.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f4b7864c-fa23-4da8-8492-b4c604e97b64
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 10b1d4ee-9fc7-47ab-a064-6c797b9b0203
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/INDEX_COLUMNS
+domains: []
+dataProducts: []
+sourceHash: c551274ba278011ddfa6f4504455352e
+processedLineage: false
+entityStatus: Approved

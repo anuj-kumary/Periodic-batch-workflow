@@ -1,0 +1,145 @@
+name: PREVIEW_RATE_SHEET_DAILY
+fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY
+tableType: View
+columns:
+  - name: DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORGANIZATION_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.ORGANIZATION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTRACT_NUMBER
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.CONTRACT_NUMBER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ACCOUNT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.ACCOUNT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ACCOUNT_LOCATOR
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.ACCOUNT_LOCATOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REGION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.REGION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SERVICE_LEVEL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.SERVICE_LEVEL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USAGE_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.USAGE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CURRENCY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.CURRENCY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EFFECTIVE_RATE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 2
+    dataTypeDisplay: "number(38,2)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.EFFECTIVE_RATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SERVICE_TYPE
+    dataType: VARCHAR
+    dataLength: 13
+    dataTypeDisplay: text(13)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_RATE_SHEET_DAILY.SERVICE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 5c6a2916-f260-4deb-87a9-dbc7dd0a8518
+  type: databaseSchema
+  name: ORGANIZATION_USAGE
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE
+  displayName: ORGANIZATION_USAGE
+  deleted: false
+database:
+  id: c2c0f880-7eef-47f7-96f7-8a71525148db
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/tmqlsne/ww42057/#/data/databases/SNOWFLAKE/schemas/ORGANIZATION_USAGE/view/PREVIEW_RATE_SHEET_DAILY
+domains: []
+dataProducts: []
+sourceHash: 479a3ec0d8fef117bf35cb1254eae59a
+processedLineage: false
+entityStatus: Approved

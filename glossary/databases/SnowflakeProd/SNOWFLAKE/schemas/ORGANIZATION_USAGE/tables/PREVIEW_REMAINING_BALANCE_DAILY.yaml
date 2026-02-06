@@ -1,0 +1,122 @@
+name: PREVIEW_REMAINING_BALANCE_DAILY
+fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY
+tableType: View
+columns:
+  - name: ORGANIZATION_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.ORGANIZATION_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTRACT_NUMBER
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.CONTRACT_NUMBER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CURRENCY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.CURRENCY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FREE_USAGE_BALANCE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 2
+    dataTypeDisplay: "number(38,2)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.FREE_USAGE_BALANCE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CAPACITY_BALANCE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 2
+    dataTypeDisplay: "number(38,2)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.CAPACITY_BALANCE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ON_DEMAND_CONSUMPTION_BALANCE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 2
+    dataTypeDisplay: "number(38,2)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.ON_DEMAND_CONSUMPTION_BALANCE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROLLOVER_BALANCE
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE.PREVIEW_REMAINING_BALANCE_DAILY.ROLLOVER_BALANCE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 5c6a2916-f260-4deb-87a9-dbc7dd0a8518
+  type: databaseSchema
+  name: ORGANIZATION_USAGE
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE.ORGANIZATION_USAGE
+  displayName: ORGANIZATION_USAGE
+  deleted: false
+database:
+  id: c2c0f880-7eef-47f7-96f7-8a71525148db
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/tmqlsne/ww42057/#/data/databases/SNOWFLAKE/schemas/ORGANIZATION_USAGE/view/PREVIEW_REMAINING_BALANCE_DAILY
+domains: []
+dataProducts: []
+sourceHash: b9e00f2d30e51395f3f793602f951cf0
+processedLineage: false
+entityStatus: Approved

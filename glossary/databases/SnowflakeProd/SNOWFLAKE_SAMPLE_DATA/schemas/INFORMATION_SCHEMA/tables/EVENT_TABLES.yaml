@@ -1,0 +1,114 @@
+name: EVENT_TABLES
+fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES
+tableType: View
+columns:
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database that the event table belongs to
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.TABLE_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema that the event table belongs to
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.TABLE_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the event table
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.TABLE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: TABLE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the event table
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.TABLE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the event table
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last altered time of the event table
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this event table
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.EVENT_TABLES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: f4b7864c-fa23-4da8-8492-b4c604e97b64
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 10b1d4ee-9fc7-47ab-a064-6c797b9b0203
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/EVENT_TABLES
+domains: []
+dataProducts: []
+sourceHash: 8f38b7f24ccc2b12d4fc0b32f7ee8666
+processedLineage: false
+entityStatus: Approved
