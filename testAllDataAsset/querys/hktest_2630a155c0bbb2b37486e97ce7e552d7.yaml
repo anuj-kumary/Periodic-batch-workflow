@@ -1,0 +1,32 @@
+name: 2630a155c0bbb2b37486e97ce7e552d7
+fullyQualifiedName: hktest.2630a155c0bbb2b37486e97ce7e552d7
+owners: []
+duration: 486.0
+users: []
+query: "WITH bb70fc319f31ef506fc099f8db12e70f_rnd AS \n(SELECT \"CATALOG_SALES_1\"\
+  .\"CS_EXT_SHIP_COST\" AS \"CS_EXT_SHIP_COST\" \nFROM \"TPCDS_SF10TCL\".\"CATALOG_SALES\"\
+  \ AS \"CATALOG_SALES_1\" TABLESAMPLE ROW(? ROWS)), \nbb70fc319f31ef506fc099f8db12e70f_sample\
+  \ AS \n(SELECT bb70fc319f31ef506fc099f8db12e70f_rnd.\"CS_EXT_SHIP_COST\" AS \"CS_EXT_SHIP_COST\"\
+  \ \nFROM bb70fc319f31ef506fc099f8db12e70f_rnd)\n SELECT percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"CS_EXT_SHIP_COST\" ASC) AS median, percentile_cont(?) WITHIN\
+  \ GROUP (ORDER BY \"CS_EXT_SHIP_COST\" ASC) AS \"firstQuartile\", percentile_cont(?)\
+  \ WITHIN GROUP (ORDER BY \"CS_EXT_SHIP_COST\" ASC) AS \"thirdQuartile\" \nFROM bb70fc319f31ef506fc099f8db12e70f_sample\n\
+  \ LIMIT ?"
+checksum: 2630a155c0bbb2b37486e97ce7e552d7
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7d2a9000-fb5f-4a65-a92b-5c3940bde9c1
+    type: table
+    name: CATALOG_SALES
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.CATALOG_SALES
+    displayName: CATALOG_SALES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

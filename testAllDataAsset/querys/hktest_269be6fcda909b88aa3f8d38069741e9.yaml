@@ -1,0 +1,45 @@
+name: 269be6fcda909b88aa3f8d38069741e9
+fullyQualifiedName: hktest.269be6fcda909b88aa3f8d38069741e9
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"71f3b29a-0599-4623-b7e2-1e721ace56c4\",\"type\":\"table\"\
+        ,\"name\":\"SEED_RUN_RESULTS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SEED_RUN_RESULTS\"\
+        ,\"displayName\":\"SEED_RUN_RESULTS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 209.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"COMPILE_STARTED_AT\")) AS mean, count(\"COMPILE_STARTED_AT\"\
+  ) AS \"valuesCount\", count(DISTINCT \"COMPILE_STARTED_AT\") AS \"distinctCount\"\
+  , MIN(LEN(\"COMPILE_STARTED_AT\")) AS min, MAX(LEN(\"COMPILE_STARTED_AT\")) AS max,\
+  \ coalesce(SUM(CASE WHEN (\"COMPILE_STARTED_AT\" IS ?) THEN ? ELSE ? END), ?) AS\
+  \ \"nullCount\", STDDEV_POP(LEN(\"COMPILE_STARTED_AT\")) AS stddev, SUM(LEN(\"COMPILE_STARTED_AT\"\
+  )) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"SEED_RUN_RESULTS\"\n LIMIT ?"
+checksum: 269be6fcda909b88aa3f8d38069741e9
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 71f3b29a-0599-4623-b7e2-1e721ace56c4
+    type: table
+    name: SEED_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SEED_RUN_RESULTS
+    displayName: SEED_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

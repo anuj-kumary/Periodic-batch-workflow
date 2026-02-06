@@ -1,0 +1,31 @@
+name: 21b13af4ee5adb2a28e7bf3f03d1a014
+fullyQualifiedName: hktest.21b13af4ee5adb2a28e7bf3f03d1a014
+owners: []
+duration: 95.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"ZIPCODE\") >= ? AND LEN(\"ZIPCODE\") < ?) THEN\
+  \ LEN(\"ZIPCODE\") END) AS \"0 to 1.000\", count(CASE WHEN (LEN(\"ZIPCODE\") >=\
+  \ ? AND LEN(\"ZIPCODE\") < ?) THEN LEN(\"ZIPCODE\") END) AS \"1.000 to 2.000\",\
+  \ count(CASE WHEN (LEN(\"ZIPCODE\") >= ? AND LEN(\"ZIPCODE\") < ?) THEN LEN(\"ZIPCODE\"\
+  ) END) AS \"2.000 to 3.000\", count(CASE WHEN (LEN(\"ZIPCODE\") >= ? AND LEN(\"\
+  ZIPCODE\") < ?) THEN LEN(\"ZIPCODE\") END) AS \"3.000 to 4.000\", count(CASE WHEN\
+  \ (LEN(\"ZIPCODE\") >= ?) THEN LEN(\"ZIPCODE\") END) AS \"4.000 and up\" \nFROM\
+  \ \"MSSQLBANKING_CUSTOMER\".\"ADDRESS\"\n LIMIT ?"
+checksum: 21b13af4ee5adb2a28e7bf3f03d1a014
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 47446995-13cc-44ba-aa77-73e9475e23c0
+    type: table
+    name: ADDRESS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.ADDRESS
+    displayName: ADDRESS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

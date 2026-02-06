@@ -1,0 +1,34 @@
+name: 20f50c6ccbd69a61ce20208d48e8c246
+fullyQualifiedName: hktest.20f50c6ccbd69a61ce20208d48e8c246
+owners: []
+duration: 104.0
+users: []
+query: "WITH c9a70e63510b664d91c87d56c823d0ce_rnd AS \n(SELECT \"WEB_SITE_1\".\"WEB_SUITE_NUMBER\"\
+  \ AS \"WEB_SUITE_NUMBER\" \nFROM \"TPCDS_SF10TCL\".\"WEB_SITE\" AS \"WEB_SITE_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \nc9a70e63510b664d91c87d56c823d0ce_sample AS \n(SELECT\
+  \ c9a70e63510b664d91c87d56c823d0ce_rnd.\"WEB_SUITE_NUMBER\" AS \"WEB_SUITE_NUMBER\"\
+  \ \nFROM c9a70e63510b664d91c87d56c823d0ce_rnd)\n SELECT avg(LEN(\"WEB_SUITE_NUMBER\"\
+  )) AS mean, count(\"WEB_SUITE_NUMBER\") AS \"valuesCount\", count(DISTINCT \"WEB_SUITE_NUMBER\"\
+  ) AS \"distinctCount\", MIN(LEN(\"WEB_SUITE_NUMBER\")) AS min, MAX(LEN(\"WEB_SUITE_NUMBER\"\
+  )) AS max, coalesce(SUM(CASE WHEN (\"WEB_SUITE_NUMBER\" IS ?) THEN ? ELSE ? END),\
+  \ ?) AS \"nullCount\", STDDEV_POP(LEN(\"WEB_SUITE_NUMBER\")) AS stddev, SUM(LEN(\"\
+  WEB_SUITE_NUMBER\")) AS sum \nFROM c9a70e63510b664d91c87d56c823d0ce_sample\n LIMIT\
+  \ ?"
+checksum: 20f50c6ccbd69a61ce20208d48e8c246
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e4199ccc-b84a-40a4-a4e3-6b5c5adae08a
+    type: table
+    name: WEB_SITE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.WEB_SITE
+    displayName: WEB_SITE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,29 @@
+name: 241da19ce5cd0379a9c87d56d44202b9
+fullyQualifiedName: hktest.241da19ce5cd0379a9c87d56d44202b9
+owners: []
+duration: 93.0
+users: []
+query: "SELECT avg(LEN(\"LOAN_DEFAULTED_DATE\")) AS mean, count(\"LOAN_DEFAULTED_DATE\"\
+  ) AS \"valuesCount\", count(DISTINCT \"LOAN_DEFAULTED_DATE\") AS \"distinctCount\"\
+  , MIN(LEN(\"LOAN_DEFAULTED_DATE\")) AS min, MAX(LEN(\"LOAN_DEFAULTED_DATE\")) AS\
+  \ max, coalesce(SUM(CASE WHEN (\"LOAN_DEFAULTED_DATE\" IS ?) THEN ? ELSE ? END),\
+  \ ?) AS \"nullCount\", STDDEV_POP(LEN(\"LOAN_DEFAULTED_DATE\")) AS stddev, SUM(LEN(\"\
+  LOAN_DEFAULTED_DATE\")) AS sum \nFROM \"LANDING\".\"LOAN\"\n LIMIT ?"
+checksum: 241da19ce5cd0379a9c87d56d44202b9
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: daeebc3d-e209-4d6c-838c-8a72fc77990f
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

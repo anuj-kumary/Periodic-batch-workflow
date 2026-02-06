@@ -1,0 +1,27 @@
+name: 26ac78d4fca76470ca272e2456416916
+fullyQualifiedName: hktest.26ac78d4fca76470ca272e2456416916
+owners: []
+duration: 54.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"EMAIL\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"EMAIL\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"EMAIL\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"MSSQLBANKING_STG\".\"CUSTOMERACCOUNTS\"\n LIMIT ?"
+checksum: 26ac78d4fca76470ca272e2456416916
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d03f73b0-8a36-4cd5-a82f-a07db17fe588
+    type: table
+    name: CUSTOMERACCOUNTS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG.CUSTOMERACCOUNTS
+    displayName: CUSTOMERACCOUNTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

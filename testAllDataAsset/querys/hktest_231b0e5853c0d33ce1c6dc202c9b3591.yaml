@@ -1,0 +1,66 @@
+name: 231b0e5853c0d33ce1c6dc202c9b3591
+fullyQualifiedName: hktest.231b0e5853c0d33ce1c6dc202c9b3591
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"f541ed9b-43c8-4fde-9898-ccab88cd5324\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.4
+  changeSummary: {}
+owners: []
+duration: 509.0
+users: []
+query: "SELECT count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"\
+  O_ORDERKEY\" END) AS \"1.000 to 272.728K\", count(CASE WHEN (\"O_ORDERKEY\" >= ?\
+  \ AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"272.728K to 545.455K\",\
+  \ count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"545.455K to 818.183K\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"\
+  O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"818.183K to 1.091M\", count(CASE\
+  \ WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS\
+  \ \"1.091M to 1.364M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"1.364M to 1.636M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"1.636M to 1.909M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"1.909M to 2.182M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"2.182M to 2.455M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"2.455M to 2.727M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"2.727M to 3.000M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"3.000M to 3.273M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"3.273M to 3.545M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"3.545M to 3.818M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"3.818M to 4.091M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"4.091M to 4.364M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"4.364M to 4.636M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"4.636M to 4.909M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\" END) AS \"4.909M to 5.182M\"\
+  , count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\" < ?) THEN \"O_ORDERKEY\"\
+  \ END) AS \"5.182M to 5.455M\", count(CASE WHEN (\"O_ORDERKEY\" >= ? AND \"O_ORDERKEY\"\
+  \ < ?) THEN \"O_ORDERKEY\" END) AS \"5.455M to 5.727M\", count(CASE WHEN (\"O_ORDERKEY\"\
+  \ >= ?) THEN \"O_ORDERKEY\" END) AS \"5.727M and up\" \nFROM \"TPCH_SF1\".\"ORDERS\"\
+  \n LIMIT ?"
+checksum: 231b0e5853c0d33ce1c6dc202c9b3591
+queryDate: 1752192000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f541ed9b-43c8-4fde-9898-ccab88cd5324
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

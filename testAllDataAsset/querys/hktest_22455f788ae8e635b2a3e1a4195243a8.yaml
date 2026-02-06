@@ -1,0 +1,32 @@
+name: 22455f788ae8e635b2a3e1a4195243a8
+fullyQualifiedName: hktest.22455f788ae8e635b2a3e1a4195243a8
+owners: []
+duration: 266.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"MESSAGE\") AS count_1\
+  \ \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_DBT_MODELS\" GROUP BY \"MESSAGE\" \n\
+  HAVING count(\"MESSAGE\") = ?) AS only_once\n LIMIT ?"
+checksum: 22455f788ae8e635b2a3e1a4195243a8
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: aba63d35-7870-48f2-a0f9-50dc7a120f60
+    type: table
+    name: ALERTS_DBT_MODELS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_DBT_MODELS
+    displayName: ALERTS_DBT_MODELS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,30 @@
+name: 2304b7c8e0c38acb373b7de8d7c263d7
+fullyQualifiedName: hktest.2304b7c8e0c38acb373b7de8d7c263d7
+owners: []
+duration: 47.0
+users: []
+query: "WITH \"2b7a46f33414da8fedece549604bc0f1_rnd\" AS \n(SELECT \"CREDITCARD_1\"\
+  .\"_FIVETRAN_SYNCED\" AS \"_FIVETRAN_SYNCED\" \nFROM \"MSSQLBANKING_ACCOUNT\".\"\
+  CREDITCARD\" AS \"CREDITCARD_1\" TABLESAMPLE ROW(? ROWS)), \n\"2b7a46f33414da8fedece549604bc0f1_sample\"\
+  \ AS \n(SELECT \"2b7a46f33414da8fedece549604bc0f1_rnd\".\"_FIVETRAN_SYNCED\" AS\
+  \ \"_FIVETRAN_SYNCED\" \nFROM \"2b7a46f33414da8fedece549604bc0f1_rnd\")\n SELECT\
+  \ ? AS anon_1, ? AS anon__1, ? AS anon__2 \nFROM \"2b7a46f33414da8fedece549604bc0f1_sample\"\
+  \n LIMIT ?"
+checksum: 2304b7c8e0c38acb373b7de8d7c263d7
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 90111e7a-d7bb-46c9-976d-2a483c18a2f5
+    type: table
+    name: CREDITCARD
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.CREDITCARD
+    displayName: CREDITCARD
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

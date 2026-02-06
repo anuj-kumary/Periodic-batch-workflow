@@ -1,0 +1,29 @@
+name: 1fa7b8abd969ec1d0f27854c008cefb3
+fullyQualifiedName: hktest.1fa7b8abd969ec1d0f27854c008cefb3
+owners: []
+duration: 96.0
+users: []
+query: "SELECT avg(LEN(\"OCCPATN_CLS_CD\")) AS mean, count(\"OCCPATN_CLS_CD\") AS\
+  \ \"valuesCount\", count(DISTINCT \"OCCPATN_CLS_CD\") AS \"distinctCount\", MIN(LEN(\"\
+  OCCPATN_CLS_CD\")) AS min, MAX(LEN(\"OCCPATN_CLS_CD\")) AS max, coalesce(SUM(CASE\
+  \ WHEN (\"OCCPATN_CLS_CD\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  OCCPATN_CLS_CD\")) AS stddev, SUM(LEN(\"OCCPATN_CLS_CD\")) AS sum \nFROM \"CURATED\"\
+  .\"CNTRCT\"\n LIMIT ?"
+checksum: 1fa7b8abd969ec1d0f27854c008cefb3
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,73 @@
+name: 205ca04b61fb762e476b5eda13f3e4c3
+fullyQualifiedName: hktest.205ca04b61fb762e476b5eda13f3e4c3
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b7a1e96e-d5da-448b-a809-946f32a21041\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.4
+  changeSummary: {}
+owners: []
+duration: 1377.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?)\
+  \ THEN LEN(\"O_COMMENT\") END) AS \"19.000 to 21.360\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  21.360 to 23.720\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"23.720 to 26.080\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  26.080 to 28.440\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"28.440 to 30.800\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  30.800 to 33.160\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"33.160 to 35.520\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  35.520 to 37.880\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"37.880 to 40.240\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  40.240 to 42.600\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"42.600 to 44.960\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  44.960 to 47.320\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"47.320 to 49.680\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  49.680 to 52.040\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"52.040 to 54.400\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  54.400 to 56.760\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"56.760 to 59.120\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  59.120 to 61.480\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"61.480 to 63.840\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  63.840 to 66.200\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"66.200 to 68.560\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  68.560 to 70.920\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ? AND LEN(\"O_COMMENT\"\
+  ) < ?) THEN LEN(\"O_COMMENT\") END) AS \"70.920 to 73.280\", count(CASE WHEN (LEN(\"\
+  O_COMMENT\") >= ? AND LEN(\"O_COMMENT\") < ?) THEN LEN(\"O_COMMENT\") END) AS \"\
+  73.280 to 75.640\", count(CASE WHEN (LEN(\"O_COMMENT\") >= ?) THEN LEN(\"O_COMMENT\"\
+  ) END) AS \"75.640 and up\" \nFROM \"TPCH_SF10\".\"ORDERS\"\n LIMIT ?"
+checksum: 205ca04b61fb762e476b5eda13f3e4c3
+queryDate: 1752192000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b7a1e96e-d5da-448b-a809-946f32a21041
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

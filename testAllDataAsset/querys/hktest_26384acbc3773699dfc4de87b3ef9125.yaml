@@ -1,0 +1,41 @@
+name: 26384acbc3773699dfc4de87b3ef9125
+fullyQualifiedName: hktest.26384acbc3773699dfc4de87b3ef9125
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"97a1a769-0ed2-4e8f-b352-177a49154924\",\"type\":\"table\"\
+        ,\"name\":\"SUPPLIER\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER\"\
+        ,\"description\":\"Supplier data as defined by TPC-H\",\"displayName\":\"\
+        SUPPLIER\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 72.0
+users: []
+query: "SELECT avg(LEN(\"S_ADDRESS\")) AS mean, count(\"S_ADDRESS\") AS \"valuesCount\"\
+  , count(DISTINCT \"S_ADDRESS\") AS \"distinctCount\", MIN(LEN(\"S_ADDRESS\")) AS\
+  \ min, MAX(LEN(\"S_ADDRESS\")) AS max, coalesce(SUM(CASE WHEN (\"S_ADDRESS\" IS\
+  \ ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"S_ADDRESS\")) AS\
+  \ stddev, SUM(LEN(\"S_ADDRESS\")) AS sum \nFROM \"TPCH_SF1\".\"SUPPLIER\"\n LIMIT\
+  \ ?"
+checksum: 26384acbc3773699dfc4de87b3ef9125
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 97a1a769-0ed2-4e8f-b352-177a49154924
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

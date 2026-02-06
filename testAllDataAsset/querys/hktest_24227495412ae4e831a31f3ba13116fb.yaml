@@ -1,0 +1,36 @@
+name: 24227495412ae4e831a31f3ba13116fb
+fullyQualifiedName: hktest.24227495412ae4e831a31f3ba13116fb
+owners: []
+duration: 85.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"COMPETITOR_6_C\"\
+  \ AS \"COMPETITOR_6_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  COMPETITOR_6_C\" AS \"COMPETITOR_6_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n\
+  \ SELECT avg(LEN(\"COMPETITOR_6_C\")) AS mean, count(\"COMPETITOR_6_C\") AS \"valuesCount\"\
+  , count(DISTINCT \"COMPETITOR_6_C\") AS \"distinctCount\", MIN(LEN(\"COMPETITOR_6_C\"\
+  )) AS min, MAX(LEN(\"COMPETITOR_6_C\")) AS max, coalesce(SUM(CASE WHEN (\"COMPETITOR_6_C\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"COMPETITOR_6_C\"\
+  )) AS stddev, SUM(LEN(\"COMPETITOR_6_C\")) AS sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n\
+  \ LIMIT ?"
+checksum: 24227495412ae4e831a31f3ba13116fb
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

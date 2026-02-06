@@ -1,0 +1,32 @@
+name: 22357db84a48840906540e9f4c305a70
+fullyQualifiedName: hktest.22357db84a48840906540e9f4c305a70
+owners: []
+duration: 21.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"MATURITY\") AS count_1\
+  \ \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_EXPOSURES\" GROUP BY \"MATURITY\" \nHAVING\
+  \ count(\"MATURITY\") = ?) AS only_once\n LIMIT ?"
+checksum: 22357db84a48840906540e9f4c305a70
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 63c57e4c-b711-41ac-87e8-2bc0b63008df
+    type: table
+    name: DBT_EXPOSURES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES
+    displayName: DBT_EXPOSURES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

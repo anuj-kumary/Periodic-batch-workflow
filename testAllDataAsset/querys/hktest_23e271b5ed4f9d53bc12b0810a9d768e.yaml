@@ -1,0 +1,49 @@
+name: 23e271b5ed4f9d53bc12b0810a9d768e
+fullyQualifiedName: hktest.23e271b5ed4f9d53bc12b0810a9d768e
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"7d74658f-d1ee-451a-b639-f1dca08b142d\",\"type\":\"table\"\
+        ,\"name\":\"DBT_TESTS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_TESTS\"\
+        ,\"displayName\":\"DBT_TESTS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 111.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "with dbt_tests as (\n                select\n                    parent_model_unique_id,\n\
+  \                    test_column_name\n                from dbt_db.DBT_SAMPLE_elementary.dbt_tests\n\
+  \            )\n\n            select \n                parent_model_unique_id as\
+  \ model_unique_id,\n                SUM(\n                    case \n          \
+  \              when test_column_name is not ? then ?\n                        else\
+  \ ?\n                        end\n                ) as column_tests,\n         \
+  \        SUM(\n                    case\n                        when test_column_name\
+  \ is ? then ?\n                        else ?\n                        end \n  \
+  \              )as table_tests\n            from dbt_tests\n            group by\
+  \ parent_model_unique_id"
+checksum: 23e271b5ed4f9d53bc12b0810a9d768e
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 7d74658f-d1ee-451a-b639-f1dca08b142d
+    type: table
+    name: DBT_TESTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_TESTS
+    displayName: DBT_TESTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

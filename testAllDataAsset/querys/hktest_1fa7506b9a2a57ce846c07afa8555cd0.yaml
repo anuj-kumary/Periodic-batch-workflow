@@ -1,0 +1,39 @@
+name: 1fa7506b9a2a57ce846c07afa8555cd0
+fullyQualifiedName: hktest.1fa7506b9a2a57ce846c07afa8555cd0
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"7c11b729-7c3e-4051-af26-dcc453c5b05d\",\"type\":\"table\"\
+        ,\"name\":\"LOCATIONS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.LOCATIONS\"\
+        ,\"displayName\":\"LOCATIONS\",\"deleted\":false}]"
+  previousVersion: 1.0
+  changeSummary: {}
+owners: []
+duration: 115.0
+users: []
+query: "SELECT avg(LEN(\"E2E_TESTCITY\")) AS mean, count(\"E2E_TESTCITY\") AS \"valuesCount\"\
+  , count(DISTINCT \"E2E_TESTCITY\") AS \"distinctCount\", MIN(LEN(\"E2E_TESTCITY\"\
+  )) AS min, MAX(LEN(\"E2E_TESTCITY\")) AS max, coalesce(SUM(CASE WHEN (\"E2E_TESTCITY\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"E2E_TESTCITY\"\
+  )) AS stddev, SUM(LEN(\"E2E_TESTCITY\")) AS sum \nFROM \"E2E_TEST\".\"LOCATIONS\"\
+  \n LIMIT ?"
+checksum: 1fa7506b9a2a57ce846c07afa8555cd0
+queryDate: 1752537600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 7c11b729-7c3e-4051-af26-dcc453c5b05d
+    type: table
+    name: LOCATIONS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.LOCATIONS
+    displayName: LOCATIONS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

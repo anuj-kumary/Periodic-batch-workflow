@@ -1,0 +1,40 @@
+name: 272f24bf2497d5f37e36f3904bc1a254
+fullyQualifiedName: hktest.272f24bf2497d5f37e36f3904bc1a254
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"ba0b673e-2967-483d-bf95-f4f3b99305c6\",\"type\":\"table\"\
+        ,\"name\":\"PARTSUPP\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP\"\
+        ,\"description\":\"Partsupp data as defined by TPC-H\",\"displayName\":\"\
+        PARTSUPP\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 67.0
+users: []
+query: "SELECT avg(\"PS_SUPPKEY\") AS mean, count(\"PS_SUPPKEY\") AS \"valuesCount\"\
+  , count(DISTINCT \"PS_SUPPKEY\") AS \"distinctCount\", MIN(\"PS_SUPPKEY\") AS min,\
+  \ MAX(\"PS_SUPPKEY\") AS max, coalesce(SUM(CASE WHEN (\"PS_SUPPKEY\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"PS_SUPPKEY\") AS stddev, SUM(\"\
+  PS_SUPPKEY\") AS sum \nFROM \"TPCH_SF1\".\"PARTSUPP\"\n LIMIT ?"
+checksum: 272f24bf2497d5f37e36f3904bc1a254
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: ba0b673e-2967-483d-bf95-f4f3b99305c6
+    type: table
+    name: PARTSUPP
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PARTSUPP
+    description: Partsupp data as defined by TPC-H
+    displayName: PARTSUPP
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

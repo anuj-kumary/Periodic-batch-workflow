@@ -1,0 +1,35 @@
+name: 22acd0769eba93137d508a4bc63daf79
+fullyQualifiedName: hktest.22acd0769eba93137d508a4bc63daf79
+owners: []
+duration: 108.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"TABLE_NAME\")) AS mean, count(\"TABLE_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"TABLE_NAME\") AS \"distinctCount\", MIN(LEN(\"TABLE_NAME\"))\
+  \ AS min, MAX(LEN(\"TABLE_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"TABLE_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"TABLE_NAME\"))\
+  \ AS stddev, SUM(LEN(\"TABLE_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"\
+  ALERTS_ANOMALY_DETECTION\"\n LIMIT ?"
+checksum: 22acd0769eba93137d508a4bc63daf79
+queryDate: 1748563200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 7459035c-b190-4009-a3ff-280afbf84319
+    type: table
+    name: ALERTS_ANOMALY_DETECTION
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_ANOMALY_DETECTION
+    displayName: ALERTS_ANOMALY_DETECTION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

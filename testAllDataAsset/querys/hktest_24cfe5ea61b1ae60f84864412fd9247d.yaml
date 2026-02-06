@@ -1,0 +1,33 @@
+name: 24cfe5ea61b1ae60f84864412fd9247d
+fullyQualifiedName: hktest.24cfe5ea61b1ae60f84864412fd9247d
+owners: []
+duration: 110.0
+users: []
+query: "WITH \"3ba600b22d9bdd208addfc7e734daa56_rnd\" AS \n(SELECT \"PROMOTION_1\"\
+  .\"P_COST\" AS \"P_COST\" \nFROM \"TPCDS_SF10TCL\".\"PROMOTION\" AS \"PROMOTION_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"3ba600b22d9bdd208addfc7e734daa56_sample\" AS \n\
+  (SELECT \"3ba600b22d9bdd208addfc7e734daa56_rnd\".\"P_COST\" AS \"P_COST\" \nFROM\
+  \ \"3ba600b22d9bdd208addfc7e734daa56_rnd\")\n SELECT avg(\"P_COST\") AS mean, count(\"\
+  P_COST\") AS \"valuesCount\", count(DISTINCT \"P_COST\") AS \"distinctCount\", MIN(\"\
+  P_COST\") AS min, MAX(\"P_COST\") AS max, coalesce(SUM(CASE WHEN (\"P_COST\" IS\
+  \ ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"P_COST\") AS stddev,\
+  \ SUM(\"P_COST\") AS sum \nFROM \"3ba600b22d9bdd208addfc7e734daa56_sample\"\n LIMIT\
+  \ ?"
+checksum: 24cfe5ea61b1ae60f84864412fd9247d
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 98589dfc-124b-44f8-8453-2f5912d1bf05
+    type: table
+    name: PROMOTION
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF10TCL.PROMOTION
+    displayName: PROMOTION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

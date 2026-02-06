@@ -1,0 +1,27 @@
+name: 22692da49510c762b2b793af6ce199f0
+fullyQualifiedName: hktest.22692da49510c762b2b793af6ce199f0
+owners: []
+duration: 595.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"EMAIL\") ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"EMAIL\") ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY LEN(\"EMAIL\") ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERINFO\"\n LIMIT ?"
+checksum: 22692da49510c762b2b793af6ce199f0
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e4a80c06-2eeb-4d82-8a71-61523f5b7361
+    type: table
+    name: CUSTOMERINFO
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERINFO
+    displayName: CUSTOMERINFO
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
