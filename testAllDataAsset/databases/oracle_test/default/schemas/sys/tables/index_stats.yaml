@@ -1,0 +1,413 @@
+name: index_stats
+fullyQualifiedName: oracle_test.default.sys.index_stats
+tableType: View
+columns:
+  - name: height
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: height of the b-tree
+    fullyQualifiedName: oracle_test.default.sys.index_stats.height
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blocks
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: blocks allocated to the segment
+    fullyQualifiedName: oracle_test.default.sys.index_stats.blocks
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    description: name of the index
+    fullyQualifiedName: oracle_test.default.sys.index_stats.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: partition_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    description: "name of the index partition, if partitioned"
+    fullyQualifiedName: oracle_test.default.sys.index_stats.partition_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of leaf rows (values in the index)
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_blks
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of leaf blocks in the b-tree
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_blks
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of the lengths of all the leaf rows
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_blk_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: useable space in a leaf block
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_blk_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: br_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of branch rows
+    fullyQualifiedName: oracle_test.default.sys.index_stats.br_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: br_blks
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of branch blocks in the b-tree
+    fullyQualifiedName: oracle_test.default.sys.index_stats.br_blks
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: br_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of the lengths of all the branch blocks in the b-tree
+    fullyQualifiedName: oracle_test.default.sys.index_stats.br_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: br_blk_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: useable space in a branch block
+    fullyQualifiedName: oracle_test.default.sys.index_stats.br_blk_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: del_lf_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of deleted leaf rows in the index
+    fullyQualifiedName: oracle_test.default.sys.index_stats.del_lf_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: del_lf_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: total length of all deleted rows in the index
+    fullyQualifiedName: oracle_test.default.sys.index_stats.del_lf_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: distinct_keys
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of distinct keys in the index
+    fullyQualifiedName: oracle_test.default.sys.index_stats.distinct_keys
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: most_repeated_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: how many times the most repeated key is repeated
+    fullyQualifiedName: oracle_test.default.sys.index_stats.most_repeated_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: btree_space
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: total space currently allocated in the b-tree
+    fullyQualifiedName: oracle_test.default.sys.index_stats.btree_space
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: used_space
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: total space that is currently being used in the b-tree
+    fullyQualifiedName: oracle_test.default.sys.index_stats.used_space
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pct_used
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: percent of space allocated in the b-tree that is being used
+    fullyQualifiedName: oracle_test.default.sys.index_stats.pct_used
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rows_per_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: average number of rows per distinct key
+    fullyQualifiedName: oracle_test.default.sys.index_stats.rows_per_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: blks_gets_per_access
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: Expected number of consistent mode block gets per row. This assumes
+      that a row chosen at random from the table is being searched for using the index
+    fullyQualifiedName: oracle_test.default.sys.index_stats.blks_gets_per_access
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pre_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of prefix rows (values in the index)
+    fullyQualifiedName: oracle_test.default.sys.index_stats.pre_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pre_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of lengths of all prefix rows
+    fullyQualifiedName: oracle_test.default.sys.index_stats.pre_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: opt_cmpr_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: optimal prefix compression count for the index
+    fullyQualifiedName: oracle_test.default.sys.index_stats.opt_cmpr_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: opt_cmpr_pctsave
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: percentage storage saving expected from optimal prefix compression
+    fullyQualifiedName: oracle_test.default.sys.index_stats.opt_cmpr_pctsave
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: del_lf_cmp_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of deleted rows that are within a CU
+    fullyQualifiedName: oracle_test.default.sys.index_stats.del_lf_cmp_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: prg_lf_cmp_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of purged rows that are within a CU
+    fullyQualifiedName: oracle_test.default.sys.index_stats.prg_lf_cmp_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_cmp_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of rows that are in a CU or prefix compressed
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_cmp_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_cmp_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of lengths of all prefix rows and CUs
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_cmp_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_uncmp_rows
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of rows that are neither in a CU nor prefix compressed
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_uncmp_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_uncmp_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of lengths of rows that are neither in a CU nor prefix compressed
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_uncmp_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_suf_rows_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of lengths of suffix rows
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_suf_rows_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_cmp_rows_uncmp_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of the uncompressed lengths of rows that are in a CU or prefix
+      compressed
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_cmp_rows_uncmp_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_cmp_recmp_count
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of CU recompression counts
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_cmp_recmp_count
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_cmp_lock_vec_len
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: sum of CU lock vector lengths
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_cmp_lock_vec_len
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_cmp_blks
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of blocks that have a CU or nonzero prefix column count
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_cmp_blks
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lf_uncmp_blks
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    description: number of blocks that do not have a CU and have a zero prefix column
+      count
+    fullyQualifiedName: oracle_test.default.sys.index_stats.lf_uncmp_blks
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 59a67e9df9a4d9b0d420c735b012a23a
+processedLineage: false
+entityStatus: Approved

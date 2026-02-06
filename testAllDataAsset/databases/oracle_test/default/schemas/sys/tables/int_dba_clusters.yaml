@@ -1,0 +1,310 @@
+name: int$dba_clusters
+fullyQualifiedName: oracle_test.default.sys.int$dba_clusters
+tableType: View
+columns:
+  - name: owner
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.owner
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ownerid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.ownerid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: cluster_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.cluster_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: tablespace_name
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar2(30)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.tablespace_name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pct_free
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.pct_free
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: pct_used
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.pct_used
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: key_size
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.key_size
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ini_trans
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.ini_trans
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: max_trans
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.max_trans
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: initial_extent
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.initial_extent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: next_extent
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.next_extent
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: min_extents
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.min_extents
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: max_extents
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.max_extents
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: pct_increase
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.pct_increase
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: freelists
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.freelists
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: freelist_groups
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.freelist_groups
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: avg_blocks_per_key
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.avg_blocks_per_key
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cluster_type
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.cluster_type
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: function
+    dataType: VARCHAR
+    dataLength: 15
+    dataTypeDisplay: varchar2(15)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.function
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hashkeys
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.hashkeys
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: degree
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar2(10)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.degree
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: instances
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: varchar2(10)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.instances
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cache
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.cache
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: buffer_pool
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.buffer_pool
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: flash_cache
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.flash_cache
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: cell_flash_cache
+    dataType: VARCHAR
+    dataLength: 7
+    dataTypeDisplay: varchar2(7)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.cell_flash_cache
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: single_table
+    dataType: VARCHAR
+    dataLength: 5
+    dataTypeDisplay: varchar2(5)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.single_table
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: dependencies
+    dataType: VARCHAR
+    dataLength: 8
+    dataTypeDisplay: varchar2(8)
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.dependencies
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: sharing
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.sharing
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: origin_con_id
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.int$dba_clusters.origin_con_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2e70fc268dde63e6432b428ede509ccc
+processedLineage: false
+entityStatus: Approved
