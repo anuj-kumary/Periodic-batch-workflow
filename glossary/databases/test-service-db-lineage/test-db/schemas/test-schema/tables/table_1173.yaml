@@ -1,0 +1,69 @@
+name: table_1173
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1173
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1173.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_DIM_WEEK(\n\tWEEK_ID,\n\tWEEK_DT,\n\
+  \tWEEK_END_DT,\n\tLINEAR_WEEK_OF_QUARTER,\n\tWEEK_NUMBER_OF_YEAR,\n\tLINEAR_WEEK_OF_QUARTER_BEGIN,\n\
+  \tLINEAR_WEEK_OF_QUARTER_END,\n\tQUARTER_ID,\n\tQUARTER_NUMBER,\n\tQUARTER_BUSINESS_DAYS,\n\
+  \tQUARTER_DT,\n\tQUARTER_END_DT,\n\tQUARTER_YYQQ,\n\tQUARTER_END_ABBR,\n\tYEAR_ID,\n\
+  \tYEAR_DT,\n\tYEAR_END_DT,\n\tNUMBER_OF_DAYS_IN_YEAR,\n\tYEAR_NUMBER,\n\tYEAR_ABBR,\n\
+  \tYEAR_BUSINESS_DAYS\n) as ----- SEMANTIC LAYER BEGINS\nSELECT\nDISTINCT to_char(\"\
+  DateDimWeekBeginDate\",'random')::number            AS           WEEK_ID\n,\"DateDimWeekBeginDate\"\
+  \                AS\t\t\tWEEK_DT\n,\"DateDimWeekEndDate\"                  AS\t\t\
+  \tWEEK_END_DT\n,\"DateDimLinearWeekOfQuarter\"          AS\t\t\tLINEAR_WEEK_OF_QUARTER\n\
+  ,\"DateDimWeekNumYear\"                  AS\t\t\tWEEK_NUMBER_OF_YEAR\n,\"DateDimLinearWeekOfQuarterBegin\"\
+  \     AS\t\t\tLINEAR_WEEK_OF_QUARTER_BEGIN\n,\"DateDimLinearWeekOfQuarterEnd\" \
+  \      AS\t\t\tLINEAR_WEEK_OF_QUARTER_END\n,to_char(\"DateDimQuarterBeginDate\"\
+  ,'random')::number             AS\t\t\tQUARTER_ID\n,\"DateDimQuarterNumberOfYear\"\
+  \          AS\t\t\tQUARTER_NUMBER\n,\"DateDimQuarterBusinessDays\"          AS\t\
+  \t\tQUARTER_BUSINESS_DAYS\n,\"DateDimQuarterBeginDate\"             AS\t\t\tQUARTER_DT\n\
+  ,\"DateDimQuarterEndDate\"               AS\t\t\tQUARTER_END_DT\n,\"DateDimQuarterByYearSURF\"\
+  \            AS\t\t\tQUARTER_YYQQ\n,\"DateDimQuarterEndAbbreviation\"       AS\t\
+  \t\tQUARTER_END_ABBR\n,to_char(\"DateDimYearBeginDate\",'random')::number      \
+  \       AS\t\t\tYEAR_ID\n,\"DateDimYearBeginDate\"                AS\t\t\tYEAR_DT\n\
+  ,\"DateDimYearEndDate\"                  AS\t\t\tYEAR_END_DT\n,\"DateDimNumberOfDaysInYear\"\
+  \           AS\t\t\tNUMBER_OF_DAYS_IN_YEAR\n,\"DateDimYearNumber\"             \
+  \      AS\t\t\tYEAR_NUMBER\n,\"DateDimYearAbbreviation\"             AS\t\t\tYEAR_ABBR\n\
+  ,\"DateDimYearBusinessDays\"             AS\t\t\tYEAR_BUSINESS_DAYS\nFROM\nODS_LS.SURF.DATE_DIMENSION\
+  \  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

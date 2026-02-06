@@ -1,0 +1,59 @@
+name: table_1170
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1170
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1170.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SF_MIGRATION_COLUMN_STATS_V(\n\tRECORD_ID,\n\
+  \tSF_ACCOUNT,\n\tSF_DATABASE,\n\tSCHEMA,\n\t\"TABLE\",\n\tBD_COLUMN,\n\tBD_DATATYPE,\n\
+  \tSF_COLUMN_AVAILABILITY,\n\tSF_COLUMN_MAPPING,\n\tPCT_MATCH,\n\tSF_DATATYPE,\n\t\
+  SF_TABLE_FOUND,\n\tBD_CONFIRMATION,\n\tIS_SENSITIVE,\n\tMANUAL_CHECK,\n\tCREATED_TIMESTAMP\n\
+  ) as\nSELECT RECORD_ID,\n    SF_ACCOUNT,\n\tSF_DATABASE,\n\t\"SCHEMA\",\n\t\"TABLE\"\
+  ,\n\tBD_COLUMN,\n\tBD_DATATYPE,\n\tSF_COLUMN_AVAILABILITY,\n\tSF_COLUMN_MAPPING,\n\
+  \tPCT_MATCH,\n    SF_DATATYPE,\n\tSF_TABLE_FOUND,\n    BD_CONFIRMATION,\n    IS_SENSITIVE,\n\
+  \    MANUAL_CHECK,\n\tCREATED_TIMESTAMP\nFROM (\n    SELECT RECORD_ID,\n    SF_ACCOUNT,\n\
+  \tSF_DATABASE,\n\t\"SCHEMA\",\n\t\"TABLE\",\n\tBD_COLUMN,\n\tBD_DATATYPE,\n\tSF_COLUMN_AVAILABILITY,\n\
+  \tSF_COLUMN_MAPPING,\n\tPCT_MATCH,\n    SF_DATATYPE,\n\tSF_TABLE_FOUND,\n    BD_CONFIRMATION,\n\
+  \    IS_SENSITIVE,\n    MANUAL_CHECK,\n\tCREATED_TIMESTAMP,\n           ROW_NUMBER()\
+  \ OVER (PARTITION BY SF_ACCOUNT,SF_DATABASE,\"SCHEMA\",\"TABLE\",BD_COLUMN ORDER\
+  \ BY created_timestamp DESC) AS rn\n    FROM SF_MIGRATION_COLUMN_STATS\n) AS subquery\n\
+  WHERE rn = 'random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

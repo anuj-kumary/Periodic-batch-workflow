@@ -1,0 +1,90 @@
+name: table_1114
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1114
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1114.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TTRF_QM_BACKLOG_SNAPSHOT(\n\tSNAPSHOT_DATE,\n\
+  \tSNAPSHOT_DATE_YEAR,\n\tSNAPSHOT_DATE_MONTH,\n\tSNAPSHOT_DATE_QUARTER,\n\tSNAPSHOT_DATE_YYYYMM,\n\
+  \tASSIGNED_TO_OLD,\n\tU_PRINCIPAL_AGENT,\n\tASSIGNED_TO,\n\t_ASSIGNED_TO_SYSID_COMBINED,\n\
+  \tU_PRINCIPAL_AGENT_SYSID,\n\tASSIGNED_TO_SYSID,\n\t_MANAGER_COMBINED,\n\tPRINCIPAL_AGENT_MANAGER,\n\
+  \tMANAGER,\n\t_LOCATION_COMBINED,\n\tPRINCIPAL_AGENT_LOCATION,\n\t_LOCATION,\n\t\
+  _SUPPORT_REGION_OLD,\n\tPRINCIPAL_AGENT_SUPPORT_REGION_NEW_CALC,\n\t_SUPPORT_REGION,\n\
+  \tNUMBER,\n\tEXTRACT_DATE,\n\tPRIORITY,\n\tUG_PARENT,\n\tASSIGNMENT_GROUP,\n\tSYS_CREATED_ON,\n\
+  \tSTATE,\n\tU_PRIMARY_BLOCKER,\n\tBLOCKING_REASON,\n\tSYS_ID,\n\tU_LAST_UPDATE_TO_CUSTOMER,\n\
+  \tPROBLEM,\n\tU_ALERT_TYPE,\n\tCONTACT_TYPE,\n\tREGULATED_MARKET,\n\tSERVICE_LEVEL,\n\
+  \tACTIVE,\n\tDUE_DATE,\n\tCOMPANY,\n\tIS_ACCOUNT,\n\tIS_CUSTOMER,\n\tPARENT,\n\t\
+  PARENT_ASSIGNMENT_GROUP,\n\tGROUP1,\n\tGROUP2,\n\tACCT_COUNTRY,\n\tCURRENT_MONTH,\n\
+  \tCURRENT_QUARTER,\n\tCURRENT_YEAR,\n\tDATE_DIFF_SNAPSHOT_LAST_UPDATE,\n\tDATE_DIFF_SNAPSHOT_DUE_DATE,\n\
+  \tEXTRACT_DATE_WEEK_NUMBER,\n\tLAST_UPDATE_TO_CUSTOMER_WEEK_NUMBER,\n\tDUE_DATE_WEEK_NUMBER\n\
+  ) as\nselect\nEXTRACT_DATE as SNAPSHOT_DATE,\nyear(EXTRACT_DATE) as SNAPSHOT_DATE_YEAR,\n\
+  TO_DATE(DATE_TRUNC('random', EXTRACT_DATE)) as SNAPSHOT_DATE_MONTH,\n'random'||quarter(EXTRACT_DATE)||'random'||year(EXTRACT_DATE)\
+  \ as SNAPSHOT_DATE_QUARTER,\nYEAR(EXTRACT_DATE)||MONTH(EXTRACT_DATE) AS SNAPSHOT_DATE_YYYYMM,\n\
+  \n*,\n\nCase when month(EXTRACT_DATE)||'random'||year(EXTRACT_DATE) = month(current_date)||'random'||year(current_date)\
+  \ then 'random' else 'random' End current_month,\nCase when 'random'||quarter(EXTRACT_DATE)||'random'||year(EXTRACT_DATE)\
+  \ = 'random'||quarter(current_date)||'random'||year(current_date) then 'random'\
+  \ else 'random' End current_quarter,\nCase when year(EXTRACT_DATE)=year(current_date)\
+  \ then 'random' else 'random' end current_year,\n\ndatediff('random', u_last_update_to_customer,\
+  \ extract_date) DATE_DIFF_SNAPSHOT_LAST_UPDATE,\ndatediff('random', extract_date,\
+  \ DUE_DATE) DATE_DIFF_SNAPSHOT_DUE_DATE,\n\n\nCASE WHEN date_part('random', extract_date)\
+  \ = 'random' THEN 'random' -- MONDAY\nWHEN date_part('random', extract_date) = 'random'\
+  \ THEN 'random' -- TUESDAY\nWHEN date_part('random', extract_date) = 'random' THEN\
+  \ 'random' -- WEDNESDAY\nWHEN date_part('random', extract_date) = 'random' THEN\
+  \ 'random' -- THRUSDAY\nWHEN date_part('random', extract_date) = 'random' THEN 'random'\
+  \ -- FRIDAY\nWHEN date_part('random', extract_date) = 'random' THEN 'random' --\
+  \ SATURDAY\nWHEN date_part('random', extract_date) = 'random' THEN 'random' -- SUNDAY\n\
+  END EXTRACT_DATE_WEEK_NUMBER,\n\nCASE WHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- MONDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- TUESDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- WEDNESDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- THRUSDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- FRIDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- SATURDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- SUNDAY\nEND LAST_UPDATE_TO_CUSTOMER_WEEK_NUMBER,\n\
+  \nCASE WHEN date_part('random', DUE_DATE) = 'random' THEN 'random' -- MONDAY\nWHEN\
+  \ date_part('random', DUE_DATE) = 'random' THEN 'random' -- TUESDAY\nWHEN date_part('random',\
+  \ DUE_DATE) = 'random' THEN 'random' -- WEDNESDAY\nWHEN date_part('random', DUE_DATE)\
+  \ = 'random' THEN 'random' -- THRUSDAY\nWHEN date_part('random', DUE_DATE) = 'random'\
+  \ THEN 'random' -- FRIDAY\nWHEN date_part('random', DUE_DATE) = 'random' THEN 'random'\
+  \ -- SATURDAY\nWHEN date_part('random', DUE_DATE) = 'random' THEN 'random' -- SUNDAY\n\
+  END DUE_DATE_WEEK_NUMBER,\n\nfrom EDW.UTGA.TEST_QM_TTRF_MIGRATION_MVP\nwhere date_part('random',\
+  \ extract_date) not in ('random', 'random');"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

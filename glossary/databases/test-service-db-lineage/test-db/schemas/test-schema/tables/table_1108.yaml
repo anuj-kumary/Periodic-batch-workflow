@@ -1,0 +1,92 @@
+name: table_1108
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1108
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1108.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view V_RPT_HORIZONTAL_PRODUCTS(\n\tQUARTER_ID,\n\
+  \tACCOUNT_ID,\n\tTERRITORY_ID,\n\tOPTY_ID,\n\tOPTY_ITEM_ID,\n\tPRODUCT_ID,\n\tSALES_QUARTER,\n\
+  \tQUARTER_FLAG,\n\t\"4RQFLAG\",\n\tACCOUNT_NUMBER,\n\tOPPORTUNITY_NUMBER,\n\tOPPORTUNITY_CLOSE_DATE,\n\
+  \tOPPORTUNITY_STAGE,\n\tOPPORTUNITY_PARENT_STAGE,\n\tOPPORTUNITY_TYPE,\n\tLINE_ITEM_NUMBER,\n\
+  \tPRODUCT_BUSINESS_UNIT,\n\tPRODUCT_FAMILY3,\n\tPRODUCT_CODE,\n\tOPPORTUNITY_TERRITORY_SYSID,\n\
+  \tOPPORTUNITY_TERRITORY,\n\tPRODUCT_PROGRAM_TYPE,\n\tNNACV_USD,\n\tNNACV_USD_CY_FX,\n\
+  \tNNACV_OPEN_USD,\n\tNNACV_OPEN_USD_CFX,\n\tNNACV_CLOSED_USD,\n\tNNACV_CLOSED_USD_CFX,\n\
+  \tNNACV_SUBMITTED_USD,\n\tNNACV_SUBMITTED_USD_CFX,\n\tNNACV_COMMIT_USD,\n\tNNACV_COMMIT_USD_CFX,\n\
+  \tNNACV_EXPECT_USD,\n\tNNACV_EXPECT_USD_CFX,\n\tNNACV_UPSIDE_USD,\n\tNNACV_UPSIDE_USD_CFX,\n\
+  \tNNACV_MATURE_USD,\n\tNNACV_MATURE_USD_CFX,\n\tNNACV_WEIGHTED_USD,\n\tNNACV_WEIGHTED_USD_CFX,\n\
+  \tSALES_ACTIVE_PIPELINE_FLAG,\n\tOPPORTUNITY_PIPELINE_SOURCED,\n\tHORIZONTAL_TARGET_ACCOUNT_FLAG,\n\
+  \tHORIZONTAL_PRODUCT_PACKAGE,\n\tHORIZONTAL_PRODUCT,\n\tRECORD_TYPE,\n\tGEO_ID,\n\
+  \tUSER_BIN,\n\tUSER_ID,\n\tK24_REGISTERED,\n\tPARENT_MARQUEE_ACCOUNT,\n\tOPTY_PIPELINE_STATUS,\n\
+  \tACCT_KEY\n) as\n\n/*\nREVISION HISTORY:\n* 2024-06-21 - Sandeep - Create view\
+  \ V_RPT_HORIZONTAL_PRODUCTS for Now Assist, Process Mining and OT Pipeline\n\n*/\n\
+  \n\n  WITH\nCTE_PRODUCT_A AS (SELECT * FROM EDW_LS.\"PRODUCT_EM\".\"PRODUCT_DASHBOARD_SUMMARY_A\"\
+  ),\nCTE_PRODUCT_B AS (SELECT * FROM EDW_LS.\"PRODUCT_EM\".\"PRODUCT_DASHBOARD_SUMMARY_B\"\
+  ),\nDIM_TERRITORY AS (SELECT TERRITORY_ID, TERRITORY_SYSID,GEO_ID FROM CDL.ENTERPRISE.V_DIM_TERRITORY)\n\
+  \n\nSELECT\n    QUARTER_ID,\n\tACCOUNT_ID,\n\tHP.TERRITORY_ID,\n\tOPTY_ID,\n\tOPTY_ITEM_ID,\n\
+  \tPRODUCT_ID,\n\tSALES_QUARTER,\n\tQUARTER_FLAG,\n\t\"4RQFLAG\",\n\tACCOUNT_NUMBER,\n\
+  \tOPPORTUNITY_NUMBER,\n\tOPPORTUNITY_CLOSE_DATE,\n\tOPPORTUNITY_STAGE,\n\tOPPORTUNITY_PARENT_STAGE,\n\
+  \tOPPORTUNITY_TYPE,\n\tLINE_ITEM_NUMBER,\n\tPRODUCT_BUSINESS_UNIT,\n\tPRODUCT_FAMILY3,\n\
+  \tPRODUCT_CODE,\n\tOPPORTUNITY_TERRITORY_SYSID,\n\tOPPORTUNITY_TERRITORY,\n\tPRODUCT_PROGRAM_TYPE,\n\
+  \tNNACV_USD,\n\tNNACV_USD_CY_FX,\n\tNNACV_OPEN_USD,\n\tNNACV_OPEN_USD_CFX,\n\tNNACV_CLOSED_USD,\n\
+  \tNNACV_CLOSED_USD_CFX,\n\tNNACV_SUBMITTED_USD,\n\tNNACV_SUBMITTED_USD_CFX,\n\t\
+  NNACV_COMMIT_USD,\n\tNNACV_COMMIT_USD_CFX,\n\tNNACV_EXPECT_USD,\n\tNNACV_EXPECT_USD_CFX,\n\
+  \tNNACV_UPSIDE_USD,\n\tNNACV_UPSIDE_USD_CFX,\n\tNNACV_MATURE_USD,\n\tNNACV_MATURE_USD_CFX,\n\
+  \tNNACV_WEIGHTED_USD,\n\tNNACV_WEIGHTED_USD_CFX,\n\tSALES_ACTIVE_PIPELINE_FLAG,\n\
+  \    OPPORTUNITY_PIPELINE_SOURCED,\n\tHORIZONTAL_TARGET_ACCOUNT_FLAG,\n\tHORIZONTAL_PRODUCT_PACKAGE,\n\
+  \tHORIZONTAL_PRODUCT,\n\tRECORD_TYPE,\n    GEO_ID,\n    USER_BIN,\n    USER_ID,\n\
+  \    K24_REGISTERED,\n    PARENT_MARQUEE_ACCOUNT,\n    OPTY_PIPELINE_STATUS,\n \
+  \   sa.\"AcctMDMID\"||sa.\"AcctNumber\" ACCT_KEY\n\n  FROM EDW_LS.PRODUCT_EM.V_EM_HORIZONTAL_PRODUCTS\
+  \ HP\n  LEFT JOIN EDW_LS.\"SALES_EM\".\"EM_SALES_ACCOUNT_RT\" sa on sa.\"AcctNumber\"\
+  \ = HP.ACCOUNT_NUMBER\n  LEFT JOIN (Select Distinct \"AccountNumber\" , 'random'\
+  \ as K24_REGISTERED from CDL_LS.MARKETING_ER.KNOWLEDGE_REGISTRATION_EXT\n   WHERE\
+  \ \"EventName\" = 'random' AND  \"Registration_Status\" =  'random'AND  \"AccountNumber\"\
+  \ Is Not  'random' AND  \"TestFlag\" = 'random' ) k24\n   ON  k24.\"AccountNumber\"\
+  \ = HP.ACCOUNT_NUMBER\n    LEFT JOIN\n        (SELECT DISTINCT \"TerritorySysID\"\
+  , \"UserBin\" USER_BIN, \"UserID\" USER_ID\n         FROM CTE_PRODUCT_A a\n    \
+  \     INNER JOIN EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\"\
+  \ = 'random'\n         WHERE a.\"Metric\" = 'random' AND dsa.\"DATA_SWITCH_FLAG\"\
+  \ = 'random'\n         UNION\n         SELECT DISTINCT \"TerritorySysID\", \"UserBin\"\
+  \ USER_BIN , \"UserID\" USER_ID\n         FROM CTE_PRODUCT_B a\n         INNER JOIN\
+  \ EDW_LS.\"CUSTOMER_EM\".\"DATA_SWITCH_FLAG\" dsa ON dsa.\"TABLE_NAME\" = 'random'\n\
+  \         WHERE a.\"Metric\" = 'random' AND dsa.\"DATA_SWITCH_FLAG\" = 'random')\
+  \ si\n    ON si.\"TerritorySysID\" = HP.OPPORTUNITY_TERRITORY_SYSID\n   LEFT JOIN\
+  \ DIM_TERRITORY TERR\n    ON TERR.TERRITORY_ID = HP.TERRITORY_ID;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

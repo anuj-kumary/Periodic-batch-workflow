@@ -1,0 +1,146 @@
+name: table_1112
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1112
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1112.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SYSAPPROVAL_APPROVER(\n\t\"SysAppSysApproval\"\
+  ,\n\t\"SysAppSysID\",\n\t\"SysAppDocumentID\",\n\t\"SysAppState\",\n\t\"SysAppSourceTable\"\
+  ,\n\t\"SysAppApprover\",\n\t\"SysAppApproverSysID\",\n\t\"SysAppSysUpdatedOn\",\n\
+  \t\"SysAppComments\",\n\t\"SysAppApprovedDate\",\n\t\"SysAppCreatedOn\",\n\t\"SysAppApproverSource\"\
+  ,\n\t\"SysAppRequestReason\",\n\t\"SysAppApprovalSubmissionDate\",\n\t\"SysAppApprovalSequence\"\
+  ,\n\t\"SysAppApproverID\",\n\t\"SysAppApproverRole\",\n\t\"SysAppApprovalSubmissionDateTimeDisplay\"\
+  ,\n\t\"SysAppOverrideApproval\",\n\t\"SysAppApprovalBranch\",\n\t\"SysAppDispositionCriteria\"\
+  ,\n\t\"SysAppActualApprover\",\n\t\"SysAppApprovalOverride\",\n\t\"SysAppApprovalQuoteId\"\
+  ,\n\t\"SysAppApprovalLevel\",\n\t\"SysAppApprovalReasonId\",\n\t\"SysAppApprovalSnQuoteVersion\"\
+  ,\n\t\"SysAppApprovalSnCartResponsibilityActionId\",\n\t\"SysAppApprovalSnCartResponsibilityId\"\
+  ,\n\t\"SysAppApprovalSnFieldValues\",\n\t\"SysAppApprovalResolutionDateTimeDisplay\"\
+  \n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"SysAppSysApproval\" as \"SysAppSysApproval\"\
+  ,\n   \"SysAppSysID\" as \"SysAppSysID\",\n   \"SysAppDocumentID\" as \"SysAppDocumentID\"\
+  ,\n   \"SysAppState\" as \"SysAppState\",\n   \"SysAppSourceTable\" as \"SysAppSourceTable\"\
+  ,\n   \"SysAppApprover\" as \"SysAppApprover\",\n   \"SysAppApproverSysID\" as \"\
+  SysAppApproverSysID\",\n   \"SysAppSysUpdatedOn\" as \"SysAppSysUpdatedOn\",\n \
+  \  \"SysAppComments\" as \"SysAppComments\",\n   \"SysAppApprovedDate\" as \"SysAppApprovedDate\"\
+  ,\n   \"SYS_CREATED_ON\" as \"SysAppCreatedOn\",\n   \"SOURCE\" as \"SysAppApproverSource\"\
+  ,\n   \"SysAppRequestReason\" as \"SysAppRequestReason\",\n  \"APPROVAL_SUBMISSION_DATE_TIME\"\
+  \ as \"SysAppApprovalSubmissionDate\",\n   \"ORDER\" as \"SysAppApprovalSequence\"\
+  ,\n   \"APPROVER_ID\" as \"SysAppApproverID\",\n   \"APPROVER_ROLE\" as \"SysAppApproverRole\"\
+  ,\n   \"SN_APPROVAL_SUBMISSION_DATE_TIME_DISPLAY\" as \"SysAppApprovalSubmissionDateTimeDisplay\"\
+  ,\n   \"SN_OVERRIDE_APPROVAL\" as \"SysAppOverrideApproval\",\n   \"APPROVAL_BRANCH\"\
+  \ as \"SysAppApprovalBranch\",\n   \"SN_DISPOSITION_CRITERIA\" as  \"SysAppDispositionCriteria\"\
+  ,\n   \"SN_ACTUAL_APPROVER\" as  \"SysAppActualApprover\",\n   \"SN_APPROVAL_OVERRIDE\"\
+  \ as \"SysAppApprovalOverride\",\n\t\"QUOTE_ID\" aS \"SysAppApprovalQuoteId\",\n\
+  \t\"APPROVER_LEVEL\" as \"SysAppApprovalLevel\",\n\t\"APPROVAL_REASON_ID\" as \"\
+  SysAppApprovalReasonId\",\n\t\"SN_QUOTE_VERSION\" as  \"SysAppApprovalSnQuoteVersion\"\
+  ,\n\t\"SN_CART_RESPONSIBILITY_ACTION_ID\" as \"SysAppApprovalSnCartResponsibilityActionId\"\
+  ,\n\t\"SN_CART_RESPONSIBILITY_ID\" as \"SysAppApprovalSnCartResponsibilityId\",\n\
+  \t\"SN_FIELD_VALUES\" as \"SysAppApprovalSnFieldValues\",\n\t\"SN_APPROVAL_RESOLUTION_DATE_TIME_DISPLAY\"\
+  \ as  \"SysAppApprovalResolutionDateTimeDisplay\"\nFROM\n(SELECT *\nFROM\n (SELECT\
+  \ \"DV_SYSAPPROVAL\" as \"SysAppSysApproval\",\n\t\t \"SYS_ID\" as \"SysAppSysID\"\
+  ,\n\t\t \"DOCUMENT_ID\" as \"SysAppDocumentID\",\n\t\t \"DV_STATE\" as \"SysAppState\"\
+  ,\n\t\t \"SOURCE_TABLE\" as \"SysAppSourceTable\",\n\t\t \"DV_APPROVER\" as \"SysAppApprover\"\
+  ,\n\t\t \"APPROVER\" as \"SysAppApproverSysID\",\n\t\t \"SYS_UPDATED_ON\" as \"\
+  SysAppSysUpdatedOn\",\n\t\t \"COMMENTS\" as \"SysAppComments\",\n\t\t 'random' as\
+  \ \"SysAppRequestReason\",\n\t\t \"X_NUVO_EAM_APPROVAL_NOTES\" as \"SysAppApprovalNotes\"\
+  ,\n\t\t \"X_NUVO_EAM_APPROVED_DATE\" as \"SysAppApprovedDate\",\n\t\t \"SYS_CREATED_ON\"\
+  \ as \"SYS_CREATED_ON\",\n\t\t \"Source_CC\" as \"SOURCE\",\n\t\t 'random' as \"\
+  APPROVAL_SUBMISSION_DATE_TIME\",\n\t\t \"ORDER\" as \"ORDER\",\n\t\t 'random' as\
+  \ \"APPROVER_ID\",\n\t\t 'random' as \"APPROVER_ROLE\",\n\t\t 'random' as \"SN_APPROVAL_SUBMISSION_DATE_TIME_DISPLAY\"\
+  ,\n\t\t 'random' as \"SN_OVERRIDE_APPROVAL\",\n\t\t \"DV_WF_ACTIVITY\" as \"APPROVAL_BRANCH\"\
+  ,\n\t\t 'random' as  \"SN_DISPOSITION_CRITERIA\",\n\t\t 'random' as  \"SN_ACTUAL_APPROVER\"\
+  ,\n\t\t 'random' as   \"SN_APPROVAL_OVERRIDE\",\n\t \t 'random' as \"QUOTE_ID\"\
+  ,\n\t\t 'random' as \"APPROVER_LEVEL\",\n\t\t 'random' as \"APPROVAL_REASON_ID\"\
+  ,\n\t\t 'random' as  \"SN_QUOTE_VERSION\",\n\t     'random' as \"SN_CART_RESPONSIBILITY_ACTION_ID\"\
+  ,\n\t\t 'random' as \"SN_CART_RESPONSIBILITY_ID\",\n\t\t 'random' as \"SN_FIELD_VALUES\"\
+  ,\n\t\t 'random' as  \"SN_APPROVAL_RESOLUTION_DATE_TIME_DISPLAY\"\n  FROM\n\t(SELECT\
+  \ \"DV_SYSAPPROVAL\" as \"DV_SYSAPPROVAL\",\n\t\t\t\"SYS_ID\" as \"SYS_ID\",\n\t\
+  \t\t\"DOCUMENT_ID\" as \"DOCUMENT_ID\",\n\t\t\t\"DV_STATE\" as \"DV_STATE\",\n\t\
+  \t\t\"SOURCE_TABLE\" as \"SOURCE_TABLE\",\n\t\t\t\"DV_APPROVER\" as \"DV_APPROVER\"\
+  ,\n\t\t\t\"APPROVER\" as \"APPROVER\",\n\t\t\t\"SYS_UPDATED_ON\" as \"SYS_UPDATED_ON\"\
+  ,\n\t\t\t\"COMMENTS\" as \"COMMENTS\",\n\t\t\t\"ORDER\" as \"ORDER\",\n\t\t\t\"\
+  U_REQUEST_REASON\" as \"U_REQUEST_REASON\",\n\t\t\t\"X_NUVO_EAM_APPROVAL_NOTES\"\
+  \ as \"X_NUVO_EAM_APPROVAL_NOTES\",\n\t\t\t\"X_NUVO_EAM_APPROVED_DATE\" as \"X_NUVO_EAM_APPROVED_DATE\"\
+  ,\n\t\t\t\"SYS_CREATED_ON\" as \"SYS_CREATED_ON\",\n            \"DV_WF_ACTIVITY\"\
+  \ AS \"DV_WF_ACTIVITY\",\n\t\t\t'random' as \"Source_CC\"\n\t FROM RDS_SHARE.\"\
+  SURF\".\"SYSAPPROVAL_APPROVER\")\"SURF\"\n  UNION ALL SELECT 'random' as \"SysAppSysApproval\"\
+  ,\n\t\t\t\t   \"ROWID\"  as \"SysAppSysID\",\n\t\t\t\t   \"QUOTENUMBER\" as \"SysAppDocumentID\"\
+  ,\n\t\t\t\t   \"APPROVAL_STATUS\" as \"SysAppState\",\n\t\t\t\t   'random' as \"\
+  SysAppSourceTable\",\n\t\t\t\t   \"APPROVER_NAME\" as \"SysAppApprover\",\n\t\t\t\
+  \t   'random' as \"SysAppApproverSysID\",\n\t\t\t\t   'random' as \"SysAppSysUpdatedOn\"\
+  ,\n\t\t\t\t   \"APPROVER_COMMENTS\" as \"SysAppComments\",\n\t\t\t\t   \"APPROVAL_REASON_NAME\"\
+  \ as \"SysAppRequestReason\",\n\t\t\t\t   \"APPROVER_COMMENTS\" as \"SysAppApprovalNotes\"\
+  ,\n\t\t\t\t   \"APPROVAL_RESOLUTION_DATE_TIME\" as \"SysAppApprovedDate\",\n\t\t\
+  \t\t   'random' as \"SYS_CREATED_ON\",\n\t\t\t\t   \"Source_CC\" as \"SOURCE\",\n\
+  \t\t\t\t   \"APPROVAL_SUBMISSION_DATE_TIME\" as \"APPROVAL_SUBMISSION_DATE_TIME\"\
+  ,\n\t\t\t\t   \"APPROVAL_SEQUENCE\" as \"ORDER\",\n\t\t\t\t   \"APPROVER_ID\" as\
+  \ \"APPROVER_ID\",\n\t\t\t\t   \"APPROVER_ROLE\" as \"APPROVER_ROLE\",\n\t\t\t\t\
+  \   \"SN_APPROVAL_SUBMISSION_DATE_TIME_DISPLAY\" as \"SN_APPROVAL_SUBMISSION_DATE_TIME_DISPLAY\"\
+  ,\n\t\t\t\t   \"SN_OVERRIDE_APPROVAL\" as \"SN_OVERRIDE_APPROVAL\",\n\t\t\t\t  \
+  \ \"APPROVAL_BRANCH\" as \"APPROVAL_BRANCH\",\n\t\t\t\t   \"SN_DISPOSITION_CRITERIA\"\
+  \ as  \"SN_DISPOSITION_CRITERIA\",\n\t\t\t\t   \"SN_ACTUAL_APPROVER\" as  \"SN_ACTUAL_APPROVER\"\
+  ,\n\t\t\t\t   \"SN_APPROVAL_OVERRIDE\" as  \"SN_APPROVAL_OVERRIDE\",\n\t\t\t\t \
+  \  \"QUOTE_ID\" aS \"QUOTE_ID\",\n\t\t\t\t   \"APPROVER_LEVEL\" as \"APPROVER_LEVEL\"\
+  ,\n\t\t\t\t   \"APPROVAL_REASON_ID\" as \"APPROVAL_REASON_ID\",\n\t\t\t\t   \"SN_QUOTE_VERSION\"\
+  \ as  \"SN_QUOTE_VERSION\",\n\t\t\t\t   \"SN_CART_RESPONSIBILITY_ACTION_ID\" as\
+  \ \"SN_CART_RESPONSIBILITY_ACTION_ID\",\n\t\t\t\t   \"SN_CART_RESPONSIBILITY_ID\"\
+  \ as \"SN_CART_RESPONSIBILITY_ID\",\n\t\t\t\t   \"SN_FIELD_VALUES\" as \"SN_FIELD_VALUES\"\
+  ,\n\t\t\t\t   \"SN_APPROVAL_RESOLUTION_DATE_TIME_DISPLAY\" as  \"SN_APPROVAL_RESOLUTION_DATE_TIME_DISPLAY\"\
+  \n  FROM\n\t(SELECT \"APPROVER_NAME\" as \"APPROVER_NAME\",\n\t\t\t\"APPROVER_COMMENTS\"\
+  \ as \"APPROVER_COMMENTS\",\n\t\t\t\"APPROVAL_SEQUENCE\" as \"APPROVAL_SEQUENCE\"\
+  ,\n\t\t\t\"APPROVAL_STATUS\" as \"APPROVAL_STATUS\",\n\t\t\t\"APPROVAL_REASON_NAME\"\
+  \ as \"APPROVAL_REASON_NAME\",\n\t\t\t\"APPROVAL_RESOLUTION_DATE_TIME\" as \"APPROVAL_RESOLUTION_DATE_TIME\"\
+  ,\n\t\t\t\"ITEMSTATE\" as \"ITEMSTATE\",\n\t\t\t\"QUOTENUMBER\" as \"QUOTENUMBER\"\
+  ,\n\t\t\t\"APPROVAL_BRANCH\" as \"APPROVAL_BRANCH\",\n\t\t\t\"APPROVER_ID\" as \"\
+  APPROVER_ID\",\n\t\t\t\"APPROVER_ROLE\" as \"APPROVER_ROLE\",\n\t\t\t\"APPROVAL_SUBMISSION_DATE_TIME\"\
+  \ as \"APPROVAL_SUBMISSION_DATE_TIME\",\n\t\t\t\"SN_OVERRIDE_APPROVAL\" as \"SN_OVERRIDE_APPROVAL\"\
+  ,\n\t\t\t\"SN_APPROVAL_SUBMISSION_DATE_TIME_DISPLAY\" as \"SN_APPROVAL_SUBMISSION_DATE_TIME_DISPLAY\"\
+  ,\n\t\t\t'random' as \"Source_CC\",\n\t\t\t\"SN_DISPOSITION_CRITERIA\" as  \"SN_DISPOSITION_CRITERIA\"\
+  ,\n\t\t\t\"SN_ACTUAL_APPROVER\" as  \"SN_ACTUAL_APPROVER\",\n\t\t\t\"SN_APPROVAL_OVERRIDE\"\
+  \ as  \"SN_APPROVAL_OVERRIDE\",\n\t\t\tTO_CHAR(\"ROWID\") as \"ROWID\",\n\t\t\t\"\
+  QUOTE_ID\" aS \"QUOTE_ID\",\n\t\t\t\"APPROVER_LEVEL\" as \"APPROVER_LEVEL\",\n\t\
+  \t\t\"APPROVAL_REASON_ID\" as \"APPROVAL_REASON_ID\",\n\t\t\t\"SN_QUOTE_VERSION\"\
+  \ as  \"SN_QUOTE_VERSION\",\n\t\t\t\"SN_CART_RESPONSIBILITY_ACTION_ID\" as \"SN_CART_RESPONSIBILITY_ACTION_ID\"\
+  ,\n            \"SN_CART_RESPONSIBILITY_ID\" as \"SN_CART_RESPONSIBILITY_ID\",\n\
+  \t\t    \"SN_FIELD_VALUES\" as \"SN_FIELD_VALUES\",\n\t    \t\"SN_APPROVAL_RESOLUTION_DATE_TIME_DISPLAY\"\
+  \ as  \"SN_APPROVAL_RESOLUTION_DATE_TIME_DISPLAY\"\n\t FROM RDS_SHARE.\"CALLIDUS\"\
+  .\"APPROVAL_REQUESTS\"\n\t WHERE (\"ITEMSTATE\" = 'random'\n\t\t\tOR (\"ITEMSTATE\"\
+  ) IS NULL) )\"CALLIDUS\"))Union_1;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

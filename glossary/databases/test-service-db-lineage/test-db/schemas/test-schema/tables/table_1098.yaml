@@ -1,0 +1,83 @@
+name: table_1098
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1098
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1098.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_TARGETS(\n\t\"TerritorySysID\"\
+  ,\n\t\"SalesQuarter\",\n\t\"ExpertServicesTarget\",\n\t\"CustomerServicesTarget\"\
+  ,\n\t\"TrainingTarget\",\n\t\"TotalServicesTarget\",\n\t\"FSPNewLogoTarget\",\n\t\
+  \"PSTerrPSRegionValue\",\n\t\"PSTerrAreaValue\",\n\t\"PSTerrMajorAreaValue\",\n\t\
+  \"PSTerrGeoValue\"\n) as\n\n\n/* Comments retained from HANA input file */\n\n /*****************************************************************************************************************************\n\
+  \ \t\t* Project  Name              :     Unified SelfServer Project\n \t\t* Project\
+  \ \t\t\t\t\t :\n \t\t* Object Name \t\t\t\t :     \"ANALYTICS_SELFSERVICE\".\"ANALYTICS_SELFSERVICE.TABLEFUNCTIONS::UNIFIEDSS_FACT_SERVICES_TARGET\"\
+  \n \t\t* Development Request # \t :\n \t\t* Brief Description          : \t   Services\
+  \ Fact Data\n \t\t* Developed By               :     Venkata Ravi Kadali\n \t\t\
+  * Date Created               : \t   Jun 1st 2021\n \t\t* --------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* REVISION HISTORY:\n \t\t*----------------------------------------------------------------------------------------------------------------------\n\
+  \ \t\t* Swetha Bobba : 24-Nov-2021: Replacement of SasleSelfServiceMat with logic\n\
+  \ \t\t* Manan Khungar: 19-Feb-2022: Added PS Territory Hierarchy to map the Services\
+  \ Targets to the territories\n ********************************************************************************************************************************/\n\
+  \n\n\n\n\n(\tselect  'random'\t\t\t                                as \"TerritorySysID\"\
+  \n \t\t\t,RIGHT(YEAR(\"ServTargetQuarterStartDate\") ||'random'|| QUARTER(\"ServTargetQuarterStartDate\"\
+  ),'random') as \"SalesQuarter\"\n \t\t\t, MAX(\"ServBookingsTarget\") \t       \
+  \         as \"ExpertServicesTarget\"\n \t\t\t, MAX(\"ServCSTarget\")\t\t\t    \
+  \            as \"CustomerServicesTarget\"\n \t\t\t, MAX(\"ServEducationTarget\"\
+  )\t                as \"TrainingTarget\"\n \t\t\t, MAX(\"ServTotalTarget\") \t\t\
+  \                as \"TotalServicesTarget\"\n \t\t\t,'random'                  \
+  \                            as \"FSPNewLogoTarget\"\n \t\t\t,\"PSTerrPSRegionValue\"\
+  \n \t\t\t,\"PSTerrAreaValue\"\n \t\t\t,\"PSTerrMajorAreaValue\"\n \t\t\t,\"PSTerrGeoValue\"\
+  \n   from \"EDW_LS\".\"CUSTOMER_PSA_EM\".\"PSSERVICES_TARGETS\"\n\n   /*\"SURF_ST\"\
+  .\"REAL-TIME-SALES.TABLEFUNCTIONS::SalesSelfServiceMat\" ()\n where \"RecordType\"\
+  \ in ('ServicesTarget','NewLogoTarget')\n   and \"DataSet\"    = 'Opportunity'*/\n\
+  \n   group by\n\"SalesQuarter\", \"PSTerrPSRegionValue\",\"PSTerrAreaValue\",\"\
+  PSTerrMajorAreaValue\",\"PSTerrGeoValue\"\n\n\n   union all\n\n   select     \"\
+  TerritorySysID\"\t\tas \"TerritorySysID\"\n \t\t\t,\"Quarter\"              as \"\
+  SalesQuarter\"\n \t\t\t, 'random' \t                as \"ExpertServicesTarget\"\n\
+  \ \t\t\t, 'random'\t\t\t            as \"CustomerServicesTarget\"\n \t\t\t, 'random'\t\
+  \                    as \"TrainingTarget\"\n \t\t\t, 'random' \t\t            as\
+  \ \"TotalServicesTarget\"\n \t\t\t, MAX(\"NewLogoTargets\") as \"FSPNewLogoTarget\"\
+  \n \t\t\t,'random'\t\t\t\t\tas \"PSTerrPSRegionValue\"\n \t\t\t,'random'       \
+  \            as \"PSTerrAreaValue\"\n \t\t\t,'random'                   as \"PSTerrMajorAreaValue\"\
+  \n \t\t\t,'random'                   as \"PSTerrGeoValue\"\n    from \"EDW_LS\"\
+  .\"SALES_EM\".\"EM_SALES_NEWLOGO_TARGETS\"\n    group by \"TerritorySysID\",  \"\
+  Quarter\"\n\n\n   );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

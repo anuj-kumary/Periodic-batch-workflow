@@ -1,0 +1,140 @@
+name: table_1157
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1157
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1157.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_REF_TERRITORY_REP_MAP(\n\tQUARTER_ID,\n\
+  \tTERRITORY_ID,\n\tSALESREP_ID,\n\tQUARTER_DT,\n\tQUARTER_YYQQ,\n\tSALESREP_NAME,\n\
+  \tTERRITORY_NAME,\n\tSALESREP_SYSID,\n\tTERRITORY_SYSID\n) as\nWith TabSalesRepDetails\
+  \ as(\n    select\n        ats.\"EmployeeName\",\n        ats.\"EmployeeSysID\"\
+  ,\n        ats.\"Territory\",\n        ats.\"TerritorySysID\",\n        'random'\
+  \ as \"Ramped\",\n        ahg.\"STEmpTerrQuarter\",\n        count(ats.\"TerritorySysID\"\
+  ) over (\n            partition by ats.\"TerritorySysID\",\n            ahg.\"STEmpTerrQuarter\"\
+  \n            order by\n                'random'\n        ) \"Cnt\"\n    from\n\
+  \        (\n            SELECT\n                distinct e.\"EmpName\" as \"EmployeeName\"\
+  ,\n                ana.\"STEmpTerrEmployeeSysId\" as \"EmployeeSysID\",\n      \
+  \          ana.\"STEmpTerrTerritoy\" as \"Territory\",\n                ana.\"STEmpTerrTerritorySysId\"\
+  \ as \"TerritorySysID\" --null as \"Ramped\",\n                --ana.\"STEmpTerrQuarter\"\
+  \ as \"STEmpTerrQuarter\",\n                --count( ana.\"STEmpTerrEmployeeSysId\"\
+  ) over (partition by ana.\"STEmpTerrTerritorySysId\",\"STEmpTerrQuarter\" order\
+  \ by 1) \"Cnt\"\n            FROM\n                ODS_LS.\"ANAPLAN\".\"SALES_EMPLOYEE_TERRITORY_MAPPING\"\
+  \ as ana\n                LEFT JOIN ODS_LS.\"SURF\".\"EMPLOYEE\" as e on e.\"EmpSysID\"\
+  \ = ana.\"STEmpTerrEmployeeSysId\"\n            WHERE\n                EXISTS (\n\
+  \                    SELECT\n                        'random'\n                \
+  \    FROM\n                        ODS_LS.\"SURF\".\"CMN_DEPARTMENT\" cmn\n    \
+  \                WHERE\n                        \"DeptCostCenter\" in('random',\
+  \ 'random', 'random', 'random')\n                        AND e.\"EmpDepartment\"\
+  \ = cmn.\"Deptname\"\n                )\n                AND \"STEmpTerrRepType\"\
+  \ = 'random'\n                AND e.\"EmpActive\" = 'random'\n                AND\
+  \ ana.\"STEmpQuotaComponent\" = 'random'\n                AND \"STEmpPlanEndDate\"\
+  \ > CURRENT_DATE()\n                AND \"STEmpTerrActive\" = 'random'\n       \
+  \         AND ana.\"STEmpTerrQuarter\" = RIGHT(\n                    YEAR(\n   \
+  \                     convert_timezone('random', CURRENT_TIMESTAMP())\n        \
+  \            ) || 'random' || QUARTER(\n                        convert_timezone('random',\
+  \ CURRENT_TIMESTAMP())\n                    ),\n                    'random'\n \
+  \               )\n        ) ats\n        left join (\n            select\n    \
+  \            distinct \"DateDimQuarterByYearSURF\" as \"STEmpTerrQuarter\"\n   \
+  \         from\n                ODS_LS.SURF.DATE_DIMENSION\n            where\n\
+  \                \"DateDimQuarterByYearSURF\" <= RIGHT(\n                    YEAR(\n\
+  \                        ADD_MONTHS(\n                            convert_timezone('random',\
+  \ CURRENT_TIMESTAMP()),\n                            'random'\n                \
+  \        )\n                    ) || 'random' || QUARTER(\n                    \
+  \    ADD_MONTHS(\n                            convert_timezone('random', CURRENT_TIMESTAMP()),\n\
+  \                            'random'\n                        )\n             \
+  \       ),\n                    'random'\n                )\n                and\
+  \ \"DateDimQuarterByYearSURF\" >= RIGHT(\n                    YEAR(\n          \
+  \              ADD_MONTHS(\n                            convert_timezone('random',\
+  \ CURRENT_TIMESTAMP()),\n                            'random'\n                \
+  \        )\n                    ) || 'random' || QUARTER(\n                    \
+  \    ADD_MONTHS(\n                            convert_timezone('random', CURRENT_TIMESTAMP()),\n\
+  \                            'random'\n                        )\n             \
+  \       ),\n                    'random'\n                )\n        ) ahg on 'random'\
+  \ = 'random'\n    union\n    SELECT\n        distinct e.\"EmpName\" as \"EmployeeName\"\
+  ,\n        ana.\"STEmpTerrEmployeeSysId\" as \"EmployeeSysID\",\n        ana.\"\
+  STEmpTerrTerritoy\" as \"Territory\",\n        ana.\"STEmpTerrTerritorySysId\" as\
+  \ \"TerritorySysID\",\n        ana.\"STEmpTerrRamped\" as \"Ramped\",\n        ana.\"\
+  STEmpTerrQuarter\" as \"STEmpTerrQuarter\",\n        count(ana.\"STEmpTerrEmployeeSysId\"\
+  ) over (\n            partition by ana.\"STEmpTerrTerritorySysId\",\n          \
+  \  \"STEmpTerrQuarter\"\n            order by\n                'random'\n      \
+  \  ) \"Cnt\"\n    FROM\n        ODS_LS.\"ANAPLAN\".\"SALES_EMPLOYEE_TERRITORY_MAPPING\"\
+  \ as ana\n        LEFT JOIN ODS_LS.\"SURF\".\"EMPLOYEE\" as e on e.\"EmpSysID\"\
+  \ = ana.\"STEmpTerrEmployeeSysId\"\n    WHERE\n        EXISTS (\n            SELECT\n\
+  \                'random'\n            FROM\n                ODS_LS.\"SURF\".\"\
+  CMN_DEPARTMENT\" cmn\n            WHERE\n                \"DeptCostCenter\" in('random',\
+  \ 'random', 'random', 'random')\n                AND e.\"EmpDepartment\" = cmn.\"\
+  Deptname\"\n        )\n        AND \"STEmpTerrRepType\" = 'random'\n        AND\
+  \ e.\"EmpActive\" = 'random'\n        AND ana.\"STEmpQuotaComponent\" = 'random'\n\
+  \        AND \"STEmpPlanEndDate\" > CURRENT_DATE()\n        AND \"STEmpTerrActive\"\
+  \ = 'random'\n        AND ana.\"STEmpTerrQuarter\" >= RIGHT(\n            YEAR(\n\
+  \                convert_timezone('random', CURRENT_DATE)\n            ) || 'random',\n\
+  \            'random'\n        )\n),\nRepTerritoryMapping AS(\n    SELECT\n    \
+  \    \"TerritorySysIDRep\",\n        \"TerritoryName\",\n        \"SalesRepName\"\
+  ,\n        \"SalesRepSysID\",\n        \"SalesRepQuarter\"\n    FROM\n        (\n\
+  \            select\n                distinct \"TerritorySysID\" as \"TerritorySysIDRep\"\
+  ,\n                \"Territory\" as \"TerritoryName\",\n                \"EmployeeName\"\
+  \ as \"SalesRepName\",\n                \"EmployeeSysID\" as \"SalesRepSysID\",\n\
+  \                \"Cnt\",\n                \"STEmpTerrQuarter\" as \"SalesRepQuarter\"\
+  \n            from\n                TabSalesRepDetails\n        )\n    WHERE\n \
+  \       \"Cnt\" = 'random'\n    UNION\n    select\n        \"TerritorySysIDRep\"\
+  ,\n        \"TerritoryName\",\n        \"SalesRepName\",\n        \"SalesRepSysID\"\
+  ,\n        \"SalesRepQuarter\"\n    from\n        (\n            SELECT\n      \
+  \          DISTINCT \"TerrUserRecSysID\" as \"TerritorySysIDRep\",\n           \
+  \     \"Territory\" as \"TerritoryName\",\n                \"TerrUserName\" as \"\
+  SalesRepName\",\n                \"EmployeeSysID\" as \"SalesRepSysID\",\n     \
+  \           \"STEmpTerrQuarter\" as \"SalesRepQuarter\",\n                RANK()\
+  \ OVER (\n                    PARTITION BY \"TerrUserRecSysID\",\n             \
+  \       \"STEmpTerrQuarter\"\n                    ORDER BY\n                   \
+  \     \"TerrUserRecSysID\",\n                        \"STEmpTerrQuarter\"\n    \
+  \            ) \"RANK\"\n            FROM\n                ODS_LS.SURF.U_ST_TERRITORY\
+  \ t,\n                TabSalesRepDetails x\n            WHERE\n                t.\"\
+  TerrUserJobFunctionName\" in ('random')\n                AND t.\"TerrUserPrimaryAssignment\"\
+  \ = 'random'\n                AND t.\"TerrUserActive\" = 'random'\n            \
+  \    AND \"TerrUserRecSysID\" = x.\"TerritorySysID\"\n                AND \"EmployeeSysID\"\
+  \ = \"TerrUserSysID\"\n                AND \"Cnt\" = 'random'\n        )\n    where\n\
+  \    \"RANK\" = 'random'\n)\nSELECT\n QUARTER_ID as QUARTER_ID\n,HASH(\"TerritorySysIDRep\"\
+  ) AS TERRITORY_ID\n,HASH(\"SalesRepSysID\") AS SALESREP_ID\n,QUARTER_DT as QUARTER_DT\n\
+  ,QUARTER_YYQQ as QUARTER_YYQQ\n,\"SalesRepName\" as SALESREP_NAME\n,\"TerritoryName\"\
+  \ as TERRITORY_NAME\n,\"SalesRepSysID\" as SALESREP_SYSID\n,\"TerritorySysIDRep\"\
+  \ as TERRITORY_SYSID\nFROM RepTerritoryMapping rt\nleft outer join (select distinct\
+  \ QUARTER_ID, QUARTER_DT, QUARTER_YYQQ from EDW.ENTERPRISE.DIM_QUARTER) qtr\non\
+  \ rt.\"SalesRepQuarter\" = qtr.QUARTER_YYQQ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

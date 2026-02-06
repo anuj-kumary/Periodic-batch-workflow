@@ -1,0 +1,87 @@
+name: table_1103
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1103
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1103.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TF_BI_TIE_OUT(\n\t\"Sales Quarter\",\n\t\
+  \"Source\",\n\t\"Net New ACV USD\",\n\t\"Renewal ACV USD\"\n) as\n\n\n/* Comments\
+  \ retained from HANA input file */\n\n /****************************************************************************************************************************************************\n\
+  \ * Program  Name              :     TF_BI_TIE_OUT\n * Development Request # \t\
+  \ :\n * Date Created               : \t   2021-03-29\n * Developed By          \
+  \     :     William Brown\n * Brief Description          : \t   BI Tie Out Function\n\
+  \ * Note                       :\n * ---------------------------------------------------------------------------------------------------------------------------------------------------\n\
+  \ * REVISION HISTORY:\n *----------------------------------------------------------------------------------------------------------------------------------------------------\n\
+  \ * CR#                 Date Modified           Modified By        Brief Description\
+  \ of Change\n *\n *****************************************************************************************************************************************************/\n\
+  \n\n\n\n\nwith ACCOUNT as\n  (select current_account() ACCNT from dual),\n  VAL\
+  \ as (SELECT \"NAME\",'random' as ACCOUNT from \"EDW_LS\".\"SALES_FD_EM\".\"TBLQUARTER\"\
+  \n          union all\n           SELECT CASE  WHEN RIGHT(RIGHT(YEAR(CURRENT_DATE)||'random'||QUARTER(CURRENT_DATE),'random'),\
+  \ 'random') = 'random' THEN RIGHT(YEAR(CURRENT_DATE)-'random', 'random') || 'random'\n\
+  \t\t\t   \t\t\tWHEN RIGHT(RIGHT(YEAR(CURRENT_DATE)||'random'||QUARTER(CURRENT_DATE),'random'),\
+  \ 'random') = 'random' THEN RIGHT(YEAR(CURRENT_DATE), 'random') || 'random'\n\t\t\
+  \t \t\t\tWHEN RIGHT(RIGHT(YEAR(CURRENT_DATE)||'random'||QUARTER(CURRENT_DATE),'random'),\
+  \ 'random') = 'random' THEN RIGHT(YEAR(CURRENT_DATE), 'random') || 'random'\n\t\t\
+  \t \t\t\tWHEN RIGHT(RIGHT(YEAR(CURRENT_DATE)||'random'||QUARTER(CURRENT_DATE),'random'),\
+  \ 'random') = 'random' THEN RIGHT(YEAR(CURRENT_DATE), 'random') || 'random' END\
+  \ as \"NAME\",'random' as ACCOUNT\n            from dual),\n            QUARTER_MINUS_ONE\
+  \ as(\n              select NAME from VAL\n              where ACCOUNT =(select\
+  \ ACCNT from ACCOUNT)\n            )\nSELECT (select * from QUARTER_MINUS_ONE) AS\
+  \ \"Sales Quarter\",\n       'random' as \"Source\",\n\n  (SELECT SUM(IFNULL(\"\
+  OptyItemNetNewACV_USD\", 'random'))\n   FROM \"EDW_LS\".\"SALES_EM\".\"EM_SALES_OPPORTUNITY_EXTENDED_RT\"\
+  \n   WHERE \"OptySalesQuarter\" = (select * from QUARTER_MINUS_ONE)\n     AND \"\
+  SalesActivePipeline_CC\"='random'\n     AND \"OptyItemFlagsFilter_CC\"='random'\n\
+  \     AND (\"ProductFamily3Value\"!='random'\n          or \"ProductFamily3Value\"\
+  \ IS NULL)\n     AND \"OptyType\" <> 'random'\n     AND \"OptyStage\" IN ('random',\n\
+  \                         'random')\n   GROUP BY \"OptySalesQuarter\") AS \"Net\
+  \ New ACV USD\",\n\n  (SELECT SUM(IFNULL(\"OptyItemRenewalACV_USD\", 'random'))\
+  \ AS \"Renewal ACV USD\"\n   FROM \"EDW_LS\".\"SALES_EM\".\"EM_SALES_OPPORTUNITY_EXTENDED_RT\"\
+  \n   WHERE \"OptySalesQuarter\" = (select * from QUARTER_MINUS_ONE)\n     AND \"\
+  SalesActivePipeline_CC\"='random'\n     AND \"OptyItemFlagsFilter_CC\"='random'\n\
+  \     AND (\"ProductFamily3Value\"!='random'\n          or \"ProductFamily3Value\"\
+  \ IS NULL)\n     AND \"OptyType\" = 'random'\n     AND \"OptyStage\" in ('random',\n\
+  \                         'random')\n   GROUP BY \"OptySalesQuarter\") AS \"Renewal\
+  \ ACV USD\"\nFROM dual\nUNION ALL\nSELECT \"OPPORTUNITYCLOSEQUARTER\" AS \" Sales\
+  \ Quarter\",\n       'random' as \"Source\",\n       SUM(\"USDNETNEWACV\") AS \"\
+  Net New ACV USD\",\n       SUM(\"USDRENEWALACV\") AS \"Renewal ACV USD\"\nFROM \"\
+  EDW_LS\".\"SALES_FD_EM\".\"TBLFIXEDDATANEWQTR\"\nGROUP BY \"OPPORTUNITYCLOSEQUARTER\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

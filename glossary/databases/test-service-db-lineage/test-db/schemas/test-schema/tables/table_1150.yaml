@@ -1,0 +1,188 @@
+name: table_1150
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1150
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1150.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view TTRF_DATASET_VIEW(\n\tSOURCE,\n\tU_PRINCIPAL_AGENT,\n\
+  \tU_PRINCIPAL_AGENT_SYSID,\n\tMANAGER,\n\t_LOCATION,\n\t_SUPPORT_REGION,\n\tSTATE,\n\
+  \tSYS_ID,\n\tPARENT,\n\tASSIGNMENT_GROUP,\n\tTREND_DATE,\n\tTREND_DATE_YEAR,\n\t\
+  TREND_DATE_MONTH,\n\tTREND_DATE_QUARTER,\n\tTREND_DATE_YYYYMM,\n\tSYS_CREATED_ON,\n\
+  \tU_OUTAGE_START_TIME,\n\tU_OUTAGE_END_TIME,\n\tRESOLVED_AT,\n\tNUMBER_,\n\tPSC_U_BUSINESS_AREA,\n\
+  \tNEW_PS_AFFECTED,\n\tNEW_PS_FIXED_PROVIDED,\n\tU_PRODUCT_SERVICE_CALCULATED,\n\t\
+  BUSINESS_AREA_NEW_PS_AFFECTED,\n\tBUSINESS_AREA_NEW_PS_FIXED_PROVIDED,\n\tCASE_PRIORITY,\n\
+  \tUG_PARENT,\n\t_KB_COUNT,\n\tCOMPANY,\n\tU_ALERT_TYPE,\n\tCONTACT_TYPE,\n\tGROUP_,\n\
+  \tPROBLEM,\n\tU_CASE_TYPE,\n\tREGULATED_MARKET,\n\tPARENT_ASSIGNMENT_GROUP,\n\t\
+  SERVICE_LEVEL,\n\t_SUPPORT_CASE,\n\t_SUPPORT_CASE_ALL_RESOLUTION_CODE,\n\tPRB_ASSIGNED_TO,\n\
+  \tU_MGMT_LEVEL4,\n\tACCT_COUNTRY,\n\tCASE_CSAT_SCORE,\n\tCASES_CLOSED_WITH_KB,\n\
+  \tCASES_CLOSED,\n\tPARENT_NULL_ASSIGNMENT_GRP,\n\tRELIEF_TIME_HRS,\n\tRELIEF_TIME_DAYS,\n\
+  \tCURRENT_MONTH,\n\tCURRENT_QUARTER,\n\tCURRENT_YEAR,\n\tDATE_DIFF_SNAPSHOT_LAST_UPDATE,\n\
+  \tDATE_DIFF_SNAPSHOT_DUE_DATE,\n\tEXTRACT_DATE_WEEK_NUMBER,\n\tLAST_UPDATE_TO_CUSTOMER_WEEK_NUMBER,\n\
+  \tDUE_DATE_WEEK_NUMBER\n) as\n\n\n\nselect DISTINCT 'random' as Source, U_PRINCIPAL_AGENT,\
+  \ U_PRINCIPAL_AGENT_SYSID,\nMANAGER, _LOCATION, _SUPPORT_REGION, STATE, SYS_ID,\
+  \ PARENT, ASSIGNMENT_GROUP,\nCLOSED_AT as TREND_DATE,\nyear(CLOSED_AT) as TREND_DATE_YEAR,\n\
+  TO_DATE(DATE_TRUNC('random', CLOSED_AT)) as TREND_DATE_MONTH,\n'random'||quarter(CLOSED_AT)||'random'||year(CLOSED_AT)\
+  \ as TREND_DATE_QUARTER,\nYEAR(CLOSED_AT)||MONTH(CLOSED_AT) AS TREND_DATE_YYYYMM,\n\
+  SYS_CREATED_ON, U_OUTAGE_START_TIME, U_OUTAGE_END_TIME, RESOLVED_AT,\nNUMBER AS\
+  \ NUMBER_,  PSC_U_BUSINESS_AREA,\n\nNEW_PS_AFFECTED,\nNEW_PS_FIXED_PROVIDED,\nU_PRODUCT_SERVICE_CALCULATED,\n\
+  BUSINESS_AREA_NEW_PS_AFFECTED,\nBUSINESS_AREA_NEW_PS_FIXED_PROVIDED,\n\nCASE_PRIORITY,\
+  \ UG_PARENT,  _KB_COUNT,\nCOMPANY,\n\tU_ALERT_TYPE,\n\tCONTACT_TYPE,\n    \"GROUP\"\
+  \  GROUP_,\nPROBLEM,  U_CASE_TYPE, REGULATED_MARKET, PARENT_ASSIGNMENT_GROUP,\n\
+  SERVICE_LEVEL, _SUPPORT_CASE, _SUPPORT_CASE_ALL_RESOLUTION_CODE,\nPRB_ASSIGNED_TO,\
+  \ U_MGMT_LEVEL4, ACCT_COUNTRY,\n'random' AS CASE_CSAT_SCORE,\nCASE\nWHEN STATE='random'\
+  \ and _kb_count>'random'\n    THEN number_\n    ELSE 'random'\nEND as Cases_Closed_with_KB,\n\
+  Case\n    when state='random'\n        THEN number_\n        ELSE 'random'\n   \
+  \     END as Cases_Closed,\n\n\nCASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  \nNVL(\n\n    CASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP NOT\
+  \ LIKE 'random')\n    AND _support_case = 'random'\n    THEN\n\nCASE WHEN ASSIGNMENT_GROUP\
+  \ LIKE 'random'\n        THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL\
+  \ OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', SYS_CREATED_ON,\
+  \ NVL(RESOLVED_AT, SYSDATE()))/'random'\n            ELSE DATEDIFF('random', U_OUTAGE_START_TIME,\
+  \ U_OUTAGE_END_TIME)/'random'\n            END\n        WHEN CASE_PRIORITY = 'random'\
+  \ AND CLOSED_AT >= 'random'\n         THEN\n            CASE WHEN U_OUTAGE_START_TIME\
+  \ IS NULL OR U_OUTAGE_END_TIME IS NULL\n            THEN DATEDIFF('random', SYS_CREATED_ON,\
+  \ RESOLVED_AT)/'random'\n            ELSE\n            CASE WHEN (DATEDIFF('random',\
+  \ (CASE WHEN SYS_CREATED_ON > U_OUTAGE_START_TIME THEN SYS_CREATED_ON ELSE U_OUTAGE_START_TIME\
+  \ END), NVL(U_OUTAGE_END_TIME, SYSDATE()))/'random') > 'random' THEN\n         \
+  \   (DATEDIFF('random', (CASE WHEN SYS_CREATED_ON > U_OUTAGE_START_TIME THEN SYS_CREATED_ON\
+  \ ELSE U_OUTAGE_START_TIME END), NVL(U_OUTAGE_END_TIME, SYSDATE()))/'random')\n\
+  \            ELSE 'random' END\n            END\n    ELSE\n    DATEDIFF('random',\
+  \ SYS_CREATED_ON, RESOLVED_AT)/'random'\n    END\n\n    END\n    , 'random') AS\
+  \ RELIEF_TIME_HRS,\n\n\n\n NVL(\n\n     CASE WHEN (\n    PARENT IS NULL OR\n   \
+  \ PARENT_ASSIGNMENT_GROUP NOT LIKE 'random')\n    AND _support_case = 'random'\n\
+  \    THEN\n\n CASE WHEN ASSIGNMENT_GROUP LIKE 'random'\n        THEN\n         \
+  \   CASE WHEN U_OUTAGE_START_TIME IS NULL OR U_OUTAGE_END_TIME IS NULL\n       \
+  \     THEN DATEDIFF('random', SYS_CREATED_ON, NVL(RESOLVED_AT, SYSDATE()))\n   \
+  \         ELSE DATEDIFF('random', U_OUTAGE_START_TIME, U_OUTAGE_END_TIME)\n    \
+  \        END\n        WHEN CASE_PRIORITY = 'random' AND CLOSED_AT >= 'random'\n\
+  \         THEN\n            CASE WHEN U_OUTAGE_START_TIME IS NULL OR U_OUTAGE_END_TIME\
+  \ IS NULL\n            THEN DATEDIFF('random', SYS_CREATED_ON, RESOLVED_AT)\n  \
+  \          ELSE\n            CASE WHEN\n            (DATEDIFF('random', (CASE WHEN\
+  \ SYS_CREATED_ON > U_OUTAGE_START_TIME THEN SYS_CREATED_ON ELSE U_OUTAGE_START_TIME\
+  \ END), NVL(NVL(U_OUTAGE_END_TIME, RESOLVED_AT), SYSDATE()))) > 'random' THEN\n\
+  \            (DATEDIFF('random', (CASE WHEN SYS_CREATED_ON > U_OUTAGE_START_TIME\
+  \ THEN SYS_CREATED_ON ELSE U_OUTAGE_START_TIME END), NVL(NVL(U_OUTAGE_END_TIME,\
+  \ RESOLVED_AT), SYSDATE()))) ELSE 'random' END\n            END\n    ELSE\n    DATEDIFF('random',\
+  \ SYS_CREATED_ON, RESOLVED_AT)\n    END\n\n    END\n    , 'random')/'random' AS\
+  \ RELIEF_TIME_DAYS,\n\n\n\n\n\nCase when month(CLOSED_AT)||'random'||year(CLOSED_AT)\
+  \ = month(current_date)||'random'||year(current_date) then 'random' else 'random'\
+  \ End current_month,\nCase when 'random'||quarter(CLOSED_AT)||'random'||year(CLOSED_AT)\
+  \ = 'random'||quarter(current_date)||'random'||year(current_date) then 'random'\
+  \ else 'random' End current_quarter,\nCase when year(CLOSED_AT)=year(current_date)\
+  \ then 'random' else 'random' end current_year,\n\n\n'random' AS DATE_DIFF_SNAPSHOT_LAST_UPDATE,\n\
+  'random' AS DATE_DIFF_SNAPSHOT_DUE_DATE,\n'random' AS EXTRACT_DATE_WEEK_NUMBER,\n\
+  'random' AS LAST_UPDATE_TO_CUSTOMER_WEEK_NUMBER,\n'random' AS DUE_DATE_WEEK_NUMBER\n\
+  \n\nfrom EDW.UTGA.TEST_TTRF_CASES_MIGRATION_MVP\n\n\nUNION ALL\n\n\nselect DISTINCT\
+  \ 'random' as Source,U_PRINCIPAL_AGENT, U_PRINCIPAL_AGENT_SYSID, MANAGER, _LOCATION,\
+  \ _SUPPORT_REGION, STATE, SYS_ID, PARENT, ASSIGNMENT_GROUP, CASE_CSAT_SURVEY_DATE\
+  \  AS TREND_DATE, year(CASE_CSAT_SURVEY_DATE) as TREND_DATE_YEAR,\nTO_DATE(DATE_TRUNC('random',\
+  \ CASE_CSAT_SURVEY_DATE)) as TREND_DATE_MONTH,\n'random'||quarter(CASE_CSAT_SURVEY_DATE)||'random'||year(CASE_CSAT_SURVEY_DATE)\
+  \ as TREND_DATE_QUARTER, YEAR(CASE_CSAT_SURVEY_DATE)||MONTH(CASE_CSAT_SURVEY_DATE)\
+  \ AS TREND_DATE_YYYYMM,\nSYS_CREATED_ON, U_OUTAGE_START_TIME, U_OUTAGE_END_TIME,\
+  \ RESOLVED_AT, NUMBER AS NUMBER_,  PSC_U_BUSINESS_AREA,\n\nNEW_PS_AFFECTED,\nNEW_PS_FIXED_PROVIDED,\n\
+  U_PRODUCT_SERVICE_CALCULATED,\nBUSINESS_AREA_NEW_PS_AFFECTED,\nBUSINESS_AREA_NEW_PS_FIXED_PROVIDED,\n\
+  \n\nCASE_PRIORITY, UG_PARENT,  'random' AS _KB_COUNT, COMPANY,\nU_ALERT_TYPE,\n\t\
+  CONTACT_TYPE,\n    \"GROUP\" AS GROUP_,\nPROBLEM,  U_CASE_TYPE, REGULATED_MARKET,\
+  \ PARENT_ASSIGNMENT_GROUP, SERVICE_LEVEL, _SUPPORT_CASE, _SUPPORT_CASE_ALL_RESOLUTION_CODE,\
+  \ PRB_ASSIGNED_TO, U_MGMT_LEVEL4,ACCT_COUNTRY,CASE_CSAT_SCORE,\n'random' as Cases_Closed_with_KB,\
+  \ 'random' as Cases_Closed,\n\nCASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  \n'random' as RELIEF_TIME_HRS,\n'random' as RELIEF_TIME_DAYS,\n\nCase\nwhen month(CASE_CSAT_SURVEY_DATE)||'random'||year(CASE_CSAT_SURVEY_DATE)\
+  \ = month(current_date)||'random'||year(current_date)\nthen 'random' else 'random'\
+  \ End current_month,\nCase\nwhen 'random'||quarter(CASE_CSAT_SURVEY_DATE)||'random'||year(CASE_CSAT_SURVEY_DATE)\
+  \ = 'random'||quarter(current_date)||'random'||year(current_date)\nthen 'random'\
+  \ else 'random' End current_quarter,\nCase\nwhen year(CASE_CSAT_SURVEY_DATE)=year(current_date)\
+  \ then 'random' else 'random' end current_year,\n'random' AS DATE_DIFF_SNAPSHOT_LAST_UPDATE,\n\
+  'random' AS DATE_DIFF_SNAPSHOT_DUE_DATE,\n'random' AS EXTRACT_DATE_WEEK_NUMBER,\n\
+  'random' AS LAST_UPDATE_TO_CUSTOMER_WEEK_NUMBER,\n'random' AS DUE_DATE_WEEK_NUMBER\n\
+  \nfrom EDW.UTGA.TEST_TTRF_CASES_MIGRATION_MVP\nwhere CASE_CSAT_SCORE >='random'\n\
+  \n\nUNION ALL\n\n\nSELECT\n'random' AS SOURCE,\n\tCOALESCE(U_PRINCIPAL_AGENT, ASSIGNED_TO),\n\
+  \tCOALESCE(U_PRINCIPAL_AGENT_SYSID, ASSIGNED_TO_SYSID),\n\t _MANAGER_COMBINED,\n\
+  \t _LOCATION_COMBINED,\n\t_SUPPORT_REGION,\n\tSTATE, --\n\tSYS_ID, --\n\tPARENT,\
+  \ --\n\tASSIGNMENT_GROUP, ---\n\tEXTRACT_DATE as SNAPSHOT_DATE,\nyear(EXTRACT_DATE)\
+  \ as SNAPSHOT_DATE_YEAR,\nTO_DATE(DATE_TRUNC('random', EXTRACT_DATE)) as SNAPSHOT_DATE_MONTH,\n\
+  'random'||quarter(EXTRACT_DATE)||'random'||year(EXTRACT_DATE) as SNAPSHOT_DATE_QUARTER,\n\
+  YEAR(EXTRACT_DATE)||MONTH(EXTRACT_DATE) AS SNAPSHOT_DATE_YYYYMM,\n\tSYS_CREATED_ON,\
+  \ --\n\t'random' AS U_OUTAGE_START_TIME, --NA\n\t'random' AS U_OUTAGE_END_TIME,\
+  \ --NA\n\t'random' AS RESOLVED_AT, --NA\n\tNUMBER, --\n\t'random' AS PSC_U_BUSINESS_AREA,\
+  \ --NA\n'random' AS NEW_PS_AFFECTED,--NA\n'random' AS NEW_PS_FIXED_PROVIDED, --NA\n\
+  'random' AS U_PRODUCT_SERVICE_CALCULATED, --NA\n'random' AS BUSINESS_AREA_NEW_PS_AFFECTED,\
+  \ --NA\n'random' AS BUSINESS_AREA_NEW_PS_FIXED_PROVIDED, --NA\n\n\tPRIORITY, --\n\
+  \tUG_PARENT, --\n\t'random' AS _KB_COUNT, --NA\n\tCOMPANY, --\n    \tU_ALERT_TYPE,\n\
+  \tCONTACT_TYPE,\n   'random' AS GROUP_,\n\tPROBLEM, --\n\t'random' AS U_CASE_TYPE,\
+  \ --NA\n\tREGULATED_MARKET, --\n\tPARENT_ASSIGNMENT_GROUP, --\n\tSERVICE_LEVEL,--\n\
+  \t'random' AS _SUPPORT_CASE, --NA\n\t'random' AS _SUPPORT_CASE_ALL_RESOLUTION_CODE,\
+  \ --NA\n\t'random' AS PRB_ASSIGNED_TO, --NA\n\t'random' AS U_MGMT_LEVEL4,--NA\n\t\
+  ACCT_COUNTRY, --\n\t'random' AS CASE_CSAT_SCORE,--NA\n\t'random' AS CASES_CLOSED_WITH_KB,--NA\n\
+  \t'random' AS CASES_CLOSED,\n\tCASE WHEN (\n    PARENT IS NULL OR\n    PARENT_ASSIGNMENT_GROUP\
+  \ NOT LIKE 'random')\n        THEN 'random' ELSE\n        'random' END AS PARENT_NULL_ASSIGNMENT_GRP,\n\
+  \t'random' AS RELIEF_TIME_HRS, --NA\n\t'random' AS RELIEF_TIME_DAYS, --NA\nCase\
+  \ when month(EXTRACT_DATE)||'random'||year(EXTRACT_DATE) = month(current_date)||'random'||year(current_date)\
+  \ then 'random' else 'random' End current_month,\nCase when 'random'||quarter(EXTRACT_DATE)||'random'||year(EXTRACT_DATE)\
+  \ = 'random'||quarter(current_date)||'random'||year(current_date) then 'random'\
+  \ else 'random' End current_quarter,\nCase when year(EXTRACT_DATE)=year(current_date)\
+  \ then 'random' else 'random' end current_year,\n\ndatediff('random', u_last_update_to_customer,\
+  \ extract_date) DATE_DIFF_SNAPSHOT_LAST_UPDATE,\ndatediff('random', extract_date,\
+  \ DUE_DATE) DATE_DIFF_SNAPSHOT_DUE_DATE,\n\nCASE WHEN date_part('random', extract_date)\
+  \ = 'random' THEN 'random' -- MONDAY\nWHEN date_part('random', extract_date) = 'random'\
+  \ THEN 'random' -- TUESDAY\nWHEN date_part('random', extract_date) = 'random' THEN\
+  \ 'random' -- WEDNESDAY\nWHEN date_part('random', extract_date) = 'random' THEN\
+  \ 'random' -- THRUSDAY\nWHEN date_part('random', extract_date) = 'random' THEN 'random'\
+  \ -- FRIDAY\nWHEN date_part('random', extract_date) = 'random' THEN 'random' --\
+  \ SATURDAY\nWHEN date_part('random', extract_date) = 'random' THEN 'random' -- SUNDAY\n\
+  END EXTRACT_DATE_WEEK_NUMBER,\n\nCASE WHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- MONDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- TUESDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- WEDNESDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- THRUSDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- FRIDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- SATURDAY\nWHEN date_part('random', u_last_update_to_customer)\
+  \ = 'random' THEN 'random' -- SUNDAY\nEND LAST_UPDATE_TO_CUSTOMER_WEEK_NUMBER,\n\
+  \nCASE WHEN date_part('random', DUE_DATE) = 'random' THEN 'random' -- MONDAY\nWHEN\
+  \ date_part('random', DUE_DATE) = 'random' THEN 'random' -- TUESDAY\nWHEN date_part('random',\
+  \ DUE_DATE) = 'random' THEN 'random' -- WEDNESDAY\nWHEN date_part('random', DUE_DATE)\
+  \ = 'random' THEN 'random' -- THRUSDAY\nWHEN date_part('random', DUE_DATE) = 'random'\
+  \ THEN 'random' -- FRIDAY\nWHEN date_part('random', DUE_DATE) = 'random' THEN 'random'\
+  \ -- SATURDAY\nWHEN date_part('random', DUE_DATE) = 'random' THEN 'random' -- SUNDAY\n\
+  END DUE_DATE_WEEK_NUMBER\n\n    FROM\n    EDW.UTGA.TTRF_QM_BACKLOG_SNAPSHOT\n  \
+  \  WHERE date_part('random', extract_date) not in ('random', 'random')\n\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,80 @@
+name: table_1106
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1106
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1106.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view UNIFIEDSS_FACT_SALES_QUOTE(\n\t\"LineItemNumber\"\
+  ,\n\t\"QuoteSysID\",\n\t\"OptyItemProductSysID\",\n\t\"QuoteOpportunitySysId\",\n\
+  \t\"OptyTerritorySysID\",\n\t\"OptyAccountSysID\",\n\t\"LineItemOriginalNNACV_USD\"\
+  ,\n\t\"LineItemNNACV_USD\",\n\t\"QuoteNNACV_USD\",\n\t\"QuoteNNACV_LocalCurrency\"\
+  ,\n\t\"OptySalesQuarter\",\n\t\"QuoteCreatedOn\",\n\t\"QuoteStage\",\n\t\"OptyItemProdCode\"\
+  ,\n\t\"QuoteCreatedQuarter\",\n\t\"OptyItemFlaggedBuiltInUpsell\",\n\t\"OptyItemHasResetLines\"\
+  ,\n\t\"SalesActivePipeline\",\n\t\"OptyItemFlagged\"\n) as\n\nSelect *,CASE when\
+  \ \"OptyItemFlaggedBuiltInUpsell\"='random' and \"OptyItemHasResetLines\" ='random'\
+  \ then 'random' ELSE 'random' END \"OptyItemFlagged\"\n from\n (\n  Select \"OptyItemLineItemNumber\"\
+  \ \"LineItemNumber\"\n \t,\"QuoteSysID\"\n \t,\"OptyItemProductSysID\"\n \t,\"QuoteOpportunitySysId\"\
+  \n \t,CASE WHEN \"OptyTerritorySysID\" IS NULL OR \"OptyTerritorySysID\"='random'\
+  \ THEN 'random'\n \t\t  ELSE \"OptyTerritorySysID\" END \"OptyTerritorySysID\"\n\
+  \ \t,\"OptyAccountSysID\"\n \t,\"OptyItemNetNewACVAmount_USD\" \"LineItemOriginalNNACV_USD\"\
+  \n    ,\"OptyItemNetNewACVAmount_USD\" as \"LineItemNNACV_USD\"\n \t,\"QuoteSSARollupNNACV_USD_A\"\
+  \ \"QuoteNNACV_USD\"\n \t,\"QuoteSSARollupNetNewACV_A\" \"QuoteNNACV_LocalCurrency\"\
+  \n \t,\"OptySalesQuarter\"\n \t,\"QuoteCreatedOn\"\n    ,\"QuoteStage\"\n \t,\"\
+  OptyItemProductCodeInLineSysID\" \"OptyItemProdCode\"\n \t,RIGHT(YEAR(\"QuoteCreatedOn\"\
+  ) ||'random'|| QUARTER(\"QuoteCreatedOn\"),'random') \"QuoteCreatedQuarter\"\n \t\
+  , CASE WHEN (((\"OptyItemFlags\" IS NULL\nOR \"OptyItemFlags\" = 'random')\n \t\t\
+  \t\t\tOR  (\"OptyItemFlags\" NOT LIKE 'random'\n \t\t\t\t\t\t\tAND \"OptyItemFlags\"\
+  \ NOT LIKE 'random'))\n \t\t\t\t\t\tAND (\"OptyItemQuoteItemStepInFlag\" IS NULL\n\
+  \                                                                              \
+  \     OR \"OptyItemQuoteItemStepInFlag\" ='random'))\n\n\n \t\t\tTHEN 'random' ELSE\
+  \ 'random' END \"OptyItemFlaggedBuiltInUpsell\"\n \t,CASE WHEN  (\"OptyLinePriceResetPrimaryLineSysID\"\
+  \ IS NULL) OR ( \"OptyLinePriceResetPrimaryLineSysID\"= 'random')\n  \t\tTHEN 'random'\
+  \ ELSE 'random' END \"OptyItemHasResetLines\"\n \t,CASE WHEN \"SalesActivePipeline_CC\"\
+  \ IS NULL THEN 'random'\n \t\t  ELSE \"SalesActivePipeline_CC\" END \"SalesActivePipeline\"\
+  \n\n  FROM ODS_LS.\"SURF\".\"SALES_QUOTE\" Q\n LEFT outer join ODS_LS.\"SURF\".\"\
+  SALES_OPPORTUNITY_ITEM_EXTENDED\" OI on OI.\"OptyItemQuoteSysID\" = Q.\"QuoteSysID\"\
+  \n LEFT outer join ODS_LS.\"SURF\".\"SALES_OPPORTUNITY\" O on O.\"OptySysID\" =\
+  \ Q.\"QuoteOpportunitySysId\"\n LEFT outer join (Select distinct \"OptyItemLineItemSysID\"\
+  , \"SalesActivePipeline_CC\"\n                    from EDW_LS.\"SALES_EM\".\"EM_SALES_OPPORTUNITY_EXTENDED_RT\"\
+  \n                 where (\"ProductBusinessUnitValue\" != 'random' or \"ProductBusinessUnitValue\"\
+  \ IS NULL)) so\n              on so.\"OptyItemLineItemSysID\" = OI.\"OptyItemLineItemSysID\"\
+  \n  ) ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

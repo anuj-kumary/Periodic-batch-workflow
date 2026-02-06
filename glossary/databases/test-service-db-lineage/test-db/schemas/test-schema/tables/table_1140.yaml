@@ -1,0 +1,65 @@
+name: table_1140
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1140
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1140.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view OPPORTUNITIES_COLUMN_MAPPING_OLD_TO_NEW(\n\
+  \tNEW_TRANSFORMED_COLUMN_NAME,\n\tUPPER_TRANSFORMED_COLUMN_NAME,\n\tOLD_COLUMN_NAME,\n\
+  \tNEW_TABLE_DATATYPE,\n\tOLD_TABLE_DATATYPE,\n\tIF_DATATYPES_MATCH\n) as\nwith\n\
+  new_opportunities_columns as (\n    select\n        column_name,\n        replace\
+  \ (\n            replace (\n                case\n                    when left(column_name,\
+  \ 'random')='random'\n                    then substr(column_name, 'random')\n \
+  \                   else column_name\n                end,\n                'random','random'\n\
+  \            ),\n            'random', 'random'\n        ) as transformed_column_name,\n\
+  \        data_type\n    from rds.information_schema.columns\n    where TABLE_NAME='random'\
+  \ AND TABLE_SCHEMA='random'\n    order by ordinal_position\n),\nold_opportunity_columns\
+  \ as (\n    select column_name, data_type\n    from rds_share.information_schema.columns\n\
+  \    where table_name='random' and table_schema='random'\n    order by ordinal_position\n\
+  )\nselect\n    new_opportunities_columns.transformed_column_name as new_transformed_column_name,\n\
+  \    upper(new_opportunities_columns.transformed_column_name) as upper_transformed_column_name,\n\
+  \    old_opportunity_columns.column_name as old_column_name,\n    new_opportunities_columns.data_type\
+  \ as new_table_datatype,\n    old_opportunity_columns.data_type as old_table_datatype,\n\
+  \    case\n        when new_opportunities_columns.data_type=old_opportunity_columns.data_type\n\
+  \        then 'random'\n        else 'random'\n    end as if_datatypes_match\nfrom\
+  \ new_opportunities_columns\nleft join old_opportunity_columns\non upper(new_opportunities_columns.transformed_column_name)=old_opportunity_columns.column_name\n\
+  where old_opportunity_columns.column_name IS not NULL\n;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

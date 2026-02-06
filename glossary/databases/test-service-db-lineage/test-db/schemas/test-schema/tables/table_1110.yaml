@@ -1,0 +1,59 @@
+name: table_1110
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1110
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1110.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view EM_FF_SALES_OPPORTUNITY(\n\t\"OptyNumber\"\
+  ,\n\t\"Account\",\n\t\"Close date\",\n\t\"Master Quote Status\",\n\t\"USD Net new\
+  \ ACV\",\n\t\"Implementation Partner\",\n\t\"Forecast Category\",\n\t\"Forecast\
+  \ Stage\",\n\t\"Master Quote Order Term Start Date\",\n\t\"ACE Territory\",\n\t\"\
+  ACE Territory Sales Operations\",\n\t\"Field Territory\",\n\t\"Field Territory Sales\
+  \ Operations\"\n) as -- SEMANTIC LAYER BEGINS\n\nSelect \"NUMBER\" as \"OptyNumber\"\
+  ,\n\"ACCOUNT\" as \"Account\",\n\"CLOSE_DATE\" as \"Close date\",\n\"MASTER_QUOTE_STATUS\"\
+  \ as \"Master Quote Status\",\n\"USD_NET_NEW_ACV\" as \"USD Net new ACV\",\n\"IMPLEMENTATION_PARTNER\"\
+  \ as \"Implementation Partner\",\n\"FORECAST_CATEGORY\" as \"Forecast Category\"\
+  ,\n\"FORECAST_STAGE\" as \"Forecast Stage\",\n\"MASTER_QUOTE_ORDER_TERM_START_DATE\"\
+  \ as \"Master Quote Order Term Start Date\",\n\"ACE_TERRITORY\" as \"ACE Territory\"\
+  ,\n\"ACE_TERRITORY_SALES_OPERATIONS\" as \"ACE Territory Sales Operations\",\n\"\
+  FIELD_TERRITORY\" as \"Field Territory\",\n\"FIELD_TERRITORY_SALES_OPERATIONS\"\
+  \ as \"Field Territory Sales Operations\"\nfrom  RDS.FLATFILESOURCE.FF_SALES_OPPORTUNITY;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

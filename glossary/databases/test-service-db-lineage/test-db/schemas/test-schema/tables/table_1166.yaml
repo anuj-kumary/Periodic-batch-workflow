@@ -1,0 +1,68 @@
+name: table_1166
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1166
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1166.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SRC_V_FACT_DIM_QUOTE(\n\tQUOTE_ID,\n\tOPTY_ID,\n\
+  \tQUOTE_NUMBER,\n\tQUOTE_TYPE,\n\tQUOTE_STATUS,\n\tQUOTE_SOURCE,\n\tQUOTE_TERM,\n\
+  \tDG_TYPE,\n\tIS_MASTER_QUOTE,\n\tIS_GUIDELINES_CHECKED,\n\tIS_DIRECT_SALE,\n\t\
+  SAP_CONTRACT_NUMBER,\n\tCONTRACT_NUMBER,\n\tCONTRACT_TYPE,\n\tCONTRACT_INFO,\n\t\
+  ORDER_TERM_START_DT,\n\tOF_SUBMITTED_TS,\n\tAPPROVED_TS,\n\tEXPIRATION_TS,\n\tINSTANCE_INFO,\n\
+  \tUPDATED_BY,\n\tCREATED_BY,\n\tUPDATED_TS,\n\tCREATED_TS,\n\tQUOTE_SYSID,\n\tOPTY_SYSID,\n\
+  \tSALES_PARTNER_SYSID\n) as\n/*************************************************************************************************************************\n\
+  CREATE/CHANGE LOG:\nDATE               MOD BY                                  \
+  \                                                  DESC\n12/02/24          guturjayaprakash.rao@servicenow.com\
+  \       New DIm created\n**************************************************************************************************************************/\n\
+  SELECT\nHASH(\"QuoteSysID\") as QUOTE_ID,\nHASH(\"QuoteOpportunitySysId\") as OPTY_ID,\n\
+  \"QuoteOpportunityNumber\" as QUOTE_NUMBER,\n\"QuoteType\" as QUOTE_TYPE,\n\"QuoteStatus\"\
+  \ as QUOTE_STATUS,\n\"QuoteSource\" as QUOTE_SOURCE,\n\"QuoteTerm\" as QUOTE_TERM,\n\
+  \"QuoteDGType\" as DG_TYPE,\n\"QuoteMasterQuote\" as IS_MASTER_QUOTE,\n\"QuoteIsGuidelinesChecked\"\
+  \ as IS_GUIDELINES_CHECKED,\n\"QuoteSalesType\" as IS_DIRECT_SALE,\n'random' as\
+  \ SAP_CONTRACT_NUMBER,\n'random' as CONTRACT_NUMBER,\n\"QuoteContractType\" as CONTRACT_TYPE,\n\
+  \"QuoteContractDetails\" as CONTRACT_INFO,\n\"QuoteOrderTermStartDate\" as ORDER_TERM_START_DT,\n\
+  \"QuoteOFSubmitted\" as OF_SUBMITTED_TS,\n\"QuoteDateApproved\" as APPROVED_TS,\n\
+  \"QuoteExpirationDate\" as EXPIRATION_TS,\n\"QuoteInstances\" as INSTANCE_INFO,\n\
+  \"QuoteUpdatedBy\" as UPDATED_BY,\n\"QuoteCreatedBy\" as CREATED_BY,\n\"QuoteUpdatedOn\"\
+  \ as UPDATED_TS,\n\"QuoteCreatedOn\" as CREATED_TS,\n\"QuoteSysID\" as QUOTE_SYSID,\n\
+  \"QuoteOpportunitySysId\" as OPTY_SYSID,\n\"QuoteSalesPatner\" as SALES_PARTNER_SYSID\n\
+  FROM\n    ODS_LS.SURF.SALES_QUOTE;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

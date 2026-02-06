@@ -1,0 +1,56 @@
+name: table_1160
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1160
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1160.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_IA_DEDUPLICATION_IRM_OPERATOR_INTVW_0709(\n\
+  \tU_INSTANCE_NAME,\n\tU_LICENSABLE_APPLICATION_FAMILY,\n\tSYS_MOD_COUNT,\n\tU_REPORT_ID,\n\
+  \tSYS_UPDATED_ON,\n\tSYS_TAGS,\n\tU_REASON,\n\tSYS_ID,\n\tSYS_UPDATED_BY,\n\tU_USER_ID,\n\
+  \tU_USER_SYS_ID,\n\tSYS_CREATED_ON,\n\tU_ACCRUAL_PERIOD,\n\tSYS_CREATED_BY,\n\t\
+  PSP_PER_INSERT_DT,\n\tPSP_PER_DELETE_DT,\n\tPSP_PER_UPDATE_DT,\n\tU_FEDERATED_ID\n\
+  ) as\nSELECT * FROM RDS_SHARE.DATACENTER.\"U_IA_DEDUPLICATION_IRM_OPERATOR\"\nunion\n\
+  select u_instance_name , u_licensable_application_family , sys_mod_count, u_report_id,\
+  \ sys_updated_on, sys_tags, u_reason , sys_id,\nsys_updated_by, u_user_id , u_user_sys_id,\
+  \ sys_created_on, u_accrual_period, sys_created_by, 'random' as PSP_PER_INSERT_DT,\
+  \ 'random' as PSP_PER_DELETE_DT,\n'random' as PSP_PER_UPDATE_DT, u_federated_id\n\
+  from EDW_LS.DATACENTER.U_IA_DEDUPLICATION_IRM_OPERATOR_INT_070923;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

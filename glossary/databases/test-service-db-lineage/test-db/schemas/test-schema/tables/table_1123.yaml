@@ -1,0 +1,70 @@
+name: table_1123
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1123
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_1123.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view V_DIM_OPPORTUNITY_PARENT_LEVEL(\n\tOPTY_ID,\n\
+  \tQUATER_YYQQ,\n\tPARENT_OPTY_NUMBER,\n\tPARENT_OPTY_NAME,\n\tPARENT_OPTY_ACCOUNT_NAME,\n\
+  \tPARENT_OPTY_TYPE,\n\tPARENT_OPTY_STAGE,\n\tPARENT_OPTY_DYNAMICS_GUID,\n\tPARENT_OPTY_MANAGEMENT,\n\
+  \tPARENT_OPTY_PIPELINE_STATUS,\n\tPARENT_OPTY_CLOSE_DT,\n\tPARENT_OPTY_CLOSE_MONTH,\n\
+  \tPARENT_OPTY_CLOSE_MONTH_INT,\n\tPARENT_OPTY_CLOSE_MONTH_QUARTER,\n\tPARENT_OPTY_SYSID,\n\
+  \tPARENT_ACCOUNT_RISK_SCORE_SEVERITY,\n\tPARENT_OPTY_CLOSE_PROBABALILITY,\n\tPARENT_OPTY_JOURNAL_CREATED_DT,\n\
+  \tPARENT_JOURNAL_DT_FLAG,\n\tPARENT_OPTY_ML_PREDICTION_RISK_REASON1,\n\tPARENT_OPTY_NEXT_STEPS,\n\
+  \tPARENT_OPTY_RENEWAL_STATUS,\n\tPARENT_OPTY_ORDER_TERM_START_DT,\n\tPARENT_OPTY_CONTRACT_END_DT,\n\
+  \tPARENT_OPTY_TRANSACTION_TYPE,\n\tPARENT_PARTNER_ACCOUNT_NAME,\n\tPARENT_OPTY_TECHNICAL_WIN_NAME,\n\
+  \tPARENT_OPTY_NOTES,\n\tPARENT_OPTY_NOTES_CREATED_DT,\n\tIS_PARENT_MARQUEE_ACCOUNT,\n\
+  \tPARENT_OPTY_DYNAMICS_DEAL_CHAMPION,\n\tPARENT_ACCOUNT_EXECUTIVE_SPONSOR_NAME,\n\
+  \tPARENT_OPTY_PIPELINE_SOURCE,\n\tPARENT_OPTY_CONTRACT_STATUS,\n\tIS_DELETED,\n\t\
+  ETL_CREATED_TS,\n\tETL_UPDATED_TS\n) as\nSELECT\n      OPTY_ID,\n\tQUATER_YYQQ,\n\
+  \tPARENT_OPTY_NUMBER,\n\tPARENT_OPTY_NAME,\n\tPARENT_OPTY_ACCOUNT_NAME,\n\tPARENT_OPTY_TYPE,\n\
+  \tPARENT_OPTY_STAGE,\n\tPARENT_OPTY_DYNAMICS_GUID,\n\tPARENT_OPTY_MANAGEMENT,\n\t\
+  PARENT_OPTY_PIPELINE_STATUS,\n\tPARENT_OPTY_CLOSE_DT,\n\tPARENT_OPTY_CLOSE_MONTH,\n\
+  \tPARENT_OPTY_CLOSE_MONTH_INT,\n\tPARENT_OPTY_CLOSE_MONTH_QUARTER,\n\tPARENT_OPTY_SYSID,\n\
+  \tPARENT_ACCOUNT_RISK_SCORE_SEVERITY,\n\tPARENT_OPTY_CLOSE_PROBABALILITY,\n\tPARENT_OPTY_JOURNAL_CREATED_DT,\n\
+  \tPARENT_JOURNAL_DT_FLAG,\n\tPARENT_OPTY_ML_PREDICTION_RISK_REASON1,\n\tPARENT_OPTY_NEXT_STEPS,\n\
+  \tPARENT_OPTY_RENEWAL_STATUS,\n\tPARENT_OPTY_ORDER_TERM_START_DT,\n\tPARENT_OPTY_CONTRACT_END_DT,\n\
+  \tPARENT_OPTY_TRANSACTION_TYPE,\n\tPARENT_PARTNER_ACCOUNT_NAME,\n\tPARENT_OPTY_TECHNICAL_WIN_NAME,\n\
+  \tPARENT_OPTY_NOTES,\n\tPARENT_OPTY_NOTES_CREATED_DT,\n\tIS_PARENT_MARQUEE_ACCOUNT,\n\
+  \tPARENT_OPTY_DYNAMICS_DEAL_CHAMPION,\n\tPARENT_ACCOUNT_EXECUTIVE_SPONSOR_NAME,\n\
+  \tPARENT_OPTY_PIPELINE_SOURCE,\n\tPARENT_OPTY_CONTRACT_STATUS,\n\tIS_DELETED,\n\t\
+  ETL_CREATED_TS,\n\tETL_UPDATED_TS\nFROM EDW.ENTERPRISE.DIM_OPPORTUNITY_PARENT_LEVEL;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
