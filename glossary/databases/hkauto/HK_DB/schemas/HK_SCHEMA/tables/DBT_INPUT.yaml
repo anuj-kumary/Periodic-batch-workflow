@@ -1,0 +1,338 @@
+name: DBT_INPUT
+fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT
+description: <p>hk1</p>
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: <p>hk2</p>
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.CUSTOMERID
+    tags:
+      - tagFQN: hk class 1.hk tag 1
+        name: hk tag 1
+        displayName: ""
+        description: <p>hk tag 1</p>
+        style: {}
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: hk class 2.hk tag 2
+        name: hk tag 2
+        displayName: ""
+        description: <p>hk tag 2</p>
+        style: {}
+        source: Classification
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: hk gloss 1.hk gloss 1
+        name: hk gloss 1
+        displayName: ""
+        description: <p>hk gloss 1</p>
+        style: {}
+        source: Glossary
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: hk gloss 2.hk gloss 2
+        name: hk gloss 2
+        displayName: ""
+        description: <p>hk gloss 2</p>
+        style: {}
+        source: Glossary
+        labelType: Manual
+        state: Confirmed
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The NAME column holds the full name of the customer. It is used for
+      personalizing communication and identifying customers.
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.NAME
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The EMAIL column contains the email address of the customer. It is
+      used for communication and marketing purposes.
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.EMAIL
+    tags:
+      - tagFQN: General.Email
+        name: Email
+        description: Email address.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The COUNTRY column represents the geographical location of the customer.
+      It is used to identify the country from which the customer originates.
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.COUNTRY
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SIGNUPDATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The SIGNUPDATE column records the date when the customer signed up.
+      It is used to track customer acquisition over time.
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.SIGNUPDATE
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PURCHASEAMOUNT
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    description: The PURCHASEAMOUNT column indicates the total amount spent by the
+      customer on purchases. It is a key measure of customer spending behavior.
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.PURCHASEAMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7a9688e9-72a2-4ab0-9e3b-721f1b8dd915
+    type: user
+    name: hk1
+    fullyQualifiedName: hk1
+    description: ""
+    displayName: hk1
+    deleted: false
+  - id: e4f3cef0-a37e-491a-8a4c-fe81eb5da318
+    type: user
+    name: hk2
+    fullyQualifiedName: hk2
+    description: ""
+    displayName: hk2
+    deleted: false
+databaseSchema:
+  id: db009168-0d0e-463f-85a2-33a83bfa50fd
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: 13ff90f2-7cc9-49c5-a299-d3254725569f
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hkauto.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: bb6d2ec6-abc7-4eff-bf1f-b565fc51f8c0
+  type: databaseService
+  name: hkauto
+  fullyQualifiedName: hkauto
+  description: ""
+  displayName: hkauto
+  deleted: false
+serviceType: Snowflake
+tags:
+  - tagFQN: hk class 1.hk tag 1
+    name: hk tag 1
+    displayName: ""
+    description: <p>hk tag 1</p>
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: hk class 2.hk tag 2
+    name: hk tag 2
+    displayName: ""
+    description: <p>hk tag 2</p>
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: hk gloss 1.hk gloss 1
+    name: hk gloss 1
+    displayName: ""
+    description: <p>hk gloss 1</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: hk gloss 2.hk gloss 2
+    name: hk gloss 2
+    displayName: ""
+    description: <p>hk gloss 2</p>
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 1348edf1-30a0-4980-8168-59af79035888
+  type: testSuite
+  name: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.testSuite
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.testSuite
+  displayName: hkauto.HK_DB.HK_SCHEMA.DBT_INPUT.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: domains
+      newValue: "[{\"id\":\"060bcc29-d788-4065-bb60-0745526aa6b2\",\"type\":\"domain\"\
+        ,\"name\":\"hk dom 1\",\"fullyQualifiedName\":\"hk dom 1\",\"description\"\
+        :\"<p>hk dom 1</p>\",\"displayName\":\"hk dom 1\"},{\"id\":\"76066b75-ac84-499d-ab1c-3ffb96f11e80\"\
+        ,\"type\":\"domain\",\"name\":\"hk dom 2\",\"fullyQualifiedName\":\"hk dom\
+        \ 2\",\"description\":\"<p>hk dom 2</p>\",\"displayName\":\"hk dom 2\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.4
+  changeSummary:
+    owners:
+      changedBy: himanshu
+      changedAt: 1754487932974
+    description:
+      changedBy: himanshu
+      changedAt: 1754487932974
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828358634
+    columns.EMAIL.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828358634
+    columns.COUNTRY.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828358634
+    columns.CUSTOMERID.description:
+      changedBy: himanshu
+      changedAt: 1753960089177
+    columns.SIGNUPDATE.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828358634
+    columns.PURCHASEAMOUNT.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828358634
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/DBT_INPUT
+domains:
+  - id: 060bcc29-d788-4065-bb60-0745526aa6b2
+    type: domain
+    name: hk dom 1
+    fullyQualifiedName: hk dom 1
+    description: <p>hk dom 1</p>
+    displayName: hk dom 1
+  - id: 76066b75-ac84-499d-ab1c-3ffb96f11e80
+    type: domain
+    name: hk dom 2
+    fullyQualifiedName: hk dom 2
+    description: <p>hk dom 2</p>
+    displayName: hk dom 2
+dataProducts: []
+sourceHash: 14aedbcf518bdfe5205987040aea7717
+processedLineage: false
+entityStatus: Approved

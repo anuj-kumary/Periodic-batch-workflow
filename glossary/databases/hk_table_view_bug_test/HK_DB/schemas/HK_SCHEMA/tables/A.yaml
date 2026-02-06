@@ -1,0 +1,169 @@
+name: A
+fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A
+description: "This table stores product details, including creation date, unique identifiers,\
+  \ names, prices, and available quantities, enabling users to manage inventory and\
+  \ analyze sales performance effectively."
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: The ID column serves as a unique identifier for each record in the
+      table. It is crucial for distinguishing between different entries.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: The NAME column contains the name associated with each entry. It
+      is used to identify and describe the item or entity represented.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: QUANTITY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: The QUANTITY column specifies the amount of the item available or
+      sold. It is important for inventory and sales analysis.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.QUANTITY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PRICE
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    description: The PRICE column indicates the cost of the item or service represented
+      in the entry. It is vital for financial analysis.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.PRICE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED_AT
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: The CREATED_AT column records the date when the entry was created.
+      It is essential for tracking the timeline of data entries.
+    fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.CREATED_AT
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 4b247e10-18be-446e-97e8-ba9fdc9c31e1
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: e8fe5ca8-d77c-4919-993b-13a7ebe1e6ad
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: 0864e26e-4866-4214-880d-b141a3e5dd37
+  type: databaseService
+  name: hk_table_view_bug_test
+  fullyQualifiedName: hk_table_view_bug_test
+  description: ""
+  displayName: hk_table_view_bug_test
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: fe83bdec-c6cf-4d78-bf52-43905904bac0
+  type: testSuite
+  name: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.testSuite
+  fullyQualifiedName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.testSuite
+  displayName: hk_table_view_bug_test.HK_DB.HK_SCHEMA.A.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.ID.description
+      newValue: The ID column serves as a unique identifier for each record in the
+        table. It is crucial for distinguishing between different entries.
+    - name: columns.NAME.description
+      newValue: The NAME column contains the name associated with each entry. It is
+        used to identify and describe the item or entity represented.
+    - name: columns.QUANTITY.description
+      newValue: The QUANTITY column specifies the amount of the item available or
+        sold. It is important for inventory and sales analysis.
+    - name: columns.PRICE.description
+      newValue: The PRICE column indicates the cost of the item or service represented
+        in the entry. It is vital for financial analysis.
+    - name: columns.CREATED_AT.description
+      newValue: The CREATED_AT column records the date when the entry was created.
+        It is essential for tracking the timeline of data entries.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1757057324403
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057324632
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057324632
+    columns.PRICE.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057324632
+    columns.QUANTITY.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057324632
+    columns.CREATED_AT.description:
+      changedBy: ingestion-bot
+      changedAt: 1757057324632
+sourceUrl: https://app.snowflake.com/tshirvw/ve46548/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/A
+domains: []
+dataProducts: []
+sourceHash: 413a3737cafc7b255b1b13d87a3d924a
+processedLineage: false
+entityStatus: Approved

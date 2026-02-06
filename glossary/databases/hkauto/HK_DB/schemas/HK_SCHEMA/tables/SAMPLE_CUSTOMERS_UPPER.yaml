@@ -1,0 +1,284 @@
+name: SAMPLE_CUSTOMERS_UPPER
+fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER
+description: "This table stores customer information, including their country, email,\
+  \ name, and purchase details, enabling businesses to analyze customer demographics\
+  \ and purchasing behavior for targeted marketing and improved service."
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "CUSTOMERID is a unique identifier assigned to each customer, allowing\
+      \ for distinct identification and tracking of customer records."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.CUSTOMERID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "NAME holds the full name of the customer, providing a way to identify\
+      \ and address customers personally."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.NAME
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "EMAIL contains the email address of the customer, which can be used\
+      \ for communication and marketing purposes."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.EMAIL
+    tags:
+      - tagFQN: General.Email
+        name: Email
+        description: Email address.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "COUNTRY represents the geographical location of the customer, indicating\
+      \ where they reside or where their business is based."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.COUNTRY
+    tags:
+      - tagFQN: General.Location
+        name: Location
+        description: "Name of politically or geographically defined location (cities,\
+          \ provinces, countries, international regions, bodies of water, mountains."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SIGNUPDATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    description: "SIGNUPDATE records the date when the customer signed up, providing\
+      \ insight into customer acquisition timelines."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.SIGNUPDATE
+    tags:
+      - tagFQN: General.DateTime
+        name: DateTime
+        description: Absolute or relative dates or periods or times smaller than a
+          day.
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.NonSensitive
+        name: NonSensitive
+        description: "PII which is easily accessible from public sources and can include\
+          \ zip code, race, gender, and date of birth."
+        style: {}
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PURCHASEAMOUNT
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 2
+    dataTypeDisplay: "number(38,2)"
+    description: "PURCHASEAMOUNT indicates the total amount spent by the customer\
+      \ on purchases, reflecting their spending behavior."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.PURCHASEAMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME_UPPER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "NAME_UPPER contains the uppercase version of the customer's name,\
+      \ which can be useful for standardization and comparison purposes."
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.NAME_UPPER
+    tags:
+      - tagFQN: General.Person
+        name: Person
+        description: "A full person name, which can include first names, middle names\
+          \ or initials, and last names."
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Generated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: db009168-0d0e-463f-85a2-33a83bfa50fd
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: 13ff90f2-7cc9-49c5-a299-d3254725569f
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hkauto.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: bb6d2ec6-abc7-4eff-bf1f-b565fc51f8c0
+  type: databaseService
+  name: hkauto
+  fullyQualifiedName: hkauto
+  description: ""
+  displayName: hkauto
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 92aa9563-fbf4-4ffb-a107-9bf9927a6697
+  type: testSuite
+  name: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.testSuite
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.testSuite
+  displayName: hkauto.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.CUSTOMERID.description
+      newValue: "CUSTOMERID is a unique identifier assigned to each customer, allowing\
+        \ for distinct identification and tracking of customer records."
+    - name: columns.NAME.description
+      newValue: "NAME holds the full name of the customer, providing a way to identify\
+        \ and address customers personally."
+    - name: columns.EMAIL.description
+      newValue: "EMAIL contains the email address of the customer, which can be used\
+        \ for communication and marketing purposes."
+    - name: columns.COUNTRY.description
+      newValue: "COUNTRY represents the geographical location of the customer, indicating\
+        \ where they reside or where their business is based."
+    - name: columns.SIGNUPDATE.description
+      newValue: "SIGNUPDATE records the date when the customer signed up, providing\
+        \ insight into customer acquisition timelines."
+    - name: columns.PURCHASEAMOUNT.description
+      newValue: "PURCHASEAMOUNT indicates the total amount spent by the customer on\
+        \ purchases, reflecting their spending behavior."
+    - name: columns.NAME_UPPER.description
+      newValue: "NAME_UPPER contains the uppercase version of the customer's name,\
+        \ which can be useful for standardization and comparison purposes."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1752828339673
+    columns.NAME.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+    columns.EMAIL.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+    columns.COUNTRY.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+    columns.CUSTOMERID.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+    columns.NAME_UPPER.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+    columns.SIGNUPDATE.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+    columns.PURCHASEAMOUNT.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828340036
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/HK_DB/schemas/HK_SCHEMA/table/SAMPLE_CUSTOMERS_UPPER
+domains: []
+dataProducts: []
+sourceHash: 646841f21aff89c7389d2d4c4399cf2e
+processedLineage: false
+entityStatus: Approved

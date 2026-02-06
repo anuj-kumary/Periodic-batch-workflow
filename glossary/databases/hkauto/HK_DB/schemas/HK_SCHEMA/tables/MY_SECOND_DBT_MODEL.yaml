@@ -1,0 +1,81 @@
+name: MY_SECOND_DBT_MODEL
+fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.MY_SECOND_DBT_MODEL
+description: ""
+tableType: View
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 1
+    scale: 0
+    dataTypeDisplay: "number(1,0)"
+    fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.MY_SECOND_DBT_MODEL.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: db009168-0d0e-463f-85a2-33a83bfa50fd
+  type: databaseSchema
+  name: HK_SCHEMA
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA
+  displayName: HK_SCHEMA
+  deleted: false
+database:
+  id: 13ff90f2-7cc9-49c5-a299-d3254725569f
+  type: database
+  name: HK_DB
+  fullyQualifiedName: hkauto.HK_DB
+  displayName: HK_DB
+  deleted: false
+service:
+  id: bb6d2ec6-abc7-4eff-bf1f-b565fc51f8c0
+  type: databaseService
+  name: hkauto
+  fullyQualifiedName: hkauto
+  description: ""
+  displayName: hkauto
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace   view HK_DB.HK_SCHEMA.my_second_dbt_model\n\
+  \  \n   as (\n    -- Use the `ref` function to select from other models\n\nselect\
+  \ *\nfrom HK_DB.HK_SCHEMA.my_first_dbt_model\nwhere id = 1\n  );"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: aa2c5c47-ba75-402e-b922-bb7f230f86a0
+  type: testSuite
+  name: hkauto.HK_DB.HK_SCHEMA.MY_SECOND_DBT_MODEL.testSuite
+  fullyQualifiedName: hkauto.HK_DB.HK_SCHEMA.MY_SECOND_DBT_MODEL.testSuite
+  displayName: hkauto.HK_DB.HK_SCHEMA.MY_SECOND_DBT_MODEL.testSuite
+  deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: description
+      oldValue: "This table serves as a simple identifier repository, storing unique\
+        \ numeric IDs that can be utilized for referencing records across various\
+        \ applications or systems, ensuring data integrity and consistency."
+      newValue: ""
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary:
+    description:
+      changedBy: himanshu
+      changedAt: 1754487854089
+    columns.ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1752828346812
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/HK_DB/schemas/HK_SCHEMA/view/MY_SECOND_DBT_MODEL
+domains: []
+dataProducts: []
+sourceHash: 9d15a682e7422698e01b622d1ad6828e
+processedLineage: true
+entityStatus: Approved
