@@ -1,0 +1,62 @@
+name: table_761
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_761
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_761.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_TOP_LEVEL_OPPORTUNITY_LINE(\n\tTOP_LINE_PRODUCT_CODE,\n\
+  \tTOP_LINE_PRODUCT_SYSID,\n\tTOP_LINE_RENEWAL_ACV,\n\tTOP_LINE_SYS_TAGS,\n\tTOP_LINE_TERM_START_DATE,\n\
+  \tTOP_LINE_CURRENCY_CODE,\n\tTOP_LINE_OPPORTUNITY,\n\tTOP_LINE_SYS_ID,\n\tTOP_LINE_CONTRIBUTINGSURF_OPTY_LINES_ID,\n\
+  \tTOP_LINE_KEYMETRIC,\n\tTOP_LINE_CURRENCY,\n\tTOP_LINE_DAILY_FX_RATE,\n\tTOP_LINE_PRODUCT,\n\
+  \tTOP_LINE_OPPPORTUNITY_ID,\n\tTOP_LINE_CONTRIBUTINGSURF_OPTY_LINES,\n\tTOP_LINE_DYNAMICS_GUID,\n\
+  \tTOP_LINE_TOTAL_VALUE,\n\tTOP_LINE_NET_NEW_ACV,\n\tTOP_LINE_METRICTYPE\n) as (select\n\
+  \   U_PRODUCT_CODE as top_line_product_code ,\n\tU_PRODUCT as top_line_product_sysid,\n\
+  \tU_RENEWAL_ACV as top_line_renewal_acv,\n\tSYS_TAGS as top_line_sys_tags,\n\tU_TERM_START_DATE\
+  \ as top_line_term_start_date,\n\tDV_U_CURRENCY_CODE as top_line_currency_code,\n\
+  \tDV_U_OPPORTUNITY as top_line_opportunity,\n\tSYS_ID as top_line_sys_id,\n\tU_CONTRIBUTING_SURF_OPORTUNITY_LINES\
+  \ as top_line_contributingsurf_opty_lines_id,\n\tU_KEYMETRIC as top_line_keymetric,\n\
+  \tU_CURRENCY_CODE as top_line_currency,\n\tU_DAILY_FX_RATE as top_line_daily_fx_rate,\n\
+  \tDV_U_PRODUCT as top_line_product,\n\tU_OPPORTUNITY as top_line_oppportunity_id,\n\
+  \tDV_U_CONTRIBUTING_SURF_OPORTUNITY_LINES as  top_line_contributingsurf_opty_lines,\n\
+  \tU_DYNAMICS_GUID as top_line_dynamics_guid,\n\tU_TOTAL_VALUE as top_line_total_value,\n\
+  \tU_NET_NEW_ACV as top_line_net_new_acv,\n\tU_METRICTYPE as top_line_metrictype,\n\
+  \tfrom RDS.SURF.U_TOP_LEVEL_OPPORTUNITY_LINE);"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

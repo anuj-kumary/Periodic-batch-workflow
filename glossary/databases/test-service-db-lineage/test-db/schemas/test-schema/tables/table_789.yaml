@@ -1,0 +1,55 @@
+name: table_789
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_789
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_789.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_SERVICES_OPPORTUNITY_LINKAGE(\n\t\"ServicesOptyValue\"\
+  ,\n\t\"ServicesOptySysID\",\n\t\"ServicesOptyTableSysID\",\n\t\"ServicesACVOptySysID\"\
+  ,\n\t\"ServicesACVOptyValue\",\n\t\"ServicesReason\",\n\t\"ServicesACVOptyTBD\"\
+  ,\n\t\"ServicesNoACVOpty\"\n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"DV_U_SERVICES_OPPORTUNITY\"\
+  \ as \"ServicesOptyValue\",\n       \"U_SERVICES_OPPORTUNITY\" as \"ServicesOptySysID\"\
+  ,\n       \"SYS_ID\" as \"ServicesOptyTableSysID\",\n       \"U_ACV_OPPORTUNITY\"\
+  \ as \"ServicesACVOptySysID\",\n       \"DV_U_ACV_OPPORTUNITY\" as \"ServicesACVOptyValue\"\
+  ,\n       \"U_REASON\" as \"ServicesReason\",\n       \"U_ACV_OPPORTUNITY_TBD\"\
+  \ as \"ServicesACVOptyTBD\",\n       \"U_NO_ACV_OPPORTUNITY\" as \"ServicesNoACVOpty\"\
+  \nFROM \"RDS\".\"SURF\".\"U_SERVICES_OPPORTUNITY_LINKAGE\";"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,55 @@
+name: table_750
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_750
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_750.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view ANAPLAN_HEADCOUNT_RUN_RATE_EXPENSES(\n\t\
+  \"PLAccountRPTCode\",\n\t\"VP6DepartmentCode\",\n\t\"LegalEntityCode\",\n\t\"DepartmentEntityCode\"\
+  ,\n\t\"Version\",\n\t\"Time\",\n\t\"ReportingMonth\",\n\t\"Amount_LC\",\n\t\"Amount_USD\"\
+  ,\n\t\"Amount_USD_CC\"\n) as -- SEMANTIC LAYER BEGINS\n(\nselect\n\"PL_ACCOUNT_RPT_CODE\"\
+  \ as \"PLAccountRPTCode\",\n\"VP6_DEPARTMENT_CODE\" as \"VP6DepartmentCode\",\n\"\
+  LEGAL_ENTITY_CODE\" as \"LegalEntityCode\",\n\"DEPARTMENT_ENTITY_CODE\" \"DepartmentEntityCode\"\
+  ,\nCASE WHEN \"VERSION\" = 'random' then 'random'\n     WHEN \"VERSION\" = 'random'\
+  \ then 'random'\n     ELSE \"VERSION\" end as \"Version\",\n\"TIME\" \"Time\",\n\
+  \"REPORTINGMONTH\" as \"ReportingMonth\",\n\"AMOUNT_LC\" as \"Amount_LC\",\n\"AMOUNT_USD\"\
+  \ as \"Amount_USD\",\n\"AMOUNT_USD_CC\" as \"Amount_USD_CC\"\nfrom RDS.ANAPLAN.ANAPLAN_HEADCOUNT_RUN_RATE_EXPENSES);"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

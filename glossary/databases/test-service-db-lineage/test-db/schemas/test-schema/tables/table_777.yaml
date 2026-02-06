@@ -1,0 +1,68 @@
+name: table_777
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_777
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_777.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_SPECIAL_TERMS_AND_CONDITION(\n\tU_NAME,\n\
+  \tU_SPECIAL_CATEGORY,\n\tDV_U_SPECIAL_CATEGORY,\n\tU_SERVICENOW_S_POSITION,\n\t\
+  SYS_UPDATED_ON,\n\tU_CLAUSE,\n\tSYS_ID,\n\tU_FILL_IN_TYPES,\n\tDV_U_FILL_IN_TYPES,\n\
+  \tSYS_UPDATED_BY,\n\tU_END_DATE,\n\tU_TERM_ORDER,\n\tSYS_CREATED_ON,\n\tU_ACTIVE,\n\
+  \tU_STATUS,\n\tDV_U_STATUS,\n\tU_SECTION,\n\tDV_U_SECTION,\n\tSYS_CREATED_BY,\n\t\
+  U_NUMBER,\n\tU_QUOTE_TYPE,\n\tDV_U_QUOTE_TYPE,\n\tSYS_MOD_COUNT,\n\tSYS_TAGS,\n\t\
+  U_CATEGORY,\n\tDV_U_CATEGORY,\n\tU_CUSTOMER_S_ASK,\n\tU_DEAL_NEGOTIATION_GUIDANCE,\n\
+  \tU_ORDER_FORM_USAGE,\n\tU_START_DATE,\n\tPSP_PER_INSERT_DT,\n\tPSP_PER_DELETE_DT,\n\
+  \tPSP_PER_UPDATE_DT\n) as\n\n/*****************************************************************************************************************************\n\
+  \ * Program  Name             :   U_SPECIAL_TERMS_AND_CONDITION\n * ---------------------------------------------------------------------------------------------------------------------------\n\
+  \ * REVISION HISTORY:\n *----------------------------------------------------------------------------------------------------------------------------\n\
+  \ * CR#                 Modified By         Date Modified           Brief Description\
+  \ of Change\n * 1                   CTHANE              03-11-2024             \
+  \ STRY2571205: Create base model for special terms tables\n *****************************************************************************************************************************/\n\
+  \nSELECT\n    U_NAME,\n    U_SPECIAL_CATEGORY,\n    DV_U_SPECIAL_CATEGORY,\n   \
+  \ U_SERVICENOW_S_POSITION,\n    SYS_UPDATED_ON,\n    U_CLAUSE,\n    SYS_ID,\n  \
+  \  U_FILL_IN_TYPES,\n    DV_U_FILL_IN_TYPES,\n    SYS_UPDATED_BY,\n    U_END_DATE,\n\
+  \    U_TERM_ORDER,\n    SYS_CREATED_ON,\n    U_ACTIVE,\n    U_STATUS,\n    DV_U_STATUS,\n\
+  \    U_SECTION,\n    DV_U_SECTION,\n    SYS_CREATED_BY,\n    U_NUMBER,\n    U_QUOTE_TYPE,\n\
+  \    DV_U_QUOTE_TYPE,\n    SYS_MOD_COUNT,\n    SYS_TAGS,\n    U_CATEGORY,\n    DV_U_CATEGORY,\n\
+  \    U_CUSTOMER_S_ASK,\n    U_DEAL_NEGOTIATION_GUIDANCE,\n    U_ORDER_FORM_USAGE,\n\
+  \    U_START_DATE,\n    PSP_PER_INSERT_DT,\n    PSP_PER_DELETE_DT,\n    PSP_PER_UPDATE_DT\n\
+  FROM RDS.SURF.U_SPECIAL_TERMS_AND_CONDITION;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

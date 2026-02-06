@@ -1,0 +1,65 @@
+name: table_719
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_719
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_719.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view CONNECTIONS(\n\t\"Record2IdName\",\n\t\"\
+  Record1IdName\",\n\t\"Record1ObjectTypeCode\",\n\t\"Record2ObjectTypeCode\",\n\t\
+  \"Record1Id\",\n\t\"Record2Id\",\n\t\"Record2ObjectTypeCodeName\",\n\t\"Record1ObjectTypeCodeName\"\
+  ,\n\t\"ConnectionId\",\n\t\"StateCode\",\n\t\"StateCodeName\",\n\t\"EffectiveEndDate\"\
+  ,\n\t\"CreatedBy\",\n\t\"ModifiedOn\",\n\t\"ModifiedBy\",\n\t\"CreatedOn\",\n\t\"\
+  Etl_Insert_Date\",\n\t\"Etl_Update_Date\",\n\t\"CreatedByName\",\n\t\"ModifiedByName\"\
+  \n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"RECORD2IDNAME\" as \"Record2IdName\"\
+  ,\n       \"RECORD1IDNAME\" as \"Record1IdName\",\n       \"RECORD1OBJECTTYPECODE\"\
+  \ as \"Record1ObjectTypeCode\",\n       \"RECORD2OBJECTTYPECODE\" as \"Record2ObjectTypeCode\"\
+  ,\n       \"RECORD1ID\" as \"Record1Id\",\n       \"RECORD2ID\" as \"Record2Id\"\
+  ,\n       \"RECORD2OBJECTTYPECODENAME\" as \"Record2ObjectTypeCodeName\",\n    \
+  \   \"RECORD1OBJECTTYPECODENAME\" as \"Record1ObjectTypeCodeName\",\n       \"CONNECTIONID\"\
+  \ as \"ConnectionId\",\n       \"STATECODE\" as \"StateCode\",\n       \"STATECODENAME\"\
+  \ as \"StateCodeName\",\n       \"EFFECTIVEEND\" as \"EffectiveEndDate\",\n    \
+  \   \"CREATEDBY\" as \"CreatedBy\",\n       \"MODIFIEDON\" as \"ModifiedOn\",\n\
+  \       \"MODIFIEDBY\" as \"ModifiedBy\",\n       \"CREATEDON\" as \"CreatedOn\"\
+  ,\n       \"ETL_INSERT_DATE\" as \"Etl_Insert_Date\",\n       \"ETL_UPDATE_DATE\"\
+  \ as \"Etl_Update_Date\",\n       \"CREATEDBYNAME\" as \"CreatedByName\",\n    \
+  \   \"MODIFIEDBYNAME\" as \"ModifiedByName\"\nFROM \"RDS\".\"DYNAMICS365\".\"CONNECTIONS\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

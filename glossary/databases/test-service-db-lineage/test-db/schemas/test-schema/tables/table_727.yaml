@@ -1,0 +1,95 @@
+name: table_727
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_727
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_727.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view COSS_BAK(\n\tMANDT,\n\tLEDNR,\n\tOBJNR,\n\
+  \tGJAHR,\n\tWRTTP,\n\tVERSN,\n\tKSTAR,\n\tHRKFT,\n\tVRGNG,\n\tPAROB,\n\tUSPOB,\n\
+  \tBEKNZ,\n\tTWAER,\n\tPERBL,\n\tMEINH,\n\tWTG001,\n\tWTG002,\n\tWTG003,\n\tWTG004,\n\
+  \tWTG005,\n\tWTG006,\n\tWTG007,\n\tWTG008,\n\tWTG009,\n\tWTG010,\n\tWTG011,\n\t\
+  WTG012,\n\tWTG013,\n\tWTG014,\n\tWTG015,\n\tWTG016,\n\tWOG001,\n\tWOG002,\n\tWOG003,\n\
+  \tWOG004,\n\tWOG005,\n\tWOG006,\n\tWOG007,\n\tWOG008,\n\tWOG009,\n\tWOG010,\n\t\
+  WOG011,\n\tWOG012,\n\tWOG013,\n\tWOG014,\n\tWOG015,\n\tWOG016,\n\tWKG001,\n\tWKG002,\n\
+  \tWKG003,\n\tWKG004,\n\tWKG005,\n\tWKG006,\n\tWKG007,\n\tWKG008,\n\tWKG009,\n\t\
+  WKG010,\n\tWKG011,\n\tWKG012,\n\tWKG013,\n\tWKG014,\n\tWKG015,\n\tWKG016,\n\tWKF001,\n\
+  \tWKF002,\n\tWKF003,\n\tWKF004,\n\tWKF005,\n\tWKF006,\n\tWKF007,\n\tWKF008,\n\t\
+  WKF009,\n\tWKF010,\n\tWKF011,\n\tWKF012,\n\tWKF013,\n\tWKF014,\n\tWKF015,\n\tWKF016,\n\
+  \tPAG001,\n\tPAG002,\n\tPAG003,\n\tPAG004,\n\tPAG005,\n\tPAG006,\n\tPAG007,\n\t\
+  PAG008,\n\tPAG009,\n\tPAG010,\n\tPAG011,\n\tPAG012,\n\tPAG013,\n\tPAG014,\n\tPAG015,\n\
+  \tPAG016,\n\tPAF001,\n\tPAF002,\n\tPAF003,\n\tPAF004,\n\tPAF005,\n\tPAF006,\n\t\
+  PAF007,\n\tPAF008,\n\tPAF009,\n\tPAF010,\n\tPAF011,\n\tPAF012,\n\tPAF013,\n\tPAF014,\n\
+  \tPAF015,\n\tPAF016,\n\tMEG001,\n\tMEG002,\n\tMEG003,\n\tMEG004,\n\tMEG005,\n\t\
+  MEG006,\n\tMEG007,\n\tMEG008,\n\tMEG009,\n\tMEG010,\n\tMEG011,\n\tMEG012,\n\tMEG013,\n\
+  \tMEG014,\n\tMEG015,\n\tMEG016,\n\tMEF001,\n\tMEF002,\n\tMEF003,\n\tMEF004,\n\t\
+  MEF005,\n\tMEF006,\n\tMEF007,\n\tMEF008,\n\tMEF009,\n\tMEF010,\n\tMEF011,\n\tMEF012,\n\
+  \tMEF013,\n\tMEF014,\n\tMEF015,\n\tMEF016,\n\tMUV001,\n\tMUV002,\n\tMUV003,\n\t\
+  MUV004,\n\tMUV005,\n\tMUV006,\n\tMUV007,\n\tMUV008,\n\tMUV009,\n\tMUV010,\n\tMUV011,\n\
+  \tMUV012,\n\tMUV013,\n\tMUV014,\n\tMUV015,\n\tMUV016,\n\tBELTP,\n\tTIMESTMP,\n\t\
+  BUKRS,\n\tFKBER,\n\tSEGMENT,\n\tGEBER,\n\tGRANT_NBR,\n\tBUDGET_PD\n) as select\n\
+  \t\tMANDT,\n\t\tLEDNR,\n\t\tOBJNR,\n\t\tGJAHR,\n\t\tWRTTP,\n\t\tVERSN,\n\t\tKSTAR,\n\
+  \t\tHRKFT,\n\t\tVRGNG,\n\t\tPAROB,\n\t\tUSPOB,\n\t\tBEKNZ,\n\t\tTWAER,\n\t\tPERBL,\n\
+  \t\tMEINH,\n\t\tWTG001,\n\t\tWTG002,\n\t\tWTG003,\n\t\tWTG004,\n\t\tWTG005,\n\t\t\
+  WTG006,\n\t\tWTG007,\n\t\tWTG008,\n\t\tWTG009,\n\t\tWTG010,\n\t\tWTG011,\n\t\tWTG012,\n\
+  \t\tWTG013,\n\t\tWTG014,\n\t\tWTG015,\n\t\tWTG016,\n\t\tWOG001,\n\t\tWOG002,\n\t\
+  \tWOG003,\n\t\tWOG004,\n\t\tWOG005,\n\t\tWOG006,\n\t\tWOG007,\n\t\tWOG008,\n\t\t\
+  WOG009,\n\t\tWOG010,\n\t\tWOG011,\n\t\tWOG012,\n\t\tWOG013,\n\t\tWOG014,\n\t\tWOG015,\n\
+  \t\tWOG016,\n\t\tWKG001,\n\t\tWKG002,\n\t\tWKG003,\n\t\tWKG004,\n\t\tWKG005,\n\t\
+  \tWKG006,\n\t\tWKG007,\n\t\tWKG008,\n\t\tWKG009,\n\t\tWKG010,\n\t\tWKG011,\n\t\t\
+  WKG012,\n\t\tWKG013,\n\t\tWKG014,\n\t\tWKG015,\n\t\tWKG016,\n\t\tWKF001,\n\t\tWKF002,\n\
+  \t\tWKF003,\n\t\tWKF004,\n\t\tWKF005,\n\t\tWKF006,\n\t\tWKF007,\n\t\tWKF008,\n\t\
+  \tWKF009,\n\t\tWKF010,\n\t\tWKF011,\n\t\tWKF012,\n\t\tWKF013,\n\t\tWKF014,\n\t\t\
+  WKF015,\n\t\tWKF016,\n\t\tPAG001,\n\t\tPAG002,\n\t\tPAG003,\n\t\tPAG004,\n\t\tPAG005,\n\
+  \t\tPAG006,\n\t\tPAG007,\n\t\tPAG008,\n\t\tPAG009,\n\t\tPAG010,\n\t\tPAG011,\n\t\
+  \tPAG012,\n\t\tPAG013,\n\t\tPAG014,\n\t\tPAG015,\n\t\tPAG016,\n\t\tPAF001,\n\t\t\
+  PAF002,\n\t\tPAF003,\n\t\tPAF004,\n\t\tPAF005,\n\t\tPAF006,\n\t\tPAF007,\n\t\tPAF008,\n\
+  \t\tPAF009,\n\t\tPAF010,\n\t\tPAF011,\n\t\tPAF012,\n\t\tPAF013,\n\t\tPAF014,\n\t\
+  \tPAF015,\n\t\tPAF016,\n\t\tMEG001,\n\t\tMEG002,\n\t\tMEG003,\n\t\tMEG004,\n\t\t\
+  MEG005,\n\t\tMEG006,\n\t\tMEG007,\n\t\tMEG008,\n\t\tMEG009,\n\t\tMEG010,\n\t\tMEG011,\n\
+  \t\tMEG012,\n\t\tMEG013,\n\t\tMEG014,\n\t\tMEG015,\n\t\tMEG016,\n\t\tMEF001,\n\t\
+  \tMEF002,\n\t\tMEF003,\n\t\tMEF004,\n\t\tMEF005,\n\t\tMEF006,\n\t\tMEF007,\n\t\t\
+  MEF008,\n\t\tMEF009,\n\t\tMEF010,\n\t\tMEF011,\n\t\tMEF012,\n\t\tMEF013,\n\t\tMEF014,\n\
+  \t\tMEF015,\n\t\tMEF016,\n\t\tMUV001,\n\t\tMUV002,\n\t\tMUV003,\n\t\tMUV004,\n\t\
+  \tMUV005,\n\t\tMUV006,\n\t\tMUV007,\n\t\tMUV008,\n\t\tMUV009,\n\t\tMUV010,\n\t\t\
+  MUV011,\n\t\tMUV012,\n\t\tMUV013,\n\t\tMUV014,\n\t\tMUV015,\n\t\tMUV016,\n\t\tBELTP,\n\
+  \t\tTIMESTMP,\n\t\tBUKRS,\n\t\tFKBER,\n\t\tSEGMENT,\n\t\tGEBER,\n\t\tGRANT_NBR,\n\
+  \t\tBUDGET_PD\n from RDS.S4HANA.COSS_BAK where MANDT='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,58 @@
+name: table_748
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_748
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_748.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view ANAPLAN_OPEX_RUN_RATE(\n\tDEPARTMENT_ENTITY_CODE,\n\
+  \tDEPARTMENT_CODE,\n\tVP_DEPT_L3_CODE,\n\tLEGAL_ENTITY_L3_CODE,\n\tREGION_L1_CODE,\n\
+  \tPL_ACCOUNT_L9_CODE,\n\tPRE_ALLOCATED_LC,\n\tPRE_ALLOCATED_USD,\n\tPRE_ALLOCATED_USD_CONSTANT_CURRENCY,\n\
+  \tPOST_ALLOCATED_LC,\n\tPOST_ALLOCATED_USD,\n\tPOST_ALLOCATED_USD_CONSTANT_CURRENCY,\n\
+  \tREPORTING_CURRENCY,\n\tVERSION,\n\tTIME,\n\tREPORTINGMONTH,\n\tINPUT_CURRENCY,\n\
+  \tCURRENCY_CONVERSION\n) as -- SEMANTIC LAYER BEGINS\n\n(SELECT\n\"DEPARTMENT_ENTITY_CODE\"\
+  ,\n\"DEPARTMENT_CODE\",\n\"VP_DEPT_L3_CODE\",\n\"LEGAL_ENTITY_L3_CODE\",\n\"REGION_L1_CODE\"\
+  ,\n\"PL_ACCOUNT_L9_CODE\",\n\"PRE_ALLOCATED_LC\",\n\"PRE_ALLOCATED_USD\",\n\"PRE_ALLOCATED_USD_CONSTANT_CURRENCY\"\
+  ,\n\"POST_ALLOCATED_LC\",\n\"POST_ALLOCATED_USD\",\n\"POST_ALLOCATED_USD_CONSTANT_CURRENCY\"\
+  ,\n\"REPORTING_CURRENCY\",\nCASE WHEN \"VERSION\" = 'random' then 'random'\n   \
+  \             WHEN \"VERSION\" = 'random' then 'random'\n                ELSE \"\
+  VERSION\" end as \"VERSION\",\n\"TIME\",\n\"REPORTINGMONTH\",\n\"INPUT_CURRENCY\"\
+  ,\n\"CURRENCY_CONVERSION\"\nFROM RDS.ANAPLAN.ANAPLAN_OPEX_RUN_RATE_EXPENSES);"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

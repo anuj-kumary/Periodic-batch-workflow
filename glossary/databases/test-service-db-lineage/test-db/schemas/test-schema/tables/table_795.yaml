@@ -1,0 +1,77 @@
+name: table_795
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_795
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_795.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_NOW_ASSIST_VIRTUAL_AGENT_INTERACTIONS(\n\
+  \tCONVERSE_CONSUMER,\n\tDV_CONVERSE_CONSUMER,\n\tINTERAC_SYS_CREATED_ON,\n\tCONVERSE_SYS_CREATED_ON,\n\
+  \tINTERAC_CHANNEL_METADATA_TABLE,\n\tINTERAC_VIRTUAL_AGENT,\n\tINTERAC_TRANSCRIPT,\n\
+  \tINTERAC_SYS_DOMAIN,\n\tDV_INTERAC_SYS_DOMAIN,\n\tINTERAC_STATE_REASON,\n\tDV_INTERAC_STATE_REASON,\n\
+  \tINTERAC_OPENED_AT,\n\tCONVERSE_TOPIC,\n\tDV_CONVERSE_TOPIC,\n\tCONVOS_SYS_DOMAIN_PATH,\n\
+  \tINTERAC_NUMBER,\n\tCONVERSE_SYS_ID,\n\tCONVERSE_SYS_DOMAIN_PATH,\n\tINTERAC_SYS_DOMAIN_PATH,\n\
+  \tINTERAC_OPENED_FOR,\n\tDV_INTERAC_OPENED_FOR,\n\tCONVOS_SYS_ID,\n\tINTERAC_CHANNEL_METADATA_DOCUMENT,\n\
+  \tCONVERSE_SYS_DOMAIN,\n\tDV_CONVERSE_SYS_DOMAIN,\n\tCONVERSE_NUMBER,\n\tINTERAC_SYS_ID,\n\
+  \tCONVERSE_STATE,\n\tDV_CONVERSE_STATE,\n\tCONVOS_MODEL_TYPE,\n\tDV_CONVOS_MODEL_TYPE,\n\
+  \tINTERAC_SYS_CLASS_NAME,\n\tCONVOS_SYS_DOMAIN,\n\tDV_CONVOS_SYS_DOMAIN,\n\tINTERAC_STATE,\n\
+  \tDV_INTERAC_STATE,\n\tPSP_PER_INSERT_DT,\n\tPSP_PER_DELETE_DT,\n\tPSP_PER_UPDATE_DT,\n\
+  \tSYS_ID\n) as\n\t\t\t/*********************************************************************************\n\
+  \t\t\t\t* Date Created  : 11-june-2024\n\t\t\t\t* Developed By  : Pragati Gupta\n\
+  \t\t\t\t* Brief Description : Initial creation of base model for table RDS.HI.U_NOW_ASSIST_VIRTUAL_AGENT_INTERACTIONS\n\
+  \t\t\t\t* Project#/Story# \t: STRY2606609\n\t\t\t\t* --------------------------------------------------------------------------------------------------------------------------\n\
+  \t\t\t\t* REVISION HISTORY:\n\t\t\t\t*---------------------------------------------------------------------------------------------------------------------------\n\
+  \t\t\t\t* CR#                 Date Modified           Modified By            Brief\
+  \ Description of Change\n\n\t\t\t****************************************************************************************************************************/\n\
+  \n\t\t\tSELECT\n\t\t\tCONVERSE_CONSUMER\t,\n\t\t\tDV_CONVERSE_CONSUMER\t,\n\t\t\t\
+  INTERAC_SYS_CREATED_ON\t,\n\t\t\tCONVERSE_SYS_CREATED_ON\t,\n\t\t\tINTERAC_CHANNEL_METADATA_TABLE\t\
+  ,\n\t\t\tINTERAC_VIRTUAL_AGENT\t,\n\t\t\tINTERAC_TRANSCRIPT\t,\n\t\t\tINTERAC_SYS_DOMAIN\t\
+  ,\n\t\t\tDV_INTERAC_SYS_DOMAIN\t,\n\t\t\tINTERAC_STATE_REASON\t,\n\t\t\tDV_INTERAC_STATE_REASON\t\
+  ,\n\t\t\tINTERAC_OPENED_AT\t,\n\t\t\tCONVERSE_TOPIC\t,\n\t\t\tDV_CONVERSE_TOPIC\t\
+  ,\n\t\t\tCONVOS_SYS_DOMAIN_PATH\t,\n\t\t\tINTERAC_NUMBER\t,\n\t\t\tCONVERSE_SYS_ID\t\
+  ,\n\t\t\tCONVERSE_SYS_DOMAIN_PATH\t,\n\t\t\tINTERAC_SYS_DOMAIN_PATH\t,\n\t\t\tINTERAC_OPENED_FOR\t\
+  ,\n\t\t\tDV_INTERAC_OPENED_FOR\t,\n\t\t\tCONVOS_SYS_ID\t,\n\t\t\tINTERAC_CHANNEL_METADATA_DOCUMENT\t\
+  ,\n\t\t\tCONVERSE_SYS_DOMAIN\t,\n\t\t\tDV_CONVERSE_SYS_DOMAIN\t,\n\t\t\tCONVERSE_NUMBER\t\
+  ,\n\t\t\tINTERAC_SYS_ID\t,\n\t\t\tCONVERSE_STATE\t,\n\t\t\tDV_CONVERSE_STATE\t,\n\
+  \t\t\tCONVOS_MODEL_TYPE\t,\n\t\t\tDV_CONVOS_MODEL_TYPE\t,\n\t\t\tINTERAC_SYS_CLASS_NAME\t\
+  ,\n\t\t\tCONVOS_SYS_DOMAIN\t,\n\t\t\tDV_CONVOS_SYS_DOMAIN\t,\n\t\t\tINTERAC_STATE\t\
+  ,\n\t\t\tDV_INTERAC_STATE\t,\n\t\t\tPSP_PER_INSERT_DT\t,\n\t\t\tPSP_PER_DELETE_DT\t\
+  ,\n\t\t\tPSP_PER_UPDATE_DT\t,\n\t\t\tSYS_ID\n\tFrom RDS.HI.U_NOW_ASSIST_VIRTUAL_AGENT_INTERACTIONS;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,63 @@
+name: table_741
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_741
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_741.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view SCORECARD_CUSTOMER_GLOBAL_USERS(\n\tORIG_USERID,\n\
+  \tBIN\n) as\n\n\n/* Comments retained from HANA input file */\n\n /*****************************\n\
+  \ * Program  Name              :  SCORECARD_CUSTOMER_GLOBAL_USERS\n * Development\
+  \ Request # \t :\n * Date Created               : \t2021-4-16\n * Developed By \
+  \              :  Sridhar Bankuru\n * Brief Description          : \tData Cards\
+  \ - SCORECARD CUSTOMER GLOBAL USERS SECURITY\n * ---------------------------------------------------------------------------------------------------------------\n\
+  \ * REVISION HISTORY:\n * Updated On                 :\n *----------------------------------------------------------------------------------------------------------------\n\
+  \ * CR#\n * 1\n * 2\n  *****************************************************************************************************************/\n\
+  \n\n\n\n\nSELECT LISTAGG(\"USERID\",'random') AS ORIG_USERID , \"BIN\"\n \tFROM\
+  \ ( SELECT \"USERID\", \"LEN\", CONCAT('random',CEIL((LEN)/'random')) \"BIN\"\n\
+  \ \t\t\t   FROM (\n \t\t\t\tSELECT DISTINCT \"USERID\", \"SYS_UPDATED_ON\"\n \t\t\
+  \t\t\t\t,SUM (LENGTH(\"USERID\")+'random') over(partition by \"SYS_UPDATED_ON\"\
+  \ ORDER BY \"SYS_UPDATED_ON\" ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )\
+  \ \"LEN\"\n \t\t\t\tFROM (\n \t\t\t\t\t SELECT DISTINCT UE.\"USER_NAME\" AS \"USERID\"\
+  , A.\"SYS_UPDATED_ON\"  FROM RDS.SURF.U_EMPLOYEE UE\n  \t\tINNER JOIN (\n \t\t\t\
+  \t\t SELECT \"USERID\", \"SYS_UPDATED_ON\" FROM \"EDW_LS\".\"CUSTOMER_EM\".\"CUSTOMER_DASHBOARD_GLOBAL_USERS\"\
+  \n \t\t\t\t\t\t) A\n \t\t\t\t\t\tON LOWER(UE.\"USER_NAME\") = LOWER(USERID))\n \t\
+  \t\t\t \t)\n \t\t\t\t) GROUP BY \"BIN\" ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

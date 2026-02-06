@@ -1,0 +1,141 @@
+name: table_735
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_735
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_735.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view OCDIO_SHARE(\n\t\"Quarter\",\n\t\"ReportingTerritoryGeo\"\
+  ,\n\t\"MajorArea\",\n\t\"Area\",\n\t\"Region\",\n\t\"District\",\n\t\"TerritoryName\"\
+  ,\n\t\"OpportunityParentStage\",\n\t\"OpportunityParentPipelineStatus\",\n\t\"AccountName\"\
+  ,\n\t\"AccountNumber\",\n\t\"OptyParentAccountType\",\n\t\"AccountIndustry\",\n\t\
+  \"OpportunityParentType\",\n\t\"OpportunityNumber\",\n\t\"OpportunityName\",\n\t\
+  \"OpportunityStage\",\n\t\"PipelineStatus\",\n\t\"OpportunityParentCloseDate\",\n\
+  \t\"ParentQuarter\",\n\t\"MarqueeAccount\",\n\t\"ParentMarqueeAccount\",\n\t\"USDNetNewACV_RT\"\
+  ,\n\t\"USDRenewalACV_RT\",\n\tCACV\n) as\n                          SELECT fd.\"\
+  SalesQuarter\"                    AS \"Quarter\"\n                             \
+  \   , fd.\"ReportingTerritoryGeo\"\n                                , fd.\"OpportunityMajorArea\"\
+  \            AS \"MajorArea\"\n                                , fd.\"OpportunityArea\"\
+  \                 AS \"Area\"\n                                , fd.\"OpportunityRegion\"\
+  \               AS \"Region\"\n                                , fd.\"OpportunityDistrict\"\
+  \             AS \"District\"\n                                , fd.\"OpportunityTerritory\"\
+  \            AS \"TerritoryName\"\n                                , fd.\"OpportunityParentStage\"\
+  \n                                , fd.\"OpportunityParentPipelineStatus\"\n   \
+  \                             , fd.\"OpportunityParentAccount\"        AS \"AccountName\"\
+  \n                                , fd.\"OptyParentAccountNumber\"         AS \"\
+  AccountNumber\"     --Added by Mani\n                                , fd.\"OptyParentAccountType\"\
+  \n                                , fd.\"AccountIndustry\"\n                   \
+  \             , fd.\"OpportunityParentType\"\n                                ,\
+  \ fd.\"OpportunityNumber\"\n                                , fd.\"OpportunityName\"\
+  \n                                , fd.\"OpportunityStage\"\n                  \
+  \              , fd.\"PipelineStatus\"\n                                , fd.\"\
+  OpportunityParentCloseDate\"\n                                , CASE WHEN fd.\"\
+  OpportunityParentStage\" in ('random',\n                                       \
+  \                                  'random',\n                                 \
+  \                                        'random')\n                           \
+  \                                          or (\"OpportunityParentStage\" = 'random'\n\
+  \                                                                          and \"\
+  OpportunityParentType\" in ('random','random')\n                               \
+  \                                         )\n                                  \
+  \     THEN 'random'\n                                       ELSE RIGHT(YEAR(\"OpportunityParentCloseDate\"\
+  ) ||'random'|| QUARTER(\"OpportunityParentCloseDate\"), 'random')\n            \
+  \                         END AS \"ParentQuarter\"\n\t\t                       \
+  \ , CASE WHEN fd.\"MarqueeAccount\" IS not NULL then 'random' Else 'random' END\
+  \ as \"MarqueeAccount\"\n\t\t                        , CASE WHEN fd.\"ParentMarqueeAccount\"\
+  \ IS not NULL then 'random' Else 'random' END as \"ParentMarqueeAccount\"\n\t\t\
+  \                       -- , IFNULL(fd.\"AcctExecutiveSponsorName\",HA.\"AcctExecutiveSponsorName\"\
+  ) as \"AcctExecutiveSponsorName\"\n\t\t                      --  , IFNULL(fd.\"\
+  ParentAcctExecutiveSponsorName\",HA.\"AcctExecutiveSponsorName\") as \"ParentAcctExecutiveSponsorName\"\
+  \n\t\t                        , SUM(fd.\"USDNetNewACV\")             AS \"USDNetNewACV_RT\"\
+  \n                                , SUM(fd.\"USDRenewalACV\")            AS \"USDRenewalACV_RT\"\
+  \n                                , MAX(FSP_TAM.\"AccountContractACV\")        \
+  \  AS \"CACV\"\n\n                        FROM CDL_LS.\"SALES_RPT\".\"RPT_FIXEDDATAPLUSQUOTA_RT\"\
+  \ fd\n                        LEFT JOIN ( select a.\"AcctNumber\", a.\"AccountPlanColor\"\
+  , a.\"AccountPlanDate\", a.\"AccountPlanDefinition\"\n                         \
+  \                , MAX(a.\"TAM\")                    as \"AcctFSPTAM\"\n       \
+  \                                  , MAX(a.CACV)                     as \"AccountContractACV\"\
+  \n\n                                         ,a.\"SuccessProgram\" as \"Impact_Attached\"\
+  ,\n                                            a.\"RenewalNNACV\" as \"RenewalAtRisk\"\
+  ,\n                                              a.\"GPEngagementScore\"\n     \
+  \                                       -- , a.\"INTERACTION_TYPE\"\n          \
+  \                                  , a.\"HighTouchEngagementCount\"\n          \
+  \                                   , a.\"AccountEngagementCategory\"\n        \
+  \                                     , CASE WHEN a.\"EventName\"='random' THEN\
+  \ a.\"AcctNumber\" ELSE 'random' End AS \"Acct_AttendedK\",\n\n                \
+  \                             max(\"GlobalParentCACV\") as \"GlobalParentCACV\"\n\
+  \                                ,max(GPTAM) as \"GPTAM\",max(\"GPWalletshare%\"\
+  ) as \"GPWalletshare%\",\n\t\t\t\t\t\t\t\tmax(\"GPNps\") as \"GPNps\"    --Exec\
+  \ Engg R4 Oct'23\n                                      from\n                 \
+  \                  CDL_LS.CUSTOMER_CD_RPT.RPT_CD_ACCOUNT_INDEX_ALL a--,\n      \
+  \                                 WHERE a.USERID LIKE 'random'\n               \
+  \                   group by a.\"AcctNumber\", a.\"AccountPlanColor\", a.\"AccountPlanDate\"\
+  \ ,a.\"AccountPlanDefinition\" ,a.\"SuccessProgram\"                           \
+  \                 , a.\"GPEngagementScore\" ,  a.\"HighTouchEngagementCount\" ,\
+  \  a.\"RenewalNNACV\" ,a.\"EventName\",a.\"AccountEngagementCategory\"\n       \
+  \                           ) FSP_TAM ON\n                                  (case\
+  \ when \"Quarter\"=\"ParentQuarter\" then fd.\"AccountNumber\" else fd.\"AccountNumber\"\
+  \ end )=FSP_TAM.\"AcctNumber\"\n                            WHERE \"RecordType\"\
+  \ in ('random')\n                             AND \"SalesQuarter\" BETWEEN\n   \
+  \                                                RIGHT(YEAR(ADD_MONTHS(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP()),'random')) ||'random'||\n                      \
+  \                                QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random')\n                                               and RIGHT(YEAR(ADD_MONTHS(convert_timezone(\
+  \ 'random',CURRENT_TIMESTAMP()), 'random')) ||'random'||\n                     \
+  \                                 QUARTER(ADD_MONTHS(convert_timezone( 'random',CURRENT_TIMESTAMP()),\
+  \ 'random')), 'random')\n                         GROUP BY fd.\"SalesQuarter\"\n\
+  \                                , fd.\"ReportingTerritoryGeo\"\n              \
+  \                  , fd.\"OpportunityMajorArea\"\n                             \
+  \   , fd.\"OpportunityArea\"\n                                , fd.\"OpportunityRegion\"\
+  \n                                , fd.\"OpportunityDistrict\"\n               \
+  \                 , fd.\"OpportunityTerritory\"\n                              \
+  \  , fd.\"OpportunityParentStage\"\n                                , fd.\"OpportunityParentPipelineStatus\"\
+  \n                                , fd.\"OpportunityParentAccount\"\n          \
+  \                      , fd.\"OptyParentAccountNumber\"   --Added by Mani\n    \
+  \                            , fd.\"OptyParentAccountType\"\n                  \
+  \              , fd.\"AccountIndustry\"\n                                , fd.\"\
+  OpportunityParentType\"\n                                , fd.\"OpportunityNumber\"\
+  \n                                , fd.\"OpportunityName\"\n                   \
+  \             , fd.\"OpportunityStage\"\n                                , fd.\"\
+  PipelineStatus\"\n                                , fd.\"OpportunityParentCloseDate\"\
+  \n                                , fd.\"MarqueeAccount\"\n                    \
+  \            , fd.\"ParentMarqueeAccount\"\n                                , fd.\"\
+  AcctExecutiveSponsorName\"\n                                , fd.\"ParentAcctExecutiveSponsorName\"\
+  \ ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,61 @@
+name: table_751
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_751
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_751.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view COBK(\n\tMANDT,\n\tKOKRS,\n\tBELNR,\n\t\
+  GJAHR,\n\tVERSN,\n\tVRGNG,\n\tTIMESTMP,\n\tPERAB,\n\tPERBI,\n\tBLDAT,\n\tBUDAT,\n\
+  \tCPUDT,\n\tUSNAM,\n\tBLTXT,\n\tSTFLG,\n\tSTOKZ,\n\tREFBT,\n\tREFBN,\n\tREFBK,\n\
+  \tREFGJ,\n\tBLART,\n\tLDGRP,\n\tORGVG,\n\tSUMBZ,\n\tDELBZ,\n\tWSDAT,\n\tKURST,\n\
+  \tVARNR,\n\tKWAER,\n\tCTYP1,\n\tCTYP2,\n\tCTYP3,\n\tCTYP4,\n\tAWTYP,\n\tAWORG,\n\
+  \tLOGSYSTEM,\n\tCPUTM,\n\tALEBZ,\n\tALEBN,\n\tAWSYS,\n\tAWREF_REV,\n\tAWORG_REV,\n\
+  \tAWKEY,\n\tVALDT,\n\tKOKRS_SENDER,\n\tBELNR_SENDER,\n\tLOGSYSTEM_SENDER,\n\tREPROCESSING_STATUS_CODE\n\
+  ) as select\n\t\tMANDT,\n\t\tKOKRS,\n\t\tBELNR,\n\t\tGJAHR,\n\t\tVERSN,\n\t\tVRGNG,\n\
+  \t\tTIMESTMP,\n\t\tPERAB,\n\t\tPERBI,\n\t\tBLDAT,\n\t\tBUDAT,\n\t\tCPUDT,\n\t\t\
+  USNAM,\n\t\tBLTXT,\n\t\tSTFLG,\n\t\tSTOKZ,\n\t\tREFBT,\n\t\tREFBN,\n\t\tREFBK,\n\
+  \t\tREFGJ,\n\t\tBLART,\n\t\tLDGRP,\n\t\tORGVG,\n\t\tSUMBZ,\n\t\tDELBZ,\n\t\tWSDAT,\n\
+  \t\tKURST,\n\t\tVARNR,\n\t\tKWAER,\n\t\tCTYP1,\n\t\tCTYP2,\n\t\tCTYP3,\n\t\tCTYP4,\n\
+  \t\tAWTYP,\n\t\tAWORG,\n\t\tLOGSYSTEM,\n\t\tCPUTM,\n\t\tALEBZ,\n\t\tALEBN,\n\t\t\
+  AWSYS,\n\t\tAWREF_REV,\n\t\tAWORG_REV,\n\t\tAWKEY,\n\t\tVALDT,\n\t\tKOKRS_SENDER,\n\
+  \t\tBELNR_SENDER,\n\t\tLOGSYSTEM_SENDER,\n\t\tREPROCESSING_STATUS_CODE\n from RDS.S4HANA.COBK\
+  \ where MANDT='random';"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

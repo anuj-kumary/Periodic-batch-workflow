@@ -1,0 +1,109 @@
+name: table_779
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_779
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_779.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view KC_SAM_MANAGER_FACT(\n\t\"AccountNumber\"\
+  ,\n\t\"AccountName\",\n\t\"AcctKey\",\n\t\"RenewalDate\",\n\t\"PoE\",\n\t\"Opty_current_quarter\"\
+  ,\n\t\"Opty_next_quarter\",\n\t\"AnnualRevenue\",\n\t\"OptyPipelineAcv\",\n\t\"\
+  PrimaryLogoURL\",\n\t\"OperationalReview\",\n\t\"PeriodicSupportReview\",\n\tCSAT\n\
+  ) as\n\n with\n\n ACCOUNT as\n (select DISTINCT\n    CC.U_NUMBER as \"AccountNumber\"\
+  ,\n    CC.NAME as \"AccountName\",\n    concat(\"AcctMDMID\",\"AcctNumber\") as\
+  \ \"AcctKey\"\n    from RDS.HI.CORE_COMPANY CC left join EDW_LS.CUSTOMER_EM.ACCOUNT_BASE\
+  \ KC\n    on CC.U_NUMBER = KC.\"AcctNumber\" where CC.DV_U_CUSTOMER_SUCCESS_MANAGER\
+  \ <> 'random' and CC.NAME <> 'random'\n    ),\n\n   RENEWAL_DATE as\n (\t select\
+  \ \"AccountNumber\",MIN(\"ContractEndDate\") as \"RenewalDate\" from\nACCOUNT AC\
+  \ LEFT JOIN EDW_LS.\"CUSTOMER_EM\".\"EM_CUSTOMER_BASE\" CB\non AC.\"AccountNumber\"\
+  \ = CB.\"AcctNumber\"\nwhere \"ContractRenewalStatus\" <> 'random'\nand \"ProductActive\"\
+  \ = 'random' and\n\"ProductCode\" IN\n('random',\n'random',\n'random',\n'random',\n\
+  'random',\n'random',\n'random',\n'random',\n'random',\n'random',\n'random',\n'random',\n\
+  'random',\n'random',\n'random',\n'random') and \"ContractNumber\" NOT IN\n('random',\n\
+  'random',\n'random',\n'random',\n'random',\n'random',\n'random',\n'random',\n'random')\
+  \ group by \"AccountNumber\")\n ,\n\nPOE_METRICS as\n  (\n  select DISTINCT AC.\"\
+  AccountNumber\",POE.U_POE_SCORE_2 as \"PoE\" FROM\n  ACCOUNT AC\n  left join RDS.SUPPORTTOOLS.U_POE_METRICS\
+  \ POE\n  ON AC.\"AccountName\" = POE.DV_U_COMPANY\n  QUALIFY row_number() over (Partition\
+  \ by AC.\"AccountNumber\" order by POE.sys_created_on) ='random'\n\n  ),\n\n  ACCOUNT_OPTY\
+  \ as\n  (select \"AccountNumber\",sum(CASE when \"DynamicQuarter\" = 'random'  then\
+  \ 'random' else 'random' end) as \"Opty_current_quarter\",\nsum(CASE when \"DynamicQuarter\"\
+  \ = 'random' then 'random' else 'random' end )as \"Opty_next_quarter\"\nfrom(\n\
+  select DISTINCT u_number as \"AccountNumber\",\"OptyNumber\",\"DynamicQuarter\"\
+  \ from  RDS.HI.CORE_COMPANY cc left join CDL_LS.\"SALES_ER\".\"MANAGER_PORTAL_PRODUCT\"\
+  \ mp  ON mp.\"AccountNumber\" = cc.u_number  where \"RecordType\" = 'random' and\
+  \ \"OptyPipelineStatus\" <> 'random' and\n\"DynamicQuarter\" IN ('random','random')\n\
+  and cc.DV_U_CUSTOMER_SUCCESS_MANAGER <> 'random' and CC.NAME <> 'random') group\
+  \ by \"AccountNumber\"\n),\n\n ACCOUNT_LOGO as\n  (select DISTINCT \"AcctNumber\"\
+  \ as \"AccountNumber\",\"PrimaryLogoURL\" from ODS_LS.SCORE_CARDS.CUSTOMER_ALTERNATE_NAMES\
+  \ ),\n\nACCOUNT_ACV as\n\n     (\n     select DISTINCT AC.\"AccountNumber\" ,sum(round(\"\
+  ConItemACV_USD\")) as \"AnnualRevenue\" from\n     ACCOUNT AC  left join  EDW_LS.\"\
+  CUSTOMER_EM\".\"EM_CUSTOMER_BASE\" SA on\n     AC.\"AccountNumber\" = SA.\"AcctNumber\"\
+  \ where\n      \"ContractRenewalStatus\" <> 'random'  and \"ContractTypeValue\"\
+  \ not like 'random'\n     group by \"AccountNumber\"),\n\nACCOUNT_OPTY_ACV as (\n\
+  \n select  cc.u_number as \"AccountNumber\",\n sum(EM.\"OptyItemRenewalACV_USD\"\
+  ) as \"OptyPipelineAcv\"  from RDS.HI.CORE_COMPANY CC\n left join EDW_LS.SALES_EM.EM_FIXEDDATAPLUSQUOTA_RT\
+  \ EM\n ON cc.u_number = EM.\"AcctNumber\"\nWHERE \"OptySalesQuarter\" IN (\nRIGHT(YEAR(convert_timezone('random',CURRENT_TIMESTAMP())),'random')\
+  \ ||'random'||\nQUARTER(convert_timezone('random',CURRENT_TIMESTAMP())),\n RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')),'random') ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')) ,\n  RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')),'random') ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')),\n RIGHT(YEAR(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')),'random') ||'random'|| QUARTER(ADD_MONTHS(convert_timezone('random',CURRENT_TIMESTAMP()),\
+  \ 'random')))\n and \"OptyPipelineStatus\" <> 'random' and cc.DV_U_CUSTOMER_SUCCESS_MANAGER\
+  \ <> 'random' and CC.NAME <> 'random'\n group by cc.u_number ) ,\n\n ACCOUNT_SAM_CSAT\
+  \ as (\n select DISTINCT\n    AC.\"AccountNumber\",\n    AC.\"AccountName\",\n \
+  \   SC.\"CSATScore\" as CSAT\n\n    from ACCOUNT AC left join (select \"AcctNumber\"\
+  ,\"AcctName\",\n\"CSATScore\",\"CSATResponse\",\"SurveyEndDate\",ROW_NUMBER() OVER\
+  \ (Partition by  \"AcctNumber\" order by \"SurveyEndDate\" desc) as Rnk from ODS_LS.QUALTRICS.UNIFIED_SURVEY_RESPONSE_SAM_FEEDBACK_SURVEY\n\
+  \ QUALIFY Rnk = 'random') SC on  AC.\"AccountNumber\" = SC.\"AcctNumber\"\n\n\n\
+  \ )\n\nselect AC.\"AccountNumber\",\n       AC.\"AccountName\",\n       AC.\"AcctKey\"\
+  ,\n       RD.\"RenewalDate\",\n       PM.\"PoE\",\n       ACOPTY.\"Opty_current_quarter\"\
+  ,\n       ACOPTY.\"Opty_next_quarter\",\n       ACACV.\"AnnualRevenue\",\n     \
+  \  ACOPTACV.\"OptyPipelineAcv\",\n       ALO.\"PrimaryLogoURL\",\n       CURRENT_DATE\
+  \ as \"OperationalReview\",\n       CURRENT_DATE as \"PeriodicSupportReview\",\n\
+  \       CSAT as \"CSAT\"\n       from ACCOUNT AC\n       left join RENEWAL_DATE\
+  \  RD on AC.\"AccountNumber\" = RD.\"AccountNumber\"\n       left join POE_METRICS\
+  \ PM on AC.\"AccountNumber\" = PM.\"AccountNumber\"\n       left join ACCOUNT_OPTY\
+  \ ACOPTY on AC.\"AccountNumber\" = ACOPTY.\"AccountNumber\"\n       left join ACCOUNT_ACV\
+  \ ACACV on AC.\"AccountNumber\" = ACACV.\"AccountNumber\"\n       left join ACCOUNT_OPTY_ACV\
+  \ ACOPTACV on AC.\"AccountNumber\" = ACOPTACV.\"AccountNumber\"\n       left join\
+  \ ACCOUNT_LOGO ALO on AC.\"AccountNumber\" = ALO.\"AccountNumber\"\n       left\
+  \ join ACCOUNT_SAM_CSAT ASC on AC.\"AccountNumber\" = ASC.\"AccountNumber\" ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved

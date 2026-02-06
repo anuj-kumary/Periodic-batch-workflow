@@ -1,0 +1,75 @@
+name: table_766
+fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_766
+tableType: View
+columns:
+  - name: id
+    dataType: BIGINT
+    dataTypeDisplay: bigint
+    fullyQualifiedName: test-service-db-lineage.test-db.test-schema.table_766.id
+    tags: []
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 46334aff-5d83-4872-94c8-902145192247
+  type: databaseSchema
+  name: test-schema
+  fullyQualifiedName: test-service-db-lineage.test-db.test-schema
+  displayName: test-schema
+  deleted: false
+database:
+  id: 252ee8f8-11a2-4af5-bf4b-05dcda48e1ec
+  type: database
+  name: test-db
+  fullyQualifiedName: test-service-db-lineage.test-db
+  displayName: test-db
+  deleted: false
+service:
+  id: 7088ea8b-d5a8-4adf-bff1-a539758cd4ea
+  type: databaseService
+  name: test-service-db-lineage
+  fullyQualifiedName: test-service-db-lineage
+  displayName: test-service-db-lineage
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view U_SURVEY_TASKS(\n\t\"SurveyTaskSysID\",\n\
+  \t\"SurveyTaskState\",\n\t\"SurveyTaskSummaryOfCusotmerIssues\",\n\t\"SurveyTaskTypeID\"\
+  ,\n\t\"SurveyTaskType\",\n\t\"SurveyTaskWatchList\",\n\t\"SurveyTaskNumber\",\n\t\
+  \"SurveyTaskClosedByID\",\n\t\"SurveyTaskResponseID\",\n\t\"SurveyTaskResponse\"\
+  ,\n\t\"SurveyTaskCloseNotes\",\n\t\"SurveyTaskRespondentID\",\n\t\"SurveyTaskRespondent\"\
+  ,\n\t\"SurveyTaskAssignedTo\",\n\t\"SurveyTaskClosedBy\",\n\t\"SurveyTaskFor\",\n\
+  \tDV_U_TASK_FOR,\n\t\"SurveyTaskShortDescription\",\n\t\"SurveyTaskAssignedToID\"\
+  ,\n\t\"SurveyTaskOpenedBY\",\n\t\"SurveyTaskWatchListID\",\n\t\"SurveyTaskRespondentRoleID\"\
+  ,\n\t\"SurveyTaskActive\",\n\t\"SurveyTaskClosedAt\",\n\t\"SurveyTaskDueDate\",\n\
+  \t\"SurveyTaskSysUpdatedOn\",\n\t\"SurveyTaskSysCreatedOn\",\n\t\"SurveyTaskOpenedAt\"\
+  \n) as -- SEMANTIC LAYER BEGINS\n\nSELECT \"SYS_ID\" as \"SurveyTaskSysID\",\n \
+  \      \"DV_STATE\" as \"SurveyTaskState\",\n       \"U_SUMMARY_OF_CUSTOMER_ISSUES\"\
+  \ as \"SurveyTaskSummaryOfCusotmerIssues\",\n       \"U_SURVEY_TYPE\" as \"SurveyTaskTypeID\"\
+  ,\n       \"DV_U_SURVEY_TYPE\" as \"SurveyTaskType\",\n       \"DV_WATCH_LIST\"\
+  \ as \"SurveyTaskWatchList\",\n       \"NUMBER\" as \"SurveyTaskNumber\",\n    \
+  \   \"CLOSED_BY\" as \"SurveyTaskClosedByID\",\n       \"U_SURVEY_RESPONSE\" as\
+  \ \"SurveyTaskResponseID\",\n       \"DV_U_SURVEY_RESPONSE\" as \"SurveyTaskResponse\"\
+  ,\n       \"CLOSE_NOTES\" as \"SurveyTaskCloseNotes\",\n       \"U_SURVEY_RESPONDENT\"\
+  \ as \"SurveyTaskRespondentID\",\n       \"DV_U_SURVEY_RESPONDENT\" as \"SurveyTaskRespondent\"\
+  ,\n       \"DV_ASSIGNED_TO\" as \"SurveyTaskAssignedTo\",\n       \"DV_CLOSED_BY\"\
+  \ as \"SurveyTaskClosedBy\",\n       \"U_TASK_FOR\" as \"SurveyTaskFor\",\n    \
+  \   \"DV_U_TASK_FOR\" as \"DV_U_TASK_FOR\",\n       \"SHORT_DESCRIPTION\" as \"\
+  SurveyTaskShortDescription\",\n       \"ASSIGNED_TO\" as \"SurveyTaskAssignedToID\"\
+  ,\n       \"DV_OPENED_BY\" as \"SurveyTaskOpenedBY\",\n       \"WATCH_LIST\" as\
+  \ \"SurveyTaskWatchListID\",\n       \"U_SURVEY_RESPONDENT_ROLE\" as \"SurveyTaskRespondentRoleID\"\
+  ,\n       \"ACTIVE\" as \"SurveyTaskActive\",\n       \"CLOSED_AT\" as \"SurveyTaskClosedAt\"\
+  ,\n       \"DUE_DATE\" as \"SurveyTaskDueDate\",\n       \"SYS_UPDATED_ON\" as \"\
+  SurveyTaskSysUpdatedOn\",\n       \"SYS_CREATED_ON\" as \"SurveyTaskSysCreatedOn\"\
+  ,\n       \"OPENED_AT\" as \"SurveyTaskOpenedAt\"\nFROM \"RDS\".\"SURF\".\"U_SURVEY_TASKS\"\
+  ;"
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+processedLineage: false
+entityStatus: Approved
