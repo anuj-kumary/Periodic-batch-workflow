@@ -1,0 +1,32 @@
+name: 315dcb36bc65da12ccb3cffacb533bd6
+fullyQualifiedName: hktest.315dcb36bc65da12ccb3cffacb533bd6
+owners: []
+duration: 228.0
+users: []
+query: "WITH \"15654034cbdd968287bfce1af0796a2f_rnd\" AS \n(SELECT \"CUSTOMERCONTACTHISTORY_1\"\
+  .\"CONTACTDATE\" AS \"CONTACTDATE\" \nFROM \"MSSQLBANKING_CUSTOMER\".\"CUSTOMERCONTACTHISTORY\"\
+  \ AS \"CUSTOMERCONTACTHISTORY_1\" TABLESAMPLE ROW(? ROWS)), \n\"15654034cbdd968287bfce1af0796a2f_sample\"\
+  \ AS \n(SELECT \"15654034cbdd968287bfce1af0796a2f_rnd\".\"CONTACTDATE\" AS \"CONTACTDATE\"\
+  \ \nFROM \"15654034cbdd968287bfce1af0796a2f_rnd\")\n SELECT ? AS anon_1, count(\"\
+  CONTACTDATE\") AS \"valuesCount\", count(DISTINCT \"CONTACTDATE\") AS \"distinctCount\"\
+  , MIN(\"CONTACTDATE\") AS min, MAX(\"CONTACTDATE\") AS max, coalesce(SUM(CASE WHEN\
+  \ (\"CONTACTDATE\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", ? AS anon__1,\
+  \ ? AS anon__2 \nFROM \"15654034cbdd968287bfce1af0796a2f_sample\"\n LIMIT ?"
+checksum: 315dcb36bc65da12ccb3cffacb533bd6
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 89d6207d-337a-44ca-a3d6-ad1b8a3bfc69
+    type: table
+    name: CUSTOMERCONTACTHISTORY
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.CUSTOMERCONTACTHISTORY
+    displayName: CUSTOMERCONTACTHISTORY
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

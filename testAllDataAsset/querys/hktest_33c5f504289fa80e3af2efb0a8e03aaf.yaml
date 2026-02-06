@@ -1,0 +1,28 @@
+name: 33c5f504289fa80e3af2efb0a8e03aaf
+fullyQualifiedName: hktest.33c5f504289fa80e3af2efb0a8e03aaf
+owners: []
+duration: 59.0
+users: []
+query: "SELECT ? AS anon_1, count(\"_FIVETRAN_SYNCED\") AS \"valuesCount\", count(DISTINCT\
+  \ \"_FIVETRAN_SYNCED\") AS \"distinctCount\", MIN(\"_FIVETRAN_SYNCED\") AS min,\
+  \ MAX(\"_FIVETRAN_SYNCED\") AS max, coalesce(SUM(CASE WHEN (\"_FIVETRAN_SYNCED\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", ? AS anon__1, ? AS anon__2 \nFROM\
+  \ \"MSSQLBANKING_ACCOUNT\".\"ACCOUNTSTATEMENT\"\n LIMIT ?"
+checksum: 33c5f504289fa80e3af2efb0a8e03aaf
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 081b5958-06b1-4866-818f-ed255e483244
+    type: table
+    name: ACCOUNTSTATEMENT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.ACCOUNTSTATEMENT
+    displayName: ACCOUNTSTATEMENT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

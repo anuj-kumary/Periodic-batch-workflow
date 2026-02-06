@@ -1,0 +1,35 @@
+name: 376f449141cb50c880bae1b1f2fa1b2d
+fullyQualifiedName: hktest.376f449141cb50c880bae1b1f2fa1b2d
+owners: []
+duration: 138.0
+users: []
+query: "WITH \"3cfba54f6873dfd55b0b09d32910b20e_rnd\" AS \n(SELECT \"STORE_1\".\"\
+  S_CLOSED_DATE_SK\" AS \"S_CLOSED_DATE_SK\" \nFROM \"TPCDS_SF100TCL\".\"STORE\" AS\
+  \ \"STORE_1\" TABLESAMPLE ROW(? ROWS)), \n\"3cfba54f6873dfd55b0b09d32910b20e_sample\"\
+  \ AS \n(SELECT \"3cfba54f6873dfd55b0b09d32910b20e_rnd\".\"S_CLOSED_DATE_SK\" AS\
+  \ \"S_CLOSED_DATE_SK\" \nFROM \"3cfba54f6873dfd55b0b09d32910b20e_rnd\")\n SELECT\
+  \ count(CASE WHEN (\"S_CLOSED_DATE_SK\" >= ? AND \"S_CLOSED_DATE_SK\" < ?) THEN\
+  \ \"S_CLOSED_DATE_SK\" END) AS \"2.451M to 2.451M\", count(CASE WHEN (\"S_CLOSED_DATE_SK\"\
+  \ >= ? AND \"S_CLOSED_DATE_SK\" < ?) THEN \"S_CLOSED_DATE_SK\" END) AS \"2.451M\
+  \ to 2.451M\", count(CASE WHEN (\"S_CLOSED_DATE_SK\" >= ? AND \"S_CLOSED_DATE_SK\"\
+  \ < ?) THEN \"S_CLOSED_DATE_SK\" END) AS \"2.451M to 2.451M\", count(CASE WHEN (\"\
+  S_CLOSED_DATE_SK\" >= ?) THEN \"S_CLOSED_DATE_SK\" END) AS \"2.451M and up\" \n\
+  FROM \"3cfba54f6873dfd55b0b09d32910b20e_sample\"\n LIMIT ?"
+checksum: 376f449141cb50c880bae1b1f2fa1b2d
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 43356b28-b302-4890-b93c-3f7d6771f9e5
+    type: table
+    name: STORE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.STORE
+    displayName: STORE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

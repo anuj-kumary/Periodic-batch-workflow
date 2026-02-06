@@ -1,0 +1,29 @@
+name: 3592b1bfebbaac8344b2e15d56f9b5ac
+fullyQualifiedName: hktest.3592b1bfebbaac8344b2e15d56f9b5ac
+owners: []
+duration: 55.0
+users: []
+query: "SELECT avg(\"CNTRCT_VRSN_KY\") AS mean, count(\"CNTRCT_VRSN_KY\") AS \"valuesCount\"\
+  , count(DISTINCT \"CNTRCT_VRSN_KY\") AS \"distinctCount\", MIN(\"CNTRCT_VRSN_KY\"\
+  ) AS min, MAX(\"CNTRCT_VRSN_KY\") AS max, coalesce(SUM(CASE WHEN (\"CNTRCT_VRSN_KY\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CNTRCT_VRSN_KY\")\
+  \ AS stddev, SUM(\"CNTRCT_VRSN_KY\") AS sum \nFROM \"CURATED\".\"CNTRCT\"\n LIMIT\
+  \ ?"
+checksum: 3592b1bfebbaac8344b2e15d56f9b5ac
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

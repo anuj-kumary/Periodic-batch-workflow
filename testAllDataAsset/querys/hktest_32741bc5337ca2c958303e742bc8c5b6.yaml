@@ -1,0 +1,39 @@
+name: 32741bc5337ca2c958303e742bc8c5b6
+fullyQualifiedName: hktest.32741bc5337ca2c958303e742bc8c5b6
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"6813f4b1-14d0-4d7e-a166-02e3883a2231\",\"type\":\"table\"\
+        ,\"name\":\"COUNTRIES\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.COUNTRIES\"\
+        ,\"displayName\":\"COUNTRIES\",\"deleted\":false}]"
+  previousVersion: 1.2
+  changeSummary: {}
+owners: []
+duration: 136.0
+users: []
+query: "SELECT avg(LEN(\"COUNTRY_ID\")) AS mean, count(\"COUNTRY_ID\") AS \"valuesCount\"\
+  , count(DISTINCT \"COUNTRY_ID\") AS \"distinctCount\", MIN(LEN(\"COUNTRY_ID\"))\
+  \ AS min, MAX(LEN(\"COUNTRY_ID\")) AS max, coalesce(SUM(CASE WHEN (\"COUNTRY_ID\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"COUNTRY_ID\"))\
+  \ AS stddev, SUM(LEN(\"COUNTRY_ID\")) AS sum \nFROM \"E2E_TEST\".\"COUNTRIES\"\n\
+  \ LIMIT ?"
+checksum: 32741bc5337ca2c958303e742bc8c5b6
+queryDate: 1752537600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 6813f4b1-14d0-4d7e-a166-02e3883a2231
+    type: table
+    name: COUNTRIES
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.COUNTRIES
+    displayName: COUNTRIES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

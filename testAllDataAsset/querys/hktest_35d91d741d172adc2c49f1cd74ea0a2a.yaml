@@ -1,0 +1,33 @@
+name: 35d91d741d172adc2c49f1cd74ea0a2a
+fullyQualifiedName: hktest.35d91d741d172adc2c49f1cd74ea0a2a
+owners: []
+duration: 58.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"FB_PROMO_3_COMPLETE_C\"\
+  \ AS \"FB_PROMO_3_COMPLETE_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  FB_PROMO_3_COMPLETE_C\" AS \"FB_PROMO_3_COMPLETE_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n\
+  \ SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"FB_PROMO_3_COMPLETE_C\"\
+  ) AS count_1 \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample GROUP BY \"FB_PROMO_3_COMPLETE_C\"\
+  \ \nHAVING count(\"FB_PROMO_3_COMPLETE_C\") = ?) AS only_once\n LIMIT ?"
+checksum: 35d91d741d172adc2c49f1cd74ea0a2a
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,32 @@
+name: 3385da967e07730eff5ccd8a54ea85ed
+fullyQualifiedName: hktest.3385da967e07730eff5ccd8a54ea85ed
+owners: []
+duration: 78.0
+users: []
+query: "WITH \"90986fb464139cb1a5fdd5c91c06b165_rnd\" AS \n(SELECT \"SRC_SYS_1\".\"\
+  CRNT_IND\" AS \"CRNT_IND\" \nFROM \"CURATED\".\"SRC_SYS\" AS \"SRC_SYS_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \n\"90986fb464139cb1a5fdd5c91c06b165_sample\" AS \n(SELECT \"90986fb464139cb1a5fdd5c91c06b165_rnd\"\
+  .\"CRNT_IND\" AS \"CRNT_IND\" \nFROM \"90986fb464139cb1a5fdd5c91c06b165_rnd\")\n\
+  \ SELECT avg(LEN(\"CRNT_IND\")) AS mean, count(\"CRNT_IND\") AS \"valuesCount\"\
+  , count(DISTINCT \"CRNT_IND\") AS \"distinctCount\", MIN(LEN(\"CRNT_IND\")) AS min,\
+  \ MAX(LEN(\"CRNT_IND\")) AS max, coalesce(SUM(CASE WHEN (\"CRNT_IND\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"CRNT_IND\")) AS stddev, SUM(LEN(\"\
+  CRNT_IND\")) AS sum \nFROM \"90986fb464139cb1a5fdd5c91c06b165_sample\"\n LIMIT ?"
+checksum: 3385da967e07730eff5ccd8a54ea85ed
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: a265fd92-175b-4b4e-a716-f6b1b8f9af4c
+    type: table
+    name: SRC_SYS
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.SRC_SYS
+    displayName: SRC_SYS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

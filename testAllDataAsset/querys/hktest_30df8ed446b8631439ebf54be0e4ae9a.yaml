@@ -1,0 +1,33 @@
+name: 30df8ed446b8631439ebf54be0e4ae9a
+fullyQualifiedName: hktest.30df8ed446b8631439ebf54be0e4ae9a
+owners: []
+duration: 361.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT ? AS anon_1, count(\"FULL_REFRESH\") AS \"valuesCount\", count(DISTINCT\
+  \ \"FULL_REFRESH\") AS \"distinctCount\", ? AS anon__1, ? AS anon__2, coalesce(SUM(CASE\
+  \ WHEN (\"FULL_REFRESH\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", ? AS anon__3,\
+  \ ? AS anon__4 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_DBT_MODELS\"\n LIMIT ?"
+checksum: 30df8ed446b8631439ebf54be0e4ae9a
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: aba63d35-7870-48f2-a0f9-50dc7a120f60
+    type: table
+    name: ALERTS_DBT_MODELS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_DBT_MODELS
+    displayName: ALERTS_DBT_MODELS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

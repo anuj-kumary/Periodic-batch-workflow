@@ -1,0 +1,26 @@
+name: 33dcaca96590e60dbf749dd8b50346a6
+fullyQualifiedName: hktest.33dcaca96590e60dbf749dd8b50346a6
+owners: []
+duration: 38.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CARDTYPE\") AS count_1\
+  \ \nFROM \"MSSQLBANKING_ACCOUNT\".\"CREDITCARD\" GROUP BY \"CARDTYPE\" \nHAVING\
+  \ count(\"CARDTYPE\") = ?) AS only_once\n LIMIT ?"
+checksum: 33dcaca96590e60dbf749dd8b50346a6
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 90111e7a-d7bb-46c9-976d-2a483c18a2f5
+    type: table
+    name: CREDITCARD
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.CREDITCARD
+    displayName: CREDITCARD
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

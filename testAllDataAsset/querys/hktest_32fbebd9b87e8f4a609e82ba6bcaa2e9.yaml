@@ -1,0 +1,35 @@
+name: 32fbebd9b87e8f4a609e82ba6bcaa2e9
+fullyQualifiedName: hktest.32fbebd9b87e8f4a609e82ba6bcaa2e9
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"283a2b58-b789-4232-a164-3d24c778950d\",\"type\":\"table\"\
+        ,\"name\":\"CUSTOMERS\",\"fullyQualifiedName\":\"hktest.CUSTOMERS.JAFFLE_SHOP.CUSTOMERS\"\
+        ,\"displayName\":\"CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 55.0
+users: []
+query: "SELECT \"JAFFLE_SHOP\".\"CUSTOMERS\".\"CUSTOMER_ID\" AS \"JAFFLE_SHOP_CUSTOMERS_CUSTOMER_ID\"\
+  , \"JAFFLE_SHOP\".\"CUSTOMERS\".\"FIRST_NAME\" AS \"JAFFLE_SHOP_CUSTOMERS_FIRST_NAME\"\
+  , \"JAFFLE_SHOP\".\"CUSTOMERS\".\"LAST_NAME\" AS \"JAFFLE_SHOP_CUSTOMERS_LAST_NAME\"\
+  , \"JAFFLE_SHOP\".\"CUSTOMERS\".\"FIRST_ORDER\" AS \"JAFFLE_SHOP_CUSTOMERS_FIRST_ORDER\"\
+  , \"JAFFLE_SHOP\".\"CUSTOMERS\".\"MOST_RECENT_ORDER\" AS \"JAFFLE_SHOP_CUSTOMERS_MOST_RECENT_ORDER\"\
+  , \"JAFFLE_SHOP\".\"CUSTOMERS\".\"NUMBER_OF_ORDERS\" AS \"JAFFLE_SHOP_CUSTOMERS_NUMBER_OF_ORDERS\"\
+  , \"JAFFLE_SHOP\".\"CUSTOMERS\".\"CUSTOMER_LIFETIME_VALUE\" AS \"JAFFLE_SHOP_CUSTOMERS_CUSTOMER_LIFETIME_VALUE\"\
+  \ \nFROM \"JAFFLE_SHOP\".\"CUSTOMERS\"\n LIMIT ?"
+checksum: 32fbebd9b87e8f4a609e82ba6bcaa2e9
+queryDate: 1750204800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

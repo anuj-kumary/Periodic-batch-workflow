@@ -1,0 +1,50 @@
+name: 33e41f16c285bf525d215043dd5c37a0
+fullyQualifiedName: hktest.33e41f16c285bf525d215043dd5c37a0
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"63c57e4c-b711-41ac-87e8-2bc0b63008df\",\"type\":\"table\"\
+        ,\"name\":\"DBT_EXPOSURES\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_EXPOSURES\"\
+        ,\"displayName\":\"DBT_EXPOSURES\",\"deleted\":false}]"
+  previousVersion: 3.5
+  changeSummary: {}
+owners: []
+duration: 138.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "create or replace   view dbt_db.DBT_SAMPLE_elementary.dbt_artifacts_hashes\n\
+  \  \n   as (\n    \n\n\n\n\nselect\n  ? as artifacts_model,\n   metadata_hash\n\
+  from dbt_db.DBT_SAMPLE_elementary.dbt_models\n union all \n\nselect\n  ? as artifacts_model,\n\
+  \   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_tests\n union all \n\n\
+  select\n  ? as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_sources\n\
+  \ union all \n\nselect\n  ? as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_snapshots\n\
+  \ union all \n\nselect\n  ? as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_metrics\n\
+  \ union all \n\nselect\n  ? as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_exposures\n\
+  \ union all \n\nselect\n  ? as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_seeds\n\
+  \ union all \n\nselect\n  ? as artifacts_model,\n   metadata_hash\nfrom dbt_db.DBT_SAMPLE_elementary.dbt_columns\n\
+  \n\norder by metadata_hash\n  );"
+checksum: 33e41f16c285bf525d215043dd5c37a0
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 077ae58e-e7e4-47cf-9f42-01225cf95b21
+    type: table
+    name: DBT_COLUMNS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_COLUMNS
+    displayName: DBT_COLUMNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

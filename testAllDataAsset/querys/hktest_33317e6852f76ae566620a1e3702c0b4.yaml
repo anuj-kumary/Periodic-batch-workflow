@@ -1,0 +1,28 @@
+name: 33317e6852f76ae566620a1e3702c0b4
+fullyQualifiedName: hktest.33317e6852f76ae566620a1e3702c0b4
+owners: []
+duration: 183.0
+users: []
+query: "SELECT count(CASE WHEN (LEN(\"C_MKTSEGMENT\") >= ? AND LEN(\"C_MKTSEGMENT\"\
+  ) < ?) THEN LEN(\"C_MKTSEGMENT\") END) AS \"8.000 to 9.000\", count(CASE WHEN (LEN(\"\
+  C_MKTSEGMENT\") >= ?) THEN LEN(\"C_MKTSEGMENT\") END) AS \"9.000 and up\" \nFROM\
+  \ \"TPCH_SF100\".\"CUSTOMER\"\n LIMIT ?"
+checksum: 33317e6852f76ae566620a1e3702c0b4
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: dc092bc6-2f58-414c-a722-42aa3ec1674e
+    type: table
+    name: CUSTOMER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.CUSTOMER
+    description: Customer data as defined by TPC-H
+    displayName: CUSTOMER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
