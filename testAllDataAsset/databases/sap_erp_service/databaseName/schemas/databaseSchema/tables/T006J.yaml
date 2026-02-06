@@ -1,0 +1,91 @@
+name: T006J
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006J
+description: ISO Codes for Unit of Measure Texts
+tableType: Regular
+columns:
+  - name: CLIENT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006J.CLIENT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ISOCODE
+    displayName: ISO code
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: ISO code for unit of measurement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006J.ISOCODE
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: ISOTXT
+    displayName: ISO code
+    dataType: CHAR
+    dataLength: 25
+    dataTypeDisplay: char(25)
+    description: ISO codes for measurement unit names
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006J.ISOTXT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LANGU
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006J.LANGU
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - CLIENT
+      - ISOCODE
+      - LANGU
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 319e844d62c2b51429495975c3098893
+processedLineage: false
+entityStatus: Approved

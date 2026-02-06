@@ -1,0 +1,103 @@
+name: T005U
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005U
+description: "Taxes: Region Key: Texts"
+tableType: Regular
+columns:
+  - name: BEZEI
+    displayName: Description
+    dataType: CHAR
+    dataLength: 20
+    dataTypeDisplay: char(20)
+    description: Description
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005U.BEZEI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BLAND
+    displayName: Region
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: "Region (State, Province, County)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005U.BLAND
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LAND1
+    displayName: Country Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005U.LAND1
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005U.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SPRAS
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005U.SPRAS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BLAND
+      - LAND1
+      - MANDT
+      - SPRAS
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b98e9348b54b22d7b706aea1ac91666a
+processedLineage: false
+entityStatus: Approved

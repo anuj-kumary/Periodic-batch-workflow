@@ -1,0 +1,139 @@
+name: T005ZR
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR
+description: Assignment Rules for Alternative Country Codes
+tableType: Regular
+columns:
+  - name: IDTYP
+    displayName: Derivation Criterion
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of ID Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.IDTYP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: IDVAL
+    displayName: Value Pattern
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Value of ID Field
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.IDVAL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: INTCA
+    displayName: ISO Code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Country ISO code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.INTCA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: LFDNR
+    displayName: Rule Number
+    dataType: CHAR
+    dataLength: 7
+    dataTypeDisplay: numc(7)
+    description: Rule Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.LFDNR
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MLDEM
+    displayName: Message destinations
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Message destinations
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.MLDEM
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MLDLA
+    displayName: Reporting Country
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Reporting Country
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.MLDLA
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MLZLA
+    displayName: Country Reported
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Reported
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005ZR.MLZLA
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - LFDNR
+      - MANDT
+      - MLDEM
+      - MLDLA
+      - MLZLA
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 4423d65e0a3943098533a96106c408cf
+processedLineage: false
+entityStatus: Approved

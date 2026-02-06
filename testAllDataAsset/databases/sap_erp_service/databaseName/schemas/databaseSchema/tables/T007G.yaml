@@ -1,0 +1,103 @@
+name: T007G
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007G
+description: Table no Longer Used -> T007K/L
+tableType: Regular
+columns:
+  - name: GRUNO
+    displayName: Group number
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Group Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007G.GRUNO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: KTOSL
+    displayName: Transaction
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Transaction Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007G.KTOSL
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LAND1
+    displayName: Country Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007G.LAND1
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007G.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MWSKZ
+    displayName: Tax Code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Tax on Sales/Purchases Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007G.MWSKZ
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KTOSL
+      - LAND1
+      - MANDT
+      - MWSKZ
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 1a1ede65b5430d0b930313414e90cabf
+processedLineage: false
+entityStatus: Approved

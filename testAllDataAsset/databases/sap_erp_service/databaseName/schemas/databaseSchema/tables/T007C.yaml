@@ -1,0 +1,151 @@
+name: T007C
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C
+description: Groupings for tax codes
+tableType: Regular
+columns:
+  - name: ISVAT
+    displayName: is VAT like
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Flag: is VAT like tax"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.ISVAT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: KOART
+    displayName: Account Type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Account Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.KOART
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: KSCH1
+    displayName: Cond.type.Fin.Acc.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "Condition Type: Tax Code in Financial Accounting"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.KSCH1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: KSCHL
+    displayName: Condition Type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Condition Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.KSCHL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: REFKSCHL
+    displayName: Ref. Condition Type
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Reference Condition Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.REFKSCHL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: TAXGR
+    displayName: Category indicator for tax
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Category indicator for tax codes
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.TAXGR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: WARNG
+    displayName: Display information
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Show Information in F4 Help During Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.WARNG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: WRNEX
+    displayName: Exemption possible
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Exemption Possible
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007C.WRNEX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KOART
+      - MANDT
+      - TAXGR
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 954b7ad7e3cc13f9037741f02f07faf5
+processedLineage: false
+entityStatus: Approved

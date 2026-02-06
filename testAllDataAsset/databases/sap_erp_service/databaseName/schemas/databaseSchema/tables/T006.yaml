@@ -1,0 +1,313 @@
+name: T006
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006
+description: Units of Measurement
+tableType: Regular
+columns:
+  - name: ADDKO
+    displayName: Additive constant
+    dataType: DECIMAL
+    dataLength: 9
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "dec(9,6)"
+    description: Additive constant for conversion to SI unit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.ADDKO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: ANDEC
+    displayName: Decimal Rounding
+    dataType: SMALLINT
+    dataLength: 5
+    dataTypeDisplay: int2(5)
+    description: No. of decimal places for rounding
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.ANDEC
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: DECAN
+    displayName: Decimal Places
+    dataType: SMALLINT
+    dataLength: 5
+    dataTypeDisplay: int2(5)
+    description: Number of decimal places for number display
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.DECAN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: DIMID
+    displayName: Dimension
+    dataType: CHAR
+    dataLength: 6
+    dataTypeDisplay: char(6)
+    description: Dimension key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.DIMID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: EXP10
+    displayName: Exponent
+    dataType: SMALLINT
+    dataLength: 5
+    dataTypeDisplay: int2(5)
+    description: base ten exponent for conversion to SI unit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.EXP10
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: EXPON
+    displayName: Exp. 10 Floating Pt
+    dataType: SMALLINT
+    dataLength: 5
+    dataTypeDisplay: int2(5)
+    description: Exponent of 10 for Floating Point Format
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.EXPON
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: FAMUNIT
+    displayName: Unit of meas.family
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Unit of measurement family
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.FAMUNIT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: ISOCODE
+    displayName: ISO code
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: ISO code for unit of measurement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.ISOCODE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: KZ1EH
+    displayName: (1) unit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator (1) unit (indicator not yet defined)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.KZ1EH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: KZ2EH
+    displayName: (2) unit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator (2) unit (indicator not yet defined)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.KZ2EH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: KZEX3
+    displayName: 3-char external unit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: 3-char indicator for external unit of measurement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.KZEX3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KZEX6
+    displayName: 6-char.external unit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: 6-char. ID for external unit of measurement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.KZEX6
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: KZKEH
+    displayName: Commercial meas.unit
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Commercial measurement unit ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.KZKEH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: KZWOB
+    displayName: Value-based commt
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Value-based commitment indicator
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.KZWOB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MSEHI
+    displayName: Int. Meas. Unit
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: unit(3)
+    description: Unit of Measurement
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.MSEHI
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: NENNR
+    displayName: Denominator
+    dataType: INT
+    dataLength: 10
+    dataTypeDisplay: int4(10)
+    description: Denominator for conversion into SI unit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.NENNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PRESS_UNIT
+    displayName: Unit of Pressure
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: unit(3)
+    description: Unit of Pressure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.PRESS_UNIT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: PRESS_VAL
+    displayName: Pressure Value
+    dataType: FLOAT
+    dataLength: 16
+    precision: 16
+    scale: 16
+    dataTypeDisplay: "fltp(16,16)"
+    description: Pressure Value
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.PRESS_VAL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: PRIMARY
+    displayName: Primary code
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Selection field for conversion from ISO code to int. code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.PRIMARY
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: TEMP_UNIT
+    displayName: Temperature unit
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: unit(3)
+    description: Temperature unit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.TEMP_UNIT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: TEMP_VALUE
+    displayName: Temperature
+    dataType: FLOAT
+    dataLength: 16
+    precision: 16
+    scale: 16
+    dataTypeDisplay: "fltp(16,16)"
+    description: Temperature
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006.TEMP_VALUE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - MSEHI
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d482a02fb38a531b373635af76b6dc30
+processedLineage: false
+entityStatus: Approved

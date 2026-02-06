@@ -1,0 +1,103 @@
+name: T006M
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006M
+description: Units of Measure Groups
+tableType: Regular
+columns:
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006M.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MEGRP
+    displayName: Units of measure grp
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Units of measure group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006M.MEGRP
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MEINH
+    displayName: Alternative Unit of Measure
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: unit(3)
+    description: Alternative Unit of Measure for Stockkeeping Unit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006M.MEINH
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: UMREN
+    displayName: Denominator
+    dataType: DECIMAL
+    dataLength: 5
+    dataTypeDisplay: dec(5)
+    description: Denominator for conversion to base units of measure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006M.UMREN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: UMREZ
+    displayName: Numerator
+    dataType: DECIMAL
+    dataLength: 5
+    dataTypeDisplay: dec(5)
+    description: Numerator for Conversion to Base Units of Measure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T006M.UMREZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - MEGRP
+      - MEINH
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2427869dae28dc9488a0ca6b71a52e3a
+processedLineage: false
+entityStatus: Approved

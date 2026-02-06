@@ -1,0 +1,115 @@
+name: T007B
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B
+description: Tax Processing in Accounting
+tableType: Regular
+columns:
+  - name: KTOSL
+    displayName: Process
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Internal processing key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B.KTOSL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: STAZF
+    displayName: Not deductible
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Tax not deductible"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B.STAZF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: STBKZ
+    displayName: Posting indicator
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Posting indicator
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B.STBKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: STGRP
+    displayName: Tax Type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Tax Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B.STGRP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: STNSK
+    displayName: Not discount rel.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Tax not relevant to cash discount
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T007B.STNSK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KTOSL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 5a04d34e439121e75b91af8a3f5a1765
+processedLineage: false
+entityStatus: Approved

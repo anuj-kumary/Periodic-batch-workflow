@@ -1,0 +1,139 @@
+name: T005SEPA
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA
+description: SEPA Country Settings
+tableType: Regular
+columns:
+  - name: IBAN_LENGTH
+    displayName: Length of IBAN
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Length of IBAN
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.IBAN_LENGTH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: INTCA
+    displayName: ISO Code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Country ISO code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.INTCA
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LAND1
+    displayName: Country Key
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.LAND1
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: UCI_LENGTH
+    displayName: Length of Creditor ID
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Length of Creditor ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.UCI_LENGTH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: UCI_RULE
+    displayName: Creditor ID Checking Rule
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Checking Rule for the Creditor ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.UCI_RULE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XIBAN_ONLY
+    displayName: SWIFT/BIC Optional
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: SWIFT Code / BIC Optional
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.XIBAN_ONLY
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XSEPA_LAND
+    displayName: SEPA Country
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: SEPA Country
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T005SEPA.XSEPA_LAND
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - INTCA
+      - LAND1
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a3f70bf34b7b21e91e9a0d60c2899ceb
+processedLineage: false
+entityStatus: Approved
