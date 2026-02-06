@@ -1,0 +1,40 @@
+name: df621e4eafb22ec6574c2e285de25338
+fullyQualifiedName: hktest.df621e4eafb22ec6574c2e285de25338
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"9bc6307f-5d2d-4ecf-b1f5-f791a29d4443\",\"type\":\"table\"\
+        ,\"name\":\"PART\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART\"\
+        ,\"description\":\"Part data as defined by TPC-H\",\"displayName\":\"PART\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 262.0
+users: []
+query: "SELECT avg(\"P_SIZE\") AS mean, count(\"P_SIZE\") AS \"valuesCount\", count(DISTINCT\
+  \ \"P_SIZE\") AS \"distinctCount\", MIN(\"P_SIZE\") AS min, MAX(\"P_SIZE\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"P_SIZE\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\"\
+  , STDDEV_POP(\"P_SIZE\") AS stddev, SUM(\"P_SIZE\") AS sum \nFROM \"TPCH_SF1\".\"\
+  PART\"\n LIMIT ?"
+checksum: df621e4eafb22ec6574c2e285de25338
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 9bc6307f-5d2d-4ecf-b1f5-f791a29d4443
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,30 @@
+name: da15306448377e2fc1b721f54d7e628f
+fullyQualifiedName: hktest.da15306448377e2fc1b721f54d7e628f
+owners: []
+duration: 17.0
+users: []
+query: |-
+  SELECT
+    o.id            AS order_id,
+    o.order_date,
+    o.status,
+    o.amount,
+    c.id            AS customer_id,
+    c.first_name,
+    c.last_name
+  FROM raw_orders o
+  JOIN raw_customers c
+    ON o.user_id = c.id
+  LIMIT ?;
+checksum: da15306448377e2fc1b721f54d7e628f
+queryDate: 1744675200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

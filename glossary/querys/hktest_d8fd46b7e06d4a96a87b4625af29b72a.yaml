@@ -1,0 +1,41 @@
+name: d8fd46b7e06d4a96a87b4625af29b72a
+fullyQualifiedName: hktest.d8fd46b7e06d4a96a87b4625af29b72a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"8213dbf1-647b-4c39-8dac-cc9f4f0135e3\",\"type\":\"table\"\
+        ,\"name\":\"SAMPLE_CUSTOMERS_UPPER\",\"fullyQualifiedName\":\"hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER\"\
+        ,\"displayName\":\"SAMPLE_CUSTOMERS_UPPER\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 208.0
+users: []
+query: "SELECT \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"CUSTOMERID\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_CUSTOMERID\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"NAME\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_NAME\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"EMAIL\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_EMAIL\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"COUNTRY\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_COUNTRY\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"SIGNUPDATE\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_SIGNUPDATE\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"PURCHASEAMOUNT\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_PURCHASEAMOUNT\"\
+  , \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\".\"NAME_UPPER\" AS \"HK_SCHEMA_SAMPLE_CUSTOMERS_UPPER_NAME_UPPER\"\
+  \ \nFROM \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS_UPPER\"\n LIMIT ?"
+checksum: d8fd46b7e06d4a96a87b4625af29b72a
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 8213dbf1-647b-4c39-8dac-cc9f4f0135e3
+    type: table
+    name: SAMPLE_CUSTOMERS_UPPER
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS_UPPER
+    displayName: SAMPLE_CUSTOMERS_UPPER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

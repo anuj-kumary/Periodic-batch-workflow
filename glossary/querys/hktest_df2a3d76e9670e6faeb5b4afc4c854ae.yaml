@@ -1,0 +1,30 @@
+name: df2a3d76e9670e6faeb5b4afc4c854ae
+fullyQualifiedName: hktest.df2a3d76e9670e6faeb5b4afc4c854ae
+owners: []
+duration: 931.0
+users: []
+query: "SELECT avg(LEN(\"P_CONTAINER\")) AS mean, count(\"P_CONTAINER\") AS \"valuesCount\"\
+  , count(DISTINCT \"P_CONTAINER\") AS \"distinctCount\", MIN(LEN(\"P_CONTAINER\"\
+  )) AS min, MAX(LEN(\"P_CONTAINER\")) AS max, coalesce(SUM(CASE WHEN (\"P_CONTAINER\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"P_CONTAINER\"\
+  )) AS stddev, SUM(LEN(\"P_CONTAINER\")) AS sum \nFROM \"TPCH_SF100\".\"PART\"\n\
+  \ LIMIT ?"
+checksum: df2a3d76e9670e6faeb5b4afc4c854ae
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d8f39a9b-4f53-4c0d-acb2-d61f40c5b1ea
+    type: table
+    name: PART
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.PART
+    description: Part data as defined by TPC-H
+    displayName: PART
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

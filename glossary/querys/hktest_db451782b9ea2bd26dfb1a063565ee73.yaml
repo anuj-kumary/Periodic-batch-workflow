@@ -1,0 +1,35 @@
+name: db451782b9ea2bd26dfb1a063565ee73
+fullyQualifiedName: hktest.db451782b9ea2bd26dfb1a063565ee73
+owners: []
+duration: 35.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"PACKAGE_NAME\")) AS mean, count(\"PACKAGE_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"PACKAGE_NAME\") AS \"distinctCount\", MIN(LEN(\"PACKAGE_NAME\"\
+  )) AS min, MAX(LEN(\"PACKAGE_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"PACKAGE_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"PACKAGE_NAME\"\
+  )) AS stddev, SUM(LEN(\"PACKAGE_NAME\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"DBT_SNAPSHOTS\"\n LIMIT ?"
+checksum: db451782b9ea2bd26dfb1a063565ee73
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 1a977e20-ac5d-4bad-8a66-725d5b95e434
+    type: table
+    name: DBT_SNAPSHOTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SNAPSHOTS
+    displayName: DBT_SNAPSHOTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,33 @@
+name: dd4db5f026a9a59d9217fabebc6a43fa
+fullyQualifiedName: hktest.dd4db5f026a9a59d9217fabebc6a43fa
+owners: []
+duration: 116.0
+users: []
+query: "WITH \"8511959cacf194b495273e731f3ed7de_rnd\" AS \n(SELECT \"WEB_PAGE_1\"\
+  .\"WP_URL\" AS \"WP_URL\" \nFROM \"TPCDS_SF100TCL\".\"WEB_PAGE\" AS \"WEB_PAGE_1\"\
+  \ TABLESAMPLE ROW(? ROWS)), \n\"8511959cacf194b495273e731f3ed7de_sample\" AS \n\
+  (SELECT \"8511959cacf194b495273e731f3ed7de_rnd\".\"WP_URL\" AS \"WP_URL\" \nFROM\
+  \ \"8511959cacf194b495273e731f3ed7de_rnd\")\n SELECT avg(LEN(\"WP_URL\")) AS mean,\
+  \ count(\"WP_URL\") AS \"valuesCount\", count(DISTINCT \"WP_URL\") AS \"distinctCount\"\
+  , MIN(LEN(\"WP_URL\")) AS min, MAX(LEN(\"WP_URL\")) AS max, coalesce(SUM(CASE WHEN\
+  \ (\"WP_URL\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"WP_URL\"\
+  )) AS stddev, SUM(LEN(\"WP_URL\")) AS sum \nFROM \"8511959cacf194b495273e731f3ed7de_sample\"\
+  \n LIMIT ?"
+checksum: dd4db5f026a9a59d9217fabebc6a43fa
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 55292c30-d2e3-4067-b8e8-4a21aa644d73
+    type: table
+    name: WEB_PAGE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_PAGE
+    displayName: WEB_PAGE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

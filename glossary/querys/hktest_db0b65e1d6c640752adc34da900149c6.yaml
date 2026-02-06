@@ -1,0 +1,24 @@
+name: db0b65e1d6c640752adc34da900149c6
+fullyQualifiedName: hktest.db0b65e1d6c640752adc34da900149c6
+owners: []
+duration: 168.0
+users: []
+query: |-
+  SELECT
+    id AS customer_id,
+    first_name,
+    last_name
+  FROM raw_customers
+  LIMIT ?;
+checksum: db0b65e1d6c640752adc34da900149c6
+queryDate: 1744675200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

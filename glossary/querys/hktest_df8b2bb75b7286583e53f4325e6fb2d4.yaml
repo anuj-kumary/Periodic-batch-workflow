@@ -1,0 +1,35 @@
+name: df8b2bb75b7286583e53f4325e6fb2d4
+fullyQualifiedName: hktest.df8b2bb75b7286583e53f4325e6fb2d4
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"90f072c6-07f9-41e4-9dbf-68d6c57530fc\",\"type\":\"table\"\
+        ,\"name\":\"TRANSACT\",\"fullyQualifiedName\":\"hktest.FIVETRAN.MSSQLBANKING_STG.TRANSACT\"\
+        ,\"displayName\":\"TRANSACT\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 163.0
+users: []
+query: "SELECT ? AS anon_1, ? AS anon__1, ? AS anon__2 \nFROM \"MSSQLBANKING_STG\"\
+  .\"TRANSACT\"\n LIMIT ?"
+checksum: df8b2bb75b7286583e53f4325e6fb2d4
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 90f072c6-07f9-41e4-9dbf-68d6c57530fc
+    type: table
+    name: TRANSACT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_STG.TRANSACT
+    displayName: TRANSACT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
