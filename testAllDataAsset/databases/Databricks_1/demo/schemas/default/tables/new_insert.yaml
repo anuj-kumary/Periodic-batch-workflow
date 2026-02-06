@@ -1,0 +1,101 @@
+name: new_insert
+fullyQualifiedName: Databricks 1.demo.default.new_insert
+description: "This table stores records of new entries, capturing unique identifiers\
+  \ and associated names, making it useful for tracking and managing data related\
+  \ to various entities or individuals within a system."
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: "The id column serves as a unique identifier for each record in the\
+      \ table, ensuring that every entry can be distinctly referenced."
+    fullyQualifiedName: Databricks 1.demo.default.new_insert.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "The name column holds the name associated with each record, providing\
+      \ a way to identify or categorize the entries based on their respective names."
+    fullyQualifiedName: Databricks 1.demo.default.new_insert.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+databaseSchema:
+  id: 7547e1c9-a21e-4a65-be7e-a2a5f7886e23
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: Databricks 1.demo.default
+  displayName: default
+  deleted: false
+database:
+  id: 9946200d-d277-474e-ba59-210b4665ed32
+  type: database
+  name: demo
+  fullyQualifiedName: Databricks 1.demo
+  displayName: demo
+  deleted: false
+service:
+  id: aed8be03-c783-454d-bae1-0bd8c2680c9e
+  type: databaseService
+  name: Databricks 1
+  fullyQualifiedName: Databricks 1
+  description: ""
+  displayName: DatabricKS
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/5c46171e-31f8-4dd4-8c59-66dbf692bcdc
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.id.description
+      newValue: "The id column serves as a unique identifier for each record in the\
+        \ table, ensuring that every entry can be distinctly referenced."
+    - name: columns.name.description
+      newValue: "The name column holds the name associated with each record, providing\
+        \ a way to identify or categorize the entries based on their respective names."
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.4
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1743152871257
+    columns.id.description:
+      changedBy: ingestion-bot
+      changedAt: 1743152871439
+    columns.name.description:
+      changedBy: ingestion-bot
+      changedAt: 1743152871439
+domains:
+  - id: c5953260-03a0-47dc-a602-7431689b0a3e
+    type: domain
+    name: testing-rbac-sub-domain
+    fullyQualifiedName: Design.testing-rbac-sub-domain
+    description: Testing RBAC SUB DOMAIN
+    displayName: Testing RBAC SUB DOMAIN
+    inherited: true
+dataProducts: []
+sourceHash: a97d4e37b178115cd9b877b62ab088ad
+processedLineage: false
+entityStatus: Approved

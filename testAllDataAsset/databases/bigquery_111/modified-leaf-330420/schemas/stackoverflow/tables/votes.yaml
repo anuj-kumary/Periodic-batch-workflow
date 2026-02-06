@@ -1,0 +1,87 @@
+name: votes
+fullyQualifiedName: bigquery 111.modified-leaf-330420.stackoverflow.votes
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.stackoverflow.votes.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: creation_date
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.stackoverflow.votes.creation_date
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: post_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.stackoverflow.votes.post_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: vote_type_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: bigquery 111.modified-leaf-330420.stackoverflow.votes.vote_type_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2fe1d918-b038-417d-a8dc-2bf8c19cb742
+  type: databaseSchema
+  name: stackoverflow
+  fullyQualifiedName: bigquery 111.modified-leaf-330420.stackoverflow
+  description: ""
+  displayName: stackoverflow
+  deleted: false
+database:
+  id: fb3a207a-4029-4635-817c-ad4bc5251bc7
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: bigquery 111.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+service:
+  id: c721902a-455f-433b-8bdc-958e82710043
+  type: databaseService
+  name: bigquery 111
+  fullyQualifiedName: bigquery 111
+  description: ""
+  displayName: bigquery 111
+  deleted: false
+serviceType: BigQuery
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://console.cloud.google.com/bigquery?project=modified-leaf-330420&ws=!1m5!1m4!4m3!1smodified-leaf-330420!2sstackoverflow!3svotes
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1643014992649
+sourceHash: 596ebbbd666da8b539441d4ea60a6b40
+processedLineage: false
+entityStatus: Unprocessed
