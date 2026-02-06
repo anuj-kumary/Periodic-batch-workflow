@@ -1,0 +1,331 @@
+name: DATE_DIM
+fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM
+tableType: Partitioned
+columns:
+  - name: D_DATE_SK
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_DATE_SK
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: D_DATE_ID
+    dataType: VARCHAR
+    dataLength: 16
+    dataTypeDisplay: text(16)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_DATE_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: D_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_MONTH_SEQ
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_MONTH_SEQ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_WEEK_SEQ
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_WEEK_SEQ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_QUARTER_SEQ
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_QUARTER_SEQ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_YEAR
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_YEAR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_DOW
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_DOW
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_MOY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_MOY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_DOM
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_DOM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_QOY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_QOY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_FY_YEAR
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_FY_YEAR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_FY_QUARTER_SEQ
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_FY_QUARTER_SEQ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_FY_WEEK_SEQ
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_FY_WEEK_SEQ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_DAY_NAME
+    dataType: VARCHAR
+    dataLength: 9
+    dataTypeDisplay: text(9)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_DAY_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_QUARTER_NAME
+    dataType: VARCHAR
+    dataLength: 6
+    dataTypeDisplay: text(6)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_QUARTER_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_HOLIDAY
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_HOLIDAY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_WEEKEND
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_WEEKEND
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_FOLLOWING_HOLIDAY
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_FOLLOWING_HOLIDAY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_FIRST_DOM
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_FIRST_DOM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_LAST_DOM
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_LAST_DOM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_SAME_DAY_LY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_SAME_DAY_LY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_SAME_DAY_LQ
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_SAME_DAY_LQ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_CURRENT_DAY
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_CURRENT_DAY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_CURRENT_WEEK
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_CURRENT_WEEK
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_CURRENT_MONTH
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_CURRENT_MONTH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_CURRENT_QUARTER
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_CURRENT_QUARTER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: D_CURRENT_YEAR
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: text(1)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.DATE_DIM.D_CURRENT_YEAR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+tablePartition:
+  columns:
+    - columnName: D_DATE_SK
+      intervalType: COLUMN-VALUE
+owners: []
+databaseSchema:
+  id: a00830bc-fb33-492a-8203-7893a5e0926d
+  type: databaseSchema
+  name: TPCDS_SF100TCL
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL
+  displayName: TPCDS_SF100TCL
+  deleted: false
+database:
+  id: ef08a354-f59d-4892-9c1a-f7607fdec2af
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCDS_SF100TCL/table/DATE_DIM
+domains: []
+dataProducts: []
+sourceHash: 34aea3c9242b7c840f0904dc5ad844cb
+processedLineage: false
+entityStatus: Approved

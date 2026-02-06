@@ -1,0 +1,84 @@
+name: APPLICABLE_ROLES
+fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES
+tableType: View
+columns:
+  - name: GRANTEE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Role or user to whom the privilege is granted
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.GRANTEE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ROLE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.ROLE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ROLE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Owner of the role
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.ROLE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_GRANTABLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Whether this role can be granted to others
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.IS_GRANTABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b002d3c1-1583-4118-bd21-aee43a82dff9
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: ef08a354-f59d-4892-9c1a-f7607fdec2af
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/APPLICABLE_ROLES
+domains: []
+dataProducts: []
+sourceHash: c94a82639ff86f6bfed205d6850b11c1
+processedLineage: false
+entityStatus: Approved

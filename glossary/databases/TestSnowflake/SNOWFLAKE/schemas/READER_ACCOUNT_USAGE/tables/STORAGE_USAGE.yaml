@@ -1,0 +1,102 @@
+name: STORAGE_USAGE
+fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE
+tableType: View
+columns:
+  - name: READER_ACCOUNT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE.READER_ACCOUNT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USAGE_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE.USAGE_DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STORAGE_BYTES
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 6
+    dataTypeDisplay: "number(38,6)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE.STORAGE_BYTES
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: STAGE_BYTES
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 6
+    dataTypeDisplay: "number(38,6)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE.STAGE_BYTES
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FAILSAFE_BYTES
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 6
+    dataTypeDisplay: "number(38,6)"
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE.FAILSAFE_BYTES
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: READER_ACCOUNT_DELETED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE.STORAGE_USAGE.READER_ACCOUNT_DELETED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: cc12be25-3ee4-4852-a1b4-9a1220ec9d40
+  type: databaseSchema
+  name: READER_ACCOUNT_USAGE
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE.READER_ACCOUNT_USAGE
+  displayName: READER_ACCOUNT_USAGE
+  deleted: false
+database:
+  id: c1a82122-16c9-4db0-9a25-20d3b6ddfb3c
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/SNOWFLAKE/schemas/READER_ACCOUNT_USAGE/view/STORAGE_USAGE
+domains: []
+dataProducts: []
+sourceHash: 0a6d26fbd1ca13725ab2b8e04af910d1
+processedLineage: false
+entityStatus: Approved

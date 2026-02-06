@@ -1,0 +1,84 @@
+name: PACKAGES
+fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.PACKAGES
+tableType: View
+columns:
+  - name: PACKAGE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package name
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.PACKAGES.PACKAGE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package version
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.PACKAGES.VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: LANGUAGE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Package language
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.PACKAGES.LANGUAGE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: RUNTIME_VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Supported runtime version
+    fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.PACKAGES.RUNTIME_VERSION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b002d3c1-1583-4118-bd21-aee43a82dff9
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: ef08a354-f59d-4892-9c1a-f7607fdec2af
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: TestSnowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: a4689545-b7ad-45ec-8dde-04829253cfa8
+  type: databaseService
+  name: TestSnowflake
+  fullyQualifiedName: TestSnowflake
+  description: ""
+  displayName: TestSnowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/niughrx/xi67120/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/PACKAGES
+domains: []
+dataProducts: []
+sourceHash: 07fcd8acdefa205ed144b2fe1476ad00
+processedLineage: false
+entityStatus: Approved
