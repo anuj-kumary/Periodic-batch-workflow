@@ -1,0 +1,88 @@
+name: TBL_MV_ART_SPR_ZU
+fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS.TBL_MV_ART_SPR_ZU
+tableType: Regular
+columns:
+  - name: MANDANT_ID
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: text(50)
+    fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS.TBL_MV_ART_SPR_ZU.MANDANT_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ART_BEZ
+    dataType: VARCHAR
+    dataLength: 500
+    dataTypeDisplay: text(500)
+    fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS.TBL_MV_ART_SPR_ZU.ART_BEZ
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SPR_ID
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: text(20)
+    fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS.TBL_MV_ART_SPR_ZU.SPR_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: KL_ART_ID
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: text(100)
+    fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS.TBL_MV_ART_SPR_ZU.KL_ART_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ART_ID
+    dataType: VARCHAR
+    dataLength: 50
+    dataTypeDisplay: text(50)
+    fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS.TBL_MV_ART_SPR_ZU.ART_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7f318f11-9324-428d-b0c9-47778c2d7ba0
+  type: databaseSchema
+  name: SHOPPER_ANALYTICS
+  fullyQualifiedName: snow_new_111.TEST_DB.SHOPPER_ANALYTICS
+  displayName: SHOPPER_ANALYTICS
+  deleted: false
+database:
+  id: 41ed067f-29a9-455e-9183-3c59e22b362c
+  type: database
+  name: TEST_DB
+  fullyQualifiedName: snow_new_111.TEST_DB
+  description: Updated database description
+  displayName: TEST_DB
+  deleted: false
+service:
+  id: 16c4356d-5e3d-4c8f-a20c-f1eb2af8f2eb
+  type: databaseService
+  name: snow_new_111
+  fullyQualifiedName: snow_new_111
+  description: ""
+  displayName: snow_new_111
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/TEST_DB/schemas/SHOPPER_ANALYTICS/table/TBL_MV_ART_SPR_ZU
+domains: []
+dataProducts: []
+sourceHash: d78fbd51b64068e0b0f92f27df022965
+processedLineage: false
+entityStatus: Unprocessed

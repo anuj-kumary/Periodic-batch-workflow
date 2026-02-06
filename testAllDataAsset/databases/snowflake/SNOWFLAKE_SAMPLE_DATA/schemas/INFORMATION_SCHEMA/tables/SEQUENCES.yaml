@@ -1,0 +1,229 @@
+name: SEQUENCES
+fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES
+tableType: View
+columns:
+  - name: SEQUENCE_CATALOG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database that the sequence belongs to
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.SEQUENCE_CATALOG
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SEQUENCE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema that the sequence belongs to
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.SEQUENCE_SCHEMA
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SEQUENCE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.SEQUENCE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SEQUENCE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.SEQUENCE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DATA_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Data type of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.DATA_TYPE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NUMERIC_PRECISION
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: Numeric precision of the data type of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.NUMERIC_PRECISION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NUMERIC_PRECISION_RADIX
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: Radix of the numeric precision of the data type of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.NUMERIC_PRECISION_RADIX
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NUMERIC_SCALE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 0
+    dataTypeDisplay: "number(9,0)"
+    description: Scale of the data type of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.NUMERIC_SCALE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: START_VALUE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Initial value of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.START_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MINIMUM_VALUE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Not applicable for Snowflake.
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.MINIMUM_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MAXIMUM_VALUE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Not applicable for Snowflake.
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.MAXIMUM_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NEXT_VALUE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Next value that the sequence will produce
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.NEXT_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INCREMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Increment of the sequence generator
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.INCREMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CYCLE_OPTION
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Not applicable for Snowflake.
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.CYCLE_OPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Creation time of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ALTERED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Last altered time of the sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.LAST_ALTERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDERED
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Whether or not the sequence is ordered
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.ORDERED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for this sequence
+    fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.SEQUENCES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 2578dc48-ad43-4c1c-9265-b3f7d051d5b5
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: c58e03f9-2043-4bb9-b6c2-c832f4d9725f
+  type: database
+  name: SNOWFLAKE_SAMPLE_DATA
+  fullyQualifiedName: snowflake.SNOWFLAKE_SAMPLE_DATA
+  description: Preloaded TPCH Data provided by Snowflake during account provisioning
+  displayName: SNOWFLAKE_SAMPLE_DATA
+  deleted: false
+service:
+  id: ddfc267a-864a-44e0-b26c-82033d85723d
+  type: databaseService
+  name: snowflake
+  fullyQualifiedName: snowflake
+  displayName: snowflake
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/pnnjztq/lt39982/#/data/databases/SNOWFLAKE_SAMPLE_DATA/schemas/INFORMATION_SCHEMA/view/SEQUENCES
+domains: []
+dataProducts: []
+sourceHash: 8a32a98e09995a6bd4fdb9d4a26f85cc
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,91 @@
+name: RAW_CUSTOMERS
+fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: <p>potato pere</p>
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.FIRST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP.RAW_CUSTOMERS.LAST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: c82c28c0-7d88-473f-865a-9b404591caed
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 918a7573-85ac-4aa8-ab79-abe1be6e9028
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake hybrid 20250413.CUSTOMERS
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 562edf42-13bc-4b51-8d46-e4b4f3263cc2
+  type: databaseService
+  name: snowflake hybrid 20250413
+  fullyQualifiedName: snowflake hybrid 20250413
+  description: ""
+  displayName: snowflake hybrid 20250413
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: columns.ID.description
+      oldValue: potato new
+      newValue: <p>potato pere</p>
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    columns.ID.description:
+      changedBy: pmbrull
+      changedAt: 1744558501970
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/table/RAW_CUSTOMERS
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1744502400000
+    accessedByAProcess: TESTOPENMETADATA
+  updated:
+    timestamp: 1744502400000
+    accessedByAProcess: TESTOPENMETADATA
+sourceHash: 94af30294917716f37bfff2be441f84e
+processedLineage: false
+entityStatus: Approved

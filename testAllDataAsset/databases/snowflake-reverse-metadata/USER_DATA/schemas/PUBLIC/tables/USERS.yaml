@@ -1,0 +1,104 @@
+name: USERS
+fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.USERS
+description: <p>Descriptions get updated on the source database system</p>
+tableType: Regular
+columns:
+  - name: ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.USERS.ID
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.USERS.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC.USERS.EMAIL
+    tags:
+      - tagFQN: SENSITIVE_DATA.true
+        name: "true"
+        description: SNOWFLAKE TAG VALUE
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: d8cd184a-ca4d-4312-b8a3-a3e009cd3686
+    type: user
+    name: sweta.agarwalla
+    fullyQualifiedName: '"sweta.agarwalla"'
+    description: ""
+    displayName: sweta.agarwalla
+    deleted: false
+databaseSchema:
+  id: 23505ab1-f25b-4cd2-b50e-3e10ae5e7586
+  type: databaseSchema
+  name: PUBLIC
+  fullyQualifiedName: snowflake-reverse-metadata.USER_DATA.PUBLIC
+  displayName: PUBLIC
+  deleted: false
+database:
+  id: 851dfbfd-5214-4c53-b55a-3ff470b6aa56
+  type: database
+  name: USER_DATA
+  fullyQualifiedName: snowflake-reverse-metadata.USER_DATA
+  displayName: USER_DATA
+  deleted: false
+service:
+  id: c1041734-d004-42bd-9c5b-1aab726a8ee6
+  type: databaseService
+  name: snowflake-reverse-metadata
+  fullyQualifiedName: snowflake-reverse-metadata
+  description: ""
+  displayName: snowflake-reverse-metadata
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"d8cd184a-ca4d-4312-b8a3-a3e009cd3686\",\"type\":\"user\"\
+        ,\"name\":\"sweta.agarwalla\",\"fullyQualifiedName\":\"\\\"sweta.agarwalla\\\
+        \"\",\"description\":\"\",\"displayName\":\"sweta.agarwalla\",\"deleted\"\
+        :false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary:
+    owners:
+      changedBy: imri.paran
+      changedAt: 1747825089876
+    description:
+      changedBy: imri.paran
+      changedAt: 1744199819670
+sourceUrl: https://app.snowflake.com/pkfkglv/of58949/#/data/databases/USER_DATA/schemas/PUBLIC/table/USERS
+domains: []
+dataProducts: []
+sourceHash: b7347769412bf17386609536d5ef6bd1
+processedLineage: false
+entityStatus: Approved
