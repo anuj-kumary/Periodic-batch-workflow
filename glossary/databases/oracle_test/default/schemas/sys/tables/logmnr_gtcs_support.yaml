@@ -1,0 +1,400 @@
+name: logmnr_gtcs_support
+fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support
+tableType: View
+columns:
+  - name: logmnr_uid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.logmnr_uid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: OBJ#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.OBJ#
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OBJV#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.OBJV#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SEGCOL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.SEGCOL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: INTCOL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.INTCOL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.COL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: colname
+    dataType: VARCHAR
+    dataLength: 384
+    dataTypeDisplay: varchar2(384)
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.colname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TYPE#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.TYPE#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: length
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.length
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: precision
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.precision
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: scale
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.scale
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: interval_leading_precision
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.interval_leading_precision
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: interval_trailing_precision
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.interval_trailing_precision
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: property
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.property
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: charsetid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.charsetid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: charsetform
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: "number(22,0)"
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.charsetform
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: logmnrcolflags
+    dataType: VARCHAR
+    dataLength: 1
+    dataTypeDisplay: varchar2
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.logmnrcolflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xtypeschemaname
+    dataType: VARCHAR
+    dataLength: 384
+    dataTypeDisplay: varchar2(384)
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xtypeschemaname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xtypename
+    dataType: VARCHAR
+    dataLength: 384
+    dataTypeDisplay: varchar2(384)
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xtypename
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xfqcolname
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xfqcolname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xtopintcol
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xtopintcol
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xreffedtableobjn
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xreffedtableobjn
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xreffedtableobjv
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xreffedtableobjv
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xcoltypeflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xcoltypeflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xopqtypetype
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xopqtypetype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xopqtypeflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xopqtypeflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xopqlobintcol
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xopqlobintcol
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xopqobjintcol
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xopqobjintcol
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xxmlintcol
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.xxmlintcol
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EAOWNER#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.EAOWNER#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eamkeyid
+    dataType: VARCHAR
+    dataLength: 192
+    dataTypeDisplay: varchar2(192)
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.eamkeyid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eaencalg
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.eaencalg
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eaintalg
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.eaintalg
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eacolklc
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.eacolklc
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eaklclen
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.eaklclen
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: eaflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.eaflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: logmnrderivedflags
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.logmnrderivedflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: collid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.collid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLLINTCOL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.COLLINTCOL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ACDRRESCOL#
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.logmnr_gtcs_support.ACDRRESCOL#
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: cb09e8915a2fb9864751ab49b90160c7
+processedLineage: false
+entityStatus: Approved

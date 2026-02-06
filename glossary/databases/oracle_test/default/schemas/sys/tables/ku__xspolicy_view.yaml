@@ -1,0 +1,139 @@
+name: ku$_xspolicy_view
+fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view
+tableType: View
+columns:
+  - name: vers_major
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.vers_major
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: vers_minor
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.vers_minor
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xdsid
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.xdsid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ctime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6)
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.ctime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: mtime
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp(6)
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.mtime
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: description
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.description
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: xs_obj
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_xsobj_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.xs_obj
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: instset_list
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_xsinstset_list_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.instset_list
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: attr_sec_list
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_xsattrsec_list_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.attr_sec_list
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: olap_policy_list
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_xsolap_policy_list_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.olap_policy_list
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: rls_list
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_rls_policy_list_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_xspolicy_view.rls_list
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3d90f7118df6e368a48da7ed430d1bbf
+processedLineage: false
+entityStatus: Approved
