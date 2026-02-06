@@ -1,0 +1,103 @@
+name: ku$_switch_compiler_view
+fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view
+tableType: View
+columns:
+  - name: obj_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.obj_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: optlevel
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: varchar2(40)
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.optlevel
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: codetype
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.codetype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: debug
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.debug
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ccflags
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.ccflags
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: plscope
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.plscope
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: nlsemnt
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar2(4000)
+    fullyQualifiedName: oracle_test.default.sys.ku$_switch_compiler_view.nlsemnt
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3db98787641950fa696c59afd7d17e42
+processedLineage: false
+entityStatus: Approved

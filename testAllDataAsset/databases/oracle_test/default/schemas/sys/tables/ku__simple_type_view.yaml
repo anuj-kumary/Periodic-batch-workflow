@@ -1,0 +1,166 @@
+name: ku$_simple_type_view
+fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view
+tableType: View
+columns:
+  - name: toid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.toid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: version_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.version_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: version
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.version
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: type_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.type_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: properties
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.properties
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: attribute_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.attribute_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: local_attrs
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.local_attrs
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: method_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.method_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hidmethod_num
+    dataType: NUMBER
+    dataLength: 1
+    dataTypeDisplay: number
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.hidmethod_num
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: typeid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.typeid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: roottoid
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.roottoid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: hashcode
+    dataType: BINARY
+    dataLength: 1
+    dataTypeDisplay: raw
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.hashcode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schema_obj
+    dataType: "NULL"
+    dataLength: 1
+    dataTypeDisplay: ku$_schemaobj_t
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.schema_obj
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: type_name
+    dataType: VARCHAR
+    dataLength: 128
+    dataTypeDisplay: varchar2(128)
+    fullyQualifiedName: oracle_test.default.sys.ku$_simple_type_view.type_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: a11e2293-c7ca-4d3a-9e0f-ebcfa337159d
+  type: databaseSchema
+  name: sys
+  fullyQualifiedName: oracle_test.default.sys
+  displayName: sys
+  deleted: false
+database:
+  id: 635299d9-9c3d-4ccc-98ff-dfb95889d8d6
+  type: database
+  name: default
+  fullyQualifiedName: oracle_test.default
+  displayName: default
+  deleted: false
+service:
+  id: 81062063-d522-406b-92a3-ccad1f68f1ad
+  type: databaseService
+  name: oracle_test
+  fullyQualifiedName: oracle_test
+  displayName: oracle_test
+  deleted: false
+serviceType: Oracle
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2400bdb77ee8347a3392fdfafb01988a
+processedLineage: false
+entityStatus: Approved
