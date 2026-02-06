@@ -1,0 +1,27 @@
+name: test_kafka_2
+fullyQualifiedName: test_kafka_2
+serviceType: Kafka
+description: <p>test_kafka_2</p>
+connection:
+  config:
+    type: Kafka
+    saslMechanism: PLAIN
+    bootstrapServers: ec2-3-131-94-156.us-east-2.compute.amazonaws.com:9092
+    securityProtocol: PLAINTEXT
+    schemaRegistryURL: http://ec2-3-131-94-156.us-east-2.compute.amazonaws.com:8081
+    supportsMetadataExtraction: true
+    schemaRegistryTopicSuffixName: -value
+pipelines: []
+tags: []
+owners:
+  - id: 18ca6cd1-d696-4a22-813f-c7a42fc09dc4
+    type: user
+    name: ashish
+    fullyQualifiedName: ashish
+    description: this is test description. this is test description!this is test description!this
+      is test description!this is test description!this is test description!this is
+      test description!this is test description!this is test description!this is test
+      description!this is test description!
+    displayName: Ashish Gupta
+    deleted: false
+dataProducts: []

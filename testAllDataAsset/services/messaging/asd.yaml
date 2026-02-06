@@ -1,0 +1,25 @@
+name: asd
+fullyQualifiedName: asd
+serviceType: Kafka
+description: ""
+connection:
+  config:
+    type: Kafka
+    saslMechanism: PLAIN
+    consumerConfig:
+      sasl.mechanism: ""
+      security.protocol: ssl
+    bootstrapServers: asd
+    securityProtocol: PLAINTEXT
+    supportsMetadataExtraction: true
+    schemaRegistryTopicSuffixName: -value
+pipelines: []
+tags: []
+owners:
+  - id: 1eb7eb26-21da-42d7-b0ed-8812f04f4ca4
+    type: user
+    name: ayush
+    fullyQualifiedName: ayush
+    displayName: Ayush Shah
+    deleted: false
+dataProducts: []

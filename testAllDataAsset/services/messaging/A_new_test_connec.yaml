@@ -1,0 +1,28 @@
+name: A new test connec
+fullyQualifiedName: A new test connec
+serviceType: Kinesis
+description: ""
+connection:
+  config:
+    type: Kinesis
+    awsConfig:
+      enabled: false
+      awsRegion: Test
+      assumeRoleSessionName: OpenMetadataSession
+    topicFilterPattern:
+      excludes: []
+      includes: []
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 0621fad7-1ef1-441d-96a9-500a55c01a1f
+    type: user
+    name: sweta.a
+    fullyQualifiedName: '"sweta.a"'
+    displayName: Sweta
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 6742f0ef-68bf-4a65-878d-31cb3919c6d5
+  type: ingestionRunner
