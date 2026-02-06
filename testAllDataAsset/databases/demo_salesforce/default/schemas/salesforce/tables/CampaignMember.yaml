@@ -1,0 +1,455 @@
+name: CampaignMember
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Campaign Member ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CampaignId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Campaign ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.CampaignId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LeadId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Lead ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LeadId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: ContactId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Contact ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.ContactId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: Status
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Status
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Status
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: HasResponded
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Responded
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.HasResponded
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: FirstRespondedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: First Responded Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.FirstRespondedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: Salutation
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Salutation
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Salutation
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Name
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: FirstName
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: First Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.FirstName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: LastName
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Last Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LastName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: Title
+    dataType: UNKNOWN
+    dataLength: 128
+    dataTypeDisplay: string
+    description: Title
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Title
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: Street
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Street
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Street
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: City
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: City
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.City
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: State
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: State/Province
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.State
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: PostalCode
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Zip/Postal Code
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.PostalCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: Country
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Country
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Country
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: Email
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: email
+    description: Email
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Email
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: Phone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Phone
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Phone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: Fax
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Fax
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Fax
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: MobilePhone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Mobile
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.MobilePhone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 32000
+    dataTypeDisplay: textarea
+    description: Description
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: DoNotCall
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Do Not Call
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.DoNotCall
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: HasOptedOutOfEmail
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Email Opt Out
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.HasOptedOutOfEmail
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: HasOptedOutOfFax
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Fax Opt Out
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.HasOptedOutOfFax
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: LeadSource
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Lead Source
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LeadSource
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: CompanyOrAccount
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Company (Account)
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.CompanyOrAccount
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: Type
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.Type
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: LeadOrContactId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Related Record ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LeadOrContactId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: LeadOrContactOwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Related Record Owner ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.CampaignMember.LeadOrContactOwnerId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620818312
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/CampaignMember/list
+domains: []
+dataProducts: []
+sourceHash: d6c4f873beea84549768a432a99a687d
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,246 @@
+name: AuthConfig
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Authentication Configuration ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: DeveloperName
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.DeveloperName
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: Language
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Master Language
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.Language
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MasterLabel
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Label
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.MasterLabel
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: NamespacePrefix
+    dataType: UNKNOWN
+    dataLength: 15
+    dataTypeDisplay: string
+    description: Namespace Prefix
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.NamespacePrefix
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: Url
+    dataType: UNKNOWN
+    dataLength: 240
+    dataTypeDisplay: string
+    description: URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.Url
+    tags: []
+    constraint: UNIQUE
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: AuthOptionsUsernamePassword
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: UsernamePassword
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.AuthOptionsUsernamePassword
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: AuthOptionsSaml
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Saml
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.AuthOptionsSaml
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: AuthOptionsAuthProvider
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: AuthProvider
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.AuthOptionsAuthProvider
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: IsActive
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Is Active
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.IsActive
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: Type
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: picklist
+    description: Authentication Configuration Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthConfig.Type
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620814793
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/AuthConfig/list
+domains: []
+dataProducts: []
+sourceHash: 324a21c00efa43fbba9adaf33367056f
+processedLineage: false
+entityStatus: Approved

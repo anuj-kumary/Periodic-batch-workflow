@@ -1,0 +1,642 @@
+name: ContactChangeEvent
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Change Event ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Id
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: ReplayId
+    dataType: UNKNOWN
+    dataLength: 1000
+    dataTypeDisplay: string
+    description: Replay ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.ReplayId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: ChangeEventHeader
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: complexvalue
+    description: Change Event Header
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.ChangeEventHeader
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: AccountId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Account ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.AccountId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LastName
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Last Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.LastName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FirstName
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: First Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.FirstName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: Salutation
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Salutation
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Salutation
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 121
+    dataTypeDisplay: string
+    description: Full Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Name
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: OtherStreet
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: textarea
+    description: Other Street
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherStreet
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: OtherCity
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Other City
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherCity
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: OtherState
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Other State/Province
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherState
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: OtherPostalCode
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Other Zip/Postal Code
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherPostalCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: OtherCountry
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Other Country
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherCountry
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: OtherLatitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Other Latitude
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherLatitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: OtherLongitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Other Longitude
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherLongitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: OtherGeocodeAccuracy
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Other Geocode Accuracy
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherGeocodeAccuracy
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: OtherAddress
+    dataType: VARCHAR
+    dataLength: 0
+    dataTypeDisplay: address
+    description: Other Address
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherAddress
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: MailingStreet
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: textarea
+    description: Mailing Street
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingStreet
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: MailingCity
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Mailing City
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingCity
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: MailingState
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Mailing State/Province
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingState
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: MailingPostalCode
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Mailing Zip/Postal Code
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingPostalCode
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: MailingCountry
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Mailing Country
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingCountry
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: MailingLatitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Mailing Latitude
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingLatitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: MailingLongitude
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: double
+    description: Mailing Longitude
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingLongitude
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: MailingGeocodeAccuracy
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Mailing Geocode Accuracy
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingGeocodeAccuracy
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 25
+    children: []
+    customMetrics: []
+  - name: MailingAddress
+    dataType: VARCHAR
+    dataLength: 0
+    dataTypeDisplay: address
+    description: Mailing Address
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MailingAddress
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 26
+    children: []
+    customMetrics: []
+  - name: Phone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Business Phone
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Phone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 27
+    children: []
+    customMetrics: []
+  - name: Fax
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Business Fax
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Fax
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 28
+    children: []
+    customMetrics: []
+  - name: MobilePhone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Mobile Phone
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.MobilePhone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 29
+    children: []
+    customMetrics: []
+  - name: HomePhone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Home Phone
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.HomePhone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 30
+    children: []
+    customMetrics: []
+  - name: OtherPhone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Other Phone
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OtherPhone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 31
+    children: []
+    customMetrics: []
+  - name: AssistantPhone
+    dataType: VARCHAR
+    dataLength: 40
+    dataTypeDisplay: phone
+    description: Asst. Phone
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.AssistantPhone
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 32
+    children: []
+    customMetrics: []
+  - name: ReportsToId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Reports To ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.ReportsToId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 33
+    children: []
+    customMetrics: []
+  - name: Email
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: email
+    description: Email
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Email
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 34
+    children: []
+    customMetrics: []
+  - name: Title
+    dataType: UNKNOWN
+    dataLength: 128
+    dataTypeDisplay: string
+    description: Title
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Title
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 35
+    children: []
+    customMetrics: []
+  - name: Department
+    dataType: UNKNOWN
+    dataLength: 80
+    dataTypeDisplay: string
+    description: Department
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Department
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 36
+    children: []
+    customMetrics: []
+  - name: AssistantName
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: string
+    description: Assistant's Name
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.AssistantName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 37
+    children: []
+    customMetrics: []
+  - name: LeadSource
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Lead Source
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.LeadSource
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 38
+    children: []
+    customMetrics: []
+  - name: Birthdate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: date
+    description: Birthdate
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Birthdate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 39
+    children: []
+    customMetrics: []
+  - name: Description
+    dataType: VARCHAR
+    dataLength: 32000
+    dataTypeDisplay: textarea
+    description: Contact Description
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Description
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 40
+    children: []
+    customMetrics: []
+  - name: OwnerId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Owner ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.OwnerId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 41
+    children: []
+    customMetrics: []
+  - name: HasOptedOutOfEmail
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Email Opt Out
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.HasOptedOutOfEmail
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 42
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.CreatedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 43
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.CreatedById
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 44
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.LastModifiedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 45
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.LastModifiedById
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 46
+    children: []
+    customMetrics: []
+  - name: LastCURequestDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Stay-in-Touch Request Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.LastCURequestDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 47
+    children: []
+    customMetrics: []
+  - name: LastCUUpdateDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Stay-in-Touch Save Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.LastCUUpdateDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 48
+    children: []
+    customMetrics: []
+  - name: EmailBouncedReason
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Email Bounced Reason
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.EmailBouncedReason
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 49
+    children: []
+    customMetrics: []
+  - name: EmailBouncedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Email Bounced Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.EmailBouncedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 50
+    children: []
+    customMetrics: []
+  - name: Jigsaw
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Data.com Key
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.Jigsaw
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 51
+    children: []
+    customMetrics: []
+  - name: JigsawContactId
+    dataType: UNKNOWN
+    dataLength: 20
+    dataTypeDisplay: string
+    description: Jigsaw Contact ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.JigsawContactId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 52
+    children: []
+    customMetrics: []
+  - name: IndividualId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Individual ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.ContactChangeEvent.IndividualId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 53
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620823353
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/ContactChangeEvent/list
+domains: []
+dataProducts: []
+sourceHash: faee4132f800fbb717e42778130d0dba
+processedLineage: false
+entityStatus: Approved

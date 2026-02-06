@@ -1,0 +1,224 @@
+name: AssetRelationship
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Asset Relationship ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AssetRelationshipNumber
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Asset Relationship Number
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.AssetRelationshipNumber
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: LastViewedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Viewed Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.LastViewedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: LastReferencedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Referenced Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.LastReferencedDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: AssetId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Asset ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.AssetId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: RelatedAssetId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Asset ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.RelatedAssetId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: FromDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: From Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.FromDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: ToDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: To Date
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.ToDate
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: RelationshipType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Relationship Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.AssetRelationship.RelationshipType
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620811635
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/AssetRelationship/list
+domains: []
+dataProducts: []
+sourceHash: bf7a45cb7e5e8c0da193cfaf2150a18d
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,224 @@
+name: AuthSession
+displayName: ""
+fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession
+description: ""
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Auth Session ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: UsersId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: User ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.UsersId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Updated
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: NumSecondsValid
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Valid For
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.NumSecondsValid
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: UserType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: User Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.UserType
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: SourceIp
+    dataType: UNKNOWN
+    dataLength: 39
+    dataTypeDisplay: string
+    description: Source IP
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.SourceIp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: LoginType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Login
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.LoginType
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: SessionType
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Session Type
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.SessionType
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SessionSecurityLevel
+    dataType: UNKNOWN
+    dataLength: 40
+    dataTypeDisplay: picklist
+    description: Session Security Level
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.SessionSecurityLevel
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: LogoutUrl
+    dataType: UNKNOWN
+    dataLength: 1500
+    dataTypeDisplay: string
+    description: Logout URL
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.LogoutUrl
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: ParentId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Auth Session ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.ParentId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: LoginHistoryId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Login History ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.LoginHistoryId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: LoginGeoId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Login Geo Data ID
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.LoginGeoId
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: IsCurrent
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Current Session
+    fullyQualifiedName: demo_salesforce.default.salesforce.AuthSession.IsCurrent
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 577faa78-100e-43dc-87e4-cf005ab3440b
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: demo_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: a01977c7-839c-43d2-833e-0c7d06be0cdc
+  type: database
+  name: default
+  fullyQualifiedName: demo_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: 57f210f2-9ada-4497-92d4-1ed4316d9dc4
+  type: databaseService
+  name: demo_salesforce
+  fullyQualifiedName: demo_salesforce
+  description: ""
+  displayName: demo_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: ""
+    - name: displayName
+      newValue: ""
+    - name: retentionPeriod
+      newValue: ""
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary:
+    description:
+      changedBy: ashish
+      changedAt: 1741620815534
+retentionPeriod: ""
+sourceUrl: https://innovation-force-7398.my.salesforce.com/lightning/o/AuthSession/list
+domains: []
+dataProducts: []
+sourceHash: d66f1c993c79f7b6dee44ae958efc301
+processedLineage: false
+entityStatus: Approved
