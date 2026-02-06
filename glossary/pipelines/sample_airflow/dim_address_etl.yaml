@@ -1,0 +1,108 @@
+name: dim_address_etl
+displayName: dim_address etl
+fullyQualifiedName: sample_airflow.dim_address_etl
+description: dim_address ETL pipeline
+dataProducts: []
+sourceUrl: http://localhost:8080/tree?dag_id=dim_address_etl
+tasks:
+  - name: dim_address_task
+    displayName: dim_address Task
+    fullyQualifiedName: sample_airflow.dim_address_etl.dim_address_task
+    description: Airflow operator to perform ETL and generate dim_address table
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=dim_address_task
+    downstreamTasks:
+      - assert_table_exists
+    taskType: PrestoOperator
+    tags: []
+  - name: assert_table_exists
+    displayName: Assert Table Exists
+    fullyQualifiedName: sample_airflow.dim_address_etl.assert_table_exists
+    description: Assert if a table exists
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=assert_table_exists
+    downstreamTasks: []
+    taskType: HiveOperator
+    tags: []
+pipelineStatus:
+  timestamp: 1763488175637
+  executionStatus: Failed
+  taskStatus:
+    - name: dim_address_task
+      executionStatus: Failed
+      inputs: []
+      outputs: []
+    - name: assert_table_exists
+      executionStatus: Failed
+      inputs: []
+      outputs: []
+  endTime: 1763488475637
+  inputs: []
+  outputs: []
+tags:
+  - tagFQN: AirflowTags.OpenMetadata
+    name: OpenMetadata
+    description: Airflow Tag
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Demo.test
+    name: test
+    description: S3 TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: General.BirthDate
+    name: BirthDate
+    description: Person's birth date.
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Tier.Tier1
+    name: Tier1
+    description: |-
+      **Critical Source of Truth business data assets of an organization**
+
+      - Used in critical metrics and dashboards to drive business and product decisions
+
+      - Used in critical compliance reporting to regulators, govt entities, and third party
+
+      - Used in brand or revenue impacting online user-facing experiences (search results, advertisement, promotions, and experimentation)
+
+      - Other high impact use, such as ML models and fraud detection
+
+      - Source used to derive other critical Tier-1 datasets
+    style:
+      color: "#ec1313"
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: พยัญชนะ - Thai DisplayName.พยัญชนะ - Thai DisplayName
+    name: พยัญชนะ - Thai DisplayName
+    displayName: พยัญชนะ - Thai DisplayName
+    description: |
+      พยัญชนะ - Thai DisplayName
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 71b132a8-f5fd-45b7-beda-9a3cc4cc8826
+  type: pipelineService
+  name: sample_airflow
+  fullyQualifiedName: sample_airflow
+  displayName: sample_airflow
+  deleted: false
+serviceType: Airflow
+scheduleInterval: 5 * * * *
+domains: []
+entityStatus: Unprocessed

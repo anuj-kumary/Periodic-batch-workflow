@@ -1,0 +1,60 @@
+name: presto_etl
+displayName: Presto ETL
+fullyQualifiedName: sample_airflow.presto_etl
+description: Presto ETL pipeline
+dataProducts: []
+sourceUrl: http://localhost:8080/tree?dag_id=presto_etl
+tasks:
+  - name: presto_task
+    displayName: Presto Task
+    fullyQualifiedName: sample_airflow.presto_etl.presto_task
+    description: Airflow operator to perform ETL on presto tables
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=assert_table_exists
+    downstreamTasks:
+      - assert_table_exists
+    taskType: PrestoOperator
+    tags: []
+  - name: assert_table_exists
+    displayName: Assert Table Exists
+    fullyQualifiedName: sample_airflow.presto_etl.assert_table_exists
+    description: Assert if a table exists
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=assert_table_exists
+    downstreamTasks: []
+    taskType: HiveOperator
+    tags: []
+tags:
+  - tagFQN: '"Test.tag&1".test&tag&&11'
+    name: test&tag&&11
+    displayName: ""
+    description: test&tag&&11
+    style:
+      color: "#e19a37"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Business Glossary.AQGucbcRGJ.cCwSpPwmPx
+    name: cCwSpPwmPx
+    displayName: cCwSpPwmPx
+    description: Lorem ipsum dolor sit amet. Ut alias ducimus et dolores delectus
+      et distinctio quas vel nulla dolores! Ut molestiae atque qui expedita       officia
+      est exercitationem dignissimos? Sed illo velit et dolorem debitis non dolore
+      vero non placeat nulla.
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 71b132a8-f5fd-45b7-beda-9a3cc4cc8826
+  type: pipelineService
+  name: sample_airflow
+  fullyQualifiedName: sample_airflow
+  displayName: sample_airflow
+  deleted: false
+serviceType: Airflow
+scheduleInterval: '* * * * *'
+domains: []
+entityStatus: Unprocessed

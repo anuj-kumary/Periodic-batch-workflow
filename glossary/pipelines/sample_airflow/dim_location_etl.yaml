@@ -1,0 +1,79 @@
+name: dim_location_etl
+displayName: dim_location etl
+fullyQualifiedName: sample_airflow.dim_location_etl
+description: diim_location ETL pipeline
+dataProducts: []
+sourceUrl: http://localhost:8080/tree?dag_id=dim_address_etl
+tasks:
+  - name: dim_location_task
+    displayName: dim_location Task
+    fullyQualifiedName: sample_airflow.dim_location_etl.dim_location_task
+    description: Airflow operator to perform ETL and generate dim_location table
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=dim_location_task
+    downstreamTasks:
+      - assert_table_exists
+    taskType: PrestoOperator
+    tags: []
+  - name: assert_table_exists
+    displayName: Assert Table Exists
+    fullyQualifiedName: sample_airflow.dim_location_etl.assert_table_exists
+    description: Assert if a table exists
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=assert_table_exists
+    downstreamTasks: []
+    taskType: HiveOperator
+    tags: []
+tags:
+  - tagFQN: PII.Sensitive
+    name: Sensitive
+    description: "PII which if lost, compromised, or disclosed without authorization,\
+      \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+      \ to an individual."
+    style:
+      color: "#ff0000"
+    source: Classification
+    labelType: Derived
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Tier.Tier1
+    name: Tier1
+    description: |-
+      **Critical Source of Truth business data assets of an organization**
+
+      - Used in critical metrics and dashboards to drive business and product decisions
+
+      - Used in critical compliance reporting to regulators, govt entities, and third party
+
+      - Used in brand or revenue impacting online user-facing experiences (search results, advertisement, promotions, and experimentation)
+
+      - Other high impact use, such as ML models and fraud detection
+
+      - Source used to derive other critical Tier-1 datasets
+    style:
+      color: "#ec1313"
+    source: Classification
+    labelType: Propagated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: testing2.new_term_kh edited
+    name: new_term_kh edited
+    displayName: ""
+    description: new_term_kh
+    style: {}
+    source: Glossary
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 71b132a8-f5fd-45b7-beda-9a3cc4cc8826
+  type: pipelineService
+  name: sample_airflow
+  fullyQualifiedName: sample_airflow
+  displayName: sample_airflow
+  deleted: false
+serviceType: Airflow
+domains: []
+entityStatus: Unprocessed

@@ -1,0 +1,73 @@
+name: dim_product_etl
+displayName: dim_product etl
+fullyQualifiedName: sample_airflow.dim_product_etl
+description: diim_product ETL pipeline
+dataProducts: []
+sourceUrl: http://localhost:8080/tree?dag_id=dim_address_etl
+tasks:
+  - name: dim_product_task
+    displayName: dim_product Task
+    fullyQualifiedName: sample_airflow.dim_product_etl.dim_product_task
+    description: Airflow operator to perform ETL and generate dim_product table
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=dim_product_task
+    downstreamTasks:
+      - assert_table_exists
+    taskType: PrestoOperator
+    tags: []
+  - name: assert_table_exists
+    displayName: Assert Table Exists
+    fullyQualifiedName: sample_airflow.dim_product_etl.assert_table_exists
+    description: Assert if a table exists
+    sourceUrl: http://localhost:8080/taskinstance/list/?flt1_dag_id_equals=assert_table_exists
+    downstreamTasks: []
+    taskType: HiveOperator
+    tags: []
+tags:
+  - tagFQN: AirflowTags.OpenMetadata
+    name: OpenMetadata
+    description: Airflow Tag
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Demo.test
+    name: test
+    description: S3 TAG VALUE
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: Tier.Tier1
+    name: Tier1
+    description: |-
+      **Critical Source of Truth business data assets of an organization**
+
+      - Used in critical metrics and dashboards to drive business and product decisions
+
+      - Used in critical compliance reporting to regulators, govt entities, and third party
+
+      - Used in brand or revenue impacting online user-facing experiences (search results, advertisement, promotions, and experimentation)
+
+      - Other high impact use, such as ML models and fraud detection
+
+      - Source used to derive other critical Tier-1 datasets
+    style:
+      color: "#ec1313"
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners: []
+service:
+  id: 71b132a8-f5fd-45b7-beda-9a3cc4cc8826
+  type: pipelineService
+  name: sample_airflow
+  fullyQualifiedName: sample_airflow
+  displayName: sample_airflow
+  deleted: false
+serviceType: Airflow
+domains: []
+entityStatus: Unprocessed
