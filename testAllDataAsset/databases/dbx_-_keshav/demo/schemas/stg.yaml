@@ -1,0 +1,37 @@
+name: stg
+fullyQualifiedName: dbx - keshav.demo.stg
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 74689604-e9a5-4bb1-a2dd-2a5275caa1bc
+    type: table
+    name: customeraccounts
+    fullyQualifiedName: dbx - keshav.demo.stg.customeraccounts
+    displayName: customeraccounts
+    deleted: false
+  - id: 985053cd-9a81-49de-888e-1c6eef73de65
+    type: table
+    name: transact
+    fullyQualifiedName: dbx - keshav.demo.stg.transact
+    displayName: transact
+    deleted: false
+tags: []
+domains: []
+sourceHash: 503a06578a9db56237e9816c1bb89974
+entityStatus: Unprocessed

@@ -1,0 +1,71 @@
+name: kafka_ingestion
+fullyQualifiedName: dbx - keshav.demo.kafka_ingestion
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 4aea916d-f113-46f6-99ad-db3bd951fb9b
+    type: table
+    name: kafka_bronze
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.kafka_bronze
+    displayName: kafka_bronze
+    deleted: false
+  - id: 20a69cc3-cc32-4ec6-959e-cdcdc4a9ddb2
+    type: table
+    name: sample_trips_kafka_topic_ingestion
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.sample_trips_kafka_topic_ingestion
+    displayName: sample_trips_kafka_topic_ingestion
+    deleted: false
+  - id: 44781bbf-f3e3-476c-be44-51dfa4b6b857
+    type: table
+    name: sample_zones_kafka_topic_ingestion
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.sample_zones_kafka_topic_ingestion
+    displayName: sample_zones_kafka_topic_ingestion
+    deleted: false
+  - id: fa8068b5-8116-4cff-adff-37fb74190330
+    type: table
+    name: user_events_bronze
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze
+    description: "Bronze layer: Raw Kafka events from Confluent Cloud"
+    displayName: user_events_bronze
+    deleted: false
+  - id: e1482e86-bd2b-43b2-8f90-2215c211818c
+    type: table
+    name: user_events_bronze_pl
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_bronze_pl
+    description: "Bronze layer: Raw Kafka events from Confluent Cloud"
+    displayName: user_events_bronze_pl
+    deleted: false
+  - id: 5cc03e1f-4f92-4d46-a5bd-ea38563fa0d4
+    type: table
+    name: user_events_gold
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_gold
+    description: "Gold layer: Aggregated user event metrics"
+    displayName: user_events_gold
+    deleted: false
+  - id: 1cf1b68e-213e-4bd4-9dc6-a5753bf006bf
+    type: table
+    name: user_events_silver
+    fullyQualifiedName: dbx - keshav.demo.kafka_ingestion.user_events_silver
+    description: "Silver layer: Parsed and cleaned user events"
+    displayName: user_events_silver
+    deleted: false
+tags: []
+domains: []
+sourceHash: 7362022fbd14d50047a645de6dc1cffb
+entityStatus: Unprocessed

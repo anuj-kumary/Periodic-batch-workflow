@@ -1,0 +1,37 @@
+name: test-firehose-con-bucket
+fullyQualifiedName: datalake large files testing s3.default.test-firehose-con-bucket
+dataProducts: []
+owners: []
+service:
+  id: 1260697d-6d10-4b82-b4a6-ca95bab8c257
+  type: databaseService
+  name: datalake large files testing s3
+  fullyQualifiedName: datalake large files testing s3
+  description: ""
+  displayName: datalake large files testing s3
+  deleted: false
+serviceType: Datalake
+database:
+  id: 8697ff50-039d-4fb9-803d-175db4088581
+  type: database
+  name: default
+  fullyQualifiedName: datalake large files testing s3.default
+  displayName: default
+  deleted: false
+tables:
+  - id: 567ad156-de05-422b-a3a8-9cab3d006f64
+    type: table
+    name: firehose_data/movies_list.json
+    fullyQualifiedName: datalake large files testing s3.default.test-firehose-con-bucket."firehose_data/movies_list.json"
+    displayName: firehose_data/movies_list.json
+    deleted: false
+  - id: 2d24a8ad-27e7-40f3-8293-075746551b60
+    type: table
+    name: openmetadata.json
+    fullyQualifiedName: datalake large files testing s3.default.test-firehose-con-bucket."openmetadata.json"
+    displayName: openmetadata.json
+    deleted: false
+tags: []
+domains: []
+sourceHash: 6b1ffd0abf65751bf3b5fb13d5439a78
+entityStatus: Unprocessed

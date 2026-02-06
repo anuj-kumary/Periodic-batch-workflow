@@ -1,0 +1,85 @@
+name: testdatalake-ingestion
+fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion
+dataProducts: []
+owners: []
+service:
+  id: 1260697d-6d10-4b82-b4a6-ca95bab8c257
+  type: databaseService
+  name: datalake large files testing s3
+  fullyQualifiedName: datalake large files testing s3
+  description: ""
+  displayName: datalake large files testing s3
+  deleted: false
+serviceType: Datalake
+database:
+  id: 8697ff50-039d-4fb9-803d-175db4088581
+  type: database
+  name: default
+  fullyQualifiedName: datalake large files testing s3.default
+  displayName: default
+  deleted: false
+tables:
+  - id: bd2e650a-4e1d-4516-8399-b7b03661b5c5
+    type: table
+    name: 00000002.MF4
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."00000002.MF4"
+    displayName: 00000002.MF4
+    deleted: false
+  - id: ec693849-c4c1-48e3-90a2-38ebc76ffd56
+    type: table
+    name: ONLY_FOR_CDC_METADATA/book.parquet
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."ONLY_FOR_CDC_METADATA/book.parquet"
+    displayName: ONLY_FOR_CDC_METADATA/book.parquet
+    deleted: false
+  - id: 4683b9a2-83f1-4e42-b1ec-4b3e6513889a
+    type: table
+    name: cat.json
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."cat.json"
+    displayName: cat.json
+    deleted: false
+  - id: 04f563ea-e18b-421f-8113-434e124658c6
+    type: table
+    name: csv_files/dog.csv
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."csv_files/dog.csv"
+    displayName: csv_files/dog.csv
+    deleted: false
+  - id: 296171d3-6e27-416c-b158-f51c28dff96f
+    type: table
+    name: large_file.avro
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."large_file.avro"
+    displayName: large_file.avro
+    deleted: false
+  - id: c9d2551c-cfac-42a7-9573-e617822418e3
+    type: table
+    name: large_file.parquet
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."large_file.parquet"
+    displayName: large_file.parquet
+    deleted: false
+  - id: 366f25a7-4727-407f-a6c8-24e93823c660
+    type: table
+    name: myfolder/00000002.MF4
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."myfolder/00000002.MF4"
+    displayName: myfolder/00000002.MF4
+    deleted: false
+  - id: b6dafb3d-b114-4ad8-be91-a73f1b8cd917
+    type: table
+    name: openmetadata.json
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."openmetadata.json"
+    displayName: openmetadata.json
+    deleted: false
+  - id: 5be1449f-5633-4a05-a9c2-d671ae71a3b2
+    type: table
+    name: pq_files/titanic.parquet
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."pq_files/titanic.parquet"
+    displayName: pq_files/titanic.parquet
+    deleted: false
+  - id: 820afd12-32f2-49b1-84f5-3ad1156438de
+    type: table
+    name: sample.avro
+    fullyQualifiedName: datalake large files testing s3.default.testdatalake-ingestion."sample.avro"
+    displayName: sample.avro
+    deleted: false
+tags: []
+domains: []
+sourceHash: 4ddd2d05584ba03fd6142d6caf31e25d
+entityStatus: Unprocessed

@@ -1,0 +1,51 @@
+name: reverse_ingestion_test_djvcjlpftpcpxpy
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 8b3b446d-47b2-4275-80bc-e06c02b92d84
+    type: table
+    name: my@table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my@table
+    displayName: my@table
+    deleted: false
+  - id: d0689860-2e0e-4c40-ac95-f77fffe8f007
+    type: table
+    name: my_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.my_table
+    displayName: my_table
+    deleted: false
+  - id: a7ed10f6-10d4-4b7f-a388-7d8305884e45
+    type: table
+    name: regular_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_djvcjlpftpcpxpy.regular_table
+    displayName: regular_table
+    deleted: false
+tags:
+  - tagFQN: pii.Sensitive
+    name: Sensitive
+    description: UNITY CATALOG TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+domains: []
+sourceHash: 2e8a26be02e706d754c05abf3a50a737
+entityStatus: Unprocessed

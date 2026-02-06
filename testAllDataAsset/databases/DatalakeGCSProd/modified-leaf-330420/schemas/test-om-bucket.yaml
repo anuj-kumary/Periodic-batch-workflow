@@ -1,0 +1,72 @@
+name: test-om-bucket
+fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420.test-om-bucket
+dataProducts: []
+owners: []
+service:
+  id: f7575478-f49f-4368-b445-6092b2036802
+  type: databaseService
+  name: DatalakeGCSProd
+  fullyQualifiedName: DatalakeGCSProd
+  description: ""
+  displayName: DatalakeGCSProd
+  deleted: false
+serviceType: Datalake
+database:
+  id: 88961ff1-d3a7-443f-8b63-9d4180f896ff
+  type: database
+  name: modified-leaf-330420
+  fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420
+  displayName: modified-leaf-330420
+  deleted: false
+tables:
+  - id: 8cadabf2-a684-42d1-bf0a-f4b03b76adfc
+    type: table
+    name: dbt_files_three/dbt_files_nested/catalog.json
+    fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420.test-om-bucket."dbt_files_three/dbt_files_nested/catalog.json"
+    description: "This table stores metadata related to dbt files, including error\
+      \ messages and structured data about nodes and sources, enabling users to analyze\
+      \ and troubleshoot their dbt project configurations effectively."
+    displayName: dbt_files_three/dbt_files_nested/catalog.json
+    deleted: false
+  - id: cfb974a6-ce75-493b-8ff2-db24d0eb1c48
+    type: table
+    name: dbt_files_three/dbt_files_nested/manifest.json
+    fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420.test-om-bucket."dbt_files_three/dbt_files_nested/manifest.json"
+    description: "This table stores metadata related to dbt (data build tool) files,\
+      \ including their structure, dependencies, and configurations, enabling users\
+      \ to understand and manage their data transformation workflows effectively."
+    displayName: dbt_files_three/dbt_files_nested/manifest.json
+    deleted: false
+  - id: 5ae3a1cc-e891-4c98-9f95-9fe50a2ce25e
+    type: table
+    name: dbt_files_three/dbt_files_nested/run_results.json
+    fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420.test-om-bucket."dbt_files_three/dbt_files_nested/run_results.json"
+    description: "This table stores the results of dbt runs, capturing execution details\
+      \ such as elapsed time and metadata, allowing users to analyze performance and\
+      \ outcomes of their data transformation processes effectively."
+    displayName: dbt_files_three/dbt_files_nested/run_results.json
+    deleted: false
+  - id: ac2e6ebc-a3f6-44f1-9046-27f3722d2eef
+    type: table
+    name: sample_nested_json (1) (1).json
+    fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420.test-om-bucket."sample_nested_json
+      (1) (1).json"
+    description: "This table stores data related to bidding events, capturing details\
+      \ such as active bidders, datacenters, and exchanges, along with JSON-formatted\
+      \ bid requests and responses, enabling analysis of auction performance and bidder\
+      \ behavior."
+    displayName: sample_nested_json (1) (1).json
+    deleted: false
+  - id: 56f540b3-fba7-4b7b-868d-8d887783a30c
+    type: table
+    name: test_nested.json
+    fullyQualifiedName: DatalakeGCSProd.modified-leaf-330420.test-om-bucket."test_nested.json"
+    description: "This table stores metadata related to a data storage system, including\
+      \ schema details, snapshot information, and partition specifications, enabling\
+      \ users to manage and query data efficiently within a structured environment."
+    displayName: test_nested.json
+    deleted: false
+tags: []
+domains: []
+sourceHash: 19287c5d5138959ac54968b4c5ad353e
+entityStatus: Approved

@@ -1,0 +1,37 @@
+name: awsdatalake-testing-v3
+fullyQualifiedName: datalake_testing.default.awsdatalake-testing-v3
+dataProducts: []
+owners: []
+service:
+  id: a3e8a23a-a96b-42c3-a29c-4dfc48985683
+  type: databaseService
+  name: datalake_testing
+  fullyQualifiedName: datalake_testing
+  description: ""
+  displayName: datalake_testing
+  deleted: false
+serviceType: Datalake
+database:
+  id: a36785ee-0b8d-46dc-ab57-6bf1adfbc950
+  type: database
+  name: default
+  fullyQualifiedName: datalake_testing.default
+  displayName: default
+  deleted: false
+tables:
+  - id: 831cd604-059e-466f-8d17-7133a0341c62
+    type: table
+    name: csv_data/dog.csv
+    fullyQualifiedName: datalake_testing.default.awsdatalake-testing-v3."csv_data/dog.csv"
+    displayName: csv_data/dog.csv
+    deleted: false
+  - id: 910fd15d-c0eb-4606-80d4-f0e19a7381d8
+    type: table
+    name: old_data/titanic.parquet
+    fullyQualifiedName: datalake_testing.default.awsdatalake-testing-v3."old_data/titanic.parquet"
+    displayName: old_data/titanic.parquet
+    deleted: false
+tags: []
+domains: []
+sourceHash: 249e6088527236db72fca3fd94df3f56
+entityStatus: Unprocessed

@@ -1,0 +1,43 @@
+name: reverse_ingestion_test_mvliwevhbuewurw
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_mvliwevhbuewurw
+description: Updated schema description
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 174a3219-17f8-4b7b-8d02-a8b513881988
+    type: table
+    name: employees
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_mvliwevhbuewurw.employees
+    description: Updated table description
+    displayName: employees
+    deleted: false
+tags:
+  - tagFQN: PII.NonSensitive
+    name: NonSensitive
+    description: "PII which is easily accessible from public sources and can include\
+      \ zip code, race, gender, and date of birth."
+    style: {}
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+domains: []
+sourceHash: 811cb29bdcf15494e6d6a9b417e51db3
+entityStatus: Unprocessed

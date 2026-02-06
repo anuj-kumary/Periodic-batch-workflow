@@ -1,0 +1,109 @@
+name: ingestion
+fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion
+dataProducts: []
+owners: []
+service:
+  id: 4ce97071-742d-42f1-bd74-f779b17970cf
+  type: databaseService
+  name: DatalakeAzureAuthTest
+  fullyQualifiedName: DatalakeAzureAuthTest
+  description: ""
+  displayName: DatalakeAzureAuthTest
+  deleted: false
+serviceType: Datalake
+database:
+  id: 33f9742e-acd9-4dd0-8e97-8cfb641a376f
+  type: database
+  name: default
+  fullyQualifiedName: DatalakeAzureAuthTest.default
+  displayName: default
+  deleted: false
+tables:
+  - id: 22a07b31-46a5-46b0-8dc7-9c511adb598b
+    type: table
+    name: cities/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."cities/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet"
+    description: ""
+    displayName: cities/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet
+    deleted: false
+  - id: 94384fb1-07e2-4c17-8d7d-b1bea6213302
+    type: table
+    name: cities/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."cities/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet"
+    description: ""
+    displayName: cities/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet
+    deleted: false
+  - id: 3b573042-3f00-4f79-a736-a1fe587be55f
+    type: table
+    name: cities_multiple/Year=2023/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."cities_multiple/Year=2023/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet"
+    description: ""
+    displayName: cities_multiple/Year=2023/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet
+    deleted: false
+  - id: 7a61d097-d959-4e57-816e-d3ce09c1b100
+    type: table
+    name: cities_multiple/Year=2023/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."cities_multiple/Year=2023/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet"
+    description: ""
+    displayName: cities_multiple/Year=2023/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet
+    deleted: false
+  - id: 3fe01154-81ae-489a-8e5c-13071ce4d361
+    type: table
+    name: cities_multiple_simple/20230412/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."cities_multiple_simple/20230412/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet"
+    description: ""
+    displayName: cities_multiple_simple/20230412/State=AL/c853d4fa4a15481493ae313bf6e60e6d.parquet
+    deleted: false
+  - id: 902e719a-234c-4381-84a8-9269285ded63
+    type: table
+    name: cities_multiple_simple/20230412/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."cities_multiple_simple/20230412/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet"
+    description: ""
+    displayName: cities_multiple_simple/20230412/State=AZ/f0b308aec3224df1ad885480d7a9a136.parquet
+    deleted: false
+  - id: ffb5c127-0f7b-42e7-93d7-d355b24859ee
+    type: table
+    name: middle/transactions_deep/transactions_1.csv
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."middle/transactions_deep/transactions_1.csv"
+    description: ""
+    displayName: middle/transactions_deep/transactions_1.csv
+    deleted: false
+  - id: 8b5f3396-7e33-4206-8cc7-6fcdc55cc9c7
+    type: table
+    name: middle/transactions_deep/transactions_2.csv
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."middle/transactions_deep/transactions_2.csv"
+    description: ""
+    displayName: middle/transactions_deep/transactions_2.csv
+    deleted: false
+  - id: eec99db8-f113-443f-90c4-db5718e0336a
+    type: table
+    name: openmetadata.json
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."openmetadata.json"
+    description: ""
+    displayName: openmetadata.json
+    deleted: false
+  - id: d81bb57a-3de3-4d0e-b1a7-85faaaa2b323
+    type: table
+    name: transactions/transactions_1.csv
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."transactions/transactions_1.csv"
+    description: ""
+    displayName: transactions/transactions_1.csv
+    deleted: false
+  - id: 334e3525-d7ba-4629-813c-7e5104e69385
+    type: table
+    name: transactions/transactions_2.csv
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."transactions/transactions_2.csv"
+    description: ""
+    displayName: transactions/transactions_2.csv
+    deleted: false
+  - id: b7a376b2-fb16-4481-894a-aad6f949beb3
+    type: table
+    name: transactions_separator/transactions_separator.csv
+    fullyQualifiedName: DatalakeAzureAuthTest.default.ingestion."transactions_separator/transactions_separator.csv"
+    description: ""
+    displayName: transactions_separator/transactions_separator.csv
+    deleted: false
+tags: []
+domains: []
+sourceHash: 07ff3c92b37c6d626fded7dd58399461
+entityStatus: Approved

@@ -1,0 +1,78 @@
+name: reverse_ingestion_test_daufusqioelpidz
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz
+description: Updated schema description
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 94bc20c0-1b2c-4177-b3f1-4749d0729878
+    type: table
+    name: employees
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.employees
+    description: Updated table description
+    displayName: employees
+    deleted: false
+  - id: 09b3008d-6f14-4c87-bb12-99ab5d4092e6
+    type: table
+    name: iceberg_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.iceberg_table
+    description: new description - reverse metadata testing
+    displayName: iceberg_table
+    deleted: false
+  - id: 34dd5e9f-a94c-40b2-b138-a4dacc6e82b3
+    type: table
+    name: materialized_view_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.materialized_view_table
+    description: new description - reverse metadata testing.
+    displayName: materialized_view_table
+    deleted: false
+  - id: f8853d7e-0f96-418b-a8ef-6e4e6db3ed32
+    type: table
+    name: partitioned_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.partitioned_table
+    description: new description - reverse metadata testing
+    displayName: partitioned_table
+    deleted: false
+  - id: e3b132e6-7c7f-4294-8083-d69d1b106a39
+    type: table
+    name: regular_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.regular_table
+    description: new description - reverse metadata testing
+    displayName: regular_table
+    deleted: false
+  - id: 9a662fbf-dd3d-4127-a25b-27e97403afbd
+    type: table
+    name: view_table
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_daufusqioelpidz.view_table
+    description: new description - reverse metadata testing.
+    displayName: view_table
+    deleted: false
+tags:
+  - tagFQN: PII.NonSensitive
+    name: NonSensitive
+    description: "PII which is easily accessible from public sources and can include\
+      \ zip code, race, gender, and date of birth."
+    style: {}
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+domains: []
+sourceHash: d65ef57d67815a853794bd0159ad925e
+entityStatus: Unprocessed

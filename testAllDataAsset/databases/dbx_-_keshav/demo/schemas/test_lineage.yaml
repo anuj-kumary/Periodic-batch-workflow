@@ -1,0 +1,54 @@
+name: test_lineage
+fullyQualifiedName: dbx - keshav.demo.test_lineage
+description: test lineage upstream/downstream
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 249802ed-fcc0-44b4-876d-eef2bab0b1cc
+    type: table
+    name: external_location_table_copy
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.external_location_table_copy
+    description: Downstream curated location copy
+    displayName: external_location_table_copy
+    deleted: false
+  - id: e58bb9e4-a44f-469b-87c0-78e9f2d4c86d
+    type: table
+    name: post_sales
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.post_sales
+    description: Downstream curated sales
+    displayName: post_sales
+    deleted: false
+  - id: 45d9b1bb-6aba-464f-963f-aefc0e398279
+    type: table
+    name: pre_sales
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.pre_sales
+    description: Raw/pre-staged sales input
+    displayName: pre_sales
+    deleted: false
+  - id: d978fd81-15cc-4a23-9552-5a7dfd955c42
+    type: table
+    name: sales
+    fullyQualifiedName: dbx - keshav.demo.test_lineage.sales
+    description: Sales facts
+    displayName: sales
+    deleted: false
+tags: []
+domains: []
+sourceHash: 5287d70db094f52c9ce07be774a7d90c
+entityStatus: Unprocessed

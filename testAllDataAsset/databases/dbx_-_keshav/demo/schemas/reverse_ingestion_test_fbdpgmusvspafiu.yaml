@@ -1,0 +1,41 @@
+name: reverse_ingestion_test_fbdpgmusvspafiu
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_fbdpgmusvspafiu
+description: Updated schema description
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 0555457b-02e1-4a76-9810-acd6ca271817
+    type: table
+    name: employees
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_fbdpgmusvspafiu.employees
+    description: Updated table description
+    displayName: employees
+    deleted: false
+tags:
+  - tagFQN: pii.NonSensitive
+    name: NonSensitive
+    description: UNITY CATALOG TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+domains: []
+sourceHash: a2bfbc80fc709ef24a5bc955cbed8669
+entityStatus: Unprocessed

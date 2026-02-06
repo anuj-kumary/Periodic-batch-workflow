@@ -1,0 +1,68 @@
+name: customer
+fullyQualifiedName: dbx - keshav.demo.customer
+description: reverse metadata description
+dataProducts: []
+owners: []
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+tables:
+  - id: 468873d3-7023-4afc-879c-745d89eaedaa
+    type: table
+    name: address
+    fullyQualifiedName: dbx - keshav.demo.customer.address
+    displayName: address
+    deleted: false
+  - id: 660507b8-d551-419b-9797-8acee49af393
+    type: table
+    name: customercontacthistory
+    fullyQualifiedName: dbx - keshav.demo.customer.customercontacthistory
+    displayName: customercontacthistory
+    deleted: false
+  - id: 7f4b2859-34f1-408b-a8c0-67fe3dbfe5ba
+    type: table
+    name: customerinfo
+    fullyQualifiedName: dbx - keshav.demo.customer.customerinfo
+    displayName: customerinfo
+    deleted: false
+  - id: caeecd76-4757-478e-8b46-03e9ac3ad00e
+    type: table
+    name: customerlogin
+    fullyQualifiedName: dbx - keshav.demo.customer.customerlogin
+    displayName: customerlogin
+    deleted: false
+  - id: b03bdff4-c3f0-4e1e-bf6b-0ef741f59677
+    type: table
+    name: customerpreferences
+    fullyQualifiedName: dbx - keshav.demo.customer.customerpreferences
+    displayName: customerpreferences
+    deleted: false
+  - id: e793ac61-fe87-421d-9231-c6ca369be60b
+    type: table
+    name: iceberg_table
+    fullyQualifiedName: dbx - keshav.demo.customer.iceberg_table
+    displayName: iceberg_table
+    deleted: false
+  - id: 6c366c99-82ff-440b-a891-323970f44adb
+    type: table
+    name: table2
+    fullyQualifiedName: dbx - keshav.demo.customer.table2
+    displayName: table2
+    deleted: false
+tags: []
+domains: []
+sourceHash: 7211e1923a40a4ab960b15a95fb94849
+entityStatus: Unprocessed
