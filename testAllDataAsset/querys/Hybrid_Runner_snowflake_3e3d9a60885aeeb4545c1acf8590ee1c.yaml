@@ -1,0 +1,44 @@
+name: 3e3d9a60885aeeb4545c1acf8590ee1c
+fullyQualifiedName: Hybrid Runner snowflake.3e3d9a60885aeeb4545c1acf8590ee1c
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"7d2b6ab4-9ae8-4560-b4b9-5f97ea198429\",\"type\":\"table\"\
+        ,\"name\":\"SOURCE_TABLE_3\",\"fullyQualifiedName\":\"Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_TABLE_3\"\
+        ,\"displayName\":\"SOURCE_TABLE_3\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 78.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT count(CASE WHEN (\"SALE_ID\" >= ? AND \"SALE_ID\" < ?) THEN \"SALE_ID\"\
+  \ END) AS \"1.001K to 1.003K\", count(CASE WHEN (\"SALE_ID\" >= ?) THEN \"SALE_ID\"\
+  \ END) AS \"1.003K and up\" \nFROM \"ALL_LINAGE_SCHEMA\".\"SOURCE_TABLE_3\"\n LIMIT\
+  \ ?"
+checksum: 3e3d9a60885aeeb4545c1acf8590ee1c
+queryDate: 1762300800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: 7d2b6ab4-9ae8-4560-b4b9-5f97ea198429
+    type: table
+    name: SOURCE_TABLE_3
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_TABLE_3
+    displayName: SOURCE_TABLE_3
+    deleted: false
+processedLineage: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+entityStatus: Unprocessed

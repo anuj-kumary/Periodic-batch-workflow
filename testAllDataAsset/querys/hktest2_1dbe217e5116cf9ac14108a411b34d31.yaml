@@ -1,0 +1,38 @@
+name: 1dbe217e5116cf9ac14108a411b34d31
+fullyQualifiedName: hktest2.1dbe217e5116cf9ac14108a411b34d31
+owners: []
+duration: 67.0
+users: []
+query: |-
+  WITH source AS (
+      SELECT *
+      FROM "SAMPLE".DBT_SCHEMA.SAMPLE_DATA
+  ),
+
+  transformed AS (
+      SELECT
+          *,
+          UPPER(name) AS name_upper_dbt
+      FROM source
+  )
+
+  SELECT *
+  FROM transformed;
+checksum: 1dbe217e5116cf9ac14108a411b34d31
+queryDate: 1747699200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: c035af7f-0b1c-43bc-a72c-903ebb7d1d16
+    type: table
+    name: SAMPLE_DATA
+    fullyQualifiedName: hktest2.SAMPLE.DBT_SCHEMA.SAMPLE_DATA
+    displayName: SAMPLE_DATA
+    deleted: false
+processedLineage: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2

@@ -1,0 +1,31 @@
+name: ff5ae9f0101d74a183ca6f6fa61e1a90
+fullyQualifiedName: hktest.ff5ae9f0101d74a183ca6f6fa61e1a90
+owners: []
+duration: 73.0
+users: []
+query: "WITH \"4c9e7581028a01fc71dfc3997bd40912_rnd\" AS \n(SELECT \"LOAN_1\".\"DFLT_DT\"\
+  \ AS \"DFLT_DT\" \nFROM \"CURATED\".\"LOAN\" AS \"LOAN_1\" TABLESAMPLE ROW(? ROWS)),\
+  \ \n\"4c9e7581028a01fc71dfc3997bd40912_sample\" AS \n(SELECT \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  .\"DFLT_DT\" AS \"DFLT_DT\" \nFROM \"4c9e7581028a01fc71dfc3997bd40912_rnd\")\n SELECT\
+  \ ? AS anon_1, count(\"DFLT_DT\") AS \"valuesCount\", count(DISTINCT \"DFLT_DT\"\
+  ) AS \"distinctCount\", MIN(\"DFLT_DT\") AS min, MAX(\"DFLT_DT\") AS max, coalesce(SUM(CASE\
+  \ WHEN (\"DFLT_DT\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", ? AS anon__1,\
+  \ ? AS anon__2 \nFROM \"4c9e7581028a01fc71dfc3997bd40912_sample\"\n LIMIT ?"
+checksum: ff5ae9f0101d74a183ca6f6fa61e1a90
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 169cbc9c-563e-4142-b5cb-099e6afdb44a
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

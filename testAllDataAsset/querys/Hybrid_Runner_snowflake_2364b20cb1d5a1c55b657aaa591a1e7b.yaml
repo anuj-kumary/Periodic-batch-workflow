@@ -1,0 +1,46 @@
+name: 2364b20cb1d5a1c55b657aaa591a1e7b
+fullyQualifiedName: Hybrid Runner snowflake.2364b20cb1d5a1c55b657aaa591a1e7b
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"bf5e0a06-502d-481e-b29b-e07f3a312b16\",\"type\":\"table\"\
+        ,\"name\":\"SOURCE_TABLE_4\",\"fullyQualifiedName\":\"Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_TABLE_4\"\
+        ,\"displayName\":\"SOURCE_TABLE_4\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 282.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT avg(LEN(\"ACCOUNT_STATUS\")) AS mean, count(\"ACCOUNT_STATUS\") AS\
+  \ \"valuesCount\", count(DISTINCT \"ACCOUNT_STATUS\") AS \"distinctCount\", MAX(LEN(\"\
+  ACCOUNT_STATUS\")) AS max, MIN(LEN(\"ACCOUNT_STATUS\")) AS min, coalesce(SUM(CASE\
+  \ WHEN (\"ACCOUNT_STATUS\" IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"\
+  ACCOUNT_STATUS\")) AS stddev, SUM(LEN(\"ACCOUNT_STATUS\")) AS sum \nFROM \"ALL_LINAGE_SCHEMA\"\
+  .\"SOURCE_TABLE_4\"\n LIMIT ?"
+checksum: 2364b20cb1d5a1c55b657aaa591a1e7b
+queryDate: 1762300800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: bf5e0a06-502d-481e-b29b-e07f3a312b16
+    type: table
+    name: SOURCE_TABLE_4
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_TABLE_4
+    displayName: SOURCE_TABLE_4
+    deleted: false
+processedLineage: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+entityStatus: Unprocessed

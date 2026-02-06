@@ -1,0 +1,45 @@
+name: 08406feceedbb39a4ab700715ee06855
+fullyQualifiedName: Hybrid Runner snowflake.08406feceedbb39a4ab700715ee06855
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"bf5e0a06-502d-481e-b29b-e07f3a312b16\",\"type\":\"table\"\
+        ,\"name\":\"SOURCE_TABLE_4\",\"fullyQualifiedName\":\"Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_TABLE_4\"\
+        ,\"displayName\":\"SOURCE_TABLE_4\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 206.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT avg(LEN(\"USERNAME\")) AS mean, count(\"USERNAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"USERNAME\") AS \"distinctCount\", MAX(LEN(\"USERNAME\")) AS max,\
+  \ MIN(LEN(\"USERNAME\")) AS min, coalesce(SUM(CASE WHEN (\"USERNAME\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"USERNAME\")) AS stddev, SUM(LEN(\"\
+  USERNAME\")) AS sum \nFROM \"ALL_LINAGE_SCHEMA\".\"SOURCE_TABLE_4\"\n LIMIT ?"
+checksum: 08406feceedbb39a4ab700715ee06855
+queryDate: 1762300800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: bf5e0a06-502d-481e-b29b-e07f3a312b16
+    type: table
+    name: SOURCE_TABLE_4
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_TABLE_4
+    displayName: SOURCE_TABLE_4
+    deleted: false
+processedLineage: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+entityStatus: Unprocessed

@@ -1,0 +1,36 @@
+name: 55f809f85fbdc99abf0f021c6809f5bb
+fullyQualifiedName: hktest1.55f809f85fbdc99abf0f021c6809f5bb
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0a4a4b05-a00e-41c6-b73c-f5b6d6275874\",\"type\":\"table\"\
+        ,\"name\":\"SAMPLE_TABLE\",\"fullyQualifiedName\":\"hktest1.SAMPLE.PUBLIC.SAMPLE_TABLE\"\
+        ,\"displayName\":\"SAMPLE_TABLE\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 92.0
+users: []
+query: "SELECT \"CUSTOMERID\", \"NAME\", \"EMAIL\", \"COUNTRY\", \"SIGNUPDATE\", \"\
+  PURCHASEAMOUNT\", upper(\"NAME\") AS \"NAME_UPPER\" FROM \"SAMPLE\".\"PUBLIC\".\"\
+  SAMPLE_TABLE\" LIMIT ?"
+checksum: 55f809f85fbdc99abf0f021c6809f5bb
+queryDate: 1747612800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 0a4a4b05-a00e-41c6-b73c-f5b6d6275874
+    type: table
+    name: SAMPLE_TABLE
+    fullyQualifiedName: hktest1.SAMPLE.PUBLIC.SAMPLE_TABLE
+    displayName: SAMPLE_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: bac8305b-a253-4ae2-9ca8-6009c7ebcdce
+  type: databaseService
+  name: hktest1
+  fullyQualifiedName: hktest1

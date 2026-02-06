@@ -1,0 +1,50 @@
+name: ffb0e24395e4973da0b9a642ea784c4e
+fullyQualifiedName: hktest.ffb0e24395e4973da0b9a642ea784c4e
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"1a977e20-ac5d-4bad-8a66-725d5b95e434\",\"type\":\"table\"\
+        ,\"name\":\"DBT_SNAPSHOTS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SNAPSHOTS\"\
+        ,\"displayName\":\"DBT_SNAPSHOTS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 83.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "with dbt_artifacts_snapshots as (\n                select \n             \
+  \     name,\n                  case when alias is not ? then alias\n           \
+  \       else name end as table_name,\n                  unique_id,\n           \
+  \       owner as owners,\n                  tags,\n                  package_name,\n\
+  \                  description,\n                  meta,\n                  materialization,\n\
+  \                  database_name,\n                  schema_name,\n            \
+  \      depends_on_macros,\n                  depends_on_nodes,\n               \
+  \   original_path as full_path,\n                  path,\n                  patch_path,\n\
+  \                  generated_at,\n                  unique_key,\n              \
+  \    incremental_strategy\n                from dbt_db.DBT_SAMPLE_elementary.dbt_snapshots\n\
+  \              )\n            select * from dbt_artifacts_snapshots"
+checksum: ffb0e24395e4973da0b9a642ea784c4e
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 1a977e20-ac5d-4bad-8a66-725d5b95e434
+    type: table
+    name: DBT_SNAPSHOTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_SNAPSHOTS
+    displayName: DBT_SNAPSHOTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

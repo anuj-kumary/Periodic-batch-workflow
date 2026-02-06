@@ -1,0 +1,44 @@
+name: ff4ca6722a20f1b7d2bb5ac782ffa894
+fullyQualifiedName: hktest.ff4ca6722a20f1b7d2bb5ac782ffa894
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"12757ab2-88f3-44af-ad44-2b4c38e0102a\",\"type\":\"table\"\
+        ,\"name\":\"TEST_RESULT_ROWS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.TEST_RESULT_ROWS\"\
+        ,\"displayName\":\"TEST_RESULT_ROWS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 197.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "select\n    elementary_test_results_id,\n    result_row\n  from dbt_db.DBT_SAMPLE_elementary.test_result_rows\n\
+  \  where datediff(\n        day,\n        cast(detected_at as timestamp),\n    \
+  \    \n  current_timestamp::timestamp\n\n        ) < ?\n  \n    and elementary_test_results_id\
+  \ in (\n        select distinct id \n        from dbt_db.DBT_SAMPLE_elementary.ordered_test_resultsNone\n\
+  \        where invocations_rank_index = ?\n    )"
+checksum: ff4ca6722a20f1b7d2bb5ac782ffa894
+queryDate: 1748476800000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 12757ab2-88f3-44af-ad44-2b4c38e0102a
+    type: table
+    name: TEST_RESULT_ROWS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.TEST_RESULT_ROWS
+    displayName: TEST_RESULT_ROWS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

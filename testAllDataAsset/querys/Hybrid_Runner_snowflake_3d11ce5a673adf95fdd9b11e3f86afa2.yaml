@@ -1,0 +1,47 @@
+name: 3d11ce5a673adf95fdd9b11e3f86afa2
+fullyQualifiedName: Hybrid Runner snowflake.3d11ce5a673adf95fdd9b11e3f86afa2
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"a84db9ee-b2ac-4b35-9961-3ca9e8f22f46\",\"type\":\"table\"\
+        ,\"name\":\"TARGET_TABLE_2\",\"fullyQualifiedName\":\"Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_2\"\
+        ,\"displayName\":\"TARGET_TABLE_2\",\"deleted\":false}]"
+  previousVersion: 1.0
+  changeSummary: {}
+owners: []
+duration: 41.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\".\"PRODUCT_ID\" AS \"ALL_LINAGE_SCHEMA_TARGET_TABLE_2_PRODUCT_ID\"\
+  , \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\".\"PRODUCT_NAME\" AS \"ALL_LINAGE_SCHEMA_TARGET_TABLE_2_PRODUCT_NAME\"\
+  , \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\".\"TOTAL_REVENUE\" AS \"ALL_LINAGE_SCHEMA_TARGET_TABLE_2_TOTAL_REVENUE\"\
+  , \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\".\"UNITS_SOLD\" AS \"ALL_LINAGE_SCHEMA_TARGET_TABLE_2_UNITS_SOLD\"\
+  , \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\".\"AVG_DISCOUNT\" AS \"ALL_LINAGE_SCHEMA_TARGET_TABLE_2_AVG_DISCOUNT\"\
+  , \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\".\"REPORT_GENERATED_AT\" AS \"ALL_LINAGE_SCHEMA_TARGET_TABLE_2_REPORT_GENERATED_AT\"\
+  \ \nFROM \"ALL_LINAGE_SCHEMA\".\"TARGET_TABLE_2\"\n LIMIT ?"
+checksum: 3d11ce5a673adf95fdd9b11e3f86afa2
+queryDate: 1762300800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: a84db9ee-b2ac-4b35-9961-3ca9e8f22f46
+    type: table
+    name: TARGET_TABLE_2
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.TARGET_TABLE_2
+    displayName: TARGET_TABLE_2
+    deleted: false
+processedLineage: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+entityStatus: Unprocessed

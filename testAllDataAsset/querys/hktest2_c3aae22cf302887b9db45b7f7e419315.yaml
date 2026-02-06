@@ -1,0 +1,38 @@
+name: c3aae22cf302887b9db45b7f7e419315
+fullyQualifiedName: hktest2.c3aae22cf302887b9db45b7f7e419315
+owners: []
+duration: 133.0
+users: []
+query: |-
+  WITH source AS (
+      SELECT *
+      FROM "SAMPLE_DATA"
+  ),
+
+  transformed AS (
+      SELECT
+          *,
+          UPPER(name) AS name_upper_dbt
+      FROM source
+  )
+
+  SELECT *
+  FROM transformed;
+checksum: c3aae22cf302887b9db45b7f7e419315
+queryDate: 1747699200000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: c035af7f-0b1c-43bc-a72c-903ebb7d1d16
+    type: table
+    name: SAMPLE_DATA
+    fullyQualifiedName: hktest2.SAMPLE.DBT_SCHEMA.SAMPLE_DATA
+    displayName: SAMPLE_DATA
+    deleted: false
+processedLineage: false
+service:
+  id: 75865179-7a07-461c-8b40-d6e08822f13e
+  type: databaseService
+  name: hktest2
+  fullyQualifiedName: hktest2

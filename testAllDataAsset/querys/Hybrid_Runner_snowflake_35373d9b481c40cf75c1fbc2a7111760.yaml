@@ -1,0 +1,45 @@
+name: 35373d9b481c40cf75c1fbc2a7111760
+fullyQualifiedName: Hybrid Runner snowflake.35373d9b481c40cf75c1fbc2a7111760
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"e430445a-72c4-438b-9254-69cdd5e583eb\",\"type\":\"table\"\
+        ,\"name\":\"SOURCE_EMPLOYEES\",\"fullyQualifiedName\":\"Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_EMPLOYEES\"\
+        ,\"displayName\":\"SOURCE_EMPLOYEES\",\"deleted\":false}]"
+  previousVersion: 1.4
+  changeSummary: {}
+owners: []
+duration: 29.0
+users:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+query: "SELECT \"ALL_LINAGE_SCHEMA\".\"SOURCE_EMPLOYEES\".\"EMPLOYEE_ID\" AS \"ALL_LINAGE_SCHEMA_SOURCE_EMPLOYEES_EMPLOYEE_ID\"\
+  , \"ALL_LINAGE_SCHEMA\".\"SOURCE_EMPLOYEES\".\"EMPLOYEE_NAME\" AS \"ALL_LINAGE_SCHEMA_SOURCE_EMPLOYEES_EMPLOYEE_NAME\"\
+  , \"ALL_LINAGE_SCHEMA\".\"SOURCE_EMPLOYEES\".\"DEPARTMENT_NAME\" AS \"ALL_LINAGE_SCHEMA_SOURCE_EMPLOYEES_DEPARTMENT_NAME\"\
+  , \"ALL_LINAGE_SCHEMA\".\"SOURCE_EMPLOYEES\".\"SALARY\" AS \"ALL_LINAGE_SCHEMA_SOURCE_EMPLOYEES_SALARY\"\
+  \ \nFROM \"ALL_LINAGE_SCHEMA\".\"SOURCE_EMPLOYEES\"\n LIMIT ?"
+checksum: 35373d9b481c40cf75c1fbc2a7111760
+queryDate: 1762300800000
+usedBy:
+  - MOHIT
+tags: []
+queryUsedIn:
+  - id: e430445a-72c4-438b-9254-69cdd5e583eb
+    type: table
+    name: SOURCE_EMPLOYEES
+    fullyQualifiedName: Hybrid Runner snowflake.MT_DB.ALL_LINAGE_SCHEMA.SOURCE_EMPLOYEES
+    displayName: SOURCE_EMPLOYEES
+    deleted: false
+processedLineage: false
+service:
+  id: 56d535da-6a5d-4b09-b6bc-412d61e8abf5
+  type: databaseService
+  name: Hybrid Runner snowflake
+  fullyQualifiedName: Hybrid Runner snowflake
+entityStatus: Unprocessed

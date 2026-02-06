@@ -1,0 +1,82 @@
+name: fffbde8644d1f581349e674f9566f005
+fullyQualifiedName: hktest.fffbde8644d1f581349e674f9566f005
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 26980.0
+users: []
+query: "SELECT count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN\
+  \ \"O_TOTALPRICE\" END) AS \"810.870 to 19.626K\", count(CASE WHEN (\"O_TOTALPRICE\"\
+  \ >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"19.626K to 38.442K\"\
+  , count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\"\
+  \ END) AS \"38.442K to 57.257K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"\
+  O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"57.257K to 76.072K\", count(CASE\
+  \ WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END)\
+  \ AS \"76.072K to 94.888K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\"\
+  \ < ?) THEN \"O_TOTALPRICE\" END) AS \"94.888K to 113.703K\", count(CASE WHEN (\"\
+  O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"113.703K\
+  \ to 132.518K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?)\
+  \ THEN \"O_TOTALPRICE\" END) AS \"132.518K to 151.334K\", count(CASE WHEN (\"O_TOTALPRICE\"\
+  \ >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"151.334K to 170.149K\"\
+  , count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\"\
+  \ END) AS \"170.149K to 188.964K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"\
+  O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"188.964K to 207.780K\", count(CASE\
+  \ WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END)\
+  \ AS \"207.780K to 226.595K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\"\
+  \ < ?) THEN \"O_TOTALPRICE\" END) AS \"226.595K to 245.410K\", count(CASE WHEN (\"\
+  O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"245.410K\
+  \ to 264.226K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?)\
+  \ THEN \"O_TOTALPRICE\" END) AS \"264.226K to 283.041K\", count(CASE WHEN (\"O_TOTALPRICE\"\
+  \ >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"283.041K to 301.856K\"\
+  , count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\"\
+  \ END) AS \"301.856K to 320.672K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"\
+  O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"320.672K to 339.487K\", count(CASE\
+  \ WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END)\
+  \ AS \"339.487K to 358.302K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\"\
+  \ < ?) THEN \"O_TOTALPRICE\" END) AS \"358.302K to 377.118K\", count(CASE WHEN (\"\
+  O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"377.118K\
+  \ to 395.933K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?)\
+  \ THEN \"O_TOTALPRICE\" END) AS \"395.933K to 414.748K\", count(CASE WHEN (\"O_TOTALPRICE\"\
+  \ >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"414.748K to 433.564K\"\
+  , count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\"\
+  \ END) AS \"433.564K to 452.379K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"\
+  O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"452.379K to 471.194K\", count(CASE\
+  \ WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END)\
+  \ AS \"471.194K to 490.010K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\"\
+  \ < ?) THEN \"O_TOTALPRICE\" END) AS \"490.010K to 508.825K\", count(CASE WHEN (\"\
+  O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"508.825K\
+  \ to 527.640K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?)\
+  \ THEN \"O_TOTALPRICE\" END) AS \"527.640K to 546.456K\", count(CASE WHEN (\"O_TOTALPRICE\"\
+  \ >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\" END) AS \"546.456K to 565.271K\"\
+  , count(CASE WHEN (\"O_TOTALPRICE\" >= ? AND \"O_TOTALPRICE\" < ?) THEN \"O_TOTALPRICE\"\
+  \ END) AS \"565.271K to 584.086K\", count(CASE WHEN (\"O_TOTALPRICE\" >= ?) THEN\
+  \ \"O_TOTALPRICE\" END) AS \"584.086K and up\" \nFROM \"TPCH_SF1000\".\"ORDERS\"\
+  \n LIMIT ?"
+checksum: fffbde8644d1f581349e674f9566f005
+queryDate: 1752105600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b8edd128-e9a7-4b1e-9a7a-6f441d6c3cb4
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1000.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
