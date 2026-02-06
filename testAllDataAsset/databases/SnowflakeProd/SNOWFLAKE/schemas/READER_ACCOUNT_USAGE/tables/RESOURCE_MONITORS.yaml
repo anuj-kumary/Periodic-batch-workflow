@@ -1,0 +1,165 @@
+name: RESOURCE_MONITORS
+fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS
+tableType: View
+columns:
+  - name: READER_ACCOUNT_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.READER_ACCOUNT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREDIT_QUOTA
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: variant
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.CREDIT_QUOTA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USED_CREDITS
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: variant
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.USED_CREDITS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REMAINING_CREDITS
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.REMAINING_CREDITS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.OWNER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: WAREHOUSES
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.WAREHOUSES
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NOTIFY
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.NOTIFY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUSPEND
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.SUSPEND
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SUSPEND_IMMEDIATE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.SUSPEND_IMMEDIATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LEVEL
+    dataType: VARCHAR
+    dataLength: 9
+    dataTypeDisplay: text(9)
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.LEVEL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: READER_ACCOUNT_DELETED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE.RESOURCE_MONITORS.READER_ACCOUNT_DELETED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 76b4deea-7417-495e-96fe-e0fac802314d
+  type: databaseSchema
+  name: READER_ACCOUNT_USAGE
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE.READER_ACCOUNT_USAGE
+  displayName: READER_ACCOUNT_USAGE
+  deleted: false
+database:
+  id: c2c0f880-7eef-47f7-96f7-8a71525148db
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: SnowflakeProd.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/tmqlsne/ww42057/#/data/databases/SNOWFLAKE/schemas/READER_ACCOUNT_USAGE/view/RESOURCE_MONITORS
+domains: []
+dataProducts: []
+sourceHash: bb72754afa65811ed51dc019a52173d5
+processedLineage: false
+entityStatus: Approved
