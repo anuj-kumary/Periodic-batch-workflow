@@ -1,0 +1,36 @@
+name: e6330c8a1594d7cfa0da163bada1f822
+fullyQualifiedName: hktest.e6330c8a1594d7cfa0da163bada1f822
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b4302ffc-7b20-4a12-b062-2c08f0e0668e\",\"type\":\"table\"\
+        ,\"name\":\"DYNAMIC_TABLE\",\"fullyQualifiedName\":\"hktest.NEW_E2E.PUBLIC.DYNAMIC_TABLE\"\
+        ,\"displayName\":\"DYNAMIC_TABLE\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 97.0
+users: []
+query: "SELECT \"PUBLIC\".\"DYNAMIC_TABLE\".\"ID\" AS \"PUBLIC_DYNAMIC_TABLE_ID\"\
+  , \"PUBLIC\".\"DYNAMIC_TABLE\".\"NAME\" AS \"PUBLIC_DYNAMIC_TABLE_NAME\" \nFROM\
+  \ \"PUBLIC\".\"DYNAMIC_TABLE\"\n LIMIT ?"
+checksum: e6330c8a1594d7cfa0da163bada1f822
+queryDate: 1752278400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b4302ffc-7b20-4a12-b062-2c08f0e0668e
+    type: table
+    name: DYNAMIC_TABLE
+    fullyQualifiedName: hktest.NEW_E2E.PUBLIC.DYNAMIC_TABLE
+    displayName: DYNAMIC_TABLE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

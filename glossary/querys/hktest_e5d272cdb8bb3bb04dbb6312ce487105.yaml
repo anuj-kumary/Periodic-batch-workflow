@@ -1,0 +1,38 @@
+name: e5d272cdb8bb3bb04dbb6312ce487105
+fullyQualifiedName: hktest.e5d272cdb8bb3bb04dbb6312ce487105
+owners: []
+duration: 614.0
+users: []
+query: "WITH d6def3b6c248e09592da506240613bd9_rnd AS \n(SELECT \"LINEITEM_1\".\"L_EXTENDEDPRICE\"\
+  \ AS \"L_EXTENDEDPRICE\" \nFROM \"TPCH_SF10\".\"LINEITEM\" AS \"LINEITEM_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nd6def3b6c248e09592da506240613bd9_sample AS \n(SELECT d6def3b6c248e09592da506240613bd9_rnd.\"\
+  L_EXTENDEDPRICE\" AS \"L_EXTENDEDPRICE\" \nFROM d6def3b6c248e09592da506240613bd9_rnd)\n\
+  \ SELECT count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?)\
+  \ THEN \"L_EXTENDEDPRICE\" END) AS \"1.556K to 16.547K\", count(CASE WHEN (\"L_EXTENDEDPRICE\"\
+  \ >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"16.547K to\
+  \ 31.537K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" <\
+  \ ?) THEN \"L_EXTENDEDPRICE\" END) AS \"31.537K to 46.527K\", count(CASE WHEN (\"\
+  L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\" < ?) THEN \"L_EXTENDEDPRICE\" END)\
+  \ AS \"46.527K to 61.517K\", count(CASE WHEN (\"L_EXTENDEDPRICE\" >= ? AND \"L_EXTENDEDPRICE\"\
+  \ < ?) THEN \"L_EXTENDEDPRICE\" END) AS \"61.517K to 76.507K\", count(CASE WHEN\
+  \ (\"L_EXTENDEDPRICE\" >= ?) THEN \"L_EXTENDEDPRICE\" END) AS \"76.507K and up\"\
+  \ \nFROM d6def3b6c248e09592da506240613bd9_sample\n LIMIT ?"
+checksum: e5d272cdb8bb3bb04dbb6312ce487105
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 98e57e0d-b1b7-4dd8-ae1e-418bef3de0ed
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

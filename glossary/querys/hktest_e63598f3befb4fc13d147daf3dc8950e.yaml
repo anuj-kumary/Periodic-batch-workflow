@@ -1,0 +1,36 @@
+name: e63598f3befb4fc13d147daf3dc8950e
+fullyQualifiedName: hktest.e63598f3befb4fc13d147daf3dc8950e
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"90111e7a-d7bb-46c9-976d-2a483c18a2f5\",\"type\":\"table\"\
+        ,\"name\":\"CREDITCARD\",\"fullyQualifiedName\":\"hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.CREDITCARD\"\
+        ,\"displayName\":\"CREDITCARD\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 35.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"_FIVETRAN_DELETED\"\
+  ) AS count_1 \nFROM \"MSSQLBANKING_ACCOUNT\".\"CREDITCARD\" GROUP BY \"_FIVETRAN_DELETED\"\
+  \ \nHAVING count(\"_FIVETRAN_DELETED\") = ?) AS only_once\n LIMIT ?"
+checksum: e63598f3befb4fc13d147daf3dc8950e
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 90111e7a-d7bb-46c9-976d-2a483c18a2f5
+    type: table
+    name: CREDITCARD
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.CREDITCARD
+    displayName: CREDITCARD
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

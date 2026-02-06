@@ -1,0 +1,45 @@
+name: e568ff0b4fd005aafc1cec906ba2ac4a
+fullyQualifiedName: hktest.e568ff0b4fd005aafc1cec906ba2ac4a
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"71f3b29a-0599-4623-b7e2-1e721ace56c4\",\"type\":\"table\"\
+        ,\"name\":\"SEED_RUN_RESULTS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SEED_RUN_RESULTS\"\
+        ,\"displayName\":\"SEED_RUN_RESULTS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 156.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"GENERATED_AT\")) AS mean, count(\"GENERATED_AT\") AS \"valuesCount\"\
+  , count(DISTINCT \"GENERATED_AT\") AS \"distinctCount\", MIN(LEN(\"GENERATED_AT\"\
+  )) AS min, MAX(LEN(\"GENERATED_AT\")) AS max, coalesce(SUM(CASE WHEN (\"GENERATED_AT\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"GENERATED_AT\"\
+  )) AS stddev, SUM(LEN(\"GENERATED_AT\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"SEED_RUN_RESULTS\"\n LIMIT ?"
+checksum: e568ff0b4fd005aafc1cec906ba2ac4a
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 71f3b29a-0599-4623-b7e2-1e721ace56c4
+    type: table
+    name: SEED_RUN_RESULTS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.SEED_RUN_RESULTS
+    displayName: SEED_RUN_RESULTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

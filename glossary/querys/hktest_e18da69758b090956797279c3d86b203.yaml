@@ -1,0 +1,65 @@
+name: e18da69758b090956797279c3d86b203
+fullyQualifiedName: hktest.e18da69758b090956797279c3d86b203
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"97a1a769-0ed2-4e8f-b352-177a49154924\",\"type\":\"table\"\
+        ,\"name\":\"SUPPLIER\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER\"\
+        ,\"description\":\"Supplier data as defined by TPC-H\",\"displayName\":\"\
+        SUPPLIER\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 109.0
+users: []
+query: "SELECT count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"\
+  S_ACCTBAL\" END) AS \"-998.220 to -487.653\", count(CASE WHEN (\"S_ACCTBAL\" >=\
+  \ ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"-487.653 to 22.914\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  22.914 to 533.481\", count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?)\
+  \ THEN \"S_ACCTBAL\" END) AS \"533.481 to 1.044K\", count(CASE WHEN (\"S_ACCTBAL\"\
+  \ >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"1.044K to 1.555K\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  1.555K to 2.065K\", count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN\
+  \ \"S_ACCTBAL\" END) AS \"2.065K to 2.576K\", count(CASE WHEN (\"S_ACCTBAL\" >=\
+  \ ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"2.576K to 3.086K\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  3.086K to 3.597K\", count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN\
+  \ \"S_ACCTBAL\" END) AS \"3.597K to 4.107K\", count(CASE WHEN (\"S_ACCTBAL\" >=\
+  \ ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"4.107K to 4.618K\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  4.618K to 5.129K\", count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN\
+  \ \"S_ACCTBAL\" END) AS \"5.129K to 5.639K\", count(CASE WHEN (\"S_ACCTBAL\" >=\
+  \ ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"5.639K to 6.150K\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  6.150K to 6.660K\", count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN\
+  \ \"S_ACCTBAL\" END) AS \"6.660K to 7.171K\", count(CASE WHEN (\"S_ACCTBAL\" >=\
+  \ ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"7.171K to 7.681K\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  7.681K to 8.192K\", count(CASE WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN\
+  \ \"S_ACCTBAL\" END) AS \"8.192K to 8.703K\", count(CASE WHEN (\"S_ACCTBAL\" >=\
+  \ ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"8.703K to 9.213K\", count(CASE\
+  \ WHEN (\"S_ACCTBAL\" >= ? AND \"S_ACCTBAL\" < ?) THEN \"S_ACCTBAL\" END) AS \"\
+  9.213K to 9.724K\", count(CASE WHEN (\"S_ACCTBAL\" >= ?) THEN \"S_ACCTBAL\" END)\
+  \ AS \"9.724K and up\" \nFROM \"TPCH_SF1\".\"SUPPLIER\"\n LIMIT ?"
+checksum: e18da69758b090956797279c3d86b203
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 97a1a769-0ed2-4e8f-b352-177a49154924
+    type: table
+    name: SUPPLIER
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.SUPPLIER
+    description: Supplier data as defined by TPC-H
+    displayName: SUPPLIER
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

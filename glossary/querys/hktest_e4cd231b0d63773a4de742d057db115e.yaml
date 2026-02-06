@@ -1,0 +1,30 @@
+name: e4cd231b0d63773a4de742d057db115e
+fullyQualifiedName: hktest.e4cd231b0d63773a4de742d057db115e
+owners: []
+duration: 118.0
+users: []
+query: "WITH d6def3b6c248e09592da506240613bd9_rnd AS \n(SELECT \"LINEITEM_1\".\"L_RECEIPTDATE\"\
+  \ AS \"L_RECEIPTDATE\" \nFROM \"TPCH_SF1\".\"LINEITEM\" AS \"LINEITEM_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nd6def3b6c248e09592da506240613bd9_sample AS \n(SELECT d6def3b6c248e09592da506240613bd9_rnd.\"\
+  L_RECEIPTDATE\" AS \"L_RECEIPTDATE\" \nFROM d6def3b6c248e09592da506240613bd9_rnd)\n\
+  \ SELECT ? AS anon_1, ? AS anon__1, ? AS anon__2 \nFROM d6def3b6c248e09592da506240613bd9_sample\n\
+  \ LIMIT ?"
+checksum: e4cd231b0d63773a4de742d057db115e
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b565859-50f2-4c96-b4f3-2abd5feeecb1
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

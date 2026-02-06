@@ -1,0 +1,41 @@
+name: e4640fc59809a30f1d4ccd6fc8c9c06d
+fullyQualifiedName: hktest.e4640fc59809a30f1d4ccd6fc8c9c06d
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0777e470-b01c-42a9-b275-67217059c629\",\"type\":\"table\"\
+        ,\"name\":\"MONITORS_RUNS\",\"fullyQualifiedName\":\"hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MONITORS_RUNS\"\
+        ,\"displayName\":\"MONITORS_RUNS\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 89.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT ? AS anon_1, ? AS anon__1, ? AS anon__2 \nFROM \"DBT_SAMPLE_ELEMENTARY\"\
+  .\"MONITORS_RUNS\"\n LIMIT ?"
+checksum: e4640fc59809a30f1d4ccd6fc8c9c06d
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 0777e470-b01c-42a9-b275-67217059c629
+    type: table
+    name: MONITORS_RUNS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.MONITORS_RUNS
+    displayName: MONITORS_RUNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

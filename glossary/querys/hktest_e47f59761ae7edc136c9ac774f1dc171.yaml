@@ -1,0 +1,36 @@
+name: e47f59761ae7edc136c9ac774f1dc171
+fullyQualifiedName: hktest.e47f59761ae7edc136c9ac774f1dc171
+owners: []
+duration: 78.0
+users: []
+query: "WITH c40eb667c7e828cfdcfb437c5d221bf6_rnd AS \n(SELECT \"ACCOUNT_1\".\"YOU_TUBE_CLICKS_YTD_C\"\
+  \ AS \"YOU_TUBE_CLICKS_YTD_C\" \nFROM \"PUBLIC\".\"ACCOUNT\" AS \"ACCOUNT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc40eb667c7e828cfdcfb437c5d221bf6_sample AS \n(SELECT c40eb667c7e828cfdcfb437c5d221bf6_rnd.\"\
+  YOU_TUBE_CLICKS_YTD_C\" AS \"YOU_TUBE_CLICKS_YTD_C\" \nFROM c40eb667c7e828cfdcfb437c5d221bf6_rnd)\n\
+  \ SELECT avg(\"YOU_TUBE_CLICKS_YTD_C\") AS mean, count(\"YOU_TUBE_CLICKS_YTD_C\"\
+  ) AS \"valuesCount\", count(DISTINCT \"YOU_TUBE_CLICKS_YTD_C\") AS \"distinctCount\"\
+  , MIN(\"YOU_TUBE_CLICKS_YTD_C\") AS min, MAX(\"YOU_TUBE_CLICKS_YTD_C\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"YOU_TUBE_CLICKS_YTD_C\" IS ?) THEN ? ELSE ? END), ?)\
+  \ AS \"nullCount\", STDDEV_POP(\"YOU_TUBE_CLICKS_YTD_C\") AS stddev, SUM(\"YOU_TUBE_CLICKS_YTD_C\"\
+  ) AS sum \nFROM c40eb667c7e828cfdcfb437c5d221bf6_sample\n LIMIT ?"
+checksum: e47f59761ae7edc136c9ac774f1dc171
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f8ab8061-1d41-4b83-987f-d8d5ffba7396
+    type: table
+    name: ACCOUNT
+    fullyQualifiedName: hktest.TEST_DB.PUBLIC.ACCOUNT
+    description: |-
+      new description for testing.
+      collate
+    displayName: ACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,32 @@
+name: e5da6cdad0a04a667c46b1b2eacda89a
+fullyQualifiedName: hktest.e5da6cdad0a04a667c46b1b2eacda89a
+owners: []
+duration: 76.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(CASE WHEN (LEN(\"COMMAND\") >= ?) THEN LEN(\"COMMAND\") END)\
+  \ AS \"3.000 and up\" \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_INVOCATIONS\"\n LIMIT\
+  \ ?"
+checksum: e5da6cdad0a04a667c46b1b2eacda89a
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 47e9fe31-979e-4772-b22a-3db9eb4183f4
+    type: table
+    name: DBT_INVOCATIONS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_INVOCATIONS
+    displayName: DBT_INVOCATIONS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

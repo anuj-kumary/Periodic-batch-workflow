@@ -1,0 +1,65 @@
+name: e46c537ff3103d352726d00252e579fb
+fullyQualifiedName: hktest.e46c537ff3103d352726d00252e579fb
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"0b565859-50f2-4c96-b4f3-2abd5feeecb1\",\"type\":\"table\"\
+        ,\"name\":\"LINEITEM\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM\"\
+        ,\"description\":\"Lineitem data as defined by TPC-H\",\"displayName\":\"\
+        LINEITEM\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 305.0
+users: []
+query: "SELECT count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END)\
+  \ AS \"0 to 3.333T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"\
+  L_TAX\" END) AS \"3.333T to 6.667T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\"\
+  \ < ?) THEN \"L_TAX\" END) AS \"6.667T to 10.000T\", count(CASE WHEN (\"L_TAX\"\
+  \ >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"10.000T to 13.333T\", count(CASE\
+  \ WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"13.333T to 16.667T\"\
+  , count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"16.667T\
+  \ to 20.000T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\"\
+  \ END) AS \"20.000T to 23.333T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\"\
+  \ < ?) THEN \"L_TAX\" END) AS \"23.333T to 26.667T\", count(CASE WHEN (\"L_TAX\"\
+  \ >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"26.667T to 30.000T\", count(CASE\
+  \ WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"30.000T to 33.333T\"\
+  , count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"33.333T\
+  \ to 36.667T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\"\
+  \ END) AS \"36.667T to 40.000T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\"\
+  \ < ?) THEN \"L_TAX\" END) AS \"40.000T to 43.333T\", count(CASE WHEN (\"L_TAX\"\
+  \ >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"43.333T to 46.667T\", count(CASE\
+  \ WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"46.667T to 50.000T\"\
+  , count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"50.000T\
+  \ to 53.333T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\"\
+  \ END) AS \"53.333T to 56.667T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\"\
+  \ < ?) THEN \"L_TAX\" END) AS \"56.667T to 60.000T\", count(CASE WHEN (\"L_TAX\"\
+  \ >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"60.000T to 63.333T\", count(CASE\
+  \ WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"63.333T to 66.667T\"\
+  , count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\" END) AS \"66.667T\
+  \ to 70.000T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\" < ?) THEN \"L_TAX\"\
+  \ END) AS \"70.000T to 73.333T\", count(CASE WHEN (\"L_TAX\" >= ? AND \"L_TAX\"\
+  \ < ?) THEN \"L_TAX\" END) AS \"73.333T to 76.667T\", count(CASE WHEN (\"L_TAX\"\
+  \ >= ?) THEN \"L_TAX\" END) AS \"76.667T and up\" \nFROM \"TPCH_SF1\".\"LINEITEM\"\
+  \n LIMIT ?"
+checksum: e46c537ff3103d352726d00252e579fb
+queryDate: 1747526400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0b565859-50f2-4c96-b4f3-2abd5feeecb1
+    type: table
+    name: LINEITEM
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.LINEITEM
+    description: Lineitem data as defined by TPC-H
+    displayName: LINEITEM
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

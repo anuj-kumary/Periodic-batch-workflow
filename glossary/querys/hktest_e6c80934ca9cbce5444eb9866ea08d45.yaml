@@ -1,0 +1,32 @@
+name: e6c80934ca9cbce5444eb9866ea08d45
+fullyQualifiedName: hktest.e6c80934ca9cbce5444eb9866ea08d45
+owners: []
+duration: 53.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"DATABASE_NAME\"\
+  ) AS count_1 \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"DBT_COLUMNS\" GROUP BY \"DATABASE_NAME\"\
+  \ \nHAVING count(\"DATABASE_NAME\") = ?) AS only_once\n LIMIT ?"
+checksum: e6c80934ca9cbce5444eb9866ea08d45
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 077ae58e-e7e4-47cf-9f42-01225cf95b21
+    type: table
+    name: DBT_COLUMNS
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.DBT_COLUMNS
+    displayName: DBT_COLUMNS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,37 @@
+name: e1cdbb88f2a5622704244255de5a7dee
+fullyQualifiedName: hktest.e1cdbb88f2a5622704244255de5a7dee
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"b2308968-5747-4a6d-b783-6780f10d7211\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.CUSTOMERS.JAFFLE_SHOP.ORDERS\"\
+        ,\"displayName\":\"ORDERS\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+owners: []
+duration: 494.0
+users: []
+query: "SELECT \"JAFFLE_SHOP\".\"ORDERS\".\"ORDER_ID\" AS \"JAFFLE_SHOP_ORDERS_ORDER_ID\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"CUSTOMER_ID\" AS \"JAFFLE_SHOP_ORDERS_CUSTOMER_ID\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"ORDER_DATE\" AS \"JAFFLE_SHOP_ORDERS_ORDER_DATE\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"STATUS\" AS \"JAFFLE_SHOP_ORDERS_STATUS\", \"JAFFLE_SHOP\"\
+  .\"ORDERS\".\"CREDIT_CARD_AMOUNT\" AS \"JAFFLE_SHOP_ORDERS_CREDIT_CARD_AMOUNT\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"COUPON_AMOUNT\" AS \"JAFFLE_SHOP_ORDERS_COUPON_AMOUNT\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"BANK_TRANSFER_AMOUNT\" AS \"JAFFLE_SHOP_ORDERS_BANK_TRANSFER_AMOUNT\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"GIFT_CARD_AMOUNT\" AS \"JAFFLE_SHOP_ORDERS_GIFT_CARD_AMOUNT\"\
+  , \"JAFFLE_SHOP\".\"ORDERS\".\"AMOUNT\" AS \"JAFFLE_SHOP_ORDERS_AMOUNT\" \nFROM\
+  \ \"JAFFLE_SHOP\".\"ORDERS\"\n LIMIT ?"
+checksum: e1cdbb88f2a5622704244255de5a7dee
+queryDate: 1751328000000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn: []
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

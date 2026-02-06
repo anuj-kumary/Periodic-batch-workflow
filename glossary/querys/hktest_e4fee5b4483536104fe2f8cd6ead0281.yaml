@@ -1,0 +1,42 @@
+name: e4fee5b4483536104fe2f8cd6ead0281
+fullyQualifiedName: hktest.e4fee5b4483536104fe2f8cd6ead0281
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"f541ed9b-43c8-4fde-9898-ccab88cd5324\",\"type\":\"table\"\
+        ,\"name\":\"ORDERS\",\"fullyQualifiedName\":\"hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS\"\
+        ,\"description\":\"Orders data as defined by TPC-H\",\"displayName\":\"ORDERS\"\
+        ,\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 100.0
+users: []
+query: "WITH ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd AS \n(SELECT \"ORDERS_1\".\"O_SHIPPRIORITY\"\
+  \ AS \"O_SHIPPRIORITY\" \nFROM \"TPCH_SF1\".\"ORDERS\" AS \"ORDERS_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nab2fad6a9f7c58c2c0dabdb6c89213f1_sample AS \n(SELECT ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd.\"\
+  O_SHIPPRIORITY\" AS \"O_SHIPPRIORITY\" \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_rnd)\n\
+  \ SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"O_SHIPPRIORITY\") AS\
+  \ count_1 \nFROM ab2fad6a9f7c58c2c0dabdb6c89213f1_sample GROUP BY \"O_SHIPPRIORITY\"\
+  \ \nHAVING count(\"O_SHIPPRIORITY\") = ?) AS only_once\n LIMIT ?"
+checksum: e4fee5b4483536104fe2f8cd6ead0281
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f541ed9b-43c8-4fde-9898-ccab88cd5324
+    type: table
+    name: ORDERS
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS
+    description: Orders data as defined by TPC-H
+    displayName: ORDERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

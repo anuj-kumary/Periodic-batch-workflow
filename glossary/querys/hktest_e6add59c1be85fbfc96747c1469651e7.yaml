@@ -1,0 +1,35 @@
+name: e6add59c1be85fbfc96747c1469651e7
+fullyQualifiedName: hktest.e6add59c1be85fbfc96747c1469651e7
+owners: []
+duration: 93.0
+users:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+query: "SELECT avg(LEN(\"OWNERS\")) AS mean, count(\"OWNERS\") AS \"valuesCount\"\
+  , count(DISTINCT \"OWNERS\") AS \"distinctCount\", MIN(LEN(\"OWNERS\")) AS min,\
+  \ MAX(LEN(\"OWNERS\")) AS max, coalesce(SUM(CASE WHEN (\"OWNERS\" IS ?) THEN ? ELSE\
+  \ ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"OWNERS\")) AS stddev, SUM(LEN(\"\
+  OWNERS\")) AS sum \nFROM \"DBT_SAMPLE_ELEMENTARY\".\"ALERTS_SCHEMA_CHANGES\"\n LIMIT\
+  \ ?"
+checksum: e6add59c1be85fbfc96747c1469651e7
+queryDate: 1748649600000
+usedBy:
+  - HIMANSHU
+tags: []
+queryUsedIn:
+  - id: 5cb8e589-4ee6-4f02-9217-98ba637ba168
+    type: table
+    name: ALERTS_SCHEMA_CHANGES
+    fullyQualifiedName: hktest.DBT_DB.DBT_SAMPLE_ELEMENTARY.ALERTS_SCHEMA_CHANGES
+    displayName: ALERTS_SCHEMA_CHANGES
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

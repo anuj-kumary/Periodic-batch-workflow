@@ -1,0 +1,34 @@
+name: e168398228f72227352dcb5ce13c2a4b
+fullyQualifiedName: hktest.e168398228f72227352dcb5ce13c2a4b
+owners: []
+duration: 150.0
+users: []
+query: "SELECT count(CASE WHEN (\"TOTALDEBITS\" >= ? AND \"TOTALDEBITS\" < ?) THEN\
+  \ \"TOTALDEBITS\" END) AS \"100.000 to 683.600\", count(CASE WHEN (\"TOTALDEBITS\"\
+  \ >= ? AND \"TOTALDEBITS\" < ?) THEN \"TOTALDEBITS\" END) AS \"683.600 to 1.267K\"\
+  , count(CASE WHEN (\"TOTALDEBITS\" >= ? AND \"TOTALDEBITS\" < ?) THEN \"TOTALDEBITS\"\
+  \ END) AS \"1.267K to 1.851K\", count(CASE WHEN (\"TOTALDEBITS\" >= ? AND \"TOTALDEBITS\"\
+  \ < ?) THEN \"TOTALDEBITS\" END) AS \"1.851K to 2.434K\", count(CASE WHEN (\"TOTALDEBITS\"\
+  \ >= ? AND \"TOTALDEBITS\" < ?) THEN \"TOTALDEBITS\" END) AS \"2.434K to 3.018K\"\
+  , count(CASE WHEN (\"TOTALDEBITS\" >= ? AND \"TOTALDEBITS\" < ?) THEN \"TOTALDEBITS\"\
+  \ END) AS \"3.018K to 3.602K\", count(CASE WHEN (\"TOTALDEBITS\" >= ?) THEN \"TOTALDEBITS\"\
+  \ END) AS \"3.602K and up\" \nFROM \"MSSQLBANKING_ACCOUNT\".\"ACCOUNTSTATEMENT\"\
+  \n LIMIT ?"
+checksum: e168398228f72227352dcb5ce13c2a4b
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 081b5958-06b1-4866-818f-ed255e483244
+    type: table
+    name: ACCOUNTSTATEMENT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.ACCOUNTSTATEMENT
+    displayName: ACCOUNTSTATEMENT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

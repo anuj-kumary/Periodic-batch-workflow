@@ -1,0 +1,37 @@
+name: dffa6bdeba23e5da118e5865580ba64d
+fullyQualifiedName: hktest.dffa6bdeba23e5da118e5865580ba64d
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"47446995-13cc-44ba-aa77-73e9475e23c0\",\"type\":\"table\"\
+        ,\"name\":\"ADDRESS\",\"fullyQualifiedName\":\"hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.ADDRESS\"\
+        ,\"displayName\":\"ADDRESS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 57.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"ADDRESSID\" ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"ADDRESSID\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"ADDRESSID\" ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"MSSQLBANKING_CUSTOMER\".\"ADDRESS\"\n LIMIT ?"
+checksum: dffa6bdeba23e5da118e5865580ba64d
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 47446995-13cc-44ba-aa77-73e9475e23c0
+    type: table
+    name: ADDRESS
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_CUSTOMER.ADDRESS
+    displayName: ADDRESS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

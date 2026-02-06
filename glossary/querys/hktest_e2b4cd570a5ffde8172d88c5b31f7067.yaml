@@ -1,0 +1,33 @@
+name: e2b4cd570a5ffde8172d88c5b31f7067
+fullyQualifiedName: hktest.e2b4cd570a5ffde8172d88c5b31f7067
+owners: []
+duration: 105.0
+users: []
+query: "WITH f2f2d2f01de19150bb3ebe920b2950a7_rnd AS \n(SELECT \"INCOME_BAND_1\".\"\
+  IB_INCOME_BAND_SK\" AS \"IB_INCOME_BAND_SK\" \nFROM \"TPCDS_SF100TCL\".\"INCOME_BAND\"\
+  \ AS \"INCOME_BAND_1\" TABLESAMPLE ROW(? ROWS)), \nf2f2d2f01de19150bb3ebe920b2950a7_sample\
+  \ AS \n(SELECT f2f2d2f01de19150bb3ebe920b2950a7_rnd.\"IB_INCOME_BAND_SK\" AS \"\
+  IB_INCOME_BAND_SK\" \nFROM f2f2d2f01de19150bb3ebe920b2950a7_rnd)\n SELECT count(CASE\
+  \ WHEN (\"IB_INCOME_BAND_SK\" >= ? AND \"IB_INCOME_BAND_SK\" < ?) THEN \"IB_INCOME_BAND_SK\"\
+  \ END) AS \"1.000 to 8.000\", count(CASE WHEN (\"IB_INCOME_BAND_SK\" >= ? AND \"\
+  IB_INCOME_BAND_SK\" < ?) THEN \"IB_INCOME_BAND_SK\" END) AS \"8.000 to 14.999\"\
+  , count(CASE WHEN (\"IB_INCOME_BAND_SK\" >= ?) THEN \"IB_INCOME_BAND_SK\" END) AS\
+  \ \"14.999 and up\" \nFROM f2f2d2f01de19150bb3ebe920b2950a7_sample\n LIMIT ?"
+checksum: e2b4cd570a5ffde8172d88c5b31f7067
+queryDate: 1748649600000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: e8df8e3b-ff03-40bf-bb10-52fe5ce9b753
+    type: table
+    name: INCOME_BAND
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.INCOME_BAND
+    displayName: INCOME_BAND
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
