@@ -1,0 +1,50 @@
+name: BankNumber
+description: A bank account number.
+fullyQualifiedName: General.BankNumber
+synonyms: []
+glossary:
+  id: 6839d4ed-9554-4b05-8203-eb173c67b644
+  type: glossary
+  name: General
+  fullyQualifiedName: General
+  description: <p>Glossary terms that describe general conceptual terms. <strong>Note
+    that these conceptual terms are used for automatically labeling the data. Testing22</strong></p>
+  displayName: General
+  deleted: false
+children:
+  - id: 19e50619-09a1-4f65-9421-6c2cf50ffebe
+    type: glossaryTerm
+    name: IBANCode
+    fullyQualifiedName: General.BankNumber.IBANCode
+    description: The International Bank Account Number (IBAN) is an internationally
+      agreed system of identifying bank accounts across national borders to facilitate
+      the communication and processing of cross border transactions with a reduced
+      risk of transcription errors.
+    displayName: IBANCode
+    deleted: false
+  - id: 80e7b32a-d4c6-4479-b4bc-061a0a557961
+    type: glossaryTerm
+    name: USBankNumber
+    fullyQualifiedName: General.BankNumber.USBankNumber
+    description: A US bank account number is between 8 to 17 digits.
+    displayName: USBankNumber
+    deleted: false
+relatedTerms: []
+references: []
+reviewers:
+  - id: 50bb97a5-cf0c-4273-930e-b3e802b52ee1
+    type: user
+    name: aaron.singh2
+    fullyQualifiedName: '"aaron.singh2"'
+    displayName: Aaron Singh
+    deleted: false
+    inherited: true
+owners: []
+usageCount: 1
+tags: []
+entityStatus: Approved
+provider: user
+mutuallyExclusive: false
+domains: []
+dataProducts: []
+childrenCount: 2
