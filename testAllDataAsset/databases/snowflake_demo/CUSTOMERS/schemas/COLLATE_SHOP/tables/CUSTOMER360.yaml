@@ -1,0 +1,162 @@
+name: CUSTOMER360
+fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360
+tableType: View
+columns:
+  - name: CUSTOMER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.CUSTOMER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.FIRST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.LAST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TOTAL_ORDERS
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 18
+    scale: 0
+    dataTypeDisplay: "number(18,0)"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.TOTAL_ORDERS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LIFETIME_VALUE
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 22
+    scale: 2
+    dataTypeDisplay: "number(22,2)"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.LIFETIME_VALUE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_ORDER_DATE
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.LAST_ORDER_DATE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMER_TIER
+    dataType: VARCHAR
+    dataLength: 12
+    dataTypeDisplay: text(12)
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.CUSTOMER_TIER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ECO_PRODUCTS_PURCHASED
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 13
+    scale: 0
+    dataTypeDisplay: "number(13,0)"
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP.CUSTOMER360.ECO_PRODUCTS_PURCHASED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: d42b71c9-e2ff-4c42-8750-cd64a21ea350
+  type: databaseSchema
+  name: COLLATE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.COLLATE_SHOP
+  description: Collate e-commerce
+  displayName: COLLATE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: |-
+  CREATE OR REPLACE VIEW COLLATE_SHOP.CUSTOMER360 AS
+  SELECT
+      c.CUSTOMER_ID,
+      c.FIRST_NAME,
+      c.LAST_NAME,
+      COUNT(DISTINCT o.ORDER_ID) AS TOTAL_ORDERS,
+      SUM(oi.TOTAL_AMOUNT) AS LIFETIME_VALUE,
+      MAX(o.ORDER_DATE) AS LAST_ORDER_DATE,
+      CASE
+          WHEN SUM(oi.TOTAL_AMOUNT) > 200 THEN 'High Value'
+          WHEN SUM(oi.TOTAL_AMOUNT) BETWEEN 50 AND 200 THEN 'Medium Value'
+          ELSE 'Low Value'
+      END AS CUSTOMER_TIER,
+      COUNT_IF(p.ECO_FRIENDLY) AS ECO_PRODUCTS_PURCHASED
+  FROM COLLATE_SHOP.CUSTOMERS c
+  LEFT JOIN COLLATE_SHOP.ORDERS o
+      ON c.CUSTOMER_ID = o.CUSTOMER_ID
+  LEFT JOIN COLLATE_SHOP.ORDER_ITEMS oi
+      ON o.ORDER_ID = oi.ORDER_ID
+  LEFT JOIN COLLATE_SHOP.PRODUCTS p
+      ON oi.PRODUCT_ID = p.PRODUCT_ID
+  GROUP BY c.CUSTOMER_ID, c.FIRST_NAME, c.LAST_NAME;
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/fmfahqk/gi58232/#/data/databases/CUSTOMERS/schemas/COLLATE_SHOP/view/CUSTOMER360
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+dataProducts: []
+sourceHash: 40829002f0e583c6d18fa2dc6d91e246
+processedLineage: false
+entityStatus: Unprocessed

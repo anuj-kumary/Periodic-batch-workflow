@@ -1,0 +1,134 @@
+name: REPLICATION_GROUP_REFRESH_HISTORY
+fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY
+tableType: View
+columns:
+  - name: REPLICATION_GROUP_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.REPLICATION_GROUP_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REPLICATION_GROUP_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.REPLICATION_GROUP_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PHASE_NAME
+    dataType: VARCHAR
+    dataLength: 9
+    dataTypeDisplay: text(9)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.PHASE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: START_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.START_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: END_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.END_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: JOB_UUID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.JOB_UUID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TOTAL_BYTES
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: object
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.TOTAL_BYTES
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: OBJECT_COUNT
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: object
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.OBJECT_COUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PRIMARY_SNAPSHOT_TIMESTAMP
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.PRIMARY_SNAPSHOT_TIMESTAMP
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ERROR
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: object
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.REPLICATION_GROUP_REFRESH_HISTORY.ERROR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 00ce1da4-1a78-4b94-a791-32166446ad0f
+  type: databaseSchema
+  name: ACCOUNT_USAGE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE
+  displayName: ACCOUNT_USAGE
+  deleted: false
+database:
+  id: dee8c08b-03e8-4569-a337-eab4df5d24ac
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 4af6c116-941c-445f-8c08-713dd72e2873
+  type: databaseService
+  name: snowflake_all
+  fullyQualifiedName: snowflake_all
+  description: ""
+  displayName: snowflake_all
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/eggtndd/jd74081/#/data/databases/SNOWFLAKE/schemas/ACCOUNT_USAGE/view/REPLICATION_GROUP_REFRESH_HISTORY
+domains: []
+dataProducts: []
+sourceHash: fb3b3e3bb381c07a021cbed208638b08
+processedLineage: false
+entityStatus: Approved

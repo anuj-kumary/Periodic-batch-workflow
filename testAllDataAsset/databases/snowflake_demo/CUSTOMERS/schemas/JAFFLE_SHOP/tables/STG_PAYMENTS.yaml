@@ -1,0 +1,165 @@
+name: STG_PAYMENTS
+fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.STG_PAYMENTS
+description: "This table stores payment details for transactions, including the amount,\
+  \ associated order, unique payment identifiers, and payment methods, enabling businesses\
+  \ to track and analyze their sales and payment processing effectively."
+tableType: View
+columns:
+  - name: PAYMENT_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The PAYMENT_ID column serves as a unique identifier for each payment\
+      \ transaction, allowing for tracking and management of individual payments."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.STG_PAYMENTS.PAYMENT_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    description: "The ORDER_ID column uniquely identifies the order associated with\
+      \ the payment, linking it to the corresponding transaction in the orders table."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.STG_PAYMENTS.ORDER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PAYMENT_METHOD
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: "The PAYMENT_METHOD column indicates the method used for the payment,\
+      \ such as credit card, debit card, or other payment options."
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.STG_PAYMENTS.PAYMENT_METHOD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: AMOUNT
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 6
+    dataTypeDisplay: "number(38,6)"
+    description: The AMOUNT column represents the total monetary value of the payment
+      made by the customer for a specific order.
+    fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP.STG_PAYMENTS.AMOUNT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: 1d17752e-dc86-4185-9173-a32a7e94a159
+    type: team
+    name: Accounting
+    fullyQualifiedName: Accounting
+    description: ""
+    displayName: Accounting
+    deleted: false
+    inherited: true
+databaseSchema:
+  id: e0027524-f16c-4744-9819-382e8783f50c
+  type: databaseSchema
+  name: JAFFLE_SHOP
+  fullyQualifiedName: snowflake_demo.CUSTOMERS.JAFFLE_SHOP
+  displayName: JAFFLE_SHOP
+  deleted: false
+database:
+  id: 875eb38e-227c-40fa-b4cb-659db29f7090
+  type: database
+  name: CUSTOMERS
+  fullyQualifiedName: snowflake_demo.CUSTOMERS
+  description: Updated database description
+  displayName: CUSTOMERS
+  deleted: false
+service:
+  id: 03949cda-9a45-47d2-bd35-5abd07bcf91e
+  type: databaseService
+  name: snowflake_demo
+  fullyQualifiedName: snowflake_demo
+  description: Show me during the community meeting!
+  displayName: snowflake_demo
+  deleted: false
+serviceType: Snowflake
+schemaDefinition: "create or replace view STG_PAYMENTS(\n\tPAYMENT_ID,\n\tORDER_ID,\n\
+  \tPAYMENT_METHOD,\n\tAMOUNT\n) as (\n    with source as (\n    select * from CUSTOMERS.jaffle_shop.raw_payments\n\
+  \n),\n\nrenamed as (\n\n    select\n        id as payment_id,\n        order_id,\n\
+  \        payment_method,\n\n        -- `amount` is currently stored in cents, so\
+  \ we convert it to dollars\n        amount / 100 as amount\n\n    from source\n\n\
+  )\n\nselect * from renamed\n  );"
+tags:
+  - tagFQN: Tier.Tier3
+    name: Tier3
+    description: |-
+      **Department/group level datasets that are typically non-business and general internal system**
+
+      - Used in product metrics, and dashboards to drive product decisions
+
+      - Used to track operational metrics of internal systems
+
+      - Source used to derive other critical Tier-3 datasets
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: columns.PAYMENT_ID.description
+      newValue: "The PAYMENT_ID column serves as a unique identifier for each payment\
+        \ transaction, allowing for tracking and management of individual payments."
+    - name: columns.ORDER_ID.description
+      newValue: "The ORDER_ID column uniquely identifies the order associated with\
+        \ the payment, linking it to the corresponding transaction in the orders table."
+    - name: columns.PAYMENT_METHOD.description
+      newValue: "The PAYMENT_METHOD column indicates the method used for the payment,\
+        \ such as credit card, debit card, or other payment options."
+    - name: columns.AMOUNT.description
+      newValue: The AMOUNT column represents the total monetary value of the payment
+        made by the customer for a specific order.
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.4
+  changeSummary:
+    description:
+      changedBy: ingestion-bot
+      changedAt: 1744179082236
+    columns.AMOUNT.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179082472
+    columns.ORDER_ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179082472
+    columns.PAYMENT_ID.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179082472
+    columns.PAYMENT_METHOD.description:
+      changedBy: ingestion-bot
+      changedAt: 1744179082472
+sourceUrl: https://app.snowflake.com/gwtbvpm/pg25341/#/data/databases/CUSTOMERS/schemas/JAFFLE_SHOP/view/STG_PAYMENTS
+domains:
+  - id: 9b777e79-3556-4eff-b9e9-bb71037b8dd0
+    type: domain
+    name: TestHarsha2
+    fullyQualifiedName: TestHarsha.TestHarsha2
+    description: <p>TestHarsha</p>
+    displayName: TestHarsha2
+    inherited: true
+dataProducts: []
+sourceHash: 21d449080133002e2e9f3135f7381772
+processedLineage: true
+entityStatus: Approved

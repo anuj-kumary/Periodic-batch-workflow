@@ -1,0 +1,305 @@
+name: USERS
+fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS
+tableType: View
+columns:
+  - name: USER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.USER_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.CREATED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DELETED_ON
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DELETED_ON
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LOGIN_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.LOGIN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DISPLAY_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DISPLAY_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: FIRST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.FIRST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.LAST_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.EMAIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MUST_CHANGE_PASSWORD
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.MUST_CHANGE_PASSWORD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: HAS_PASSWORD
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.HAS_PASSWORD
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DISABLED
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: variant
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DISABLED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SNOWFLAKE_LOCK
+    dataType: JSON
+    dataLength: 1
+    dataTypeDisplay: variant
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.SNOWFLAKE_LOCK
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFAULT_WAREHOUSE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DEFAULT_WAREHOUSE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFAULT_NAMESPACE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DEFAULT_NAMESPACE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFAULT_ROLE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DEFAULT_ROLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXT_AUTHN_DUO
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.EXT_AUTHN_DUO
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXT_AUTHN_UID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.EXT_AUTHN_UID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: HAS_MFA
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.HAS_MFA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BYPASS_MFA_UNTIL
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.BYPASS_MFA_UNTIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LAST_SUCCESS_LOGIN
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.LAST_SUCCESS_LOGIN
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EXPIRES_AT
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.EXPIRES_AT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: LOCKED_UNTIL_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.LOCKED_UNTIL_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: HAS_RSA_PUBLIC_KEY
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.HAS_RSA_PUBLIC_KEY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PASSWORD_LAST_SET_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.PASSWORD_LAST_SET_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.OWNER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFAULT_SECONDARY_ROLE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.DEFAULT_SECONDARY_ROLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.USERS.TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 00ce1da4-1a78-4b94-a791-32166446ad0f
+  type: databaseSchema
+  name: ACCOUNT_USAGE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE
+  displayName: ACCOUNT_USAGE
+  deleted: false
+database:
+  id: dee8c08b-03e8-4569-a337-eab4df5d24ac
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 4af6c116-941c-445f-8c08-713dd72e2873
+  type: databaseService
+  name: snowflake_all
+  fullyQualifiedName: snowflake_all
+  description: ""
+  displayName: snowflake_all
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/eggtndd/jd74081/#/data/databases/SNOWFLAKE/schemas/ACCOUNT_USAGE/view/USERS
+domains: []
+dataProducts: []
+sourceHash: a424d8dbab111a57ae2234ee4a1cda33
+processedLineage: false
+entityStatus: Approved

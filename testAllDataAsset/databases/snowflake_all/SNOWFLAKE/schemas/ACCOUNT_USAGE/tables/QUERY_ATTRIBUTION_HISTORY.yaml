@@ -1,0 +1,161 @@
+name: QUERY_ATTRIBUTION_HISTORY
+fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY
+tableType: View
+columns:
+  - name: QUERY_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.QUERY_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PARENT_QUERY_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.PARENT_QUERY_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ROOT_QUERY_ID
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.ROOT_QUERY_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: WAREHOUSE_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.WAREHOUSE_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: WAREHOUSE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.WAREHOUSE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: QUERY_HASH
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.QUERY_HASH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: QUERY_PARAMETERIZED_HASH
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.QUERY_PARAMETERIZED_HASH
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: QUERY_TAG
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.QUERY_TAG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USER_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.USER_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: START_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.START_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: END_TIME
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.END_TIME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREDITS_ATTRIBUTED_COMPUTE
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.CREDITS_ATTRIBUTED_COMPUTE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREDITS_USED_QUERY_ACCELERATION
+    dataType: FLOAT
+    dataLength: 1
+    dataTypeDisplay: float
+    fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE.QUERY_ATTRIBUTION_HISTORY.CREDITS_USED_QUERY_ACCELERATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 00ce1da4-1a78-4b94-a791-32166446ad0f
+  type: databaseSchema
+  name: ACCOUNT_USAGE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE.ACCOUNT_USAGE
+  displayName: ACCOUNT_USAGE
+  deleted: false
+database:
+  id: dee8c08b-03e8-4569-a337-eab4df5d24ac
+  type: database
+  name: SNOWFLAKE
+  fullyQualifiedName: snowflake_all.SNOWFLAKE
+  displayName: SNOWFLAKE
+  deleted: false
+service:
+  id: 4af6c116-941c-445f-8c08-713dd72e2873
+  type: databaseService
+  name: snowflake_all
+  fullyQualifiedName: snowflake_all
+  description: ""
+  displayName: snowflake_all
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/eggtndd/jd74081/#/data/databases/SNOWFLAKE/schemas/ACCOUNT_USAGE/view/QUERY_ATTRIBUTION_HISTORY
+domains: []
+dataProducts: []
+sourceHash: 25ce58b2ccd5de316c106fa4dab0f8c3
+processedLineage: false
+entityStatus: Approved
