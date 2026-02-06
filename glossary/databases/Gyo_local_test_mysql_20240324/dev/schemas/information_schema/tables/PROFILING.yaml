@@ -1,0 +1,209 @@
+name: PROFILING
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING
+tableType: View
+columns:
+  - name: QUERY_ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.QUERY_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SEQ
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.SEQ
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.STATE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DURATION
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "decimal(9,6)"
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.DURATION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CPU_USER
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "decimal(9,6)"
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.CPU_USER
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CPU_SYSTEM
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 9
+    scale: 6
+    dataTypeDisplay: "decimal(9,6)"
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.CPU_SYSTEM
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTEXT_VOLUNTARY
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.CONTEXT_VOLUNTARY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTEXT_INVOLUNTARY
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.CONTEXT_INVOLUNTARY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BLOCK_OPS_IN
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.BLOCK_OPS_IN
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: BLOCK_OPS_OUT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.BLOCK_OPS_OUT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MESSAGES_SENT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.MESSAGES_SENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: MESSAGES_RECEIVED
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.MESSAGES_RECEIVED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PAGE_FAULTS_MAJOR
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.PAGE_FAULTS_MAJOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PAGE_FAULTS_MINOR
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.PAGE_FAULTS_MINOR
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SWAPS
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.SWAPS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SOURCE_FUNCTION
+    dataType: VARCHAR
+    dataLength: 30
+    dataTypeDisplay: varchar(30)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.SOURCE_FUNCTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SOURCE_FILE
+    dataType: VARCHAR
+    dataLength: 20
+    dataTypeDisplay: varchar(20)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.SOURCE_FILE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SOURCE_LINE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.PROFILING.SOURCE_LINE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d46e3affe70fcf3d9087839cd10b7200
+processedLineage: false
+entityStatus: Approved

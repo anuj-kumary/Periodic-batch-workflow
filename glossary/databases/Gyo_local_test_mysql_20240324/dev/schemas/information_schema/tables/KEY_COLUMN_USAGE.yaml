@@ -1,0 +1,149 @@
+name: KEY_COLUMN_USAGE
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE
+tableType: View
+columns:
+  - name: CONSTRAINT_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.CONSTRAINT_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.CONSTRAINT_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONSTRAINT_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.CONSTRAINT_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_CATALOG
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.TABLE_CATALOG
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COLUMN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.COLUMN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORDINAL_POSITION
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.ORDINAL_POSITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: POSITION_IN_UNIQUE_CONSTRAINT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.POSITION_IN_UNIQUE_CONSTRAINT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_TABLE_SCHEMA
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.REFERENCED_TABLE_SCHEMA
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_TABLE_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.REFERENCED_TABLE_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: REFERENCED_COLUMN_NAME
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.KEY_COLUMN_USAGE.REFERENCED_COLUMN_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: df05960771b66b8b34c9e593e4e2abea
+processedLineage: false
+entityStatus: Approved

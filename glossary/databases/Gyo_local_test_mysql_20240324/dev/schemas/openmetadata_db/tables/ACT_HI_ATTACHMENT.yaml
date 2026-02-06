@@ -1,0 +1,140 @@
+name: ACT_HI_ATTACHMENT
+fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT
+tableType: Regular
+columns:
+  - name: ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.ID_
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: REV_
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.REV_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: USER_ID_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.USER_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: NAME_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.NAME_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DESCRIPTION_
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar(4000)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.DESCRIPTION_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TYPE_
+    dataType: VARCHAR
+    dataLength: 255
+    dataTypeDisplay: varchar(255)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.TYPE_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TASK_ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.TASK_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: PROC_INST_ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.PROC_INST_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: URL_
+    dataType: VARCHAR
+    dataLength: 4000
+    dataTypeDisplay: varchar(4000)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.URL_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTENT_ID_
+    dataType: VARCHAR
+    dataLength: 64
+    dataTypeDisplay: varchar(64)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.CONTENT_ID_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TIME_
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db.ACT_HI_ATTACHMENT.TIME_
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 46a47ac8-ecec-4832-a500-68963b6e3601
+  type: databaseSchema
+  name: openmetadata_db
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.openmetadata_db
+  displayName: openmetadata_db
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 28f1a33e1e228f8fa486f618d54fc98a
+processedLineage: false
+entityStatus: Approved

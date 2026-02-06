@@ -1,0 +1,95 @@
+name: INNODB_SESSION_TEMP_TABLESPACES
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES
+tableType: View
+columns:
+  - name: ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES.ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SPACE
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES.SPACE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PATH
+    dataType: VARCHAR
+    dataLength: 4001
+    dataTypeDisplay: varchar(4001)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES.PATH
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES.SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATE
+    dataType: VARCHAR
+    dataLength: 192
+    dataTypeDisplay: varchar(192)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES.STATE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: PURPOSE
+    dataType: VARCHAR
+    dataLength: 192
+    dataTypeDisplay: varchar(192)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_SESSION_TEMP_TABLESPACES.PURPOSE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 1a1619d414e2910f77995ce2b84e1ff2
+processedLineage: false
+entityStatus: Approved

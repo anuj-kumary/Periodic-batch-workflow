@@ -1,0 +1,95 @@
+name: INNODB_FT_INDEX_TABLE
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE
+tableType: View
+columns:
+  - name: WORD
+    dataType: VARCHAR
+    dataLength: 337
+    dataTypeDisplay: varchar(337)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE.WORD
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: FIRST_DOC_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE.FIRST_DOC_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: LAST_DOC_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE.LAST_DOC_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DOC_COUNT
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE.DOC_COUNT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DOC_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE.DOC_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: POSITION
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_FT_INDEX_TABLE.POSITION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7a6facc1964fb78e1ae0926980cd4762
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,95 @@
+name: ST_SPATIAL_REFERENCE_SYSTEMS
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS
+tableType: View
+columns:
+  - name: SRS_NAME
+    dataType: VARCHAR
+    dataLength: 80
+    dataTypeDisplay: varchar(80)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS.SRS_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: SRS_ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS.SRS_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORGANIZATION
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: varchar(256)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS.ORGANIZATION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: ORGANIZATION_COORDSYS_ID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS.ORGANIZATION_COORDSYS_ID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DEFINITION
+    dataType: VARCHAR
+    dataLength: 4096
+    dataTypeDisplay: varchar(4096)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS.DEFINITION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: DESCRIPTION
+    dataType: VARCHAR
+    dataLength: 2048
+    dataTypeDisplay: varchar(2048)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.ST_SPATIAL_REFERENCE_SYSTEMS.DESCRIPTION
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 7667a2d3cf0846029aef4b3a1c1cd421
+processedLineage: false
+entityStatus: Approved

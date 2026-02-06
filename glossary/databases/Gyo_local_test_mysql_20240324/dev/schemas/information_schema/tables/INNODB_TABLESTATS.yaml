@@ -1,0 +1,122 @@
+name: INNODB_TABLESTATS
+fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS
+tableType: View
+columns:
+  - name: TABLE_ID
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.TABLE_ID
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: STATS_INITIALIZED
+    dataType: VARCHAR
+    dataLength: 193
+    dataTypeDisplay: varchar(193)
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.STATS_INITIALIZED
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: NUM_ROWS
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.NUM_ROWS
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: CLUST_INDEX_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.CLUST_INDEX_SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OTHER_INDEX_SIZE
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.OTHER_INDEX_SIZE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: MODIFIED_COUNTER
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.MODIFIED_COUNTER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: AUTOINC
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.AUTOINC
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: REF_COUNT
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema.INNODB_TABLESTATS.REF_COUNT
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b489d438-84fc-4a8e-bd10-306565d429b2
+  type: databaseSchema
+  name: information_schema
+  fullyQualifiedName: Gyo local test mysql 20240324.dev.information_schema
+  displayName: information_schema
+  deleted: false
+database:
+  id: 10d003d9-752e-4fd1-b689-f672d928d570
+  type: database
+  name: dev
+  fullyQualifiedName: Gyo local test mysql 20240324.dev
+  displayName: dev
+  deleted: false
+service:
+  id: dd58523e-5854-4abb-a406-2ebc62218821
+  type: databaseService
+  name: Gyo local test mysql 20240324
+  fullyQualifiedName: Gyo local test mysql 20240324
+  description: ""
+  displayName: Gyo local test mysql 20240324
+  deleted: false
+serviceType: Mysql
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f181d123f14dcf272b580caeab547c20
+processedLineage: false
+entityStatus: Approved
