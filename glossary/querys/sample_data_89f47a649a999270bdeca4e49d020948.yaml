@@ -1,0 +1,40 @@
+name: 89f47a649a999270bdeca4e49d020948
+fullyQualifiedName: sample_data.89f47a649a999270bdeca4e49d020948
+owners: []
+users: []
+query: test query
+checksum: 89f47a649a999270bdeca4e49d020948
+queryDate: 1750234252002
+usedBy: []
+tags: []
+queryUsedIn:
+  - id: a11898ae-fef4-4805-8e67-8e4f736c5990
+    type: table
+    name: dim_address_clean
+    fullyQualifiedName: sample_data.ecommerce_db.shopify.dim_address_clean
+    description: "<p>Query the database's metadata (like&nbsp;INFORMATION_SCHEMA.TABLES&nbsp;or\
+      \ system tables) to find the most recently created table whose name or schema\
+      \ indicates it contains customer infoOnce you have the table name, use a standard&nbsp;SELECT&nbsp;statement\
+      \ to fetch the data1.</p><p></p>"
+    displayName: dim_address_clean
+    deleted: false
+  - id: 555cc79f-50fd-4cf4-a903-da52f101dcc1
+    type: table
+    name: dim_customer
+    fullyQualifiedName: sample_data.ecommerce_db.shopify.dim_customer
+    description: "The dimension table contains data about your customers. The customers\
+      \ table contains one row per customer. It includes historical metrics (such\
+      \ as the total amount that each customer has spent in your store) as well as\
+      \ forward-looking metrics (such as the predicted number of days between future\
+      \ orders and the expected order value in the next 30 days). This table also\
+      \ includes columns that segment customers into various categories (such as new,\
+      \ returning, promising, at risk, dormant, and loyal), which you can use to target\
+      \ marketing activities."
+    displayName: dim_customer
+    deleted: false
+processedLineage: false
+service:
+  id: 75199480-3d06-4b6f-89d2-e8805ebe8d01
+  type: databaseService
+  name: sample_data
+  fullyQualifiedName: sample_data

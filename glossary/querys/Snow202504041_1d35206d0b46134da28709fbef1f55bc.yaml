@@ -1,0 +1,39 @@
+name: 1d35206d0b46134da28709fbef1f55bc
+fullyQualifiedName: Snow202504041.1d35206d0b46134da28709fbef1f55bc
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"321756c1-7f23-4075-80d6-7dc233444e08\",\"type\":\"table\"\
+        ,\"name\":\"REFINED_CUSTOMERS\",\"fullyQualifiedName\":\"Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS\"\
+        ,\"displayName\":\"REFINED_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 56.0
+users: []
+query: "SELECT avg(LEN(\"FIRST_NAME\")) AS mean, count(\"FIRST_NAME\") AS \"valuesCount\"\
+  , count(DISTINCT \"FIRST_NAME\") AS \"distinctCount\", MIN(LEN(\"FIRST_NAME\"))\
+  \ AS min, MAX(LEN(\"FIRST_NAME\")) AS max, coalesce(SUM(CASE WHEN (\"FIRST_NAME\"\
+  \ IS ?) THEN ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(LEN(\"FIRST_NAME\"))\
+  \ AS stddev, SUM(LEN(\"FIRST_NAME\")) AS sum \nFROM \"JAFFLE_SHOP\".\"REFINED_CUSTOMERS\"\
+  \n LIMIT ?"
+checksum: 1d35206d0b46134da28709fbef1f55bc
+queryDate: 1743638400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 321756c1-7f23-4075-80d6-7dc233444e08
+    type: table
+    name: REFINED_CUSTOMERS
+    fullyQualifiedName: Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS
+    displayName: REFINED_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: e041515c-b7c3-4820-b885-33947a571d2d
+  type: databaseService
+  name: Snow202504041
+  fullyQualifiedName: Snow202504041

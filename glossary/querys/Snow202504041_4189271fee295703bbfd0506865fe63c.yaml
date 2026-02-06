@@ -1,0 +1,36 @@
+name: 4189271fee295703bbfd0506865fe63c
+fullyQualifiedName: Snow202504041.4189271fee295703bbfd0506865fe63c
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"321756c1-7f23-4075-80d6-7dc233444e08\",\"type\":\"table\"\
+        ,\"name\":\"REFINED_CUSTOMERS\",\"fullyQualifiedName\":\"Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS\"\
+        ,\"displayName\":\"REFINED_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 32.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CUSTOMER_LIFETIME_VALUE\"\
+  ) AS count_1 \nFROM \"JAFFLE_SHOP\".\"REFINED_CUSTOMERS\" GROUP BY \"CUSTOMER_LIFETIME_VALUE\"\
+  \ \nHAVING count(\"CUSTOMER_LIFETIME_VALUE\") = ?) AS only_once\n LIMIT ?"
+checksum: 4189271fee295703bbfd0506865fe63c
+queryDate: 1743638400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 321756c1-7f23-4075-80d6-7dc233444e08
+    type: table
+    name: REFINED_CUSTOMERS
+    fullyQualifiedName: Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS
+    displayName: REFINED_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: e041515c-b7c3-4820-b885-33947a571d2d
+  type: databaseService
+  name: Snow202504041
+  fullyQualifiedName: Snow202504041

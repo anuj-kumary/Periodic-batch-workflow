@@ -1,0 +1,33 @@
+name: 843a431420355a6f4c8df5e8ad6a5129
+fullyQualifiedName: sample_data.843a431420355a6f4c8df5e8ad6a5129
+owners:
+  - id: dfb9cb5e-0456-46c0-a82b-6b30bbebf4b2
+    type: user
+    name: vidyaravichandran04
+    fullyQualifiedName: vidyaravichandran04
+    displayName: vidyaravichandran04
+    deleted: false
+users: []
+query: "SELECT * \nFROM employees;"
+checksum: 843a431420355a6f4c8df5e8ad6a5129
+queryDate: 1758362605033
+usedBy: []
+tags: []
+queryUsedIn:
+  - id: a11898ae-fef4-4805-8e67-8e4f736c5990
+    type: table
+    name: dim_address_clean
+    fullyQualifiedName: sample_data.ecommerce_db.shopify.dim_address_clean
+    description: "<p>Query the database's metadata (like&nbsp;INFORMATION_SCHEMA.TABLES&nbsp;or\
+      \ system tables) to find the most recently created table whose name or schema\
+      \ indicates it contains customer infoOnce you have the table name, use a standard&nbsp;SELECT&nbsp;statement\
+      \ to fetch the data1.</p><p></p>"
+    displayName: dim_address_clean
+    deleted: false
+processedLineage: false
+service:
+  id: 75199480-3d06-4b6f-89d2-e8805ebe8d01
+  type: databaseService
+  name: sample_data
+  fullyQualifiedName: sample_data
+entityStatus: Approved

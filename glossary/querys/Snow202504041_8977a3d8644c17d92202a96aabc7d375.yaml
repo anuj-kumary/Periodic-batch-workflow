@@ -1,0 +1,40 @@
+name: 8977a3d8644c17d92202a96aabc7d375
+fullyQualifiedName: Snow202504041.8977a3d8644c17d92202a96aabc7d375
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"321756c1-7f23-4075-80d6-7dc233444e08\",\"type\":\"table\"\
+        ,\"name\":\"REFINED_CUSTOMERS\",\"fullyQualifiedName\":\"Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS\"\
+        ,\"displayName\":\"REFINED_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 25.0
+users: []
+query: "SELECT avg(\"CUSTOMER_LIFETIME_VALUE\") AS mean, count(\"CUSTOMER_LIFETIME_VALUE\"\
+  ) AS \"valuesCount\", count(DISTINCT \"CUSTOMER_LIFETIME_VALUE\") AS \"distinctCount\"\
+  , MIN(\"CUSTOMER_LIFETIME_VALUE\") AS min, MAX(\"CUSTOMER_LIFETIME_VALUE\") AS max,\
+  \ coalesce(SUM(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" IS ?) THEN ? ELSE ? END),\
+  \ ?) AS \"nullCount\", STDDEV_POP(\"CUSTOMER_LIFETIME_VALUE\") AS stddev, SUM(\"\
+  CUSTOMER_LIFETIME_VALUE\") AS sum \nFROM \"JAFFLE_SHOP\".\"REFINED_CUSTOMERS\"\n\
+  \ LIMIT ?"
+checksum: 8977a3d8644c17d92202a96aabc7d375
+queryDate: 1743638400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 321756c1-7f23-4075-80d6-7dc233444e08
+    type: table
+    name: REFINED_CUSTOMERS
+    fullyQualifiedName: Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS
+    displayName: REFINED_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: e041515c-b7c3-4820-b885-33947a571d2d
+  type: databaseService
+  name: Snow202504041
+  fullyQualifiedName: Snow202504041

@@ -1,0 +1,34 @@
+name: 190d52197625770e973e0e45ffd078ec
+fullyQualifiedName: Snow202504041.190d52197625770e973e0e45ffd078ec
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"321756c1-7f23-4075-80d6-7dc233444e08\",\"type\":\"table\"\
+        ,\"name\":\"REFINED_CUSTOMERS\",\"fullyQualifiedName\":\"Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS\"\
+        ,\"displayName\":\"REFINED_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 161.0
+users: []
+query: CREATE VIEW REF2 AS SELECT * FROM REFINED_CUSTOMERS;
+checksum: 190d52197625770e973e0e45ffd078ec
+queryDate: 1743724800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: b9c70721-99e3-462f-a5ae-fcf5c2203484
+    type: table
+    name: REF2
+    fullyQualifiedName: Snow202504041.CUSTOMERS.JAFFLE_SHOP.REF2
+    displayName: REF2
+    deleted: false
+processedLineage: false
+service:
+  id: e041515c-b7c3-4820-b885-33947a571d2d
+  type: databaseService
+  name: Snow202504041
+  fullyQualifiedName: Snow202504041

@@ -1,0 +1,52 @@
+name: 11f110d758d4c0f0062b610ebeaa7e72
+fullyQualifiedName: Snow202504041.11f110d758d4c0f0062b610ebeaa7e72
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"321756c1-7f23-4075-80d6-7dc233444e08\",\"type\":\"table\"\
+        ,\"name\":\"REFINED_CUSTOMERS\",\"fullyQualifiedName\":\"Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS\"\
+        ,\"displayName\":\"REFINED_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.3
+  changeSummary: {}
+owners: []
+duration: 30.0
+users: []
+query: "SELECT count(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" >= ? AND \"CUSTOMER_LIFETIME_VALUE\"\
+  \ < ?) THEN \"CUSTOMER_LIFETIME_VALUE\" END) AS \"1.000 to 11.864\", count(CASE\
+  \ WHEN (\"CUSTOMER_LIFETIME_VALUE\" >= ? AND \"CUSTOMER_LIFETIME_VALUE\" < ?) THEN\
+  \ \"CUSTOMER_LIFETIME_VALUE\" END) AS \"11.864 to 22.729\", count(CASE WHEN (\"\
+  CUSTOMER_LIFETIME_VALUE\" >= ? AND \"CUSTOMER_LIFETIME_VALUE\" < ?) THEN \"CUSTOMER_LIFETIME_VALUE\"\
+  \ END) AS \"22.729 to 33.593\", count(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" >=\
+  \ ? AND \"CUSTOMER_LIFETIME_VALUE\" < ?) THEN \"CUSTOMER_LIFETIME_VALUE\" END) AS\
+  \ \"33.593 to 44.457\", count(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" >= ? AND \"\
+  CUSTOMER_LIFETIME_VALUE\" < ?) THEN \"CUSTOMER_LIFETIME_VALUE\" END) AS \"44.457\
+  \ to 55.322\", count(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" >= ? AND \"CUSTOMER_LIFETIME_VALUE\"\
+  \ < ?) THEN \"CUSTOMER_LIFETIME_VALUE\" END) AS \"55.322 to 66.186\", count(CASE\
+  \ WHEN (\"CUSTOMER_LIFETIME_VALUE\" >= ? AND \"CUSTOMER_LIFETIME_VALUE\" < ?) THEN\
+  \ \"CUSTOMER_LIFETIME_VALUE\" END) AS \"66.186 to 77.051\", count(CASE WHEN (\"\
+  CUSTOMER_LIFETIME_VALUE\" >= ? AND \"CUSTOMER_LIFETIME_VALUE\" < ?) THEN \"CUSTOMER_LIFETIME_VALUE\"\
+  \ END) AS \"77.051 to 87.915\", count(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" >=\
+  \ ? AND \"CUSTOMER_LIFETIME_VALUE\" < ?) THEN \"CUSTOMER_LIFETIME_VALUE\" END) AS\
+  \ \"87.915 to 98.779\", count(CASE WHEN (\"CUSTOMER_LIFETIME_VALUE\" >= ?) THEN\
+  \ \"CUSTOMER_LIFETIME_VALUE\" END) AS \"98.779 and up\" \nFROM \"JAFFLE_SHOP\".\"\
+  REFINED_CUSTOMERS\"\n LIMIT ?"
+checksum: 11f110d758d4c0f0062b610ebeaa7e72
+queryDate: 1743638400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 321756c1-7f23-4075-80d6-7dc233444e08
+    type: table
+    name: REFINED_CUSTOMERS
+    fullyQualifiedName: Snow202504041.CUSTOMERS.JAFFLE_SHOP.REFINED_CUSTOMERS
+    displayName: REFINED_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: e041515c-b7c3-4820-b885-33947a571d2d
+  type: databaseService
+  name: Snow202504041
+  fullyQualifiedName: Snow202504041

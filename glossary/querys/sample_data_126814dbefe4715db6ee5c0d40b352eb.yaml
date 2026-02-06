@@ -1,0 +1,63 @@
+name: 126814dbefe4715db6ee5c0d40b352eb
+fullyQualifiedName: sample_data.126814dbefe4715db6ee5c0d40b352eb
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: queryUsedIn
+      newValue: "[{\"id\":\"2c07208f-dd2e-4bf5-8928-eba563136682\",\"type\":\"table\"\
+        ,\"displayName\":\"comments_test\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary: {}
+owners:
+  - id: 46176ec0-595d-412e-a1f1-f207da730868
+    type: user
+    name: aaron.warren5
+    fullyQualifiedName: '"aaron.warren5"'
+    displayName: Aaron Warren
+    deleted: false
+users: []
+query: select * from dim_address_clean
+checksum: 126814dbefe4715db6ee5c0d40b352eb
+queryDate: 1714116445987
+usedBy: []
+tags:
+  - tagFQN: testexclusive.exclusive
+    name: exclusive
+    displayName: exclusive
+    description: exclusive
+    style: {}
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+queryUsedIn:
+  - id: 2c07208f-dd2e-4bf5-8928-eba563136682
+    type: table
+    name: comments_test
+    fullyQualifiedName: demo_unity.demo.new_schema.comments_test
+    description: "The 'comments_test' table is designed to hold data related to user\
+      \ comments on various test items. It includes information such as the unique\
+      \ identifier of each comment and a complex column that stores additional data\
+      \ related to the comment. This table can be useful for analyzing user feedback\
+      \ on tests, identifying common issues or areas of improvement, and tracking\
+      \ changes over time in user comments."
+    displayName: comments_test
+    deleted: false
+  - id: a11898ae-fef4-4805-8e67-8e4f736c5990
+    type: table
+    name: dim_address_clean
+    fullyQualifiedName: sample_data.ecommerce_db.shopify.dim_address_clean
+    description: "<p>Query the database's metadata (like&nbsp;INFORMATION_SCHEMA.TABLES&nbsp;or\
+      \ system tables) to find the most recently created table whose name or schema\
+      \ indicates it contains customer infoOnce you have the table name, use a standard&nbsp;SELECT&nbsp;statement\
+      \ to fetch the data1.</p><p></p>"
+    displayName: dim_address_clean
+    deleted: false
+processedLineage: false
+service:
+  id: 75199480-3d06-4b6f-89d2-e8805ebe8d01
+  type: databaseService
+  name: sample_data
+  fullyQualifiedName: sample_data
