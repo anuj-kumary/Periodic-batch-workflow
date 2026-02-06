@@ -1,0 +1,94 @@
+name: employees
+fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_gsysgoyohqeqviy.employees
+description: Updated table description
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Updated column description
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_gsysgoyohqeqviy.employees.id
+    tags:
+      - tagFQN: pii.NonSensitive
+        name: NonSensitive
+        description: UNITY CATALOG TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_gsysgoyohqeqviy.employees.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: created_at
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_gsysgoyohqeqviy.employees.created_at
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners:
+  - id: c0db9c9f-9951-4ddc-9699-dacaa2f253f6
+    type: user
+    name: keshav.m
+    fullyQualifiedName: '"keshav.m"'
+    displayName: Keshav Mohta
+    deleted: false
+databaseSchema:
+  id: 51513c19-7406-4299-93bb-df93b8913335
+  type: databaseSchema
+  name: reverse_ingestion_test_gsysgoyohqeqviy
+  fullyQualifiedName: dbx - keshav.demo.reverse_ingestion_test_gsysgoyohqeqviy
+  description: Updated schema description
+  displayName: reverse_ingestion_test_gsysgoyohqeqviy
+  deleted: false
+database:
+  id: cd17a1de-b8f6-4b2b-b7d3-046376580f00
+  type: database
+  name: demo
+  fullyQualifiedName: dbx - keshav.demo
+  displayName: demo
+  deleted: false
+service:
+  id: 0cda8939-ffbd-4f42-8c1b-29552ea53c0f
+  type: databaseService
+  name: dbx - keshav
+  fullyQualifiedName: dbx - keshav
+  description: ""
+  displayName: dbx - keshav
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/85864ae3-46f8-4a4d-b66b-ca0a450b4118
+tags:
+  - tagFQN: pii.NonSensitive
+    name: NonSensitive
+    description: UNITY CATALOG TAG
+    source: Classification
+    labelType: Automated
+    state: Suggested
+    appliedAt: 1767969396000
+    appliedBy: admin
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2b0a2f8444772c805fc64ce60b72c197
+processedLineage: false
+entityStatus: Unprocessed
