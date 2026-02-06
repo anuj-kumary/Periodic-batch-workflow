@@ -1,0 +1,84 @@
+name: APPLICABLE_ROLES
+fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES
+tableType: View
+columns:
+  - name: GRANTEE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Role or user to whom the privilege is granted
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.GRANTEE
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ROLE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.ROLE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ROLE_OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Owner of the role
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.ROLE_OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: IS_GRANTABLE
+    dataType: VARCHAR
+    dataLength: 3
+    dataTypeDisplay: text(3)
+    description: Whether this role can be granted to others
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.APPLICABLE_ROLES.IS_GRANTABLE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: edd68efa-a871-40fd-8c01-c19d84895707
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 7fc7fe92-547f-478e-b870-936ddfc693a3
+  type: database
+  name: SAMPLE_CUSTOMER_DATA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA
+  description: ""
+  displayName: SAMPLE_CUSTOMER_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SAMPLE_CUSTOMER_DATA/schemas/INFORMATION_SCHEMA/view/APPLICABLE_ROLES
+domains: []
+dataProducts: []
+sourceHash: 2e622bdf3854c0a444c5ec8e9357b464
+processedLineage: false
+entityStatus: Approved

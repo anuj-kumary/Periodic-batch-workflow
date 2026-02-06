@@ -1,0 +1,134 @@
+name: CLASSES
+fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES
+tableType: View
+columns:
+  - name: NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the BUNDLE CLASS
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: SCHEMA_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Schema which the CLASS belongs to
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.SCHEMA_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: DATABASE_NAME
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Database which the CLASS belongs to
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.DATABASE_NAME
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: VERSION
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Current version of the CLASS
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.VERSION
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OWNER
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Name of the role that owns the CLASS
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.OWNER
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: OWNER_ROLE_TYPE
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Type of role that owns the CLASS.
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.OWNER_ROLE_TYPE
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: IS_SERVICE_CLASS
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Whether this is a SERVICE class
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.IS_SERVICE_CLASS
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CREATED
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp_ltz
+    description: Date and time when the CLASS was created
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.CREATED
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COMMENT
+    dataType: VARCHAR
+    dataLength: 16777216
+    dataTypeDisplay: text(16777216)
+    description: Comment for the CLASS
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA.CLASSES.COMMENT
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: edd68efa-a871-40fd-8c01-c19d84895707
+  type: databaseSchema
+  name: INFORMATION_SCHEMA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.INFORMATION_SCHEMA
+  description: Views describing the contents of schemas in this database
+  displayName: INFORMATION_SCHEMA
+  deleted: false
+database:
+  id: 7fc7fe92-547f-478e-b870-936ddfc693a3
+  type: database
+  name: SAMPLE_CUSTOMER_DATA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA
+  description: ""
+  displayName: SAMPLE_CUSTOMER_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SAMPLE_CUSTOMER_DATA/schemas/INFORMATION_SCHEMA/view/CLASSES
+domains: []
+dataProducts: []
+sourceHash: 9e9b3d0018da066aff87bb4bdef3d0df
+processedLineage: false
+entityStatus: Approved

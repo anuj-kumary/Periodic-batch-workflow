@@ -1,0 +1,75 @@
+name: CUSTOMERS
+fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.PUBLIC.CUSTOMERS
+tableType: Regular
+columns:
+  - name: CUSTOMER_ID
+    dataType: DECIMAL
+    dataLength: 1
+    precision: 38
+    scale: 0
+    dataTypeDisplay: "number(38,0)"
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.PUBLIC.CUSTOMERS.CUSTOMER_ID
+    tags: []
+    constraint: PRIMARY_KEY
+    children: []
+    customMetrics: []
+  - name: CUSTOMER_NAME
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: text(100)
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.PUBLIC.CUSTOMERS.CUSTOMER_NAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: VARCHAR
+    dataLength: 100
+    dataTypeDisplay: text(100)
+    fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.PUBLIC.CUSTOMERS.EMAIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: c8f69ec1-1044-46c5-8a78-19de6b2110aa
+  type: databaseSchema
+  name: PUBLIC
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA.PUBLIC
+  displayName: PUBLIC
+  deleted: false
+database:
+  id: 7fc7fe92-547f-478e-b870-936ddfc693a3
+  type: database
+  name: SAMPLE_CUSTOMER_DATA
+  fullyQualifiedName: SnowflakeProd.SAMPLE_CUSTOMER_DATA
+  description: ""
+  displayName: SAMPLE_CUSTOMER_DATA
+  deleted: false
+service:
+  id: 486b5c07-139b-4e9b-b384-0cb7327fb7b9
+  type: databaseService
+  name: SnowflakeProd
+  fullyQualifiedName: SnowflakeProd
+  description: ""
+  displayName: SnowflakeProd
+  deleted: false
+serviceType: Snowflake
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+sourceUrl: https://app.snowflake.com/nxxicwj/ax71538/#/data/databases/SAMPLE_CUSTOMER_DATA/schemas/PUBLIC/table/CUSTOMERS
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1713857019108
+sourceHash: ca0e892c2e55b179a51d347182e8e00b
+processedLineage: false
+entityStatus: Approved
