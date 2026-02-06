@@ -1,0 +1,199 @@
+name: T042T
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T
+description: Text modules for payment forms
+tableType: Regular
+columns:
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SF_FOOTER
+    displayName: Footer
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: "Smart Forms: Name of Footer in Text Processing"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.SF_FOOTER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SF_GREETG
+    displayName: Greeting
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: "Smart Forms: Name of Greeting in Text Processing"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.SF_GREETG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: SF_HEADER
+    displayName: Header Text
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: "Smart Forms: Name of Header Text in Text Processing"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.SF_HEADER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: SF_SENDER
+    displayName: Sender
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: "Smart Forms: Name of Sender Text in Text Processing"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.SF_SENDER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: TXTAB
+    displayName: Sender
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Sender in Letter Window
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.TXTAB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: TXTFU
+    displayName: TXTFU
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Footer
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.TXTFU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: TXTID
+    displayName: Text ID
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Text ID
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.TXTID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: TXTKO
+    displayName: TXTKO
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Text Element for Letter Header
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.TXTKO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: TXTUN
+    displayName: Signature text
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Signature/Form of Greeting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.TXTUN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: URL_GRAPH
+    displayName: Graphic
+    dataType: CHAR
+    dataLength: 255
+    dataTypeDisplay: char(255)
+    description: URL for PDF Graphic
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.URL_GRAPH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: URL_LOGO
+    displayName: Logo
+    dataType: CHAR
+    dataLength: 255
+    dataTypeDisplay: char(255)
+    description: URL for PDF Logo
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042T.URL_LOGO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 23c943c265a7ad59aef4d2d15facc29a
+processedLineage: false
+entityStatus: Approved

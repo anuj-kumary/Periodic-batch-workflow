@@ -1,0 +1,151 @@
+name: T036V
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V
+description: Allocation of planning levels for Financial Assets Mgmt
+tableType: Regular
+columns:
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: FDLEVPK
+    displayName: Planning Level
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Planning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.FDLEVPK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: FDLEVPK2
+    displayName: Planning Level
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Planning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.FDLEVPK2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: FDLEVSK
+    displayName: Planning Level
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Planning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.FDLEVSK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: FDLEVSK2
+    displayName: Planning Level
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Planning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.FDLEVSK2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: GSART
+    displayName: Product Type
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Product Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.GSART
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SFGZUSTT
+    displayName: Activity Category
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Transaction Activity Category
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.SFGZUSTT
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: SSTATI
+    displayName: Status
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Status of data record
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T036V.SSTATI
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - GSART
+      - MANDT
+      - SFGZUSTT
+      - SSTATI
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f0204e960a0a06589da732068679595a
+processedLineage: false
+entityStatus: Approved

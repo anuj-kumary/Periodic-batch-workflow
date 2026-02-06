@@ -1,0 +1,271 @@
+name: T041A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A
+description: Clearing Transactions
+tableType: Regular
+columns:
+  - name: AUGLV
+    displayName: Clearing Transaction
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Clearing Transaction
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.AUGLV
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: BLARD
+    displayName: Document type (A/R)
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for A/R Transfer Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BLARD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: BLARK
+    displayName: Document type (A/P)
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for A/P Transfer Posting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BLARK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: BLARS
+    displayName: Document type (G/L)
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Document Type for G/L Transfer Postings
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BLARS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: BSDHA
+    displayName: BSDHA
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Credit Postings to Customer Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSDHA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: BSDHS
+    displayName: Customer credit
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Credit Special G/L Trans.to Customer Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSDHS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: BSDSO
+    displayName: BSDSO
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Debit Postings to Customer Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSDSO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: BSDSS
+    displayName: Customer debit
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Debit Special G/L Trans.to Customer Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSDSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: BSKHA
+    displayName: BSKHA
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Credit Postings to Vendor Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSKHA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BSKHS
+    displayName: Vendor Credit
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Credit Special G/L Trans.to Vendor Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSKHS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: BSKSO
+    displayName: Vendor Debit
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Debit Postings to Vendor Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSKSO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: BSKSS
+    displayName: Vendor Debit
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Debit Special G/L Trans.to Vendor Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSKSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BSSHA
+    displayName: BSSHA
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Credit Postings to G/L Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSSHA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: BSSSO
+    displayName: BSSSO
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Debit Postings to G/L Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.BSSSO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: RPDHA
+    displayName: RPDHA
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key Customer Residual Items/Credit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.RPDHA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: RPDSO
+    displayName: RPDSO
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Customer Residual Items/Debit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.RPDSO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: RPKHA
+    displayName: RPKHA
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Vendor Residual Items/Credit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.RPKHA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: RPKSO
+    displayName: RPKSO
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key for Vendor Residual Items/Debit
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T041A.RPKSO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AUGLV
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: be848958f3591a10d814b1d5fde6694d
+processedLineage: false
+entityStatus: Approved

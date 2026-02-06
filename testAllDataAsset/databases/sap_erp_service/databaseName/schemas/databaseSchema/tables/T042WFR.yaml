@@ -1,0 +1,271 @@
+name: T042WFR
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR
+description: "Maintenance of Proposal Run: Workflow Rules"
+tableType: Regular
+columns:
+  - name: ABSBU
+    displayName: Sending company code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Sending company code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.ABSBU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: ACTOR1
+    displayName: Workflow Agent
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Agent in Workflow
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.ACTOR1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: ACTOR2
+    displayName: Workflow Agent
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Agent in Workflow
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.ACTOR2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: ACTOR3
+    displayName: Workflow Agent
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Agent in Workflow
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.ACTOR3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: ACTOR4
+    displayName: Workflow Agent
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Agent in Workflow
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.ACTOR4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: ACTOR5
+    displayName: Workflow Agent
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Agent in Workflow
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.ACTOR5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: COND1_FIELD
+    displayName: COND1_FIELD
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.COND1_FIELD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: COND1_HIGH
+    displayName: COND1_HIGH
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Text (length 35)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.COND1_HIGH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: COND1_LOW
+    displayName: COND1_LOW
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Text (length 35)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.COND1_LOW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: COND2_FIELD
+    displayName: COND2_FIELD
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Field Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.COND2_FIELD
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: COND2_HIGH
+    displayName: COND2_HIGH
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Text (length 35)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.COND2_HIGH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: COND2_LOW
+    displayName: COND2_LOW
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Text (length 35)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.COND2_LOW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: OTYPE1
+    displayName: Object type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Object Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.OTYPE1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: OTYPE2
+    displayName: Object type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Object Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.OTYPE2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: OTYPE3
+    displayName: Object type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Object Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.OTYPE3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: OTYPE4
+    displayName: Object type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Object Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.OTYPE4
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: OTYPE5
+    displayName: Object type
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Object Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.OTYPE5
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: PRIO
+    displayName: Sequence for the Rules
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: numc(10)
+    description: Sequence for the Rules for Agent Determination
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042WFR.PRIO
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - PRIO
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 484d212974061d08e6fdcb09ae58d9a6
+processedLineage: false
+entityStatus: Approved

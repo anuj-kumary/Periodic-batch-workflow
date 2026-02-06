@@ -1,0 +1,199 @@
+name: T034
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034
+description: "Cash Mgmt: Determine Account Assignments/Document Splitting"
+tableType: Regular
+columns:
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: CMLDBU
+    displayName: Ledger
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Ledger for Regeneration of Bank Accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.CMLDBU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: XGEBER
+    displayName: XGEBER
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XGEBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XGEBER_DS
+    displayName: XGEBER_DS
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XGEBER_DS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XGRANT_NBR
+    displayName: XGRANT_NBR
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XGRANT_NBR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XGRANT_NBR_DS
+    displayName: XGRANT_NBR_DS
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XGRANT_NBR_DS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XGSBER
+    displayName: XGSBER
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XGSBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XGSBER_DS
+    displayName: XGSBER_DS
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XGSBER_DS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: XPRCTR
+    displayName: XPRCTR
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XPRCTR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XPRCTR_DS
+    displayName: XPRCTR_DS
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XPRCTR_DS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: XSEGMENT
+    displayName: XSEGMENT
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XSEGMENT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XSEGMENT_DS
+    displayName: XSEGMENT_DS
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: X - Field Relevant for Acct Assignment/Document Splitting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T034.XSEGMENT_DS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 2697279497de0ca6bef30fdc9da36843
+processedLineage: false
+entityStatus: Approved

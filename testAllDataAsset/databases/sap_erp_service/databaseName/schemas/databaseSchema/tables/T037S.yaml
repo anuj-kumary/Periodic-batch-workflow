@@ -1,0 +1,187 @@
+name: T037S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S
+description: Account Assignment References acc. to Transaction Type
+tableType: Regular
+columns:
+  - name: AUFNR
+    displayName: Order
+    dataType: CHAR
+    dataLength: 12
+    dataTypeDisplay: char(12)
+    description: Order Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.AUFNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: GSBER
+    displayName: Business Area
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Business Area
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.GSBER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: HKONT
+    displayName: G/L Account
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: General Ledger Account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.HKONT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: KOSTL
+    displayName: Cost Center
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Cost Center
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.KOSTL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MWSKZ
+    displayName: Tax Code
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Tax on Sales/Purchases Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.MWSKZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: PROJN
+    displayName: not in use
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: "Old: Project number : No longer used --> PS_POSNR"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.PROJN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: RANTYP
+    displayName: Contract Type
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Contract Type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.RANTYP
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: RREFKONT
+    displayName: Acct Assignment Ref.
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Account Assignment Reference in Financial Assets Management
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.RREFKONT
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: STLABT
+    displayName: Undiscl.assignm. ID
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Indicator for undisclosed assignment
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.STLABT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: WERKS
+    displayName: Plant
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Plant
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T037S.WERKS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+      - RANTYP
+      - RREFKONT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: a2f14b3c4ffa6f3cf9e4d51c801bee15
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,347 @@
+name: T043G
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G
+description: Tolerances for Groups of Customers/Vendors
+tableType: Regular
+columns:
+  - name: BEADH
+    displayName: BEADH
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Payment Diff. for Expense with Function Code AD
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BEADH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: BEADS
+    displayName: BEADS
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Payment Diff. for Revenue with Function Code AD
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BEADS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: BEAVH
+    displayName: Outst.payable from
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Tolerance Limit for Difference Compared with Pmnt Advce Item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BEAVH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: BEAVS
+    displayName: Outst.receiv.from
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Tolerance Limit for Difference Compared with Pmnt Advce Item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BEAVS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: BETRH
+    displayName: BETRH
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Payment Difference for Expense
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BETRH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BETRS
+    displayName: BETRS
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Payment Difference for Revenue
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BETRS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MSLRP
+    displayName: Dunning key for residual items
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Dunning Key for Residual Items
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.MSLRP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: PRADH
+    displayName: Percentage
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Max. Permitted Exp. from Payment Diff. with Function Code AD
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.PRADH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 24
+    children: []
+    customMetrics: []
+  - name: PRADS
+    displayName: Percentage
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Max. Permitted Rev. from Payment Diff. with Function Code AD
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.PRADS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: PRAVH
+    displayName: Percent
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Tolerance Limit for Difference Compared with Pmnt Advce Item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.PRAVH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: PRAVS
+    displayName: Percent
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Tolerance Limit for Difference Compared with Pmnt Advce Item
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.PRAVS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: PROZH
+    displayName: Percent
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Maximum Expense Permitted from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.PROZH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: PROZS
+    displayName: Percent
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Maximum Allowable Revenues from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.PROZS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: SKNTH
+    displayName: Adjust discount by
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Discount Adjust. for Loss from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.SKNTH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SKNTS
+    displayName: Adjust discount by
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Maximum Discount Adjust. for Gain from Payment Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.SKNTS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: SKTRE
+    displayName: Cash disc.terms displayed
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Cash Discount Terms Used for Displaying Items when Clearing
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.SKTRE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: TOGRU
+    displayName: Tolerance group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Tolerance group for the business partner/G/L account
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.TOGRU
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: TOLER
+    displayName: Grace days for determining due date
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Grace Days
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.TOLER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: VRZDE
+    displayName: Arrears Base Date
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Base Date for Determining Arrears Days for OI Processing
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.VRZDE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XKONR
+    displayName: Payment term from invoice
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Transfer payment conditions from the invoice ?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.XKONR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XSKAN
+    displayName: Only grant partial cash discount
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Only grant partial cash discount ?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T043G.XSKAN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BUKRS
+      - MANDT
+      - TOGRU
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: afd23df90b1fcf072b0867dd0c439e36
+processedLineage: false
+entityStatus: Approved

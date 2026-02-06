@@ -1,0 +1,103 @@
+name: T042R
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042R
+description: Name of account holder (ref.specifications on bk.details)
+tableType: Regular
+columns:
+  - name: BANKL
+    displayName: Bank Key
+    dataType: CHAR
+    dataLength: 15
+    dataTypeDisplay: char(15)
+    description: Bank Keys
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042R.BANKL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: BANKN
+    displayName: Bank Account
+    dataType: CHAR
+    dataLength: 18
+    dataTypeDisplay: char(18)
+    description: Bank account number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042R.BANKN
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BANKS
+    displayName: Bank Country
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Bank Country Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042R.BANKS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: BSNAM
+    displayName: Building soc. name
+    dataType: CHAR
+    dataLength: 18
+    dataTypeDisplay: char(18)
+    description: Building Society Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042R.BSNAM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042R.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - BANKL
+      - BANKN
+      - BANKS
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 74fa202d4a69bd5dda6f09df7bce49e7
+processedLineage: false
+entityStatus: Approved

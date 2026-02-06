@@ -1,0 +1,127 @@
+name: T042K
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K
+description: Accounts for bank charges
+tableType: Regular
+columns:
+  - name: CBSCH
+    displayName: Posting Key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.CBSCH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: CKONT
+    displayName: Bank charge account
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Account for Bank Charges
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.CKONT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: HBKID
+    displayName: House Bank
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: char(5)
+    description: Short Key for a House Bank
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.HBKID
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SBSCH
+    displayName: Posting Key
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Posting Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.SBSCH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: SKONT
+    displayName: Bank subaccount
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: G/L Account to be Posted to (Bank Subaccount)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.SKONT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: WAERS
+    displayName: Currency
+    dataType: CHAR
+    dataLength: 5
+    dataTypeDisplay: cuky(5)
+    description: Currency Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042K.WAERS
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - HBKID
+      - MANDT
+      - WAERS
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 99faffaaf4b1ed35134e5195848d31a9
+processedLineage: false
+entityStatus: Approved

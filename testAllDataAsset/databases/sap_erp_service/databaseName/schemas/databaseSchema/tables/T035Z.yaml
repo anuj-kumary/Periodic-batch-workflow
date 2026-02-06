@@ -1,0 +1,139 @@
+name: T035Z
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z
+description: "Liquidity Forecast: Payment Date Determinations/Assignments"
+tableType: Regular
+columns:
+  - name: ABDAT
+    displayName: Start Date
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Start Date for Regular Payment Date Determination
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.ABDAT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: EBENE
+    displayName: Planning Level
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Planning Level (masking possible)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.EBENE
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: EXCLUDE
+    displayName: Exclude
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Exclude from assignment to payment dates
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.EXCLUDE
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: GRUPP
+    displayName: Planning group
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Planning Group (masking possible)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.GRUPP
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: INTMO
+    displayName: Interval in Months
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Interval in Months for Determining Payment Dates
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.INTMO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: INTTA
+    displayName: Interval in Days
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Interval in Days for Determining Payment Dates
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.INTTA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: INTWO
+    displayName: Interval in Weeks
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Interval in Weeks for Determining Payment Dates
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.INTWO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T035Z.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - EBENE
+      - GRUPP
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 55197e97be6f0ec7fa607d768e35d2ac
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,272 @@
+name: T042B
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B
+description: Details on the company codes that must pay
+tableType: Regular
+columns:
+  - name: AFORN
+    displayName: Form for the Payment Advice
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: Name of the Form for the Payment Advice
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.AFORN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: EFORN
+    displayName: EDI accompanying sheet form
+    dataType: CHAR
+    dataLength: 16
+    dataTypeDisplay: char(16)
+    description: EDI Accompanying Sheet Name
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.EFORN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.MANDT
+    tags: []
+    constraint: PRIMARY_KEY
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MINDH
+    displayName: Minimum amount for outgoing payment
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Minimum Amount for Outgoing Payment
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.MINDH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MINDS
+    displayName: Minimum amount for incoming payment
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 2
+    dataTypeDisplay: "curr(7,2)"
+    description: Minimum Amount for Incoming Payment
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.MINDS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: PDFAF
+    displayName: Form for the Payment Advice
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of the PDF-based Form for the Payment Advice Note
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.PDFAF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: PDFEF
+    displayName: Form for the EDI Accompanying Sheet
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Name of the PDF-based Form for the EDI Accompanying Sheet
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.PDFEF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: SEPA_REC_CRDID
+    displayName: Creditor ID
+    dataType: CHAR
+    dataLength: 35
+    dataTypeDisplay: char(35)
+    description: Creditor Identification Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.SEPA_REC_CRDID
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: WABIS
+    displayName: Latest due date in
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Maximum Life of the Bill of Exchange for Outgoing Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.WABIS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: WAVON
+    displayName: Earliest due date in
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Minimum Life of the Bill of Exchange for Outgoing Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.WAVON
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: WEBIS
+    displayName: Latest due date in
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Maximum Life of the Bill of Exchange
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.WEBIS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: WSICH
+    displayName: Bill on demand for due date up until
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Number of Days Until Which a Bill on Demand is Created
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.WSICH
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: XKDFB
+    displayName: No exchange rate differences
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Do not Post any Exchange Rate Differences
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.XKDFB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XKDFB_PP
+    displayName: No Exch.Rate Diffs. (Part Payments)
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: No Exchange Rate Differences for Partial Payments
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.XKDFB_PP
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: XKIDS
+    displayName: Separate payment for each ref.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Separate Payment for each Payment Reference
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.XKIDS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: XWFAB
+    displayName: One bill of exchange per invoice
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: One Bill of Exchange per Invoice Item?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.XWFAB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XWFAF
+    displayName: One bill of exchange per due date
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: One Bill of Exchange per Due Date?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.XWFAF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XWFAI
+    displayName: One bill of exch. per due date per.
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: One Bill of Exchange per Due Date Interval?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.XWFAI
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: X_DD_PRENOTIF
+    displayName: Direct Debit Pre-notifications
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Payment Runs for Direct Debit Pre-notifications
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T042B.X_DD_PRENOTIF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 8bfdb6725bf0ccfb49dc5ee28212fcae
+processedLineage: false
+entityStatus: Approved

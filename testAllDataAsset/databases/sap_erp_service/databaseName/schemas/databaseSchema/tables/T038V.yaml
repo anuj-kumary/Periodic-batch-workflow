@@ -1,0 +1,103 @@
+name: T038V
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T038V
+description: Distribution for Cash Mgmt Position and Liquidity Forecast
+tableType: Regular
+columns:
+  - name: EBENE
+    displayName: Planning Level
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Planning Level
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T038V.EBENE
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T038V.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PZENT
+    displayName: Percentage
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Percentage for distribution in cash position/liquidity fcst
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T038V.PZENT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: VORZN
+    displayName: +/- Sign
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: +/- Sign
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T038V.VORZN
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: VTAGE
+    displayName: Days
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Days for distribution in cash mgmt position/liquid. forecast
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T038V.VTAGE
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - EBENE
+      - MANDT
+      - VORZN
+      - VTAGE
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: b090b728bd91589bf28018371dbcd428
+processedLineage: false
+entityStatus: Approved
