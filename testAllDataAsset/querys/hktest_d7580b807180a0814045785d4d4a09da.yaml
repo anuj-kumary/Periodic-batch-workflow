@@ -1,0 +1,37 @@
+name: d7580b807180a0814045785d4d4a09da
+fullyQualifiedName: hktest.d7580b807180a0814045785d4d4a09da
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d1421023-d4ef-4bea-ad0f-0b3f8a230893\",\"type\":\"table\"\
+        ,\"name\":\"PERSONS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.PERSONS\"\
+        ,\"displayName\":\"PERSONS\",\"deleted\":false}]"
+  previousVersion: 9.5
+  changeSummary: {}
+owners: []
+duration: 189.0
+users: []
+query: |-
+  CREATE VIEW E2E_DB.e2e_test.view_persons AS
+              SELECT person_id, full_name
+              FROM e2e_test.persons;
+checksum: d7580b807180a0814045785d4d4a09da
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 775ac7a0-f9fd-42ac-8b6d-4e0dcc53383f
+    type: table
+    name: VIEW_PERSONS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.VIEW_PERSONS
+    displayName: VIEW_PERSONS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

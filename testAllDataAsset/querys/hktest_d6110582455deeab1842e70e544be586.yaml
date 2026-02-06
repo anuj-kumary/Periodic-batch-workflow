@@ -1,0 +1,33 @@
+name: d6110582455deeab1842e70e544be586
+fullyQualifiedName: hktest.d6110582455deeab1842e70e544be586
+owners: []
+duration: 75.0
+users: []
+query: "WITH \"4c9e7581028a01fc71dfc3997bd40912_rnd\" AS \n(SELECT \"LOAN_1\".\"AK_HASH_KY\"\
+  \ AS \"AK_HASH_KY\" \nFROM \"LANDING\".\"LOAN\" AS \"LOAN_1\" TABLESAMPLE ROW(?\
+  \ ROWS)), \n\"4c9e7581028a01fc71dfc3997bd40912_sample\" AS \n(SELECT \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  .\"AK_HASH_KY\" AS \"AK_HASH_KY\" \nFROM \"4c9e7581028a01fc71dfc3997bd40912_rnd\"\
+  )\n SELECT avg(\"AK_HASH_KY\") AS mean, count(\"AK_HASH_KY\") AS \"valuesCount\"\
+  , count(DISTINCT \"AK_HASH_KY\") AS \"distinctCount\", MIN(\"AK_HASH_KY\") AS min,\
+  \ MAX(\"AK_HASH_KY\") AS max, coalesce(SUM(CASE WHEN (\"AK_HASH_KY\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"AK_HASH_KY\") AS stddev, SUM(\"\
+  AK_HASH_KY\") AS sum \nFROM \"4c9e7581028a01fc71dfc3997bd40912_sample\"\n LIMIT\
+  \ ?"
+checksum: d6110582455deeab1842e70e544be586
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: daeebc3d-e209-4d6c-838c-8a72fc77990f
+    type: table
+    name: LOAN
+    fullyQualifiedName: hktest.INDIVIDUAL.LANDING.LOAN
+    displayName: LOAN
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

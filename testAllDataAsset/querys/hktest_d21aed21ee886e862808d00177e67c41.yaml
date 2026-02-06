@@ -1,0 +1,40 @@
+name: d21aed21ee886e862808d00177e67c41
+fullyQualifiedName: hktest.d21aed21ee886e862808d00177e67c41
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d78f1c3b-6d80-4343-986b-64af362d9f05\",\"type\":\"table\"\
+        ,\"name\":\"SAMPLE_CUSTOMERS\",\"fullyQualifiedName\":\"hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS\"\
+        ,\"description\":\"<p>This is a test description</p>\",\"displayName\":\"\
+        SAMPLE_CUSTOMERS\",\"deleted\":false}]"
+  previousVersion: 0.1
+  changeSummary: {}
+owners: []
+duration: 113.0
+users: []
+query: "SELECT avg(\"CUSTOMERID\") AS mean, count(\"CUSTOMERID\") AS \"valuesCount\"\
+  , count(DISTINCT \"CUSTOMERID\") AS \"distinctCount\", MIN(\"CUSTOMERID\") AS min,\
+  \ MAX(\"CUSTOMERID\") AS max, coalesce(SUM(CASE WHEN (\"CUSTOMERID\" IS ?) THEN\
+  \ ? ELSE ? END), ?) AS \"nullCount\", STDDEV_POP(\"CUSTOMERID\") AS stddev, SUM(\"\
+  CUSTOMERID\") AS sum \nFROM \"HK_SCHEMA\".\"SAMPLE_CUSTOMERS\"\n LIMIT ?"
+checksum: d21aed21ee886e862808d00177e67c41
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d78f1c3b-6d80-4343-986b-64af362d9f05
+    type: table
+    name: SAMPLE_CUSTOMERS
+    fullyQualifiedName: hktest.HK_DB.HK_SCHEMA.SAMPLE_CUSTOMERS
+    description: <p>This is a test description</p>
+    displayName: SAMPLE_CUSTOMERS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,36 @@
+name: d5763e998a682d8597810e6be461811f
+fullyQualifiedName: hktest.d5763e998a682d8597810e6be461811f
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: queryUsedIn
+      oldValue: "[{\"id\":\"d2564bc2-6806-4860-9a0c-05aca3054c40\",\"type\":\"table\"\
+        ,\"name\":\"TEST_DEPARTMENTS\",\"fullyQualifiedName\":\"hktest.E2E_DB.E2E_TEST.TEST_DEPARTMENTS\"\
+        ,\"displayName\":\"TEST_DEPARTMENTS\",\"deleted\":false}]"
+  previousVersion: 1.3
+  changeSummary: {}
+owners: []
+duration: 46.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"E2E_TESTDEPARTMENT_NAME\"\
+  ) AS count_1 \nFROM \"E2E_TEST\".\"TEST_DEPARTMENTS\" GROUP BY \"E2E_TESTDEPARTMENT_NAME\"\
+  \ \nHAVING count(\"E2E_TESTDEPARTMENT_NAME\") = ?) AS only_once\n LIMIT ?"
+checksum: d5763e998a682d8597810e6be461811f
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: d2564bc2-6806-4860-9a0c-05aca3054c40
+    type: table
+    name: TEST_DEPARTMENTS
+    fullyQualifiedName: hktest.E2E_DB.E2E_TEST.TEST_DEPARTMENTS
+    displayName: TEST_DEPARTMENTS
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

@@ -1,0 +1,27 @@
+name: d25b638acb8ee7ae61e72134a7553af3
+fullyQualifiedName: hktest.d25b638acb8ee7ae61e72134a7553af3
+owners: []
+duration: 210.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"N_NAME\") AS count_1\
+  \ \nFROM \"TPCH_SF10\".\"NATION\" GROUP BY \"N_NAME\" \nHAVING count(\"N_NAME\"\
+  ) = ?) AS only_once\n LIMIT ?"
+checksum: d25b638acb8ee7ae61e72134a7553af3
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: a74b0f11-b7dd-44fd-b8e7-b7f7228490f5
+    type: table
+    name: NATION
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.NATION
+    description: Nation data as defined by TPC-H
+    displayName: NATION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

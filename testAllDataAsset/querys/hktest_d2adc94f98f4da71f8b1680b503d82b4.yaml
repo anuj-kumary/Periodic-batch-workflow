@@ -1,0 +1,30 @@
+name: d2adc94f98f4da71f8b1680b503d82b4
+fullyQualifiedName: hktest.d2adc94f98f4da71f8b1680b503d82b4
+owners: []
+duration: 51.0
+users: []
+query: "WITH e3c58aee13887c409aa5a310c57a9757_rnd AS \n(SELECT \"CNTRCT_1\".\"CNTRCT_PLAN_CNCTNTN_CD\"\
+  \ AS \"CNTRCT_PLAN_CNCTNTN_CD\" \nFROM \"CURATED\".\"CNTRCT\" AS \"CNTRCT_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \ne3c58aee13887c409aa5a310c57a9757_sample AS \n(SELECT e3c58aee13887c409aa5a310c57a9757_rnd.\"\
+  CNTRCT_PLAN_CNCTNTN_CD\" AS \"CNTRCT_PLAN_CNCTNTN_CD\" \nFROM e3c58aee13887c409aa5a310c57a9757_rnd)\n\
+  \ SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"CNTRCT_PLAN_CNCTNTN_CD\"\
+  ) AS count_1 \nFROM e3c58aee13887c409aa5a310c57a9757_sample GROUP BY \"CNTRCT_PLAN_CNCTNTN_CD\"\
+  \ \nHAVING count(\"CNTRCT_PLAN_CNCTNTN_CD\") = ?) AS only_once\n LIMIT ?"
+checksum: d2adc94f98f4da71f8b1680b503d82b4
+queryDate: 1749254400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: f3f7adf0-5934-40b1-9c34-71aa27a03cd6
+    type: table
+    name: CNTRCT
+    fullyQualifiedName: hktest.INDIVIDUAL.CURATED.CNTRCT
+    displayName: CNTRCT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

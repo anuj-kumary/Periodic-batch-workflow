@@ -1,0 +1,30 @@
+name: d3bd4556b6c66465ccfacb9a5b366101
+fullyQualifiedName: hktest.d3bd4556b6c66465ccfacb9a5b366101
+owners: []
+duration: 103.0
+users: []
+query: "WITH c9a70e63510b664d91c87d56c823d0ce_rnd AS \n(SELECT \"WEB_SITE_1\".\"WEB_STATE\"\
+  \ AS \"WEB_STATE\" \nFROM \"TPCDS_SF100TCL\".\"WEB_SITE\" AS \"WEB_SITE_1\" TABLESAMPLE\
+  \ ROW(? ROWS)), \nc9a70e63510b664d91c87d56c823d0ce_sample AS \n(SELECT c9a70e63510b664d91c87d56c823d0ce_rnd.\"\
+  WEB_STATE\" AS \"WEB_STATE\" \nFROM c9a70e63510b664d91c87d56c823d0ce_rnd)\n SELECT\
+  \ count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"WEB_STATE\") AS count_1 \n\
+  FROM c9a70e63510b664d91c87d56c823d0ce_sample GROUP BY \"WEB_STATE\" \nHAVING count(\"\
+  WEB_STATE\") = ?) AS only_once\n LIMIT ?"
+checksum: d3bd4556b6c66465ccfacb9a5b366101
+queryDate: 1748390400000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 19098f0b-68e4-4139-8413-0b3e3cec98ee
+    type: table
+    name: WEB_SITE
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_SITE
+    displayName: WEB_SITE
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

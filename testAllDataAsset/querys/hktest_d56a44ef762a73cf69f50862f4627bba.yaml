@@ -1,0 +1,26 @@
+name: d56a44ef762a73cf69f50862f4627bba
+fullyQualifiedName: hktest.d56a44ef762a73cf69f50862f4627bba
+owners: []
+duration: 123.0
+users: []
+query: "SELECT count(*) AS \"uniqueCount\" \nFROM (SELECT count(\"LOANAMOUNT\") AS\
+  \ count_1 \nFROM \"MSSQLBANKING_ACCOUNT\".\"LOANACCOUNT\" GROUP BY \"LOANAMOUNT\"\
+  \ \nHAVING count(\"LOANAMOUNT\") = ?) AS only_once\n LIMIT ?"
+checksum: d56a44ef762a73cf69f50862f4627bba
+queryDate: 1751587200000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: 0776506f-3c50-4714-bf68-fd02c42cf3f6
+    type: table
+    name: LOANACCOUNT
+    fullyQualifiedName: hktest.FIVETRAN.MSSQLBANKING_ACCOUNT.LOANACCOUNT
+    displayName: LOANACCOUNT
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest

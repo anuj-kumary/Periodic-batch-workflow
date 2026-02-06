@@ -1,0 +1,28 @@
+name: d36a1bc76b5b836052e6f95d74a5ecdc
+fullyQualifiedName: hktest.d36a1bc76b5b836052e6f95d74a5ecdc
+owners: []
+duration: 103.0
+users: []
+query: "SELECT percentile_cont(?) WITHIN GROUP (ORDER BY \"N_REGIONKEY\" ASC) AS median,\
+  \ percentile_cont(?) WITHIN GROUP (ORDER BY \"N_REGIONKEY\" ASC) AS \"firstQuartile\"\
+  , percentile_cont(?) WITHIN GROUP (ORDER BY \"N_REGIONKEY\" ASC) AS \"thirdQuartile\"\
+  \ \nFROM \"TPCH_SF10\".\"NATION\"\n LIMIT ?"
+checksum: d36a1bc76b5b836052e6f95d74a5ecdc
+queryDate: 1752364800000
+usedBy:
+  - TESTOPENMETADATA
+tags: []
+queryUsedIn:
+  - id: a74b0f11-b7dd-44fd-b8e7-b7f7228490f5
+    type: table
+    name: NATION
+    fullyQualifiedName: hktest.SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.NATION
+    description: Nation data as defined by TPC-H
+    displayName: NATION
+    deleted: false
+processedLineage: false
+service:
+  id: 28293590-2cd0-4d6a-ad7c-bf50802ee2dd
+  type: databaseService
+  name: hktest
+  fullyQualifiedName: hktest
