@@ -1,0 +1,175 @@
+name: T078D
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D
+description: Trans.-dependent screen selection for cust.master
+tableType: Regular
+columns:
+  - name: FAUS1
+    displayName: FAUS1
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUS1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: FAUS2
+    displayName: FAUS2
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUS2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: FAUS3
+    displayName: FAUS3
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUS3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: FAUSA
+    displayName: FAUSA
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for general data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUSA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FAUSF
+    displayName: FAUSF
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for comp.code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUSF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FAUSG
+    displayName: FAUSG
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for comp.code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUSG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: FAUSU
+    displayName: Sales data
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for sales fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUSU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: FAUSV
+    displayName: Sales data
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Customer master record field status def.for sales fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUSV
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FAUSW
+    displayName: FieldStatus plant
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, plant master for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.FAUSW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TCODE
+    displayName: Transaction Code
+    dataType: CHAR
+    dataLength: 20
+    dataTypeDisplay: char(20)
+    description: Transaction Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078D.TCODE
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - TCODE
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 626de0fff76fa21d6c1881ab3d493de7
+processedLineage: false
+entityStatus: Approved

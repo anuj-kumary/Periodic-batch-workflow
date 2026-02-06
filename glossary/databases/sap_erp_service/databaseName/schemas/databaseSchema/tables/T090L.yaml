@@ -1,0 +1,127 @@
+name: T090L
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L
+description: Unit-of-production method of depreciation
+tableType: Regular
+columns:
+  - name: AFASL
+    displayName: Depreciation key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Depreciation key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.AFASL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: AFPER
+    displayName: Depreciation period
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Depreciation period in the fiscal year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.AFPER
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: GGJAHR
+    displayName: Validity year
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: numc(4)
+    description: Validity year for the depreciation key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.GGJAHR
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: GSTZAHL
+    displayName: Total units
+    dataType: DECIMAL
+    dataLength: 15
+    dataTypeDisplay: dec(15)
+    description: "Total number of units, which is available as of this period"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.GSTZAHL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: STZAHL
+    displayName: Planned no. of units
+    dataType: DECIMAL
+    dataLength: 15
+    dataTypeDisplay: dec(15)
+    description: Planned number of units in the period
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090L.STZAHL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFASL
+      - AFPER
+      - BUKRS
+      - GGJAHR
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 8f63cb49ab9de4b2c08fb05bf92a1c88
+processedLineage: false
+entityStatus: Approved

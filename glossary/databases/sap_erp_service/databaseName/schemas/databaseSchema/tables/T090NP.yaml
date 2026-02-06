@@ -1,0 +1,211 @@
+name: T090NP
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP
+description: Period Control Method
+tableType: Regular
+columns:
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.AFAPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: METPER
+    displayName: Period control method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Period Control Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.METPER
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: PERBAA
+    displayName: Unplanned Depreciation
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Unplanned Depreciation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBAA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: PERBAB
+    displayName: Retirement
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Retirement"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBAB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: PERBAW
+    displayName: Revaluation
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Revaluation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBAW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: PERBD1
+    displayName: Dummy
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control (Dummy Field for Enhancement)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBD1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: PERBD2
+    displayName: Dummy
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control (Dummy Field for Enhancement)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBD2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: PERBIF
+    displayName: Investment Support
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Investment Support
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBIF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: PERBNA
+    displayName: Acq. following year
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Acquisition in the following year"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBNA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: PERBUM
+    displayName: Transfer
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control : Transfer"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBUM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: PERBZR
+    displayName: Write-Ups to Reserves
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Write-Ups to Reserves
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBZR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PERBZU
+    displayName: Acquisition
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Acquisition"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.PERBZU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: XBZDAT
+    displayName: Calc.Dep from AsstValDate
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Ind.: Calculate depreciation from the asset value date"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NP.XBZDAT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFAPL
+      - MANDT
+      - METPER
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d7a425d1d63405067f64a29a65fdac96
+processedLineage: false
+entityStatus: Approved

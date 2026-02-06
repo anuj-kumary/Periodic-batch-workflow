@@ -1,0 +1,211 @@
+name: T078K
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K
+description: Transaction-dependent screen selection for vendor master
+tableType: Regular
+columns:
+  - name: FAUS1
+    displayName: FAUS1
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUS1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: FAUS2
+    displayName: FAUS2
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUS2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: FAUS3
+    displayName: FAUS3
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUS3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: FAUSA
+    displayName: FAUSA
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FAUSF
+    displayName: FAUSF
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor master record field status def.for company code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FAUSG
+    displayName: FAUSG
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor master record field status def.for company code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: FAUSM
+    displayName: FAUSM
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for Purchasing Fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FAUSN
+    displayName: FAUSN
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for Purchasing Fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: FAUST
+    displayName: "Purchasing data, sub-range"
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUST
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: FAUSU
+    displayName: "Purchasing data, sub-range"
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: FAUSW
+    displayName: FAUSW
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: FAUSX
+    displayName: FAUSX
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.FAUSX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: TCODE
+    displayName: Transaction Code
+    dataType: CHAR
+    dataLength: 20
+    dataTypeDisplay: char(20)
+    description: Transaction Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T078K.TCODE
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - MANDT
+      - TCODE
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 3027298977a90cb9c7e93e3eeaf335b0
+processedLineage: false
+entityStatus: Approved

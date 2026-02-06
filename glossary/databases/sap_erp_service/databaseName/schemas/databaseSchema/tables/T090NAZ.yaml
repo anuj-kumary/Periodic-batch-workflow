@@ -1,0 +1,237 @@
+name: T090NAZ
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ
+description: Depreciation Keys - Method Assignment
+tableType: Regular
+columns:
+  - name: AFACLA
+    displayName: Classification
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Ordinary depreciation classification
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.AFACLA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.AFAPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: AFARSL
+    displayName: Base method
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Base method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.AFARSL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: AFASL
+    displayName: Depreciation key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Depreciation key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.AFASL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: AFATYP
+    displayName: Type of depreciation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation type
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.AFATYP
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: METDEG
+    displayName: Declining-balance method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Declining-Balance Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.METDEG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: METHBT
+    displayName: Maximum amount method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Maximum amount method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.METHBT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: METPER
+    displayName: Period control method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Period Control Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.METPER
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: METSTU
+    displayName: Multilevel method
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Multilevel Method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.METSTU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: MSFAKR
+    displayName: Multiple shift
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Effects of multiple shifts in depreciation key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.MSFAKR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: PHASE
+    displayName: Depreciation phase
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Depreciation phase
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.PHASE
+    tags: []
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: SCHROTT
+    displayName: Effect of scrap value on base value
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Effect of scrap value on the base value
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.SCHROTT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: UMRPRZ
+    displayName: Net.val.rate for dep.chng
+    dataType: DECIMAL
+    dataLength: 3
+    precision: 3
+    scale: 1
+    dataTypeDisplay: "dec(3,1)"
+    description: Net book value percentage rate for depreciation changeover
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.UMRPRZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: UMSTM
+    displayName: Changeover method
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Changeover method
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.UMSTM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: XSTILL
+    displayName: Calculate shutdown
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Calculate shutdown
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090NAZ.XSTILL
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFAPL
+      - AFASL
+      - AFATYP
+      - MANDT
+      - PHASE
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d854bdbdce3ff7465b093ee8178ba57a
+processedLineage: false
+entityStatus: Approved

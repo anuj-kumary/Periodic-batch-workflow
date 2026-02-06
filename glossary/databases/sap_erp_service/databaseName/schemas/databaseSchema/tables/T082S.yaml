@@ -1,0 +1,103 @@
+name: T082S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082S
+description: Dynpro control of the views
+tableType: Regular
+columns:
+  - name: AFRUF
+    displayName: Online access OKCODE
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Access OK code online
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082S.AFRUF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: DYNNR
+    displayName: Dynpro No.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: numc(4)
+    description: Screen number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082S.DYNNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: LFDNR
+    displayName: LFDNR
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Maintenance screen sequence seq.no./curr.no.
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082S.LFDNR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: VIEWX
+    displayName: Asset view
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: numc(1)
+    description: Asset view
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082S.VIEWX
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - LFDNR
+      - MANDT
+      - VIEWX
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9644cb2aad4a88c3d0872347653c92e9
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,151 @@
+name: T085P
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P
+description: "Investment support: Default and check table"
+tableType: Regular
+columns:
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.AFAPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: ANLKL
+    displayName: Asset Class
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Asset Class
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.ANLKL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.BUKRS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: INVSL
+    displayName: Investment support
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Investment support key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.INVSL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KOSTL
+    displayName: Cost Center
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Cost Center
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.KOSTL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: LFDNR
+    displayName: Sequence Number
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Sequence Number
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.LFDNR
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: WERKS
+    displayName: Plant
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Plant
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.WERKS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XVRSCH
+    displayName: Proposed measure
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Investment support: Default indicator"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085P.XVRSCH
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFAPL
+      - INVSL
+      - LFDNR
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 71bc34bfb5490544936d703606351111
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,199 @@
+name: T082G
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G
+description: Field strings for screen selection asset master data.
+tableType: Regular
+columns:
+  - name: FEGRU
+    displayName: Asset field group
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Field group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.FEGRU
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FEGTB
+    displayName: Field Groups Table
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Field group table assignment
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.FEGTB
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: FELEI
+    displayName: Screen layout rule
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Screen layout for Asset Accounting
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.FELEI
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FKANN
+    displayName: Optional entry
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Optional entry field indicator
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.FKANN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: FMUSS
+    displayName: Required entry
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Required entry field"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.FMUSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FNEIN
+    displayName: Hide Field
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Suppressed entry field"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.FNEIN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: IANL1
+    displayName: Transfer from main number
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Ind.: Transfer entry from main asset number to sub-number"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.IANL1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: IANL2
+    displayName: Entry in subnumber
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Ind.: Entry allowed in asset sub-number"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.IANL2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: ICPYR
+    displayName: Transfer from reference asset
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Copy field group from reference asset"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.ICPYR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: IMASS
+    displayName: Multiple Asset Creation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Can Be Selected When Creating Multiple Assets
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.IMASS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: INANK
+    displayName: Entry in ass. class
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Entry allowed in asset class"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.INANK
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: INGEG
+    displayName: Entry in asset catalog
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Entry allowed in asset catalog"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.INGEG
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T082G.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - FEGRU
+      - FEGTB
+      - FELEI
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 5864df17dd33545653a102aaf38a7470
+processedLineage: false
+entityStatus: Approved

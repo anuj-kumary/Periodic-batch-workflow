@@ -1,0 +1,287 @@
+name: T085
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085
+description: Investment support measures
+tableType: Regular
+columns:
+  - name: ADATU
+    displayName: Valid from
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Date for beginning of validity
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.ADATU
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: AFAPL
+    displayName: Chart of Dep.
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Depreciaton for Asset Valuation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.AFAPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: BDATU
+    displayName: Valid to
+    dataType: DATE
+    dataLength: 8
+    dataTypeDisplay: dats(8)
+    description: Date validity ends
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.BDATU
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: BFRJAR
+    displayName: Retention per.YY/MM
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Retention period in years
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.BFRJAR
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: BFRMON
+    displayName: Months
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Retention period in months
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.BFRMON
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: EAFABE
+    displayName: Inv.support area
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: "Investment support: Separate area"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.EAFABE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: FRIBEG
+    displayName: Req.retention per. start date
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Period calculation start date"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.FRIBEG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: IAFABE
+    displayName: Base area amnt deter
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: numc(2)
+    description: Depreciation area for determining investment support amount
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.IAFABE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: IBWASL
+    displayName: Transaction type
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: char(3)
+    description: Transaction type for posting investment support
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.IBWASL
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: IFDART
+    displayName: Date used for the calculation
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Which date is used for calculating investment support?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.IFDART
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: INVEINZ
+    displayName: Line item proof in support request
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Line item proof for investment support"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.INVEINZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: INVSL
+    displayName: Investment support
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Investment support key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.INVSL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: MXBTRG
+    displayName: Max. support amount
+    dataType: DECIMAL
+    dataLength: 13
+    precision: 13
+    scale: 2
+    dataTypeDisplay: "curr(13,2)"
+    description: "Investment support measure: Maximum amount"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.MXBTRG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: MXPROZ
+    displayName: Max.percentage rate
+    dataType: DECIMAL
+    dataLength: 7
+    precision: 7
+    scale: 4
+    dataTypeDisplay: "dec(7,4)"
+    description: "APC investment support: Maximum percentage"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.MXPROZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: RUECKZ
+    displayName: Repayment type for premature retirement
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: How should investment support be repaid?
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.RUECKZ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: XIFBGJ
+    displayName: Support per acquisition year
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Not used: Investment support by acquisition years"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.XIFBGJ
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: XINACH
+    displayName: Catch-up
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Investment support catch-up"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.XINACH
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: XMAFA
+    displayName: Allow for transfer of reserves
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Allowance for transfer of reserves"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.XMAFA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: XPROB
+    displayName: Check Inv. support
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Checking an investment support measure
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T085.XPROB
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFAPL
+      - INVSL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 264b8aa8c8954f35285cf9bf0b1bfd76
+processedLineage: false
+entityStatus: Approved

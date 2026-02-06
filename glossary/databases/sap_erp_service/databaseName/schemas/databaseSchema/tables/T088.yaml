@@ -1,0 +1,139 @@
+name: T088
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088
+description: Selection Table for Italian Asset Register
+tableType: Regular
+columns:
+  - name: ANLKL
+    displayName: Asset Class
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Asset Class
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.ANLKL
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: KTOGR
+    displayName: Acct determination
+    dataType: CHAR
+    dataLength: 8
+    dataTypeDisplay: char(8)
+    description: Account determination
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.KTOGR
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: XPRKNZ
+    displayName: Print indicator?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Print indicator in asset register (Italy)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.XPRKNZ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: XPRSTO
+    displayName: Print location?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Print the location in the asset register (Italy)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.XPRSTO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: XPRTXT
+    displayName: Print asset text?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Print asset text in the asset register (Italy)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.XPRTXT
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: XPRZUJ
+    displayName: Print acquis. year?
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Print acquisition year in asset register (IT)"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T088.XPRZUJ
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - ANLKL
+      - BUKRS
+      - KTOGR
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 766cfcaf026cfd5cb7d354cad931465e
+processedLineage: false
+entityStatus: Approved

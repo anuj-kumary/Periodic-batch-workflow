@@ -1,0 +1,151 @@
+name: T077S
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S
+description: G/L account groups
+tableType: Regular
+columns:
+  - name: BISNR
+    displayName: To G/L account
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Number of G/L Account (Upper Area Limit)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.BISNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FAUSS
+    displayName: Field status
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Field status definition for G/L accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.FAUSS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: KTOKS
+    displayName: Account Group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: G/L Account Group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.KTOKS
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: KTOPL
+    displayName: Chart of Accounts
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Chart of Accounts
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.KTOPL
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LAYOUT_0
+    displayName: Central layout
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "G/L account master record: Layout for \"Central Processing\""
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.LAYOUT_0
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: LAYOUT_P
+    displayName: Chart of accts layout
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "G/L master data: Layout for \"chart of accts processsing\""
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.LAYOUT_P
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: LAYOUT_S
+    displayName: Company code layout
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "G/L master data: Layout for \"company code processing\""
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.LAYOUT_S
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: VONNR
+    displayName: From G/L account
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Number of G/L account (lower area limit)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077S.VONNR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KTOKS
+      - KTOPL
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 49b31d4de77a2ec9573d1f6f054f7160
+processedLineage: false
+entityStatus: Approved

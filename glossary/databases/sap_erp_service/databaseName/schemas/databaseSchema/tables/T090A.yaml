@@ -1,0 +1,211 @@
+name: T090A
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A
+description: Period control dep. calculation
+tableType: Regular
+columns:
+  - name: AFASL
+    displayName: Depreciation key
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Depreciation key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.AFASL
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: BGJAHR
+    displayName: Valid to fiscal year
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: numc(4)
+    description: Valid to fiscal year
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.BGJAHR
+    tags: []
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: BUKRS
+    displayName: Company Code
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Company Code
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.BUKRS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: PERBAA
+    displayName: Unplanned Depreciation
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Unplanned Depreciation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBAA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: PERBAB
+    displayName: Retirement
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Retirement"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBAB
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: PERBAW
+    displayName: Revaluation
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Revaluation
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBAW
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: PERBD1
+    displayName: Dummy
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control (Dummy Field for Enhancement)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBD1
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: PERBD2
+    displayName: Dummy
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control (Dummy Field for Enhancement)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBD2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: PERBIF
+    displayName: Investment Support
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Investment Support
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBIF
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: PERBNA
+    displayName: Acq. following year
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Acquisition in the following year"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBNA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: PERBUM
+    displayName: Transfer
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control : Transfer"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBUM
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: PERBZR
+    displayName: Write-Ups to Reserves
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Period Control for Write-Ups to Reserves
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBZR
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: PERBZU
+    displayName: Acquisition
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: "Period control: Acquisition"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T090A.PERBZU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - AFASL
+      - BGJAHR
+      - BUKRS
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9f827e5bd91200fd3914e81bf73f36a0
+processedLineage: false
+entityStatus: Approved

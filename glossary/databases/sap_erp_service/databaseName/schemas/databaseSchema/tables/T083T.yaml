@@ -1,0 +1,91 @@
+name: T083T
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T083T
+description: Description of leasing cycle
+tableType: Regular
+columns:
+  - name: LRYTH
+    displayName: Payment cycle
+    dataType: CHAR
+    dataLength: 3
+    dataTypeDisplay: numc(3)
+    description: Lease payment cycle
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T083T.LRYTH
+    tags: []
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: LRYTX
+    displayName: Description
+    dataType: CHAR
+    dataLength: 30
+    dataTypeDisplay: char(30)
+    description: Leasing cycle description
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T083T.LRYTX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T083T.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: SPRAS
+    displayName: Language Key
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: lang(1)
+    description: Language Key
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T083T.SPRAS
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - LRYTH
+      - MANDT
+      - SPRAS
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 6db1be41110c7721744242e86baccf7f
+processedLineage: false
+entityStatus: Approved

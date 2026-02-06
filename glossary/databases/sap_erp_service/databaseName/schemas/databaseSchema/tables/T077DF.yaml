@@ -1,0 +1,103 @@
+name: T077DF
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077DF
+description: "Customer Group: FI-CA Integration (Distributed Systems)"
+tableType: Regular
+columns:
+  - name: KTOKD
+    displayName: Account group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Customer Account Group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077DF.KTOKD
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LOGSYS
+    displayName: Logical System
+    dataType: CHAR
+    dataLength: 10
+    dataTypeDisplay: char(10)
+    description: Logical System
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077DF.LOGSYS
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077DF.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: XFICA
+    displayName: Posting in FI-CA
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Posting Is Made in Contract A/R & A/P (FI-CA)
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077DF.XFICA
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: XSDCO
+    displayName: Update CO
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Activate Direct Update of Controlling
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077DF.XSDCO
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KTOKD
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: f1d6268c0c82e7a0bc3120e733cd5a8a
+processedLineage: false
+entityStatus: Approved

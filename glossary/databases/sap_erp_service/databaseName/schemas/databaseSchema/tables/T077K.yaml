@@ -1,0 +1,319 @@
+name: T077K
+fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K
+description: Vendor account groups
+tableType: Regular
+columns:
+  - name: DURAS
+    displayName: Copy default values
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: Copy Default Values for Material from Vendor Master
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.DURAS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 16
+    children: []
+    customMetrics: []
+  - name: FAUS1
+    displayName: FAUS1
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUS1
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: FAUS2
+    displayName: FAUS2
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUS2
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 22
+    children: []
+    customMetrics: []
+  - name: FAUS3
+    displayName: FAUS3
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUS3
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 23
+    children: []
+    customMetrics: []
+  - name: FAUSA
+    displayName: FAUSA
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for General Data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: FAUSF
+    displayName: FAUSF
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor master record field status def.for company code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSF
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: FAUSG
+    displayName: FAUSG
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor master record field status def.for company code data
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSG
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 18
+    children: []
+    customMetrics: []
+  - name: FAUSM
+    displayName: FAUSM
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for Purchasing Fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSM
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: FAUSN
+    displayName: FAUSN
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: Vendor Master Record Field Status Def.for Purchasing Fields
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSN
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 19
+    children: []
+    customMetrics: []
+  - name: FAUST
+    displayName: "Purchasing data, sub-range"
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUST
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: FAUSU
+    displayName: "Purchasing data, sub-range"
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSU
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 21
+    children: []
+    customMetrics: []
+  - name: FAUSW
+    displayName: FAUSW
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSW
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: FAUSX
+    displayName: FAUSX
+    dataType: CHAR
+    dataLength: 40
+    dataTypeDisplay: char(40)
+    description: "Field status bar, vendor master record, for IS-R data"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.FAUSX
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 20
+    children: []
+    customMetrics: []
+  - name: KTOKD
+    displayName: Default for cust.account group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Default value for customer account group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.KTOKD
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 17
+    children: []
+    customMetrics: []
+  - name: KTOKK
+    displayName: Account Group
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: Supplier Account Group
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.KTOKK
+    tags: []
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: LTSNA
+    displayName: Vendor sub-range relevant
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: vendor sub-range relevant"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.LTSNA
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: MANDT
+    displayName: Client
+    dataType: INT
+    dataLength: 3
+    dataTypeDisplay: clnt(3)
+    description: Client
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.MANDT
+    tags: []
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: NUMKR
+    displayName: Number Range
+    dataType: CHAR
+    dataLength: 2
+    dataTypeDisplay: char(2)
+    description: Number Range
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.NUMKR
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: PARGE
+    displayName: "Partner schema, purch. org."
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "Partner schema: purchasing organization level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.PARGE
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: PARGT
+    displayName: "Partner schema, sub-range"
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "Partner schema, sub-range"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.PARGT
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+  - name: PARGW
+    displayName: "Partner schema: plant level"
+    dataType: CHAR
+    dataLength: 4
+    dataTypeDisplay: char(4)
+    description: "Partner schema: plant level"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.PARGW
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 15
+    children: []
+    customMetrics: []
+  - name: WERKR
+    displayName: Plant level relevant
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: plant level relevant"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.WERKR
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: XCPDS
+    displayName: One-time account
+    dataType: CHAR
+    dataLength: 1
+    dataTypeDisplay: char(1)
+    description: "Indicator: Account group for one-time accounts?"
+    fullyQualifiedName: sap_erp_service.databaseName.databaseSchema.T077K.XCPDS
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: PRIMARY_KEY
+    columns:
+      - KTOKK
+      - MANDT
+owners: []
+databaseSchema:
+  id: 9f06eb9b-1717-4f0b-9cb2-31cff00378da
+  type: databaseSchema
+  name: databaseSchema
+  fullyQualifiedName: sap_erp_service.databaseName.databaseSchema
+  displayName: databaseSchema
+  deleted: false
+database:
+  id: dc93518e-32e8-4924-b933-e05b4af30ff6
+  type: database
+  name: databaseName
+  fullyQualifiedName: sap_erp_service.databaseName
+  displayName: databaseName
+  deleted: false
+service:
+  id: 164d847b-1fd1-48df-a6f9-286e1dc28a2e
+  type: databaseService
+  name: sap_erp_service
+  fullyQualifiedName: sap_erp_service
+  displayName: sap_erp_service
+  deleted: false
+serviceType: SapErp
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 5cac646e95a07cd9281759ef58babb8d
+processedLineage: false
+entityStatus: Approved
