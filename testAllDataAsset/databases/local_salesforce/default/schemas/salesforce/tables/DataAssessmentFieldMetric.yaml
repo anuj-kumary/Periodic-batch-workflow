@@ -1,0 +1,205 @@
+name: DataAssessmentFieldMetric
+fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric
+description: Data Assessment Field Metric
+tableType: Regular
+columns:
+  - name: Id
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: id
+    description: Data Assessment Field Metric ID
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.Id
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 1
+    children: []
+    customMetrics: []
+  - name: IsDeleted
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: boolean
+    description: Deleted
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.IsDeleted
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 2
+    children: []
+    customMetrics: []
+  - name: Name
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Data Assessment Field Metric
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.Name
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 3
+    children: []
+    customMetrics: []
+  - name: CreatedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Created Date
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.CreatedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 4
+    children: []
+    customMetrics: []
+  - name: CreatedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Created By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.CreatedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 5
+    children: []
+    customMetrics: []
+  - name: LastModifiedDate
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: Last Modified Date
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.LastModifiedDate
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 6
+    children: []
+    customMetrics: []
+  - name: LastModifiedById
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Last Modified By ID
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.LastModifiedById
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 7
+    children: []
+    customMetrics: []
+  - name: SystemModstamp
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: datetime
+    description: System Modstamp
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.SystemModstamp
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 8
+    children: []
+    customMetrics: []
+  - name: DataAssessmentMetricId
+    dataType: VARCHAR
+    dataLength: 18
+    dataTypeDisplay: reference
+    description: Data Assessment Metric ID
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.DataAssessmentMetricId
+    tags: []
+    constraint: NOT_NULL
+    ordinalPosition: 9
+    children: []
+    customMetrics: []
+  - name: FieldName
+    dataType: UNKNOWN
+    dataLength: 255
+    dataTypeDisplay: string
+    description: Field Name
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.FieldName
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 10
+    children: []
+    customMetrics: []
+  - name: NumMatchedInSync
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Number of Matched Records that have the same value for this field
+      as Data.com
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.NumMatchedInSync
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 11
+    children: []
+    customMetrics: []
+  - name: NumMatchedDifferent
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Number of Matched Records that have different value for this field
+      than Data.com
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.NumMatchedDifferent
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 12
+    children: []
+    customMetrics: []
+  - name: NumMatchedBlanks
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Number of Matched Records that have blanks for this field
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.NumMatchedBlanks
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 13
+    children: []
+    customMetrics: []
+  - name: NumUnmatchedBlanks
+    dataType: UNKNOWN
+    dataLength: 0
+    dataTypeDisplay: int
+    description: Number of Unmatched Records that have blanks for this field
+    fullyQualifiedName: local_salesforce.default.salesforce.DataAssessmentFieldMetric.NumUnmatchedBlanks
+    tags: []
+    constraint: "NULL"
+    ordinalPosition: 14
+    children: []
+    customMetrics: []
+owners: []
+databaseSchema:
+  id: 9bda545c-bf37-4c29-b63e-07cabc2b1926
+  type: databaseSchema
+  name: salesforce
+  fullyQualifiedName: local_salesforce.default.salesforce
+  displayName: salesforce
+  deleted: false
+database:
+  id: 2cedc857-dacf-4943-b02e-9f2578aaf3c6
+  type: database
+  name: default
+  fullyQualifiedName: local_salesforce.default
+  displayName: default
+  deleted: false
+service:
+  id: dd198fe7-cd27-446a-9713-452aa257669c
+  type: databaseService
+  name: local_salesforce
+  fullyQualifiedName: local_salesforce
+  displayName: local_salesforce
+  deleted: false
+serviceType: Salesforce
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: deleted
+      oldValue: false
+      newValue: true
+  fieldsDeleted: []
+  previousVersion: 0.1
+sourceUrl: https://energy-fun-7814.my.salesforce.com/lightning/o/DataAssessmentFieldMetric/list
+domains: []
+dataProducts: []
+sourceHash: 57b170f06bdf019d81d9eeaebfab9165
+processedLineage: false
+entityStatus: Unprocessed
