@@ -1,0 +1,112 @@
+name: transact
+fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact
+tableType: Regular
+columns:
+  - name: transactid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact.transactid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact.accountid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact.amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: transactdate
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact.transactdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: transacttype
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact.transacttype
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7f07b0be-6cbd-4d43-8150-2712c2314353
+  type: databaseSchema
+  name: mssqlbanking_stg
+  fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg
+  displayName: mssqlbanking_stg
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/daf71411-d996-4ed6-81fe-4e5ccb7cd631
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: a4275d85-f2e1-49c0-a142-05167ffa8f24
+  type: testSuite
+  name: testDbxtest.demo.mssqlbanking_stg.transact.testSuite
+  fullyQualifiedName: testDbxtest.demo.mssqlbanking_stg.transact.testSuite
+  displayName: testDbxtest.demo.mssqlbanking_stg.transact.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 1e256804f8aaff62d352140f84d030ff
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,173 @@
+name: zookeeper_connection
+fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection
+description: "Shows the information about current connections to [Zoo]Keeper (including\
+  \ auxiliary [ZooKeepers)"
+tableType: Regular
+columns:
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: ZooKeeper cluster's name.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: host
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: The hostname/IP of the ZooKeeper node that ClickHouse connected to.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.host
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: port
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint16
+    description: The port of the ZooKeeper node that ClickHouse connected to.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.port
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: index
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: nullable<uint8>
+    description: "The index of the ZooKeeper node that ClickHouse connected to. The\
+      \ index is from ZooKeeper config. If not connected, this column is NULL."
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.index
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: connected_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    description: When the connection was established.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.connected_time
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: session_uptime_elapsed_seconds
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Seconds elapsed since the connection was established.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.session_uptime_elapsed_seconds
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: is_expired
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: Is the current connection expired.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.is_expired
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: keeper_api_version
+    dataType: SMALLINT
+    dataLength: 1
+    dataTypeDisplay: uint8
+    description: Keeper API version.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.keeper_api_version
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: client_id
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: Session id of the connection.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.client_id
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: xid
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: XID of the current session.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.xid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: enabled_feature_flags
+    dataType: ARRAY
+    arrayDataType: UNKNOWN
+    dataTypeDisplay: "array<enum16<'filtered_list'=0,'multi_read'=1,'check_not_exists'=2,'create_if_not_exists'=3,'remove_recursive'=4,'multi_watches'=5>>"
+    description: Feature flags which are enabled. Only applicable to ClickHouse Keeper.
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.enabled_feature_flags
+    tags: []
+    children: []
+    customMetrics: []
+  - name: availability_zone
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Availability zone
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.availability_zone
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: session_timeout_ms
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Session timeout (in milliseconds)
+    fullyQualifiedName: test_clickhouse.default.system.zookeeper_connection.session_timeout_ms
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: d53258edf86a8ea88222b0b10f8e2071
+processedLineage: false
+entityStatus: Unprocessed

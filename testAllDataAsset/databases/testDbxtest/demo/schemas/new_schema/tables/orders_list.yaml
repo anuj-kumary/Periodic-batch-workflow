@@ -1,0 +1,169 @@
+name: orders_list
+fullyQualifiedName: testDbxtest.demo.new_schema.orders_list
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Unique identifier
+    fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the person
+    fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: STRUCT
+    dataTypeDisplay: "struct<street:string,city:string,state:string,postal_code:string,country:string,coordinates:struct<latitude:double,longitude:double>>"
+    description: Address information
+    fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address
+    tags: []
+    children:
+      - name: street
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.street
+        tags: []
+        children: []
+      - name: city
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.city
+        tags: []
+        children: []
+      - name: state
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.state
+        tags: []
+        children: []
+      - name: postal_code
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.postal_code
+        tags: []
+        children: []
+      - name: country
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.country
+        tags: []
+        children: []
+      - name: coordinates
+        dataType: STRUCT
+        dataTypeDisplay: "struct<latitude:double,longitude:double>"
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.coordinates
+        tags: []
+        children:
+          - name: latitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.coordinates.latitude
+            tags: []
+            children: []
+          - name: longitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.address.coordinates.longitude
+            tags: []
+            children: []
+    customMetrics: []
+  - name: phone_numbers
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: List of phone numbers
+    fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.phone_numbers
+    tags: []
+    children: []
+    customMetrics: []
+  - name: preferences
+    dataType: MAP
+    dataTypeDisplay: "map<string,string>"
+    description: User preferences
+    fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.preferences
+    tags: []
+    children: []
+    customMetrics: []
+  - name: orders
+    dataType: ARRAY
+    arrayDataType: STRUCT
+    dataTypeDisplay: "array<struct<order_id:int,product:string,quantity:int>>"
+    description: List of orders
+    fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.orders
+    tags: []
+    children:
+      - name: order_id
+        dataType: INT
+        dataTypeDisplay: int
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.orders.order_id
+        tags: []
+        children: []
+      - name: product
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.orders.product
+        tags: []
+        children: []
+      - name: quantity
+        dataType: INT
+        dataTypeDisplay: int
+        fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.orders.quantity
+        tags: []
+        children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b321d745-640e-4bff-80ed-11f959c0d343
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: testDbxtest.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/12520614-2b77-45f3-bcb9-3c0a716b5fda
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: e27e7e3a-6e2e-4fbd-837b-5ee90e2a205b
+  type: testSuite
+  name: testDbxtest.demo.new_schema.orders_list.testSuite
+  fullyQualifiedName: testDbxtest.demo.new_schema.orders_list.testSuite
+  displayName: testDbxtest.demo.new_schema.orders_list.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: e0ac3b2392c7bd3b5f6802fd12465ff0
+processedLineage: false
+entityStatus: Approved

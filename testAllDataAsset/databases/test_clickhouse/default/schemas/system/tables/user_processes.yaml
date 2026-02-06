@@ -1,0 +1,102 @@
+name: user_processes
+fullyQualifiedName: test_clickhouse.default.system.user_processes
+description: This system table can be used to get overview of memory usage and ProfileEvents
+  of users.
+tableType: Regular
+columns:
+  - name: user
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: User name.
+    fullyQualifiedName: test_clickhouse.default.system.user_processes.user
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: memory_usage
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: Sum of RAM used by all processes of the user. It might not include
+      some types of dedicated memory. See the max_memory_usage setting.
+    fullyQualifiedName: test_clickhouse.default.system.user_processes.memory_usage
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: peak_memory_usage
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: int64
+    description: The peak of memory usage of the user. It can be reset when no queries
+      are run for the user.
+    fullyQualifiedName: test_clickhouse.default.system.user_processes.peak_memory_usage
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ProfileEvents
+    dataType: MAP
+    dataLength: 1
+    dataTypeDisplay: "map<string, uint64>"
+    description: Summary of ProfileEvents that measure different metrics for the user.
+      The description of them could be found in the table system.events
+    fullyQualifiedName: test_clickhouse.default.system.user_processes.ProfileEvents
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: ProfileEvents.Names
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    fullyQualifiedName: test_clickhouse.default.system.user_processes."ProfileEvents.Names"
+    tags: []
+    children: []
+    customMetrics: []
+  - name: ProfileEvents.Values
+    dataType: ARRAY
+    arrayDataType: BIGINT
+    dataTypeDisplay: array<uint64>
+    fullyQualifiedName: test_clickhouse.default.system.user_processes."ProfileEvents.Values"
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 56c2fff33dd97e4e07bce017201e61d6
+processedLineage: false
+entityStatus: Unprocessed

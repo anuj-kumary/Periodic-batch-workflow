@@ -1,0 +1,122 @@
+name: demo_data_ext_tbl3
+fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3
+tableType: Regular
+columns:
+  - name: CUSTOMERID
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.CUSTOMERID
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CUSTOMERNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.CUSTOMERNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: EMAIL
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.EMAIL
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CITY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.CITY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: COUNTRY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.COUNTRY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: TERRITORY
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.TERRITORY
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTACTFIRSTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.CONTACTFIRSTNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: CONTACTLASTNAME
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.CONTACTLASTNAME
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 756f97f9-d316-48a7-9bdd-acfb3ccda7fa
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: testDbxtest.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/dbt-testing/mayur/customers.csv
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 7157c4d4-a4d4-4582-8005-789140bdf0d6
+  type: testSuite
+  name: testDbxtest.demo.default.demo_data_ext_tbl3.testSuite
+  fullyQualifiedName: testDbxtest.demo.default.demo_data_ext_tbl3.testSuite
+  displayName: testDbxtest.demo.default.demo_data_ext_tbl3.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 9fcbf1576cc0da055b33df92dbd76b42
+processedLineage: false
+entityStatus: Approved

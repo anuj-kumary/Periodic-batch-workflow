@@ -1,0 +1,112 @@
+name: loanaccount
+fullyQualifiedName: testDbxtest.demo.account.loanaccount
+tableType: Regular
+columns:
+  - name: loanamount
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount.loanamount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: loanid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount.loanid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: loanstartdate
+    dataType: DATE
+    dataLength: 1
+    dataTypeDisplay: date
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount.loanstartdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: interestrate
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(5,2)"
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount.interestrate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.account.loanaccount._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 7777f426-5fcc-4d05-84b5-56ded1bb0f9e
+  type: databaseSchema
+  name: account
+  fullyQualifiedName: testDbxtest.demo.account
+  displayName: account
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/4fc4a90d-4c1d-4af8-a39b-464d83a160e7
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 83499075-8d45-423e-ba5f-d3d54e4f48af
+  type: testSuite
+  name: testDbxtest.demo.account.loanaccount.testSuite
+  fullyQualifiedName: testDbxtest.demo.account.loanaccount.testSuite
+  displayName: testDbxtest.demo.account.loanaccount.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 0c55bca343ad60fb95a4a05defd67417
+processedLineage: false
+entityStatus: Approved

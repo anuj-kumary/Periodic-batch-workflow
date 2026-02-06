@@ -1,0 +1,122 @@
+name: load_data_exp
+fullyQualifiedName: testDbxtest.demo.default.load_data_exp
+tableType: Regular
+columns:
+  - name: customerid
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customername
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.customername
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: city
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.city
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: country
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.country
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: territory
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.territory
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactfirstname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.contactfirstname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: contactlastname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: varchar(100)
+    fullyQualifiedName: testDbxtest.demo.default.load_data_exp.contactlastname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 756f97f9-d316-48a7-9bdd-acfb3ccda7fa
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: testDbxtest.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/9923364e-fc64-4871-96a9-bb9cf980d12e
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: ae4f727e-6528-4e6e-956c-5a5ee632dce0
+  type: testSuite
+  name: testDbxtest.demo.default.load_data_exp.testSuite
+  fullyQualifiedName: testDbxtest.demo.default.load_data_exp.testSuite
+  displayName: testDbxtest.demo.default.load_data_exp.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 4f684e92c896795317218506f5b2c833
+processedLineage: false
+entityStatus: Approved

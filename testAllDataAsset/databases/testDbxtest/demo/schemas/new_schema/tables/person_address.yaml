@@ -1,0 +1,153 @@
+name: person_address
+fullyQualifiedName: testDbxtest.demo.new_schema.person_address
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    description: Unique identifier
+    fullyQualifiedName: testDbxtest.demo.new_schema.person_address.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Name of the person
+    fullyQualifiedName: testDbxtest.demo.new_schema.person_address.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: address
+    dataType: STRUCT
+    dataTypeDisplay: "struct<street:string,city:string,state:string,postal_code:string,country:string,coordinates:struct<latitude:double,longitude:double,elevation:struct<level:int,unit:string>>>"
+    description: Address information
+    fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address
+    tags: []
+    children:
+      - name: street
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.street
+        tags: []
+        children: []
+      - name: city
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.city
+        tags: []
+        children: []
+      - name: state
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.state
+        tags: []
+        children: []
+      - name: postal_code
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.postal_code
+        tags: []
+        children: []
+      - name: country
+        dataType: STRING
+        dataTypeDisplay: string
+        fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.country
+        tags: []
+        children: []
+      - name: coordinates
+        dataType: STRUCT
+        dataTypeDisplay: "struct<latitude:double,longitude:double,elevation:struct<level:int,unit:string>>"
+        fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.coordinates
+        tags: []
+        children:
+          - name: latitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.coordinates.latitude
+            tags: []
+            children: []
+          - name: longitude
+            dataType: DOUBLE
+            dataTypeDisplay: double
+            fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.coordinates.longitude
+            tags: []
+            children: []
+          - name: elevation
+            dataType: STRUCT
+            dataTypeDisplay: "struct<level:int,unit:string>"
+            fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.coordinates.elevation
+            tags: []
+            children:
+              - name: level
+                dataType: INT
+                dataTypeDisplay: int
+                fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.coordinates.elevation.level
+                tags: []
+                children: []
+              - name: unit
+                dataType: STRING
+                dataTypeDisplay: string
+                fullyQualifiedName: testDbxtest.demo.new_schema.person_address.address.coordinates.elevation.unit
+                tags: []
+                children: []
+    customMetrics: []
+  - name: phone_numbers
+    dataType: ARRAY
+    arrayDataType: STRING
+    dataTypeDisplay: array<string>
+    description: List of phone numbers
+    fullyQualifiedName: testDbxtest.demo.new_schema.person_address.phone_numbers
+    tags: []
+    children: []
+    customMetrics: []
+  - name: preferences
+    dataType: MAP
+    dataTypeDisplay: "map<string,string>"
+    description: User preferences
+    fullyQualifiedName: testDbxtest.demo.new_schema.person_address.preferences
+    tags: []
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: b321d745-640e-4bff-80ed-11f959c0d343
+  type: databaseSchema
+  name: new_schema
+  fullyQualifiedName: testDbxtest.demo.new_schema
+  displayName: new_schema
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/78756f64-38f2-4fc2-8f4e-09d3fde0e92a
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 87a7cb4ac37e2d1b13dd29a56d1120e5
+processedLineage: false
+entityStatus: Approved

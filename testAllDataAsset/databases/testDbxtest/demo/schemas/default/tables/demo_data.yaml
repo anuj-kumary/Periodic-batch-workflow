@@ -1,0 +1,100 @@
+name: demo_data
+fullyQualifiedName: testDbxtest.demo.default.demo_data
+description: <p>New description for table.</p>
+tableType: Regular
+columns:
+  - name: user_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: (((((() description for column
+    fullyQualifiedName: testDbxtest.demo.default.demo_data.user_id
+    tags:
+      - tagFQN: sdaaaaa.sdaaaaa
+        name: sdaaaaa
+        description: DATABRICKS TAG
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: username
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.default.demo_data.username
+    tags:
+      - tagFQN: PII.Sensitive
+        name: Sensitive
+        description: "PII which if lost, compromised, or disclosed without authorization,\
+          \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+          \ to an individual."
+        style:
+          color: "#ff0000"
+        source: Classification
+        labelType: Automated
+        state: Suggested
+        appliedAt: 1767969396000
+        appliedBy: admin
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: <p>email description.</p>
+    fullyQualifiedName: testDbxtest.demo.default.demo_data.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 756f97f9-d316-48a7-9bdd-acfb3ccda7fa
+  type: databaseSchema
+  name: default
+  fullyQualifiedName: testDbxtest.demo.default
+  description: Default schema (auto-created)
+  displayName: default
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/01d9cb01-191a-4a34-964c-1ed290e27b92
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: f2c42264-f838-48c6-8803-adbf591b3c75
+  type: testSuite
+  name: testDbxtest.demo.default.demo_data.testSuite
+  fullyQualifiedName: testDbxtest.demo.default.demo_data.testSuite
+  displayName: testDbxtest.demo.default.demo_data.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 7b5064e068ebd82d61d3d50fd580cdcc
+processedLineage: false
+entityStatus: Approved

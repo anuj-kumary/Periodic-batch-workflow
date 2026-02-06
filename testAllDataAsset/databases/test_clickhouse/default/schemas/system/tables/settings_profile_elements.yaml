@@ -1,0 +1,147 @@
+name: settings_profile_elements
+fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements
+description: "Describes the content of each settings profile configured on the server.\
+  \ Including settings constraints, roles and users for which the settings are applied,\
+  \ and parent settings profiles."
+tableType: Regular
+columns:
+  - name: profile_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: Setting profile name.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.profile_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: user_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: User name.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.user_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: role_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: Role name.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.role_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: index
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: uint64
+    description: Sequential number of the settings profile element.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.index
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: setting_name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: Setting name.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.setting_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: value
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: Setting value.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.value
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: min
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: The minimum value of the setting. NULL if not set.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.min
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: max
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: The maximum value of the setting. NULL if not set.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.max
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: writability
+    dataType: ENUM
+    dataLength: 1
+    dataTypeDisplay: "nullable<enum8<'writable' = 0, 'const' = 1, 'changeable_in_readonly'\
+      \ = 2>>"
+    description: The property which shows whether a setting can be changed or not.
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.writability
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: inherit_profile
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: "A parent profile for this setting profile. NULL if not set. Setting\
+      \ profile will inherit all the settings' values and constraints (min, max, readonly)\
+      \ from its parent profiles."
+    fullyQualifiedName: test_clickhouse.default.system.settings_profile_elements.inherit_profile
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 9f128e390a182de74a69d7da23dc4c96
+processedLineage: false
+entityStatus: Unprocessed

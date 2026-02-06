@@ -1,0 +1,126 @@
+name: system_tables_tracking_brassaws_ak_80
+fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80
+tableType: Regular
+columns:
+  - name: name
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.name
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: uuid
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.uuid
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: data_path
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.data_path
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: schema
+    dataType: LOWCARDINALITY
+    dataLength: 1
+    dataTypeDisplay: lowcardinality<string>
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.schema
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: origin_replica
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.origin_replica
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: attached_replica_id
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.attached_replica_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: discovered_at
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime64<6>
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.discovered_at
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: last_scraped_at
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime64<6>
+    fullyQualifiedName: test_clickhouse.default.system.system_tables_tracking_brassaws_ak_80.last_scraped_at
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"accessed\":{\"timestamp\":1768521600000,\"accessedByAProcess\"\
+        :\"operator-internal\"}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+lifeCycle:
+  accessed:
+    timestamp: 1768521600000
+    accessedByAProcess: operator-internal
+sourceHash: 0aa52e20c3cf7f4644a2d197e9473ffd
+processedLineage: false
+entityStatus: Unprocessed

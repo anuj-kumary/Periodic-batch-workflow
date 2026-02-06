@@ -1,0 +1,121 @@
+name: customeraccounts
+fullyQualifiedName: testDbxtest.demo.stg.customeraccounts
+tableType: Regular
+columns:
+  - name: email
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.email
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: accountid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.accountid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: firstname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.firstname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: lastname
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.lastname
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customerid
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: int
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.customerid
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: balance
+    dataType: DECIMAL
+    dataLength: 1
+    dataTypeDisplay: "decimal(18,2)"
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.balance
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_deleted
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts._fivetran_deleted
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: _fivetran_synced
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp
+    fullyQualifiedName: testDbxtest.demo.stg.customeraccounts._fivetran_synced
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: d78440a5-3019-4fb6-83fc-7e6b4b6014b0
+  type: databaseSchema
+  name: stg
+  fullyQualifiedName: testDbxtest.demo.stg
+  displayName: stg
+  deleted: false
+database:
+  id: 4c3623c6-d72e-420b-be1a-b8eb224cd213
+  type: database
+  name: demo
+  fullyQualifiedName: testDbxtest.demo
+  displayName: demo
+  deleted: false
+service:
+  id: d155115f-1a6b-479d-ac0c-96c07737c3a8
+  type: databaseService
+  name: testDbxtest
+  fullyQualifiedName: testDbxtest
+  description: ""
+  displayName: testDbxtest
+  deleted: false
+serviceType: Databricks
+locationPath: s3://awsdatalake-testing/databricks-new-metastore/3849887a-24ae-4b8e-a470-9d953589f80e/tables/7f819925-17e0-48fa-ba4f-b9109bdefefb
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+testSuite:
+  id: 79d3f6c6-1321-4697-8dce-2071322f1f16
+  type: testSuite
+  name: testDbxtest.demo.stg.customeraccounts.testSuite
+  fullyQualifiedName: testDbxtest.demo.stg.customeraccounts.testSuite
+  displayName: testDbxtest.demo.stg.customeraccounts.testSuite
+  deleted: false
+domains: []
+dataProducts: []
+sourceHash: 2978dd382617b24fc354763f4079ba04
+processedLineage: false
+entityStatus: Approved

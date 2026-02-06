@@ -1,0 +1,125 @@
+name: schema_inference_cache
+fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache
+description: Contains information about all cached file schemas.
+tableType: Regular
+columns:
+  - name: storage
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Storage name: File, URL, S3 or HDFS."
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.storage
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: source
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: File source.
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.source
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: format
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: Format name.
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.format
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: additional_format_info
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: string
+    description: "Additional information required to identify the schema. For example,\
+      \ format specific settings."
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.additional_format_info
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: registration_time
+    dataType: DATETIME
+    dataLength: 1
+    dataTypeDisplay: datetime
+    description: Timestamp when schema was added in cache.
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.registration_time
+    tags: []
+    constraint: NOT_NULL
+    children: []
+    customMetrics: []
+  - name: schema
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: Cached schema.
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.schema
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: number_of_rows
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: nullable<uint64>
+    description: Number of rows in the file in given format. It's used for caching
+      trivial count() from data files and for caching number of rows from the metadata
+      during schema inference.
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.number_of_rows
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: schema_inference_mode
+    dataType: STRING
+    dataLength: 1
+    dataTypeDisplay: nullable<string>
+    description: Scheme inference mode.
+    fullyQualifiedName: test_clickhouse.default.system.schema_inference_cache.schema_inference_mode
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a7299bd-4233-40a1-9e70-dc760e5e6b42
+  type: databaseSchema
+  name: system
+  fullyQualifiedName: test_clickhouse.default.system
+  displayName: system
+  deleted: false
+database:
+  id: 892667da-43ed-425c-94ad-24a4cc252df4
+  type: database
+  name: default
+  fullyQualifiedName: test_clickhouse.default
+  displayName: default
+  deleted: false
+service:
+  id: b468f00e-0925-45e5-a89d-c038e1a5e79f
+  type: databaseService
+  name: test_clickhouse
+  fullyQualifiedName: test_clickhouse
+  description: ""
+  displayName: test_clickhouse
+  deleted: false
+serviceType: Clickhouse
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 39432f3f04ce690bfc03d46d80d7b291
+processedLineage: false
+entityStatus: Unprocessed
