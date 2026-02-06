@@ -1,0 +1,137 @@
+name: orders_ts
+fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts
+tableType: Regular
+columns:
+  - name: order_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.order_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: status
+    dataType: VARCHAR
+    dataLength: 14
+    dataTypeDisplay: character varying(14)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.status
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: credit_card_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.credit_card_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: coupon_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.coupon_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: bank_transfer_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.bank_transfer_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: gift_card_amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.gift_card_amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: amount
+    dataType: BIGINT
+    dataLength: 1
+    dataTypeDisplay: bigint
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.amount
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: order_ts
+    dataType: TIMESTAMP
+    dataLength: 1
+    dataTypeDisplay: timestamp without time zone
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.orders_ts.order_ts
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: DIST_KEY
+    columns:
+      - order_id
+owners: []
+databaseSchema:
+  id: af605672-17f4-4cb0-b81d-a620aaab0b40
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c8d5760a-7ecd-4578-9818-0c09c681537c
+  type: database
+  name: dev
+  fullyQualifiedName: redshift-reverse-metadata.dev
+  description: <p>desc for schema</p>
+  displayName: dev
+  deleted: false
+service:
+  id: d61a448e-f25d-4655-9e04-825911da9125
+  type: databaseService
+  name: redshift-reverse-metadata
+  fullyQualifiedName: redshift-reverse-metadata
+  description: <p>new desc</p>
+  displayName: redshift-reverse-metadata
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"created\":{\"timestamp\":1723105072250}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1723105072250
+sourceHash: de3f17293de662c0842254a782ab8e26
+processedLineage: false
+entityStatus: Approved

@@ -1,0 +1,69 @@
+name: stg_customers
+fullyQualifiedName: redshift-reverse-metadata.dev.dbt_analysis.stg_customers
+tableType: View
+columns:
+  - name: customer_id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_analysis.stg_customers.customer_id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_name
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: character varying(10)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_analysis.stg_customers.first_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_analysis.stg_customers.last_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 8a3576e1-c996-4d8b-9d85-97997c5e9c19
+  type: databaseSchema
+  name: dbt_analysis
+  fullyQualifiedName: redshift-reverse-metadata.dev.dbt_analysis
+  displayName: dbt_analysis
+  deleted: false
+database:
+  id: c8d5760a-7ecd-4578-9818-0c09c681537c
+  type: database
+  name: dev
+  fullyQualifiedName: redshift-reverse-metadata.dev
+  description: <p>desc for schema</p>
+  displayName: dev
+  deleted: false
+service:
+  id: d61a448e-f25d-4655-9e04-825911da9125
+  type: databaseService
+  name: redshift-reverse-metadata
+  fullyQualifiedName: redshift-reverse-metadata
+  description: <p>new desc</p>
+  displayName: redshift-reverse-metadata
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: 63f08f7fb9f409703aa0b065be94f9ce
+processedLineage: false
+entityStatus: Approved

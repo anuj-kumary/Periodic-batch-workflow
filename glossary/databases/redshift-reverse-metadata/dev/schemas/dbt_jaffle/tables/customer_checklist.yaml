@@ -1,0 +1,101 @@
+name: customer_checklist
+fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.customer_checklist
+description: This table stores tickets sales data
+tableType: Regular
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.customer_checklist.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: name
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: character varying(256)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.customer_checklist.name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: is_customer
+    dataType: BOOLEAN
+    dataLength: 1
+    dataTypeDisplay: boolean
+    description: boolean value if it is customer or not
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.customer_checklist.is_customer
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: age
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    description: age of customer boolean test
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.customer_checklist.age
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: birthdate
+    dataType: VARCHAR
+    dataLength: 256
+    dataTypeDisplay: character varying(256)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.customer_checklist.birthdate
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: af605672-17f4-4cb0-b81d-a620aaab0b40
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c8d5760a-7ecd-4578-9818-0c09c681537c
+  type: database
+  name: dev
+  fullyQualifiedName: redshift-reverse-metadata.dev
+  description: <p>desc for schema</p>
+  displayName: dev
+  deleted: false
+service:
+  id: d61a448e-f25d-4655-9e04-825911da9125
+  type: databaseService
+  name: redshift-reverse-metadata
+  fullyQualifiedName: redshift-reverse-metadata
+  description: <p>new desc</p>
+  displayName: redshift-reverse-metadata
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"created\":{\"timestamp\":1668000936556}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1668000936556
+sourceHash: 6c7f8274d4d035d874b68ecb85970a3b
+processedLineage: false
+entityStatus: Approved

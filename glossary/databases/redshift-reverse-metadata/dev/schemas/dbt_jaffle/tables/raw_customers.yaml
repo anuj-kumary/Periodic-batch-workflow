@@ -1,0 +1,87 @@
+name: raw_customers
+fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.raw_customers
+tableType: Partitioned
+columns:
+  - name: id
+    dataType: INT
+    dataLength: 1
+    dataTypeDisplay: integer
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.raw_customers.id
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: first_name
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: character varying(10)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.raw_customers.first_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: last_name
+    dataType: VARCHAR
+    dataLength: 2
+    dataTypeDisplay: character varying(2)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle.raw_customers.last_name
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints:
+  - constraintType: DIST_KEY
+    columns:
+      - id
+tablePartition:
+  columns:
+    - columnName: id
+      intervalType: COLUMN-VALUE
+owners: []
+databaseSchema:
+  id: af605672-17f4-4cb0-b81d-a620aaab0b40
+  type: databaseSchema
+  name: dbt_jaffle
+  fullyQualifiedName: redshift-reverse-metadata.dev.dbt_jaffle
+  displayName: dbt_jaffle
+  deleted: false
+database:
+  id: c8d5760a-7ecd-4578-9818-0c09c681537c
+  type: database
+  name: dev
+  fullyQualifiedName: redshift-reverse-metadata.dev
+  description: <p>desc for schema</p>
+  displayName: dev
+  deleted: false
+service:
+  id: d61a448e-f25d-4655-9e04-825911da9125
+  type: databaseService
+  name: redshift-reverse-metadata
+  fullyQualifiedName: redshift-reverse-metadata
+  description: <p>new desc</p>
+  displayName: redshift-reverse-metadata
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: lifeCycle
+      newValue: "{\"created\":{\"timestamp\":1667996111994}}"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+domains: []
+dataProducts: []
+lifeCycle:
+  created:
+    timestamp: 1667996111994
+sourceHash: 9809c6ad30dd71ef351a405067d4193c
+processedLineage: false
+entityStatus: Approved

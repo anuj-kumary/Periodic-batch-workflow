@@ -1,0 +1,60 @@
+name: source_model
+fullyQualifiedName: redshift-reverse-metadata.dev.dbt_cli_e2e.source_model
+tableType: Regular
+columns:
+  - name: column1
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: character varying(10)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_cli_e2e.source_model.column1
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+  - name: column2
+    dataType: VARCHAR
+    dataLength: 10
+    dataTypeDisplay: character varying(10)
+    fullyQualifiedName: redshift-reverse-metadata.dev.dbt_cli_e2e.source_model.column2
+    tags: []
+    constraint: "NULL"
+    children: []
+    customMetrics: []
+tableConstraints: []
+owners: []
+databaseSchema:
+  id: 901d05df-e918-47c7-935b-d1275e2d8600
+  type: databaseSchema
+  name: dbt_cli_e2e
+  fullyQualifiedName: redshift-reverse-metadata.dev.dbt_cli_e2e
+  displayName: dbt_cli_e2e
+  deleted: false
+database:
+  id: c8d5760a-7ecd-4578-9818-0c09c681537c
+  type: database
+  name: dev
+  fullyQualifiedName: redshift-reverse-metadata.dev
+  description: <p>desc for schema</p>
+  displayName: dev
+  deleted: false
+service:
+  id: d61a448e-f25d-4655-9e04-825911da9125
+  type: databaseService
+  name: redshift-reverse-metadata
+  fullyQualifiedName: redshift-reverse-metadata
+  description: <p>new desc</p>
+  displayName: redshift-reverse-metadata
+  deleted: false
+serviceType: Redshift
+tags: []
+joins:
+  startDate: 2026-01-07
+  dayCount: 30
+  columnJoins: []
+  directTableJoins: []
+customMetrics: []
+domains: []
+dataProducts: []
+sourceHash: e6f4f3868bc9c7fff6227cba41020eec
+processedLineage: false
+entityStatus: Approved
