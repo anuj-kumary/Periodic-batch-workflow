@@ -1,0 +1,50 @@
+name: SnowflakeProd
+fullyQualifiedName: SnowflakeProd
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: tmqlsne-ww42057
+    password: fernet:gAAAAABphcPChqqJppB4H3J4dvjd5UfETrPvyjJMwjYc1ub9JAdF3Mhd-3szQR9vNHK_MCNsIqXtSjoVUBR1B67b_OKWqlHZC6d3-Q6ztq7MsgtwyjxiZEeSYUEagdHbQ2oip2SdvQ3b
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: true
+    clientSessionKeepAlive: true
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags:
+  - tagFQN: '"Test.tag&1".test&tag&&11'
+    name: test&tag&&11
+    displayName: ""
+    description: test&tag&&11
+    style:
+      color: "#e19a37"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners:
+  - id: 1eb7eb26-21da-42d7-b0ed-8812f04f4ca4
+    type: user
+    name: ayush
+    fullyQualifiedName: ayush
+    displayName: Ayush Shah
+    deleted: false
+dataProducts: []

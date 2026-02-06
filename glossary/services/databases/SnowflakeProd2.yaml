@@ -1,0 +1,42 @@
+name: SnowflakeProd2
+fullyQualifiedName: SnowflakeProd2
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    role: ACCOUNTADMIN
+    type: Snowflake
+    scheme: snowflake
+    account: kftpdbd-vu27648
+    password: fernet:gAAAAABphcPCbfVXvHDqaT-zgRLY2_jQNPruo1pL7BsnwtOfzpxkWGkcrgpVcQxqF4ehSy0hAgcu-nNdg_6vJDAH5SV_d5SivaRk3478R6sbpUd2g5bTDSVzCFTNeG86roIX5rdXJ_sV
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    privateKey: fernet:gAAAAABphcPCzATsjlGvh6z7l8aea4fqhvqmdcvuROgIYSfJnIFNiTuciXxSgHtU4F6ZOmRtcC3TtH0xmcvH8dNMzwKyZ_TRVQfpsy9xnt4ZDGJGfSToXsDG9WL_n6u-MuZpMr61Ae3I1xWEodXgBlfMFC_kJhxTyw==
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: true
+    clientSessionKeepAlive: true
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    snowflakePrivatekeyPassphrase: fernet:gAAAAABphcPCv8SS-idN1WhOiMfTFDf2bmJsh7tt5Z-0_q0IKm6eKJaPnUCARFz-xXd6mQzUhLaTK8Oygmlfk9tXeZVnMyFb9wu5tUHu6f9jmxKfUfR65wA3q_wf3O4FklQqu5kpYSS7xRGIwNej9euyStHcheEm7w9-nuwtPHckN1Ho3C7f89w=
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 1eb7eb26-21da-42d7-b0ed-8812f04f4ca4
+    type: user
+    name: ayush
+    fullyQualifiedName: ayush
+    displayName: Ayush Shah
+    deleted: false
+dataProducts: []

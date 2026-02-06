@@ -1,0 +1,50 @@
+name: openmetadata-2
+fullyQualifiedName: openmetadata-2
+serviceType: Snowflake
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: dummy
+    database: dummy
+    password: fernet:gAAAAABphcPBGzKFcEghGZlhkqlVTWpGV1LtXWJzErrWzDEQ_W1UZRim3AIEo16LBTe0Vv8zv5eqiSkyEfNED6eM-JdmR6_e-_gILeNcG5fWPDaTo3RaW2chHJ3DjMCfe8z0LhYzTIeJ
+    username: dummy
+    warehouse: dummy
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: ead5321d-cd1f-4af8-80fc-41979f449fb0
+    type: user
+    name: random.user.es
+    fullyQualifiedName: '"random.user.es"'
+    description: ""
+    displayName: random.user.es
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: owners
+      newValue: "[{\"id\":\"ead5321d-cd1f-4af8-80fc-41979f449fb0\",\"type\":\"user\"\
+        ,\"name\":\"random.user.es\",\"fullyQualifiedName\":\"\\\"random.user.es\\\
+        \"\",\"description\":\"\",\"displayName\":\"random.user.es\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+dataProducts: []

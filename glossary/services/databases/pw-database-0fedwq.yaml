@@ -1,0 +1,58 @@
+name: pw-database-0fedwq
+fullyQualifiedName: pw-database-0fedwq
+serviceType: Mysql
+description: <p>test database</p>
+connection:
+  config:
+    type: Mysql
+    scheme: mysql+pymysql
+    authType:
+      password: fernet:gAAAAABphcPChkZoRHhjQ91wViAkQthYTd9fu8Jf8GKy7_ydCG2ZZkphbx5sD48Yw0Ya1gv9XMVDyRryFEvqf_anI4V0B6qzpg==
+    hostPort: mysql:3306
+    username: username
+    useSlowLogs: false
+    supportsDataDiff: true
+    supportsProfiler: true
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+        - ^performance_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines:
+  - id: 74471c53-f7fb-4015-96c6-9bde3396479f
+    type: ingestionPipeline
+    name: a0286dfa-fc91-4d90-8330-ea236b3d24e1
+    fullyQualifiedName: pw-database-0fedwq.a0286dfa-fc91-4d90-8330-ea236b3d24e1
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: bc43f9fd-6b2e-4433-a631-354a8972a7ad
+    type: user
+    name: rohit.j
+    fullyQualifiedName: '"rohit.j"'
+    displayName: rohit.j
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 9e0f555a-6661-4e34-97da-93d3eb09988f
+  type: ingestionRunner

@@ -1,0 +1,36 @@
+name: svc_7
+fullyQualifiedName: svc_7
+serviceType: Postgres
+connection:
+  config:
+    type: Postgres
+    scheme: postgresql+psycopg2
+    authType:
+      password: fernet:gAAAAABphcPC5hwNBzCsLfJXFfANLOinEvVT-7k22kw0sHcwI57ksiOb8tJCJrn-k73bDo6eX7YY8tIP755iDvPAe0K_KaexVg==
+    database: demo_db
+    hostPort: localhost:5432
+    username: demo_user
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    classificationName: PostgresPolicyTags
+    ingestAllDatabases: false
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    queryStatementSource: pg_stat_statements
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+        - ^template0$
+      includes: []
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

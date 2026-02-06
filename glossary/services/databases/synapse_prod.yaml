@@ -1,0 +1,33 @@
+name: synapse_prod
+fullyQualifiedName: synapse_prod
+serviceType: Synapse
+description: ""
+connection:
+  config:
+    type: Synapse
+    driver: ODBC Driver 18 for SQL Server
+    scheme: mssql+pyodbc
+    database: synapse_collate_dedicated
+    hostPort: collate-synapse-test.sql.azuresynapse.net:1433
+    password: fernet:gAAAAABphcPCeVy0qSSzUmKxrWSwDX1YAgr2Kj0k42WlkEstRSe-_4GswKyQ3-T24NEXJRGKyzxJQKfiFEevnk5_NCtZw-LT48BERjKSiiMgQARJ9LuQ0SRmgXj9ZZeaa2YwYCN8BYX0
+    username: sqladminuser@collate-synapse-test
+    supportsDatabase: true
+    supportsProfiler: true
+    authenticationMode:
+      connectionTimeout: 30
+    ingestAllDatabases: false
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: a8d0452f-db83-4706-9538-1389fc8f1551
+    type: user
+    name: onkar
+    fullyQualifiedName: onkar
+    displayName: Onkar Ravgan
+    deleted: false
+dataProducts: []

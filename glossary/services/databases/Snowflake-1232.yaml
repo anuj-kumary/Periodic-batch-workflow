@@ -1,0 +1,67 @@
+name: Snowflake-1232
+fullyQualifiedName: Snowflake-1232
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: etqqact-ra16034
+    password: fernet:gAAAAABphcPCP2MamTA_H7lQ1JwT76Wu3pyb0kaZkoLUP2Fv5qJUQjCUSHruiONalYm3emyoyIG0eIBAIx9Nv-XAjPYaTHGJSw==
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^snowflake$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: 968a6349-182a-4028-b817-aef777a5bde0
+    type: ingestionPipeline
+    name: 525d25b2-1800-4e6c-8d57-f885043020ac
+    fullyQualifiedName: Snowflake-1232.525d25b2-1800-4e6c-8d57-f885043020ac
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: 71117be9-c30d-46f7-ba7b-d63a8ed9b31d
+    type: user
+    name: prajwal
+    fullyQualifiedName: prajwal
+    displayName: prajwal
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 9e0f555a-6661-4e34-97da-93d3eb09988f
+  type: ingestionRunner

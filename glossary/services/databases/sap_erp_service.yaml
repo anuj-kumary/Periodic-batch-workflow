@@ -1,0 +1,17 @@
+name: sap_erp_service
+fullyQualifiedName: sap_erp_service
+serviceType: SapErp
+connection:
+  config:
+    type: SapErp
+    apiKey: fernet:gAAAAABphcPC-YNhYtCmOBD3k3eAAfb3v_YW0btZWUcNJQ-tPru2R8QxiW99GVwvxnosJjTb6Qm0HcmsbtlWA0KqAtRxITDNd-LP4N8KAGcE0dp_AsDZwqfUO2gV6GBNJ1n-VBIiy3LV
+    hostPort: https://api10-eu-dev.api.swarovski.com/
+    verifySSL: no-ssl
+    databaseName: databaseName
+    databaseSchema: databaseSchema
+    paginationLimit: 500
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

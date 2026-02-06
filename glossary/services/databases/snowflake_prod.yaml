@@ -1,0 +1,49 @@
+name: snowflake_prod
+fullyQualifiedName: snowflake_prod
+serviceType: Snowflake
+description: <p>Data warehouse for Production</p>
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: dummy.snowflakecomputing.com
+    password: fernet:gAAAAABphcPCAqH8Ojej8omipbB1j6o7DmdVSK_4q8ace6Zcun_lmTN89eEBKBhLN4Q2c9PeFWBz4pK-hMX1o1M3uE7oBDTABQ==
+    username: dummy
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^snowflake$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: description
+      newValue: <p>Data warehouse for Production</p>
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+dataProducts: []

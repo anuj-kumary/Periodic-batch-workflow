@@ -1,0 +1,88 @@
+name: Redshift - Hybrid Argo
+fullyQualifiedName: Redshift - Hybrid Argo
+serviceType: Redshift
+description: ""
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPCLSrWNRyNRaaHBGezNun5XHpHqNfWXMBAnQhPnmjce_5uirDfrRN_mheiiqw6NQHH5TE3W7E1zjIsLWNT3DpWtFr19w2q4taLsD7Cg5_0xbk=
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes:
+        - dbt_jaffle
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: 725b5cff-f838-44c0-a595-b4279e487f54
+    type: ingestionPipeline
+    name: 1cd1de27-eb44-40a8-8e32-a2ad41b2e12c
+    fullyQualifiedName: Redshift - Hybrid Argo.1cd1de27-eb44-40a8-8e32-a2ad41b2e12c
+    displayName: 1cd1de27-eb44-40a8-8e32-a2ad41b2e12c
+    deleted: false
+  - id: a0adea61-768c-4106-8fa7-bf622db89daa
+    type: ingestionPipeline
+    name: 2eb68d35-ef4c-42bf-beef-0d2d64d70b0c
+    fullyQualifiedName: Redshift - Hybrid Argo.2eb68d35-ef4c-42bf-beef-0d2d64d70b0c
+    displayName: 2eb68d35-ef4c-42bf-beef-0d2d64d70b0c
+    deleted: false
+  - id: 124a2208-a2d1-4601-9f37-58121dd15700
+    type: ingestionPipeline
+    name: d4548c12-a7f2-4341-96a5-7209a269f124
+    fullyQualifiedName: Redshift - Hybrid Argo.d4548c12-a7f2-4341-96a5-7209a269f124
+    displayName: d4548c12-a7f2-4341-96a5-7209a269f124
+    deleted: false
+tags: []
+owners:
+  - id: 00d8759c-b7f4-4920-b7aa-77fb8f244934
+    type: user
+    name: pablo.takara
+    fullyQualifiedName: '"pablo.takara"'
+    displayName: Pablo Takara
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: ingestionAgent
+      oldValue: '"9e0f555a-6661-4e34-97da-93d3eb09988f"'
+      newValue: '"c880926b-3fb5-4af1-86ee-6ecdc8304fa5"'
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+dataProducts: []
+ingestionRunner:
+  id: c880926b-3fb5-4af1-86ee-6ecdc8304fa5
+  type: ingestionRunner
+  name: PabloLocalArgo
+  fullyQualifiedName: PabloLocalArgo
+  deleted: false
+  inherited: false

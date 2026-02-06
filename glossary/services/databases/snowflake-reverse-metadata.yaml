@@ -1,0 +1,51 @@
+name: snowflake-reverse-metadata
+fullyQualifiedName: snowflake-reverse-metadata
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: pkfkglv-of58949
+    database: USER_DATA
+    password: fernet:gAAAAABphcPCZGslt-loEc2B4En1GksTRFE-xmwdAPRIJY70F9BQRkx5KDBoJnR5PAc1UDk5ZGaRzQ2YRMm2Sf6vmoLplRDvJpdwvZ_VKDjztyuDUnjVRy6AZquo065RdhUzS-UjAinvDwrULzOjuHfckUyjo_MPMQ==
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^snowflake$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: e31dc062-635f-4fc5-b727-2d4b7cb25753
+    type: user
+    name: imri.paran
+    fullyQualifiedName: '"imri.paran"'
+    displayName: Imri Paran
+    deleted: false
+dataProducts: []

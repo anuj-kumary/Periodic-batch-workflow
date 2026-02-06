@@ -1,0 +1,41 @@
+name: snowflake_h
+fullyQualifiedName: snowflake_h
+serviceType: Snowflake
+description: <p>free tier </p>
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: rtbezht-rf91450
+    database: SNOWFLAKE_SAMPLE_DATA
+    password: fernet:gAAAAABphcPCErWZk1bpaqsqCawDLvGKF2gftwIZyseYs2BCjgvMPoBBHoNKuErW9knqZEDdrGfEteJaefD7gB8AIaYCbvCOtS5vYUEVorzBOn8ZAmmPevVkdU-Qj1gwa65b6Y9NMu3l
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: fbb44759-01ed-475d-a2ef-03711d85d82e
+    type: user
+    name: harsh.srivastava
+    fullyQualifiedName: '"harsh.srivastava"'
+    description: ""
+    displayName: Harsh S
+    deleted: false
+dataProducts: []

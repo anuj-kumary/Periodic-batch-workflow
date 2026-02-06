@@ -1,0 +1,24 @@
+name: SampleMysqlService
+fullyQualifiedName: SampleMysqlService
+serviceType: Mysql
+connection:
+  config:
+    type: Mysql
+    scheme: mysql+pymysql
+    authType:
+      password: fernet:gAAAAABphcPC18QNI30SKbQMzXjCuH3dPzdsEYOMg07eGbY2Y8B5xSbTg2nALt5P51mBUL2Tckc64X1h8JlGw2OQHncSCbvi75dBdCGGwY7d7vSfVd_hTmM=
+    hostPort: localhost:3306
+    username: openmetadata_user
+    useSlowLogs: false
+    databaseSchema: posts_db
+    supportsDataDiff: true
+    supportsProfiler: true
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

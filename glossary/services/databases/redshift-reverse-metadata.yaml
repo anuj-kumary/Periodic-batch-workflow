@@ -1,0 +1,54 @@
+name: redshift-reverse-metadata
+fullyQualifiedName: redshift-reverse-metadata
+serviceType: Redshift
+description: <p>new desc</p>
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPC7pW9uHzj2dM-aoFxzceFgLrLl-5eEwooXNQmwYHz9vA_cjdOPQZmztr-PYpegOVIY4EeRE05Oac9SSGMIDWpviewYiXLZGoRFLFusx2SmPwwh4XmEHq1CjjMhV4PCBRK4iqBwbxE1fOTRqTHQsBddQ==
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: e31dc062-635f-4fc5-b727-2d4b7cb25753
+    type: user
+    name: imri.paran
+    fullyQualifiedName: '"imri.paran"'
+    displayName: Imri Paran
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: description
+      oldValue: ""
+      newValue: <p>new desc</p>
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+dataProducts: []

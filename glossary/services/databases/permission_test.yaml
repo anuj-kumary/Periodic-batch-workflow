@@ -1,0 +1,66 @@
+name: permission_test
+fullyQualifiedName: permission_test
+serviceType: BigQuery
+description: ""
+connection:
+  config:
+    type: BigQuery
+    scheme: bigquery
+    hostPort: bigquery.googleapis.com
+    costPerTB: 6.25
+    credentials:
+      gcpConfig:
+        type: service_account
+        authUri: https://accounts.google.com/o/oauth2/auth
+        clientId: 105027268379220885939
+        tokenUri: https://oauth2.googleapis.com/token
+        projectId: modified-leaf-330420
+        privateKey: fernet:gAAAAABphcPCctJ0zi5eT81R7NnzXYo7ts_Gw4Iw5nNe7QpndNi3FC-4th9Hg5bEY2fPkPPk87DW7XrkKMB56bzfBv6xt8k0zA0lhHkFtCqOubwiYwFa9a4qctDoqam4-pwCOhNlxKsD_MIv-A8D9t9ChWVky4HPowgGfUGqdL0acflb-kRFiYU=
+        clientEmail: 259835572633-compute@developer.gserviceaccount.com
+        privateKeyId: 41a6d3cf68ccb280820c80f0023afd955d0e88ec
+        clientX509CertUrl: https://www.googleapis.com/robot/v1/metadata/x509/259835572633-compute%40developer.gserviceaccount.com
+        authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs
+      gcpImpersonateServiceAccount:
+        lifetime: 3600
+    usageLocation: us
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    taxonomyLocation: us
+    includePolicyTags: true
+    taxonomyProjectID: []
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: connection
+      oldValue: '"old-encrypted-value"'
+      newValue: '"new-encrypted-value"'
+  fieldsDeleted: []
+  previousVersion: 0.3
+  changeSummary: {}
+dataProducts: []

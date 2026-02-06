@@ -1,0 +1,19 @@
+name: scasc
+fullyQualifiedName: scasc
+serviceType: CustomDatabase
+description: ""
+connection:
+  config:
+    type: CustomDatabase
+    sourcePythonClass: metadata.ingestion.source.database.sample_data.SampleDataSource
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 7a12b462-36c7-488a-b4c2-9756918704cb
+    type: user
+    name: mayur
+    fullyQualifiedName: mayur
+    displayName: Mayur Singal
+    deleted: false
+dataProducts: []

@@ -1,0 +1,71 @@
+name: red-test-dc
+fullyQualifiedName: red-test-dc
+serviceType: Redshift
+description: ""
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPCBZWT_8AIl0iDRMO00oFLJIRn9NH0CpjM3jchuuPfNy6m2N9f9DUX3SV3qvuiuve50gXehtvNYuC27NXequiymWrYOpELNj4zDWyfT6Xr8ClJ3n1smm7r3KMAwZG7EvIH
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes:
+        - dbt_jaffle
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 883fe858-06c3-4253-89c3-68ab59a517e4
+    type: user
+    name: pmbrull
+    fullyQualifiedName: pmbrull
+    displayName: Admin
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: ingestionAgent
+      oldValue: '"4e6140af-36cd-44ed-994e-13ff77ea88d9"'
+      newValue: '"80a7ac93-1869-4c7e-b220-f19e7c302abd"'
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner
+  name: CollateSaaS
+  fullyQualifiedName: CollateSaaS
+  displayName: Collate SaaS Agent
+  deleted: false
+  inherited: false

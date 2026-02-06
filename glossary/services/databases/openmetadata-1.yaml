@@ -1,0 +1,62 @@
+name: openmetadata-1
+fullyQualifiedName: openmetadata-1
+serviceType: Snowflake
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: FMFAHQK-GI58232
+    password: fernet:gAAAAABphcPBSirQYYzqsSz6e01SCtsWsZCtcy6cTjgQ38yxbCk4hvKXdAHcvXLSV_dnJK7swjvHRqgIw0rdMKGgEfaAsdwPLjLCTXdvt7bHXqS46lbeO1IlDJZcG9X5iCJFkAbMje7D
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    privateKey: fernet:gAAAAABphcPBQJOdwySd57qur-fAwXwE5a9ka9bNY1moMy-3lK8y0xPq8pBSpx89hSoLAK-U-JI8Z4UbPKyPHOEPT8OWpmgQLpgfQnUBISH88bKLuXP8eNPSSijazVz8Ma0EqjIaS26-cu2UCmScZsT5Icx8BSwJaA==
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^snowflake$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    snowflakePrivatekeyPassphrase: fernet:gAAAAABphcPBlz1t4ECQIybq0knlWe-kk9UEL4oHlSsjwKCoAQRedT2bGjSHAYaV5GuHnVTdTLf7FPae0aRehgBlMpmyuecpZIQyV8y5xwBXNjDeK7BQdNhvR93-ZnyErvnN5BRaUGlx9ARmJQrZVuWHdak8GVXIdIRQlKoDbUdikm1Q7K9LuSI=
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: connection
+      oldValue: '"old-encrypted-value"'
+      newValue: '"new-encrypted-value"'
+  fieldsDeleted: []
+  previousVersion: 0.1
+  changeSummary: {}
+dataProducts: []

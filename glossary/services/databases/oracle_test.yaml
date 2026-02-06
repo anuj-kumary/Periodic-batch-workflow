@@ -1,0 +1,24 @@
+name: oracle_test
+fullyQualifiedName: oracle_test
+serviceType: Oracle
+connection:
+  config:
+    type: Oracle
+    scheme: oracle+cx_oracle
+    hostPort: sandbox-oracle-db.cvxcerjcdlpi.us-east-2.rds.amazonaws.com:1521
+    password: fernet:gAAAAABphcPCnREZ2NYFY0Og5-jL7b8vvbR2X9FKtaiHudlwVI7_L1No11EWoyeG1v7Pz11TBQJPysIa8PuklUCzxxBPbvcshiDvUrSDcH4OT3RR5upPuBgzXT8h9aSHjoxjDEZv0ZQB
+    username: admin
+    supportsDataDiff: true
+    supportsProfiler: true
+    oracleConnectionType:
+      oracleServiceName: TESTDB
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    instantClientDirectory: /instantclient
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

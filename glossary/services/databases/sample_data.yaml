@@ -1,0 +1,94 @@
+name: sample_data
+fullyQualifiedName: sample_data
+serviceType: BigQuery
+connection:
+  config:
+    type: BigQuery
+    scheme: bigquery
+    hostPort: localhost:1234
+    costPerTB: 6.25
+    credentials:
+      gcpConfig:
+        type: service_account
+        authUri: https://accounts.google.com/o/oauth2/auth
+        clientId: clientId
+        tokenUri: https://oauth2.googleapis.com/token
+        projectId:
+          - projectID
+        privateKey: fernet:gAAAAABphcPCbOxWW7Uqe3bOqpaylu2CGwW-eWfIRAvVsJQo70_mZOBh-X4QwhyyyefYLqJ-VtgpCIg_w-gS8R_S35rrHtBx4Vz79TyYn53nbqxevW1-_czTB387dIx7rwez95ezKmc0jg48OiOunqXk0tSu-eeziKtitGPPnzXw3dvkYWwNUHc=
+        clientEmail: clientEmail
+        privateKeyId: privateKeyId
+        clientX509CertUrl: https://cert.url
+        authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs
+    usageLocation: us
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    taxonomyLocation: us
+    includePolicyTags: true
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: 379ad910-0673-4a24-8cd3-7744784a76dc
+    type: ingestionPipeline
+    name: 95bfef21-5c9d-457f-b11c-fb11bcfd11b0
+    fullyQualifiedName: sample_data.95bfef21-5c9d-457f-b11c-fb11bcfd11b0
+    displayName: Metadata Agent
+    deleted: false
+tags:
+  - tagFQN: PostgresPolicyTags.sample_policy
+    name: sample_policy
+    description: Postgres Tag Value
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+owners:
+  - id: ed8a779f-c6af-4e65-85ca-4e4e018c7027
+    type: user
+    name: mohit
+    fullyQualifiedName: mohit
+    displayName: Mohit Yadav
+    deleted: false
+  - id: 37ab0998-253a-431b-ac94-795d4fd0cf11
+    type: user
+    name: prajwal.p
+    fullyQualifiedName: '"prajwal.p"'
+    displayName: prajwal.p
+    deleted: false
+  - id: f7971c49-bca7-48fb-bb1a-821a1e2c5802
+    type: user
+    name: prajwal161998
+    fullyQualifiedName: prajwal161998
+    displayName: prajwal161998
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: domains
+      newValue: "[{\"id\":\"ef10e521-d8c5-4d84-b039-549e8d1d8aaf\",\"type\":\"domain\"\
+        ,\"name\":\"Customer Domain\",\"fullyQualifiedName\":\"Customer Domain\",\"\
+        description\":\"<p>Customer Domain</p>\",\"displayName\":\"Customer\"}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.0
+  changeSummary: {}
+dataProducts: []
+domains:
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+  - id: 52fc9c67-78b7-42bf-8147-69278853c230
+    type: domain
+    name: Design
+    fullyQualifiedName: Design
+    description: <p>Here' the description for Product Design</p>
+    displayName: 'Product Design '

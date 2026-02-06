@@ -1,0 +1,57 @@
+name: redshift_powerbi
+fullyQualifiedName: redshift_powerbi
+serviceType: Redshift
+description: ""
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPCSnzjpktKT0hsvxEH9CIEU0q6DXMHtz4ic4obaAeuwaaHntwI0EM0l31C90QJ1U4dxDGVHt8eI1K5ZNCnVKth6k3y2METXgsGZ5FjYk0npLwItVHH9dQ5-O9ZW4rJtnHenFw3CyydrktgqGL7Rw3h3Q==
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes:
+        - .*jaffle.*
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 2deef982-ed00-48f4-9640-986c01418124
+    type: user
+    name: harsh.soni
+    fullyQualifiedName: '"harsh.soni"'
+    displayName: harsh.soni
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner

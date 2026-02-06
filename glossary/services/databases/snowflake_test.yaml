@@ -1,0 +1,49 @@
+name: snowflake_test
+fullyQualifiedName: snowflake_test
+serviceType: Snowflake
+description: <p>free tier </p>
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: LZQIYYN-YT27278
+    database: TEST_DB
+    password: fernet:gAAAAABphcPCqf7YNjvegNjW1Yu3o0z59lyuKMtUP9qxSb9vYi87v-UbSoBZWGUGEx9tGdK9DF_GnYzjUqd6Nn4J39u-bYs-MaDuGWZgq4Hg2h4xOOcmF-X-UPiZ5u4zJJBWsJSYfUPs
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: fbb44759-01ed-475d-a2ef-03711d85d82e
+    type: user
+    name: harsh.srivastava
+    fullyQualifiedName: '"harsh.srivastava"'
+    description: ""
+    displayName: Harsh S
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: connection
+      oldValue: '"old-encrypted-value"'
+      newValue: '"new-encrypted-value"'
+  fieldsDeleted: []
+  previousVersion: 0.2
+dataProducts: []

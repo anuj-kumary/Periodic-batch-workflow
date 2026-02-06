@@ -1,0 +1,60 @@
+name: PostgresIAM
+fullyQualifiedName: PostgresIAM
+serviceType: Postgres
+description: ""
+connection:
+  config:
+    type: Postgres
+    scheme: postgresql+psycopg2
+    sslMode: disable
+    authType:
+      awsConfig:
+        awsRegion: eu-west-1
+        awsAccessKeyId: AKIAZQ3DTE7MOGI6WELH
+        awsSecretAccessKey: fernet:gAAAAABpAr2vPSPxjRf0bjRUkINMz8_FO89Upfjk3Y0eDMgTcDu87nNdVH-vGz9psg2cmsbsfHXHKl0rZfBvJNJoIDV9B2AviDkT1VlvmenZYm2lzET6UE4NH09LDqEwnbE_1mHTYAezf3R1CF0JNbzERQcUfleNnuVpmEaWXsd7SG00CvRkLM8=
+        assumeRoleSessionName: OpenMetadataSession
+    database: postgres
+    hostPort: iam-test.cfq8ogy6k8nn.eu-west-1.rds.amazonaws.com:5432
+    username: postgres
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    classificationName: PostgresPolicyTags
+    ingestAllDatabases: true
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    queryStatementSource: pg_stat_statements
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+        - ^template0$
+      includes: []
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 1eb7eb26-21da-42d7-b0ed-8812f04f4ca4
+    type: user
+    name: ayush
+    fullyQualifiedName: ayush
+    displayName: Ayush Shah
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: connection
+      oldValue: '"old-encrypted-value"'
+      newValue: '"new-encrypted-value"'
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+dataProducts: []

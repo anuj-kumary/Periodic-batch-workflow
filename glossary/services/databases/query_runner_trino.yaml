@@ -1,0 +1,101 @@
+name: query_runner_trino
+fullyQualifiedName: query_runner_trino
+serviceType: Trino
+description: ""
+connection:
+  config:
+    type: Trino
+    scheme: trino
+    authType:
+      password: fernet:gAAAAABphcPCJUM1oC387S8cnBnOPqSANcQaN58JuTe1hxrPIQtv0Z4C-Ueozj-pNo5p-Ll346InlkdurvGbgwdVHZdgeZaCwn1c_tOC3ELBn9z3js2IqVM=
+    hostPort: ometa-free-cluster.trino.galaxy.starburst.io:443
+    username: tofoyiv524@recutv.com
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    queryHistoryTable: '"system"."runtime"."queries"'
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines:
+  - id: c5e57a30-432d-4261-8616-841f7e3c3add
+    type: ingestionPipeline
+    name: 0b121b2c-b2b5-45cd-8985-633414847ae4
+    fullyQualifiedName: query_runner_trino.0b121b2c-b2b5-45cd-8985-633414847ae4
+    displayName: Lineage Agent
+    deleted: false
+  - id: bab4470e-b94e-43d3-9a41-7d4a3f0525fd
+    type: ingestionPipeline
+    name: 484402ff-2928-454e-af2e-e6095cd157bb
+    fullyQualifiedName: query_runner_trino.484402ff-2928-454e-af2e-e6095cd157bb
+    displayName: Usage Agent
+    deleted: false
+  - id: 79318d69-55e7-454c-908d-878582b10e0e
+    type: ingestionPipeline
+    name: 516d6482-885f-4a2b-a183-03a789aa371e
+    fullyQualifiedName: query_runner_trino.516d6482-885f-4a2b-a183-03a789aa371e
+    displayName: Profiler Agent
+    deleted: false
+  - id: eed39050-738d-4ae0-977d-a51b177faa1b
+    type: ingestionPipeline
+    name: 537b11b0-16c1-4544-9001-ff0220fa049c
+    fullyQualifiedName: query_runner_trino.537b11b0-16c1-4544-9001-ff0220fa049c
+    displayName: AutoClassification Agent
+    deleted: false
+  - id: 4c92f4ed-fb1a-41f6-a2ec-c6e5a5f688e6
+    type: ingestionPipeline
+    name: ac242829-6d9c-4bee-b5f2-96ef072ea186
+    fullyQualifiedName: query_runner_trino.ac242829-6d9c-4bee-b5f2-96ef072ea186
+    displayName: Metadata Agent
+    deleted: false
+  - id: cd86d5f9-e7c1-4091-9674-19c03973739a
+    type: ingestionPipeline
+    name: b650933c-d8a7-4fdc-9ad8-160d065620b7
+    fullyQualifiedName: query_runner_trino.b650933c-d8a7-4fdc-9ad8-160d065620b7
+    displayName: query_runner_trino_metadata_dNJYBN7q
+    deleted: false
+tags: []
+owners:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: connection
+      oldValue: '"old-encrypted-value"'
+      newValue: '"new-encrypted-value"'
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner
+  name: CollateSaaS
+  fullyQualifiedName: CollateSaaS
+  displayName: Collate SaaS Agent
+  deleted: false
+  inherited: false

@@ -1,0 +1,99 @@
+name: query_runner_bq
+fullyQualifiedName: query_runner_bq
+serviceType: BigQuery
+description: ""
+connection:
+  config:
+    type: BigQuery
+    scheme: bigquery
+    hostPort: bigquery.googleapis.com
+    costPerTB: 6.25
+    credentials:
+      gcpConfig:
+        type: service_account
+        authUri: https://accounts.google.com/o/oauth2/auth
+        clientId: 112732782865529894463
+        tokenUri: https://oauth2.googleapis.com/token
+        projectId: modified-leaf-330420
+        privateKey: fernet:gAAAAABphcPCMwundKftbmbk5R4Oi1lAdOwqzknNNbH-MroYWYuNg1Q2LHyE52j9EIJkTZgiOjkZ1PGfq8DXSUtzXL6S7kekIQnSKVN8sP4mzNoeA1ywq7BSGRDKkxbr49tCBv66veQxXTuQBCC0B_yNtXNNU4lmZk5H0-vNzceXirgmrclf9rKa1G9tHAuNR1AmNr644df1gohE5K4eAH3mE49L9rxT90OffKQZJcaciBNTbKZmLSNlTOtOcmdBeNhUuA_MNg9aeWkzfmkIs81drozJ4Lq1P2BuJSxs8ni0o6YDYlfKrhua2VPQKXYwmUtjshpAgcKNvLqd6XP6KlZDyttAkXa6cKJa3xbdRuxm_tWysJJsvMbVvQImm5krTdljOeN5vZ3HLo2V5c9cy1Av1eMcy-B1CGu689HYO-8QRcg6gAoZg2twRfdFRvmitToHOcJ06tXAoDllUVZ03VPn-EHlS5Tt_dlQNx0KlEHx9IdzWfOrjntWEdAEGWN8HXoM6AcpSI4WCbP1bQWuD1NsH1J8n-pKhRJHhhOo6yZNUzi7ebl3cUpXEWP7ZHL-4Nn9W1T4ZliljzvF8zpjY1aBP6SMyzPCy8ldj7KenYZDof5VDkysk_2AdLs5ZKpZTQ8oJ0tutRuCUmCTAUQfA293SXbTm9ux5vrVMO3UnAktK-TFu2QzIYav61r3uhccbMA5OT0YwMuwcZ8M9yCRDJ6nVVOOwa35KtROZWMERcDhJqlFv-k75MLNjy28K56vYrWc-j0JPnjHTu8hjX7Qu69Z8T7vxp8V-SLegwyNV7gMriVKySA3B4FDdQwj1asD-w7RC3ehT_KorEkye3a5BzfN0ExZPJG1qm7eI1RQYGgQi0gLO9gpfAKCE_pO4U3Kz9BU5qJXai7FHUDxneRe-MGjY2f72YaAZrW8yhFpvFxuz0hAS3B28IsxwmLkMXKbr95y6oOWDNKJ_KsaqPINSNmxIkeVoFVG-PHqNYFcEGdr_oez1ObYxxpIUSYAf2oyY7VMkTEXgvHM4w3ksZoj1mJHQ8qpzFqYh13oNXvaIRcyxTJDo_eU5ORfXuc7wrT3rHTkyGdEhgvVPvBzk1nU8BBiF2RQZaFOX1TTA80_cMGCBxjifgFvkWClR_3MMlM3BwUaZj2NrclwQGu3yYoz9_We_qJRzyn2NpoQHSBgZErQ7sBQMXtzILWZ5XoTzYKRg3wUJS2Hhu0n8-U6TiXn6jRXiqV4EeXc3iXOCuAuujkww1bvPKxvzpOwA3Q35Gl14GKxAb0jIVjhFphQttQFPSV8-rSiNTLTpw00pC3drUA7CO1SfU8nzFR8qA9p7ZlBu44-jiDgWOgr25O_lq8ZKqbNpbaib_UIT2Cd-3VtFmMM2M6T3OaR5uTZCp-YhEuYkMUgllyf-E_NqkB15kyXCvFyIw2LpU6NxkK3OaBwvCS5-GIvPjcrjFOqHU1kwKRmUZ8WLLbRUipwAzTtGdKI3svjhEDBeMO7kicBjvdXSj2smWJ_T9VE4k6GYznkd9_C3az0qmYakPpOLube0P_sDbSU_U05VinoN8tx5-c3kIFka0JzQGs8dZZyXAD8nFEvjXn8_MJXinfA1YE6ebIrQZzyQogcM2dTeSRTHhUNWxYb51kdD7L0fbLtgot1Et7Gx3vliOB4pCIKg-fFwhueT_d_YPcffpr5VInsXvsp4ptWKj4LRLwki5EzxcHIS_NX3DDIaUG4OfbP7wLw9f8mOHp2b833tvsrKK4cXBjjkIGakWA6ruqG8J8SITjbk64glvqX6wEwoz0Cbr66xPHUxnwKSn9UJAm_XW9QF4HUChLvXy91oNmIJCQ47QQa6xVSt9vJPM5lABE1CvhTTUuei1arqXpwCXRLZCra6XKLj6DFMVpH4v8ohcTTxhNH9LVDpPOBV_i1mnavEmMSAlZyXoNJMud34D8YhoIYvjVKGrhmnS3t1-v__C3HzU5NQY648_2poBBqxLyWwMpz5HSCwisQy5_bvcMLfVt-KR4vO6ttOJF4uK9QGv2f82jGOViYudd_2_83PWRQJ0rRDqqM1qkXMYD-Mbxaf0lfqYMvHeSw0VB-ozFxx3-TQKa8mX6vZy84jXy9l_I9_5QK6HoJV28HJ9XL3l0Atehc810kKjFbHu_GIymyXldNu6iuPEogrk8ZCC3Rt3y8noVBk8wZp_uA2zbEhBlcNAzAwxy6osS8uZorMaa72ojMWcyzKjD1kRt1qsOMwnMl22mqphsG2Y-emve_3kwJoRJS34ViVrcFlAhsmoPy7J5TC1GahTUUTsKt0CjIa7groN7XOetvL6UApL3G-EN5XPAO1qs8tig1vuzZP-Zg_yg=
+        clientEmail: test-openmetadata@modified-leaf-330420.iam.gserviceaccount.com
+        privateKeyId: 29ea18f61a73e4820c61c48f0a112d45677a36ae
+        clientX509CertUrl: https://www.googleapis.com/robot/v1/metadata/x509/test-openmetadata%40modified-leaf-330420.iam.gserviceaccount.com
+        authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs
+      gcpImpersonateServiceAccount:
+        lifetime: 3600
+    usageLocation: us
+    billingProjectId: modified-leaf-330420
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    taxonomyLocation: us
+    includePolicyTags: true
+    taxonomyProjectID: []
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes: []
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes: []
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: f8ca4c8e-b0ae-4a34-865f-9f8fe6990ea9
+    type: ingestionPipeline
+    name: 11acb49f-a577-49f6-9a02-9a074365c6cb
+    fullyQualifiedName: query_runner_bq.11acb49f-a577-49f6-9a02-9a074365c6cb
+    displayName: Profiler Agent
+    deleted: false
+  - id: 1ca9d619-c00e-415e-bed7-61d76d6b0cc0
+    type: ingestionPipeline
+    name: 16d204f9-48d3-48d4-8999-26212673d3d4
+    fullyQualifiedName: query_runner_bq.16d204f9-48d3-48d4-8999-26212673d3d4
+    displayName: Usage Agent
+    deleted: false
+  - id: 719d1393-90ed-4fd8-990f-d790a16f78a1
+    type: ingestionPipeline
+    name: 2e6c78ef-eedc-42dc-b953-35ece1349008
+    fullyQualifiedName: query_runner_bq.2e6c78ef-eedc-42dc-b953-35ece1349008
+    displayName: Lineage Agent
+    deleted: false
+  - id: c46b6b3d-af04-4ac6-8d46-8bc8daa0af4a
+    type: ingestionPipeline
+    name: 4170b9ba-587c-4599-8b72-74cfb813a15d
+    fullyQualifiedName: query_runner_bq.4170b9ba-587c-4599-8b72-74cfb813a15d
+    displayName: AutoClassification Agent
+    deleted: false
+  - id: c3206e5d-78b5-49c2-8f22-260c6ac470c5
+    type: ingestionPipeline
+    name: d462af59-6dbc-4969-a0b2-e47507e27453
+    fullyQualifiedName: query_runner_bq.d462af59-6dbc-4969-a0b2-e47507e27453
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: d32d383f-071b-4aa8-8de7-241b3493453c
+    type: user
+    name: himanshu
+    fullyQualifiedName: himanshu
+    displayName: Himanshu Khairajani
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner

@@ -1,0 +1,39 @@
+name: snowflake_all
+fullyQualifiedName: snowflake_all
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: eggtndd-jd74081
+    password: fernet:gAAAAABphcPCrTnE7OUg2Lsx_F9tc8wwt3MzjI_83ZjApc3UuhPq5T-DY7s-Mg9lQIbL7z_2iijOSakFHr78-QUNq7ITA-OPX9Kz1rFZpVVvg5H-xxpMqz43J_8Vcry9iKTapLTJ7PFk
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: true
+    clientSessionKeepAlive: true
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 2deef982-ed00-48f4-9640-986c01418124
+    type: user
+    name: harsh.soni
+    fullyQualifiedName: '"harsh.soni"'
+    displayName: harsh.soni
+    deleted: false
+dataProducts: []

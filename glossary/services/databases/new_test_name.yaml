@@ -1,0 +1,48 @@
+name: new test name
+fullyQualifiedName: new test name
+serviceType: Redshift
+description: ""
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPBPckENASJVe_SGE64VkVGgCXDDL15PNX7Hk7W3S2n8Se4Irw0tZFYd7AHiS3Hu8IG7AWwuexpp_2Uv1ZlIpGycfj0ORhrC3QYTzkFj8zibfsxC2pz9A9OdUAvznoKoTMW
+    username: openmetadata87MxnW1nmQ@@B9m@
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 0621fad7-1ef1-441d-96a9-500a55c01a1f
+    type: user
+    name: sweta.a
+    fullyQualifiedName: '"sweta.a"'
+    displayName: Sweta
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 4e6140af-36cd-44ed-994e-13ff77ea88d9
+  type: ingestionRunner

@@ -1,0 +1,44 @@
+name: Snowflake_test_hr
+fullyQualifiedName: Snowflake_test_hr
+serviceType: Snowflake
+description: <p>Test the metadata</p>
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: rtbezht-rf91450
+    database: SNOWFLAKE_SAMPLE_DATA
+    password: fernet:gAAAAABphcPC44Ybjd-QlimBPu_OIZQHT15x8Xu0Q2wYg0GIM2A2X8Jw8SA8vm9Qqg6qqoo5gz5F9nKjDIEdzsVZRXgk-h2B6p7T-KIpN9fKAieqKsqbix1X_U9cb8oFkX7dwQW03frjrBZNfHtG8KgbDJSS7Mvjgw==
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted:
+    - name: owners
+      oldValue: "[{\"id\":\"d0107fe9-afbe-4966-914f-bfec7dfc5861\",\"type\":\"user\"\
+        ,\"name\":\"wilsondanny\",\"fullyQualifiedName\":\"wilsondanny\",\"displayName\"\
+        :\"Aaron Baker\",\"deleted\":false}]"
+  previousVersion: 0.2
+  changeSummary: {}
+dataProducts: []

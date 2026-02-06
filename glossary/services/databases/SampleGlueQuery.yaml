@@ -1,0 +1,19 @@
+name: SampleGlueQuery
+fullyQualifiedName: SampleGlueQuery
+serviceType: Glue
+connection:
+  config:
+    type: Glue
+    awsConfig:
+      enabled: false
+      awsRegion: aws region
+      endPointURL: https://glue.region_name.amazonaws.com/
+      awsAccessKeyId: aws accessKey id
+      awsSecretAccessKey: fernet:gAAAAABphcPCqnaUgkbwg6fA8jh-H1L2qMq1xxiBzK9oCR9NbmlX3p57m30FV1a1E3AwS6-0UZoFBpo3dyTpddl8jt2rwnSyNP5QEQNVYKysbt1UuGjUeDo=
+      assumeRoleSessionName: OpenMetadataSession
+    supportsDBTExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

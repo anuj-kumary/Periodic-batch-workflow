@@ -1,0 +1,68 @@
+name: Redshift
+fullyQualifiedName: Redshift
+serviceType: Redshift
+description: ""
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPCpicYZUMV7wfVOXxHGLVkcQyMy7HBZH9a2zfbHnauJVvDUQZ8cL9uB7p_nmgqUXrvW00-xYkTde_JRnrcJ1JS1w==
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: 23f50015-1d07-4405-b19b-a4f0d9a0cf07
+    type: ingestionPipeline
+    name: 5637a650-9691-4f0b-be30-afbd9efe6e2f
+    fullyQualifiedName: Redshift.5637a650-9691-4f0b-be30-afbd9efe6e2f
+    displayName: Redshift_metadata_eVUxHpuS
+    deleted: false
+  - id: 1105ba4f-e88c-4c22-9b07-4eca079d970d
+    type: ingestionPipeline
+    name: 60c580ee-1ad0-4b5d-b89f-1c36c56033f9
+    fullyQualifiedName: Redshift.60c580ee-1ad0-4b5d-b89f-1c36c56033f9
+    displayName: Metadata Agent
+    deleted: false
+tags: []
+owners:
+  - id: 71117be9-c30d-46f7-ba7b-d63a8ed9b31d
+    type: user
+    name: prajwal
+    fullyQualifiedName: prajwal
+    displayName: prajwal
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 9e0f555a-6661-4e34-97da-93d3eb09988f
+  type: ingestionRunner

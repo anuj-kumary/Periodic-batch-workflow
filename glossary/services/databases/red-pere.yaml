@@ -1,0 +1,132 @@
+name: red-pere
+fullyQualifiedName: red-pere
+serviceType: Redshift
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPC3B-jBBEqviadDf_Htj1l37xqnHYtHjfnqfYk58_YDnf6tQPAzdCV3TuhKevTqtaUaZpWzeQdJp2zgRc-wgatag==
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    connectionArguments:
+      sslmode: disable
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    sampleDataStorageConfig:
+      config:
+        prefix: ""
+        bucketName: ""
+        overwriteData: true
+        storageConfig:
+          assumeRoleSessionName: OpenMetadataSession
+        filePathPattern: "{service_name}/{database_name}/{database_schema_name}/{table_name}/sample_data.parquet"
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines:
+  - id: b5bfd262-1ec2-4d53-a5fb-6cc8da47472e
+    type: ingestionPipeline
+    name: 17e0fe3d-379c-4e40-85cf-218d8b01d7a5
+    fullyQualifiedName: red-pere.17e0fe3d-379c-4e40-85cf-218d8b01d7a5
+    displayName: red-pere_usage
+    deleted: false
+  - id: 13f83816-1d17-4b32-8518-81b4b9b23060
+    type: ingestionPipeline
+    name: 621d34f1-f8e8-4462-9127-1a22b5e9c37e
+    fullyQualifiedName: red-pere.621d34f1-f8e8-4462-9127-1a22b5e9c37e
+    displayName: red-pere_metadata_Hza7tg0t
+    deleted: false
+  - id: 07061ffe-1b74-433d-a10f-415886b1f5b7
+    type: ingestionPipeline
+    name: 634e5d1c-0d30-4583-bdce-ee48f2ab71e8
+    fullyQualifiedName: red-pere.634e5d1c-0d30-4583-bdce-ee48f2ab71e8
+    displayName: red-pere_profiler_fYecKLI5
+    deleted: false
+  - id: 60ff81b1-9c69-40eb-a725-06375a0605ac
+    type: ingestionPipeline
+    name: 7200bbb4-1638-490a-86d7-268784b066bc
+    fullyQualifiedName: red-pere.7200bbb4-1638-490a-86d7-268784b066bc
+    displayName: red-pere_metadata_ohqQseX9
+    deleted: false
+  - id: a02e4a80-72af-41cc-b2e7-3dce0367fd1c
+    type: ingestionPipeline
+    name: 9b9c0942-4251-4d12-ba56-29ecd8c8432f
+    fullyQualifiedName: red-pere.9b9c0942-4251-4d12-ba56-29ecd8c8432f
+    displayName: red-pere_metadata_1VdE8A3i
+    deleted: false
+  - id: cafb60b3-df05-43ca-9c00-f9c804995704
+    type: ingestionPipeline
+    name: f600982b-9366-4788-a102-99cc04859b01
+    fullyQualifiedName: red-pere.f600982b-9366-4788-a102-99cc04859b01
+    displayName: red-pere_metadata_xYMmUaNu
+    deleted: false
+  - id: 33af3368-b92d-44cd-8280-4da68f82b482
+    type: ingestionPipeline
+    name: f88b7873-4b8f-4d48-953c-22b846e75036
+    fullyQualifiedName: red-pere.f88b7873-4b8f-4d48-953c-22b846e75036
+    displayName: red-pere_metadata_Avt91mwx
+    deleted: false
+  - id: c2b721f1-0a31-4aa9-ad2f-ff864b5d163f
+    type: ingestionPipeline
+    name: ingestion
+    fullyQualifiedName: red-pere.ingestion
+    displayName: ingestion
+    deleted: false
+  - id: f6d17ced-d264-4144-9bb8-9be8bbabf9a7
+    type: ingestionPipeline
+    name: ingestion-debug-stream
+    fullyQualifiedName: red-pere.ingestion-debug-stream
+    displayName: ingestion-debug-stream
+    deleted: false
+  - id: e7067a03-fc15-409d-8c2e-3fe0a2df4dff
+    type: ingestionPipeline
+    name: ingestion-debug-stream2
+    fullyQualifiedName: red-pere.ingestion-debug-stream2
+    displayName: ingestion-debug-stream2
+    deleted: false
+  - id: 98920371-87a9-48c7-9d3c-bd4b91fc46c2
+    type: ingestionPipeline
+    name: profile-debug-stream
+    fullyQualifiedName: red-pere.profile-debug-stream
+    displayName: profile-debug-stream
+    deleted: false
+tags: []
+owners: []
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated:
+    - name: connection
+      oldValue: '"old-encrypted-value"'
+      newValue: '"new-encrypted-value"'
+  fieldsDeleted: []
+  previousVersion: 0.2
+  changeSummary: {}
+dataProducts: []
+ingestionRunner:
+  id: 80a7ac93-1869-4c7e-b220-f19e7c302abd
+  type: ingestionRunner
+  name: CollateSaaS
+  fullyQualifiedName: CollateSaaS
+  displayName: Collate SaaS Agent
+  deleted: false
+  inherited: false
+  href: https://sandbox-beta.open-metadata.org/v1/ingestionRunners/80a7ac93-1869-4c7e-b220-f19e7c302abd

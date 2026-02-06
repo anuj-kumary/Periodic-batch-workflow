@@ -1,0 +1,37 @@
+name: redshift-logs-beta
+fullyQualifiedName: redshift-logs-beta
+serviceType: Redshift
+connection:
+  config:
+    type: Redshift
+    scheme: redshift+psycopg2
+    sslMode: disable
+    database: dev
+    hostPort: openmetadata-redshift-cluster.cdnpdclcdk2n.us-east-2.redshift.amazonaws.com:5439
+    password: fernet:gAAAAABphcPCMbTJYjM54hRVwYcEP192Iklq91xmO6GVW9v31f9zcFBsQthrtimOFuDVD4oKqRBwdquzaJsWdqQI-h3wTu72VmNApOk6Sv8wS9XVYqpwuFU=
+    username: openmetadata
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    ingestAllDatabases: false
+    connectionArguments:
+      sslmode: disable
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes: []
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^template1$
+      includes: []
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

@@ -1,0 +1,33 @@
+name: openmetadata-4
+fullyQualifiedName: openmetadata-4
+serviceType: Snowflake
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: dummy
+    database: dummy
+    password: fernet:gAAAAABphcPBfu9qmU8SWZKhYkycbW3bkYzWlfjAN14JQV9CXKSAq_ZNSbPjfbYJAJQ6iZQSDA0-MDBgj_YnJhLpzXOB5mXw3Va-tk88cJOto6PWvRZMq4AMTc3Ly2_zV-oklMTSAXmh
+    username: dummy
+    warehouse: dummy
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: false
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners: []
+dataProducts: []

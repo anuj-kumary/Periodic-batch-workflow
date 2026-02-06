@@ -1,0 +1,40 @@
+name: snwoflake-enterprise
+fullyQualifiedName: snwoflake-enterprise
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: GTKVKWV-NB36274
+    database: test
+    password: fernet:gAAAAABphcPCN4a4dzrxhhleduBA2PF03P-mhAPL0vWJDtQI4AwT7yCri9PGhfDw0NH81XP_cjIQdcs7znC_-L9PH42qbqw8OqmZbIJ6R7nQCh6GR9IHiuxfGmJJMOSLbVd_kP5nxfIzoTSugZUyq621P2MHCXtx4w==
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: e31dc062-635f-4fc5-b727-2d4b7cb25753
+    type: user
+    name: imri.paran
+    fullyQualifiedName: '"imri.paran"'
+    displayName: Imri Paran
+    deleted: false
+dataProducts: []

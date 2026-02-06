@@ -1,0 +1,55 @@
+name: snow pere hybrid 20250425 2
+fullyQualifiedName: snow pere hybrid 20250425 2
+serviceType: Snowflake
+description: ""
+connection:
+  config:
+    type: Snowflake
+    scheme: snowflake
+    account: FMFAHQK-GI58232
+    password: fernet:gAAAAABphcPCCjsqhA-BVdrIEEnE3RpZR_qjfoV3-_nUzdJWmY_cSxsLd1WBBLcUQd2bpOmZlkts94TlbkFD3rIbbGM_JCor6Q5pOFGaBuacx7GPhggZWfYQZmxzsXSNILx-gfsWmwhRyXhxpF-bD8LZQ__u_B-xeQ==
+    username: testopenmetadata
+    warehouse: COMPUTE_WH
+    creditCost: 3.3
+    includeStages: false
+    includeStreams: false
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    accountUsageSchema: SNOWFLAKE.ACCOUNT_USAGE
+    tableFilterPattern:
+      excludes: []
+      includes: []
+    schemaFilterPattern:
+      excludes:
+        - ^information_schema$
+      includes:
+        - JAFFLE_SHOP
+    snowflakeSourceHost: app.snowflake.com
+    supportsQueryComment: true
+    databaseFilterPattern:
+      excludes:
+        - ^snowflake$
+      includes:
+        - CUSTOMERS
+    supportsDBTExtraction: true
+    supportsSystemProfile: false
+    clientSessionKeepAlive: false
+    includeTransientTables: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+    supportsIncrementalMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 883fe858-06c3-4253-89c3-68ab59a517e4
+    type: user
+    name: pmbrull
+    fullyQualifiedName: pmbrull
+    displayName: Admin
+    deleted: false
+dataProducts: []
+ingestionRunner:
+  id: 4e6140af-36cd-44ed-994e-13ff77ea88d9
+  type: ingestionRunner

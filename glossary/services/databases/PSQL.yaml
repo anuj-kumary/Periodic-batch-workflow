@@ -1,0 +1,35 @@
+name: PSQL
+fullyQualifiedName: PSQL
+serviceType: Postgres
+description: ""
+connection:
+  config:
+    type: Postgres
+    scheme: postgresql+psycopg2
+    sslMode: disable
+    authType:
+      password: fernet:gAAAAABphcPClgaijq15i8PqupHe-2BotVkg1q1CvfXWnSXk9SD2E9lGDmiwAMhCkuVUBuedNlpPqVzbJclYuzbIDdIGhmexaxcMWBg0XfXdeqtS2I90i9oZz1w2SWyjokVzM1Na0G_N
+    database: postgres
+    hostPort: database-1.cvxcerjcdlpi.us-east-2.rds.amazonaws.com:5432
+    username: postgres
+    supportsDataDiff: true
+    supportsDatabase: true
+    supportsProfiler: true
+    classificationName: PostgresPolicyTags
+    ingestAllDatabases: false
+    queryStatementSource: pg_stat_statements
+    supportsQueryComment: true
+    supportsDBTExtraction: true
+    supportsUsageExtraction: true
+    supportsLineageExtraction: true
+    supportsMetadataExtraction: true
+pipelines: []
+tags: []
+owners:
+  - id: 8e01994c-bb2c-4d30-afdb-43fe45dc66b3
+    type: user
+    name: teddy
+    fullyQualifiedName: teddy
+    displayName: Teddy Crépineau
+    deleted: false
+dataProducts: []
