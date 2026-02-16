@@ -1,0 +1,165 @@
+name: Finance
+displayName: Finance
+description: A finance department is the unit of a business responsible for obtaining
+  and handling any monies on behalf of the organization
+style:
+  color: "#a80000"
+  iconURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAACUCAMAAACtIJvYAAAAA1BMVEX/AAAZ4gk3AAAALElEQVR4nO3BMQEAAADCoPVP7WkJoAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAGVrgAAQdwvSEAAAAASUVORK5CYII="
+fullyQualifiedName: Business Department.Finance
+synonyms: []
+glossary:
+  id: dae534b6-f5d1-4fc7-9ddf-0d1ec9df5c7e
+  type: glossary
+  name: Business Department
+  fullyQualifiedName: Business Department
+  description: "Businesses often have several departments that perform unique functions,\
+    \ allowing them to operate efficiently and successfully."
+  displayName: Business Department
+  deleted: false
+children:
+  - id: 5c415db9-0927-4815-b31b-ae8247ea6b0a
+    type: glossaryTerm
+    name: Human resources
+    fullyQualifiedName: Business Department.Finance.Human resources
+    description: Human resources (HR) is the department in a company that handles
+      all things related to employees.
+    displayName: Human resources
+    deleted: false
+  - id: 4912806e-5128-4edb-a98d-b4c7f29c898d
+    type: glossaryTerm
+    name: Trading Account
+    fullyQualifiedName: Business Department.Finance.Trading Account
+    description: Trading Account
+    displayName: Trading Account
+    deleted: false
+relatedTerms: []
+references: []
+reviewers:
+  - id: 96546482-1b99-4293-9e0f-7194fe25bcbf
+    type: user
+    name: sonal.w
+    fullyQualifiedName: '"sonal.w"'
+    displayName: admin
+    deleted: false
+  - id: 02d03179-e7fb-4006-8a82-aa058a46c57e
+    type: user
+    name: jaimecrosby
+    fullyQualifiedName: jaimecrosby
+    displayName: Aaron Bradley
+    deleted: false
+    inherited: true
+  - id: 15edced9-50f2-4ec7-bdcd-91cac6bffdbf
+    type: user
+    name: shrushti.p
+    fullyQualifiedName: '"shrushti.p"'
+    displayName: Shrushti Polekar
+    deleted: false
+  - id: 19e6b19b-3049-40f2-b109-4e6c8e70085f
+    type: user
+    name: mcdanieldominic
+    fullyQualifiedName: mcdanieldominic
+    displayName: Aaron Daugherty
+    deleted: false
+    inherited: true
+  - id: 41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b
+    type: user
+    name: shailesh
+    fullyQualifiedName: shailesh
+    displayName: Shailesh Parmar
+    deleted: false
+  - id: 74ca488f-df71-40a7-81fa-22800138c2a1
+    type: user
+    name: rounakpreet.d
+    fullyQualifiedName: '"rounakpreet.d"'
+    displayName: rounakpreet.d
+    deleted: false
+    inherited: true
+owners:
+  - id: 640f85d8-9dba-4200-9b91-d001cb046a5d
+    type: user
+    name: sanzporro
+    fullyQualifiedName: sanzporro
+    displayName: carlos S
+    deleted: false
+usageCount: 21
+tags:
+  - tagFQN: PII.Sensitive
+    name: Sensitive
+    description: "PII which if lost, compromised, or disclosed without authorization,\
+      \ could result in substantial harm, embarrassment, inconvenience, or unfairness\
+      \ to an individual."
+    style:
+      color: "#ff0000"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: PersonalData.Personal
+    name: Personal
+    description: Data that can be used to directly or indirectly identify a person.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: TestPolicyTag.test_policy_tag
+    name: test_policy_tag
+    description: Bigquery Policy Tag
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: color.red
+    name: red
+    description: "<p>Bigquery Dataset Label What is Lorem Ipsum?</p><p><strong>Lorem\
+      \ Ipsum</strong> is simply dummy text of the printing and typesetting industry.\
+      \ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\
+      \ when an unknown printer took a galley of type and scrambled it to make a type\
+      \ specimen book. It has survived not only five centuries, but also the leap\
+      \ into electronic typesetting, remaining essentially unchanged. It was popularised\
+      \ in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,\
+      \ and more recently with desktop publishing software like Aldus PageMaker including\
+      \ versions of Lorem Ipsum.</p>"
+    style:
+      color: "#d32727"
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+  - tagFQN: test.testcheck
+    name: testcheck
+    description: Bigquery Dataset Label
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded: []
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 1.3
+entityStatus: Approved
+mutuallyExclusive: false
+extension:
+  link:
+    id: 012e40bd-8d1b-4a63-bf11-ec8ea2b77a8b
+    name: harsha.r
+    type: user
+    deleted: false
+    description: ""
+    displayName: Harsha R
+    fullyQualifiedName: '"harsha.r"'
+domains:
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+    inherited: true
+dataProducts: []
+childrenCount: 2

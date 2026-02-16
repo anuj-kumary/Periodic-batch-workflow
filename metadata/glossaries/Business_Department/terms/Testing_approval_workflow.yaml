@@ -1,0 +1,113 @@
+name: Testing_approval_workflow
+displayName: Testing_approval_workflow
+description: <p>Testing_approval_workflow</p>
+style:
+  color: "#b31414"
+fullyQualifiedName: Business Department.Testing_approval_workflow
+synonyms:
+  - testing
+glossary:
+  id: dae534b6-f5d1-4fc7-9ddf-0d1ec9df5c7e
+  type: glossary
+  name: Business Department
+  fullyQualifiedName: Business Department
+  description: "Businesses often have several departments that perform unique functions,\
+    \ allowing them to operate efficiently and successfully."
+  displayName: Business Department
+  deleted: false
+children: []
+relatedTerms:
+  - id: 288cfb46-a4c2-45a4-9dc0-321eac165812
+    type: glossaryTerm
+    name: test_business_term
+    fullyQualifiedName: Business Department.test_business_term
+    description: this is test_business_term
+    displayName: Test Business Term
+    deleted: false
+references: []
+reviewers:
+  - id: 96546482-1b99-4293-9e0f-7194fe25bcbf
+    type: user
+    name: sonal.w
+    fullyQualifiedName: '"sonal.w"'
+    displayName: admin
+    deleted: false
+  - id: 02d03179-e7fb-4006-8a82-aa058a46c57e
+    type: user
+    name: jaimecrosby
+    fullyQualifiedName: jaimecrosby
+    displayName: Aaron Bradley
+    deleted: false
+    inherited: true
+  - id: 15edced9-50f2-4ec7-bdcd-91cac6bffdbf
+    type: user
+    name: shrushti.p
+    fullyQualifiedName: '"shrushti.p"'
+    displayName: Shrushti Polekar
+    deleted: false
+  - id: 19e6b19b-3049-40f2-b109-4e6c8e70085f
+    type: user
+    name: mcdanieldominic
+    fullyQualifiedName: mcdanieldominic
+    displayName: Aaron Daugherty
+    deleted: false
+    inherited: true
+  - id: 41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b
+    type: user
+    name: shailesh
+    fullyQualifiedName: shailesh
+    displayName: Shailesh Parmar
+    deleted: false
+  - id: 74ca488f-df71-40a7-81fa-22800138c2a1
+    type: user
+    name: rounakpreet.d
+    fullyQualifiedName: '"rounakpreet.d"'
+    displayName: rounakpreet.d
+    deleted: false
+    inherited: true
+owners:
+  - id: 18ca6cd1-d696-4a22-813f-c7a42fc09dc4
+    type: user
+    name: ashish
+    fullyQualifiedName: ashish
+    description: this is test description. this is test description!this is test description!this
+      is test description!this is test description!this is test description!this is
+      test description!this is test description!this is test description!this is test
+      description!this is test description!
+    displayName: Ashish Gupta
+    deleted: false
+usageCount: 3
+tags:
+  - tagFQN: General.BankNumber
+    name: BankNumber
+    description: Bank Account Number.
+    source: Classification
+    labelType: Manual
+    state: Confirmed
+    appliedAt: 1767969396000
+    appliedBy: admin
+incrementalChangeDescription:
+  fieldsAdded:
+    - name: reviewers
+      newValue: "[{\"id\":\"41a8ae1b-e4bf-4aa4-b51c-537f9ecccf8b\",\"type\":\"user\"\
+        ,\"name\":\"shailesh\",\"fullyQualifiedName\":\"shailesh\",\"displayName\"\
+        :\"Shailesh Parmar\",\"deleted\":false},{\"id\":\"15edced9-50f2-4ec7-bdcd-91cac6bffdbf\"\
+        ,\"type\":\"user\",\"name\":\"shrushti.p\",\"fullyQualifiedName\":\"\\\"shrushti.p\\\
+        \"\",\"displayName\":\"shrushti.p\",\"deleted\":false},{\"id\":\"96546482-1b99-4293-9e0f-7194fe25bcbf\"\
+        ,\"type\":\"user\",\"name\":\"sonal.w\",\"fullyQualifiedName\":\"\\\"sonal.w\\\
+        \"\",\"displayName\":\"admin\",\"deleted\":false}]"
+  fieldsUpdated: []
+  fieldsDeleted: []
+  previousVersion: 0.1
+entityStatus: Approved
+mutuallyExclusive: true
+domains:
+  - id: ef10e521-d8c5-4d84-b039-549e8d1d8aaf
+    type: domain
+    name: Customer Domain
+    fullyQualifiedName: Customer Domain
+    description: <p>Customer Domain</p>
+    displayName: Customer
+    inherited: true
+dataProducts: []
+childrenCount: 0
